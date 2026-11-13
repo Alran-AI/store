@@ -1,0 +1,137 @@
+{
+  "schema": "alran.store.vendor/v1",
+  "note": "Every Skill in this store is an unmodified copy from one of these repositories, at the pinned commit, under its own licence. Edit this file, then run scripts/vendor.mjs.",
+  "sources": [
+    {
+      "id": "addyosmani",
+      "label": "Engineering workflow",
+      "repo": "https://github.com/addyosmani/agent-skills",
+      "clone": "addyosmani_agent-skills",
+      "commit": "301b02b12bff98e4688e6984af6556802322bbde",
+      "spdx": "MIT",
+      "skillsDir": "skills",
+      "skills": [
+        "api-and-interface-design",
+        "ci-cd-and-automation",
+        "code-review-and-quality",
+        "code-simplification",
+        "context-engineering",
+        "debugging-and-error-recovery",
+        "deprecation-and-migration",
+        "documentation-and-adrs",
+        "doubt-driven-development",
+        "frontend-ui-engineering",
+        "git-workflow-and-versioning",
+        "incremental-implementation",
+        "interview-me",
+        "observability-and-instrumentation",
+        "performance-optimization",
+        "planning-and-task-breakdown",
+        "security-and-hardening",
+        "shipping-and-launch",
+        "source-driven-development",
+        "spec-driven-development",
+        "test-driven-development"
+      ],
+      "shared": [
+        {
+          "from": "references",
+          "to": "references"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "label": "Cloudflare",
+      "repo": "https://github.com/cloudflare/skills",
+      "clone": "cloudflare_skills",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "spdx": "Apache-2.0",
+      "skillsDir": "skills",
+      "skills": [
+        "agents-sdk",
+        "cloudflare",
+        "cloudflare-app-bootstrap",
+        "cloudflare-one",
+        "durable-objects",
+        "frameworks-on-cloudflare",
+        "gateway-workers",
+        "nextjs-on-cloudflare",
+        "web-perf",
+        "workers-best-practices",
+        "workers-development",
+        "workers-profiling",
+        "wrangler"
+      ]
+    },
+    {
+      "id": "firebase",
+      "label": "Firebase",
+      "repo": "https://github.com/firebase/agent-skills",
+      "clone": "firebase_agent-skills",
+      "commit": "99954a30898bb5ddc8152ee10e124dc3b4106bf7",
+      "spdx": "Apache-2.0",
+      "skillsDir": "skills",
+      "skills": [
+        "extension-to-functions-codebase",
+        "firebase-analytics",
+        "firebase-auth-basics",
+        "firebase-basics",
+        "firebase-crashlytics",
+        "firebase-firestore",
+        "firebase-hosting-basics",
+        "firebase-remote-config-basics",
+        "firebase-security-rules-auditor",
+        "firestore-rules-creation"
+      ]
+    },
+    {
+      "id": "supabase",
+      "label": "Supabase",
+      "repo": "https://github.com/supabase/agent-skills",
+      "clone": "supabase_agent-skills",
+      "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "spdx": "MIT",
+      "skillsDir": "skills",
+      "skills": [
+        "supabase",
+        "supabase-postgres-best-practices"
+      ]
+    },
+    {
+      "id": "stripe",
+      "label": "Stripe",
+      "repo": "https://github.com/stripe/ai",
+      "clone": "stripe_ai",
+      "commit": "1ef4a81f8c9a092e6cba925d1cca6a78ac29c37b",
+      "spdx": "MIT",
+      "skillsDir": "skills",
+      "skills": [
+        "stripe-apps",
+        "stripe-best-practices",
+        "upgrade-stripe"
+      ]
+    },
+    {
+      "id": "expo",
+      "label": "Expo",
+      "repo": "https://github.com/expo/skills",
+      "clone": "expo_skills",
+      "commit": "acc0b21ce09be356b5cf0323482bdfe7db0b7a1e",
+      "spdx": "MIT",
+      "skillsDir": "plugins/expo/skills",
+      "skills": [
+        "eas-app-stores",
+        "eas-hosting",
+        "eas-update",
+        "expo-data-fetching",
+        "expo-dev-client",
+        "expo-module",
+        "expo-overview",
+        "expo-project-structure",
+        "expo-router",
+        "expo-upgrade"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schema": "alran.store.build/v1",
+  "name": "Alran Curated Store",
+  "description": "Skills and Plugins from open-source projects and platform vendors, redistributed unmodified under their own licences.",
+  "skills": {
+    "pluginOnly": [
+      "addyosmani"
+    ],
+    "groups": {
+      "addyosmani": "Engineering workflow",
+      "cloudflare": "Cloudflare",
+      "firebase": "Firebase",
+      "supabase": "Supabase",
+      "stripe": "Stripe",
+      "expo": "Expo"
+    },
+    "versions": {
+      "addyosmani": "2026.11.1+301b02b",
+      "cloudflare": "2026.11.10+cbf893b",
+      "firebase": "2026.11.9+99954a3",
+      "supabase": "2026.10.2+c9be0e9",
+      "stripe": "2026.11.12+1ef4a81",
+      "expo": "2026.11.12+acc0b21"
+    },
+    "titles": {
+      "agents-sdk": "Cloudflare Agents SDK",
+      "cloudflare": "Cloudflare Platform Reference",
+      "cloudflare-app-bootstrap": "Bootstrap a Cloudflare App",
+      "durable-objects": "Durable Objects",
+      "frameworks-on-cloudflare": "Frameworks on Cloudflare",
+      "gateway-workers": "Gateway Workers",
+      "nextjs-on-cloudflare": "Next.js on Cloudflare",
+      "web-perf": "Web Performance Audit",
+      "workers-best-practices": "Workers Best Practices",
+      "workers-development": "Workers Development",
+      "workers-profiling": "Workers Profiling",
+      "wrangler": "Wrangler CLI",
+      "extension-to-functions-codebase": "Migrate a Firebase Extension to Functions",
+      "firebase-analytics": "Firebase Analytics",
+      "firebase-auth-basics": "Firebase Authentication",
+      "firebase-basics": "Firebase Basics",
+      "firebase-crashlytics": "Firebase Crashlytics",
+      "firebase-firestore": "Cloud Firestore",
+      "firebase-hosting-basics": "Firebase Hosting",
+      "firebase-remote-config-basics": "Firebase Remote Config",
+      "firebase-security-rules-auditor": "Firebase Security Rules Audit",
+      "firestore-rules-creation": "Write Firestore Security Rules",
+      "supabase": "Supabase",
+      "supabase-postgres-best-practices": "Postgres Best Practices (Supabase)",
+      "stripe-apps": "Stripe Apps",
+      "stripe-best-practices": "Stripe Integration Best Practices",
+      "upgrade-stripe": "Upgrade Stripe",
+      "eas-app-stores": "EAS: App Store Releases",
+      "eas-hosting": "EAS Hosting",
+      "eas-update": "EAS Update",
+      "expo-data-fetching": "Expo Data Fetching",
+      "expo-dev-client": "Expo Dev Client",
+      "expo-module": "Expo Native Modules",
+      "expo-overview": "Expo Overview",
+      "expo-project-structure": "Expo Project Structure",
+      "expo-router": "Expo Router",
+      "expo-upgrade": "Upgrade Expo SDK",
+      "cloudflare-one": "Cloudflare One (Zero Trust)"
+    }
+  },
+  "plugins": [
+    {
+      "name": "engineering-workflow",
+      "displayName": "Engineering Workflow",
+      "version": "2026.11.1+301b02b",
+      "author": "Addy Osmani",
+      "license": "MIT",
+      "homepage": "https://github.com/addyosmani/agent-skills",
+      "category": "Code",
+      "icon": "icons/engineering-workflow.png",
+      "packages": [
+        "addyosmani"
+      ],
+      "directories": [
+        {
+          "from": "shared/addyosmani/references",
+          "to": "references"
+        }
+      ],
+      "description": "Twenty-one skills for working with a coding agent: specs and task breakdown, incremental implementation, test-driven development, debugging, code review and simplification, security and performance, git workflow, CI/CD, observability and shipping.",
+      "exampleQueries": [
+        "Write the spec for this feature before we start coding",
+        "Break this work into small tasks I can verify one by one",
+        "Review this change before I merge it"
+      ]
+    },
+    {
+      "name": "cloudflare-skills",
+      "displayName": "Cloudflare",
+      "version": "2026.11.10+cbf893b",
+      "author": "Cloudflare",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/cloudflare/skills",
+      "category": "Code",
+      "icon": "icons/cloudflare-skills.png",
+      "packages": [
+        "cloudflare"
+      ],
+      "description": "Thirteen skills for building on Cloudflare: Workers development and best practices, Wrangler, Durable Objects, the Agents SDK, frameworks and Next.js on Cloudflare, performance and profiling, Cloudflare One, and a broad platform reference.",
+      "exampleQueries": [
+        "Set up a new Cloudflare Worker project",
+        "Profile why this Worker is slow",
+        "Model this feature with a Durable Object"
+      ]
+    },
+    {
+      "name": "firebase-skills",
+      "displayName": "Firebase",
+      "version": "2026.11.9+99954a3",
+      "author": "Firebase",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/firebase/agent-skills",
+      "category": "Code",
+      "icon": "icons/firebase-skills.png",
+      "packages": [
+        "firebase"
+      ],
+      "description": "Ten skills for Firebase: setup basics, Cloud Firestore and security rules, Authentication, Hosting, Remote Config, Analytics and Crashlytics.",
+      "exampleQueries": [
+        "Write Firestore security rules for this data model",
+        "Add Firebase Authentication to this app",
+        "Audit these Firebase security rules"
+      ]
+    },
+    {
+      "name": "supabase-skills",
+      "displayName": "Supabase",
+      "version": "2026.10.2+c9be0e9",
+      "author": "Supabase",
+      "license": "MIT",
+      "homepage": "https://github.com/supabase/agent-skills",
+      "category": "Code",
+      "icon": "icons/supabase-skills.png",
+      "packages": [
+        "supabase"
+      ],
+      "description": "Two skills for Supabase: working with the platform, and Postgres best practices.",
+      "exampleQueries": [
+        "Review this Postgres schema against best practices",
+        "Add row-level security to this table"
+      ]
+    },
+    {
+      "name": "stripe-skills",
+      "displayName": "Stripe",
+      "version": "2026.11.12+1ef4a81",
+      "author": "Stripe",
+      "license": "MIT",
+      "homepage": "https://github.com/stripe/ai",
+      "category": "Code",
+      "icon": "icons/stripe-skills.png",
+      "packages": [
+        "stripe"
+      ],
+      "description": "Three skills for Stripe: integration best practices, upgrading to current API and SDK versions, and building Stripe Apps.",
+      "exampleQueries": [
+        "Check my Stripe integration against best practices",
+        "Upgrade my Stripe API version"
+      ]
+    },
+    {
+      "name": "expo-skills",
+      "displayName": "Expo",
+      "version": "2026.11.12+acc0b21",
+      "author": "Expo",
+      "license": "MIT",
+      "homepage": "https://github.com/expo/skills",
+      "category": "Code",
+      "icon": "icons/expo-skills.png",
+      "packages": [
+        "expo"
+      ],
+      "description": "Ten skills for Expo and React Native apps: Expo Router, native modules, data fetching, dev clients, project structure, SDK upgrades, and EAS Update, Hosting and app store releases.",
+      "exampleQueries": [
+        "Upgrade this app to the latest Expo SDK",
+        "Set up routing with Expo Router"
+      ]
+    }
+  ]
+}
