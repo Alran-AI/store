@@ -12,7 +12,29 @@
       "firebase": "Firebase",
       "supabase": "Supabase",
       "stripe": "Stripe",
-      "expo": "Expo"
+      "expo": "Expo",
+      "clickhouse": "ClickHouse",
+      "gemini": "Google Gemini API",
+      "mongodb": "MongoDB",
+      "neon": "Neon",
+      "flutter": "Flutter and Dart",
+      "apollo": "Apollo GraphQL",
+      "brave": "Brave Search",
+      "callstack": "React Native (Callstack)",
+      "coderabbit": "CodeRabbit",
+      "cypress": "Cypress",
+      "duckdb": "DuckDB",
+      "redis": "Redis",
+      "resend": "Resend",
+      "sanity": "Sanity",
+      "netlify": "Netlify",
+      "terraform": "Terraform",
+      "packer": "Packer",
+      "replicate": "Replicate",
+      "huggingface": "Hugging Face",
+      "sentry": "Sentry (engineering)",
+      "marketing": "Marketing (Corey Haines)",
+      "pm": "Product management (Paweł Huryn)"
     },
     "versions": {
       "addyosmani": "2026.11.1+301b02b",
@@ -20,47 +42,29 @@
       "firebase": "2026.11.9+99954a3",
       "supabase": "2026.10.2+c9be0e9",
       "stripe": "2026.11.12+1ef4a81",
-      "expo": "2026.11.12+acc0b21"
-    },
-    "titles": {
-      "agents-sdk": "Cloudflare Agents SDK",
-      "cloudflare": "Cloudflare Platform Reference",
-      "cloudflare-app-bootstrap": "Bootstrap a Cloudflare App",
-      "durable-objects": "Durable Objects",
-      "frameworks-on-cloudflare": "Frameworks on Cloudflare",
-      "gateway-workers": "Gateway Workers",
-      "nextjs-on-cloudflare": "Next.js on Cloudflare",
-      "web-perf": "Web Performance Audit",
-      "workers-best-practices": "Workers Best Practices",
-      "workers-development": "Workers Development",
-      "workers-profiling": "Workers Profiling",
-      "wrangler": "Wrangler CLI",
-      "extension-to-functions-codebase": "Migrate a Firebase Extension to Functions",
-      "firebase-analytics": "Firebase Analytics",
-      "firebase-auth-basics": "Firebase Authentication",
-      "firebase-basics": "Firebase Basics",
-      "firebase-crashlytics": "Firebase Crashlytics",
-      "firebase-firestore": "Cloud Firestore",
-      "firebase-hosting-basics": "Firebase Hosting",
-      "firebase-remote-config-basics": "Firebase Remote Config",
-      "firebase-security-rules-auditor": "Firebase Security Rules Audit",
-      "firestore-rules-creation": "Write Firestore Security Rules",
-      "supabase": "Supabase",
-      "supabase-postgres-best-practices": "Postgres Best Practices (Supabase)",
-      "stripe-apps": "Stripe Apps",
-      "stripe-best-practices": "Stripe Integration Best Practices",
-      "upgrade-stripe": "Upgrade Stripe",
-      "eas-app-stores": "EAS: App Store Releases",
-      "eas-hosting": "EAS Hosting",
-      "eas-update": "EAS Update",
-      "expo-data-fetching": "Expo Data Fetching",
-      "expo-dev-client": "Expo Dev Client",
-      "expo-module": "Expo Native Modules",
-      "expo-overview": "Expo Overview",
-      "expo-project-structure": "Expo Project Structure",
-      "expo-router": "Expo Router",
-      "expo-upgrade": "Upgrade Expo SDK",
-      "cloudflare-one": "Cloudflare One (Zero Trust)"
+      "expo": "2026.11.12+acc0b21",
+      "clickhouse": "2026.11.2+d3b2b5b",
+      "gemini": "2026.11.12+87fb017",
+      "mongodb": "2026.11.12+7b44a4a",
+      "neon": "2026.11.12+fa44b92",
+      "flutter": "2026.11.11+e5a88d2",
+      "apollo": "2026.10.30+9dda139",
+      "brave": "2026.8.12+62793e0",
+      "callstack": "2026.10.8+59e9d17",
+      "coderabbit": "2026.11.12+45bd1ae",
+      "cypress": "2026.11.6+1b87172",
+      "duckdb": "2026.4.14+7feda8e",
+      "redis": "2026.11.5+74708da",
+      "resend": "2026.11.9+f3e86d8",
+      "sanity": "2026.10.27+3ed3a14",
+      "netlify": "2026.11.10+905256e",
+      "terraform": "2026.11.3+5e30fa5",
+      "packer": "2026.11.3+5e30fa5",
+      "replicate": "2026.6.4+2f36e41",
+      "huggingface": "2026.10.29+25910b3",
+      "sentry": "2026.11.5+e94f222",
+      "marketing": "2026.11.11+1f83744",
+      "pm": "2026.11.8+9af7bfd"
     }
   },
   "plugins": [
@@ -68,6 +72,7 @@
       "name": "engineering-workflow",
       "displayName": "Engineering Workflow",
       "version": "2026.11.1+301b02b",
+      "description": "Twenty-one skills for working with a coding agent: specs and task breakdown, incremental implementation, test-driven development, debugging, code review and simplification, security and performance, git workflow, CI/CD, observability and shipping.",
       "author": "Addy Osmani",
       "license": "MIT",
       "homepage": "https://github.com/addyosmani/agent-skills",
@@ -82,7 +87,6 @@
           "to": "references"
         }
       ],
-      "description": "Twenty-one skills for working with a coding agent: specs and task breakdown, incremental implementation, test-driven development, debugging, code review and simplification, security and performance, git workflow, CI/CD, observability and shipping.",
       "exampleQueries": [
         "Write the spec for this feature before we start coding",
         "Break this work into small tasks I can verify one by one",
@@ -93,6 +97,7 @@
       "name": "cloudflare-skills",
       "displayName": "Cloudflare",
       "version": "2026.11.10+cbf893b",
+      "description": "Thirteen skills for building on Cloudflare: Workers development and best practices, Wrangler, Durable Objects, the Agents SDK, frameworks and Next.js on Cloudflare, performance and profiling, Cloudflare One, and a broad platform reference.",
       "author": "Cloudflare",
       "license": "Apache-2.0",
       "homepage": "https://github.com/cloudflare/skills",
@@ -101,7 +106,6 @@
       "packages": [
         "cloudflare"
       ],
-      "description": "Thirteen skills for building on Cloudflare: Workers development and best practices, Wrangler, Durable Objects, the Agents SDK, frameworks and Next.js on Cloudflare, performance and profiling, Cloudflare One, and a broad platform reference.",
       "exampleQueries": [
         "Set up a new Cloudflare Worker project",
         "Profile why this Worker is slow",
@@ -112,6 +116,7 @@
       "name": "firebase-skills",
       "displayName": "Firebase",
       "version": "2026.11.9+99954a3",
+      "description": "Ten skills for Firebase: setup basics, Cloud Firestore and security rules, Authentication, Hosting, Remote Config, Analytics and Crashlytics.",
       "author": "Firebase",
       "license": "Apache-2.0",
       "homepage": "https://github.com/firebase/agent-skills",
@@ -120,7 +125,6 @@
       "packages": [
         "firebase"
       ],
-      "description": "Ten skills for Firebase: setup basics, Cloud Firestore and security rules, Authentication, Hosting, Remote Config, Analytics and Crashlytics.",
       "exampleQueries": [
         "Write Firestore security rules for this data model",
         "Add Firebase Authentication to this app",
@@ -131,6 +135,7 @@
       "name": "supabase-skills",
       "displayName": "Supabase",
       "version": "2026.10.2+c9be0e9",
+      "description": "Two skills for Supabase: working with the platform, and Postgres best practices.",
       "author": "Supabase",
       "license": "MIT",
       "homepage": "https://github.com/supabase/agent-skills",
@@ -139,7 +144,6 @@
       "packages": [
         "supabase"
       ],
-      "description": "Two skills for Supabase: working with the platform, and Postgres best practices.",
       "exampleQueries": [
         "Review this Postgres schema against best practices",
         "Add row-level security to this table"
@@ -149,6 +153,7 @@
       "name": "stripe-skills",
       "displayName": "Stripe",
       "version": "2026.11.12+1ef4a81",
+      "description": "Three skills for Stripe: integration best practices, upgrading to current API and SDK versions, and building Stripe Apps.",
       "author": "Stripe",
       "license": "MIT",
       "homepage": "https://github.com/stripe/ai",
@@ -157,7 +162,6 @@
       "packages": [
         "stripe"
       ],
-      "description": "Three skills for Stripe: integration best practices, upgrading to current API and SDK versions, and building Stripe Apps.",
       "exampleQueries": [
         "Check my Stripe integration against best practices",
         "Upgrade my Stripe API version"
@@ -167,6 +171,7 @@
       "name": "expo-skills",
       "displayName": "Expo",
       "version": "2026.11.12+acc0b21",
+      "description": "Ten skills for Expo and React Native apps: Expo Router, native modules, data fetching, dev clients, project structure, SDK upgrades, and EAS Update, Hosting and app store releases.",
       "author": "Expo",
       "license": "MIT",
       "homepage": "https://github.com/expo/skills",
@@ -175,10 +180,406 @@
       "packages": [
         "expo"
       ],
-      "description": "Ten skills for Expo and React Native apps: Expo Router, native modules, data fetching, dev clients, project structure, SDK upgrades, and EAS Update, Hosting and app store releases.",
       "exampleQueries": [
         "Upgrade this app to the latest Expo SDK",
         "Set up routing with Expo Router"
+      ]
+    },
+    {
+      "name": "clickhouse-skills",
+      "displayName": "ClickHouse",
+      "version": "2026.11.2+d3b2b5b",
+      "description": "Five skills for ClickHouse: architecture advice, best practices, coding and troubleshooting with the Node.js client, and root-cause analysis for managed Postgres.",
+      "author": "ClickHouse",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/ClickHouse/agent-skills",
+      "category": "Code",
+      "icon": "icons/clickhouse-skills.png",
+      "packages": [
+        "clickhouse"
+      ],
+      "exampleQueries": [
+        "Review this ClickHouse table design",
+        "Why is this ClickHouse query slow?"
+      ]
+    },
+    {
+      "name": "gemini-api-skills",
+      "displayName": "Gemini API",
+      "version": "2026.11.12+87fb017",
+      "description": "Two skills for building with the Gemini API, including the Live API.",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/google-gemini/gemini-skills",
+      "category": "Code",
+      "icon": "icons/gemini-api-skills.png",
+      "packages": [
+        "gemini"
+      ],
+      "exampleQueries": [
+        "Call the Gemini API from this service",
+        "Add a Gemini Live API voice session"
+      ]
+    },
+    {
+      "name": "mongodb-skills",
+      "displayName": "MongoDB",
+      "version": "2026.11.12+7b44a4a",
+      "description": "Seven skills for MongoDB: connections, schema design, query optimisation, natural-language querying, Queryable Encryption sizing, MCP setup and Atlas stream processing.",
+      "author": "MongoDB",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/mongodb/agent-skills",
+      "category": "Code",
+      "icon": "icons/mongodb-skills.png",
+      "packages": [
+        "mongodb"
+      ],
+      "exampleQueries": [
+        "Design a MongoDB schema for this feature",
+        "Optimise this MongoDB query"
+      ]
+    },
+    {
+      "name": "neon-skills",
+      "displayName": "Neon",
+      "version": "2026.11.12+fa44b92",
+      "description": "Seven skills for Neon serverless Postgres: the platform, Auth, Functions, Object Storage, Realtime and the AI Gateway.",
+      "author": "Neon",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/neondatabase/agent-skills",
+      "category": "Code",
+      "icon": "icons/neon-skills.png",
+      "packages": [
+        "neon"
+      ],
+      "exampleQueries": [
+        "Set up Neon Postgres for this project",
+        "Add Neon Auth to this app"
+      ]
+    },
+    {
+      "name": "flutter-skills",
+      "displayName": "Flutter and Dart",
+      "version": "2026.11.11+e5a88d2",
+      "description": "Twenty-two skills from the Flutter and Dart teams: unit, widget and integration tests, coverage, static analysis, FFI, documentation, widget previews and architecture best practices.",
+      "author": "Flutter",
+      "license": "BSD-3-Clause",
+      "homepage": "https://github.com/flutter/skills",
+      "category": "Code",
+      "icon": "icons/flutter-skills.png",
+      "packages": [
+        "flutter"
+      ],
+      "exampleQueries": [
+        "Add widget tests for this screen",
+        "Fix this Dart runtime error",
+        "Set up static analysis for this package"
+      ]
+    },
+    {
+      "name": "apollo-graphql-skills",
+      "displayName": "Apollo GraphQL",
+      "version": "2026.10.30+9dda139",
+      "description": "Nine skills for Apollo GraphQL: Client, Server, Router, Federation, Connectors, schema and operation design, and Rust best practices.",
+      "author": "Apollo GraphQL",
+      "license": "MIT",
+      "homepage": "https://github.com/apollographql/skills",
+      "category": "Code",
+      "icon": "icons/apollo-graphql-skills.png",
+      "packages": [
+        "apollo"
+      ],
+      "exampleQueries": [
+        "Design the GraphQL schema for this API",
+        "Add federation to these services"
+      ]
+    },
+    {
+      "name": "brave-search-skills",
+      "displayName": "Brave Search",
+      "version": "2026.8.12+62793e0",
+      "description": "Eleven skills for the Brave Search API: web, news, image, video and local search, answers, suggestions, spellcheck and context for LLMs. Needs your own Brave Search API key.",
+      "author": "Brave",
+      "license": "MIT",
+      "homepage": "https://github.com/brave/brave-search-skills",
+      "category": "Productivity",
+      "icon": "icons/brave-search-skills.png",
+      "packages": [
+        "brave"
+      ],
+      "exampleQueries": [
+        "Search the web for the latest release notes of this library",
+        "Find news about this topic"
+      ]
+    },
+    {
+      "name": "react-native-skills",
+      "displayName": "React Native (Callstack)",
+      "version": "2026.10.8+59e9d17",
+      "description": "Six skills for React Native: creating libraries, navigation, GitHub Actions, assessing and doing brownfield migrations, and user documentation.",
+      "author": "Callstack",
+      "license": "MIT",
+      "homepage": "https://github.com/callstackincubator/agent-skills",
+      "category": "Code",
+      "icon": "icons/react-native-skills.png",
+      "packages": [
+        "callstack"
+      ],
+      "exampleQueries": [
+        "Create a React Native library",
+        "Assess whether this app can migrate to React Native"
+      ]
+    },
+    {
+      "name": "coderabbit-skills",
+      "displayName": "CodeRabbit",
+      "version": "2026.11.12+45bd1ae",
+      "description": "Two skills for working with CodeRabbit: configuring it and applying its review fixes. They expect the CodeRabbit tooling to be set up.",
+      "author": "CodeRabbit",
+      "license": "MIT",
+      "homepage": "https://github.com/coderabbitai/skills",
+      "category": "Code",
+      "icon": "icons/coderabbit-skills.png",
+      "packages": [
+        "coderabbit"
+      ],
+      "exampleQueries": [
+        "Apply the CodeRabbit review comments to this branch",
+        "Write a CodeRabbit configuration for this repo"
+      ]
+    },
+    {
+      "name": "cypress-skills",
+      "displayName": "Cypress",
+      "version": "2026.11.6+1b87172",
+      "description": "Five skills for Cypress: authoring tests, the Cypress Cloud CLI, documentation lookup, and explaining test runs.",
+      "author": "Cypress",
+      "license": "MIT",
+      "homepage": "https://github.com/cypress-io/ai-toolkit",
+      "category": "Code",
+      "icon": "icons/cypress-skills.png",
+      "packages": [
+        "cypress"
+      ],
+      "exampleQueries": [
+        "Write a Cypress test for this flow",
+        "Explain why this Cypress run failed"
+      ]
+    },
+    {
+      "name": "duckdb-skills",
+      "displayName": "DuckDB",
+      "version": "2026.4.14+7feda8e",
+      "description": "Eight skills for DuckDB: running queries, attaching databases, reading and converting files, exploring S3, spatial data, and documentation lookup.",
+      "author": "DuckDB",
+      "license": "MIT",
+      "homepage": "https://github.com/duckdb/duckdb-skills",
+      "category": "Science & Healthcare",
+      "icon": "icons/duckdb-skills.png",
+      "packages": [
+        "duckdb"
+      ],
+      "exampleQueries": [
+        "Query this Parquet file with DuckDB",
+        "Convert this CSV to Parquet"
+      ]
+    },
+    {
+      "name": "redis-skills",
+      "displayName": "Redis",
+      "version": "2026.11.5+74708da",
+      "description": "Thirteen skills for Redis: core data modelling, clustering, connections, observability, search, security and semantic caching, plus adding agent memory, playbooks, a context gateway, an intent router, lenses and Redis Iris to an app.",
+      "author": "Redis",
+      "license": "MIT",
+      "homepage": "https://github.com/redis/agent-skills",
+      "category": "Code",
+      "icon": "icons/redis-skills.png",
+      "packages": [
+        "redis"
+      ],
+      "exampleQueries": [
+        "Add a semantic cache with Redis",
+        "Review how this service connects to Redis"
+      ]
+    },
+    {
+      "name": "resend-skills",
+      "displayName": "Email (Resend)",
+      "version": "2026.11.9+f3e86d8",
+      "description": "Three skills for email: best practices, React Email, and the Resend CLI.",
+      "author": "Resend",
+      "license": "MIT",
+      "homepage": "https://github.com/resend/resend-skills",
+      "category": "Code",
+      "icon": "icons/resend-skills.png",
+      "packages": [
+        "resend"
+      ],
+      "exampleQueries": [
+        "Build a React Email template for this notification",
+        "Review our email sending for best practices"
+      ]
+    },
+    {
+      "name": "sanity-skills",
+      "displayName": "Sanity",
+      "version": "2026.10.27+3ed3a14",
+      "description": "Nine skills for Sanity: content modelling and experimentation, Portable Text, migrations, Studio upgrades, form components, singletons and SEO.",
+      "author": "Sanity",
+      "license": "MIT",
+      "homepage": "https://github.com/sanity-io/agent-toolkit",
+      "category": "Design & Sites",
+      "icon": "icons/sanity-skills.png",
+      "packages": [
+        "sanity"
+      ],
+      "exampleQueries": [
+        "Model this content in Sanity",
+        "Upgrade this Sanity Studio"
+      ]
+    },
+    {
+      "name": "netlify-skills",
+      "displayName": "Netlify",
+      "version": "2026.11.10+905256e",
+      "description": "Sixteen skills for Netlify: Functions and Edge Functions, Blobs, Database, Forms, Identity, caching, the image CDN, configuration, deploys, the AI Gateway, access control and frameworks.",
+      "author": "Netlify",
+      "license": "MIT",
+      "homepage": "https://github.com/netlify/context-and-tools",
+      "category": "Code",
+      "icon": "icons/netlify-skills.png",
+      "packages": [
+        "netlify"
+      ],
+      "exampleQueries": [
+        "Deploy this site to Netlify",
+        "Add a Netlify Function for this endpoint"
+      ]
+    },
+    {
+      "name": "terraform-skills",
+      "displayName": "Terraform",
+      "version": "2026.11.3+5e30fa5",
+      "description": "Thirteen skills for Terraform: writing and testing providers (resources, actions, ephemeral resources, acceptance tests), Terraform tests, stacks, the style guide, module refactoring and Azure Verified Modules.",
+      "author": "HashiCorp",
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/hashicorp/agent-skills",
+      "category": "Code",
+      "icon": "icons/terraform-skills.png",
+      "packages": [
+        "terraform"
+      ],
+      "exampleQueries": [
+        "Refactor this Terraform module",
+        "Write Terraform tests for this module"
+      ]
+    },
+    {
+      "name": "packer-skills",
+      "displayName": "Packer",
+      "version": "2026.11.3+5e30fa5",
+      "description": "Four skills for Packer: AWS AMI, Azure and Windows image builders, and pushing images to a registry.",
+      "author": "HashiCorp",
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/hashicorp/agent-skills",
+      "category": "Code",
+      "icon": "icons/packer-skills.png",
+      "packages": [
+        "packer"
+      ],
+      "exampleQueries": [
+        "Build an AWS AMI with Packer",
+        "Create a Windows image with Packer"
+      ]
+    },
+    {
+      "name": "replicate-skills",
+      "displayName": "Replicate",
+      "version": "2026.6.4+2f36e41",
+      "description": "Seven skills for Replicate: finding, running, comparing, building and publishing models, and prompting image and video models.",
+      "author": "Replicate",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/replicate/skills",
+      "category": "Studio",
+      "icon": "icons/replicate-skills.png",
+      "packages": [
+        "replicate"
+      ],
+      "exampleQueries": [
+        "Find a model on Replicate for this task",
+        "Compare these two image models"
+      ]
+    },
+    {
+      "name": "huggingface-skills",
+      "displayName": "Hugging Face",
+      "version": "2026.10.29+25910b3",
+      "description": "Thirteen skills for Hugging Face: datasets, Spaces, Gradio, local models, papers, Trackio, ZeroGPU, Transformers.js, TRL training and AWS deployment planning.",
+      "author": "Hugging Face",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/huggingface/skills",
+      "category": "Science & Healthcare",
+      "icon": "icons/huggingface-skills.png",
+      "packages": [
+        "huggingface"
+      ],
+      "exampleQueries": [
+        "Build a Gradio demo for this model",
+        "Find the paper behind this model"
+      ]
+    },
+    {
+      "name": "sentry-engineering-skills",
+      "displayName": "Sentry Engineering",
+      "version": "2026.11.5+e94f222",
+      "description": "Ten engineering skills from Sentry: AGENTS.md, code simplification, bug finding, security review, secret leaks in serialization, Django access and performance review, PR descriptions, prompt optimisation and documentation.",
+      "author": "Sentry",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/getsentry/skills",
+      "category": "Code",
+      "icon": "icons/sentry-engineering-skills.png",
+      "packages": [
+        "sentry"
+      ],
+      "exampleQueries": [
+        "Find bugs in my local branch changes",
+        "Review this Django view for access control problems"
+      ]
+    },
+    {
+      "name": "marketing-skills",
+      "displayName": "Marketing",
+      "version": "2026.11.11+1f83744",
+      "description": "Forty-five marketing skills: copywriting and editing, conversion optimisation, SEO, email and cold outreach, pricing and paywalls, launches, analytics and attribution, and more.",
+      "author": "Corey Haines",
+      "license": "MIT",
+      "homepage": "https://github.com/coreyhaines31/marketingskills",
+      "category": "Sales",
+      "icon": "icons/marketing-skills.png",
+      "packages": [
+        "marketing"
+      ],
+      "exampleQueries": [
+        "Rewrite this landing page for conversion",
+        "Plan the launch of this feature"
+      ]
+    },
+    {
+      "name": "product-management-skills",
+      "displayName": "Product Management",
+      "version": "2026.11.8+9af7bfd",
+      "description": "Fifty-seven product management skills: discovery and research, strategy and positioning, execution (PRDs, OKRs, roadmaps, sprint planning) and go-to-market.",
+      "author": "Paweł Huryn",
+      "license": "MIT",
+      "homepage": "https://github.com/phuryn/pm-skills",
+      "category": "Business",
+      "icon": "icons/product-management-skills.png",
+      "packages": [
+        "pm"
+      ],
+      "exampleQueries": [
+        "Write a PRD for this feature",
+        "Run a pre-mortem on this launch"
       ]
     }
   ]

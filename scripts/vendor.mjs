@@ -1,14 +1,21 @@
 #!/usr/bin/env node
-// Copies the Skills named in sources.json from local clones into skills/<id>/<name>/ (and shared
-// files into shared/<id>/), unmodified, with the upstream LICENSE as LICENSE.txt and a SOURCE.md that
-// records repository, path, commit and licence. Anything that is not plain text, any script, symlink,
-// unportable file name, mismatched Skill name or unpinned clone stops the run: nothing is skipped
-// quietly.
+// Copies Skills from local clones into skills/<id>/<name>/ (and shared files into shared/<id>/),
+// unmodified, with the upstream LICENSE as LICENSE.txt and a SOURCE.md that records repository, path,
+// commit and licence. A Skill that breaks an admission rule is not taken: for a named Skill that stops
+// the run, for a source that takes "all clean" Skills it is left out and listed in EXCLUDED.md with the
+// reason, so nothing disappears quietly.
 //
 //   node scripts/vendor.mjs --work <dir with the clones>
 //
-// Clones are made by hand (git clone <repo> <dir>/<clone>), checked out at the pinned commit. This
+// Clones are made by hand (git clone <repo> <dir>/<clone>) and checked out at the pinned commit. This
 // script only reads them; it never runs anything from them.
+//
+// sources.json, per source:
+//   id, label, repo, clone, commit, spdx
+//   skillsDirs: ["skills"]        folders (relative to the clone) that hold one folder per Skill
+//   skills: ["a", "b"]            exactly these Skills (each must be admitted), or
+//   include: "clean"              every Skill that is admitted, minus `exclude: ["x"]`
+//   shared: [{from, to}]          shared files the Skills link to (copied to shared/<id>/<to>)
 
 import { execFileSync } from "node:child_process";
 import { cpSync, existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
@@ -21,6 +28,21 @@ const SEGMENT = /^[A-Za-z0-9._-]+$/u;
 const RESERVED = /^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\..*)?$/iu;
 const JUNK = new Set([".DS_Store", "Thumbs.db"]);
 const MAX_FILE = 2 * 1024 * 1024;
+const SKILL_NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
+// Text that has no business in a Skill, whatever the source. Some patterns are refused anywhere; the others
+// are refused unless the line itself marks them as a bad example ("# Attack: ...", "// DANGEROUS", "e.g.").
+const REFUSED_ANYWHERE = [
+  [/[\u200b-\u200f\u202a-\u202e\u2060-\u2064\u2066-\u2069\ufeff]/u, "contains invisible characters"],
+  [/data:[a-z]+\/[a-z0-9.+-]+;base64,/iu, "embeds a data URI"],
+];
+const REFUSED_PER_LINE = [
+  [/curl[^\n|]*\|\s*(ba)?sh/iu, "pipes a download into a shell"],
+  [/wget[^\n|]*\|\s*(ba)?sh/iu, "pipes a download into a shell"],
+  [/base64\s+(-d|--decode)/iu, "decodes a base64 blob"],
+  [/<script\b[^>]*\ssrc=["']https?:\/\/(?!js\.stripe\.com)/iu, "loads a remote script"],
+  [/ignore (all )?(previous|prior) instructions/iu, "contains an instruction-override phrase"],
+];
+const BAD_EXAMPLE = /\b(attack\w*|dangerous|malicious|insecure|vulnerab\w*|exploit\w*|never|do not|don't|avoid|untrusted|injection|for example|such as|wrong|bad)\b|e\.g\./iu;
 
 function die(message) {
   console.error(`vendor: ${message}`);
@@ -37,26 +59,77 @@ function frontmatterName(text) {
   return line ? line[1].trim().replace(/^["']|["']$/gu, "") : undefined;
 }
 
-function listFiles(directory, problems, label) {
+/** Every file under `directory` as paths relative to it; records problems with the file kinds. */
+function listFiles(directory, reasons) {
   const files = [];
-  for (const entry of readdirSync(directory, { withFileTypes: true })) {
-    const full = join(directory, entry.name);
-    const info = lstatSync(full);
-    if (info.isSymbolicLink()) {
-      problems.push(`${label}: ${relative(directory, full)} is a symlink`);
-    } else if (info.isDirectory()) {
-      if (entry.name === ".git" || entry.name === "node_modules") continue;
-      for (const nested of listFiles(full, problems, label)) files.push(join(entry.name, nested));
-    } else if (info.isFile()) {
-      if (JUNK.has(entry.name)) continue;
-      files.push(entry.name);
-      const path = entry.name;
-      if (!SEGMENT.test(path) || path.endsWith(".") || RESERVED.test(path)) problems.push(`${label}: ${path} is not a portable file name`);
-      if (!TEXT_EXT.has(extname(path).toLowerCase())) problems.push(`${label}: ${full} is not a plain text file (${extname(path) || "no extension"})`);
-      if (info.size > MAX_FILE) problems.push(`${label}: ${path} is larger than 2 MiB`);
+  const walk = (current) => {
+    for (const entry of readdirSync(current, { withFileTypes: true })) {
+      const full = join(current, entry.name);
+      const info = lstatSync(full);
+      if (info.isSymbolicLink()) {
+        reasons.push(`${relative(directory, full)} is a symlink`);
+      } else if (info.isDirectory()) {
+        if (entry.name !== ".git" && entry.name !== "node_modules") walk(full);
+      } else if (info.isFile()) {
+        if (JUNK.has(entry.name)) continue;
+        const path = relative(directory, full);
+        files.push(path);
+        if (path.split(sep).some((segment) => !SEGMENT.test(segment) || segment.endsWith(".") || RESERVED.test(segment))) {
+          reasons.push(`${path} is not a portable file name`);
+        }
+        const ext = extname(path).toLowerCase();
+        if (!TEXT_EXT.has(ext)) reasons.push(`${path} is not a plain text file (${ext || "no extension"})`);
+        if (info.size > MAX_FILE) reasons.push(`${path} is larger than 2 MiB`);
+      }
+    }
+  };
+  walk(directory);
+  return files;
+}
+
+/** Reasons a Skill folder may not enter the store; empty when it is admitted (links are checked later). */
+function admit(directory, name) {
+  const reasons = [];
+  if (!SKILL_NAME.test(name)) reasons.push(`"${name}" is not a Skill name`);
+  if (!existsSync(join(directory, "SKILL.md"))) return [...reasons, "has no SKILL.md"];
+  if (frontmatterName(readFileSync(join(directory, "SKILL.md"), "utf8")) !== name) reasons.push("SKILL.md names another skill than its folder");
+  if (existsSync(join(directory, "LICENSE.txt")) || existsSync(join(directory, "SOURCE.md"))) reasons.push("already has a LICENSE.txt or SOURCE.md");
+  const files = listFiles(directory, reasons);
+  for (const file of files) {
+    const ext = extname(file).toLowerCase();
+    if (!TEXT_EXT.has(ext) || ext === "") continue;
+    const text = readFileSync(join(directory, file), "utf8");
+    for (const [pattern, why] of REFUSED_ANYWHERE) if (pattern.test(text)) reasons.push(`${file} ${why}`);
+    for (const line of text.split(/\r?\n/u)) {
+      if (BAD_EXAMPLE.test(line)) continue;
+      for (const [pattern, why] of REFUSED_PER_LINE) if (pattern.test(line)) reasons.push(`${file} ${why}`);
     }
   }
-  return files;
+  return [...new Set(reasons)];
+}
+
+/** Relative Markdown links of a Skill folder that leave it: [{ file, link, target }] (target is absolute). */
+function outwardLinks(directory) {
+  const links = [];
+  const walk = (current) => {
+    for (const entry of readdirSync(current, { withFileTypes: true })) {
+      const full = join(current, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith(".md")) {
+        const text = readFileSync(full, "utf8");
+        for (const match of text.matchAll(/\]\(([^)\s]+)\)/gu)) {
+          let link = match[1];
+          if (/^(https?:|mailto:|#|<)/u.test(link)) continue;
+          link = link.split("#")[0].split("?")[0];
+          if (!link) continue;
+          const target = resolve(dirname(full), decodeURIComponent(link));
+          if (target !== directory && !target.startsWith(directory + sep)) links.push({ file: relative(directory, full), link, target });
+        }
+      }
+    }
+  };
+  walk(directory);
+  return links;
 }
 
 function licenseNotice(clone) {
@@ -86,9 +159,11 @@ const work = resolve(args[workIndex + 1]);
 const manifest = JSON.parse(readFileSync(join(ROOT, "sources.json"), "utf8"));
 if (manifest.schema !== "alran.store.vendor/v1") die("sources.json: unknown schema");
 
-const problems = [];
+const reserved = new Set(manifest.reservedNames ?? []);
+const fatal = [];
+const excluded = [];
 const notices = [];
-const names = new Map();
+const taken = new Map();
 const staged = [];
 
 for (const source of manifest.sources) {
@@ -99,35 +174,82 @@ for (const source of manifest.sources) {
   if (git(clone, "status", "--porcelain")) die(`${source.id}: the clone has local changes`);
   const date = git(clone, "log", "-1", "--format=%cs");
   const { text: licenseText, copyright } = licenseNotice(clone);
-  notices.push({ source, licenseText, sha, date, copyright });
-  const unique = new Set();
-  for (const name of source.skills) {
-    if (unique.has(name)) problems.push(`${source.id}: ${name} listed twice`);
-    unique.add(name);
-    if (names.has(name)) problems.push(`${name} is in both ${names.get(name)} and ${source.id}`);
-    names.set(name, source.id);
-    const directory = join(clone, source.skillsDir, name);
-    const label = `${source.id}/${name}`;
-    if (!existsSync(join(directory, "SKILL.md"))) {
-      problems.push(`${label}: no SKILL.md`);
+
+  // Candidates: folder name -> directory, from every skills directory of the source.
+  const dirs = source.skillsDirs ?? [source.skillsDir];
+  const candidates = new Map();
+  for (const dir of dirs) {
+    const base = join(clone, dir);
+    if (!existsSync(base)) die(`${source.id}: ${dir} does not exist`);
+    for (const entry of readdirSync(base, { withFileTypes: true })) {
+      if (!entry.isDirectory() || !existsSync(join(base, entry.name, "SKILL.md"))) continue;
+      if (candidates.has(entry.name)) die(`${source.id}: ${entry.name} is in two skills directories`);
+      candidates.set(entry.name, { directory: join(base, entry.name), relPath: `${dir}/${entry.name}` });
+    }
+  }
+  const named = source.skills !== undefined;
+  if (named === (source.include === "clean")) die(`${source.id}: give either "skills" or "include": "clean"`);
+  const wanted = named ? source.skills : [...candidates.keys()].filter((name) => !(source.exclude ?? []).includes(name));
+  const members = new Map();
+  for (const name of [...new Set(wanted)].sort()) {
+    const candidate = candidates.get(name);
+    if (!candidate) {
+      fatal.push(`${source.id}/${name}: not found in ${dirs.join(", ")}`);
       continue;
     }
-    if (frontmatterName(readFileSync(join(directory, "SKILL.md"), "utf8")) !== name) problems.push(`${label}: SKILL.md names another skill`);
-    if (existsSync(join(directory, "LICENSE.txt")) || existsSync(join(directory, "SOURCE.md"))) problems.push(`${label}: already has a LICENSE.txt or SOURCE.md`);
-    listFiles(directory, problems, label);
-    staged.push({ kind: "skill", source, name, directory, to: join(ROOT, "skills", source.id, name), relPath: `${source.skillsDir}/${name}`, sha, date, copyright, licenseText });
+    const reasons = admit(candidate.directory, name);
+    if (reserved.has(name)) reasons.push("the name belongs to a Skill built in to Alran Code");
+    if (named && reasons.length > 0) {
+      fatal.push(`${source.id}/${name}: ${reasons.join("; ")}`);
+      continue;
+    }
+    if (reasons.length > 0) {
+      excluded.push({ source, name, reasons });
+      continue;
+    }
+    if (taken.has(name)) {
+      if (named) fatal.push(`${name} is in both ${taken.get(name)} and ${source.id}`);
+      else excluded.push({ source, name, reasons: [`the name is already taken by ${taken.get(name)}`] });
+      continue;
+    }
+    members.set(name, candidate);
+  }
+
+  // Links that leave a Skill must land on another Skill of this source (or a shared folder) that is in.
+  const sharedRoots = (source.shared ?? []).map((shared) => resolve(clone, shared.from));
+  for (let changed = true; changed; ) {
+    changed = false;
+    for (const [name, candidate] of [...members]) {
+      const dangling = outwardLinks(candidate.directory).filter(({ target }) => {
+        if (sharedRoots.some((root) => target === root || target.startsWith(root + sep))) return false;
+        return ![...members.values()].some((member) => target === member.directory || target.startsWith(member.directory + sep));
+      });
+      if (dangling.length === 0) continue;
+      const reason = `links to ${[...new Set(dangling.map(({ link }) => link))].slice(0, 3).join(", ")}, which is not in the store`;
+      if (named) fatal.push(`${source.id}/${name}: ${reason}`);
+      else excluded.push({ source, name, reasons: [reason] });
+      members.delete(name);
+      changed = true;
+    }
+  }
+  for (const [name, candidate] of members) {
+    taken.set(name, source.id);
+    staged.push({ kind: "skill", source, name, directory: candidate.directory, to: join(ROOT, "skills", source.id, name), relPath: candidate.relPath, sha, date, copyright, licenseText });
   }
   for (const shared of source.shared ?? []) {
     const directory = join(clone, shared.from);
     if (!existsSync(directory) || !statSync(directory).isDirectory()) {
-      problems.push(`${source.id}: shared directory ${shared.from} is missing`);
+      fatal.push(`${source.id}: shared directory ${shared.from} is missing`);
       continue;
     }
-    listFiles(directory, problems, `${source.id}/${shared.from}`);
+    const reasons = [];
+    listFiles(directory, reasons);
+    if (reasons.length > 0) fatal.push(`${source.id}/${shared.from}: ${reasons.join("; ")}`);
     staged.push({ kind: "shared", source, name: shared.from, directory, to: join(ROOT, "shared", source.id, shared.to), relPath: shared.from, sha, date, copyright, licenseText });
   }
+  notices.push({ source, licenseText, sha, date, copyright, count: members.size });
 }
-if (problems.length > 0) die(`refused:\n${problems.map((line) => `  ${line}`).join("\n")}`);
+if (fatal.length > 0) die(`refused:\n${fatal.map((line) => `  ${line}`).join("\n")}`);
 
 for (const id of new Set(manifest.sources.map((source) => source.id))) {
   rmSync(join(ROOT, "skills", id), { recursive: true, force: true });
@@ -149,7 +271,7 @@ const lines = [
   "",
   "| Source | Repository | Commit | Licence | Skills |",
   "| --- | --- | --- | --- | ---: |",
-  ...notices.map(({ source, sha, date }) => `| ${source.label} | ${source.repo} | ${sha.slice(0, 7)} (${date}) | ${source.spdx} | ${source.skills.length} |`),
+  ...notices.map(({ source, sha, date, count }) => `| ${source.label} | ${source.repo} | ${sha.slice(0, 7)} (${date}) | ${source.spdx} | ${count} |`),
   "",
   "## Licence texts",
   "",
@@ -160,10 +282,30 @@ for (const { source, licenseText, copyright } of notices) {
   if (seen.has(key)) continue;
   seen.add(key);
   const users = notices.filter((entry) => entry.licenseText.trim() === key).map((entry) => entry.source.repo.replace("https://github.com/", ""));
-  lines.push(`### ${source.spdx}: ${users.join(", ")}`, "", ...(copyright ? [copyright, ""] : []), "```text", licenseText.trim(), "```", "");
+  lines.push(`### ${source.spdx}: ${[...new Set(users)].join(", ")}`, "", ...(copyright ? [copyright, ""] : []), "```text", licenseText.trim(), "```", "");
 }
 writeFileSync(join(ROOT, "THIRD_PARTY_NOTICES.md"), lines.join("\n"));
 
+const grouped = new Map();
+for (const entry of excluded) grouped.set(entry.source.id, [...(grouped.get(entry.source.id) ?? []), entry]);
+writeFileSync(
+  join(ROOT, "EXCLUDED.md"),
+  [
+    "# Left out by the admission rules",
+    "",
+    "Skills of an \"all clean\" source that `scripts/vendor.mjs` did not take, and why. Generated; do not edit.",
+    "",
+    ...[...grouped.entries()].flatMap(([id, entries]) => [
+      `## ${id} (${entries.length})`,
+      "",
+      ...entries.map(({ name, reasons }) => `- \`${name}\`: ${reasons.join("; ")}`),
+      "",
+    ]),
+  ].join("\n"),
+);
+
 const versions = Object.fromEntries(notices.map(({ source, sha, date }) => [source.id, `${date.split("-").map(Number).join(".")}+${sha.slice(0, 7)}`]));
-console.log(`vendored ${staged.filter((item) => item.kind === "skill").length} skills from ${manifest.sources.length} sources`);
-console.log(`versions (store/store.config.json, skills.versions): ${JSON.stringify(versions)}`);
+const counts = Object.fromEntries(notices.map(({ source, count }) => [source.id, count]));
+writeFileSync(join(ROOT, "versions.json"), `${JSON.stringify({ versions, counts }, null, 2)}\n`);
+console.log(`vendored ${staged.filter((item) => item.kind === "skill").length} skills from ${manifest.sources.length} sources; left out ${excluded.length} (EXCLUDED.md)`);
+console.log("versions and counts written to versions.json (scripts/gen-config.mjs reads them)");

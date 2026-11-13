@@ -1,0 +1,146 @@
+{
+  "note": "What each source's Plugin is called and how it is described. scripts/gen-config.mjs turns this, sources.json and versions.json into store.config.json. {N} becomes the number of Skills, in words.",
+  "plugins": [
+    {
+      "source": "addyosmani", "name": "engineering-workflow", "displayName": "Engineering Workflow", "author": "Addy Osmani", "category": "Code", "pluginOnly": true,
+      "directories": [{ "from": "shared/addyosmani/references", "to": "references" }],
+      "description": "{N} skills for working with a coding agent: specs and task breakdown, incremental implementation, test-driven development, debugging, code review and simplification, security and performance, git workflow, CI/CD, observability and shipping.",
+      "exampleQueries": ["Write the spec for this feature before we start coding", "Break this work into small tasks I can verify one by one", "Review this change before I merge it"]
+    },
+    {
+      "source": "cloudflare", "name": "cloudflare-skills", "displayName": "Cloudflare", "author": "Cloudflare", "category": "Code",
+      "description": "{N} skills for building on Cloudflare: Workers development and best practices, Wrangler, Durable Objects, the Agents SDK, frameworks and Next.js on Cloudflare, performance and profiling, Cloudflare One, and a broad platform reference.",
+      "exampleQueries": ["Set up a new Cloudflare Worker project", "Profile why this Worker is slow", "Model this feature with a Durable Object"]
+    },
+    {
+      "source": "firebase", "name": "firebase-skills", "displayName": "Firebase", "author": "Firebase", "category": "Code",
+      "description": "{N} skills for Firebase: setup basics, Cloud Firestore and security rules, Authentication, Hosting, Remote Config, Analytics and Crashlytics.",
+      "exampleQueries": ["Write Firestore security rules for this data model", "Add Firebase Authentication to this app", "Audit these Firebase security rules"]
+    },
+    {
+      "source": "supabase", "name": "supabase-skills", "displayName": "Supabase", "author": "Supabase", "category": "Code",
+      "description": "{N} skills for Supabase: working with the platform, and Postgres best practices.",
+      "exampleQueries": ["Review this Postgres schema against best practices", "Add row-level security to this table"]
+    },
+    {
+      "source": "stripe", "name": "stripe-skills", "displayName": "Stripe", "author": "Stripe", "category": "Code",
+      "description": "{N} skills for Stripe: integration best practices, upgrading to current API and SDK versions, and building Stripe Apps.",
+      "exampleQueries": ["Check my Stripe integration against best practices", "Upgrade my Stripe API version"]
+    },
+    {
+      "source": "expo", "name": "expo-skills", "displayName": "Expo", "author": "Expo", "category": "Code",
+      "description": "{N} skills for Expo and React Native apps: Expo Router, native modules, data fetching, dev clients, project structure, SDK upgrades, and EAS Update, Hosting and app store releases.",
+      "exampleQueries": ["Upgrade this app to the latest Expo SDK", "Set up routing with Expo Router"]
+    },
+    {
+      "source": "clickhouse", "name": "clickhouse-skills", "displayName": "ClickHouse", "author": "ClickHouse", "category": "Code",
+      "description": "{N} skills for ClickHouse: architecture advice, best practices, coding and troubleshooting with the Node.js client, and root-cause analysis for managed Postgres.",
+      "exampleQueries": ["Review this ClickHouse table design", "Why is this ClickHouse query slow?"]
+    },
+    {
+      "source": "gemini", "name": "gemini-api-skills", "displayName": "Gemini API", "author": "Google", "category": "Code",
+      "description": "{N} skills for building with the Gemini API, including the Live API.",
+      "exampleQueries": ["Call the Gemini API from this service", "Add a Gemini Live API voice session"]
+    },
+    {
+      "source": "mongodb", "name": "mongodb-skills", "displayName": "MongoDB", "author": "MongoDB", "category": "Code",
+      "description": "{N} skills for MongoDB: connections, schema design, query optimisation, natural-language querying, Queryable Encryption sizing, MCP setup and Atlas stream processing.",
+      "exampleQueries": ["Design a MongoDB schema for this feature", "Optimise this MongoDB query"]
+    },
+    {
+      "source": "neon", "name": "neon-skills", "displayName": "Neon", "author": "Neon", "category": "Code",
+      "description": "{N} skills for Neon serverless Postgres: the platform, Auth, Functions, Object Storage, Realtime and the AI Gateway.",
+      "exampleQueries": ["Set up Neon Postgres for this project", "Add Neon Auth to this app"]
+    },
+    {
+      "source": "flutter", "name": "flutter-skills", "displayName": "Flutter and Dart", "author": "Flutter", "category": "Code",
+      "description": "{N} skills from the Flutter and Dart teams: unit, widget and integration tests, coverage, static analysis, FFI, documentation, widget previews and architecture best practices.",
+      "exampleQueries": ["Add widget tests for this screen", "Fix this Dart runtime error", "Set up static analysis for this package"]
+    },
+    {
+      "source": "apollo", "name": "apollo-graphql-skills", "displayName": "Apollo GraphQL", "author": "Apollo GraphQL", "category": "Code",
+      "description": "{N} skills for Apollo GraphQL: Client, Server, Router, Federation, Connectors, schema and operation design, and Rust best practices.",
+      "exampleQueries": ["Design the GraphQL schema for this API", "Add federation to these services"]
+    },
+    {
+      "source": "brave", "name": "brave-search-skills", "displayName": "Brave Search", "author": "Brave", "category": "Productivity",
+      "description": "{N} skills for the Brave Search API: web, news, image, video and local search, answers, suggestions, spellcheck and context for LLMs. Needs your own Brave Search API key.",
+      "exampleQueries": ["Search the web for the latest release notes of this library", "Find news about this topic"]
+    },
+    {
+      "source": "callstack", "name": "react-native-skills", "displayName": "React Native (Callstack)", "author": "Callstack", "category": "Code",
+      "description": "{N} skills for React Native: creating libraries, navigation, GitHub Actions, assessing and doing brownfield migrations, and user documentation.",
+      "exampleQueries": ["Create a React Native library", "Assess whether this app can migrate to React Native"]
+    },
+    {
+      "source": "coderabbit", "name": "coderabbit-skills", "displayName": "CodeRabbit", "author": "CodeRabbit", "category": "Code",
+      "description": "{N} skills for working with CodeRabbit: configuring it and applying its review fixes. They expect the CodeRabbit tooling to be set up.",
+      "exampleQueries": ["Apply the CodeRabbit review comments to this branch", "Write a CodeRabbit configuration for this repo"]
+    },
+    {
+      "source": "cypress", "name": "cypress-skills", "displayName": "Cypress", "author": "Cypress", "category": "Code",
+      "description": "{N} skills for Cypress: authoring tests, the Cypress Cloud CLI, documentation lookup, and explaining test runs.",
+      "exampleQueries": ["Write a Cypress test for this flow", "Explain why this Cypress run failed"]
+    },
+    {
+      "source": "duckdb", "name": "duckdb-skills", "displayName": "DuckDB", "author": "DuckDB", "category": "Science & Healthcare",
+      "description": "{N} skills for DuckDB: running queries, attaching databases, reading and converting files, exploring S3, spatial data, and documentation lookup.",
+      "exampleQueries": ["Query this Parquet file with DuckDB", "Convert this CSV to Parquet"]
+    },
+    {
+      "source": "redis", "name": "redis-skills", "displayName": "Redis", "author": "Redis", "category": "Code",
+      "description": "{N} skills for Redis: core data modelling, clustering, connections, observability, search, security and semantic caching, plus adding agent memory, playbooks, a context gateway, an intent router, lenses and Redis Iris to an app.",
+      "exampleQueries": ["Add a semantic cache with Redis", "Review how this service connects to Redis"]
+    },
+    {
+      "source": "resend", "name": "resend-skills", "displayName": "Email (Resend)", "author": "Resend", "category": "Code",
+      "description": "{N} skills for email: best practices, React Email, and the Resend CLI.",
+      "exampleQueries": ["Build a React Email template for this notification", "Review our email sending for best practices"]
+    },
+    {
+      "source": "sanity", "name": "sanity-skills", "displayName": "Sanity", "author": "Sanity", "category": "Design & Sites",
+      "description": "{N} skills for Sanity: content modelling and experimentation, Portable Text, migrations, Studio upgrades, form components, singletons and SEO.",
+      "exampleQueries": ["Model this content in Sanity", "Upgrade this Sanity Studio"]
+    },
+    {
+      "source": "netlify", "name": "netlify-skills", "displayName": "Netlify", "author": "Netlify", "category": "Code",
+      "description": "{N} skills for Netlify: Functions and Edge Functions, Blobs, Database, Forms, Identity, caching, the image CDN, configuration, deploys, the AI Gateway, access control and frameworks.",
+      "exampleQueries": ["Deploy this site to Netlify", "Add a Netlify Function for this endpoint"]
+    },
+    {
+      "source": "terraform", "name": "terraform-skills", "displayName": "Terraform", "author": "HashiCorp", "category": "Code",
+      "description": "{N} skills for Terraform: writing and testing providers (resources, actions, ephemeral resources, acceptance tests), Terraform tests, stacks, the style guide, module refactoring and Azure Verified Modules.",
+      "exampleQueries": ["Refactor this Terraform module", "Write Terraform tests for this module"]
+    },
+    {
+      "source": "packer", "name": "packer-skills", "displayName": "Packer", "author": "HashiCorp", "category": "Code",
+      "description": "{N} skills for Packer: AWS AMI, Azure and Windows image builders, and pushing images to a registry.",
+      "exampleQueries": ["Build an AWS AMI with Packer", "Create a Windows image with Packer"]
+    },
+    {
+      "source": "replicate", "name": "replicate-skills", "displayName": "Replicate", "author": "Replicate", "category": "Studio",
+      "description": "{N} skills for Replicate: finding, running, comparing, building and publishing models, and prompting image and video models.",
+      "exampleQueries": ["Find a model on Replicate for this task", "Compare these two image models"]
+    },
+    {
+      "source": "huggingface", "name": "huggingface-skills", "displayName": "Hugging Face", "author": "Hugging Face", "category": "Science & Healthcare",
+      "description": "{N} skills for Hugging Face: datasets, Spaces, Gradio, local models, papers, Trackio, ZeroGPU, Transformers.js, TRL training and AWS deployment planning.",
+      "exampleQueries": ["Build a Gradio demo for this model", "Find the paper behind this model"]
+    },
+    {
+      "source": "sentry", "name": "sentry-engineering-skills", "displayName": "Sentry Engineering", "author": "Sentry", "category": "Code",
+      "description": "{N} engineering skills from Sentry: AGENTS.md, code simplification, bug finding, security review, secret leaks in serialization, Django access and performance review, PR descriptions, prompt optimisation and documentation.",
+      "exampleQueries": ["Find bugs in my local branch changes", "Review this Django view for access control problems"]
+    },
+    {
+      "source": "marketing", "name": "marketing-skills", "displayName": "Marketing", "author": "Corey Haines", "category": "Sales",
+      "description": "{N} marketing skills: copywriting and editing, conversion optimisation, SEO, email and cold outreach, pricing and paywalls, launches, analytics and attribution, and more.",
+      "exampleQueries": ["Rewrite this landing page for conversion", "Plan the launch of this feature"]
+    },
+    {
+      "source": "pm", "name": "product-management-skills", "displayName": "Product Management", "author": "Paweł Huryn", "category": "Business",
+      "description": "{N} product management skills: discovery and research, strategy and positioning, execution (PRDs, OKRs, roadmaps, sprint planning) and go-to-market.",
+      "exampleQueries": ["Write a PRD for this feature", "Run a pre-mortem on this launch"]
+    }
+  ]
+}

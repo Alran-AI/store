@@ -2,23 +2,34 @@
 // Writes the Plugin icons (128x128 RGBA PNG: a rounded square with a gradient and one glyph) to
 // store/icons/. Icons are content, not build output: they are committed, and the store builder only
 // copies them. Re-run to change a colour.
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { deflateSync } from "node:zlib";
 
-const OUT = join(resolve(dirname(fileURLToPath(import.meta.url)), ".."), "store", "icons");
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const OUT = join(ROOT, "store", "icons");
 const SIZE = 128;
 
-// name -> glyph, gradient from -> to
-const ICONS = {
-  "engineering-workflow": ["bars", [0x7a, 0x62, 0xc7], [0x4e, 0x3a, 0x94]],
-  "cloudflare-skills": ["hexagon", [0xf3, 0x8a, 0x3d], [0xc2, 0x4e, 0x0c]],
-  "firebase-skills": ["document", [0xf5, 0xb0, 0x2e], [0xc7, 0x7a, 0x06]],
-  "supabase-skills": ["hexagon", [0x3d, 0xcf, 0x8e], [0x0f, 0x8a, 0x5a]],
-  "stripe-skills": ["bars", [0x6b, 0x75, 0xf0], [0x3a, 0x42, 0xb8]],
-  "expo-skills": ["document", [0x4a, 0x55, 0x68], [0x1f, 0x29, 0x37]],
-};
+// One icon per Plugin of store/plugins.json: a glyph in rotation and a gradient whose hue comes from the name.
+const GLYPH_NAMES = ["bars", "hexagon", "document"];
+function hslToRgb(h, s, l) {
+  const k = (n) => (n + h / 30) % 12;
+  const a = s * Math.min(l, 1 - l);
+  const f = (n) => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+  return [Math.round(255 * f(0)), Math.round(255 * f(8)), Math.round(255 * f(4))];
+}
+function hueOf(name) {
+  let hash = 0;
+  for (const char of name) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  return hash % 360;
+}
+const ICONS = Object.fromEntries(
+  JSON.parse(readFileSync(join(ROOT, "store", "plugins.json"), "utf8")).plugins.map((plugin, index) => [
+    plugin.name,
+    [GLYPH_NAMES[index % GLYPH_NAMES.length], hslToRgb(hueOf(plugin.name), 0.55, 0.55), hslToRgb(hueOf(plugin.name), 0.6, 0.32)],
+  ]),
+);
 
 function crc32(buffer) {
   let crc = ~0;

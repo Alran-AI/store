@@ -1,6 +1,28 @@
 {
   "schema": "alran.store.vendor/v1",
   "note": "Every Skill in this store is an unmodified copy from one of these repositories, at the pinned commit, under its own licence. Edit this file, then run scripts/vendor.mjs.",
+  "reservedNote": "Names of the Skills that ship inside Alran Code (dist/assets/skills and the alran agent's skills). A store Skill with one of these names would replace the built-in one, so the vendoring script refuses them.",
+  "reservedNames": [
+    "alran-code-product",
+    "alran-tools-master",
+    "code-review",
+    "control-in-app-browser",
+    "cu-desktop",
+    "deep-research",
+    "deploy-website",
+    "docx",
+    "edit-deployed-website",
+    "init",
+    "llm-call",
+    "pdf",
+    "pptx",
+    "resume-codex",
+    "skill-creator",
+    "skill-refiner",
+    "visual-page",
+    "x-link-reader",
+    "xlsx"
+  ],
   "sources": [
     {
       "id": "addyosmani",
@@ -9,7 +31,6 @@
       "clone": "addyosmani_agent-skills",
       "commit": "301b02b12bff98e4688e6984af6556802322bbde",
       "spdx": "MIT",
-      "skillsDir": "skills",
       "skills": [
         "api-and-interface-design",
         "ci-cd-and-automation",
@@ -38,6 +59,9 @@
           "from": "references",
           "to": "references"
         }
+      ],
+      "skillsDirs": [
+        "skills"
       ]
     },
     {
@@ -47,7 +71,6 @@
       "clone": "cloudflare_skills",
       "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
       "spdx": "Apache-2.0",
-      "skillsDir": "skills",
       "skills": [
         "agents-sdk",
         "cloudflare",
@@ -62,6 +85,9 @@
         "workers-development",
         "workers-profiling",
         "wrangler"
+      ],
+      "skillsDirs": [
+        "skills"
       ]
     },
     {
@@ -71,7 +97,6 @@
       "clone": "firebase_agent-skills",
       "commit": "99954a30898bb5ddc8152ee10e124dc3b4106bf7",
       "spdx": "Apache-2.0",
-      "skillsDir": "skills",
       "skills": [
         "extension-to-functions-codebase",
         "firebase-analytics",
@@ -83,6 +108,9 @@
         "firebase-remote-config-basics",
         "firebase-security-rules-auditor",
         "firestore-rules-creation"
+      ],
+      "skillsDirs": [
+        "skills"
       ]
     },
     {
@@ -92,10 +120,12 @@
       "clone": "supabase_agent-skills",
       "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
       "spdx": "MIT",
-      "skillsDir": "skills",
       "skills": [
         "supabase",
         "supabase-postgres-best-practices"
+      ],
+      "skillsDirs": [
+        "skills"
       ]
     },
     {
@@ -105,11 +135,13 @@
       "clone": "stripe_ai",
       "commit": "1ef4a81f8c9a092e6cba925d1cca6a78ac29c37b",
       "spdx": "MIT",
-      "skillsDir": "skills",
       "skills": [
         "stripe-apps",
         "stripe-best-practices",
         "upgrade-stripe"
+      ],
+      "skillsDirs": [
+        "skills"
       ]
     },
     {
@@ -119,7 +151,6 @@
       "clone": "expo_skills",
       "commit": "acc0b21ce09be356b5cf0323482bdfe7db0b7a1e",
       "spdx": "MIT",
-      "skillsDir": "plugins/expo/skills",
       "skills": [
         "eas-app-stores",
         "eas-hosting",
@@ -131,7 +162,289 @@
         "expo-project-structure",
         "expo-router",
         "expo-upgrade"
+      ],
+      "skillsDirs": [
+        "plugins/expo/skills"
       ]
+    },
+    {
+      "id": "clickhouse",
+      "label": "ClickHouse",
+      "repo": "https://github.com/ClickHouse/agent-skills",
+      "clone": "ClickHouse_agent-skills",
+      "commit": "d3b2b5ba43a8b80c2d08858b68d53edc701b5ace",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "gemini",
+      "label": "Google Gemini API",
+      "repo": "https://github.com/google-gemini/gemini-skills",
+      "clone": "google-gemini_gemini-skills",
+      "commit": "87fb0173d36fea4f87de4c3fbd0678cf929c0588",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "repo": "https://github.com/mongodb/agent-skills",
+      "clone": "mongodb_agent-skills",
+      "commit": "7b44a4a06a8ac94f9911d7c94f3f7dc4a13d2d0a",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "neon",
+      "label": "Neon",
+      "repo": "https://github.com/neondatabase/agent-skills",
+      "clone": "neondatabase_agent-skills",
+      "commit": "fa44b92d2fd129dcd443b677629f76b7d781a560",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "flutter",
+      "label": "Flutter and Dart",
+      "repo": "https://github.com/flutter/skills",
+      "clone": "flutter_skills",
+      "commit": "e5a88d2be19cbf7ba1ef974375e5846492aca2ac",
+      "spdx": "BSD-3-Clause",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "apollo",
+      "label": "Apollo GraphQL",
+      "repo": "https://github.com/apollographql/skills",
+      "clone": "apollographql_skills",
+      "commit": "9dda1397730370aeb8df4ff8f2015c34c86b5003",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "brave",
+      "label": "Brave Search",
+      "repo": "https://github.com/brave/brave-search-skills",
+      "clone": "brave_brave-search-skills",
+      "commit": "62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "callstack",
+      "label": "React Native (Callstack)",
+      "repo": "https://github.com/callstackincubator/agent-skills",
+      "clone": "callstackincubator_agent-skills",
+      "commit": "59e9d17446a248b21d86f078fcd0bd2d36db1ca4",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "coderabbit",
+      "label": "CodeRabbit",
+      "repo": "https://github.com/coderabbitai/skills",
+      "clone": "coderabbitai_skills",
+      "commit": "45bd1ae2c471cd861b8b6903f7dcab7c57aa0e59",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "cypress",
+      "label": "Cypress",
+      "repo": "https://github.com/cypress-io/ai-toolkit",
+      "clone": "cypress-io_ai-toolkit",
+      "commit": "1b8717293726d06203e8d98ee17b821e377c683a",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "duckdb",
+      "label": "DuckDB",
+      "repo": "https://github.com/duckdb/duckdb-skills",
+      "clone": "duckdb_duckdb-skills",
+      "commit": "7feda8e01e22bc0886c86123f3884947e36d8c69",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "redis",
+      "label": "Redis",
+      "repo": "https://github.com/redis/agent-skills",
+      "clone": "redis_agent-skills",
+      "commit": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "resend",
+      "label": "Resend",
+      "repo": "https://github.com/resend/resend-skills",
+      "clone": "resend_resend-skills",
+      "commit": "f3e86d84960887bfc6e76e504c642ab6bc748f0c",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "sanity",
+      "label": "Sanity",
+      "repo": "https://github.com/sanity-io/agent-toolkit",
+      "clone": "sanity-io_agent-toolkit",
+      "commit": "3ed3a143f8d3413faa7790ac0b2274fd3a8a6320",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "netlify",
+      "label": "Netlify",
+      "repo": "https://github.com/netlify/context-and-tools",
+      "clone": "netlify_context-and-tools",
+      "commit": "905256ef236890a842be1ff1c5fd6bb07baa1890",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "terraform",
+      "label": "Terraform",
+      "repo": "https://github.com/hashicorp/agent-skills",
+      "clone": "hashicorp_agent-skills",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "spdx": "MPL-2.0",
+      "skillsDirs": [
+        "plugins/terraform/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "packer",
+      "label": "Packer",
+      "repo": "https://github.com/hashicorp/agent-skills",
+      "clone": "hashicorp_agent-skills",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "spdx": "MPL-2.0",
+      "skillsDirs": [
+        "plugins/packer/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "replicate",
+      "label": "Replicate",
+      "repo": "https://github.com/replicate/skills",
+      "clone": "replicate_skills",
+      "commit": "2f36e415965ae63baa1c9f6635888092bcd771d3",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "huggingface",
+      "label": "Hugging Face",
+      "repo": "https://github.com/huggingface/skills",
+      "clone": "huggingface_skills",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "sentry",
+      "label": "Sentry (engineering)",
+      "repo": "https://github.com/getsentry/skills",
+      "clone": "getsentry_skills",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "skills": [
+        "agents-md",
+        "code-simplifier",
+        "django-access-review",
+        "django-perf-review",
+        "doc-coauthoring",
+        "find-bugs",
+        "prompt-optimizer",
+        "pr-writer",
+        "secret-serialization",
+        "security-review"
+      ]
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing (Corey Haines)",
+      "repo": "https://github.com/coreyhaines31/marketingskills",
+      "clone": "coreyhaines31_marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "pm",
+      "label": "Product management (Pawe\u0142 Huryn)",
+      "repo": "https://github.com/phuryn/pm-skills",
+      "clone": "phuryn_pm-skills",
+      "commit": "9af7bfd0bc47fdad43c2eaa7a43cd13918e7aaef",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "pm-execution/skills",
+        "pm-product-discovery/skills",
+        "pm-product-strategy/skills",
+        "pm-market-research/skills",
+        "pm-go-to-market/skills"
+      ],
+      "include": "clean"
     }
   ]
 }
