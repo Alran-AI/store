@@ -25,8 +25,9 @@ alran plugin install engineering-workflow
 alran skills install wrangler
 ```
 
-This repository has no remote. The built `store/` folder is what gets hosted; the Alran platform serves it
-at `/v1/store/` (see the `alran-platform` repository).
+This repository has no remote. The built `store/` folder is what gets hosted: the Alran platform (the
+`alran-platform` repository) serves a checked copy at `https://ai.ottili.one/v1/store/index.json`, which Alran
+Code reads by default. After a rebuild, copy it over with `npm run store:sync -- --from <this checkout>` there.
 
 ## Layout
 
