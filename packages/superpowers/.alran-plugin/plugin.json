@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "name": "superpowers",
+  "version": "2026.11.3+22f0b46",
+  "displayName": "Superpowers",
+  "description": "A software-development workflow for the agent: brainstorm a design, write a plan, work through it test-first with reviews, and finish the branch. Fourteen Skills, and a session-start hook that introduces them.",
+  "author": "Jesse Vincent",
+  "icon": "icon.png",
+  "category": "Code",
+  "exampleQueries": [
+    "Brainstorm a design for this feature before we write any code",
+    "Write an implementation plan from this spec",
+    "This test fails sometimes: debug it systematically"
+  ],
+  "apps": [],
+  "mcpServers": [],
+  "skills": [
+    "skills/brainstorming/SKILL.md",
+    "skills/dispatching-parallel-agents/SKILL.md",
+    "skills/executing-plans/SKILL.md",
+    "skills/finishing-a-development-branch/SKILL.md",
+    "skills/receiving-code-review/SKILL.md",
+    "skills/requesting-code-review/SKILL.md",
+    "skills/subagent-driven-development/SKILL.md",
+    "skills/systematic-debugging/SKILL.md",
+    "skills/test-driven-development/SKILL.md",
+    "skills/using-git-worktrees/SKILL.md",
+    "skills/using-superpowers/SKILL.md",
+    "skills/verification-before-completion/SKILL.md",
+    "skills/writing-plans/SKILL.md",
+    "skills/writing-skills/SKILL.md"
+  ],
+  "hooks": [
+    "hooks/hooks.json"
+  ]
+}

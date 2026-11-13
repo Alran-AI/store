@@ -2017,6 +2017,90 @@
       }
     },
     {
+      "name": "superpowers",
+      "displayName": "Superpowers",
+      "version": "2026.11.3+22f0b46",
+      "description": "A software-development workflow for the agent: brainstorm a design, write a plan, work through it test-first with reviews, and finish the branch. Fourteen Skills, and a session-start hook that introduces them.",
+      "author": "Jesse Vincent",
+      "category": "Code",
+      "license": "MIT",
+      "homepage": "https://github.com/obra/superpowers",
+      "exampleQueries": [
+        "Brainstorm a design for this feature before we write any code",
+        "Write an implementation plan from this spec",
+        "This test fails sometimes: debug it systematically"
+      ],
+      "contents": {
+        "skills": [
+          {
+            "name": "brainstorming",
+            "description": "You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning anything new, in software or out of it (a talk, a business, a renovation)."
+          },
+          {
+            "name": "dispatching-parallel-agents",
+            "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
+          },
+          {
+            "name": "executing-plans",
+            "description": "Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available"
+          },
+          {
+            "name": "finishing-a-development-branch",
+            "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
+          },
+          {
+            "name": "receiving-code-review",
+            "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation"
+          },
+          {
+            "name": "requesting-code-review",
+            "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+          },
+          {
+            "name": "subagent-driven-development",
+            "description": "Use when executing implementation plans with independent tasks in the current session"
+          },
+          {
+            "name": "systematic-debugging",
+            "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes"
+          },
+          {
+            "name": "test-driven-development",
+            "description": "Use when implementing any feature or bugfix, before writing implementation code"
+          },
+          {
+            "name": "using-git-worktrees",
+            "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback"
+          },
+          {
+            "name": "using-superpowers",
+            "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions"
+          },
+          {
+            "name": "verification-before-completion",
+            "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always"
+          },
+          {
+            "name": "writing-plans",
+            "description": "Use when you have a spec or requirements for a multi-step task, before touching code"
+          },
+          {
+            "name": "writing-skills",
+            "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment"
+          }
+        ],
+        "mcpServers": [],
+        "apps": [],
+        "hooks": 1
+      },
+      "archive": {
+        "url": "archives/plugin-superpowers-2026.11.3-22f0b46.zip",
+        "size": 421038,
+        "archiveSha256": "ae738730116eb6be22244ad9e84ad37a5d5d4dd02076c678984ef8776c13d15d",
+        "contentDigest": "sha256-tree-v1:84ed9228e231876e0d027f79273e25cf4ca053f5713a0d94f89be6a99733e0ab"
+      }
+    },
+    {
       "name": "terraform-skills",
       "displayName": "Terraform",
       "version": "2026.11.3+5e30fa5",

@@ -2,7 +2,7 @@
 // Writes the Plugin icons (128x128 RGBA PNG: a rounded square with a gradient and one glyph) to
 // store/icons/. Icons are content, not build output: they are committed, and the store builder only
 // copies them. Re-run to change a colour.
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { deflateSync } from "node:zlib";
@@ -24,11 +24,11 @@ function hueOf(name) {
   for (const char of name) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
   return hash % 360;
 }
+const PACKAGES = existsSync(join(ROOT, "packages.json")) ? JSON.parse(readFileSync(join(ROOT, "packages.json"), "utf8")).packages : [];
+// Plugins of store/plugins.json first (their icons do not change when a package is added), then packages.
+const NAMES = [...JSON.parse(readFileSync(join(ROOT, "store", "plugins.json"), "utf8")).plugins.map((plugin) => plugin.name), ...PACKAGES.map((pkg) => pkg.name)];
 const ICONS = Object.fromEntries(
-  JSON.parse(readFileSync(join(ROOT, "store", "plugins.json"), "utf8")).plugins.map((plugin, index) => [
-    plugin.name,
-    [GLYPH_NAMES[index % GLYPH_NAMES.length], hslToRgb(hueOf(plugin.name), 0.55, 0.55), hslToRgb(hueOf(plugin.name), 0.6, 0.32)],
-  ]),
+  NAMES.map((name, index) => [name, [GLYPH_NAMES[index % GLYPH_NAMES.length], hslToRgb(hueOf(name), 0.55, 0.55), hslToRgb(hueOf(name), 0.6, 0.32)]]),
 );
 
 function crc32(buffer) {
@@ -124,5 +124,11 @@ for (const [name, [glyphName, from, to]] of Object.entries(ICONS)) {
     return [color[0], color[1], color[2], Math.round((255 * covered) / 9)];
   });
   writeFileSync(join(OUT, `${name}.png`), data);
+  // A package carries its icon inside itself.
+  const pkg = PACKAGES.find((entry) => entry.name === name);
+  if (pkg) {
+    mkdirSync(join(ROOT, "packages", pkg.id), { recursive: true });
+    writeFileSync(join(ROOT, "packages", pkg.id, "icon.png"), data);
+  }
 }
 console.log(`wrote ${Object.keys(ICONS).length} icons to ${OUT}`);

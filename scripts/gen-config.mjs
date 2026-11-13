@@ -23,6 +23,27 @@ if (problems.length > 0) {
   process.exit(1);
 }
 
+const packages = existsSync(join(ROOT, "packages.json")) ? read("packages.json").packages : [];
+const packagePlugins = packages.map((pkg) => {
+  const manifestFile = join("packages", pkg.id, ".alran-plugin", "plugin.json");
+  if (!existsSync(join(ROOT, manifestFile))) {
+    console.error(`gen-config: ${manifestFile} does not exist; run scripts/vendor-package.mjs first`);
+    process.exit(1);
+  }
+  return {
+    name: pkg.name,
+    displayName: pkg.displayName,
+    version: read(manifestFile).version,
+    description: pkg.description,
+    author: pkg.author,
+    license: pkg.license,
+    homepage: pkg.repo,
+    category: pkg.category,
+    directory: `../packages/${pkg.id}`,
+    exampleQueries: pkg.exampleQueries,
+  };
+});
+
 const config = {
   schema: "alran.store.build/v1",
   name: "Alran Curated Store",
@@ -32,7 +53,7 @@ const config = {
     groups: Object.fromEntries(sources.map((source) => [source.id, source.label])),
     versions,
   },
-  plugins: sources.map((source) => {
+  plugins: [...sources.map((source) => {
     const entry = bySource.get(source.id);
     const n = counts[source.id];
     return {
@@ -49,7 +70,7 @@ const config = {
       ...(entry.directories ? { directories: entry.directories } : {}),
       exampleQueries: entry.exampleQueries,
     };
-  }),
+  }), ...packagePlugins],
 };
 writeFileSync(join(ROOT, "store", "store.config.json"), `${JSON.stringify(config, null, 2)}\n`);
-console.log(`store/store.config.json: ${config.plugins.length} Plugins, ${Object.values(counts).reduce((a, b) => a + b, 0)} Skills`);
+console.log(`store/store.config.json: ${config.plugins.length} Plugins (${packagePlugins.length} as packages), ${Object.values(counts).reduce((a, b) => a + b, 0)} Library Skills`);

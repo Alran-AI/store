@@ -284,7 +284,11 @@ for (const { source, licenseText, copyright } of notices) {
   const users = notices.filter((entry) => entry.licenseText.trim() === key).map((entry) => entry.source.repo.replace("https://github.com/", ""));
   lines.push(`### ${source.spdx}: ${[...new Set(users)].join(", ")}`, "", ...(copyright ? [copyright, ""] : []), "```text", licenseText.trim(), "```", "");
 }
-writeFileSync(join(ROOT, "THIRD_PARTY_NOTICES.md"), lines.join("\n"));
+// The block scripts/vendor-package.mjs writes for the Plugin packages survives this rewrite.
+const noticesFile = join(ROOT, "THIRD_PARTY_NOTICES.md");
+const previousNotices = existsSync(noticesFile) ? readFileSync(noticesFile, "utf8") : "";
+const packagesBlock = /<!-- packages:begin -->[\s\S]*?<!-- packages:end -->\n?/u.exec(previousNotices)?.[0];
+writeFileSync(noticesFile, `${lines.join("\n")}${packagesBlock ? `\n${packagesBlock}` : ""}`);
 
 const grouped = new Map();
 for (const entry of excluded) grouped.set(entry.source.id, [...(grouped.get(entry.source.id) ?? []), entry]);

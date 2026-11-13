@@ -581,6 +581,22 @@
         "Write a PRD for this feature",
         "Run a pre-mortem on this launch"
       ]
+    },
+    {
+      "name": "superpowers",
+      "displayName": "Superpowers",
+      "version": "2026.11.3+22f0b46",
+      "description": "A software-development workflow for the agent: brainstorm a design, write a plan, work through it test-first with reviews, and finish the branch. Fourteen Skills, and a session-start hook that introduces them.",
+      "author": "Jesse Vincent",
+      "license": "MIT",
+      "homepage": "https://github.com/obra/superpowers",
+      "category": "Code",
+      "directory": "../packages/superpowers",
+      "exampleQueries": [
+        "Brainstorm a design for this feature before we write any code",
+        "Write an implementation plan from this spec",
+        "This test fails sometimes: debug it systematically"
+      ]
     }
   ]
 }

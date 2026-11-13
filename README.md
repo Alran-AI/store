@@ -1,17 +1,20 @@
 # Alran store
 
-A curated catalogue of Skills and Plugins for Alran Code. Nothing here is written by us: every Skill is an
-**unmodified copy** from an open-source project or a platform vendor's own skills repository, at a pinned
-commit, under its own licence. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
+A curated catalogue of Skills and Plugins for Alran Code. Nothing here is written by us: every Skill is a
+copy from an open-source project or a platform vendor's own skills repository, at a pinned commit, under its
+own licence. All are **unmodified**, except the Superpowers package, whose differences from upstream are
+listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **28 Plugins**
-(one per source) and **312 individually installable Skills**, 333 Skills in all. The 21 engineering-workflow
-Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries.
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **29 Plugins**
+(28 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **312
+individually installable Skills**; 347 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
+call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT) |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package) |
 | Cloud and hosting | Cloudflare, Netlify, Firebase, Supabase, Neon, Terraform, Packer |
 | Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API |
 | Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Brave Search |
@@ -36,6 +39,9 @@ Code reads by default. After a rebuild, copy it over with `npm run store:sync --
 | `sources.json` | The pinned sources, which Skills are taken from each, and the reserved names |
 | `scripts/vendor.mjs` | Copies the Skills from local clones, applies the admission rules, writes `EXCLUDED.md` and `versions.json` |
 | `skills/<source>/<name>/` | Vendored Skills (unmodified, plus `LICENSE.txt` and `SOURCE.md`) |
+| `packages.json` | Plugins that carry scripts or a hook, with a SHA-256 pin for every upstream file |
+| `scripts/vendor-package.mjs` | Copies such a package into `packages/<id>/` and writes its manifest, hook registration, `SOURCE.md` and `PATCHES.md` |
+| `packages/<id>/` | A vendored package, ready to archive (`PATCHES.md` lists what differs from upstream) |
 | `shared/<source>/` | Shared files a source's Skills link to (carried inside that source's Plugin) |
 | `store/plugins.json` | The name and description of each source's Plugin (hand-written) |
 | `scripts/gen-config.mjs` | Writes `store/store.config.json` from `sources.json`, `versions.json` and `store/plugins.json` |
@@ -48,7 +54,8 @@ Code reads by default. After a rebuild, copy it over with `npm run store:sync --
 ```sh
 git clone <repo> <work>/<clone>          # check out the commit you want; put clone and commit in sources.json
 node scripts/vendor.mjs --work <work>
-node scripts/gen-config.mjs && node scripts/gen-icons.mjs
+node scripts/vendor-package.mjs --work <work>      # packages; stops if an upstream file is not the one that was read
+node scripts/gen-icons.mjs && node scripts/gen-config.mjs
 node <alran-code>/tools/store/build-store.mjs --source .          # writes ./store
 node <alran-code>/tools/store/build-store.mjs --source . --check  # exit 1 if ./store is stale
 ```
@@ -74,11 +81,33 @@ instead. The Skills run no code of their own; what an agent does with their text
 permissions. A few links in the text itself are broken in the originals too (placeholders, or paths that only
 make sense in the upstream repository); they are copied as they are.
 
-Not included, and why (facts about the source, not quality judgements):
+## Superpowers: a package, not a Skill collection
 
-- [obra/superpowers](https://github.com/obra/superpowers) (MIT): its Skills call each other as
-  `superpowers:<name>`, and three of them carry scripts (a local web server, shell and Node scripts). It belongs
-  in as one complete Plugin under its own name, once those scripts have been reviewed.
+[obra/superpowers](https://github.com/obra/superpowers) (MIT) is in as one Plugin under its own name, because its
+Skills call each other as `superpowers:<name>`, and some carry scripts and a session-start hook. It does not go
+through the plain-text admission rules; instead every one of its 64 upstream files is pinned by SHA-256 in
+`packages.json`. The scripts and the hook were read line by line (local `git`/`awk`/file helpers and a local web
+server for the optional visual brainstorming companion that listens on `127.0.0.1` behind a per-session key);
+the Skill text is checked by rules. An upstream change stops `scripts/vendor-package.mjs` until it is read again.
+
+What differs from upstream (the full list, with the diff, is `packages/superpowers/PATCHES.md`):
+
+- `skills/diagnosing-superpowers` is left out: it prepares session transcripts for a public GitHub issue on the
+  upstream repository, which has no place in a Plugin that runs on someone's machine.
+- One line of `skills/brainstorming/scripts/server.cjs`: the companion page loaded a logo from
+  `primeradiant.com` in the user's browser every time it was shown; it shows the text brand now.
+- `hooks/hooks.json` is written for Alran, because upstream's uses handler fields the Alran package format skips.
+  The two hook scripts it starts are upstream's, unchanged. The Windows entry (`run-hook.cmd`) is untested.
+- `package.json` (upstream's name and version, `"type": "module"`), the manifest, the icon, `SOURCE.md` and
+  `PATCHES.md` are generated.
+
+Installing it asks for approval first: the consent list shows the one hook, which runs
+`bash "${PLUGIN_ROOT}/hooks/session-start"` and only prints the `using-superpowers` Skill as session context.
+
+## Not included, and why
+
+Facts about the source, not quality judgements:
+
 - [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) (Apache-2.0): its
   Skills assume MCP connectors for Slack, Linear and similar, which are not set up here.
 - [microsoft/skills](https://github.com/microsoft/skills) (MIT) and [google/skills](https://github.com/google/skills)
