@@ -106,7 +106,23 @@
     "obsidian": "2026.10.22+2e54556",
     "gentleai": "2026.11.18+08317b9",
     "archify": "2026.11.17+4478129",
-    "opendesign": "2026.11.18+0725880"
+    "opendesign": "2026.11.18+0725880",
+    "scenariolabs": "2026.11.16+a14d061",
+    "blender": "2026.11.6+904f095",
+    "ccsdd": "2026.9.23+e2a0c67",
+    "designskills": "2026.6.28+f631a09",
+    "pstack": "2026.11.18+0d2dc00",
+    "golang": "2026.11.8+d68d80a",
+    "openscience": "2026.11.18+28e14e5",
+    "linkedin": "2026.11.18+32083c0",
+    "finance": "2026.10.25+a085078",
+    "argent": "2026.11.18+ce8dd2a",
+    "ctf": "2026.11.14+20d182d",
+    "effectivehtml": "2026.10.31+5ce160a",
+    "shipswift": "2026.11.12+d05d75e",
+    "dmcg": "2026.11.18+405edcb",
+    "tinybase": "2026.11.12+540cd40",
+    "rustanything": "2026.11.19+98adbe2"
   },
   "counts": {
     "addyosmani": 21,
@@ -215,6 +231,22 @@
     "obsidian": 1,
     "gentleai": 9,
     "archify": 2,
-    "opendesign": 106
+    "opendesign": 106,
+    "scenariolabs": 65,
+    "blender": 92,
+    "ccsdd": 17,
+    "designskills": 60,
+    "pstack": 53,
+    "golang": 44,
+    "openscience": 18,
+    "linkedin": 9,
+    "finance": 8,
+    "argent": 19,
+    "ctf": 1,
+    "effectivehtml": 8,
+    "shipswift": 3,
+    "dmcg": 1,
+    "tinybase": 1,
+    "rustanything": 1
   }
 }

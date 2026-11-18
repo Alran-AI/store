@@ -6,27 +6,27 @@ own licence. All are **unmodified**, except the Superpowers package, whose diffe
 listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **108 Plugins**
-(107 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **5390
-individually installable Skills**; 5425 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **124 Plugins**
+(123 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **5790
+individually installable Skills**; 5824 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
 Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
 call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack |
 | Cloud and hosting | Cloudflare, Cloudflare Workers SDK, Cloudflare Agents, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker, Deno |
-| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee |
-| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio |
-| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip |
-| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian |
-| Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs, Temporal, Prefect, Apache Airflow, Astronomer, Trigger.dev |
-| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana |
+| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase |
+| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator |
+| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip, Fast Agent |
+| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills |
+| Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs, Temporal, Prefect, Apache Airflow, Astronomer, Trigger.dev, ShipSwift |
+| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills |
 | Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit |
-| Design and media | OpenMotion, Open Design, Baoyu, Social Auto Upload |
+| Design, media and 3D | OpenMotion, Open Design, Baoyu, Social Auto Upload, Blender Skills, Scenario Labs, Awesome Design Skills, Effective HTML, LottieFiles |
 | Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace |
 | Business | Marketing (Corey Haines), Product management (Paweł Huryn) |
-| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street |
+| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science |
 
 ```sh
 alran plugin marketplace add /path/to/alran-store/store     # or the URL it is hosted at
@@ -206,6 +206,17 @@ Facts about the source, not quality judgements:
   script, a command file or a binary asset.
 - [eigent-ai/eigent](https://github.com/eigent-ai/eigent) (Apache-2.0): its Skills are the document skills
   (docx, pdf, pptx) that Alran Code builds in itself, and they ship scripts.
+- [NVIDIA/skills](https://github.com/NVIDIA/skills) (Apache-2.0 for the code, CC-BY-4.0 for the text): all 472 of
+  its Skills carry an `evals/` folder with Python in it, so not one of them can be vendored as they are.
+- [LottieFiles/motion-design-skill](https://github.com/LottieFiles/motion-design-skill) (MIT): its one Skill is
+  called `motion-design`, which Open Design already has.
+- [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) (MIT),
+  [lackeyjb/playwright-skill](https://github.com/lackeyjb/playwright-skill) (MIT),
+  [evalstate/fast-agent](https://github.com/evalstate/fast-agent) (Apache-2.0) and
+  [eugeniughelbur/obsidian-second-brain](https://github.com/eugeniughelbur/obsidian-second-brain) (MIT): their
+  Skills ship JavaScript, CSS or HTML files.
+- [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) (MIT): its Skills are about attacks, and the
+  store does not take a Skill whose text decodes a base64 blob or carries an instruction-override phrase.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) (Apache-2.0): the Skills in it are test fixtures.
 - [NVIDIA/skills](https://github.com/NVIDIA/skills) and [angular/skills](https://github.com/angular/skills):
   no licence file.

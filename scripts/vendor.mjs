@@ -186,10 +186,12 @@ function outwardLinks(directory) {
   return links;
 }
 
-/** The licence file of a clone: LICENSE, or LICENSE.txt / LICENSE.md / LICENSE-MIT / LICENSE-APACHE when
- * the repository names it so (a repository under both MIT and Apache-2.0 ships the two files). */
-function licenseFile(clone) {
-  for (const name of ["LICENSE", "LICENSE.txt", "LICENSE.md", "LICENSE-MIT", "LICENSE-APACHE"]) {
+/** The licence file of a clone: LICENSE, or LICENSE.txt / LICENSE.md / LICENSE-MIT / LICENSE-APACHE /
+ * LICENSE-CC-BY-4.0 when the repository names it so. A source that ships under several licences says
+ * which one covers what it hands over. */
+function licenseFile(clone, named) {
+  const names = named ? [named, "LICENSE", "LICENSE.txt", "LICENSE.md", "LICENSE-MIT", "LICENSE-APACHE"] : ["LICENSE", "LICENSE.txt", "LICENSE.md", "LICENSE-MIT", "LICENSE-APACHE"];
+  for (const name of names) {
     const path = join(clone, name);
     if (existsSync(path) && statSync(path).isFile()) return path;
   }
@@ -252,7 +254,7 @@ for (const source of manifest.sources) {
   if (sha !== source.commit) die(`${source.id}: the clone is at ${sha}, sources.json pins ${source.commit}`);
   if (git(clone, "status", "--porcelain")) die(`${source.id}: the clone has local changes`);
   const date = git(clone, "log", "-1", "--format=%cs");
-  const licensePath = licenseFile(clone);
+  const licensePath = licenseFile(clone, source.licenseFile);
   if (!licensePath) die(`${source.id}: ${clone} has no LICENSE, LICENSE.txt or LICENSE.md`);
   const { text: licenseText, copyright } = licenseNotice(licensePath);
 

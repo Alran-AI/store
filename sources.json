@@ -2028,6 +2028,221 @@
         "skills"
       ],
       "include": "clean"
+    },
+    {
+      "id": "scenariolabs",
+      "label": "scenariolabs",
+      "repo": "https://github.com/scenario-labs/skills",
+      "clone": "scenario-labs_skills",
+      "commit": "a14d061fe5db33d339b1d89f775f37337481295f",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        "skills/dcc/blender",
+        "skills/dcc/maya",
+        "skills/dcc/zbrush",
+        "skills/game-engines/godot",
+        "skills/game-engines/roblox",
+        "skills/game-engines/unity",
+        "skills/game-engines/unreal"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "blender",
+      "label": "blender",
+      "repo": "https://github.com/arjun988/blender-skills",
+      "clone": "arjun988_blender-skills",
+      "commit": "904f095d8f36a6e72adaebb08d07f884a074743d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "ccsdd",
+      "label": "ccsdd",
+      "repo": "https://github.com/gotalab/cc-sdd",
+      "clone": "gotalab_cc-sdd",
+      "commit": "e2a0c671aef37a482404905b409ab5c27092b25b",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "tools/cc-sdd/templates/agents/antigravity-skills/skills",
+        "tools/cc-sdd/templates/agents/claude-code-skills/skills",
+        "tools/cc-sdd/templates/agents/codex-skills/skills",
+        "tools/cc-sdd/templates/agents/cursor-skills/skills",
+        "tools/cc-sdd/templates/agents/devin-skills/skills",
+        "tools/cc-sdd/templates/agents/gemini-cli-skills/skills",
+        "tools/cc-sdd/templates/agents/github-copilot-skills/skills",
+        "tools/cc-sdd/templates/agents/opencode-skills/skills",
+        "tools/cc-sdd/templates/agents/windsurf-skills/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "designskills",
+      "label": "designskills",
+      "repo": "https://github.com/bergside/awesome-design-skills",
+      "clone": "bergside_awesome-design-skills",
+      "commit": "f631a09b4fcc0166f2e2c1a8c81906ef680c57e8",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "pstack",
+      "label": "pstack",
+      "repo": "https://github.com/backnotprop/pstack",
+      "clone": "backnotprop_pstack",
+      "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "automations/benny/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "golang",
+      "label": "golang",
+      "repo": "https://github.com/samber/cc-skills-golang",
+      "clone": "samber_cc-skills-golang",
+      "commit": "d68d80aec298e1b74b37c2a472c002b5217248b3",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "openscience",
+      "label": "openscience",
+      "repo": "https://github.com/aipoch/open-science",
+      "clone": "aipoch_open-science",
+      "commit": "28e14e53e97da77105e3b60463cb719ac3e3b9c3",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "packages/research-film/resources",
+        "resources/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "linkedin",
+      "label": "linkedin",
+      "repo": "https://github.com/sergebulaev/linkedin-skills",
+      "clone": "sergebulaev_linkedin-skills",
+      "commit": "32083c0733e8850d3517bfe691b1e9870d37ba51",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "finance",
+      "label": "finance",
+      "repo": "https://github.com/himself65/finance-skills",
+      "clone": "himself65_finance-skills",
+      "commit": "a0850786e72aa23b92862f9f1635b0de506fe206",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "plugins/data-providers/skills",
+        "plugins/market-analysis/skills",
+        "plugins/skill-creator/skills",
+        "plugins/social-readers/skills",
+        "plugins/startup-tools/skills",
+        "plugins/ui-tools/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "argent",
+      "label": "argent",
+      "repo": "https://github.com/software-mansion/argent",
+      "clone": "software-mansion_argent",
+      "commit": "ce8dd2ade89414a2e8ba2be9f42fbbf04645774a",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "packages/skills/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "ctf",
+      "label": "ctf",
+      "repo": "https://github.com/ljagiello/ctf-skills",
+      "clone": "ljagiello_ctf-skills",
+      "commit": "20d182d9377f0467830f314bb0f843cae4dbf55e",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ""
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "effectivehtml",
+      "label": "effectivehtml",
+      "repo": "https://github.com/plannotator/effective-html",
+      "clone": "plannotator_effective-html",
+      "commit": "5ce160a3e76dc1c0f9301f8a1903704ec607636a",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "shipswift",
+      "label": "shipswift",
+      "repo": "https://github.com/signerlabs/ShipSwift",
+      "clone": "signerlabs_ShipSwift",
+      "commit": "d05d75e74ee59a6928d7432f432d7016508010bb",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "dmcg",
+      "label": "dmcg",
+      "repo": "https://github.com/datamodel-code-generator/datamodel-code-generator",
+      "clone": "datamodel-code-generator_datamodel-code-generator",
+      "commit": "405edcb17a7d7d7c063a78d4476c758cd2a4822d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "tinybase",
+      "label": "tinybase",
+      "repo": "https://github.com/tinyplex/tinybase",
+      "clone": "tinyplex_tinybase",
+      "commit": "540cd40789a2745a6244ef42d29d83b144d5e6ae",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "rustanything",
+      "label": "rustanything",
+      "repo": "https://github.com/erkamyaman/rust-anything",
+      "clone": "erkamyaman_rust-anything",
+      "commit": "98adbe29003a69783c727146d0c3fe637b174102",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
     }
   ]
 }

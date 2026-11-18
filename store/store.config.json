@@ -113,7 +113,23 @@
       "obsidian": "obsidian",
       "gentleai": "gentleai",
       "archify": "archify",
-      "opendesign": "opendesign"
+      "opendesign": "opendesign",
+      "scenariolabs": "scenariolabs",
+      "blender": "blender",
+      "ccsdd": "ccsdd",
+      "designskills": "designskills",
+      "pstack": "pstack",
+      "golang": "golang",
+      "openscience": "openscience",
+      "linkedin": "linkedin",
+      "finance": "finance",
+      "argent": "argent",
+      "ctf": "ctf",
+      "effectivehtml": "effectivehtml",
+      "shipswift": "shipswift",
+      "dmcg": "dmcg",
+      "tinybase": "tinybase",
+      "rustanything": "rustanything"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -222,7 +238,23 @@
       "obsidian": "2026.10.22+2e54556",
       "gentleai": "2026.11.18+08317b9",
       "archify": "2026.11.17+4478129",
-      "opendesign": "2026.11.18+0725880"
+      "opendesign": "2026.11.18+0725880",
+      "scenariolabs": "2026.11.16+a14d061",
+      "blender": "2026.11.6+904f095",
+      "ccsdd": "2026.9.23+e2a0c67",
+      "designskills": "2026.6.28+f631a09",
+      "pstack": "2026.11.18+0d2dc00",
+      "golang": "2026.11.8+d68d80a",
+      "openscience": "2026.11.18+28e14e5",
+      "linkedin": "2026.11.18+32083c0",
+      "finance": "2026.10.25+a085078",
+      "argent": "2026.11.18+ce8dd2a",
+      "ctf": "2026.11.14+20d182d",
+      "effectivehtml": "2026.10.31+5ce160a",
+      "shipswift": "2026.11.12+d05d75e",
+      "dmcg": "2026.11.18+405edcb",
+      "tinybase": "2026.11.12+540cd40",
+      "rustanything": "2026.11.19+98adbe2"
     }
   },
   "plugins": [
@@ -2191,6 +2223,293 @@
       "exampleQueries": [
         "Design this screen",
         "Fix the spacing in this component"
+      ]
+    },
+    {
+      "name": "scenario-labs-skills",
+      "displayName": "Scenario Labs",
+      "version": "2026.11.16+a14d061",
+      "description": "Sixty-five skills for simulation and digital content creation: Blender, Maya and the pipelines that connect them.",
+      "author": "Scenario Labs",
+      "license": "MIT",
+      "homepage": "https://github.com/scenario-labs/skills",
+      "category": "Code",
+      "icon": "icons/scenario-labs-skills.png",
+      "packages": [
+        "scenariolabs"
+      ],
+      "exampleQueries": [
+        "Script this scene in Blender",
+        "Set up a simulation pipeline"
+      ]
+    },
+    {
+      "name": "blender-skills",
+      "displayName": "Blender Skills",
+      "version": "2026.11.6+904f095",
+      "description": "Ninety-two skills for Blender: modelling, shading, rigging, animation and the scripts that drive them.",
+      "author": "arjun988",
+      "license": "MIT",
+      "homepage": "https://github.com/arjun988/blender-skills",
+      "category": "Studio",
+      "icon": "icons/blender-skills.png",
+      "packages": [
+        "blender"
+      ],
+      "exampleQueries": [
+        "Model this shape in Blender",
+        "Set up the render for this scene"
+      ]
+    },
+    {
+      "name": "cc-sdd-skills",
+      "displayName": "Spec-Driven Development",
+      "version": "2026.9.23+e2a0c67",
+      "description": "Seventeen skills for spec-driven development: writing the spec, the design and the tasks, and letting an agent work from them.",
+      "author": "gotalab",
+      "license": "MIT",
+      "homepage": "https://github.com/gotalab/cc-sdd",
+      "category": "Code",
+      "icon": "icons/cc-sdd-skills.png",
+      "packages": [
+        "ccsdd"
+      ],
+      "exampleQueries": [
+        "Write a spec for this feature",
+        "Break this spec into tasks"
+      ]
+    },
+    {
+      "name": "awesome-design-skills",
+      "displayName": "Awesome Design Skills",
+      "version": "2026.6.28+f631a09",
+      "description": "Sixty skills for design: layout, colour, typography and the craft between them.",
+      "author": "bergside",
+      "license": "MIT",
+      "homepage": "https://github.com/bergside/awesome-design-skills",
+      "category": "Design & Sites",
+      "icon": "icons/awesome-design-skills.png",
+      "packages": [
+        "designskills"
+      ],
+      "exampleQueries": [
+        "Design this screen",
+        "Fix the type scale in this page"
+      ]
+    },
+    {
+      "name": "pstack-skills",
+      "displayName": "PStack",
+      "version": "2026.11.18+0d2dc00",
+      "description": "Fifty-three skills for the plan-stack-shelf-kick way of working: the plan, the work in flight, what is shelved and what comes next.",
+      "author": "backnotprop",
+      "license": "MIT",
+      "homepage": "https://github.com/backnotprop/pstack",
+      "category": "Code",
+      "icon": "icons/pstack-skills.png",
+      "packages": [
+        "pstack"
+      ],
+      "exampleQueries": [
+        "Plan this piece of work",
+        "What should I pick up next?"
+      ]
+    },
+    {
+      "name": "golang-skills",
+      "displayName": "Go Skills",
+      "version": "2026.11.8+d68d80a",
+      "description": "Forty-four skills for Go: the language, its tooling and the libraries around it.",
+      "author": "Samuel Berthe",
+      "license": "MIT",
+      "homepage": "https://github.com/samber/cc-skills-golang",
+      "category": "Code",
+      "icon": "icons/golang-skills.png",
+      "packages": [
+        "golang"
+      ],
+      "exampleQueries": [
+        "Write this service in Go",
+        "Set up the tooling for this Go module"
+      ]
+    },
+    {
+      "name": "open-science-skills",
+      "displayName": "Open Science",
+      "version": "2026.11.18+28e14e5",
+      "description": "Eighteen skills for open science: running and reproducing research, and the tools that make it possible.",
+      "author": "aipoch",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/aipoch/open-science",
+      "category": "Science & Healthcare",
+      "icon": "icons/open-science-skills.png",
+      "packages": [
+        "openscience"
+      ],
+      "exampleQueries": [
+        "Reproduce this analysis",
+        "Set up this research project"
+      ]
+    },
+    {
+      "name": "linkedin-skills",
+      "displayName": "LinkedIn Skills",
+      "version": "2026.11.18+32083c0",
+      "description": "Nine skills for LinkedIn: writing a post, working through the profile and the messages that go with it.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/linkedin-skills",
+      "category": "Business",
+      "icon": "icons/linkedin-skills.png",
+      "packages": [
+        "linkedin"
+      ],
+      "exampleQueries": [
+        "Write a LinkedIn post about this",
+        "Improve my profile"
+      ]
+    },
+    {
+      "name": "finance-skills",
+      "displayName": "Finance Skills",
+      "version": "2026.10.25+a085078",
+      "description": "Eight skills for finance: market analysis, the data behind it and the plugins that feed it.",
+      "author": "himself65",
+      "license": "MIT",
+      "homepage": "https://github.com/himself65/finance-skills",
+      "category": "Business",
+      "icon": "icons/finance-skills.png",
+      "packages": [
+        "finance"
+      ],
+      "exampleQueries": [
+        "Analyse this market",
+        "Pull the data for this analysis"
+      ]
+    },
+    {
+      "name": "argent-skills",
+      "displayName": "Argent",
+      "version": "2026.11.18+ce8dd2a",
+      "description": "Nineteen skills from Software Mansion: building with Argent, the agent SDK they maintain.",
+      "author": "Software Mansion",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/software-mansion/argent",
+      "category": "Code",
+      "icon": "icons/argent-skills.png",
+      "packages": [
+        "argent"
+      ],
+      "exampleQueries": [
+        "Build an agent with Argent",
+        "Set up Argent in this project"
+      ]
+    },
+    {
+      "name": "ctf-skills",
+      "displayName": "CTF Skills",
+      "version": "2026.11.14+20d182d",
+      "description": "One skills for capture-the-flag work: binaries, crypto, forensics and the web.",
+      "author": "ljagiello",
+      "license": "MIT",
+      "homepage": "https://github.com/ljagiello/ctf-skills",
+      "category": "Code",
+      "icon": "icons/ctf-skills.png",
+      "packages": [
+        "ctf"
+      ],
+      "exampleQueries": [
+        "Solve this reversing challenge",
+        "What is wrong with this crypto?"
+      ]
+    },
+    {
+      "name": "effective-html-skills",
+      "displayName": "Effective HTML",
+      "version": "2026.10.31+5ce160a",
+      "description": "Eight skills for HTML that works: structure, semantics and the details that make a page usable.",
+      "author": "plannotator",
+      "license": "MIT",
+      "homepage": "https://github.com/plannotator/effective-html",
+      "category": "Design & Sites",
+      "icon": "icons/effective-html-skills.png",
+      "packages": [
+        "effectivehtml"
+      ],
+      "exampleQueries": [
+        "Make this page better",
+        "Fix the semantics in this markup"
+      ]
+    },
+    {
+      "name": "shipswift-skills",
+      "displayName": "ShipSwift",
+      "version": "2026.11.12+d05d75e",
+      "description": "Three skills for shipping: the release process, the version bump and the checks that go with it.",
+      "author": "SignerLabs",
+      "license": "MIT",
+      "homepage": "https://github.com/signerlabs/ShipSwift",
+      "category": "Code",
+      "icon": "icons/shipswift-skills.png",
+      "packages": [
+        "shipswift"
+      ],
+      "exampleQueries": [
+        "Cut a release for this project"
+      ]
+    },
+    {
+      "name": "datamodel-code-generator-skills",
+      "displayName": "Data Model Code Generator",
+      "version": "2026.11.18+405edcb",
+      "description": "One skills for generating data models from a schema with datamodel-code-generator.",
+      "author": "Koxudaxi",
+      "license": "MIT",
+      "homepage": "https://github.com/datamodel-code-generator/datamodel-code-generator",
+      "category": "Code",
+      "icon": "icons/datamodel-code-generator-skills.png",
+      "packages": [
+        "dmcg"
+      ],
+      "exampleQueries": [
+        "Generate the models for this schema",
+        "Add a field to the generated code"
+      ]
+    },
+    {
+      "name": "tinybase-skills",
+      "displayName": "TinyBase",
+      "version": "2026.11.12+540cd40",
+      "description": "One skills for TinyBase: the reactive client-side database, its stores, schema and queries.",
+      "author": "TinyBase",
+      "license": "MIT",
+      "homepage": "https://github.com/tinyplex/tinybase",
+      "category": "Code",
+      "icon": "icons/tinybase-skills.png",
+      "packages": [
+        "tinybase"
+      ],
+      "exampleQueries": [
+        "Set up a store in TinyBase",
+        "Write a query for this data"
+      ]
+    },
+    {
+      "name": "rust-anything-skills",
+      "displayName": "Rust Anything",
+      "version": "2026.11.19+98adbe2",
+      "description": "One skill for Rust: writing it, reading it and working in a codebase that is written in it.",
+      "author": "erkamyaman",
+      "license": "MIT",
+      "homepage": "https://github.com/erkamyaman/rust-anything",
+      "category": "Code",
+      "icon": "icons/rust-anything-skills.png",
+      "packages": [
+        "rustanything"
+      ],
+      "exampleQueries": [
+        "Write this in Rust",
+        "Explain this Rust code"
       ]
     },
     {

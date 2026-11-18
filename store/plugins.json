@@ -1326,6 +1326,197 @@
         "Design this screen",
         "Fix the spacing in this component"
       ]
+    },
+    {
+      "source": "scenariolabs",
+      "name": "scenario-labs-skills",
+      "displayName": "Scenario Labs",
+      "author": "Scenario Labs",
+      "category": "Code",
+      "description": "{N} skills for simulation and digital content creation: Blender, Maya and the pipelines that connect them.",
+      "exampleQueries": [
+        "Script this scene in Blender",
+        "Set up a simulation pipeline"
+      ]
+    },
+    {
+      "source": "blender",
+      "name": "blender-skills",
+      "displayName": "Blender Skills",
+      "author": "arjun988",
+      "category": "Studio",
+      "description": "{N} skills for Blender: modelling, shading, rigging, animation and the scripts that drive them.",
+      "exampleQueries": [
+        "Model this shape in Blender",
+        "Set up the render for this scene"
+      ]
+    },
+    {
+      "source": "ccsdd",
+      "name": "cc-sdd-skills",
+      "displayName": "Spec-Driven Development",
+      "author": "gotalab",
+      "category": "Code",
+      "description": "{N} skills for spec-driven development: writing the spec, the design and the tasks, and letting an agent work from them.",
+      "exampleQueries": [
+        "Write a spec for this feature",
+        "Break this spec into tasks"
+      ]
+    },
+    {
+      "source": "designskills",
+      "name": "awesome-design-skills",
+      "displayName": "Awesome Design Skills",
+      "author": "bergside",
+      "category": "Design & Sites",
+      "description": "{N} skills for design: layout, colour, typography and the craft between them.",
+      "exampleQueries": [
+        "Design this screen",
+        "Fix the type scale in this page"
+      ]
+    },
+    {
+      "source": "pstack",
+      "name": "pstack-skills",
+      "displayName": "PStack",
+      "author": "backnotprop",
+      "category": "Code",
+      "description": "{N} skills for the plan-stack-shelf-kick way of working: the plan, the work in flight, what is shelved and what comes next.",
+      "exampleQueries": [
+        "Plan this piece of work",
+        "What should I pick up next?"
+      ]
+    },
+    {
+      "source": "golang",
+      "name": "golang-skills",
+      "displayName": "Go Skills",
+      "author": "Samuel Berthe",
+      "category": "Code",
+      "description": "{N} skills for Go: the language, its tooling and the libraries around it.",
+      "exampleQueries": [
+        "Write this service in Go",
+        "Set up the tooling for this Go module"
+      ]
+    },
+    {
+      "source": "openscience",
+      "name": "open-science-skills",
+      "displayName": "Open Science",
+      "author": "aipoch",
+      "category": "Science & Healthcare",
+      "description": "{N} skills for open science: running and reproducing research, and the tools that make it possible.",
+      "exampleQueries": [
+        "Reproduce this analysis",
+        "Set up this research project"
+      ]
+    },
+    {
+      "source": "linkedin",
+      "name": "linkedin-skills",
+      "displayName": "LinkedIn Skills",
+      "author": "sergebulaev",
+      "category": "Business",
+      "description": "{N} skills for LinkedIn: writing a post, working through the profile and the messages that go with it.",
+      "exampleQueries": [
+        "Write a LinkedIn post about this",
+        "Improve my profile"
+      ]
+    },
+    {
+      "source": "finance",
+      "name": "finance-skills",
+      "displayName": "Finance Skills",
+      "author": "himself65",
+      "category": "Business",
+      "description": "{N} skills for finance: market analysis, the data behind it and the plugins that feed it.",
+      "exampleQueries": [
+        "Analyse this market",
+        "Pull the data for this analysis"
+      ]
+    },
+    {
+      "source": "argent",
+      "name": "argent-skills",
+      "displayName": "Argent",
+      "author": "Software Mansion",
+      "category": "Code",
+      "description": "{N} skills from Software Mansion: building with Argent, the agent SDK they maintain.",
+      "exampleQueries": [
+        "Build an agent with Argent",
+        "Set up Argent in this project"
+      ]
+    },
+    {
+      "source": "ctf",
+      "name": "ctf-skills",
+      "displayName": "CTF Skills",
+      "author": "ljagiello",
+      "category": "Code",
+      "description": "{N} skills for capture-the-flag work: binaries, crypto, forensics and the web.",
+      "exampleQueries": [
+        "Solve this reversing challenge",
+        "What is wrong with this crypto?"
+      ]
+    },
+    {
+      "source": "effectivehtml",
+      "name": "effective-html-skills",
+      "displayName": "Effective HTML",
+      "author": "plannotator",
+      "category": "Design & Sites",
+      "description": "{N} skills for HTML that works: structure, semantics and the details that make a page usable.",
+      "exampleQueries": [
+        "Make this page better",
+        "Fix the semantics in this markup"
+      ]
+    },
+    {
+      "source": "shipswift",
+      "name": "shipswift-skills",
+      "displayName": "ShipSwift",
+      "author": "SignerLabs",
+      "category": "Code",
+      "description": "{N} skills for shipping: the release process, the version bump and the checks that go with it.",
+      "exampleQueries": [
+        "Cut a release for this project"
+      ]
+    },
+    {
+      "source": "dmcg",
+      "name": "datamodel-code-generator-skills",
+      "displayName": "Data Model Code Generator",
+      "author": "Koxudaxi",
+      "category": "Code",
+      "description": "{N} skills for generating data models from a schema with datamodel-code-generator.",
+      "exampleQueries": [
+        "Generate the models for this schema",
+        "Add a field to the generated code"
+      ]
+    },
+    {
+      "source": "tinybase",
+      "name": "tinybase-skills",
+      "displayName": "TinyBase",
+      "author": "TinyBase",
+      "category": "Code",
+      "description": "{N} skills for TinyBase: the reactive client-side database, its stores, schema and queries.",
+      "exampleQueries": [
+        "Set up a store in TinyBase",
+        "Write a query for this data"
+      ]
+    },
+    {
+      "source": "rustanything",
+      "name": "rust-anything-skills",
+      "displayName": "Rust Anything",
+      "author": "erkamyaman",
+      "category": "Code",
+      "description": "{N} skill for Rust: writing it, reading it and working in a codebase that is written in it.",
+      "exampleQueries": [
+        "Write this in Rust",
+        "Explain this Rust code"
+      ]
     }
   ]
 }
