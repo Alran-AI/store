@@ -71,6 +71,34 @@ function frontmatterField(text, field) {
   return parts.join(" ").replace(/^[>|][-+]?\s*/u, "").trim();
 }
 
+/**
+ * A frontmatter field as the store's Plugin validator reads it: a flat mapping of scalars, one
+ * value per line. A value that only continues on the lines below its key is not a scalar, and the
+ * validator does not accept it.
+ */
+function frontmatterScalar(text, field) {
+  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  if (!match) return undefined;
+  const line = match[1].split(/\r?\n/u).find((entry) => new RegExp(`^${field}\\s*:`, "u").test(entry));
+  if (!line) return undefined;
+  return line.slice(line.indexOf(":") + 1).trim().replace(/^"(.*)"$/su, "$1").replace(/^'(.*)'$/su, "$1").trim();
+}
+
+/** The frontmatter keys that appear twice; the validator rejects a Skill with those. */
+function frontmatterDuplicateKeys(text) {
+  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  if (!match) return [];
+  const seen = new Set();
+  const twice = new Set();
+  for (const line of match[1].split(/\r?\n/u)) {
+    const field = /^([A-Za-z0-9_-]+)\s*:/u.exec(line);
+    if (!field) continue;
+    if (seen.has(field[1])) twice.add(field[1]);
+    else seen.add(field[1]);
+  }
+  return [...twice];
+}
+
 /** Every file under `directory` as paths relative to it; records problems with the file kinds. */
 function listFiles(directory, reasons) {
   const files = [];
@@ -106,6 +134,11 @@ function admit(directory, name) {
   if (!existsSync(join(directory, "SKILL.md"))) return [...reasons, "has no SKILL.md"];
   const skillText = readFileSync(join(directory, "SKILL.md"), "utf8");
   if (frontmatterName(skillText) !== name) reasons.push("SKILL.md names another skill than its folder");
+  // the store's Plugin validator reads a flat mapping of scalars: the description has to be a value
+  // on the line of its key, and no key may appear twice
+  if (!frontmatterScalar(skillText, "description")) reasons.push("SKILL.md has no description");
+  const twice = frontmatterDuplicateKeys(skillText);
+  if (twice.length > 0) reasons.push(`SKILL.md has the frontmatter key ${twice.join(", ")} twice`);
   // A Skill that needs an MCP server cannot work here: Alran Code sets up no MCP connectors, so
   // the Skill would ask for a tool that does not exist. A Skill that names an MCP server and a way
   // around it (a CLI, an SDK, curl, an API) is kept.
@@ -153,9 +186,10 @@ function outwardLinks(directory) {
   return links;
 }
 
-/** The licence file of a clone: LICENSE, or LICENSE.txt / LICENSE.md when the repository names it so. */
+/** The licence file of a clone: LICENSE, or LICENSE.txt / LICENSE.md / LICENSE-MIT / LICENSE-APACHE when
+ * the repository names it so (a repository under both MIT and Apache-2.0 ships the two files). */
 function licenseFile(clone) {
-  for (const name of ["LICENSE", "LICENSE.txt", "LICENSE.md"]) {
+  for (const name of ["LICENSE", "LICENSE.txt", "LICENSE.md", "LICENSE-MIT", "LICENSE-APACHE"]) {
     const path = join(clone, name);
     if (existsSync(path) && statSync(path).isFile()) return path;
   }

@@ -74,7 +74,32 @@
       "twilio": "Twilio",
       "docker": "Docker",
       "playwright": "Playwright",
-      "clapoff": "Anthropic official plugins"
+      "clapoff": "Anthropic official plugins",
+      "oaiagentspy": "oaiagentspy",
+      "adkpy": "adkpy",
+      "speckit": "speckit",
+      "pydantic": "pydantic",
+      "grafana": "grafana",
+      "stripekit": "stripekit",
+      "posthog": "posthog",
+      "streamlit": "streamlit",
+      "gradio": "gradio",
+      "astronomer": "astronomer",
+      "temporalui": "temporalui",
+      "litellm": "litellm",
+      "e2b": "e2b",
+      "unsloth": "unsloth",
+      "azpy": "azpy",
+      "aznet": "aznet",
+      "playwrightpy": "playwrightpy",
+      "gitlab": "gitlab",
+      "cfagents": "cfagents",
+      "azspec": "azspec",
+      "airflow": "airflow",
+      "trigger": "trigger",
+      "deno": "deno",
+      "prefect": "prefect",
+      "langfuse": "langfuse"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -144,7 +169,32 @@
       "twilio": "2026.11.10+bb61456",
       "docker": "2026.11.13+a65ae5b",
       "playwright": "2026.11.18+4df46f3",
-      "clapoff": "2026.11.18+6d49181"
+      "clapoff": "2026.11.18+6d49181",
+      "oaiagentspy": "2026.11.18+91fb508",
+      "adkpy": "2026.11.18+43e959e",
+      "speckit": "2026.11.18+617e9a0",
+      "pydantic": "2026.11.18+f41f7fd",
+      "grafana": "2026.10.27+8fb72a5",
+      "stripekit": "2026.11.18+72e7e79",
+      "posthog": "2026.11.18+2749c2a",
+      "streamlit": "2026.11.18+46e35d3",
+      "gradio": "2026.11.13+ec06278",
+      "astronomer": "2026.11.18+b0c6481",
+      "temporalui": "2026.11.17+cbd2aba",
+      "litellm": "2026.11.18+0e62b06",
+      "e2b": "2026.11.18+08c4eeb",
+      "unsloth": "2026.11.18+cf0d153",
+      "azpy": "2026.11.18+993f110",
+      "aznet": "2026.11.18+787c2e2",
+      "playwrightpy": "2026.11.18+6137272",
+      "gitlab": "2026.10.23+d7b9a61",
+      "cfagents": "2026.11.18+1a450e7",
+      "azspec": "2026.11.18+03baad7",
+      "airflow": "2026.11.18+f01e432",
+      "trigger": "2026.11.18+74765f9",
+      "deno": "2026.11.17+d8c551b",
+      "prefect": "2026.11.18+67380b6",
+      "langfuse": "2026.11.18+6dfeb60"
     }
   },
   "plugins": [
@@ -1410,6 +1460,458 @@
         "Build an MCP server for this API",
         "Review this plugin for security",
         "Set up the Telegram integration"
+      ]
+    },
+    {
+      "name": "openai-agents-python-skills",
+      "displayName": "OpenAI Agents (Python)",
+      "version": "2026.11.18+91fb508",
+      "description": "Seven skills for the OpenAI Agents SDK in Python: agents and handoffs, guardrails, sessions, tracing, tools and MCP.",
+      "author": "OpenAI",
+      "license": "MIT",
+      "homepage": "https://github.com/openai/openai-agents-python",
+      "category": "Code",
+      "icon": "icons/openai-agents-python-skills.png",
+      "packages": [
+        "oaiagentspy"
+      ],
+      "exampleQueries": [
+        "Add a handoff to this agent",
+        "Trace this run of my agent"
+      ]
+    },
+    {
+      "name": "google-adk-skills",
+      "displayName": "Google ADK",
+      "version": "2026.11.18+43e959e",
+      "description": "Eight skills for the Agent Development Kit: building agents and tools, sessions and state, and running them locally or deployed.",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/google/adk-python",
+      "category": "Code",
+      "icon": "icons/google-adk-skills.png",
+      "packages": [
+        "adkpy"
+      ],
+      "exampleQueries": [
+        "Build an agent with the ADK",
+        "Add a tool to this ADK agent"
+      ]
+    },
+    {
+      "name": "spec-kit-skills",
+      "displayName": "GitHub Spec Kit",
+      "version": "2026.11.18+617e9a0",
+      "description": "One skills for spec-driven development: writing the spec, the plan and the tasks before the code, and keeping them in step.",
+      "author": "GitHub",
+      "license": "MIT",
+      "homepage": "https://github.com/github/spec-kit",
+      "category": "Code",
+      "icon": "icons/spec-kit-skills.png",
+      "packages": [
+        "speckit"
+      ],
+      "exampleQueries": [
+        "Write a spec for this feature",
+        "Turn this spec into tasks"
+      ]
+    },
+    {
+      "name": "pydantic-ai-skills",
+      "displayName": "Pydantic AI",
+      "version": "2026.11.18+f41f7fd",
+      "description": "Sixteen skills for Pydantic AI: writing agents and tools, dependencies and output types, graphs, and testing them.",
+      "author": "Pydantic",
+      "license": "MIT",
+      "homepage": "https://github.com/pydantic/pydantic-ai",
+      "category": "Code",
+      "icon": "icons/pydantic-ai-skills.png",
+      "packages": [
+        "pydantic"
+      ],
+      "exampleQueries": [
+        "Write a Pydantic AI agent",
+        "Add a dependency to this agent",
+        "Test this agent"
+      ]
+    },
+    {
+      "name": "grafana-skills",
+      "displayName": "Grafana",
+      "version": "2026.10.27+8fb72a5",
+      "description": "Forty-three skills for Grafana: the app SDK, dashboards, IRM, incidents, k6, the core product and Grafana Cloud.",
+      "author": "Grafana",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/grafana/skills",
+      "category": "Code",
+      "icon": "icons/grafana-skills.png",
+      "packages": [
+        "grafana"
+      ],
+      "exampleQueries": [
+        "Build a Grafana dashboard from this data",
+        "Set up an alert rule in Grafana"
+      ]
+    },
+    {
+      "name": "stripe-agent-toolkit-skills",
+      "displayName": "Stripe Agent Toolkit",
+      "version": "2026.11.18+72e7e79",
+      "description": "Six skills for building with Stripe: the API for payments, billing, Connect and Radar, and the tools an agent needs to work with it.",
+      "author": "Stripe",
+      "license": "MIT",
+      "homepage": "https://github.com/Stripe/agent-toolkit",
+      "category": "Code",
+      "icon": "icons/stripe-agent-toolkit-skills.png",
+      "packages": [
+        "stripekit"
+      ],
+      "exampleQueries": [
+        "Create a subscription with Stripe",
+        "Handle a payment webhook"
+      ]
+    },
+    {
+      "name": "posthog-skills",
+      "displayName": "PostHog",
+      "version": "2026.11.18+2749c2a",
+      "description": "186 skills for PostHog: product analytics, feature flags, sessions, data capture, the API and the MCP server.",
+      "author": "PostHog",
+      "license": "MIT",
+      "homepage": "https://github.com/PostHog/posthog",
+      "category": "Code",
+      "icon": "icons/posthog-skills.png",
+      "packages": [
+        "posthog"
+      ],
+      "exampleQueries": [
+        "Add a feature flag to this app",
+        "Instrument this event in PostHog",
+        "Query the analytics for this feature"
+      ]
+    },
+    {
+      "name": "streamlit-skills",
+      "displayName": "Streamlit",
+      "version": "2026.11.18+46e35d3",
+      "description": "Twenty-two skills for building Streamlit apps: layout, state, caching, custom components and testing.",
+      "author": "Streamlit",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/streamlit/streamlit",
+      "category": "Code",
+      "icon": "icons/streamlit-skills.png",
+      "packages": [
+        "streamlit"
+      ],
+      "exampleQueries": [
+        "Build this app in Streamlit",
+        "Speed up this Streamlit app"
+      ]
+    },
+    {
+      "name": "gradio-skills",
+      "displayName": "Gradio",
+      "version": "2026.11.13+ec06278",
+      "description": "Three skills for Gradio: building and sharing a demo for a model, and the components behind it.",
+      "author": "Gradio",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/gradio-app/gradio",
+      "category": "Code",
+      "icon": "icons/gradio-skills.png",
+      "packages": [
+        "gradio"
+      ],
+      "exampleQueries": [
+        "Build a Gradio demo for this model",
+        "Share this demo"
+      ]
+    },
+    {
+      "name": "astronomer-skills",
+      "displayName": "Astronomer",
+      "version": "2026.11.18+b0c6481",
+      "description": "Three skills for Astronomer: Airflow on Astronomer, deploying and running DAGs, and the platform around them.",
+      "author": "Astronomer",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/astronomer/astronomer",
+      "category": "Code",
+      "icon": "icons/astronomer-skills.png",
+      "packages": [
+        "astronomer"
+      ],
+      "exampleQueries": [
+        "Deploy this DAG to Astronomer",
+        "Fix this Airflow DAG"
+      ]
+    },
+    {
+      "name": "temporal-ui-skills",
+      "displayName": "Temporal",
+      "version": "2026.11.17+cbd2aba",
+      "description": "Eight skills for the Temporal UI and its plugin catalogue: running workflows, inspecting them and the catalog of what Temporal can do.",
+      "author": "Temporal",
+      "license": "MIT",
+      "homepage": "https://github.com/temporalio/ui",
+      "category": "Code",
+      "icon": "icons/temporal-ui-skills.png",
+      "packages": [
+        "temporalui"
+      ],
+      "exampleQueries": [
+        "Show me this workflow's history",
+        "Start this workflow"
+      ]
+    },
+    {
+      "name": "litellm-skills",
+      "displayName": "LiteLLM",
+      "version": "2026.11.18+0e62b06",
+      "description": "Seven skills for LiteLLM: the proxy and gateway, routing a model call, budgets and the dashboard.",
+      "author": "BerriAI",
+      "license": "MIT",
+      "homepage": "https://github.com/BerriAI/litellm",
+      "category": "Code",
+      "icon": "icons/litellm-skills.png",
+      "packages": [
+        "litellm"
+      ],
+      "exampleQueries": [
+        "Route this call through LiteLLM",
+        "Set up a budget for this team"
+      ]
+    },
+    {
+      "name": "e2b-skills",
+      "displayName": "E2B",
+      "version": "2026.11.18+08c4eeb",
+      "description": "One skills for E2B: running code in a sandbox, and giving an agent a place to run it.",
+      "author": "E2B",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/e2b-dev/E2B",
+      "category": "Code",
+      "icon": "icons/e2b-skills.png",
+      "packages": [
+        "e2b"
+      ],
+      "exampleQueries": [
+        "Run this code in a sandbox",
+        "Give this agent a sandbox"
+      ]
+    },
+    {
+      "name": "unsloth-skills",
+      "displayName": "Unsloth",
+      "version": "2026.11.18+cf0d153",
+      "description": "One skills for Unsloth: fine-tuning a model on your own data and running the notebook.",
+      "author": "Unsloth",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/unslothai/unsloth",
+      "category": "Code",
+      "icon": "icons/unsloth-skills.png",
+      "packages": [
+        "unsloth"
+      ],
+      "exampleQueries": [
+        "Fine-tune this model on my dataset",
+        "Start the Unsloth notebook"
+      ]
+    },
+    {
+      "name": "azure-sdk-python-skills",
+      "displayName": "Azure SDK for Python",
+      "version": "2026.11.18+993f110",
+      "description": "Nineteen skills for the Azure SDK for Python, across the services Microsoft ships clients for.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/Azure/azure-sdk-for-python",
+      "category": "Code",
+      "icon": "icons/azure-sdk-python-skills.png",
+      "packages": [
+        "azpy"
+      ],
+      "exampleQueries": [
+        "Use the Azure SDK for this service",
+        "Set up the Python client for this resource"
+      ]
+    },
+    {
+      "name": "azure-sdk-dotnet-skills",
+      "displayName": "Azure SDK for .NET",
+      "version": "2026.11.18+787c2e2",
+      "description": "Nine skills for the Azure SDK for .NET, across the services Microsoft ships clients for.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/Azure/azure-sdk-for-net",
+      "category": "Code",
+      "icon": "icons/azure-sdk-dotnet-skills.png",
+      "packages": [
+        "aznet"
+      ],
+      "exampleQueries": [
+        "Use the Azure SDK for this service in C#",
+        "Set up the .NET client for this resource"
+      ]
+    },
+    {
+      "name": "playwright-python-skills",
+      "displayName": "Playwright for Python",
+      "version": "2026.11.18+6137272",
+      "description": "Three skills for Playwright in Python: driving the browser, reading traces and making sense of test results.",
+      "author": "Microsoft",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/microsoft/playwright-python",
+      "category": "Code",
+      "icon": "icons/playwright-python-skills.png",
+      "packages": [
+        "playwrightpy"
+      ],
+      "exampleQueries": [
+        "Run this test and show the trace",
+        "Read this Playwright failure"
+      ]
+    },
+    {
+      "name": "gitlab-skills",
+      "displayName": "GitLab",
+      "version": "2026.10.23+d7b9a61",
+      "description": "Three skills for working with GitLab: its API, its CI and the conventions of its own codebase.",
+      "author": "GitLab",
+      "license": "MIT",
+      "homepage": "https://github.com/gitlabhq/gitlabhq",
+      "category": "Code",
+      "icon": "icons/gitlab-skills.png",
+      "packages": [
+        "gitlab"
+      ],
+      "exampleQueries": [
+        "Use the GitLab API for this",
+        "How does this GitLab repo do it?"
+      ]
+    },
+    {
+      "name": "cloudflare-agents-skills",
+      "displayName": "Cloudflare Agents",
+      "version": "2026.11.18+1a450e7",
+      "description": "Two skills for the Cloudflare Agents SDK: building agents that run on Workers, with state and realtime.",
+      "author": "Cloudflare",
+      "license": "MIT",
+      "homepage": "https://github.com/cloudflare/agents",
+      "category": "Code",
+      "icon": "icons/cloudflare-agents-skills.png",
+      "packages": [
+        "cfagents"
+      ],
+      "exampleQueries": [
+        "Build an agent on Cloudflare Agents",
+        "Add state to this agent"
+      ]
+    },
+    {
+      "name": "azure-rest-api-skills",
+      "displayName": "Azure REST APIs",
+      "version": "2026.11.18+03baad7",
+      "description": "Three skills for calling Azure REST APIs directly, and for reading the service specifications they are written from.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/Azure/azure-rest-api-specs",
+      "category": "Code",
+      "icon": "icons/azure-rest-api-skills.png",
+      "packages": [
+        "azspec"
+      ],
+      "exampleQueries": [
+        "Call this Azure REST API directly",
+        "What does this Azure service return?"
+      ]
+    },
+    {
+      "name": "airflow-skills",
+      "displayName": "Apache Airflow",
+      "version": "2026.11.18+f01e432",
+      "description": "Seven skills for Apache Airflow: writing DAGs, operators, scheduling and running them.",
+      "author": "Apache",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/apache/airflow",
+      "category": "Code",
+      "icon": "icons/airflow-skills.png",
+      "packages": [
+        "airflow"
+      ],
+      "exampleQueries": [
+        "Write a DAG for this pipeline",
+        "Fix this failing Airflow task"
+      ]
+    },
+    {
+      "name": "trigger-dev-skills",
+      "displayName": "Trigger.dev",
+      "version": "2026.11.18+74765f9",
+      "description": "Eleven skills for Trigger.dev: writing background jobs and workflows, and the run and task APIs around them.",
+      "author": "Trigger.dev",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/triggerdotdev/trigger.dev",
+      "category": "Code",
+      "icon": "icons/trigger-dev-skills.png",
+      "packages": [
+        "trigger"
+      ],
+      "exampleQueries": [
+        "Write a background job for this",
+        "Set up a workflow in Trigger.dev"
+      ]
+    },
+    {
+      "name": "deno-skills",
+      "displayName": "Deno",
+      "version": "2026.11.17+d8c551b",
+      "description": "Six skills for Deno: running and deploying its programs, permissions and the tooling around it.",
+      "author": "Deno",
+      "license": "MIT",
+      "homepage": "https://github.com/denoland/deno",
+      "category": "Code",
+      "icon": "icons/deno-skills.png",
+      "packages": [
+        "deno"
+      ],
+      "exampleQueries": [
+        "Deploy this Deno program",
+        "What permissions does this task need?"
+      ]
+    },
+    {
+      "name": "prefect-skills",
+      "displayName": "Prefect",
+      "version": "2026.11.18+67380b6",
+      "description": "Three skills for Prefect: writing flows, running and deploying them, and the work pools behind them.",
+      "author": "Prefect",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/PrefectHQ/prefect",
+      "category": "Code",
+      "icon": "icons/prefect-skills.png",
+      "packages": [
+        "prefect"
+      ],
+      "exampleQueries": [
+        "Write a Prefect flow for this",
+        "Deploy this flow"
+      ]
+    },
+    {
+      "name": "langfuse-skills",
+      "displayName": "Langfuse",
+      "version": "2026.11.18+6dfeb60",
+      "description": "Thirteen skills for Langfuse: tracing and evaluating an LLM application, prompts, costs and the ClickHouse-backed storage behind it.",
+      "author": "Langfuse",
+      "license": "MIT",
+      "homepage": "https://github.com/langfuse/langfuse",
+      "category": "Code",
+      "icon": "icons/langfuse-skills.png",
+      "packages": [
+        "langfuse"
+      ],
+      "exampleQueries": [
+        "Trace this LLM call",
+        "Set up Langfuse for this service"
       ]
     },
     {

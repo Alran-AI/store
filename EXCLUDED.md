@@ -618,8 +618,8 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 
 ## capgo (63)
 
-- `broken-skill`: SKILL.md names another skill than its folder
-- `broken-skill`: SKILL.md names another skill than its folder
+- `broken-skill`: SKILL.md names another skill than its folder; SKILL.md has no description
+- `broken-skill`: SKILL.md names another skill than its folder; SKILL.md has no description
 - `capacitor-accessibility`: another copy of this Skill in this source (skills/capacitor-accessibility) was left out; the store holds one copy
 - `capacitor-app-intents`: another copy of this Skill in this source (skills/capacitor-app-intents) was left out; the store holds one copy
 - `capacitor-app-store`: another copy of this Skill in this source (skills/capacitor-app-store) was left out; the store holds one copy
@@ -1209,7 +1209,7 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 
 - `twilio-account-setup`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
 - `twilio-agent-augmentation-architect`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
-- `twilio-agent-connect`: SKILL.md names another skill than its folder; assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-agent-connect`: SKILL.md names another skill than its folder; SKILL.md has no description; assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
 - `twilio-ai-agent-architect`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
 - `twilio-call-recordings`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
 - `twilio-cli-reference`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
@@ -1289,7 +1289,7 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `custom-connector`: needs an MCP server that Alran Code does not set up
 - `frontend-design`: already has a LICENSE.txt or SOURCE.md
 - `hook-development`: examples/load-context.sh is not a plain text file (.sh); examples/validate-bash.sh is not a plain text file (.sh); examples/validate-write.sh is not a plain text file (.sh); scripts/hook-linter.sh is not a plain text file (.sh); scripts/test-hook.sh is not a plain text file (.sh); scripts/validate-hook-schema.sh is not a plain text file (.sh)
-- `math-olympiad`: scripts/check_latex.sh is not a plain text file (.sh); scripts/compile_pdf.sh is not a plain text file (.sh)
+- `math-olympiad`: SKILL.md has no description; scripts/check_latex.sh is not a plain text file (.sh); scripts/compile_pdf.sh is not a plain text file (.sh)
 - `maturity`: report-template.html is not a plain text file (.html)
 - `morning-plant-pulse`: scripts/pulse_compute.py is not a plain text file (.py); scripts/render_short.py is not a plain text file (.py)
 - `onboarding`: the name is already taken by marketing
@@ -1300,3 +1300,399 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `siege`: scripts/ledger.py is not a plain text file (.py)
 - `skill-creator`: already has a LICENSE.txt or SOURCE.md; assets/eval_review.html is not a plain text file (.html); eval-viewer/generate_review.py is not a plain text file (.py); eval-viewer/viewer.html is not a plain text file (.html); scripts/__init__.py is not a plain text file (.py); scripts/aggregate_benchmark.py is not a plain text file (.py); scripts/generate_report.py is not a plain text file (.py); scripts/improve_description.py is not a plain text file (.py); scripts/package_skill.py is not a plain text file (.py); scripts/quick_validate.py is not a plain text file (.py); scripts/run_eval.py is not a plain text file (.py); scripts/run_loop.py is not a plain text file (.py); scripts/utils.py is not a plain text file (.py); the name belongs to a Skill built in to Alran Code
 - `writing-rules`: SKILL.md names another skill than its folder
+
+## oaiagentspy (7)
+
+- `code-change-verification`: scripts/run.ps1 is not a plain text file (.ps1); scripts/run.sh is not a plain text file (.sh)
+- `final-release-review`: scripts/find_latest_release_tag.sh is not a plain text file (.sh)
+- `implementation-final-review`: scripts/review_protocol.py is not a plain text file (.py); scripts/review_state.py is not a plain text file (.py); scripts/test_review_protocol.py is not a plain text file (.py); scripts/test_review_state.py is not a plain text file (.py)
+- `implementation-kickoff`: scripts/test_validate_handoff.py is not a plain text file (.py); scripts/validate_handoff.py is not a plain text file (.py)
+- `release-candidate-prep`: scripts/prepare.py is not a plain text file (.py); scripts/test_prepare.py is not a plain text file (.py)
+- `runtime-behavior-probe`: templates/python_probe.py is not a plain text file (.py)
+- `sensitive-logging-audit`: scripts/inventory_logging.py is not a plain text file (.py); scripts/test_inventory.py is not a plain text file (.py)
+
+## adkpy (5)
+
+- `adk-setup`: SKILL.md pipes a download into a shell
+- `adk-verify-snippets`: scripts/run.py is not a plain text file (.py); scripts/verify_md.py is not a plain text file (.py)
+- `bigquery-ai-ml`: the name is already taken by google
+- `adk-sample-creator`: links to ../../../../docs/guides/workflow/workflow/index.md, ../../../../docs/guides/path/to/guide.md, which is not in the store
+- `adk-unit-guide`: links to ../../../../contributing/samples/workflows/node_output/agent.py, which is not in the store
+
+## speckit (1)
+
+- `code-review`: the name belongs to a Skill built in to Alran Code
+
+## pydantic (10)
+
+- `branch-context`: append-handoff.sh is not a plain text file (.sh); append-pr-decision.sh is not a plain text file (.sh); check-autoload-safety.sh is not a plain text file (.sh); latest-handoff.sh is not a plain text file (.sh); status.sh is not a plain text file (.sh)
+- `branch-context`: SKILL.md is a symlink; append-handoff.sh is a symlink; append-pr-decision.sh is a symlink; check-autoload-safety.sh is a symlink; handoffs-index.template.md is a symlink; issue-brief.template.md is a symlink; issue-comment-fingerprint is a symlink; latest-handoff.sh is a symlink; pr-decisions.template.md is a symlink; status.sh is a symlink
+- `pushing-commits-to-the-repo`: labels.tsv is not a plain text file (.tsv)
+- `pydantic-ai-harness`: references/CONTROL-AND-SAFETY.md contains an instruction-override phrase
+- `testing-skill`: parse_cassette.py is not a plain text file (.py)
+- `complete-partial-pr`: links to ../pushing-commits-to-the-repo/SKILL.md, which is not in the store
+- `docs-parity-reviewer`: links to ../toolsets.md, which is not in the store
+- `file-followup-issue`: links to ../pushing-commits-to-the-repo/labels.tsv, ../pushing-commits-to-the-repo/SKILL.md, which is not in the store
+- `initialize-worktree`: links to ../pushing-commits-to-the-repo/SKILL.md, which is not in the store
+- `pre-push-review`: links to ../pushing-commits-to-the-repo/SKILL.md, which is not in the store
+
+## grafana (11)
+
+- `app-observability`: references/faro.md loads a remote script; references/frontend-observability.md loads a remote script
+- `cloud-integrations`: SKILL.md has no description
+- `k6`: examples/browser.js is not a plain text file (.js); examples/cloud.js is not a plain text file (.js); examples/crypto-encoding.js is not a plain text file (.js); examples/executors.js is not a plain text file (.js); examples/ext-crawler.js is not a plain text file (.js); examples/ext-dns.js is not a plain text file (.js); examples/ext-exec.js is not a plain text file (.js); examples/ext-faker.js is not a plain text file (.js); examples/ext-redis.js is not a plain text file (.js); examples/ext-sql.js is not a plain text file (.js); examples/ext-tcp.js is not a plain text file (.js); examples/ext-tls.js is not a plain text file (.js); examples/functional.js is not a plain text file (.js); examples/grpc.js is not a plain text file (.js); examples/html.js is not a plain text file (.js); examples/http.js is not a plain text file (.js); examples/metrics.js is not a plain text file (.js); examples/websocket.js is not a plain text file (.js)
+- `k6-browser-test`: examples/functional.js is not a plain text file (.js); examples/load.js is not a plain text file (.js); scripts/explore.template.js is not a plain text file (.js); SKILL.md contains an instruction-override phrase; references/explore.md contains an instruction-override phrase
+- `k6-docs`: scripts/check_agent_browser.sh is not a plain text file (.sh); scripts/fetch_pr.sh is not a plain text file (.sh); scripts/find_branch.sh is not a plain text file (.sh); scripts/format_typescript.sh is not a plain text file (.sh); scripts/test_typescript.sh is not a plain text file (.sh); scripts/update_team_members.sh is not a plain text file (.sh); scripts/validate_links.sh is not a plain text file (.sh)
+- `k6-perf-test-website`: assets/recordings/scripts/recorder.template.js is not a plain text file (.js); assets/tests/run-all.sh is not a plain text file (.sh); assets/tests/workflow.template/average.js is not a plain text file (.js); assets/tests/workflow.template/breakpoint.js is not a plain text file (.js); assets/tests/workflow.template/browser.js is not a plain text file (.js); assets/tests/workflow.template/from-har.js is not a plain text file (.js); assets/tests/workflow.template/protocol.js is not a plain text file (.js); assets/tests/workflow.template/smoke.js is not a plain text file (.js); assets/tests/workflow.template/soak.js is not a plain text file (.js); assets/tests/workflow.template/spike.js is not a plain text file (.js); assets/tests/workflow.template/stress.js is not a plain text file (.js); assets/tools/lg-monitor.sh is not a plain text file (.sh); assets/tools/run-with-monitor.sh is not a plain text file (.sh)
+- `plugin-bundle-size`: SKILL.md has no description
+- `react-19-plugin-migration`: SKILL.md has no description
+- `template`: SKILL.md names another skill than its folder
+- `synthetic-monitoring-checks`: links to ../../grafana-k6/k6/SKILL.md, which is not in the store
+- `testing`: links to ../synthetic-monitoring-checks/SKILL.md, which is not in the store
+
+## stripekit (66)
+
+- `connect-recommend`: another copy of this Skill in this source (providers/antigravity/plugin/skills/connect-recommend) was left out; the store holds one copy
+- `connect-recommend`: another copy of this Skill in this source (providers/claude/plugin/skills/connect-recommend) was left out; the store holds one copy
+- `connect-recommend`: another copy of this Skill in this source (providers/cursor/plugin/skills/connect-recommend) was left out; the store holds one copy
+- `connect-recommend`: another copy of this Skill in this source (providers/grok/plugin/skills/connect-recommend) was left out; the store holds one copy
+- `connect-recommend`: another copy of this Skill in this source (skills/connect-recommend) was left out; the store holds one copy
+- `connect-required-verification-information`: another copy of this Skill in this source (providers/antigravity/plugin/skills/connect-required-verification-information) was left out; the store holds one copy
+- `connect-required-verification-information`: another copy of this Skill in this source (providers/claude/plugin/skills/connect-required-verification-information) was left out; the store holds one copy
+- `connect-required-verification-information`: another copy of this Skill in this source (providers/cursor/plugin/skills/connect-required-verification-information) was left out; the store holds one copy
+- `connect-required-verification-information`: another copy of this Skill in this source (providers/grok/plugin/skills/connect-required-verification-information) was left out; the store holds one copy
+- `connect-required-verification-information`: another copy of this Skill in this source (skills/connect-required-verification-information) was left out; the store holds one copy
+- `metronome`: another copy of this Skill in this source (providers/antigravity/plugin/skills/metronome) was left out; the store holds one copy
+- `metronome`: another copy of this Skill in this source (providers/claude/plugin/skills/metronome) was left out; the store holds one copy
+- `metronome`: another copy of this Skill in this source (providers/cursor/plugin/skills/metronome) was left out; the store holds one copy
+- `metronome`: another copy of this Skill in this source (providers/grok/plugin/skills/metronome) was left out; the store holds one copy
+- `metronome`: another copy of this Skill in this source (skills/metronome) was left out; the store holds one copy
+- `stripe-apps`: another copy of this Skill in this source (providers/antigravity/plugin/skills/stripe-apps) was left out; the store holds one copy
+- `stripe-apps`: another copy of this Skill in this source (providers/claude/plugin/skills/stripe-apps) was left out; the store holds one copy
+- `stripe-apps`: another copy of this Skill in this source (providers/cursor/plugin/skills/stripe-apps) was left out; the store holds one copy
+- `stripe-apps`: another copy of this Skill in this source (providers/grok/plugin/skills/stripe-apps) was left out; the store holds one copy
+- `stripe-apps`: another copy of this Skill in this source (skills/stripe-apps) was left out; the store holds one copy
+- `stripe-apps`: the name is already taken by stripe
+- `stripe-best-practices`: another copy of this Skill in this source (providers/antigravity/plugin/skills/stripe-best-practices) was left out; the store holds one copy
+- `stripe-best-practices`: another copy of this Skill in this source (providers/claude/plugin/skills/stripe-best-practices) was left out; the store holds one copy
+- `stripe-best-practices`: another copy of this Skill in this source (providers/cursor/plugin/skills/stripe-best-practices) was left out; the store holds one copy
+- `stripe-best-practices`: another copy of this Skill in this source (providers/grok/plugin/skills/stripe-best-practices) was left out; the store holds one copy
+- `stripe-best-practices`: another copy of this Skill in this source (skills/stripe-best-practices) was left out; the store holds one copy
+- `stripe-best-practices`: the name is already taken by stripe
+- `stripe-bfcm-dashboard`: another copy of this Skill in this source (providers/antigravity/plugin/skills/stripe-bfcm-dashboard) was left out; the store holds one copy
+- `stripe-bfcm-dashboard`: another copy of this Skill in this source (providers/claude/plugin/skills/stripe-bfcm-dashboard) was left out; the store holds one copy
+- `stripe-bfcm-dashboard`: another copy of this Skill in this source (providers/cursor/plugin/skills/stripe-bfcm-dashboard) was left out; the store holds one copy
+- `stripe-bfcm-dashboard`: another copy of this Skill in this source (providers/grok/plugin/skills/stripe-bfcm-dashboard) was left out; the store holds one copy
+- `stripe-bfcm-dashboard`: another copy of this Skill in this source (skills/stripe-bfcm-dashboard) was left out; the store holds one copy
+- `stripe-directory`: SKILL.md pipes a download into a shell
+- `stripe-directory`: SKILL.md pipes a download into a shell
+- `stripe-directory`: SKILL.md pipes a download into a shell
+- `stripe-directory`: SKILL.md pipes a download into a shell
+- `stripe-directory`: SKILL.md pipes a download into a shell
+- `stripe-directory`: SKILL.md pipes a download into a shell
+- `stripe-docs`: another copy of this Skill in this source (providers/antigravity/plugin/skills/stripe-docs) was left out; the store holds one copy
+- `stripe-docs`: another copy of this Skill in this source (providers/claude/plugin/skills/stripe-docs) was left out; the store holds one copy
+- `stripe-docs`: another copy of this Skill in this source (providers/cursor/plugin/skills/stripe-docs) was left out; the store holds one copy
+- `stripe-docs`: another copy of this Skill in this source (providers/grok/plugin/skills/stripe-docs) was left out; the store holds one copy
+- `stripe-docs`: another copy of this Skill in this source (skills/stripe-docs) was left out; the store holds one copy
+- `stripe-implementation-planner`: another copy of this Skill in this source (providers/antigravity/plugin/skills/stripe-implementation-planner) was left out; the store holds one copy
+- `stripe-implementation-planner`: another copy of this Skill in this source (providers/claude/plugin/skills/stripe-implementation-planner) was left out; the store holds one copy
+- `stripe-implementation-planner`: another copy of this Skill in this source (providers/cursor/plugin/skills/stripe-implementation-planner) was left out; the store holds one copy
+- `stripe-implementation-planner`: another copy of this Skill in this source (providers/grok/plugin/skills/stripe-implementation-planner) was left out; the store holds one copy
+- `stripe-implementation-planner`: another copy of this Skill in this source (skills/stripe-implementation-planner) was left out; the store holds one copy
+- `stripe-pay`: another copy of this Skill in this source (providers/antigravity/plugin/skills/stripe-pay) was left out; the store holds one copy
+- `stripe-pay`: another copy of this Skill in this source (providers/claude/plugin/skills/stripe-pay) was left out; the store holds one copy
+- `stripe-pay`: another copy of this Skill in this source (providers/cursor/plugin/skills/stripe-pay) was left out; the store holds one copy
+- `stripe-pay`: another copy of this Skill in this source (providers/grok/plugin/skills/stripe-pay) was left out; the store holds one copy
+- `stripe-pay`: another copy of this Skill in this source (skills/stripe-pay) was left out; the store holds one copy
+- `stripe-projects`: SKILL.md pipes a download into a shell
+- `stripe-projects`: SKILL.md pipes a download into a shell
+- `stripe-projects`: SKILL.md pipes a download into a shell
+- `stripe-projects`: SKILL.md pipes a download into a shell
+- `stripe-projects`: SKILL.md pipes a download into a shell
+- `stripe-projects`: SKILL.md pipes a download into a shell
+- `upgrade-stripe`: another copy of this Skill in this source (providers/antigravity/plugin/skills/upgrade-stripe) was left out; the store holds one copy
+- `upgrade-stripe`: another copy of this Skill in this source (providers/claude/plugin/skills/upgrade-stripe) was left out; the store holds one copy
+- `upgrade-stripe`: another copy of this Skill in this source (providers/cursor/plugin/skills/upgrade-stripe) was left out; the store holds one copy
+- `upgrade-stripe`: another copy of this Skill in this source (providers/grok/plugin/skills/upgrade-stripe) was left out; the store holds one copy
+- `upgrade-stripe`: another copy of this Skill in this source (skills/upgrade-stripe) was left out; the store holds one copy
+- `upgrade-stripe`: the name is already taken by stripe
+- `connect-recommend`: links to /connect/embedded-appearance-options, which is not in the store
+
+## posthog (134)
+
+- `auditing-experiments-flags`: references/flag-checks.md.j2 is not a plain text file (.j2)
+- `auditing-warehouse-source-coverage`: scripts/dump_source_inventory.py is not a plain text file (.py)
+- `authoring-log-alerts`: scripts/baseline_stats.py is not a plain text file (.py); tests/test_baseline_stats.py is not a plain text file (.py)
+- `claude`: SKILL.md names another skill than its folder; claude-agent.clear.test.ts is not a plain text file (.ts); claude-agent.finish.test.ts is not a plain text file (.ts); claude-agent.permission-mode.test.ts is not a plain text file (.ts); claude-agent.refresh.test.ts is not a plain text file (.ts); claude-agent.resume-model.test.ts is not a plain text file (.ts); claude-agent.side-question.test.ts is not a plain text file (.ts); claude-agent.slash-command.test.ts is not a plain text file (.ts); claude-agent.streamed-text.test.ts is not a plain text file (.ts); claude-agent.task-notification.test.ts is not a plain text file (.ts); claude-agent.ts is not a plain text file (.ts); claude-agent.turn-queue.test.ts is not a plain text file (.ts); context-breakdown.test.ts is not a plain text file (.ts); context-breakdown.ts is not a plain text file (.ts); conversion/acp-to-sdk.test.ts is not a plain text file (.ts); conversion/acp-to-sdk.ts is not a plain text file (.ts); conversion/sdk-to-acp.test.ts is not a plain text file (.ts); conversion/sdk-to-acp.ts is not a plain text file (.ts); conversion/task-state.test.ts is not a plain text file (.ts); conversion/task-state.ts is not a plain text file (.ts); conversion/tool-use-to-acp.test.ts is not a plain text file (.ts); conversion/tool-use-to-acp.ts is not a plain text file (.ts); hooks.test.ts is not a plain text file (.ts); hooks.ts is not a plain text file (.ts); image-sanitization.ts is not a plain text file (.ts); machine-auth.ts is not a plain text file (.ts); mcp/local-tools.test.ts is not a plain text file (.ts); mcp/local-tools.ts is not a plain text file (.ts); mcp/tool-metadata.test.ts is not a plain text file (.ts); mcp/tool-metadata.ts is not a plain text file (.ts); permissions/permission-handlers.test.ts is not a plain text file (.ts); permissions/permission-handlers.ts is not a plain text file (.ts); permissions/permission-options.test.ts is not a plain text file (.ts); permissions/permission-options.ts is not a plain text file (.ts); plan/utils.test.ts is not a plain text file (.ts); plan/utils.ts is not a plain text file (.ts); questions/utils.ts is not a plain text file (.ts); session/budget-guard.test.ts is not a plain text file (.ts); session/budget-guard.ts is not a plain text file (.ts); session/commands.test.ts is not a plain text file (.ts); session/commands.ts is not a plain text file (.ts); session/initialization.test.ts is not a plain text file (.ts); session/initialization.ts is not a plain text file (.ts); session/jsonl-hydration.bench.ts is not a plain text file (.ts); session/jsonl-hydration.test.ts is not a plain text file (.ts); session/jsonl-hydration.ts is not a plain text file (.ts); session/mcp-config.test.ts is not a plain text file (.ts); session/mcp-config.ts is not a plain text file (.ts); session/memory-kill-hook.test.ts is not a plain text file (.ts); session/memory-kill-hook.ts is not a plain text file (.ts); session/memory-validation.test.ts is not a plain text file (.ts); session/memory-validation.ts is not a plain text file (.ts); session/model-config.test.ts is not a plain text file (.ts); session/model-config.ts is not a plain text file (.ts); session/models.test.ts is not a plain text file (.ts); session/models.ts is not a plain text file (.ts); session/options.test.ts is not a plain text file (.ts); session/options.ts is not a plain text file (.ts); session/pinned-settings.test.ts is not a plain text file (.ts); session/pinned-settings.ts is not a plain text file (.ts); session/repo-path.ts is not a plain text file (.ts); session/rtk-hook.test.ts is not a plain text file (.ts); session/rtk-hook.ts is not a plain text file (.ts); session/settings.test.ts is not a plain text file (.ts); session/settings.ts is not a plain text file (.ts); session/traceparent-hook.test.ts is not a plain text file (.ts); session/traceparent-hook.ts is not a plain text file (.ts); side-question.test.ts is not a plain text file (.ts); side-question.ts is not a plain text file (.ts); subscription-login.test.ts is not a plain text file (.ts); subscription-login.ts is not a plain text file (.ts); tools.test.ts is not a plain text file (.ts); tools.ts is not a plain text file (.ts); types.ts is not a plain text file (.ts)
+- `cleaning-up-stale-feature-flags`: SKILL.md contains an instruction-override phrase
+- `configuring-experiment-analytics`: references/metric-configuration.md.j2 is not a plain text file (.j2)
+- `creating-online-evaluations`: references/evaluation-payload.md.j2 is not a plain text file (.j2)
+- `debugging-experiments`: scripts/srm_check.py is not a plain text file (.py)
+- `designing-email-templates`: tests/test_unlayer_design_reference.py is not a plain text file (.py)
+- `diagnosing-stacktrace-symbolication`: scripts/inspect_sourcemaps.py is not a plain text file (.py)
+- `exploring-apm-traces`: scripts/_common.py is not a plain text file (.py); scripts/extract_span.py is not a plain text file (.py); scripts/print_summary.py is not a plain text file (.py); scripts/print_timeline.py is not a plain text file (.py); scripts/search_spans.py is not a plain text file (.py); scripts/show_structure.py is not a plain text file (.py)
+- `exploring-llm-traces`: references/example-llm-trace.md.j2 is not a plain text file (.j2); scripts/extract_conversation.py is not a plain text file (.py); scripts/extract_span.py is not a plain text file (.py); scripts/print_summary.py is not a plain text file (.py); scripts/print_timeline.py is not a plain text file (.py); scripts/search_traces.py is not a plain text file (.py); scripts/show_structure.py is not a plain text file (.py)
+- `exploring-mcp-tool-original-user-motive`: scripts/audit_intentions.py is not a plain text file (.py); scripts/canonicalize_intentions.py is not a plain text file (.py); scripts/extract_facets.py is not a plain text file (.py)
+- `exploring-scouts`: scripts/assess_health.py is not a plain text file (.py); scripts/fleet_survey.py is not a plain text file (.py); scripts/render_run_report.py is not a plain text file (.py)
+- `finding-deleted-feature-flags`: scripts/strip_deleted_suffix.py is not a plain text file (.py)
+- `investigate-metric`: scripts/breakdown_attribution.py is not a plain text file (.py); scripts/compare_to_prior_periods.py is not a plain text file (.py)
+- `measuring-email-performance`: tests/test_recipes.py is not a plain text file (.py)
+- `modeling-activation-metrics`: references/dbt/dim_activation_criteria.sql is not a plain text file (.sql); references/dbt/fct_user_activation.sql is not a plain text file (.sql); references/posthog/activation_flag.sql is not a plain text file (.sql); references/posthog/activation_retention_lift.sql is not a plain text file (.sql)
+- `modeling-conversion-metrics`: references/dbt/fct_conversion.sql is not a plain text file (.sql); references/dbt/stg_funnel_events.sql is not a plain text file (.sql); references/posthog/conversion_by_breakdown.sql is not a plain text file (.sql); references/posthog/funnel_conversion.sql is not a plain text file (.sql)
+- `modeling-dimension-tables`: references/dbt/dim_country.sql is not a plain text file (.sql); references/dbt/dim_date.sql is not a plain text file (.sql); references/posthog/dim_country.sql is not a plain text file (.sql); references/posthog/dim_plan.sql is not a plain text file (.sql)
+- `modeling-product-usage-metrics`: references/dbt/fct_lifecycle.sql is not a plain text file (.sql); references/dbt/fct_retention.sql is not a plain text file (.sql); references/dbt/fct_stickiness.sql is not a plain text file (.sql); references/posthog/lifecycle.sql is not a plain text file (.sql); references/posthog/retention_matrix.sql is not a plain text file (.sql); references/posthog/stickiness.sql is not a plain text file (.sql)
+- `modeling-revenue-metrics`: references/dbt/dim_customer.sql is not a plain text file (.sql); references/dbt/fct_mrr.sql is not a plain text file (.sql); references/dbt/fct_revenue_item.sql is not a plain text file (.sql); references/posthog/gross_revenue_by_month.sql is not a plain text file (.sql); references/posthog/mrr_and_arr.sql is not a plain text file (.sql); references/posthog/revenue_by_customer.sql is not a plain text file (.sql)
+- `modeling-warehouse-foundations`: references/dbt-skeleton/models/marts/fct_daily_active_users.sql is not a plain text file (.sql); references/dbt-skeleton/models/staging/stg_events.sql is not a plain text file (.sql)
+- `placing-product-frontend-code`: scripts/scene_product_split.py is not a plain text file (.py)
+- `qa-frontend`: scripts/annotate-evidence.py is not a plain text file (.py); scripts/cursor-overlay.js is not a plain text file (.js); scripts/reel-capture.mjs is not a plain text file (.mjs); scripts/reel-render.mjs is not a plain text file (.mjs); scripts/reel-template.html is not a plain text file (.html)
+- `qa-team`: scripts/build_launch_scripts.js is not a plain text file (.js); scripts/claim_persona.sh is not a plain text file (.sh); SKILL.md contains invisible characters
+- `querying-canvas-data`: references/canvas-sdk.d.ts is not a plain text file (.ts)
+- `querying-posthog-data`: references/available-functions.md.j2 is not a plain text file (.j2); references/example-error-tracking.md.j2 is not a plain text file (.j2); references/example-event-taxonomy.md.j2 is not a plain text file (.j2); references/example-funnel-breakdown.md.j2 is not a plain text file (.j2); references/example-funnel-trends.md.j2 is not a plain text file (.j2); references/example-lifecycle.md.j2 is not a plain text file (.j2); references/example-llm-trace.md.j2 is not a plain text file (.j2); references/example-logs.md.j2 is not a plain text file (.j2); references/example-paths.md.j2 is not a plain text file (.j2); references/example-person-property-taxonomy.md.j2 is not a plain text file (.j2); references/example-retention.md.j2 is not a plain text file (.j2); references/example-session-replay.md.j2 is not a plain text file (.j2); references/example-sessions.md.j2 is not a plain text file (.j2); references/example-stickiness.md.j2 is not a plain text file (.j2); references/example-team-taxonomy.md.j2 is not a plain text file (.j2); references/example-trends-breakdowns.md.j2 is not a plain text file (.j2); references/example-trends-unique-users.md.j2 is not a plain text file (.j2); references/example-web-overview.md.j2 is not a plain text file (.j2); references/example-web-path-stats.md.j2 is not a plain text file (.j2); references/example-web-traffic-by-device-type.md.j2 is not a plain text file (.j2); references/example-web-traffic-channels.md.j2 is not a plain text file (.j2); references/models-actions.md.j2 is not a plain text file (.j2); references/models-activity-logs.md.j2 is not a plain text file (.j2); references/models-ai-observability-evaluations.md.j2 is not a plain text file (.j2); references/models-ai-observability-reviews.md.j2 is not a plain text file (.j2); references/models-alerts.md.j2 is not a plain text file (.j2); references/models-annotations.md.j2 is not a plain text file (.j2); references/models-autoresearch.md.j2 is not a plain text file (.j2); references/models-cohorts.md.j2 is not a plain text file (.j2); references/models-customer-analytics.md.j2 is not a plain text file (.j2); references/models-dashboards-insights.md.j2 is not a plain text file (.j2); references/models-data-warehouse.md.j2 is not a plain text file (.j2); references/models-datasets.md.j2 is not a plain text file (.j2); references/models-early-access-features.md.j2 is not a plain text file (.j2); references/models-endpoints.md.j2 is not a plain text file (.j2); references/models-error-tracking.md.j2 is not a plain text file (.j2); references/models-flags-experiments.md.j2 is not a plain text file (.j2); references/models-heatmaps.md.j2 is not a plain text file (.j2); references/models-hog-flows.md.j2 is not a plain text file (.j2); references/models-hog-functions.md.j2 is not a plain text file (.j2); references/models-messaging-opt-outs.md.j2 is not a plain text file (.j2); references/models-notebooks.md.j2 is not a plain text file (.j2); references/models-replay-vision.md.j2 is not a plain text file (.j2); references/models-self-driving-usage.md.j2 is not a plain text file (.j2); references/models-session-recording-playlists.md.j2 is not a plain text file (.j2); references/models-session-recordings.md.j2 is not a plain text file (.j2); references/models-support-tickets.md.j2 is not a plain text file (.j2); references/models-surveys.md.j2 is not a plain text file (.j2); references/models-usage-metrics.md.j2 is not a plain text file (.j2)
+- `recording-demo-videos`: scripts/layers.py is not a plain text file (.py); scripts/record_demo.py is not a plain text file (.py)
+- `run-posthog`: SKILL.md pipes a download into a shell
+- `scout`: SKILL.md names another skill than its folder
+- `signals-scout-ai-observability`: needs an MCP server that Alran Code does not set up
+- `signals-scout-anomaly-detection`: needs an MCP server that Alran Code does not set up; scripts/ks2.py is not a plain text file (.py)
+- `signals-scout-billing`: needs an MCP server that Alran Code does not set up
+- `signals-scout-conversations`: needs an MCP server that Alran Code does not set up
+- `signals-scout-csp-violations`: needs an MCP server that Alran Code does not set up; SKILL.md decodes a base64 blob
+- `signals-scout-customer-analytics`: needs an MCP server that Alran Code does not set up
+- `signals-scout-customer-analytics-billing-and-usage`: needs an MCP server that Alran Code does not set up
+- `signals-scout-data-pipelines`: needs an MCP server that Alran Code does not set up
+- `signals-scout-data-warehouse`: needs an MCP server that Alran Code does not set up
+- `signals-scout-error-tracking`: needs an MCP server that Alran Code does not set up
+- `signals-scout-experiments`: needs an MCP server that Alran Code does not set up
+- `signals-scout-feature-flags`: needs an MCP server that Alran Code does not set up
+- `signals-scout-general`: needs an MCP server that Alran Code does not set up
+- `signals-scout-health-checks`: needs an MCP server that Alran Code does not set up
+- `signals-scout-insight-alerts`: needs an MCP server that Alran Code does not set up
+- `signals-scout-logs`: needs an MCP server that Alran Code does not set up
+- `signals-scout-mcp-tool-calls`: needs an MCP server that Alran Code does not set up
+- `signals-scout-observability-gaps`: needs an MCP server that Alran Code does not set up
+- `signals-scout-product-analytics`: needs an MCP server that Alran Code does not set up
+- `signals-scout-revenue-analytics`: needs an MCP server that Alran Code does not set up
+- `signals-scout-session-replay`: needs an MCP server that Alran Code does not set up
+- `signals-scout-surveys`: needs an MCP server that Alran Code does not set up
+- `signals-scout-tasks`: needs an MCP server that Alran Code does not set up
+- `signals-scout-unused-features`: needs an MCP server that Alran Code does not set up
+- `signals-scout-web-analytics`: needs an MCP server that Alran Code does not set up
+- `signals-scout-web-vitals`: needs an MCP server that Alran Code does not set up
+- `signals-scout-workflows`: needs an MCP server that Alran Code does not set up
+- `skills`: SKILL.md names another skill than its folder
+- `splitting-oversized-modules`: scripts/split_module.py is not a plain text file (.py); scripts/verify_pure_move.py is not a plain text file (.py)
+- `styling-sidebar-products`: scripts/sidebar_gradient.py is not a plain text file (.py)
+- `survey-sdk-audit`: scripts/repos.py is not a plain text file (.py)
+- `transcribing-slack-audio`: scripts/transcribe.py is not a plain text file (.py)
+- `triaging-merge-queue-failures`: scripts/mq-queue-state.sh is not a plain text file (.sh); scripts/mq-queue-state.test.sh is not a plain text file (.sh); scripts/mq-triage-marker.sh is not a plain text file (.sh)
+- `writing-pr-descriptions`: scripts/count_words.py is not a plain text file (.py)
+- `adding-activity-logging`: links to ../../../docs/internal/activity-logging.md, which is not in the store
+- `adding-api-scopes`: links to ../../../docs/published/handbook/engineering/safe-django-migrations.md, which is not in the store
+- `adding-inbound-webhooks`: links to ../../../posthog/ingress/README.md, ../../../posthog/ingress/github/README.md, ../../../docs/internal/url-routing.md, which is not in the store
+- `adding-ingestion-warnings`: links to ../../../nodejs/src/ingestion/common/ingestion-warning-types.ts, ../../../nodejs/src/ingestion/framework/docs/09-ingestion-warnings.test.ts, ../../../rust/common/ingestion_warnings, which is not in the store
+- `auditing-llm-gateway-parity`: links to ../../../services/llm-gateway/PARITY.md, which is not in the store
+- `authoring-ci-workflows`: links to ../../../docs/internal/ci-things-already-tried.md, ../../../tools/workflow-plan/README.md, ../../../docs/published/handbook/engineering/fork-pull-requests.md, which is not in the store
+- `building-on-capture-v1`: links to ../../../rust/capture/src/v1/README.md, ../../../posthog/api/capture.py, ../../../nodejs/src/messaging/push-subscriptions/push-capture.ts, which is not in the store
+- `building-the-toolbar`: links to ../../../frontend/src/toolbar/extension/README.md, which is not in the store
+- `creating-customer-analytics-account-widgets`: links to ../../../products/customer_analytics/frontend/components/Accounts/AGENTS.md, which is not in the store
+- `debugging-ci-failures`: links to ../../../docs/internal/ci-things-already-tried.md, which is not in the store
+- `debugging-mcp-analytics`: links to ../../../products/posthog_ai/skills/querying-posthog-data/references/models-mcp.md, which is not in the store
+- `debugging-table-access-denied`: links to ../../../posthog/hogql/ACCESS_CONTROL.md, which is not in the store
+- `depot-ci`: links to ../../../docs/internal/ci-things-already-tried.md, ../../../../docs/published/handbook/engineering/fork-pull-requests.md, which is not in the store
+- `depot-container-builds`: links to ../../../docs/internal/ci-things-already-tried.md, which is not in the store
+- `depot-github-runners`: links to ../depot-ci/references/posthog-check-run-semantics.md, which is not in the store
+- `developing-subscriptions`: links to ../../../products/product_analytics/AGENTS.md, which is not in the store
+- `django-migrations`: links to ../../../docs/internal/ci-things-already-tried.md, ../../../docs/published/handbook/engineering/safe-django-migrations.md, which is not in the store
+- `django-startup-time`: links to ../../../docs/internal/django-startup-time.md, which is not in the store
+- `editing-agents-md`: links to ../../agent-automation.md, ../../architecture.md, ../../code-style.md, which is not in the store
+- `establishing-code-ownership`: links to ../../../packages/owners-yaml/README.md, which is not in the store
+- `exploring-mcp-sessions`: links to ../../../posthog_ai/skills/querying-posthog-data/references/models-mcp.md, which is not in the store
+- `exploring-mcp-tool-quality`: links to ../../../posthog_ai/skills/querying-posthog-data/references/models-mcp.md, ../exploring-mcp-sessions/SKILL.md, which is not in the store
+- `exploring-mcp-tool-usage`: links to ../../../posthog_ai/skills/querying-posthog-data/references/models-mcp.md, ../exploring-mcp-tool-quality/SKILL.md, ../exploring-mcp-sessions/SKILL.md, which is not in the store
+- `extending-the-admin-console`: links to ../../../posthog/admin/console/AGENTS.md, ../../../products/architecture.md, which is not in the store
+- `finding-llm-gateway-migration-candidates`: links to ../../../services/llm-gateway/PARITY.md, which is not in the store
+- `fixing-flaky-tests`: links to ../../../docs/internal/ci-things-already-tried.md, which is not in the store
+- `implementing-mcp-tools`: links to ../../../docs/published/handbook/engineering/ai/implementing-mcp-tools.md, ../../../docs/published/handbook/engineering/type-system.md, ../../../services/mcp/src/lib/instructions.ts, which is not in the store
+- `implementing-mcp-ui-apps`: links to ../../../services/mcp/CONTRIBUTING.md, ../../../services/mcp/scripts/yaml-config-schema.ts, which is not in the store
+- `implementing-warehouse-sources`: links to ../../../posthog/egress/README.md, ../../../products/warehouse_sources/backend/temporal/data_imports/sources/github/github.py, which is not in the store
+- `improving-drf-endpoints`: links to ../../../docs/internal/ci-things-already-tried.md, ../../../posthog/models/scoping/README.md, which is not in the store
+- `integrating-with-posthog-ai`: links to ../../../products/posthog_ai/README.md, ../../../products/posthog_ai/frontend/README.md, ../../../products/posthog_ai/frontend/AGENTS.md, which is not in the store
+- `isolating-product-facade-contracts`: links to ../../../docs/internal/ci-things-already-tried.md, ../../../products/architecture.md, ../../../products/README.md, which is not in the store
+- `maintaining-python-tests`: links to ../../../docs/internal/ci-things-already-tried.md, which is not in the store
+- `manage-dashboard-widgets`: links to ../../../products/dashboards/CONTRIBUTING.md, ../../../products/README.md, which is not in the store
+- `managing-dashboards`: links to ../manage-dashboard-widgets/SKILL.md, ../../../products/dashboards/PERFORMANCE.md, which is not in the store
+- `merging-prs`: links to ../../../products/stamphog/packages/pr-approval-agent/README.md, which is not in the store
+- `migrating-llm-gateway-callers`: links to ../../../services/llm-gateway/PARITY.md, ../../../../services/llm-gateway/PARITY.md, which is not in the store
+- `optimizing-clickhouse-and-hogql-queries`: links to ../establishing-code-ownership/SKILL.md, ../../../posthog/personhog_client/README.md, ../../../docs/published/handbook/engineering/databases/query-performance-optimization.md, which is not in the store
+- `posthog-desktop`: links to ../../../products/desktop/AGENTS.md, which is not in the store
+- `profiling-slow-api-endpoints`: links to ../optimizing-clickhouse-and-hogql-queries/SKILL.md, which is not in the store
+- `querying-local-postgres`: links to ../../../docs/published/handbook/engineering/developing-locally.md, which is not in the store
+- `querying-production-databases-via-metabase`: links to ../profiling-slow-api-endpoints/SKILL.md, which is not in the store
+- `recreating-fork-prs`: links to ../../../docs/published/handbook/engineering/fork-pull-requests.md, which is not in the store
+- `requesting-mobile-releases`: links to ../../../products/mobile/docs/RELEASING.md, ../../../products/mobile/docs/OTA.md, which is not in the store
+- `reviewing-with-coderabbit`: links to ../../../products/review_hog/ARCHITECTURE.md, which is not in the store
+- `routing-outbound-api-calls`: links to ../../../posthog/egress/README.md, which is not in the store
+- `running-mobile-demo-flows`: links to ../../../products/mobile/docs/TESTING.md, which is not in the store
+- `security-audit`: links to ../../security.md, which is not in the store
+- `setting-up-support-slack-locally`: links to ../../../docs/internal/slack-local-setup-guide.md, ../../../posthog/ingress/README.md, which is not in the store
+- `setup-web-tests`: links to ../../../.depot/workflows/ci-backend.yml, which is not in the store
+- `stacking-prs`: links to ../../../docs/internal/ci-things-already-tried.md, which is not in the store
+- `storybook-stories`: links to ../../../AGENTS.md, which is not in the store
+- `testing-mcp-tools-locally`: links to ../../../products/managed_migrations/docs/support-mcp-tools.md, which is not in the store
+- `visualizing-change-over-time`: links to ../../../packages/quill/packages/charts/AGENTS.md, ../../../packages/quill/packages/charts/src/docs/chart-types.md, which is not in the store
+- `working-with-charts`: links to ../../../packages/quill/packages/charts/src/docs/CONTRIBUTING.md, ../../../packages/quill/packages/charts/AGENTS.md, ../../../packages/quill/packages/charts/src/charts/, which is not in the store
+- `working-with-storybook`: links to ../../../common/storybook/README.md, ../../../common/storybook/docs/writing-stories.md, ../../../common/storybook/docs/mocking-data.md, which is not in the store
+- `writing-clickhouse-queries`: links to ../optimizing-clickhouse-and-hogql-queries/SKILL.md, ../../../docs/published/handbook/engineering/databases/clickhouse-queries-new-products.md, ../../../docs/published/handbook/engineering/databases/hogql-python.md, which is not in the store
+- `writing-dataclasses`: links to ../../../products/architecture.md, which is not in the store
+- `writing-evals`: links to ../../../products/posthog_ai/eval_harness/README.md, ../../../products/posthog_ai/evals/AGENTS.md, ../../../products/posthog_ai/eval_harness/harness/AGENTS.md, which is not in the store
+- `writing-kea-logics`: links to ../../code-style.md, ../../../../frontend/src/initKea.ts, ../../../code-style.md, which is not in the store
+- `writing-skills`: links to ../../../docs/published/handbook/engineering/ai/writing-skills.md, ../../../products/posthog_ai/scripts/build_skills/, ../../../products/posthog_ai/skills/querying-posthog-data/SKILL.md, which is not in the store
+- `writing-tests`: links to ../../architecture.md, ../../../posthog/test/AGENTS.md, ../../code-style.md, which is not in the store
+- `writing-ui-components`: links to ../../../frontend/src/AGENTS.md, ../writing-kea-logics/SKILL.md, ../working-with-storybook/SKILL.md, which is not in the store
+- `exploring-mcp-intent-clusters`: links to ../exploring-mcp-tool-quality/SKILL.md, ../exploring-mcp-sessions/SKILL.md, which is not in the store
+- `generating-clickhouse-query-performance-reports`: links to ../querying-production-databases-via-metabase/SKILL.md, ../optimizing-clickhouse-and-hogql-queries/SKILL.md, ../optimizing-clickhouse-and-hogql-queries/references/investigation-playbook.md, which is not in the store
+- `improving-mcp-tools`: links to ../../../products/mcp_analytics/skills/exploring-mcp-intent-clusters/SKILL.md, which is not in the store
+- `modifying-taxonomic-filter`: links to ../../profiling-slow-api-endpoints/SKILL.md, which is not in the store
+- `organizing-conversations-code`: links to ../writing-ui-components/SKILL.md, which is not in the store
+- `querying-production-databases`: links to ../querying-production-databases-via-metabase/SKILL.md, ../../generating-clickhouse-query-performance-reports/references/query-patterns.md, which is not in the store
+
+## streamlit (4)
+
+- `developing-with-streamlit`: scripts/discover.py is not a plain text file (.py)
+- `developing-with-streamlit`: assets/templates/apps/act-review-queue/pyproject.toml is not a plain text file (.toml); assets/templates/apps/act-review-queue/review.py is not a plain text file (.py); assets/templates/apps/act-review-queue/store.py is not a plain text file (.py); assets/templates/apps/act-review-queue/streamlit_app.py is not a plain text file (.py); assets/templates/apps/chat-analyst/agent.py is not a plain text file (.py); assets/templates/apps/chat-analyst/pyproject.toml is not a plain text file (.toml); assets/templates/apps/chat-analyst/streamlit_app.py is not a plain text file (.py); assets/templates/apps/compute-demand-simulator/.streamlit/config.toml is not a plain text file (.toml); assets/templates/apps/compute-demand-simulator/model.py is not a plain text file (.py); assets/templates/apps/compute-demand-simulator/pyproject.toml is not a plain text file (.toml); assets/templates/apps/compute-demand-simulator/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-background-report/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-background-report/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-companies/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-companies/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-feature-usage/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-feature-usage/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-metrics/.streamlit/config.toml is not a plain text file (.toml); assets/templates/apps/dashboard-metrics/charts.py is not a plain text file (.py); assets/templates/apps/dashboard-metrics/data.py is not a plain text file (.py); assets/templates/apps/dashboard-metrics/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-metrics/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-revenue/.streamlit/config.toml is not a plain text file (.toml); assets/templates/apps/dashboard-revenue/charts.py is not a plain text file (.py); assets/templates/apps/dashboard-revenue/components.py is not a plain text file (.py); assets/templates/apps/dashboard-revenue/data.py is not a plain text file (.py); assets/templates/apps/dashboard-revenue/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-revenue/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-seattle-weather/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-seattle-weather/streamlit_app.py is not a plain text file (.py); assets/templates/apps/dashboard-stock-peers/pyproject.toml is not a plain text file (.toml); assets/templates/apps/dashboard-stock-peers/streamlit_app.py is not a plain text file (.py); assets/templates/themes/configs/bi-dashboard.toml is not a plain text file (.toml); assets/templates/themes/configs/dense-dashboard.toml is not a plain text file (.toml); assets/templates/themes/configs/dracula.toml is not a plain text file (.toml); assets/templates/themes/configs/financial-dashboard.toml is not a plain text file (.toml); assets/templates/themes/configs/fluent.toml is not a plain text file (.toml); assets/templates/themes/configs/jupyter.toml is not a plain text file (.toml); assets/templates/themes/configs/material-ui.toml is not a plain text file (.toml); assets/templates/themes/configs/minimal.toml is not a plain text file (.toml); assets/templates/themes/configs/nord.toml is not a plain text file (.toml); assets/templates/themes/configs/one-dark-pro.toml is not a plain text file (.toml); assets/templates/themes/configs/shadcn-dual.toml is not a plain text file (.toml); assets/templates/themes/configs/shadcn.toml is not a plain text file (.toml); assets/templates/themes/configs/solarized-light.toml is not a plain text file (.toml); assets/templates/themes/configs/ubuntu.toml is not a plain text file (.toml); assets/templates/themes/configs/vscode.toml is not a plain text file (.toml); assets/templates/themes/configs/warm-editorial.toml is not a plain text file (.toml)
+- `releasing-streamlit`: scripts/release_status.py is not a plain text file (.py)
+- `generating-changelog`: links to /develop/api-reference/media/st.image, /develop/api-reference/data/st.dataframe, /develop/api-reference/widgets/st.new_thing, which is not in the store
+
+## gradio (1)
+
+- `gradio-themes`: SKILL.md embeds a data URI
+
+## astronomer (2)
+
+- `circleci`: SKILL.md pipes a download into a shell
+- `helm-chart`: links to ../../../docs/architecture.md, which is not in the store
+
+## e2b (1)
+
+- `tdd`: the name is already taken by mattpocock
+
+## unsloth (1)
+
+- `skill-creator`: the name belongs to a Skill built in to Alran Code
+
+## azpy (17)
+
+- `agentic-workflows`: the name is already taken by dotnet
+- `azsdk-common-sdk-breaking-change`: fixtures/detect-sdk-breaking-changes-for-service-001/models.tsp is not a plain text file (.tsp)
+- `azsdk-python-mgmt-pr-triage`: scripts/triage_prs.py is not a plain text file (.py); tests/test_triage_prs.py is not a plain text file (.py)
+- `azure-ai-projects-author-samples`: templates/sample-skeleton.py is not a plain text file (.py); templates/sample-skeleton_async.py is not a plain text file (.py)
+- `azure-ai-projects-author-tests`: templates/test-skeleton.py is not a plain text file (.py); templates/test-skeleton_async.py is not a plain text file (.py)
+- `azure-ai-projects-model-reference-graph`: scripts/GenerateModelReferenceGraph.ps1 is not a plain text file (.ps1)
+- `azure-ai-projects-record-sample`: scripts/GetEnvironmentFileVariables.ps1 is not a plain text file (.ps1); scripts/GetSampleRequiredEnvironmentVariables.ps1 is not a plain text file (.ps1); scripts/InvokeSampleTest.ps1 is not a plain text file (.ps1); scripts/ResetRecordingState.ps1 is not a plain text file (.ps1); scripts/ResolveSampleTest.ps1 is not a plain text file (.ps1); scripts/TestRecordingGitConflicts.ps1 is not a plain text file (.ps1); tests/GetEnvironmentFileVariables.Tests.ps1 is not a plain text file (.ps1); tests/GetSampleRequiredEnvironmentVariables.Tests.ps1 is not a plain text file (.ps1); tests/InvokeSampleTest.Integration.Tests.ps1 is not a plain text file (.ps1); tests/InvokeSampleTest.Tests.ps1 is not a plain text file (.ps1); tests/ResetRecordingState.Tests.ps1 is not a plain text file (.ps1); tests/ResolveSampleTest.Tests.ps1 is not a plain text file (.ps1); tests/TestHelpers.ps1 is not a plain text file (.ps1); tests/TestRecordingGitConflicts.Tests.ps1 is not a plain text file (.ps1)
+- `azure-search-documents`: scripts/Invoke-VenvCommand.ps1 is not a plain text file (.ps1); scripts/Set-LiveTestEnvironment.sample.ps1 is not a plain text file (.ps1); scripts/apply_generator_workarounds.py is not a plain text file (.py)
+- `code-review`: the name belongs to a Skill built in to Alran Code
+- `cu-sdk-author-analyzer`: scripts/create_and_test.py is not a plain text file (.py); scripts/create_and_test.sh is not a plain text file (.sh); scripts/extract_layout.py is not a plain text file (.py); scripts/extract_layout.sh is not a plain text file (.sh)
+- `cu-sdk-author-analyzer-classify-route`: scripts/create_and_test_router.py is not a plain text file (.py); scripts/create_and_test_router.sh is not a plain text file (.sh)
+- `cu-sdk-sample-run`: scripts/run_sample.sh is not a plain text file (.sh)
+- `cu-sdk-setup`: scripts/setup_user_env.ps1 is not a plain text file (.ps1); scripts/setup_user_env.sh is not a plain text file (.sh)
+- `fix-mypy`: another copy of this Skill in this source (.github/skills/ml/fix-mypy) was left out; the store holds one copy
+- `fix-pylint`: another copy of this Skill in this source (.github/skills/ml/fix-pylint) was left out; the store holds one copy
+- `cu-sdk-common-knowledge`: links to ../cu-sdk-author-analyzer/SKILL.md, ../cu-sdk-author-analyzer-classify-route/SKILL.md, ../_shared/, which is not in the store
+- `sdk-health`: links to ../../../doc/repo_health_status.md, which is not in the store
+
+## aznet (19)
+
+- `agentic-workflows`: the name is already taken by dotnet
+- `auto-build-repair`: capture-engine-result.ps1 is not a plain text file (.ps1); emit-repair-report.ps1 is not a plain text file (.ps1); evals/fixtures/package/src/CustomWidget.cs is not a plain text file (.cs); test/bounded-invocation.test.cjs is not a plain text file (.cjs); test/capture-engine-result.tests.ps1 is not a plain text file (.ps1); test/emit-repair-report.tests.ps1 is not a plain text file (.ps1); test/sdk-build-repair-checkout.tests.cjs is not a plain text file (.cjs); test/sdk-build-repair-network.tests.ps1 is not a plain text file (.ps1); test/sdk-build-repair-push-gate.tests.ps1 is not a plain text file (.ps1); test/sdk-build-repair-trigger.tests.ps1 is not a plain text file (.ps1)
+- `azsdk-common-apiview-feedback-resolution`: the name is already taken by azpy
+- `azsdk-common-generate-sdk-locally`: the name is already taken by azpy
+- `azsdk-common-pipeline-analysis`: the name is already taken by azpy
+- `azsdk-common-pipeline-fixer`: the name is already taken by azpy
+- `azsdk-common-prepare-release-plan`: the name is already taken by azpy
+- `azsdk-common-sdk-release`: the name is already taken by azpy
+- `azure-ai-projects-author-tests`: SKILL.md names another skill than its folder
+- `azure-ai-projects-generate-code`: SKILL.md names another skill than its folder
+- `azure-ai-projects-sample-matrix`: SKILL.md names another skill than its folder; scripts/validate_links.py is not a plain text file (.py)
+- `azure-ai-projects-sample-skill`: SKILL.md names another skill than its folder; scripts/Program.cs is not a plain text file (.cs)
+- `azure-ai-projects-update-changelog`: SKILL.md names another skill than its folder
+- `code-review`: the name belongs to a Skill built in to Alran Code
+- `find-package-skill`: the name is already taken by azpy
+- `search-documents`: scripts/Classify-BuildErrors.ps1 is not a plain text file (.ps1); scripts/Find-PreviewFeatures.ps1 is not a plain text file (.ps1)
+- `search-documents-typespec-validation`: scripts/Validate-GeneratedModels.ps1 is not a plain text file (.ps1)
+- `search-documents-version-diff`: scripts/Compare-ApiSurface.ps1 is not a plain text file (.ps1)
+- `mitigate-breaking-changes`: links to ../../../doc/dev/SDKBreakingChanges.md, which is not in the store
+
+## gitlab (3)
+
+- `postgresai`: scripts/joe.sh is not a plain text file (.sh); tests/test_joe.sh is not a plain text file (.sh)
+- `ai-principles-review-feedback`: links to ../../../doc/development/ai_instruction_files_review.md, ../../../.ai/principles/manifest.yml, ../../../.ai/principles/distillation_prompt.md, which is not in the store
+- `gitlab-mcp-tool-builder`: links to ../../../doc/development/duo_agent_platform/mcp/_index.md, ../../../../doc/development/duo_agent_platform/mcp/_index.md, which is not in the store
+
+## cfagents (1)
+
+- `.gardener`: ".gardener" is not a Skill name; SKILL.md names another skill than its folder
+
+## azspec (13)
+
+- `azsdk-common-apiview-feedback-resolution`: the name is already taken by azpy
+- `azsdk-common-generate-sdk-locally`: the name is already taken by azpy
+- `azsdk-common-pipeline-analysis`: the name is already taken by azpy
+- `azsdk-common-pipeline-fixer`: the name is already taken by azpy
+- `azsdk-common-prepare-release-plan`: the name is already taken by azpy
+- `azsdk-common-sdk-breaking-change`: fixtures/detect-sdk-breaking-changes-for-service-001/models.tsp is not a plain text file (.tsp)
+- `azsdk-common-sdk-release`: the name is already taken by azpy
+- `azure-ps-design-review`: needs an MCP server that Alran Code does not set up
+- `azure-typespec-assessment`: scripts/agent-decisions.schema.d.ts is not a plain text file (.ts); scripts/analyze-downstream-breaking.ts is not a plain text file (.ts); scripts/analyze-rest-breaking.ts is not a plain text file (.ts); scripts/analyze-semantic-intents.ts is not a plain text file (.ts); scripts/api-version-selection.ts is not a plain text file (.ts); scripts/assemble-assessment.ts is not a plain text file (.ts); scripts/assessment-display.ts is not a plain text file (.ts); scripts/assessment-input.ts is not a plain text file (.ts); scripts/assessment-judgment.schema.d.ts is not a plain text file (.ts); scripts/assessment-report-ui.css is not a plain text file (.css); scripts/assessment-report-ui.ts is not a plain text file (.ts); scripts/assessment.schema.d.ts is not a plain text file (.ts); scripts/autorest-contract.ts is not a plain text file (.ts); scripts/build-agent-workspace.ts is not a plain text file (.ts); scripts/cli.ts is not a plain text file (.ts); scripts/compiler-runner.ts is not a plain text file (.ts); scripts/compliance-assessment.ts is not a plain text file (.ts); scripts/compliance-search-evidence.schema.d.ts is not a plain text file (.ts); scripts/compliance-search-request.ts is not a plain text file (.ts); scripts/document-quality-assessment.ts is not a plain text file (.ts); scripts/document-quality-input.ts is not a plain text file (.ts); scripts/finalize-assessment.ts is not a plain text file (.ts); scripts/git-evidence.ts is not a plain text file (.ts); scripts/inference.schema.d.ts is not a plain text file (.ts); scripts/materialize-assessment-results.ts is not a plain text file (.ts); scripts/npm-command.ts is not a plain text file (.ts); scripts/package-manager.ts is not a plain text file (.ts); scripts/prepare-assessment.ts is not a plain text file (.ts); scripts/render-assessment-html.ts is not a plain text file (.ts); scripts/run-assessment-analysis.ts is not a plain text file (.ts); scripts/runtime-types.ts is not a plain text file (.ts); scripts/sdk-method-delta.ts is not a plain text file (.ts); scripts/semantic-assessment-scope.ts is not a plain text file (.ts); scripts/semantic-change-facts.ts is not a plain text file (.ts); scripts/serve-assessment.ts is not a plain text file (.ts); scripts/skill-dependencies.ts is not a plain text file (.ts); scripts/source-index.ts is not a plain text file (.ts); scripts/stable-id.ts is not a plain text file (.ts); scripts/tcgc-contract.ts is not a plain text file (.ts); scripts/validate-assessment.ts is not a plain text file (.ts); scripts/workflow-state.ts is not a plain text file (.ts); tests/analyze-downstream-breaking.test.ts is not a plain text file (.ts); tests/analyze-rest-breaking.test.ts is not a plain text file (.ts); tests/analyze-semantic-intents.test.ts is not a plain text file (.ts); tests/api-version-selection.test.ts is not a plain text file (.ts); tests/assemble-assessment.test.ts is not a plain text file (.ts); tests/assessment-input.test.ts is not a plain text file (.ts); tests/assessment-report-ui.test.ts is not a plain text file (.ts); tests/autorest-contract.test.ts is not a plain text file (.ts); tests/build-agent-workspace.test.ts is not a plain text file (.ts); tests/cli.test.ts is not a plain text file (.ts); tests/compiler-runner.test.ts is not a plain text file (.ts); tests/compliance-assessment.test.ts is not a plain text file (.ts); tests/deterministic-intent-grouping.test.ts is not a plain text file (.ts); tests/document-quality-assessment.test.ts is not a plain text file (.ts); tests/document-quality-input.test.ts is not a plain text file (.ts); tests/finalize-assessment.test.ts is not a plain text file (.ts); tests/git-evidence.test.ts is not a plain text file (.ts); tests/materialize-assessment-results.test.ts is not a plain text file (.ts); tests/package-manager.test.ts is not a plain text file (.ts); tests/prepare-assessment.test.ts is not a plain text file (.ts); tests/render-assessment-html.test.ts is not a plain text file (.ts); tests/report-test-utils.ts is not a plain text file (.ts); tests/run-assessment-analysis.test.ts is not a plain text file (.ts); tests/sdk-method-delta.test.ts is not a plain text file (.ts); tests/semantic-assessment-scope.test.ts is not a plain text file (.ts); tests/serve-assessment.test.ts is not a plain text file (.ts); tests/skill-dependencies.test.ts is not a plain text file (.ts); tests/source-index.test.ts is not a plain text file (.ts); tests/stable-id.test.ts is not a plain text file (.ts); tests/tcgc-contract.test.ts is not a plain text file (.ts); vitest.config.ts is not a plain text file (.ts)
+- `azure-typespec-author`: agentic-doc-refinement/doc-refinement.test.ts is not a plain text file (.ts); agentic-doc-refinement/doc-refinement.ts is not a plain text file (.ts); agentic-doc-refinement/root-workspace-dependencies.d.ts is not a plain text file (.ts); agentic-doc-refinement/vitest.config.ts is not a plain text file (.ts); evaluate/fixtures/001-share-version-new-feature/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/001-share-version-new-feature/main.tsp is not a plain text file (.tsp); evaluate/fixtures/001-share-version-new-feature/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/001002-version-default-value/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/001002-version-default-value/main.tsp is not a plain text file (.tsp); evaluate/fixtures/001002-version-default-value/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/001005-version-add-preview-after-preview/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/001005-version-add-preview-after-preview/main.tsp is not a plain text file (.tsp); evaluate/fixtures/001005-version-add-preview-after-preview/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/001006-version-add-preview-after-stable/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/001006-version-add-preview-after-stable/main.tsp is not a plain text file (.tsp); evaluate/fixtures/001006-version-add-preview-after-stable/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/001007-version-add-stable-after-preview/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/001007-version-add-stable-after-preview/main.tsp is not a plain text file (.tsp); evaluate/fixtures/001007-version-add-stable-after-preview/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/001008-version-add-stable-after-stable/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/001008-version-add-stable-after-stable/main.tsp is not a plain text file (.tsp); evaluate/fixtures/001008-version-add-stable-after-stable/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/002003-ARM-define-full-update-operation/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/002003-ARM-define-full-update-operation/main.tsp is not a plain text file (.tsp); evaluate/fixtures/002003-ARM-define-full-update-operation/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/002004-ARM-define-extension-resource/badgeAssignment.tsp is not a plain text file (.tsp); evaluate/fixtures/002004-ARM-define-extension-resource/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/002004-ARM-define-extension-resource/main.tsp is not a plain text file (.tsp); evaluate/fixtures/002004-ARM-define-extension-resource/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/002005-ARM-define-the-resource/main.tsp is not a plain text file (.tsp); evaluate/fixtures/002005-ARM-define-the-resource/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/002009-arm-add-patch-operation-to-resource/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/002009-arm-add-patch-operation-to-resource/main.tsp is not a plain text file (.tsp); evaluate/fixtures/002009-arm-add-patch-operation-to-resource/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/002010-arm-action-sync-operation/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/002010-arm-action-sync-operation/main.tsp is not a plain text file (.tsp); evaluate/fixtures/002010-arm-action-sync-operation/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/003-long-running-operation-share/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/003-long-running-operation-share/main.tsp is not a plain text file (.tsp); evaluate/fixtures/003-long-running-operation-share/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/004002-decorate-length-constrains-on-array-item/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/004002-decorate-length-constrains-on-array-item/main.tsp is not a plain text file (.tsp); evaluate/fixtures/004002-decorate-length-constrains-on-array-item/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/BastionHost.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/BgpConnection.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/ExpressRouteGateway.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/ExpressRoutePort.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/ExpressRouteProviderPort.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/NetworkInterface.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/P2SVpnGateway.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/Route.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/RouteTable.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/VirtualHub.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/VpnGateway.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/VpnServerConfiguration.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/VpnServerConfigurationPolicyGroup.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/VpnSiteLinkConnection.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/main.tsp is not a plain text file (.tsp); evaluate/fixtures/004003-delete-and-restore-operationId-decorator/models.tsp is not a plain text file (.tsp); evaluate/fixtures/005001-warning-suppress-warning/main.tsp is not a plain text file (.tsp); evaluate/fixtures/005001-warning-suppress-warning/models.tsp is not a plain text file (.tsp); evaluate/fixtures/005001-warning-suppress-warning/stubs.tsp is not a plain text file (.tsp); evaluate/fixtures/006001-dp-add-create-operation/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006001-dp-add-create-operation/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006002-dp-add-get-operation/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006002-dp-add-get-operation/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006003-dp-add-list-operation/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006003-dp-add-list-operation/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006004-dp-create-resource-with-crud/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006004-dp-create-resource-with-crud/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006005-dp-version-add-preview/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006005-dp-version-add-preview/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006006-dp-version-add-stable/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006006-dp-version-add-stable/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006007-dp-version-property-added/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006007-dp-version-property-added/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006008-dp-version-property-removed/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006008-dp-version-property-removed/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/006009-dp-version-property-renamed/main.tsp is not a plain text file (.tsp); evaluate/fixtures/006009-dp-version-property-renamed/shared.tsp is not a plain text file (.tsp); evaluate/fixtures/Microsoft.Widget/Widget/employee.tsp is not a plain text file (.tsp); evaluate/fixtures/Microsoft.Widget/Widget/main.tsp is not a plain text file (.tsp); evaluate/fixtures/Microsoft.Widget/Widget/shared.tsp is not a plain text file (.tsp); evaluate/pipeline/typespec-author-invoke-shard.ts is not a plain text file (.ts); evaluate/pipeline/typespec-author-pass-at-k.test.ts is not a plain text file (.ts); evaluate/pipeline/typespec-author-pass-at-k.ts is not a plain text file (.ts); evaluate/scripts/check-employee-service.test.ts is not a plain text file (.ts); evaluate/scripts/check-employee-service.ts is not a plain text file (.ts); evaluate/scripts/check-node-dependencies.ts is not a plain text file (.ts); evaluate/scripts/run-prebuilt-mcp.ts is not a plain text file (.ts); evaluate/scripts/setup-environment.ts is not a plain text file (.ts); evaluate/scripts/setup-fixture-files.test.ts is not a plain text file (.ts); evaluate/scripts/setup-fixture-files.ts is not a plain text file (.ts)
+- `azure-typespec-sdk-naming`: evals/fixtures/customization-mcp.mjs is not a plain text file (.mjs); evals/fixtures/customization-mcp.test.mjs is not a plain text file (.mjs); evals/fixtures/generic-customization-mcp.mjs is not a plain text file (.mjs); evals/fixtures/standalone-apply/existing-client.tsp is not a plain text file (.tsp); evals/fixtures/standalone-apply/main.tsp is not a plain text file (.tsp); evals/fixtures/standalone-apply/mock-typespec-compiler/tsp.mjs is not a plain text file (.mjs); evals/preservation.test.mjs is not a plain text file (.mjs)
+- `azure-api-review`: links to ../../skills/azure-typespec-author/SKILL.md, ../../../documentation/uniform-versioning.md, ../../../documentation/openapi-authoring-automated-guidelines.md, which is not in the store
+- `engineering-code-review`: links to ../../../eng/README.md, ../../instructions/eng-tools.instructions.md, ../../instructions/github-actions.instructions.md, which is not in the store
+
+## airflow (3)
+
+- `airflow-pr-draft-summary`: links to ../../../.github/PULL_REQUEST_TEMPLATE.md, ../../../AGENTS.md, which is not in the store
+- `airflow-publish-changes`: links to ../../../AGENTS.md, ../airflow-pr-draft-summary/SKILL.md, ../../../contributing-docs/05_pull_requests.rst, which is not in the store
+- `prepare-providers-documentation`: links to ../../../dev/README_RELEASE_PROVIDERS.md, which is not in the store
+
+## trigger (5)
+
+- `trigger-authoring-chat-agent`: another copy of this Skill in this source (packages/trigger-sdk/skills/trigger-authoring-chat-agent) was left out; the store holds one copy
+- `trigger-authoring-tasks`: another copy of this Skill in this source (packages/trigger-sdk/skills/trigger-authoring-tasks) was left out; the store holds one copy
+- `trigger-chat-agent-advanced`: another copy of this Skill in this source (packages/trigger-sdk/skills/trigger-chat-agent-advanced) was left out; the store holds one copy
+- `trigger-cost-savings`: another copy of this Skill in this source (packages/trigger-sdk/skills/trigger-cost-savings) was left out; the store holds one copy
+- `trigger-realtime-and-frontend`: another copy of this Skill in this source (packages/trigger-sdk/skills/trigger-realtime-and-frontend) was left out; the store holds one copy
+
+## prefect (1)
+
+- `write-docs`: template-concept.mdx is not a plain text file (.mdx); template-howto.mdx is not a plain text file (.mdx)
+
+## langfuse (28)
+
+- `add-model-price`: scripts/test-match-pattern.mjs is not a plain text file (.mjs); scripts/validate-pricing-file.mjs is not a plain text file (.mjs); scripts/validate-pricing-file.test.mjs is not a plain text file (.mjs)
+- `clickhouse-best-practices`: the name is already taken by clickhouse
+- `code-review`: the name belongs to a Skill built in to Alran Code
+- `grill-me`: the name is already taken by mattpocock
+- `langfuse-previews`: SKILL.md decodes a base64 blob
+- `linear-context-handover`: scripts/lf-context.sh is not a plain text file (.sh)
+- `pnpm-upgrade-package`: scripts/check-release-age-window.mjs is not a plain text file (.mjs); scripts/lib/workspace-utils.mjs is not a plain text file (.mjs)
+- `security-review`: the name is already taken by sentry
+- `skill-creator`: assets/skill-creator-small.svg is not a plain text file (.svg); assets/skill-creator.png is not a plain text file (.png); scripts/generate_openai_yaml.py is not a plain text file (.py); scripts/init_skill.py is not a plain text file (.py); scripts/quick_validate.py is not a plain text file (.py); the name belongs to a Skill built in to Alran Code
+- `vercel-composition-patterns`: SKILL.md has no description
+- `agent-setup-maintenance`: links to ../../README.md, ../../AGENTS.md, ../skill-creator/SKILL.md, which is not in the store
+- `backend-dev-guidelines`: links to ../security-review/SKILL.md, ../../../AGENTS.md, which is not in the store
+- `debug-issue-with-datadog`: links to ../backend-dev-guidelines/SKILL.md, ../clickhouse-best-practices/SKILL.md, which is not in the store
+- `frontend-browser-review`: links to ../../../web/AGENTS.md, which is not in the store
+- `linear-agent-writes`: links to ../linear-context-handover/SKILL.md, which is not in the store
+- `linear-bug-triage`: links to ../linear-agent-writes/SKILL.md, which is not in the store
+- `linear-work-rhythm`: links to ../linear-context-handover/SKILL.md, ../linear-agent-writes/SKILL.md, which is not in the store
+- `posthog-instrumentation`: links to ../../../web/src/features/posthog-analytics/usePostHogClientCapture.ts, ../../../web/src/pages/_app.tsx, ../../../web/src/features/posthog-analytics/productAnalyticsAvailability.ts, which is not in the store
+- `seed-test-data`: links to ../../../packages/shared/scripts/seeder/README.md, which is not in the store
+- `sentry-instrumentation`: links to ../../../web/src/utils/captureUnknownError.ts, ../../../web/src/utils/reportWorkerLoadError.ts, ../../../web/src/hooks/parserWorkerError.ts, which is not in the store
+- `storybook`: links to ../../../web/.storybook/docs/WritingGoodStories.mdx, which is not in the store
+- `weekly-production-review`: links to ../linear-agent-writes/SKILL.md, ../linear-bug-triage/SKILL.md, which is not in the store
+- `cursor-agents-workflow`: links to ../linear-agent-writes/SKILL.md, which is not in the store
+- `datadog-query-recipes`: links to ../debug-issue-with-datadog/SKILL.md, ../weekly-production-review/SKILL.md, ../linear-bug-triage/SKILL.md, which is not in the store
+- `housekeeping`: links to ../linear-agent-writes/SKILL.md, which is not in the store
+- `illustrations`: links to ../storybook/SKILL.md, which is not in the store
+- `incident-alert-tickets`: links to ../linear-agent-writes/SKILL.md, ../linear-bug-triage/SKILL.md, which is not in the store
+- `infra-scaling`: links to ../linear-agent-writes/SKILL.md, which is not in the store

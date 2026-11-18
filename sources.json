@@ -1146,6 +1146,396 @@
         "plugins/skill-creator/skills"
       ],
       "include": "clean"
+    },
+    {
+      "id": "oaiagentspy",
+      "label": "oaiagentspy",
+      "repo": "https://github.com/openai/openai-agents-python",
+      "clone": "openai_openai-agents-python",
+      "commit": "91fb508a8931016efa793b033147d08cd20308cf",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "adkpy",
+      "label": "adkpy",
+      "repo": "https://github.com/google/adk-python",
+      "clone": "google_adk-python",
+      "commit": "43e959ee4611a3cf9b6d084a7aeaf33f68b489ea",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".agents/skills",
+        "src/google/adk/integrations/bigquery/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "speckit",
+      "label": "speckit",
+      "repo": "https://github.com/github/spec-kit",
+      "clone": "github_spec-kit",
+      "commit": "617e9a0a59df6c4c18401fb796ea1dd1fac0c6e2",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "pydantic",
+      "label": "pydantic",
+      "repo": "https://github.com/pydantic/pydantic-ai",
+      "clone": "pydantic_pydantic-ai",
+      "commit": "f41f7fd21650a8ad154b1945ad0fe9a293b5bcd9",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        ".claude/skills",
+        "pydantic_ai_slim/pydantic_ai/.agents/skills",
+        "src/pydantic_ai_harness/pydantic_ai_harness/.agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "grafana",
+      "label": "grafana",
+      "repo": "https://github.com/grafana/skills",
+      "clone": "grafana_skills",
+      "commit": "8fb72a527961f05e708f53d2a0500709e12d7970",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "",
+        "skills/grafana-app-sdk",
+        "skills/grafana-cloud",
+        "skills/grafana-core",
+        "skills/grafana-datasources",
+        "skills/grafana-k6",
+        "skills/grafana-lgtm",
+        "skills/grafana-plugins"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "stripekit",
+      "label": "stripekit",
+      "repo": "https://github.com/Stripe/agent-toolkit",
+      "clone": "Stripe_agent-toolkit",
+      "commit": "72e7e79e08e245063e87d61f60340e55e54c68f4",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "providers/agent-plugins/plugin/skills",
+        "providers/antigravity/plugin/skills",
+        "providers/claude/plugin/skills",
+        "providers/cursor/plugin/skills",
+        "providers/grok/plugin/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "posthog",
+      "label": "posthog",
+      "repo": "https://github.com/PostHog/posthog",
+      "clone": "PostHog_posthog",
+      "commit": "2749c2af910ad9a9a8606ee80075604dd5b7692c",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        "packages/agent/packages/agent/src/adapters",
+        "packages/agent/packages/harness/src/extensions/mcp/skills",
+        "packages/agent/packages/harness/src/extensions/orchestration/skills",
+        "products/access_control/skills",
+        "products/aeo",
+        "products/aeo/skills",
+        "products/ai_observability/skills",
+        "products/alerts/skills",
+        "products/autoresearch/skills",
+        "products/batch_exports/skills",
+        "products/billing/skills",
+        "products/canvas/skills",
+        "products/context_layer/skills",
+        "products/customer_analytics",
+        "products/customer_analytics/skills",
+        "products/dashboards/skills",
+        "products/data_catalog/skills",
+        "products/data_modeling/skills",
+        "products/data_quality/skills",
+        "products/data_warehouse/skills",
+        "products/desktop/.claude/skills",
+        "products/endpoints/skills",
+        "products/engineering_analytics/skills",
+        "products/error_tracking/skills",
+        "products/experiments/skills",
+        "products/feature_flags/skills",
+        "products/growth/skills",
+        "products/ingestion/skills",
+        "products/logs/skills",
+        "products/mcp_analytics/skills",
+        "products/messaging/skills",
+        "products/metrics/skills",
+        "products/posthog_ai/skills",
+        "products/product_analytics/skills",
+        "products/reminders/skills",
+        "products/replay/skills",
+        "products/replay_vision/skills",
+        "products/review_hog/skills",
+        "products/signals/skills",
+        "products/skills/skills",
+        "products/slack_app/skills",
+        "products/streamlit_apps/skills",
+        "products/subscriptions/skills",
+        "products/surveys/skills",
+        "products/tasks/skills",
+        "products/tracing/skills",
+        "products/visual_review/skills",
+        "products/warehouse_sources/skills",
+        "products/warehouse_suggestions/skills",
+        "products/web_analytics/skills",
+        "products/wizard/skills",
+        "products/workflows/skills",
+        "tools/query-performance-ai/query_performance_ai/sandboxed_autoresearch_agent/pi_plugin/skills",
+        "tools/traffic-sim/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "streamlit",
+      "label": "streamlit",
+      "repo": "https://github.com/streamlit/streamlit",
+      "clone": "streamlit_streamlit",
+      "commit": "46e35d33c773f0dbbea2466d45dc800fccdb2438",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".claude/skills",
+        "lib/streamlit/.agents/meta-skill",
+        "lib/streamlit/.agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "gradio",
+      "label": "gradio",
+      "repo": "https://github.com/gradio-app/gradio",
+      "clone": "gradio-app_gradio",
+      "commit": "ec06278ed72e5eb73494a9d171ca851d553dc82a",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "astronomer",
+      "label": "astronomer",
+      "repo": "https://github.com/astronomer/astronomer",
+      "clone": "astronomer_astronomer",
+      "commit": "b0c6481bb3dea3225bd2cca00915f4a351c605d0",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "temporalui",
+      "label": "temporalui",
+      "repo": "https://github.com/temporalio/ui",
+      "clone": "temporalio_ui",
+      "commit": "cbd2aba38208e8b98cf266735cb3fa15dbba0f36",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".claude/skills",
+        "agent-plugins/temporal-ui-catalog/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "litellm",
+      "label": "litellm",
+      "repo": "https://github.com/BerriAI/litellm",
+      "clone": "BerriAI_litellm",
+      "commit": "0e62b0690249755e3d3bfa2c97d2a31f3d4b4155",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "litellm/rust/.agents/skills",
+        "litellm/ui/litellm-dashboard/.agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "e2b",
+      "label": "e2b",
+      "repo": "https://github.com/e2b-dev/E2B",
+      "clone": "e2b-dev_E2B",
+      "commit": "08c4eeba6d08413779ec3fa5e7ac0edf3f608b33",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "unsloth",
+      "label": "unsloth",
+      "repo": "https://github.com/unslothai/unsloth",
+      "clone": "unslothai_unsloth",
+      "commit": "cf0d15313fbd9c229e64f5acb2bf348dd7b7843a",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "studio/backend/core/inference/bundled_skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "azpy",
+      "label": "azpy",
+      "repo": "https://github.com/Azure/azure-sdk-for-python",
+      "clone": "Azure_azure-sdk-for-python",
+      "commit": "993f1109f38729b3765089468399890e46fd1a61",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/skills",
+        ".github/skills/eng",
+        ".github/skills/ml",
+        "sdk/ai/azure-ai-projects/.github/skills",
+        "sdk/contentunderstanding/azure-ai-contentunderstanding/.github/skills",
+        "sdk/search/azure-search-documents/.github/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "aznet",
+      "label": "aznet",
+      "repo": "https://github.com/Azure/azure-sdk-for-net",
+      "clone": "Azure_azure-sdk-for-net",
+      "commit": "787c2e279fed61bf2af34241da0e5b387b20a297",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/skills",
+        "sdk/ai/.github/skills",
+        "sdk/search/Azure.Search.Documents/.github/skills",
+        "sdk/webpubsub/.github/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "playwrightpy",
+      "label": "playwrightpy",
+      "repo": "https://github.com/microsoft/playwright-python",
+      "clone": "microsoft_playwright-python",
+      "commit": "613727245cbeed62c9b0fb27a84942abd276602f",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "gitlab",
+      "label": "gitlab",
+      "repo": "https://github.com/gitlabhq/gitlabhq",
+      "clone": "gitlabhq_gitlabhq",
+      "commit": "d7b9a6176ab4e279465ba3ee09922cde2b74de47",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "cfagents",
+      "label": "cfagents",
+      "repo": "https://github.com/cloudflare/agents",
+      "clone": "cloudflare_agents",
+      "commit": "1a450e71325c25ca1ec8b0013d756fe0c733b6f3",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "",
+        "agent-think/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "azspec",
+      "label": "azspec",
+      "repo": "https://github.com/Azure/azure-rest-api-specs",
+      "clone": "Azure_azure-rest-api-specs",
+      "commit": "03baad733d8173f754e4881cf1a336a6349dacaf",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/skills",
+        "specification/ai-foundry/data-plane/Foundry/.github/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "airflow",
+      "label": "airflow",
+      "repo": "https://github.com/apache/airflow",
+      "clone": "apache_airflow",
+      "commit": "f01e432bedb43f04556824a5893d6aff38231ea2",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".agents/skills",
+        "providers/common/ai/src/airflow/providers/common/ai/example_dags/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "trigger",
+      "label": "trigger",
+      "repo": "https://github.com/triggerdotdev/trigger.dev",
+      "clone": "triggerdotdev_trigger.dev",
+      "commit": "74765f97f1baafc7665d25b0f2f2af2dcf14436b",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".claude/skills",
+        "packages/cli-v3/skills",
+        "packages/convex/skills",
+        "packages/trigger-sdk/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "deno",
+      "label": "deno",
+      "repo": "https://github.com/denoland/deno",
+      "clone": "denoland_deno",
+      "commit": "d8c551b5a5b46d8ec3892a91d0364cfcbca2c681",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "prefect",
+      "label": "prefect",
+      "repo": "https://github.com/PrefectHQ/prefect",
+      "clone": "PrefectHQ_prefect",
+      "commit": "67380b6d06065205ee507d23daa9bcd044ed641e",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "langfuse",
+      "label": "langfuse",
+      "repo": "https://github.com/langfuse/langfuse",
+      "clone": "langfuse_langfuse",
+      "commit": "6dfeb6049b8fa2795af7bfce1cce9bbe60aca4c0",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        "packages/langfuse-skills/halo",
+        "web/.agents/skills"
+      ],
+      "include": "clean"
     }
   ]
 }

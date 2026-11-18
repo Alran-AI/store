@@ -857,6 +857,308 @@
         "Branch the database for this test",
         "Test what happens when this service fails"
       ]
+    },
+    {
+      "source": "oaiagentspy",
+      "name": "openai-agents-python-skills",
+      "displayName": "OpenAI Agents (Python)",
+      "author": "OpenAI",
+      "category": "Code",
+      "description": "{N} skills for the OpenAI Agents SDK in Python: agents and handoffs, guardrails, sessions, tracing, tools and MCP.",
+      "exampleQueries": [
+        "Add a handoff to this agent",
+        "Trace this run of my agent"
+      ]
+    },
+    {
+      "source": "adkpy",
+      "name": "google-adk-skills",
+      "displayName": "Google ADK",
+      "author": "Google",
+      "category": "Code",
+      "description": "{N} skills for the Agent Development Kit: building agents and tools, sessions and state, and running them locally or deployed.",
+      "exampleQueries": [
+        "Build an agent with the ADK",
+        "Add a tool to this ADK agent"
+      ]
+    },
+    {
+      "source": "speckit",
+      "name": "spec-kit-skills",
+      "displayName": "GitHub Spec Kit",
+      "author": "GitHub",
+      "category": "Code",
+      "description": "{N} skills for spec-driven development: writing the spec, the plan and the tasks before the code, and keeping them in step.",
+      "exampleQueries": [
+        "Write a spec for this feature",
+        "Turn this spec into tasks"
+      ]
+    },
+    {
+      "source": "pydantic",
+      "name": "pydantic-ai-skills",
+      "displayName": "Pydantic AI",
+      "author": "Pydantic",
+      "category": "Code",
+      "description": "{N} skills for Pydantic AI: writing agents and tools, dependencies and output types, graphs, and testing them.",
+      "exampleQueries": [
+        "Write a Pydantic AI agent",
+        "Add a dependency to this agent",
+        "Test this agent"
+      ]
+    },
+    {
+      "source": "grafana",
+      "name": "grafana-skills",
+      "displayName": "Grafana",
+      "author": "Grafana",
+      "category": "Code",
+      "description": "{N} skills for Grafana: the app SDK, dashboards, IRM, incidents, k6, the core product and Grafana Cloud.",
+      "exampleQueries": [
+        "Build a Grafana dashboard from this data",
+        "Set up an alert rule in Grafana"
+      ]
+    },
+    {
+      "source": "stripekit",
+      "name": "stripe-agent-toolkit-skills",
+      "displayName": "Stripe Agent Toolkit",
+      "author": "Stripe",
+      "category": "Code",
+      "description": "{N} skills for building with Stripe: the API for payments, billing, Connect and Radar, and the tools an agent needs to work with it.",
+      "exampleQueries": [
+        "Create a subscription with Stripe",
+        "Handle a payment webhook"
+      ]
+    },
+    {
+      "source": "posthog",
+      "name": "posthog-skills",
+      "displayName": "PostHog",
+      "author": "PostHog",
+      "category": "Code",
+      "description": "{N} skills for PostHog: product analytics, feature flags, sessions, data capture, the API and the MCP server.",
+      "exampleQueries": [
+        "Add a feature flag to this app",
+        "Instrument this event in PostHog",
+        "Query the analytics for this feature"
+      ]
+    },
+    {
+      "source": "streamlit",
+      "name": "streamlit-skills",
+      "displayName": "Streamlit",
+      "author": "Streamlit",
+      "category": "Code",
+      "description": "{N} skills for building Streamlit apps: layout, state, caching, custom components and testing.",
+      "exampleQueries": [
+        "Build this app in Streamlit",
+        "Speed up this Streamlit app"
+      ]
+    },
+    {
+      "source": "gradio",
+      "name": "gradio-skills",
+      "displayName": "Gradio",
+      "author": "Gradio",
+      "category": "Code",
+      "description": "{N} skills for Gradio: building and sharing a demo for a model, and the components behind it.",
+      "exampleQueries": [
+        "Build a Gradio demo for this model",
+        "Share this demo"
+      ]
+    },
+    {
+      "source": "astronomer",
+      "name": "astronomer-skills",
+      "displayName": "Astronomer",
+      "author": "Astronomer",
+      "category": "Code",
+      "description": "{N} skills for Astronomer: Airflow on Astronomer, deploying and running DAGs, and the platform around them.",
+      "exampleQueries": [
+        "Deploy this DAG to Astronomer",
+        "Fix this Airflow DAG"
+      ]
+    },
+    {
+      "source": "temporalui",
+      "name": "temporal-ui-skills",
+      "displayName": "Temporal",
+      "author": "Temporal",
+      "category": "Code",
+      "description": "{N} skills for the Temporal UI and its plugin catalogue: running workflows, inspecting them and the catalog of what Temporal can do.",
+      "exampleQueries": [
+        "Show me this workflow's history",
+        "Start this workflow"
+      ]
+    },
+    {
+      "source": "litellm",
+      "name": "litellm-skills",
+      "displayName": "LiteLLM",
+      "author": "BerriAI",
+      "category": "Code",
+      "description": "{N} skills for LiteLLM: the proxy and gateway, routing a model call, budgets and the dashboard.",
+      "exampleQueries": [
+        "Route this call through LiteLLM",
+        "Set up a budget for this team"
+      ]
+    },
+    {
+      "source": "e2b",
+      "name": "e2b-skills",
+      "displayName": "E2B",
+      "author": "E2B",
+      "category": "Code",
+      "description": "{N} skills for E2B: running code in a sandbox, and giving an agent a place to run it.",
+      "exampleQueries": [
+        "Run this code in a sandbox",
+        "Give this agent a sandbox"
+      ]
+    },
+    {
+      "source": "unsloth",
+      "name": "unsloth-skills",
+      "displayName": "Unsloth",
+      "author": "Unsloth",
+      "category": "Code",
+      "description": "{N} skills for Unsloth: fine-tuning a model on your own data and running the notebook.",
+      "exampleQueries": [
+        "Fine-tune this model on my dataset",
+        "Start the Unsloth notebook"
+      ]
+    },
+    {
+      "source": "azpy",
+      "name": "azure-sdk-python-skills",
+      "displayName": "Azure SDK for Python",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for the Azure SDK for Python, across the services Microsoft ships clients for.",
+      "exampleQueries": [
+        "Use the Azure SDK for this service",
+        "Set up the Python client for this resource"
+      ]
+    },
+    {
+      "source": "aznet",
+      "name": "azure-sdk-dotnet-skills",
+      "displayName": "Azure SDK for .NET",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for the Azure SDK for .NET, across the services Microsoft ships clients for.",
+      "exampleQueries": [
+        "Use the Azure SDK for this service in C#",
+        "Set up the .NET client for this resource"
+      ]
+    },
+    {
+      "source": "azspec",
+      "name": "azure-rest-api-skills",
+      "displayName": "Azure REST APIs",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for calling Azure REST APIs directly, and for reading the service specifications they are written from.",
+      "exampleQueries": [
+        "Call this Azure REST API directly",
+        "What does this Azure service return?"
+      ]
+    },
+    {
+      "source": "airflow",
+      "name": "airflow-skills",
+      "displayName": "Apache Airflow",
+      "author": "Apache",
+      "category": "Code",
+      "description": "{N} skills for Apache Airflow: writing DAGs, operators, scheduling and running them.",
+      "exampleQueries": [
+        "Write a DAG for this pipeline",
+        "Fix this failing Airflow task"
+      ]
+    },
+    {
+      "source": "trigger",
+      "name": "trigger-dev-skills",
+      "displayName": "Trigger.dev",
+      "author": "Trigger.dev",
+      "category": "Code",
+      "description": "{N} skills for Trigger.dev: writing background jobs and workflows, and the run and task APIs around them.",
+      "exampleQueries": [
+        "Write a background job for this",
+        "Set up a workflow in Trigger.dev"
+      ]
+    },
+    {
+      "source": "deno",
+      "name": "deno-skills",
+      "displayName": "Deno",
+      "author": "Deno",
+      "category": "Code",
+      "description": "{N} skills for Deno: running and deploying its programs, permissions and the tooling around it.",
+      "exampleQueries": [
+        "Deploy this Deno program",
+        "What permissions does this task need?"
+      ]
+    },
+    {
+      "source": "prefect",
+      "name": "prefect-skills",
+      "displayName": "Prefect",
+      "author": "Prefect",
+      "category": "Code",
+      "description": "{N} skills for Prefect: writing flows, running and deploying them, and the work pools behind them.",
+      "exampleQueries": [
+        "Write a Prefect flow for this",
+        "Deploy this flow"
+      ]
+    },
+    {
+      "source": "langfuse",
+      "name": "langfuse-skills",
+      "displayName": "Langfuse",
+      "author": "Langfuse",
+      "category": "Code",
+      "description": "{N} skills for Langfuse: tracing and evaluating an LLM application, prompts, costs and the ClickHouse-backed storage behind it.",
+      "exampleQueries": [
+        "Trace this LLM call",
+        "Set up Langfuse for this service"
+      ]
+    },
+    {
+      "source": "playwrightpy",
+      "name": "playwright-python-skills",
+      "displayName": "Playwright for Python",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for Playwright in Python: driving the browser, reading traces and making sense of test results.",
+      "exampleQueries": [
+        "Run this test and show the trace",
+        "Read this Playwright failure"
+      ]
+    },
+    {
+      "source": "gitlab",
+      "name": "gitlab-skills",
+      "displayName": "GitLab",
+      "author": "GitLab",
+      "category": "Code",
+      "description": "{N} skills for working with GitLab: its API, its CI and the conventions of its own codebase.",
+      "exampleQueries": [
+        "Use the GitLab API for this",
+        "How does this GitLab repo do it?"
+      ]
+    },
+    {
+      "source": "cfagents",
+      "name": "cloudflare-agents-skills",
+      "displayName": "Cloudflare Agents",
+      "author": "Cloudflare",
+      "category": "Code",
+      "description": "{N} skills for the Cloudflare Agents SDK: building agents that run on Workers, with state and realtime.",
+      "exampleQueries": [
+        "Build an agent on Cloudflare Agents",
+        "Add state to this agent"
+      ]
     }
   ]
 }
