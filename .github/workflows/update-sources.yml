@@ -44,7 +44,7 @@ jobs:
         if: steps.moved.outputs.count != '0'
         run: node scripts/update-sources.mjs --work "$RUNNER_TEMP/clones" --apply --report updates.json
 
-      - name: Rebuild the store
+      - name: Rebuild the store and check it
         if: steps.moved.outputs.count != '0'
         run: |
           node scripts/gen-icons.mjs
@@ -90,8 +90,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           {
-            echo "The upstream head of $(jq '.moved | length' updates.json) source(s) moved. The pins in"
-            echo "\`sources.json\` were moved, the Skills were vendored again and the store was rebuilt."
+            echo "The upstream head of $(jq '.moved | length' source(s) moved. The pins in"
+            echo "\`sources.json\` were moved and the Skills were vendored again."
             echo ""
             echo "| Source | Was | Now |"
             echo "| --- | --- | --- |"
@@ -100,12 +100,15 @@ jobs:
             echo "Read \`EXCLUDED.md\` for the Skills that were left out and why. The Superpowers package is"
             echo "not touched by this run: its files are pinned by SHA-256 and have to be read again."
             echo ""
+            echo "The store was rebuilt and checked, but the built \`store/\` folder is not part of this pull"
+            echo "request: it is built and published from the pipeline, so the diff stays small."
+            echo ""
             echo "This pull request is built by \`.github/workflows/update-sources.yml\`."
           } > pr-body.md
           git config user.name "alran-store"
           git config user.email "alran-store@users.noreply.github.com"
           git checkout -b chore/update-sources
-          git add -A
+          git add sources.json versions.json EXCLUDED.md THIRD_PARTY_NOTICES.md skills shared
           git commit -m "Update sources"
           git push --force origin chore/update-sources
           gh pr create \

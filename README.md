@@ -6,27 +6,28 @@ own licence. All are **unmodified**, except the Superpowers package, whose diffe
 listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **144 Plugins**
-(143 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **7139
-individually installable Skills**; 7173 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **176 Plugins**
+(175 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **10023
+individually installable Skills**; 10058 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
 Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
 call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack, Skillkit, dzhng, Bama, Skills Hub, Evo |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack, Skillkit, dzhng, Bama, Skills Hub, Evo, Modem, Agent Skills (mblode), Forge Harness, Aeon, Babysitter, Code Review Triage, Agent Verifier |
 | Cloud and hosting | Cloudflare, Cloudflare Workers SDK, Cloudflare Agents, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker, Deno, Self-Host |
-| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase, Teable |
-| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator, App Store Connect, VideoDB, Helius, Mailtrap, Courier, Zapier, OpenOSINT |
+| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase, Teable, Qdrant |
+| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator, App Store Connect, VideoDB, Helius, Mailtrap, Courier, Zapier, OpenOSINT, Modern Node.js, Swift Patterns, Swift Concurrency, SDK Generation (Speakeasy), Vovk, Pachca, NodeMaven, Three.js |
 | Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip, Fast Agent, OPC |
-| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills, Notion Cookbook, Second Brain OS |
+| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills, Notion Cookbook, Second Brain OS, Publora, TweetClaw, Qubrics, Goose |
 | Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs, Temporal, Prefect, Apache Airflow, Astronomer, Trigger.dev, ShipSwift |
-| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills, Thinking Skills |
-| Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit |
-| Design, media and 3D | OpenMotion, Open Design, Baoyu, Social Auto Upload, Blender Skills, Scenario Labs, Awesome Design Skills, Effective HTML, LottieFiles |
+| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills, Thinking Skills, Cybersecurity Skills |
+| Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit, Cybersecurity Skills (MITRE, NIST) |
+| Design, media and 3D | OpenMotion, Open Design, Baoyu, Social Auto Upload, Blender Skills, Scenario Labs, Awesome Design Skills, Effective HTML, LottieFiles, ChatCut, HyperFrames, Three.js, UI Skills, Superdesign, KiCad |
 | Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace, Product Management Skills |
-| Business | Marketing (Corey Haines), Product management (Paweł Huryn) |
-| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science |
+| Business | Marketing (Corey Haines), Product management (Paweł Huryn), E-commerce Skills, EveryInfra, Citlyze |
+| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science, AI Research Skills (Orchestra Research) |
+| Productivity | Home Assistant, Skill Seekers |
 
 ```sh
 alran plugin marketplace add /path/to/alran-store/store     # or the URL it is hosted at
@@ -80,9 +81,13 @@ digest changing.
 
 `.github/workflows/update-sources.yml` runs every morning. It reads `sources.json`, asks each source's
 repository for its head, and opens a pull request when a source has moved: the pin is updated, the Skills are
-vendored again, the store is rebuilt, and the pull request lists which source moved and from where to where.
-Read `EXCLUDED.md` in the pull request for the Skills that were left out and why. Nothing is published from the
-workflow; the pull request is reviewed and merged by hand.
+vendored again, the store is rebuilt and checked, and the pull request lists which source moved and from where
+to where. Read `EXCLUDED.md` in the pull request for the Skills that were left out and why. Nothing is published
+from the workflow; the pull request is reviewed and merged by hand.
+
+The pull request carries the vendored Skills, `sources.json` and the files the vendor writes
+(`versions.json`, `EXCLUDED.md`, `THIRD_PARTY_NOTICES.md`). The built `store/` folder is not part of it: it
+holds one archive per Skill and is built and published from the pipeline, so a daily pull request stays small.
 
 The same thing can be done by hand, without the workflow:
 
@@ -100,9 +105,9 @@ source alone, and says so in the pull request.
 A source lists its Skills by name, or takes `"include": "clean"`: every Skill that passes the admission rules.
 `scripts/vendor.mjs` takes a Skill only if
 
-- it has no script or executable and nothing but plain text files (`.md`, `.txt`, `.json`, `.yaml`, `.csv`),
-  no symlinks, and only file names a portable archive can hold. An image is left out as well, so that every
-  file in the store can be read;
+- it has no script or executable and nothing but plain text files (`.md`, `.txt`, `.json`, `.yaml`, `.csv`)
+  or images (`.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`), no symlinks, and only file names a portable archive can
+  hold. A vector image (`.svg`) is a document that may carry a script, so it is left out;
 - its `SKILL.md` names its own folder, and its name is not one of the Skills built in to Alran Code;
 - its frontmatter is a flat mapping of scalars, the way the store's Plugin validator reads it: the
   `description` has to be a value on the line of its key (a value that only continues on the lines below
@@ -119,6 +124,12 @@ A Skill that fails is left out and listed in `EXCLUDED.md` with the reason; for 
 instead. The Skills run no code of their own; what an agent does with their text goes through Alran's normal
 permissions. A few links in the text itself are broken in the originals too (placeholders, or paths that only
 make sense in the upstream repository); they are copied as they are.
+
+A Skill whose only fault is a `scripts/` or an `evals/` folder still comes in without that folder: the folder
+holds code the store cannot carry, and the Skill is kept as long as its own text never points at it. A Skill
+that says "run `scripts/analyze.py`" and then loses the folder points at a file that is not there, which is
+worse than a Skill that is not in the store at all, so those are left out. Every Skill that comes in this way
+says so in its own `SOURCE.md`, and `EXCLUDED.md` lists them all.
 
 A source that ships the same Skill twice (a plugin bundle next to the copy it was built from) contributes it
 once: the first copy that is admitted is taken, the others are listed in `EXCLUDED.md`. A source's licence file
@@ -166,9 +177,8 @@ Facts about the source, not quality judgements:
   scripts, or a line that pipes a download into a shell.
 - [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) (BSD-3-Clause): its Skills
   carry `.qml` and `.py` files, and some ship a licence file of their own.
-- [twilio/skills](https://github.com/twilio/skills) (MIT): 56 of its 57 Skills carry a PNG icon, so only the one
-  without an image is in the store. The rule above is what keeps the store text-only; allowing `.png` and
-  `.jpg` would bring the other 56 in.
+- [twilio/skills](https://github.com/twilio/skills) (MIT): 53 of its 57 Skills are in the store. The four that are
+  not name their folder wrong, link out of the store or carry no description.
 - [MetaMask/agent-skills](https://github.com/MetaMask/agent-skills) (MIT): its Skill ships Python scripts.
 - [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) (MIT): the validator
   scripts are the Skill, and it cannot do its work without them.
@@ -207,7 +217,9 @@ Facts about the source, not quality judgements:
 - [eigent-ai/eigent](https://github.com/eigent-ai/eigent) (Apache-2.0): its Skills are the document skills
   (docx, pdf, pptx) that Alran Code builds in itself, and they ship scripts.
 - [NVIDIA/skills](https://github.com/NVIDIA/skills) (Apache-2.0 for the code, CC-BY-4.0 for the text): all 472 of
-  its Skills carry an `evals/` folder with Python in it, so not one of them can be vendored as they are.
+  its Skills carry an `evals/` folder with Python in it, and every one of them also carries a `skill.oms.sig`
+  signature file or Python under `references/`. Leaving out the `evals/` folder is not enough for the rest to
+  be plain text, so not one of them can be vendored as they are.
 - [LottieFiles/motion-design-skill](https://github.com/LottieFiles/motion-design-skill) (MIT): its one Skill is
   called `motion-design`, which Open Design already has.
 - [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) (MIT),
@@ -243,6 +255,24 @@ Facts about the source, not quality judgements:
 - [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills): no licence files.
 - [WordPress/agent-skills](https://github.com/WordPress/agent-skills) (licence not recognised, WordPress is GPL)
   and [trailofbits/skills](https://github.com/trailofbits/skills) (CC-BY-SA-4.0, share-alike).
+- [lawve-ai/awesome-legal-skills](https://github.com/lawve-ai/awesome-legal-skills) (CC-BY-NC-ND-4.0: no
+  commercial use, no derivatives), [OptimNow/cloud-finops-skills](https://github.com/OptimNow/cloud-finops-skills)
+  (CC-BY-SA-4.0, share-alike) and [openaccountants/openaccountants](https://github.com/openaccountants/openaccountants)
+  (AGPL-3.0): not the open-source licences the store takes.
+- [momentic-ai/skills](https://github.com/momentic-ai/skills): its own integration licence, not open-source.
+- [NeoLabHQ/context-engineering-kit](https://github.com/NeoLabHQ/context-engineering-kit) (GPL) and
+  [NoizAI/skills](https://github.com/NoizAI/skills) (no licence file at the root).
+- [ethos-link/rails-conventions](https://github.com/ethos-link/rails-conventions) and
+  [kgraph57/mckinsey-style-visualization-skill](https://github.com/kgraph57/mckinsey-style-visualization-skill):
+  the `SKILL.md` sits at the root of the repository, not in a folder of its own, so there is no folder to put
+  the Skill in.
+- [soba-labs/langchain-agent-skills](https://github.com/soba-labs/langchain-agent-skills) (MIT): its Skills carry
+  Python and a `pyproject.toml` under `assets/`, which is not a folder the rules leave out.
+- [wshuyi/x-article-publisher-skill](https://github.com/wshuyi/x-article-publisher-skill) (MIT) and
+  [0design/unslop-skill](https://github.com/0design/unslop-skill) (MIT): their one Skill each is nothing but its
+  scripts, and their text points at them.
+- [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) (Apache-2.0): the one Skill that carries
+  no script is a joke that lives in the repository's test data, not in its Skills.
 
 Whoever publishes a store is responsible for the licences of what is in it. [HashiCorp's Skills](https://github.com/hashicorp/agent-skills)
 are MPL-2.0: they are redistributed unmodified, source text only. The scripts and configuration in this

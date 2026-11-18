@@ -1752,6 +1752,389 @@
       "exampleQueries": [
         "Write the description for this Zapier plugin"
       ]
+    },
+    {
+      "source": "kicad",
+      "name": "kicad-skills",
+      "displayName": "KiCad",
+      "author": "aklofas",
+      "category": "Design & Sites",
+      "description": "{N} skills for KiCad electronics design: reading schematics, reviewing PCB layouts, EMC pre-compliance, SPICE simulation, sourcing components and preparing boards for fabrication.",
+      "exampleQueries": [
+        "Review this PCB layout for problems",
+        "Check this schematic for design errors",
+        "Prepare this board for fabrication"
+      ]
+    },
+    {
+      "source": "citlyze",
+      "name": "citlyze-skills",
+      "displayName": "Citlyze",
+      "author": "Citlyze",
+      "category": "Business",
+      "description": "{N} skills for AI search visibility: auditing pages for answer-engine readiness, and analysing brand visibility, citations and recommendations.",
+      "exampleQueries": [
+        "Audit these pages for AI search visibility",
+        "Show me where we are cited in AI answers"
+      ]
+    },
+    {
+      "source": "ibelick",
+      "name": "ui-skills",
+      "displayName": "UI Skills",
+      "author": "Ibelick",
+      "category": "Design & Sites",
+      "description": "{N} skills for design engineering: interface patterns, typography, spacing, motion, and the craft that separates a usable interface from a generic one.",
+      "exampleQueries": [
+        "Design a settings screen that feels considered",
+        "Review this interface for craft issues"
+      ]
+    },
+    {
+      "source": "homeassistant",
+      "name": "home-assistant-skills",
+      "displayName": "Home Assistant",
+      "author": "Komal-SkyNET",
+      "category": "Productivity",
+      "description": "{N} skill for Home Assistant: automations, entities, dashboards, troubleshooting and the day-to-day management of a smart home.",
+      "exampleQueries": [
+        "Create an automation for my lights",
+        "Why is this sensor not updating"
+      ]
+    },
+    {
+      "source": "mcollina",
+      "name": "nodejs-skills",
+      "displayName": "Modern Node.js",
+      "author": "Matteo Collina",
+      "category": "Code",
+      "description": "{N} skills for modern Node.js development: streams, the event loop, HTTP, performance, testing and the tools that keep a service fast.",
+      "exampleQueries": [
+        "This endpoint is slow, find the bottleneck",
+        "Write a streaming request handler"
+      ]
+    },
+    {
+      "source": "modem",
+      "name": "modem-skills",
+      "displayName": "Modem",
+      "author": "Modem",
+      "category": "Code",
+      "description": "{N} skill for writing code other agents can discover: readable structure, explicit intent and the documentation around it.",
+      "exampleQueries": [
+        "Make this module discoverable to other agents"
+      ]
+    },
+    {
+      "source": "nodemaven",
+      "name": "nodemaven-skills",
+      "displayName": "NodeMaven",
+      "author": "NodeMaven",
+      "category": "Other",
+      "description": "{N} skills for NodeMaven: residential proxies, SDK setup, the account API, SERP scraping, benchmarking and troubleshooting.",
+      "exampleQueries": [
+        "Set up a residential proxy for my crawler",
+        "Troubleshoot my proxy connection"
+      ]
+    },
+    {
+      "source": "pachca",
+      "name": "pachca-skills",
+      "displayName": "Pachca",
+      "author": "Pachca",
+      "category": "Code",
+      "description": "{N} skills for the Pachca API platform: authentication, messaging, bots, OAuth and the admin console.",
+      "exampleQueries": [
+        "Send a message through the Pachca API",
+        "Set up OAuth for my Pachca app"
+      ]
+    },
+    {
+      "source": "publora",
+      "name": "publora-skills",
+      "displayName": "Publora",
+      "author": "Publora",
+      "category": "Sales",
+      "description": "{N} skills for social publishing: writing and scheduling posts for LinkedIn, X, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon and Telegram.",
+      "exampleQueries": [
+        "Schedule this post for LinkedIn",
+        "Write a Bluesky post from these notes"
+      ]
+    },
+    {
+      "source": "superdesign",
+      "name": "superdesign-skill",
+      "displayName": "Superdesign",
+      "author": "Superdesign",
+      "category": "Design & Sites",
+      "description": "{N} skill for design that ships: turning a rough interface into something tasteful instead of generic.",
+      "exampleQueries": [
+        "Make this interface look less generic",
+        "Review my interface against a design standard"
+      ]
+    },
+    {
+      "source": "tweetclaw",
+      "name": "tweetclaw",
+      "displayName": "TweetClaw",
+      "author": "Xquik",
+      "category": "Sales",
+      "description": "{N} skill for X (Twitter): scraping tweets and exporting followers from an account you control.",
+      "exampleQueries": [
+        "Export the followers of this account",
+        "Scrape the recent tweets of this profile"
+      ]
+    },
+    {
+      "source": "speakeasy",
+      "name": "sdk-generation-skills",
+      "displayName": "Speakeasy SDK Generation",
+      "author": "Speakeasy",
+      "category": "Code",
+      "description": "{N} skills for SDK generation with the Speakeasy CLI: turning an OpenAPI spec into typed SDKs in several languages.",
+      "exampleQueries": [
+        "Generate a TypeScript SDK from this OpenAPI spec",
+        "Validate my OpenAPI document"
+      ]
+    },
+    {
+      "source": "threejs",
+      "name": "threejs-skills",
+      "displayName": "Three.js",
+      "author": "CloudAI-X",
+      "category": "Design & Sites",
+      "description": "{N} skills for Three.js: scenes, geometry, materials, lighting, animation and performance on the web.",
+      "exampleQueries": [
+        "Build a Three.js scene with lighting",
+        "Optimise this Three.js render"
+      ]
+    },
+    {
+      "source": "aurite",
+      "name": "agent-verifier",
+      "displayName": "Agent Verifier",
+      "author": "Aurite",
+      "category": "Code",
+      "description": "{N} skills for verifying code against organisational policy, quality patterns, security rules and framework practice before it ships.",
+      "exampleQueries": [
+        "Check this change against our code policy",
+        "Verify this pull request against the security rules"
+      ]
+    },
+    {
+      "source": "swiftpat",
+      "name": "swift-patterns",
+      "displayName": "Swift Patterns",
+      "author": "efremidze",
+      "category": "Code",
+      "description": "{N} skill for modern Swift and SwiftUI practice: concurrency, structure, performance and the idioms that hold up in a large app.",
+      "exampleQueries": [
+        "Review this Swift code against modern practice"
+      ]
+    },
+    {
+      "source": "vovk",
+      "name": "vovk-skills",
+      "displayName": "Vovk",
+      "author": "finom",
+      "category": "Code",
+      "description": "{N} skills for making a Next.js app agent-ready: MCP tools, OpenAPI and typed clients generated from route handlers.",
+      "exampleQueries": [
+        "Generate typed clients from my Next.js routes",
+        "Expose these routes as MCP tools"
+      ]
+    },
+    {
+      "source": "triage",
+      "name": "code-review-triage",
+      "displayName": "Code Review Triage",
+      "author": "laulauraluo",
+      "category": "Code",
+      "description": "{N} skill for triaging code reviews: sorting findings into real defects, noise and follow-up work.",
+      "exampleQueries": [
+        "Triage these review comments",
+        "Sort these findings by severity"
+      ]
+    },
+    {
+      "source": "chatcut",
+      "name": "chatcut-skills",
+      "displayName": "ChatCut",
+      "author": "ChatCut",
+      "category": "Studio",
+      "description": "{N} skills for ChatCut: editing footage by chat, captions and subtitles, removing silence, motion graphics and timeline export.",
+      "exampleQueries": [
+        "Cut the silence out of this recording",
+        "Add captions to this clip"
+      ]
+    },
+    {
+      "source": "goose",
+      "name": "goose-skills",
+      "displayName": "Goose",
+      "author": "Gooseworks",
+      "category": "Sales",
+      "description": "{N} skills for growth and go-to-market: running ads, social, content, lead generation, SEO and data scraping.",
+      "exampleQueries": [
+        "Plan an ad campaign for this product",
+        "Scrape data for a market report"
+      ]
+    },
+    {
+      "source": "heygen",
+      "name": "hyperframes",
+      "displayName": "HyperFrames",
+      "author": "HeyGen",
+      "category": "Studio",
+      "description": "{N} skills for HyperFrames: describing a video, editing it frame by frame and building an editable project.",
+      "exampleQueries": [
+        "Turn this description into a video project",
+        "Edit this scene"
+      ]
+    },
+    {
+      "source": "mblode",
+      "name": "agent-skills",
+      "displayName": "Agent Skills",
+      "author": "mblode",
+      "category": "Code",
+      "description": "{N} skills for shipping work that does not read as machine-made: writing, review and the quality gates around it.",
+      "exampleQueries": [
+        "Review this code for AI slop",
+        "Tighten this pull request before review"
+      ]
+    },
+    {
+      "source": "cyber",
+      "name": "cybersecurity-skills",
+      "displayName": "Cybersecurity Skills",
+      "author": "mukul975",
+      "category": "Science & Healthcare",
+      "description": "{N} skills for cybersecurity work, mapped to MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF and MITRE F3 across the security domains.",
+      "exampleQueries": [
+        "Map this incident to MITRE ATT&CK",
+        "Review this architecture against NIST CSF"
+      ]
+    },
+    {
+      "source": "orchestra",
+      "name": "ai-research-skills",
+      "displayName": "AI Research Skills",
+      "author": "Orchestra Research",
+      "category": "Science & Healthcare",
+      "description": "{N} skills for AI research and engineering: model architecture, training, fine-tuning, interpretability, inference, RAG, evaluation, observability and paper writing.",
+      "exampleQueries": [
+        "Explain this paper's training setup",
+        "Plan a RAG system for this corpus"
+      ]
+    },
+    {
+      "source": "qdrant",
+      "name": "qdrant-skills",
+      "displayName": "Qdrant",
+      "author": "Qdrant",
+      "category": "Code",
+      "description": "{N} skills for Qdrant vector search: scaling, performance, search quality, monitoring, deployment, model migration and SDK use.",
+      "exampleQueries": [
+        "Make this Qdrant collection faster",
+        "Tune the search quality of this index"
+      ]
+    },
+    {
+      "source": "sendmux",
+      "name": "qubrics-skills",
+      "displayName": "Qubrics",
+      "author": "Sendmux",
+      "category": "Sales",
+      "description": "{N} skills for Qubrics: agent email — inbox access, attachments, sending and CLI use.",
+      "exampleQueries": [
+        "Send this email through my agent inbox",
+        "Read the latest attachments"
+      ]
+    },
+    {
+      "source": "skillseekers",
+      "name": "skill-seekers",
+      "displayName": "Skill Seekers",
+      "author": "yusufkaraaslan",
+      "category": "Productivity",
+      "description": "{N} skills for turning documentation sites, repositories and PDFs into agent skills, with conflict detection.",
+      "exampleQueries": [
+        "Turn these docs into a skill",
+        "Build a skill from this repository"
+      ]
+    },
+    {
+      "source": "aeon",
+      "name": "aeon-skills",
+      "displayName": "Aeon",
+      "author": "aeonfun",
+      "category": "Code",
+      "description": "{N} skills for Aeon: running agents unattended, self-healing skills and driving work through GitHub Actions.",
+      "exampleQueries": [
+        "Set up an unattended agent run",
+        "Make this skill self-healing"
+      ]
+    },
+    {
+      "source": "forge",
+      "name": "forge-harness",
+      "displayName": "Forge Harness",
+      "author": "chrono-meta",
+      "category": "Code",
+      "description": "{N} skills for Forge Harness: building agent harnesses and skills with the rules, gates and memory they need, and checking them before they ship.",
+      "exampleQueries": [
+        "Build a harness for this project",
+        "Check this skill before it ships"
+      ]
+    },
+    {
+      "source": "everyinfra",
+      "name": "everyinfra-skills",
+      "displayName": "EveryInfra",
+      "author": "EveryInfra",
+      "category": "Business",
+      "description": "{N} skills for EveryInfra: scraping data from TikTok, Instagram, Amazon, YouTube, Xiaohongshu and Douyin through one API.",
+      "exampleQueries": [
+        "Pull TikTok data for this account",
+        "Scrape an Amazon product page"
+      ]
+    },
+    {
+      "source": "ecommerce",
+      "name": "ecommerce-skills",
+      "displayName": "E-commerce Skills",
+      "author": "Nexscope",
+      "category": "Sales",
+      "description": "{N} skills for online selling: product research, listing copy, brand protection, margins, supply chain and review handling.",
+      "exampleQueries": [
+        "Write the listing for this product",
+        "Work out the margin on this order"
+      ]
+    },
+    {
+      "source": "babysitter",
+      "name": "babysitter-skills",
+      "displayName": "Babysitter",
+      "author": "a5c",
+      "category": "Code",
+      "description": "{N} skills for Babysitter: deterministic, self-orchestrating workflows for long agent runs, across software, business, science and design.",
+      "exampleQueries": [
+        "Orchestrate this multi-step build",
+        "Break this project into deterministic tasks"
+      ]
+    },
+    {
+      "source": "swiftconc",
+      "name": "swift-concurrency",
+      "displayName": "Swift Concurrency",
+      "author": "AvdLee",
+      "category": "Code",
+      "description": "{N} skill for Swift concurrency: diagnosing data races and Sendable warnings, moving callback code to async/await, and guiding a Swift 6 migration.",
+      "exampleQueries": [
+        "This actor is not Sendable, what is wrong?",
+        "Move this callback API to async/await"
+      ]
     }
   ]
 }

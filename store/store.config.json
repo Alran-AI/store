@@ -149,7 +149,39 @@
       "helius": "helius",
       "videodb": "videodb",
       "rork": "rork",
-      "zapier": "zapier"
+      "zapier": "zapier",
+      "swiftconc": "swiftconc",
+      "kicad": "kicad",
+      "citlyze": "citlyze",
+      "ibelick": "ibelick",
+      "homeassistant": "homeassistant",
+      "mcollina": "mcollina",
+      "modem": "modem",
+      "nodemaven": "nodemaven",
+      "pachca": "pachca",
+      "publora": "publora",
+      "superdesign": "superdesign",
+      "tweetclaw": "tweetclaw",
+      "speakeasy": "speakeasy",
+      "threejs": "threejs",
+      "aurite": "aurite",
+      "swiftpat": "swiftpat",
+      "vovk": "vovk",
+      "triage": "triage",
+      "chatcut": "chatcut",
+      "goose": "goose",
+      "heygen": "heygen",
+      "mblode": "mblode",
+      "cyber": "cyber",
+      "orchestra": "orchestra",
+      "qdrant": "qdrant",
+      "sendmux": "sendmux",
+      "skillseekers": "skillseekers",
+      "aeon": "aeon",
+      "forge": "forge",
+      "everyinfra": "everyinfra",
+      "ecommerce": "ecommerce",
+      "babysitter": "babysitter"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -294,7 +326,39 @@
       "helius": "2026.11.15+fdd6311",
       "videodb": "2026.11.19+2695099",
       "rork": "2026.11.16+6d1c3c5",
-      "zapier": "2026.11.18+4e347e2"
+      "zapier": "2026.11.18+4e347e2",
+      "swiftconc": "2026.11.6+3b1580d",
+      "kicad": "2026.11.15+6b9767e",
+      "citlyze": "2026.9.19+f1265f7",
+      "ibelick": "2026.11.18+347d318",
+      "homeassistant": "2026.7.5+2112679",
+      "mcollina": "2026.10.18+c75d70d",
+      "modem": "2026.7.20+edcdedb",
+      "nodemaven": "2026.11.13+c07bacd",
+      "pachca": "2026.11.18+444f712",
+      "publora": "2026.11.18+8964d49",
+      "superdesign": "2026.8.21+f9f05cd",
+      "tweetclaw": "2026.11.18+7c661ac",
+      "speakeasy": "2026.2.10+d2eab59",
+      "threejs": "2026.10.19+0e18186",
+      "aurite": "2026.10.12+e7c783a",
+      "swiftpat": "2026.3.16+2e9b66b",
+      "vovk": "2026.10.22+0f3c4a2",
+      "triage": "2026.11.17+126a24f",
+      "chatcut": "2026.11.18+a69a54f",
+      "goose": "2026.11.16+885edb5",
+      "heygen": "2026.11.18+b8bb8b3",
+      "mblode": "2026.11.14+7df4b7e",
+      "cyber": "2026.8.31+54a7988",
+      "orchestra": "2026.6.15+773a529",
+      "qdrant": "2026.11.18+5f96222",
+      "sendmux": "2026.11.18+ce2484f",
+      "skillseekers": "2026.11.16+15a67e3",
+      "aeon": "2026.11.18+86217ce",
+      "forge": "2026.11.18+db48532",
+      "everyinfra": "2026.11.18+6796f19",
+      "ecommerce": "2026.11.11+c5ba892",
+      "babysitter": "2026.8.31+feb68ab"
     }
   },
   "plugins": [
@@ -1400,7 +1464,7 @@
       "name": "context-engineering-skills",
       "displayName": "Context Engineering",
       "version": "2026.10.11+9ff0c99",
-      "description": "Five skills for context engineering: managing a long context, compressing it, spotting degradation, latent briefing, long-horizon prompting and self-improvement loops.",
+      "description": "Twelve skills for context engineering: managing a long context, compressing it, spotting degradation, latent briefing, long-horizon prompting and self-improvement loops.",
       "author": "Muratcan Koylan",
       "license": "MIT",
       "homepage": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
@@ -1492,7 +1556,7 @@
       "name": "twilio-skills",
       "displayName": "Twilio",
       "version": "2026.11.10+bb61456",
-      "description": "One skill for Twilio: moving a messaging integration over to Verify.",
+      "description": "Fifty-three skill for Twilio: moving a messaging integration over to Verify.",
       "author": "Twilio",
       "license": "MIT",
       "homepage": "https://github.com/twilio/skills",
@@ -2054,7 +2118,7 @@
       "name": "agent-plugin-marketplace-skills",
       "displayName": "Agent Plugin Marketplace",
       "version": "2026.11.18+4220308",
-      "description": "171 skills from a plugin marketplace: accessibility and compliance, agent teams, API scaffolding, cloud and databases, DevOps, frontend, MCP, security and testing.",
+      "description": "172 skills from a plugin marketplace: accessibility and compliance, agent teams, API scaffolding, cloud and databases, DevOps, frontend, MCP, security and testing.",
       "author": "wshobson",
       "license": "MIT",
       "homepage": "https://github.com/wshobson/agents",
@@ -2072,7 +2136,7 @@
       "name": "claude-code-templates-skills",
       "displayName": "Claude Code Templates",
       "version": "2026.11.18+d3a2956",
-      "description": "534 skills that come with a large set of Claude Code templates, agents and commands.",
+      "description": "537 skills that come with a large set of Claude Code templates, agents and commands.",
       "author": "davila7",
       "license": "MIT",
       "homepage": "https://github.com/davila7/claude-code-templates",
@@ -2090,7 +2154,7 @@
       "name": "claude-skills-catalog-skills",
       "displayName": "Claude Skills Catalogue",
       "version": "2026.11.17+f8593c4",
-      "description": "Ninety skills across forty-odd areas: agents, backend, cloud, databases, DevOps, frontend, MCP, machine learning, security and testing.",
+      "description": "Ninety-one skills across forty-odd areas: agents, backend, cloud, databases, DevOps, frontend, MCP, machine learning, security and testing.",
       "author": "Alireza Rezvani",
       "license": "MIT",
       "homepage": "https://github.com/alirezarezvani/claude-skills",
@@ -2108,7 +2172,7 @@
       "name": "agentic-awesome-skills-skills",
       "displayName": "Agentic Awesome Skills",
       "version": "2026.11.17+12c0d66",
-      "description": "2026 skills in one Plugin — the largest collection of agentic Skills on GitHub, from accessibility and architecture to 3D, data and DevOps.",
+      "description": "2022 skills in one Plugin — the largest collection of agentic Skills on GitHub, from accessibility and architecture to 3D, data and DevOps.",
       "author": "sickn33",
       "license": "MIT",
       "homepage": "https://github.com/sickn33/agentic-awesome-skills",
@@ -2323,7 +2387,7 @@
       "name": "awesome-design-skills",
       "displayName": "Awesome Design Skills",
       "version": "2026.6.28+f631a09",
-      "description": "Sixty skills for design: layout, colour, typography and the craft between them.",
+      "description": "Fifty-nine skills for design: layout, colour, typography and the craft between them.",
       "author": "bergside",
       "license": "MIT",
       "homepage": "https://github.com/bergside/awesome-design-skills",
@@ -2645,7 +2709,7 @@
       "name": "dzhng-skills",
       "displayName": "dzhng Skills",
       "version": "2026.11.13+c363ed3",
-      "description": "Seventeen skills from dzhng: auditing and evaluating agents, writing Skills, and the graphics and video work.",
+      "description": "Eighteen skills from dzhng: auditing and evaluating agents, writing Skills, and the graphics and video work.",
       "author": "dzhng",
       "license": "MIT",
       "homepage": "https://github.com/dzhng/skills",
@@ -2905,6 +2969,581 @@
       ],
       "exampleQueries": [
         "Write the description for this Zapier plugin"
+      ]
+    },
+    {
+      "name": "swift-concurrency",
+      "displayName": "Swift Concurrency",
+      "version": "2026.11.6+3b1580d",
+      "description": "One skill for Swift concurrency: diagnosing data races and Sendable warnings, moving callback code to async/await, and guiding a Swift 6 migration.",
+      "author": "AvdLee",
+      "license": "MIT",
+      "homepage": "https://github.com/AvdLee/Swift-Concurrency-Agent-Skill",
+      "category": "Code",
+      "icon": "icons/swift-concurrency.png",
+      "packages": [
+        "swiftconc"
+      ],
+      "exampleQueries": [
+        "This actor is not Sendable, what is wrong?",
+        "Move this callback API to async/await"
+      ]
+    },
+    {
+      "name": "kicad-skills",
+      "displayName": "KiCad",
+      "version": "2026.11.15+6b9767e",
+      "description": "Two skills for KiCad electronics design: reading schematics, reviewing PCB layouts, EMC pre-compliance, SPICE simulation, sourcing components and preparing boards for fabrication.",
+      "author": "aklofas",
+      "license": "MIT",
+      "homepage": "https://github.com/aklofas/kicad-happy",
+      "category": "Design & Sites",
+      "icon": "icons/kicad-skills.png",
+      "packages": [
+        "kicad"
+      ],
+      "exampleQueries": [
+        "Review this PCB layout for problems",
+        "Check this schematic for design errors",
+        "Prepare this board for fabrication"
+      ]
+    },
+    {
+      "name": "citlyze-skills",
+      "displayName": "Citlyze",
+      "version": "2026.9.19+f1265f7",
+      "description": "Five skills for AI search visibility: auditing pages for answer-engine readiness, and analysing brand visibility, citations and recommendations.",
+      "author": "Citlyze",
+      "license": "MIT",
+      "homepage": "https://github.com/citlyze/citlyze-skills",
+      "category": "Business",
+      "icon": "icons/citlyze-skills.png",
+      "packages": [
+        "citlyze"
+      ],
+      "exampleQueries": [
+        "Audit these pages for AI search visibility",
+        "Show me where we are cited in AI answers"
+      ]
+    },
+    {
+      "name": "ui-skills",
+      "displayName": "UI Skills",
+      "version": "2026.11.18+347d318",
+      "description": "Five skills for design engineering: interface patterns, typography, spacing, motion, and the craft that separates a usable interface from a generic one.",
+      "author": "Ibelick",
+      "license": "MIT",
+      "homepage": "https://github.com/ibelick/ui-skills",
+      "category": "Design & Sites",
+      "icon": "icons/ui-skills.png",
+      "packages": [
+        "ibelick"
+      ],
+      "exampleQueries": [
+        "Design a settings screen that feels considered",
+        "Review this interface for craft issues"
+      ]
+    },
+    {
+      "name": "home-assistant-skills",
+      "displayName": "Home Assistant",
+      "version": "2026.7.5+2112679",
+      "description": "One skill for Home Assistant: automations, entities, dashboards, troubleshooting and the day-to-day management of a smart home.",
+      "author": "Komal-SkyNET",
+      "license": "MIT",
+      "homepage": "https://github.com/Komal-SkyNET/claude-skill-homeassistant",
+      "category": "Productivity",
+      "icon": "icons/home-assistant-skills.png",
+      "packages": [
+        "homeassistant"
+      ],
+      "exampleQueries": [
+        "Create an automation for my lights",
+        "Why is this sensor not updating"
+      ]
+    },
+    {
+      "name": "nodejs-skills",
+      "displayName": "Modern Node.js",
+      "version": "2026.10.18+c75d70d",
+      "description": "Six skills for modern Node.js development: streams, the event loop, HTTP, performance, testing and the tools that keep a service fast.",
+      "author": "Matteo Collina",
+      "license": "MIT",
+      "homepage": "https://github.com/mcollina/skills",
+      "category": "Code",
+      "icon": "icons/nodejs-skills.png",
+      "packages": [
+        "mcollina"
+      ],
+      "exampleQueries": [
+        "This endpoint is slow, find the bottleneck",
+        "Write a streaming request handler"
+      ]
+    },
+    {
+      "name": "modem-skills",
+      "displayName": "Modem",
+      "version": "2026.7.20+edcdedb",
+      "description": "One skill for writing code other agents can discover: readable structure, explicit intent and the documentation around it.",
+      "author": "Modem",
+      "license": "MIT",
+      "homepage": "https://github.com/modem-dev/skills",
+      "category": "Code",
+      "icon": "icons/modem-skills.png",
+      "packages": [
+        "modem"
+      ],
+      "exampleQueries": [
+        "Make this module discoverable to other agents"
+      ]
+    },
+    {
+      "name": "nodemaven-skills",
+      "displayName": "NodeMaven",
+      "version": "2026.11.13+c07bacd",
+      "description": "Six skills for NodeMaven: residential proxies, SDK setup, the account API, SERP scraping, benchmarking and troubleshooting.",
+      "author": "NodeMaven",
+      "license": "MIT",
+      "homepage": "https://github.com/nodemaven/skills",
+      "category": "Other",
+      "icon": "icons/nodemaven-skills.png",
+      "packages": [
+        "nodemaven"
+      ],
+      "exampleQueries": [
+        "Set up a residential proxy for my crawler",
+        "Troubleshoot my proxy connection"
+      ]
+    },
+    {
+      "name": "pachca-skills",
+      "displayName": "Pachca",
+      "version": "2026.11.18+444f712",
+      "description": "Eight skills for the Pachca API platform: authentication, messaging, bots, OAuth and the admin console.",
+      "author": "Pachca",
+      "license": "MIT",
+      "homepage": "https://github.com/pachca/openapi",
+      "category": "Code",
+      "icon": "icons/pachca-skills.png",
+      "packages": [
+        "pachca"
+      ],
+      "exampleQueries": [
+        "Send a message through the Pachca API",
+        "Set up OAuth for my Pachca app"
+      ]
+    },
+    {
+      "name": "publora-skills",
+      "displayName": "Publora",
+      "version": "2026.11.18+8964d49",
+      "description": "Nine skills for social publishing: writing and scheduling posts for LinkedIn, X, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon and Telegram.",
+      "author": "Publora",
+      "license": "MIT",
+      "homepage": "https://github.com/publora/skills",
+      "category": "Sales",
+      "icon": "icons/publora-skills.png",
+      "packages": [
+        "publora"
+      ],
+      "exampleQueries": [
+        "Schedule this post for LinkedIn",
+        "Write a Bluesky post from these notes"
+      ]
+    },
+    {
+      "name": "superdesign-skill",
+      "displayName": "Superdesign",
+      "version": "2026.8.21+f9f05cd",
+      "description": "One skill for design that ships: turning a rough interface into something tasteful instead of generic.",
+      "author": "Superdesign",
+      "license": "MIT",
+      "homepage": "https://github.com/superdesigndev/superdesign-skill",
+      "category": "Design & Sites",
+      "icon": "icons/superdesign-skill.png",
+      "packages": [
+        "superdesign"
+      ],
+      "exampleQueries": [
+        "Make this interface look less generic",
+        "Review my interface against a design standard"
+      ]
+    },
+    {
+      "name": "tweetclaw",
+      "displayName": "TweetClaw",
+      "version": "2026.11.18+7c661ac",
+      "description": "One skill for X (Twitter): scraping tweets and exporting followers from an account you control.",
+      "author": "Xquik",
+      "license": "MIT",
+      "homepage": "https://github.com/Xquik-dev/tweetclaw",
+      "category": "Sales",
+      "icon": "icons/tweetclaw.png",
+      "packages": [
+        "tweetclaw"
+      ],
+      "exampleQueries": [
+        "Export the followers of this account",
+        "Scrape the recent tweets of this profile"
+      ]
+    },
+    {
+      "name": "sdk-generation-skills",
+      "displayName": "Speakeasy SDK Generation",
+      "version": "2026.2.10+d2eab59",
+      "description": "Fourteen skills for SDK generation with the Speakeasy CLI: turning an OpenAPI spec into typed SDKs in several languages.",
+      "author": "Speakeasy",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/speakeasy-api/sdk-generation-skills",
+      "category": "Code",
+      "icon": "icons/sdk-generation-skills.png",
+      "packages": [
+        "speakeasy"
+      ],
+      "exampleQueries": [
+        "Generate a TypeScript SDK from this OpenAPI spec",
+        "Validate my OpenAPI document"
+      ]
+    },
+    {
+      "name": "threejs-skills",
+      "displayName": "Three.js",
+      "version": "2026.10.19+0e18186",
+      "description": "Four skills for Three.js: scenes, geometry, materials, lighting, animation and performance on the web.",
+      "author": "CloudAI-X",
+      "license": "MIT",
+      "homepage": "https://github.com/CloudAI-X/threejs-skills",
+      "category": "Design & Sites",
+      "icon": "icons/threejs-skills.png",
+      "packages": [
+        "threejs"
+      ],
+      "exampleQueries": [
+        "Build a Three.js scene with lighting",
+        "Optimise this Three.js render"
+      ]
+    },
+    {
+      "name": "agent-verifier",
+      "displayName": "Agent Verifier",
+      "version": "2026.10.12+e7c783a",
+      "description": "Five skills for verifying code against organisational policy, quality patterns, security rules and framework practice before it ships.",
+      "author": "Aurite",
+      "license": "MIT",
+      "homepage": "https://github.com/Aurite-ai/agent-verifier",
+      "category": "Code",
+      "icon": "icons/agent-verifier.png",
+      "packages": [
+        "aurite"
+      ],
+      "exampleQueries": [
+        "Check this change against our code policy",
+        "Verify this pull request against the security rules"
+      ]
+    },
+    {
+      "name": "swift-patterns",
+      "displayName": "Swift Patterns",
+      "version": "2026.3.16+2e9b66b",
+      "description": "One skill for modern Swift and SwiftUI practice: concurrency, structure, performance and the idioms that hold up in a large app.",
+      "author": "efremidze",
+      "license": "MIT",
+      "homepage": "https://github.com/efremidze/swift-patterns-skill",
+      "category": "Code",
+      "icon": "icons/swift-patterns.png",
+      "packages": [
+        "swiftpat"
+      ],
+      "exampleQueries": [
+        "Review this Swift code against modern practice"
+      ]
+    },
+    {
+      "name": "vovk-skills",
+      "displayName": "Vovk",
+      "version": "2026.10.22+0f3c4a2",
+      "description": "Ten skills for making a Next.js app agent-ready: MCP tools, OpenAPI and typed clients generated from route handlers.",
+      "author": "finom",
+      "license": "MIT",
+      "homepage": "https://github.com/finom/vovk",
+      "category": "Code",
+      "icon": "icons/vovk-skills.png",
+      "packages": [
+        "vovk"
+      ],
+      "exampleQueries": [
+        "Generate typed clients from my Next.js routes",
+        "Expose these routes as MCP tools"
+      ]
+    },
+    {
+      "name": "code-review-triage",
+      "displayName": "Code Review Triage",
+      "version": "2026.11.17+126a24f",
+      "description": "One skill for triaging code reviews: sorting findings into real defects, noise and follow-up work.",
+      "author": "laulauraluo",
+      "license": "MIT",
+      "homepage": "https://github.com/laulauraluo/ai-code-review-triage",
+      "category": "Code",
+      "icon": "icons/code-review-triage.png",
+      "packages": [
+        "triage"
+      ],
+      "exampleQueries": [
+        "Triage these review comments",
+        "Sort these findings by severity"
+      ]
+    },
+    {
+      "name": "chatcut-skills",
+      "displayName": "ChatCut",
+      "version": "2026.11.18+a69a54f",
+      "description": "Twenty-seven skills for ChatCut: editing footage by chat, captions and subtitles, removing silence, motion graphics and timeline export.",
+      "author": "ChatCut",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/ChatCut-Inc/agent-plugin",
+      "category": "Studio",
+      "icon": "icons/chatcut-skills.png",
+      "packages": [
+        "chatcut"
+      ],
+      "exampleQueries": [
+        "Cut the silence out of this recording",
+        "Add captions to this clip"
+      ]
+    },
+    {
+      "name": "goose-skills",
+      "displayName": "Goose",
+      "version": "2026.11.16+885edb5",
+      "description": "124 skills for growth and go-to-market: running ads, social, content, lead generation, SEO and data scraping.",
+      "author": "Gooseworks",
+      "license": "MIT",
+      "homepage": "https://github.com/gooseworks-ai/goose-skills",
+      "category": "Sales",
+      "icon": "icons/goose-skills.png",
+      "packages": [
+        "goose"
+      ],
+      "exampleQueries": [
+        "Plan an ad campaign for this product",
+        "Scrape data for a market report"
+      ]
+    },
+    {
+      "name": "hyperframes",
+      "displayName": "HyperFrames",
+      "version": "2026.11.18+b8bb8b3",
+      "description": "Four skills for HyperFrames: describing a video, editing it frame by frame and building an editable project.",
+      "author": "HeyGen",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/heygen-com/hyperframes",
+      "category": "Studio",
+      "icon": "icons/hyperframes.png",
+      "packages": [
+        "heygen"
+      ],
+      "exampleQueries": [
+        "Turn this description into a video project",
+        "Edit this scene"
+      ]
+    },
+    {
+      "name": "agent-skills",
+      "displayName": "Agent Skills",
+      "version": "2026.11.14+7df4b7e",
+      "description": "Five skills for shipping work that does not read as machine-made: writing, review and the quality gates around it.",
+      "author": "mblode",
+      "license": "MIT",
+      "homepage": "https://github.com/mblode/agent-skills",
+      "category": "Code",
+      "icon": "icons/agent-skills.png",
+      "packages": [
+        "mblode"
+      ],
+      "exampleQueries": [
+        "Review this code for AI slop",
+        "Tighten this pull request before review"
+      ]
+    },
+    {
+      "name": "cybersecurity-skills",
+      "displayName": "Cybersecurity Skills",
+      "version": "2026.8.31+54a7988",
+      "description": "461 skills for cybersecurity work, mapped to MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF and MITRE F3 across the security domains.",
+      "author": "mukul975",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "category": "Science & Healthcare",
+      "icon": "icons/cybersecurity-skills.png",
+      "packages": [
+        "cyber"
+      ],
+      "exampleQueries": [
+        "Map this incident to MITRE ATT&CK",
+        "Review this architecture against NIST CSF"
+      ]
+    },
+    {
+      "name": "ai-research-skills",
+      "displayName": "AI Research Skills",
+      "version": "2026.6.15+773a529",
+      "description": "Forty-three skills for AI research and engineering: model architecture, training, fine-tuning, interpretability, inference, RAG, evaluation, observability and paper writing.",
+      "author": "Orchestra Research",
+      "license": "MIT",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+      "category": "Science & Healthcare",
+      "icon": "icons/ai-research-skills.png",
+      "packages": [
+        "orchestra"
+      ],
+      "exampleQueries": [
+        "Explain this paper's training setup",
+        "Plan a RAG system for this corpus"
+      ]
+    },
+    {
+      "name": "qdrant-skills",
+      "displayName": "Qdrant",
+      "version": "2026.11.18+5f96222",
+      "description": "Six skills for Qdrant vector search: scaling, performance, search quality, monitoring, deployment, model migration and SDK use.",
+      "author": "Qdrant",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/qdrant/skills",
+      "category": "Code",
+      "icon": "icons/qdrant-skills.png",
+      "packages": [
+        "qdrant"
+      ],
+      "exampleQueries": [
+        "Make this Qdrant collection faster",
+        "Tune the search quality of this index"
+      ]
+    },
+    {
+      "name": "qubrics-skills",
+      "displayName": "Qubrics",
+      "version": "2026.11.18+ce2484f",
+      "description": "Eleven skills for Qubrics: agent email — inbox access, attachments, sending and CLI use.",
+      "author": "Sendmux",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/sendmux/skills",
+      "category": "Sales",
+      "icon": "icons/qubrics-skills.png",
+      "packages": [
+        "sendmux"
+      ],
+      "exampleQueries": [
+        "Send this email through my agent inbox",
+        "Read the latest attachments"
+      ]
+    },
+    {
+      "name": "skill-seekers",
+      "displayName": "Skill Seekers",
+      "version": "2026.11.16+15a67e3",
+      "description": "One skills for turning documentation sites, repositories and PDFs into agent skills, with conflict detection.",
+      "author": "yusufkaraaslan",
+      "license": "MIT",
+      "homepage": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "category": "Productivity",
+      "icon": "icons/skill-seekers.png",
+      "packages": [
+        "skillseekers"
+      ],
+      "exampleQueries": [
+        "Turn these docs into a skill",
+        "Build a skill from this repository"
+      ]
+    },
+    {
+      "name": "aeon-skills",
+      "displayName": "Aeon",
+      "version": "2026.11.18+86217ce",
+      "description": "Seventy-one skills for Aeon: running agents unattended, self-healing skills and driving work through GitHub Actions.",
+      "author": "aeonfun",
+      "license": "MIT",
+      "homepage": "https://github.com/aeonfun/aeon",
+      "category": "Code",
+      "icon": "icons/aeon-skills.png",
+      "packages": [
+        "aeon"
+      ],
+      "exampleQueries": [
+        "Set up an unattended agent run",
+        "Make this skill self-healing"
+      ]
+    },
+    {
+      "name": "forge-harness",
+      "displayName": "Forge Harness",
+      "version": "2026.11.18+db48532",
+      "description": "Forty-two skills for Forge Harness: building agent harnesses and skills with the rules, gates and memory they need, and checking them before they ship.",
+      "author": "chrono-meta",
+      "license": "MIT",
+      "homepage": "https://github.com/chrono-meta/forge-harness",
+      "category": "Code",
+      "icon": "icons/forge-harness.png",
+      "packages": [
+        "forge"
+      ],
+      "exampleQueries": [
+        "Build a harness for this project",
+        "Check this skill before it ships"
+      ]
+    },
+    {
+      "name": "everyinfra-skills",
+      "displayName": "EveryInfra",
+      "version": "2026.11.18+6796f19",
+      "description": "Twenty-five skills for EveryInfra: scraping data from TikTok, Instagram, Amazon, YouTube, Xiaohongshu and Douyin through one API.",
+      "author": "EveryInfra",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/everyinfra/everyinfra-agent-plugins",
+      "category": "Business",
+      "icon": "icons/everyinfra-skills.png",
+      "packages": [
+        "everyinfra"
+      ],
+      "exampleQueries": [
+        "Pull TikTok data for this account",
+        "Scrape an Amazon product page"
+      ]
+    },
+    {
+      "name": "ecommerce-skills",
+      "displayName": "E-commerce Skills",
+      "version": "2026.11.11+c5ba892",
+      "description": "100 skills for online selling: product research, listing copy, brand protection, margins, supply chain and review handling.",
+      "author": "Nexscope",
+      "license": "MIT",
+      "homepage": "https://github.com/nexscope-ai/eCommerce-Skills",
+      "category": "Sales",
+      "icon": "icons/ecommerce-skills.png",
+      "packages": [
+        "ecommerce"
+      ],
+      "exampleQueries": [
+        "Write the listing for this product",
+        "Work out the margin on this order"
+      ]
+    },
+    {
+      "name": "babysitter-skills",
+      "displayName": "Babysitter",
+      "version": "2026.8.31+feb68ab",
+      "description": "1824 skills for Babysitter: deterministic, self-orchestrating workflows for long agent runs, across software, business, science and design.",
+      "author": "a5c",
+      "license": "MIT",
+      "homepage": "https://github.com/a5c-ai/babysitter",
+      "category": "Code",
+      "icon": "icons/babysitter-skills.png",
+      "packages": [
+        "babysitter"
+      ],
+      "exampleQueries": [
+        "Orchestrate this multi-step build",
+        "Break this project into deterministic tasks"
       ]
     },
     {

@@ -2729,6 +2729,559 @@
         ".claude/skills"
       ],
       "include": "clean"
+    },
+    {
+      "id": "swiftconc",
+      "label": "swiftconc",
+      "repo": "https://github.com/AvdLee/Swift-Concurrency-Agent-Skill",
+      "clone": "AvdLee_Swift-Concurrency-Agent-Skill",
+      "commit": "3b1580d8398e0b5408b3bf0bada0e941a1cfc642",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "kicad",
+      "label": "kicad",
+      "repo": "https://github.com/aklofas/kicad-happy",
+      "clone": "aklofas_kicad-happy",
+      "commit": "6b9767e19979cdef91631573753b1547efdbeab9",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "citlyze",
+      "label": "citlyze",
+      "repo": "https://github.com/citlyze/citlyze-skills",
+      "clone": "citlyze_citlyze-skills",
+      "commit": "f1265f70a37531f5a81c77659e78276908a9172c",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "ibelick",
+      "label": "ibelick",
+      "repo": "https://github.com/ibelick/ui-skills",
+      "clone": "ibelick_ui-skills",
+      "commit": "347d3189830f8ec3c4c041421bce19182a79dc7a",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "homeassistant",
+      "label": "homeassistant",
+      "repo": "https://github.com/Komal-SkyNET/claude-skill-homeassistant",
+      "clone": "Komal-SkyNET_claude-skill-homeassistant",
+      "commit": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "mcollina",
+      "label": "mcollina",
+      "repo": "https://github.com/mcollina/skills",
+      "clone": "mcollina_skills",
+      "commit": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "modem",
+      "label": "modem",
+      "repo": "https://github.com/modem-dev/skills",
+      "clone": "modem-dev_skills",
+      "commit": "edcdedb38a545f67c065f4084b3627517f0d79cf",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "."
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "nodemaven",
+      "label": "nodemaven",
+      "repo": "https://github.com/nodemaven/skills",
+      "clone": "nodemaven_skills",
+      "commit": "c07bacdcabc42802a35a47245230d59d3e7625d0",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "plugins/nodemaven/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "pachca",
+      "label": "pachca",
+      "repo": "https://github.com/pachca/openapi",
+      "clone": "pachca_openapi",
+      "commit": "444f712d4d3ce40926d778a74c0dd3941f778cd5",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "plugins/pachca/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "publora",
+      "label": "publora",
+      "repo": "https://github.com/publora/skills",
+      "clone": "publora_skills",
+      "commit": "8964d4987ea64238d2a396bc079ca1875dcba54e",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "superdesign",
+      "label": "superdesign",
+      "repo": "https://github.com/superdesigndev/superdesign-skill",
+      "clone": "superdesigndev_superdesign-skill",
+      "commit": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "tweetclaw",
+      "label": "tweetclaw",
+      "repo": "https://github.com/Xquik-dev/tweetclaw",
+      "clone": "Xquik-dev_tweetclaw",
+      "commit": "7c661acc2cd6cd38166c47d5a3ab03e5a22acb9d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "speakeasy",
+      "label": "speakeasy",
+      "repo": "https://github.com/speakeasy-api/sdk-generation-skills",
+      "clone": "speakeasy-api_sdk-generation-skills",
+      "commit": "d2eab5991ef881b39a26ab47432cf273c2c1abb5",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "threejs",
+      "label": "threejs",
+      "repo": "https://github.com/CloudAI-X/threejs-skills",
+      "clone": "CloudAI-X_threejs-skills",
+      "commit": "0e181866f095b5f06d005133876e926515390d95",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "aurite",
+      "label": "aurite",
+      "repo": "https://github.com/Aurite-ai/agent-verifier",
+      "clone": "Aurite-ai_agent-verifier",
+      "commit": "e7c783a02cc565616d33357572a4f87ef39f1cd7",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "swiftpat",
+      "label": "swiftpat",
+      "repo": "https://github.com/efremidze/swift-patterns-skill",
+      "clone": "efremidze_swift-patterns-skill",
+      "commit": "2e9b66b0470a324cf3a6898549279e622aa7df71",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "."
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "vovk",
+      "label": "vovk",
+      "repo": "https://github.com/finom/vovk",
+      "clone": "finom_vovk",
+      "commit": "0f3c4a2a3388273ccf5cab5a5af41b34f2b91666",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "triage",
+      "label": "triage",
+      "repo": "https://github.com/laulauraluo/ai-code-review-triage",
+      "clone": "laulauraluo_ai-code-review-triage",
+      "commit": "126a24f76d0ae8ec70b37bbe28a064c337afc853",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "chatcut",
+      "label": "chatcut",
+      "repo": "https://github.com/ChatCut-Inc/agent-plugin",
+      "clone": "ChatCut-Inc_agent-plugin",
+      "commit": "a69a54fac266c69a9e76d2767af2e82776a17464",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "claude/skills",
+        "codex/skills",
+        "grok/skills",
+        "antigravity/skills",
+        "kimi/skills",
+        "qwen/skills",
+        "workbuddy/skills",
+        "claude-directory/skills",
+        "cursor/skills",
+        "antigravity-desktop/skills",
+        "chatcut-desktop-codex-plugin/skills",
+        "doubao/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "goose",
+      "label": "goose",
+      "repo": "https://github.com/gooseworks-ai/goose-skills",
+      "clone": "gooseworks-ai_goose-skills",
+      "commit": "885edb542d6e4e526d4a9ad2844a3771be248810",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills/marketing",
+        "skills/video",
+        "skills/shared",
+        "skills/entry",
+        "drafts/marketing",
+        "docs"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "heygen",
+      "label": "heygen",
+      "repo": "https://github.com/heygen-com/hyperframes",
+      "clone": "heygen-com_hyperframes",
+      "commit": "b8bb8b38039aabb11837151790031d43be46d801",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills",
+        "registry/blocks",
+        ".agents/skills",
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "mblode",
+      "label": "mblode",
+      "repo": "https://github.com/mblode/agent-skills",
+      "clone": "mblode_agent-skills",
+      "commit": "7df4b7edff1dc1c991331061373d4ba42ecacdbe",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "cyber",
+      "label": "cyber",
+      "repo": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "clone": "mukul975_Anthropic-Cybersecurity-Skills",
+      "commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "orchestra",
+      "label": "orchestra",
+      "repo": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+      "clone": "Orchestra-Research_AI-Research-SKILLs",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".",
+        "01-model-architecture",
+        "02-tokenization",
+        "03-fine-tuning",
+        "04-mechanistic-interpretability",
+        "05-data-processing",
+        "06-post-training",
+        "07-safety-alignment",
+        "08-distributed-training",
+        "09-infrastructure",
+        "10-optimization",
+        "11-evaluation",
+        "12-inference-serving",
+        "13-mlops",
+        "14-agents",
+        "15-rag",
+        "16-prompt-engineering",
+        "17-observability",
+        "18-multimodal",
+        "19-emerging-techniques",
+        "20-ml-paper-writing",
+        "21-research-ideation",
+        "22-agent-native-research-artifact"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "qdrant",
+      "label": "qdrant",
+      "repo": "https://github.com/qdrant/skills",
+      "clone": "qdrant_skills",
+      "commit": "5f9622219114df85877e9ea88479feac54a466cf",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills",
+        "skills/qdrant-scaling",
+        "skills/qdrant-scaling/scaling-data-volume",
+        "skills/qdrant-performance-optimization",
+        "skills/qdrant-monitoring",
+        "skills/qdrant-search-quality",
+        "skills/qdrant-search-quality/search-strategies",
+        "skills/qdrant-search-quality/search-strategies/hybrid-search",
+        "meta",
+        "plugins/qdrant-advisor/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "sendmux",
+      "label": "sendmux",
+      "repo": "https://github.com/sendmux/skills",
+      "clone": "sendmux_skills",
+      "commit": "ce2484f012411e06a1ea692ed8b978800a3be047",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugins/qubrics/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "skillseekers",
+      "label": "skillseekers",
+      "repo": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "clone": "yusufkaraaslan_Skill_Seekers",
+      "commit": "15a67e3c1e7ceb6c63b88f9f3fe480d7b547fe22",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "distribution/claude-plugin/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "aeon",
+      "label": "aeon",
+      "repo": "https://github.com/aeonfun/aeon",
+      "clone": "aeonfun_aeon",
+      "commit": "86217cecec9799bdb5a287a6655f68234dcdd9ac",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        "plugin/skills",
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "forge",
+      "label": "forge",
+      "repo": "https://github.com/chrono-meta/forge-harness",
+      "clone": "chrono-meta_forge-harness",
+      "commit": "db485320c37d7028a80f4f664fc00330545ffd6e",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "plugins/fh-meta/skills",
+        "plugins/fh-commons/skills",
+        "plugins/fh-qp/skills",
+        "plugins/fh-preprep/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "everyinfra",
+      "label": "everyinfra",
+      "repo": "https://github.com/everyinfra/everyinfra-agent-plugins",
+      "clone": "everyinfra_everyinfra-agent-plugins",
+      "commit": "6796f199fe4b6aac88e0dc1f1abe0b2dcf15fe2e",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugins/everyinfra/skills",
+        "host-packages/claude/everyinfra/skills",
+        "workbuddy/connectors/everyinfra/skills",
+        "workbuddy/connectors/everyinfra-alibaba1688/skills",
+        "workbuddy/connectors/everyinfra-douyin/skills",
+        "workbuddy/connectors/everyinfra-jd/skills",
+        "workbuddy/connectors/everyinfra-taobao/skills",
+        "workbuddy/connectors/everyinfra-tiktok/skills",
+        "workbuddy/connectors/everyinfra-xiaohongshu/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "ecommerce",
+      "label": "ecommerce",
+      "repo": "https://github.com/nexscope-ai/eCommerce-Skills",
+      "clone": "nexscope-ai_eCommerce-Skills",
+      "commit": "c5ba892a1cc3178626577aed1dbde5e62a82f1ac",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".",
+        "brand-protection",
+        "product-differentiation",
+        "profit-margin-calculator",
+        "supply-chain-optimization",
+        "review-checker"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "babysitter",
+      "label": "babysitter",
+      "repo": "https://github.com/a5c-ai/babysitter",
+      "clone": "a5c-ai_babysitter",
+      "commit": "feb68abe397acc14f32b34984975c48fedba2b33",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".claude/skills",
+        ".codex/skills",
+        "library/methodologies/automaker/skills",
+        "library/methodologies/bmad-method/skills",
+        "library/methodologies/cc10x/skills",
+        "library/methodologies/ccpm/skills",
+        "library/methodologies/claudekit/skills",
+        "library/methodologies/cog-second-brain/skills",
+        "library/methodologies/everything-claude-code/skills",
+        "library/methodologies/gastown/skills",
+        "library/methodologies/gsd/skills",
+        "library/methodologies/maestro/skills",
+        "library/methodologies/metaswarm/skills",
+        "library/methodologies/pilot-shell/skills",
+        "library/methodologies/planning-with-files/skills",
+        "library/methodologies/rpikit/skills",
+        "library/methodologies/ruflo/skills",
+        "library/methodologies/spec-kit/skills",
+        "library/methodologies/superpowers/skills",
+        "library/specializations/ai-agents-conversational/skills",
+        "library/specializations/algorithms-optimization/skills",
+        "library/specializations/backend-development/skills",
+        "library/specializations/cli-mcp-development/skills",
+        "library/specializations/code-migration-modernization/skills",
+        "library/specializations/collaboration/skills",
+        "library/specializations/common-utilities/skills",
+        "library/specializations/cryptography-blockchain/skills",
+        "library/specializations/data-engineering-analytics/skills",
+        "library/specializations/data-science-ml/skills",
+        "library/specializations/desktop-development/skills",
+        "library/specializations/devops-sre-platform/skills",
+        "library/specializations/domains/business/business-analysis/skills",
+        "library/specializations/domains/business/business-strategy-advanced/skills",
+        "library/specializations/domains/business/business-strategy/skills",
+        "library/specializations/domains/business/customer-experience/skills",
+        "library/specializations/domains/business/decision-intelligence/skills",
+        "library/specializations/domains/business/digital-marketing/skills",
+        "library/specializations/domains/business/entrepreneurship/skills",
+        "library/specializations/domains/business/finance-accounting/skills",
+        "library/specializations/domains/business/human-resources/skills",
+        "library/specializations/domains/business/knowledge-management/skills",
+        "library/specializations/domains/business/legal/skills",
+        "library/specializations/domains/business/logistics/skills",
+        "library/specializations/domains/business/marketing/skills",
+        "library/specializations/domains/business/operations/skills",
+        "library/specializations/domains/business/project-management/skills",
+        "library/specializations/domains/business/public-relations/skills",
+        "library/specializations/domains/business/sales/skills",
+        "library/specializations/domains/business/supply-chain/skills",
+        "library/specializations/domains/business/venture-capital/skills",
+        "library/specializations/domains/science/aerospace-engineering/skills",
+        "library/specializations/domains/science/automotive-engineering/skills",
+        "library/specializations/domains/science/bioinformatics/skills",
+        "library/specializations/domains/science/biomedical-engineering/skills",
+        "library/specializations/domains/science/chemical-engineering/skills",
+        "library/specializations/domains/science/civil-engineering/skills",
+        "library/specializations/domains/science/computer-science/skills",
+        "library/specializations/domains/science/electrical-engineering/skills",
+        "library/specializations/domains/science/environmental-engineering/skills",
+        "library/specializations/domains/science/industrial-engineering/skills",
+        "library/specializations/domains/science/materials-science/skills",
+        "library/specializations/domains/science/mathematics/skills",
+        "library/specializations/domains/science/mechanical-engineering/skills",
+        "library/specializations/domains/science/nanotechnology/skills",
+        "library/specializations/domains/science/physics/skills",
+        "library/specializations/domains/science/quantum-computing/skills",
+        "library/specializations/domains/science/scientific-discovery/skills",
+        "library/specializations/domains/social-sciences-humanities/arts-culture/film-tv-production/skills",
+        "library/specializations/domains/social-sciences-humanities/arts-culture/music-album-creation/skills",
+        "library/specializations/domains/social-sciences-humanities/arts-culture/skills",
+        "library/specializations/domains/social-sciences-humanities/education/skills",
+        "library/specializations/domains/social-sciences-humanities/healthcare/skills",
+        "library/specializations/domains/social-sciences-humanities/humanities/skills",
+        "library/specializations/domains/social-sciences-humanities/philosophy/skills",
+        "library/specializations/domains/social-sciences-humanities/social-sciences/skills",
+        "library/specializations/embedded-systems/skills",
+        "library/specializations/fpga-programming/skills",
+        "library/specializations/game-development/skills",
+        "library/specializations/gpu-programming/skills",
+        "library/specializations/meta/harnesses/claude-code",
+        "library/specializations/meta/skills",
+        "library/specializations/mobile-development/skills",
+        "library/specializations/network-programming/skills",
+        "library/specializations/performance-optimization/skills",
+        "library/specializations/product-management/skills",
+        "library/specializations/programming-languages/skills",
+        "library/specializations/qa-testing-automation/skills",
+        "library/specializations/robotics-simulation/skills",
+        "library/specializations/sdk-platform-development/skills",
+        "library/specializations/security-compliance/skills",
+        "library/specializations/security-research/skills",
+        "library/specializations/shared/skills",
+        "library/specializations/software-architecture/skills",
+        "library/specializations/technical-documentation/skills",
+        "library/specializations/ux-ui-design/skills",
+        "library/specializations/web-development/skills",
+        "packages/adapters/skills",
+        "packages/adapters/tasks/skills",
+        "plugins/atlas-unified/skills",
+        "plugins/babysitter-unified/per-harness/opencode",
+        "plugins/babysitter-unified/skills"
+      ],
+      "include": "clean"
     }
   ]
 }
