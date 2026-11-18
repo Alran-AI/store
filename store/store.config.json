@@ -181,7 +181,33 @@
       "forge": "forge",
       "everyinfra": "everyinfra",
       "ecommerce": "ecommerce",
-      "babysitter": "babysitter"
+      "babysitter": "babysitter",
+      "yanskills": "yanskills",
+      "avoidai": "avoidai",
+      "aris": "aris",
+      "holguard": "holguard",
+      "luong": "luong",
+      "aidd": "aidd",
+      "waza": "waza",
+      "signet": "signet",
+      "inkbox": "inkbox",
+      "toolbox": "toolbox",
+      "adlc": "adlc",
+      "brigade": "brigade",
+      "claudesmart": "claudesmart",
+      "stockanalysis": "stockanalysis",
+      "instagram": "instagram",
+      "xskills": "xskills",
+      "tiktok": "tiktok",
+      "facebook": "facebook",
+      "threads": "threads",
+      "youtube": "youtube",
+      "clawscan": "clawscan",
+      "instar": "instar",
+      "deliberation": "deliberation",
+      "modelplan": "modelplan",
+      "creative": "creative",
+      "highvalue": "highvalue"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -358,7 +384,33 @@
       "forge": "2026.11.18+db48532",
       "everyinfra": "2026.11.18+6796f19",
       "ecommerce": "2026.11.11+c5ba892",
-      "babysitter": "2026.8.31+feb68ab"
+      "babysitter": "2026.8.31+feb68ab",
+      "yanskills": "2026.11.19+fc71da9",
+      "avoidai": "2026.11.17+a5d6bae",
+      "aris": "2026.11.18+ca70fe2",
+      "holguard": "2026.11.18+ec86b2c",
+      "luong": "2026.11.18+c74c78a",
+      "aidd": "2026.11.13+ae29e69",
+      "waza": "2026.11.18+0df44e1",
+      "signet": "2026.11.18+8c3a8d6",
+      "inkbox": "2026.11.18+436fe4d",
+      "toolbox": "2026.11.18+92c9df2",
+      "adlc": "2026.11.18+b067ef1",
+      "brigade": "2026.11.18+abe424c",
+      "claudesmart": "2026.11.18+5d652cd",
+      "stockanalysis": "2026.11.18+e648f91",
+      "instagram": "2026.11.18+823c681",
+      "xskills": "2026.11.18+28854d5",
+      "tiktok": "2026.11.18+ba2f700",
+      "facebook": "2026.11.18+4e2b1fa",
+      "threads": "2026.11.18+a73f528",
+      "youtube": "2026.11.18+f422cea",
+      "clawscan": "2026.11.17+7b51dc8",
+      "instar": "2026.11.18+f818981",
+      "deliberation": "2026.11.18+13f8e8b",
+      "modelplan": "2026.11.18+5cef051",
+      "creative": "2026.11.18+c9b5f8a",
+      "highvalue": "2026.11.18+a7c12c2"
     }
   },
   "plugins": [
@@ -3544,6 +3596,474 @@
       "exampleQueries": [
         "Orchestrate this multi-step build",
         "Break this project into deterministic tasks"
+      ]
+    },
+    {
+      "name": "yan-skills",
+      "displayName": "Yan Skills",
+      "version": "2026.11.19+fc71da9",
+      "description": "Three skills from Yan's collection: Google Trends and SEO workflows, AI news, autopilot runs and agent setup.",
+      "author": "yan-labs",
+      "license": "MIT",
+      "homepage": "https://github.com/yan-labs/yan-skills",
+      "category": "Sales",
+      "icon": "icons/yan-skills.png",
+      "packages": [
+        "yanskills"
+      ],
+      "exampleQueries": [
+        "Run a Google Trends workflow for this keyword",
+        "Set up an autopilot run"
+      ]
+    },
+    {
+      "name": "avoid-ai-writing",
+      "displayName": "Avoid AI Writing",
+      "version": "2026.11.17+a5d6bae",
+      "description": "Three skills that audit and rewrite text so it does not read as machine-made.",
+      "author": "Conor Bronsdon",
+      "license": "MIT",
+      "homepage": "https://github.com/conorbronsdon/avoid-ai-writing",
+      "category": "Office",
+      "icon": "icons/avoid-ai-writing.png",
+      "packages": [
+        "avoidai"
+      ],
+      "exampleQueries": [
+        "Audit this draft for AI writing patterns",
+        "Rewrite this paragraph to sound human"
+      ]
+    },
+    {
+      "name": "aris-research",
+      "displayName": "ARIS",
+      "version": "2026.11.18+ca70fe2",
+      "description": "Twenty-three skills for autonomous machine-learning research: literature work, experiment design, training, evaluation and writing the paper.",
+      "author": "wanshuiyin",
+      "license": "MIT",
+      "homepage": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "category": "Science & Healthcare",
+      "icon": "icons/aris-research.png",
+      "packages": [
+        "aris"
+      ],
+      "exampleQueries": [
+        "Plan the experiments for this research question",
+        "Summarise the literature on this topic"
+      ]
+    },
+    {
+      "name": "hol-guard",
+      "displayName": "Hol Guard",
+      "version": "2026.11.18+ec86b2c",
+      "description": "Two skills for guarding AI agents: reviewing the tools they may call, watching for prompt injection and secret access, and scanning a skill before it is installed.",
+      "author": "Hashgraph",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/hashgraph-online/hol-guard",
+      "category": "Code",
+      "icon": "icons/hol-guard.png",
+      "packages": [
+        "holguard"
+      ],
+      "exampleQueries": [
+        "Scan this skill for anything unsafe",
+        "Review the tools this agent may call"
+      ]
+    },
+    {
+      "name": "luong-skills",
+      "displayName": "Luong Skills",
+      "version": "2026.11.18+c74c78a",
+      "description": "Twenty-two skills for building agents and bots that do real work.",
+      "author": "luongnv89",
+      "license": "MIT",
+      "homepage": "https://github.com/luongnv89/skills",
+      "category": "Code",
+      "icon": "icons/luong-skills.png",
+      "packages": [
+        "luong"
+      ],
+      "exampleQueries": [
+        "Build an agent for this task",
+        "Add a diagram to this design"
+      ]
+    },
+    {
+      "name": "aidd-framework",
+      "displayName": "AI-Driven Dev Framework",
+      "version": "2026.11.13+ae29e69",
+      "description": "Forty-nine skills for an AI-driven development team: context engineering, dev, product, vcs, UI, QA and orchestration.",
+      "author": "ai-driven-dev",
+      "license": "MIT",
+      "homepage": "https://github.com/ai-driven-dev/framework",
+      "category": "Code",
+      "icon": "icons/aidd-framework.png",
+      "packages": [
+        "aidd"
+      ],
+      "exampleQueries": [
+        "Set up the context for this project",
+        "Run the QA gate before shipping"
+      ]
+    },
+    {
+      "name": "waza",
+      "displayName": "Waza",
+      "version": "2026.11.18+0df44e1",
+      "description": "Twenty-one skills for testing and evaluating agent workflows, custom agents and skills with repeatable scenarios.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/microsoft/waza",
+      "category": "Code",
+      "icon": "icons/waza.png",
+      "packages": [
+        "waza"
+      ],
+      "exampleQueries": [
+        "Write an evaluation for this agent",
+        "Test this workflow end to end"
+      ]
+    },
+    {
+      "name": "signet",
+      "displayName": "Signet",
+      "version": "2026.11.18+8c3a8d6",
+      "description": "Five skills for a seal of approval for agents and skills: a semantic governance registry with signed attestations.",
+      "author": "therandomsecurityguy",
+      "license": "BSD-3-Clause",
+      "homepage": "https://github.com/therandomsecurityguy/signet",
+      "category": "Code",
+      "icon": "icons/signet.png",
+      "packages": [
+        "signet"
+      ],
+      "exampleQueries": [
+        "Sign and attest this skill",
+        "Check what this agent is allowed to do"
+      ]
+    },
+    {
+      "name": "inkbox",
+      "displayName": "Inkbox",
+      "version": "2026.11.18+436fe4d",
+      "description": "Seven skills for giving an agent a persistent identity: email, phone number and the SDK behind them.",
+      "author": "Inkbox",
+      "license": "MIT",
+      "homepage": "https://github.com/inkbox-ai/inkbox",
+      "category": "Code",
+      "icon": "icons/inkbox.png",
+      "packages": [
+        "inkbox"
+      ],
+      "exampleQueries": [
+        "Give this agent an email address",
+        "Set up the Inkbox SDK"
+      ]
+    },
+    {
+      "name": "claude-toolbox",
+      "displayName": "Claude Toolbox",
+      "version": "2026.11.18+92c9df2",
+      "description": "Eight skills from a minimal, explicitly multi-language collection of production-ready configuration.",
+      "author": "serpro69",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/serpro69/claude-toolbox",
+      "category": "Code",
+      "icon": "icons/claude-toolbox.png",
+      "packages": [
+        "toolbox"
+      ],
+      "exampleQueries": [
+        "Set up the configuration for this project",
+        "Add a config file for this service"
+      ]
+    },
+    {
+      "name": "adlc-team-skills",
+      "displayName": "Agentic SDLC",
+      "version": "2026.11.18+b067ef1",
+      "description": "Seventeen skills for the agentic software lifecycle: the team boot, product, architect, factory, change and review skills.",
+      "author": "tikalk",
+      "license": "MIT",
+      "homepage": "https://github.com/tikalk/adlc-team-skills",
+      "category": "Code",
+      "icon": "icons/adlc-team-skills.png",
+      "packages": [
+        "adlc"
+      ],
+      "exampleQueries": [
+        "Boot the agent team for this project",
+        "Run the change workflow"
+      ]
+    },
+    {
+      "name": "brigade",
+      "displayName": "Brigade",
+      "version": "2026.11.18+abe424c",
+      "description": "Thirteen skills for running coding agents anywhere and keeping one record of the work.",
+      "author": "escoffier-labs",
+      "license": "MIT",
+      "homepage": "https://github.com/escoffier-labs/brigade",
+      "category": "Code",
+      "icon": "icons/brigade.png",
+      "packages": [
+        "brigade"
+      ],
+      "exampleQueries": [
+        "Start a brigade for this task",
+        "Check what the agents have done"
+      ]
+    },
+    {
+      "name": "claude-smart",
+      "displayName": "Claude Smart",
+      "version": "2026.11.18+5d652cd",
+      "description": "Two skills that turn corrections into preferences, project-specific skills and shared skills.",
+      "author": "ReflexioAI",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/ReflexioAI/claude-smart",
+      "category": "Productivity",
+      "icon": "icons/claude-smart.png",
+      "packages": [
+        "claudesmart"
+      ],
+      "exampleQueries": [
+        "Remember this correction for next time",
+        "Set up a preference for this project"
+      ]
+    },
+    {
+      "name": "stock-analysis",
+      "displayName": "Stock Analysis",
+      "version": "2026.11.18+e648f91",
+      "description": "One skills for stock research: analysis, screening and backtesting.",
+      "author": "Weaxs",
+      "license": "MIT",
+      "homepage": "https://github.com/Weaxs/stock-analysis-plugin",
+      "category": "Business",
+      "icon": "icons/stock-analysis.png",
+      "packages": [
+        "stockanalysis"
+      ],
+      "exampleQueries": [
+        "Screen the market for these criteria",
+        "Analyse this ticker"
+      ]
+    },
+    {
+      "name": "instagram-skills",
+      "displayName": "Instagram Skills",
+      "version": "2026.11.18+823c681",
+      "description": "Nine skills for Instagram: captions, carousels, hooks, hashtag strategy and engagement.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/instagram-skills",
+      "category": "Sales",
+      "icon": "icons/instagram-skills.png",
+      "packages": [
+        "instagram"
+      ],
+      "exampleQueries": [
+        "Write an Instagram carousel for this product",
+        "Plan this week's Instagram posts"
+      ]
+    },
+    {
+      "name": "x-skills",
+      "displayName": "X Skills",
+      "version": "2026.11.18+28854d5",
+      "description": "Nine skills for X (Twitter): writing posts, threads and replies.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/x-skills",
+      "category": "Sales",
+      "icon": "icons/x-skills.png",
+      "packages": [
+        "xskills"
+      ],
+      "exampleQueries": [
+        "Write this thread for X",
+        "Draft a reply for this post"
+      ]
+    },
+    {
+      "name": "tiktok-skills",
+      "displayName": "TikTok Skills",
+      "version": "2026.11.18+ba2f700",
+      "description": "Eight skills for TikTok: video hooks, captions and trend mapping.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/tiktok-skills",
+      "category": "Sales",
+      "icon": "icons/tiktok-skills.png",
+      "packages": [
+        "tiktok"
+      ],
+      "exampleQueries": [
+        "Write a TikTok hook for this product",
+        "Plan this TikTok campaign"
+      ]
+    },
+    {
+      "name": "facebook-skills",
+      "displayName": "Facebook Skills",
+      "version": "2026.11.18+4e2b1fa",
+      "description": "Eight skills for Facebook Pages: posts, hooks and engagement.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/facebook-skills",
+      "category": "Sales",
+      "icon": "icons/facebook-skills.png",
+      "packages": [
+        "facebook"
+      ],
+      "exampleQueries": [
+        "Write a Facebook post for this page",
+        "Plan the engagement for this week"
+      ]
+    },
+    {
+      "name": "threads-skills",
+      "displayName": "Threads Skills",
+      "version": "2026.11.18+a73f528",
+      "description": "Eight skills for Threads: posts, multi-post threads, hooks and replies.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/threads-skills",
+      "category": "Sales",
+      "icon": "icons/threads-skills.png",
+      "packages": [
+        "threads"
+      ],
+      "exampleQueries": [
+        "Write a Threads post from these notes",
+        "Draft a reply for this thread"
+      ]
+    },
+    {
+      "name": "youtube-skills",
+      "displayName": "YouTube Skills",
+      "version": "2026.11.18+f422cea",
+      "description": "Nine skills for YouTube and Shorts: titles, descriptions, thumbnails and SEO.",
+      "author": "sergebulaev",
+      "license": "MIT",
+      "homepage": "https://github.com/sergebulaev/youtube-skills",
+      "category": "Sales",
+      "icon": "icons/youtube-skills.png",
+      "packages": [
+        "youtube"
+      ],
+      "exampleQueries": [
+        "Write the title and description for this video",
+        "Plan this YouTube upload"
+      ]
+    },
+    {
+      "name": "clawscan",
+      "displayName": "ClawScan",
+      "version": "2026.11.17+7b51dc8",
+      "description": "Four skills for the security scan of an agent skill, before it is installed.",
+      "author": "OpenClaw",
+      "license": "MIT",
+      "homepage": "https://github.com/openclaw/clawscan",
+      "category": "Code",
+      "icon": "icons/clawscan.png",
+      "packages": [
+        "clawscan"
+      ],
+      "exampleQueries": [
+        "Scan this skill for malicious patterns",
+        "Set up the scan for this repository"
+      ]
+    },
+    {
+      "name": "instar",
+      "displayName": "Instar",
+      "version": "2026.11.18+f818981",
+      "description": "Fifteen skills for persistent agents with scheduling, sessions and memory.",
+      "author": "JKHeadley",
+      "license": "MIT",
+      "homepage": "https://github.com/JKHeadley/instar",
+      "category": "Productivity",
+      "icon": "icons/instar.png",
+      "packages": [
+        "instar"
+      ],
+      "exampleQueries": [
+        "Schedule this agent for later",
+        "Give this agent a memory"
+      ]
+    },
+    {
+      "name": "deliberation",
+      "displayName": "Deliberation",
+      "version": "2026.11.18+13f8e8b",
+      "description": "Six skills for asking other models — Codex, Gemini, Grok and hundreds more — for a second opinion.",
+      "author": "antonbabenko",
+      "license": "MIT",
+      "homepage": "https://github.com/antonbabenko/deliberation",
+      "category": "Productivity",
+      "icon": "icons/deliberation.png",
+      "packages": [
+        "deliberation"
+      ],
+      "exampleQueries": [
+        "Ask another model what it thinks of this plan",
+        "Compare the answers of three models"
+      ]
+    },
+    {
+      "name": "modelplan",
+      "displayName": "ModelPlan",
+      "version": "2026.11.18+5cef051",
+      "description": "One skills for choosing the right AI coding model, effort and plan for the job.",
+      "author": "modelplan",
+      "license": "MIT",
+      "homepage": "https://github.com/modelplan/modelplan",
+      "category": "Code",
+      "icon": "icons/modelplan.png",
+      "packages": [
+        "modelplan"
+      ],
+      "exampleQueries": [
+        "Which model should I use for this task?",
+        "What effort level does this need?"
+      ]
+    },
+    {
+      "name": "creative-writing",
+      "displayName": "Creative Writing",
+      "version": "2026.11.18+c9b5f8a",
+      "description": "Twenty-two skills for creative writing: character work, plot, dialogue and revision.",
+      "author": "haowjy",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/haowjy/creative-writing-skills",
+      "category": "Office",
+      "icon": "icons/creative-writing.png",
+      "packages": [
+        "creative"
+      ],
+      "exampleQueries": [
+        "Develop this character",
+        "Rewrite this scene"
+      ]
+    },
+    {
+      "name": "high-value-skills",
+      "displayName": "High-Value Skills",
+      "version": "2026.11.18+a7c12c2",
+      "description": "Seventy-seven skills in daily use: developer engineering, AI workflow, knowledge and PM, security and reliability, finance, product design, operations, DevOps and multimodal media.",
+      "author": "seaworld008",
+      "license": "MIT",
+      "homepage": "https://github.com/seaworld008/Commonly-used-high-value-skills",
+      "category": "Office",
+      "icon": "icons/high-value-skills.png",
+      "packages": [
+        "highvalue"
+      ],
+      "exampleQueries": [
+        "Review this deployment plan",
+        "Set up the project structure for this repo"
       ]
     },
     {

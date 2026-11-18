@@ -6,28 +6,32 @@ own licence. All are **unmodified**, except the Superpowers package, whose diffe
 listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **176 Plugins**
-(175 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **10023
-individually installable Skills**; 10058 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+Some sources are catalogues that also carry Skills written by other projects; they are in the store under the
+catalogue's own licence, and `THIRD_PARTY_NOTICES.md` names the catalogue they came from. A catalogue whose
+Skills declare licences of their own — a proprietary one, say — is not taken.
+
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **202 Plugins**
+(201 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **10375
+individually installable Skills**; 10410 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
 Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
 call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack, Skillkit, dzhng, Bama, Skills Hub, Evo, Modem, Agent Skills (mblode), Forge Harness, Aeon, Babysitter, Code Review Triage, Agent Verifier |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack, Skillkit, dzhng, Bama, Skills Hub, Evo, Modem, Agent Skills (mblode), Forge Harness, Aeon, Babysitter, Code Review Triage, Agent Verifier, AI-Driven Dev Framework, Waza, Brigade, Agentic SDLC, Claude Toolbox, High-Value Skills |
 | Cloud and hosting | Cloudflare, Cloudflare Workers SDK, Cloudflare Agents, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker, Deno, Self-Host |
-| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase, Teable, Qdrant |
-| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator, App Store Connect, VideoDB, Helius, Mailtrap, Courier, Zapier, OpenOSINT, Modern Node.js, Swift Patterns, Swift Concurrency, SDK Generation (Speakeasy), Vovk, Pachca, NodeMaven, Three.js |
-| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip, Fast Agent, OPC |
-| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills, Notion Cookbook, Second Brain OS, Publora, TweetClaw, Qubrics, Goose |
+| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase, Teable, Qdrant, Inkbox |
+| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator, App Store Connect, VideoDB, Helius, Mailtrap, Courier, Zapier, OpenOSINT, Modern Node.js, Swift Patterns, Swift Concurrency, SDK Generation (Speakeasy), Vovk, Pachca, NodeMaven, Three.js, ModelPlan |
+| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip, Fast Agent, OPC, Instar, Deliberation, Claude Smart |
+| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills, Notion Cookbook, Second Brain OS, Publora, TweetClaw, Qubrics, Goose, Instagram Skills, X Skills, TikTok Skills, Facebook Skills, Threads Skills, YouTube Skills, LinkedIn Automation, Stock Analysis |
 | Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs, Temporal, Prefect, Apache Airflow, Astronomer, Trigger.dev, ShipSwift |
 | Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills, Thinking Skills, Cybersecurity Skills |
-| Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit, Cybersecurity Skills (MITRE, NIST) |
+| Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit, Cybersecurity Skills (MITRE, NIST), Hol Guard, Signet, ClawScan |
 | Design, media and 3D | OpenMotion, Open Design, Baoyu, Social Auto Upload, Blender Skills, Scenario Labs, Awesome Design Skills, Effective HTML, LottieFiles, ChatCut, HyperFrames, Three.js, UI Skills, Superdesign, KiCad |
-| Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace, Product Management Skills |
-| Business | Marketing (Corey Haines), Product management (Paweł Huryn), E-commerce Skills, EveryInfra, Citlyze |
-| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science, AI Research Skills (Orchestra Research) |
-| Productivity | Home Assistant, Skill Seekers |
+| Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace, Product Management Skills, High-Value Skills |
+| Business | Marketing (Corey Haines), Product management (Paweł Huryn), E-commerce Skills, EveryInfra, Citlyze, Yan Skills |
+| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science, AI Research Skills (Orchestra Research), ARIS |
+| Productivity | Home Assistant, Skill Seekers, Avoid AI Writing, Creative Writing, Luong Skills |
 
 ```sh
 alran plugin marketplace add /path/to/alran-store/store     # or the URL it is hosted at
@@ -273,6 +277,29 @@ Facts about the source, not quality judgements:
   scripts, and their text points at them.
 - [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) (Apache-2.0): the one Skill that carries
   no script is a joke that lives in the repository's test data, not in its Skills.
+- [LeoYeAI/agent-master-skills](https://github.com/LeoYeAI/agent-master-skills) (MIT): a catalogue of 3,444 Skills that
+  are written by other projects — one of them declares `license: proprietary`. The repository's own licence does
+  not cover what it carries, so the store takes its word for nothing here.
+- [agentskillexchange/skills](https://github.com/agentskillexchange/skills) (MIT): 3,263 Skills, and every one of
+  them names itself after its display name (`name: "Activepieces Open Source Workflow Automation"`) instead of its
+  folder, which is the first rule a Skill has to pass.
+- [23blocks-OS/ai-maestro](https://github.com/23blocks-OS/ai-maestro) (MIT) and
+  [linked-api/linkedin-skills](https://github.com/linked-api/linkedin-skills) (MIT): their one Skill each has a name
+  the store already has.
+- [Capta1nRaj/goshipit](https://github.com/Capta1nRaj/goshipit) (Apache-2.0) and
+  [openqa-cn/codexqa](https://github.com/openqa-cn/codexqa) (Apache-2.0): their Skills are nothing but their own
+  scripts, and their text points at them.
+- [ThinkFlowLab/agentdescent](https://github.com/ThinkFlowLab/agentdescent) (MIT),
+  [the911fund/skill-of-skills](https://github.com/the911fund/skill-of-skills) (MIT),
+  [ddrayne/openclaw-homeassistant](https://github.com/ddrayne/openclaw-homeassistant) (Apache-2.0),
+  [J-nowcow/awesome-korean-agent-skills](https://github.com/J-nowcow/awesome-korean-agent-skills) (CC0-1.0),
+  [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) (MIT),
+  [MetaMask/skills](https://github.com/MetaMask/skills) (MIT) and
+  [YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill](https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill):
+  no Skill in a folder of its own, or no licence file at the root of the repository.
+- [jinzhezenggroup/computational-chemistry-agent-skills](https://github.com/jinzhezenggroup/computational-chemistry-agent-skills)
+  (LGPL-3.0) and [tbdavid2019/openclaw-docs-skill](https://github.com/tbdavid2019/openclaw-docs-skill) (AGPL-3.0):
+  not the licences the store takes.
 
 Whoever publishes a store is responsible for the licences of what is in it. [HashiCorp's Skills](https://github.com/hashicorp/agent-skills)
 are MPL-2.0: they are redistributed unmodified, source text only. The scripts and configuration in this

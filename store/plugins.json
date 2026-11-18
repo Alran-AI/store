@@ -2135,6 +2135,318 @@
         "This actor is not Sendable, what is wrong?",
         "Move this callback API to async/await"
       ]
+    },
+    {
+      "source": "yanskills",
+      "name": "yan-skills",
+      "displayName": "Yan Skills",
+      "author": "yan-labs",
+      "category": "Sales",
+      "description": "{N} skills from Yan's collection: Google Trends and SEO workflows, AI news, autopilot runs and agent setup.",
+      "exampleQueries": [
+        "Run a Google Trends workflow for this keyword",
+        "Set up an autopilot run"
+      ]
+    },
+    {
+      "source": "avoidai",
+      "name": "avoid-ai-writing",
+      "displayName": "Avoid AI Writing",
+      "author": "Conor Bronsdon",
+      "category": "Office",
+      "description": "{N} skills that audit and rewrite text so it does not read as machine-made.",
+      "exampleQueries": [
+        "Audit this draft for AI writing patterns",
+        "Rewrite this paragraph to sound human"
+      ]
+    },
+    {
+      "source": "aris",
+      "name": "aris-research",
+      "displayName": "ARIS",
+      "author": "wanshuiyin",
+      "category": "Science & Healthcare",
+      "description": "{N} skills for autonomous machine-learning research: literature work, experiment design, training, evaluation and writing the paper.",
+      "exampleQueries": [
+        "Plan the experiments for this research question",
+        "Summarise the literature on this topic"
+      ]
+    },
+    {
+      "source": "holguard",
+      "name": "hol-guard",
+      "displayName": "Hol Guard",
+      "author": "Hashgraph",
+      "category": "Code",
+      "description": "{N} skills for guarding AI agents: reviewing the tools they may call, watching for prompt injection and secret access, and scanning a skill before it is installed.",
+      "exampleQueries": [
+        "Scan this skill for anything unsafe",
+        "Review the tools this agent may call"
+      ]
+    },
+    {
+      "source": "luong",
+      "name": "luong-skills",
+      "displayName": "Luong Skills",
+      "author": "luongnv89",
+      "category": "Code",
+      "description": "{N} skills for building agents and bots that do real work.",
+      "exampleQueries": [
+        "Build an agent for this task",
+        "Add a diagram to this design"
+      ]
+    },
+    {
+      "source": "aidd",
+      "name": "aidd-framework",
+      "displayName": "AI-Driven Dev Framework",
+      "author": "ai-driven-dev",
+      "category": "Code",
+      "description": "{N} skills for an AI-driven development team: context engineering, dev, product, vcs, UI, QA and orchestration.",
+      "exampleQueries": [
+        "Set up the context for this project",
+        "Run the QA gate before shipping"
+      ]
+    },
+    {
+      "source": "waza",
+      "name": "waza",
+      "displayName": "Waza",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for testing and evaluating agent workflows, custom agents and skills with repeatable scenarios.",
+      "exampleQueries": [
+        "Write an evaluation for this agent",
+        "Test this workflow end to end"
+      ]
+    },
+    {
+      "source": "signet",
+      "name": "signet",
+      "displayName": "Signet",
+      "author": "therandomsecurityguy",
+      "category": "Code",
+      "description": "{N} skills for a seal of approval for agents and skills: a semantic governance registry with signed attestations.",
+      "exampleQueries": [
+        "Sign and attest this skill",
+        "Check what this agent is allowed to do"
+      ]
+    },
+    {
+      "source": "inkbox",
+      "name": "inkbox",
+      "displayName": "Inkbox",
+      "author": "Inkbox",
+      "category": "Code",
+      "description": "{N} skills for giving an agent a persistent identity: email, phone number and the SDK behind them.",
+      "exampleQueries": [
+        "Give this agent an email address",
+        "Set up the Inkbox SDK"
+      ]
+    },
+    {
+      "source": "toolbox",
+      "name": "claude-toolbox",
+      "displayName": "Claude Toolbox",
+      "author": "serpro69",
+      "category": "Code",
+      "description": "{N} skills from a minimal, explicitly multi-language collection of production-ready configuration.",
+      "exampleQueries": [
+        "Set up the configuration for this project",
+        "Add a config file for this service"
+      ]
+    },
+    {
+      "source": "adlc",
+      "name": "adlc-team-skills",
+      "displayName": "Agentic SDLC",
+      "author": "tikalk",
+      "category": "Code",
+      "description": "{N} skills for the agentic software lifecycle: the team boot, product, architect, factory, change and review skills.",
+      "exampleQueries": [
+        "Boot the agent team for this project",
+        "Run the change workflow"
+      ]
+    },
+    {
+      "source": "brigade",
+      "name": "brigade",
+      "displayName": "Brigade",
+      "author": "escoffier-labs",
+      "category": "Code",
+      "description": "{N} skills for running coding agents anywhere and keeping one record of the work.",
+      "exampleQueries": [
+        "Start a brigade for this task",
+        "Check what the agents have done"
+      ]
+    },
+    {
+      "source": "claudesmart",
+      "name": "claude-smart",
+      "displayName": "Claude Smart",
+      "author": "ReflexioAI",
+      "category": "Productivity",
+      "description": "{N} skills that turn corrections into preferences, project-specific skills and shared skills.",
+      "exampleQueries": [
+        "Remember this correction for next time",
+        "Set up a preference for this project"
+      ]
+    },
+    {
+      "source": "stockanalysis",
+      "name": "stock-analysis",
+      "displayName": "Stock Analysis",
+      "author": "Weaxs",
+      "category": "Business",
+      "description": "{N} skills for stock research: analysis, screening and backtesting.",
+      "exampleQueries": [
+        "Screen the market for these criteria",
+        "Analyse this ticker"
+      ]
+    },
+    {
+      "source": "instagram",
+      "name": "instagram-skills",
+      "displayName": "Instagram Skills",
+      "author": "sergebulaev",
+      "category": "Sales",
+      "description": "{N} skills for Instagram: captions, carousels, hooks, hashtag strategy and engagement.",
+      "exampleQueries": [
+        "Write an Instagram carousel for this product",
+        "Plan this week's Instagram posts"
+      ]
+    },
+    {
+      "source": "xskills",
+      "name": "x-skills",
+      "displayName": "X Skills",
+      "author": "sergebulaev",
+      "category": "Sales",
+      "description": "{N} skills for X (Twitter): writing posts, threads and replies.",
+      "exampleQueries": [
+        "Write this thread for X",
+        "Draft a reply for this post"
+      ]
+    },
+    {
+      "source": "tiktok",
+      "name": "tiktok-skills",
+      "displayName": "TikTok Skills",
+      "author": "sergebulaev",
+      "category": "Sales",
+      "description": "{N} skills for TikTok: video hooks, captions and trend mapping.",
+      "exampleQueries": [
+        "Write a TikTok hook for this product",
+        "Plan this TikTok campaign"
+      ]
+    },
+    {
+      "source": "facebook",
+      "name": "facebook-skills",
+      "displayName": "Facebook Skills",
+      "author": "sergebulaev",
+      "category": "Sales",
+      "description": "{N} skills for Facebook Pages: posts, hooks and engagement.",
+      "exampleQueries": [
+        "Write a Facebook post for this page",
+        "Plan the engagement for this week"
+      ]
+    },
+    {
+      "source": "threads",
+      "name": "threads-skills",
+      "displayName": "Threads Skills",
+      "author": "sergebulaev",
+      "category": "Sales",
+      "description": "{N} skills for Threads: posts, multi-post threads, hooks and replies.",
+      "exampleQueries": [
+        "Write a Threads post from these notes",
+        "Draft a reply for this thread"
+      ]
+    },
+    {
+      "source": "youtube",
+      "name": "youtube-skills",
+      "displayName": "YouTube Skills",
+      "author": "sergebulaev",
+      "category": "Sales",
+      "description": "{N} skills for YouTube and Shorts: titles, descriptions, thumbnails and SEO.",
+      "exampleQueries": [
+        "Write the title and description for this video",
+        "Plan this YouTube upload"
+      ]
+    },
+    {
+      "source": "clawscan",
+      "name": "clawscan",
+      "displayName": "ClawScan",
+      "author": "OpenClaw",
+      "category": "Code",
+      "description": "{N} skills for the security scan of an agent skill, before it is installed.",
+      "exampleQueries": [
+        "Scan this skill for malicious patterns",
+        "Set up the scan for this repository"
+      ]
+    },
+    {
+      "source": "instar",
+      "name": "instar",
+      "displayName": "Instar",
+      "author": "JKHeadley",
+      "category": "Productivity",
+      "description": "{N} skills for persistent agents with scheduling, sessions and memory.",
+      "exampleQueries": [
+        "Schedule this agent for later",
+        "Give this agent a memory"
+      ]
+    },
+    {
+      "source": "deliberation",
+      "name": "deliberation",
+      "displayName": "Deliberation",
+      "author": "antonbabenko",
+      "category": "Productivity",
+      "description": "{N} skills for asking other models — Codex, Gemini, Grok and hundreds more — for a second opinion.",
+      "exampleQueries": [
+        "Ask another model what it thinks of this plan",
+        "Compare the answers of three models"
+      ]
+    },
+    {
+      "source": "modelplan",
+      "name": "modelplan",
+      "displayName": "ModelPlan",
+      "author": "modelplan",
+      "category": "Code",
+      "description": "{N} skills for choosing the right AI coding model, effort and plan for the job.",
+      "exampleQueries": [
+        "Which model should I use for this task?",
+        "What effort level does this need?"
+      ]
+    },
+    {
+      "source": "creative",
+      "name": "creative-writing",
+      "displayName": "Creative Writing",
+      "author": "haowjy",
+      "category": "Office",
+      "description": "{N} skills for creative writing: character work, plot, dialogue and revision.",
+      "exampleQueries": [
+        "Develop this character",
+        "Rewrite this scene"
+      ]
+    },
+    {
+      "source": "highvalue",
+      "name": "high-value-skills",
+      "displayName": "High-Value Skills",
+      "author": "seaworld008",
+      "category": "Office",
+      "description": "{N} skills in daily use: developer engineering, AI workflow, knowledge and PM, security and reliability, finance, product design, operations, DevOps and multimodal media.",
+      "exampleQueries": [
+        "Review this deployment plan",
+        "Set up the project structure for this repo"
+      ]
     }
   ]
 }

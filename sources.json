@@ -3282,6 +3282,380 @@
         "plugins/babysitter-unified/skills"
       ],
       "include": "clean"
+    },
+    {
+      "id": "yanskills",
+      "label": "yanskills",
+      "repo": "https://github.com/yan-labs/yan-skills",
+      "clone": "yan-labs_yan-skills",
+      "commit": "fc71da93cad92c324b54c2c1b5714b786e53d8cc",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".",
+        "agent-fleet"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "avoidai",
+      "label": "avoidai",
+      "repo": "https://github.com/conorbronsdon/avoid-ai-writing",
+      "clone": "conorbronsdon_avoid-ai-writing",
+      "commit": "a5d6bae7c0d762dbcff74ca86c17a7ac9fee4151",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        "plugins/avoid-ai-writing/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "aris",
+      "label": "aris",
+      "repo": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "clone": "wanshuiyin_Auto-claude-code-research-in-sleep",
+      "commit": "ca70fe2c2f87e8c8e70729acad4f472ef19472d1",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        "skills/skills-codex-gemini-review",
+        "skills/skills-codex-claude-review"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "holguard",
+      "label": "holguard",
+      "repo": "https://github.com/hashgraph-online/hol-guard",
+      "clone": "hashgraph-online_hol-guard",
+      "commit": "ec86b2c2a2344b369c9af43de24e9630594b2c30",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "integrations/claude-code-plugin/skills",
+        ".factory/skills",
+        "docs"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "luong",
+      "label": "luong",
+      "repo": "https://github.com/luongnv89/skills",
+      "clone": "luongnv89_skills",
+      "commit": "c74c78a16d2581f5186d2aba66e9e72cb4456f6d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        "extras",
+        "skills/diagram-generator"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "aidd",
+      "label": "aidd",
+      "repo": "https://github.com/ai-driven-dev/framework",
+      "clone": "ai-driven-dev_framework",
+      "commit": "ae29e69aa08c1274592fcab675b713b0d5331caf",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".claude/skills",
+        "cli/.claude/skills",
+        "plugins/aidd-context/skills",
+        "plugins/aidd-dev/skills",
+        "plugins/aidd-orchestrator/skills",
+        "plugins/aidd-pm/skills",
+        "plugins/aidd-qa/skills",
+        "plugins/aidd-refine/skills",
+        "plugins/aidd-telemetry/skills",
+        "plugins/aidd-ui/skills",
+        "plugins/aidd-vcs/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "waza",
+      "label": "waza",
+      "repo": "https://github.com/microsoft/waza",
+      "clone": "microsoft_waza",
+      "commit": "0df44e1596000934037942195570d5314cb4188f",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/skills",
+        "skills",
+        ".copilot/skills",
+        ".squad/skills",
+        ".squad-templates/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "signet",
+      "label": "signet",
+      "repo": "https://github.com/therandomsecurityguy/signet",
+      "clone": "therandomsecurityguy_signet",
+      "commit": "8c3a8d6c651ec43b8f8ba567ddfc9b8c4b91309c",
+      "spdx": "BSD-3-Clause",
+      "skillsDirs": [
+        ".cursor/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "inkbox",
+      "label": "inkbox",
+      "repo": "https://github.com/inkbox-ai/inkbox",
+      "clone": "inkbox-ai_inkbox",
+      "commit": "436fe4d643d78f8d4502afc62b8f8c3065e83265",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "toolbox",
+      "label": "toolbox",
+      "repo": "https://github.com/serpro69/claude-toolbox",
+      "clone": "serpro69_claude-toolbox",
+      "commit": "92c9df2e4415c68b09169b5225467a4aef5f557b",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "klaude-plugin/skills",
+        "kodex-plugin/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "adlc",
+      "label": "adlc",
+      "repo": "https://github.com/tikalk/adlc-team-skills",
+      "clone": "tikalk_adlc-team-skills",
+      "commit": "b067ef17603833dd752e79b617180320c2e02b82",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills/factory",
+        "skills/team",
+        "skills/product",
+        "skills/architect",
+        "skills/evals",
+        "skills/change",
+        "skills/authoring",
+        "skills/mission",
+        "skills/tech-radar"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "brigade",
+      "label": "brigade",
+      "repo": "https://github.com/escoffier-labs/brigade",
+      "clone": "escoffier-labs_brigade",
+      "commit": "abe424ceaa46a500cdc5725a8387f7304a518204",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "src/brigade/templates/skills",
+        "registry/skills",
+        "plugins/brigade/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "claudesmart",
+      "label": "claudesmart",
+      "repo": "https://github.com/ReflexioAI/claude-smart",
+      "clone": "ReflexioAI_claude-smart",
+      "commit": "5d652cdc91e46234af8230d90aabfa233c285229",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".agents/skills",
+        "plugin/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "stockanalysis",
+      "label": "stockanalysis",
+      "repo": "https://github.com/Weaxs/stock-analysis-plugin",
+      "clone": "Weaxs_stock-analysis-plugin",
+      "commit": "e648f9164f238c3b521dd80f5de50b5971a17384",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "instagram",
+      "label": "instagram",
+      "repo": "https://github.com/sergebulaev/instagram-skills",
+      "clone": "sergebulaev_instagram-skills",
+      "commit": "823c681b42be9ecff9f4db20eaf14d1ea45ec1a1",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "xskills",
+      "label": "xskills",
+      "repo": "https://github.com/sergebulaev/x-skills",
+      "clone": "sergebulaev_x-skills",
+      "commit": "28854d59f7f416438e43982edc883df79354b9fb",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "tiktok",
+      "label": "tiktok",
+      "repo": "https://github.com/sergebulaev/tiktok-skills",
+      "clone": "sergebulaev_tiktok-skills",
+      "commit": "ba2f7002620e63c81e40605f066e2b65d877c3c1",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "facebook",
+      "label": "facebook",
+      "repo": "https://github.com/sergebulaev/facebook-skills",
+      "clone": "sergebulaev_facebook-skills",
+      "commit": "4e2b1fa8d3b0a7550a5b8e87ab8b7b3578980620",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "threads",
+      "label": "threads",
+      "repo": "https://github.com/sergebulaev/threads-skills",
+      "clone": "sergebulaev_threads-skills",
+      "commit": "a73f528c2a86a4313dd0c44f28873da3fef3d58d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "youtube",
+      "label": "youtube",
+      "repo": "https://github.com/sergebulaev/youtube-skills",
+      "clone": "sergebulaev_youtube-skills",
+      "commit": "f422cea3eb1ab90bf53befb730cdea4b28630cfe",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "clawscan",
+      "label": "clawscan",
+      "repo": "https://github.com/openclaw/clawscan",
+      "clone": "openclaw_clawscan",
+      "commit": "7b51dc85c23f330a12672f17c13c15d654573f1f",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        ".agents/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "instar",
+      "label": "instar",
+      "repo": "https://github.com/JKHeadley/instar",
+      "clone": "JKHeadley_instar",
+      "commit": "f818981e2d370b3fe0ab2c21b19d2571ea2d5f9d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills",
+        ".claude/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "deliberation",
+      "label": "deliberation",
+      "repo": "https://github.com/antonbabenko/deliberation",
+      "clone": "antonbabenko_deliberation",
+      "commit": "13f8e8b0c98bd188d7a0b98787ed09a772259749",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        ".gemini/skills",
+        "plugins/deliberation/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "modelplan",
+      "label": "modelplan",
+      "repo": "https://github.com/modelplan/modelplan",
+      "clone": "modelplan_modelplan",
+      "commit": "5cef0518e4c241727a2c5ec7f7295e24b808c7aa",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "codex/skills",
+        "claude-code/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "creative",
+      "label": "creative",
+      "repo": "https://github.com/haowjy/creative-writing-skills",
+      "clone": "haowjy_creative-writing-skills",
+      "commit": "c9b5f8a81521eb06da3b83292a0e4712d761be35",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugin/claude/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "highvalue",
+      "label": "highvalue",
+      "repo": "https://github.com/seaworld008/Commonly-used-high-value-skills",
+      "clone": "seaworld008_Commonly-used-high-value-skills",
+      "commit": "a7c12c2f80ad445aa111ece272c9e91ef04e6845",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "openclaw-skills",
+        "openclaw-skills/azure-kubernetes",
+        "openclaw-skills/skill-tester/assets",
+        "skills/ai-agent-platform",
+        "skills/ai-workflow",
+        "skills/deployment-platforms",
+        "skills/developer-engineering",
+        "skills/developer-engineering/skill-tester/assets",
+        "skills/devops-sre",
+        "skills/devops-sre/azure-kubernetes",
+        "skills/engineering-workflow-automation",
+        "skills/finance-investing",
+        "skills/growth-operations-xiaohongshu",
+        "skills/knowledge-and-pm-integrations",
+        "skills/multimodal-media",
+        "skills/office-white-collar",
+        "skills/openclaw-memory-and-safety",
+        "skills/operations-general",
+        "skills/product-design",
+        "skills/security-and-reliability",
+        "skills/task-understanding-decomposition"
+      ],
+      "include": "clean"
     }
   ]
 }
