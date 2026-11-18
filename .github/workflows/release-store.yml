@@ -113,6 +113,10 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/download-artifact@v4
         with:
           name: store
@@ -138,5 +142,5 @@ jobs:
               echo "The build before this one is \`${PREVIOUS}\`. To go back to it, take that release instead."
             fi
           } > notes.md
-          gh release create "${TAG}" store.tar.gz store.tar.gz.sha256 index.json --title "Store ${TAG#store-}" --notes-file notes.md
+          gh release create "${TAG}" store.tar.gz store.tar.gz.sha256 index.json --title "Store ${TAG#store-}" --notes-file notes.md --target "${GITHUB_SHA}"
           echo "published ${TAG}"
