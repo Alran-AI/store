@@ -747,6 +747,405 @@
         "skills"
       ],
       "include": "clean"
+    },
+    {
+      "id": "prisma",
+      "label": "Prisma",
+      "repo": "https://github.com/prisma/skills",
+      "clone": "prisma_skills",
+      "commit": "a6f192959cf43b08aa330fe1ffca090267215812",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "."
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "tencent",
+      "label": "Tencent AI Infra Guard",
+      "repo": "https://github.com/Tencent/AI-Infra-Guard",
+      "clone": "Tencent_AI-Infra-Guard",
+      "commit": "f54ac29f5f9d80aee2398ff8dbe6b6a585b0c146",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "Research/pikit/demos/samples",
+        "Research/pikit/pikit",
+        "agent-scan/agent_scan/prompt/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "capgo",
+      "label": "Cap-go",
+      "repo": "https://github.com/Cap-go/capgo-skills",
+      "clone": "Cap-go_capgo-skills",
+      "commit": "e82217b8fa76e11a2b2fdb49c6a221df8359cb54",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "plugins/app-growth/skills",
+        "plugins/capacitor-app-migrations/skills",
+        "plugins/capacitor-app-upgrades/skills",
+        "plugins/capacitor-core/skills",
+        "plugins/capacitor-deployment/skills",
+        "plugins/capacitor-features/skills",
+        "plugins/capacitor-plugin-dev/skills",
+        "plugins/capacitor-quality/skills",
+        "plugins/capacitor-ui/skills",
+        "plugins/capgo-cloud/skills",
+        "plugins/skill-authoring/skills",
+        "plugins/skill-authoring/skills/skill-creator/fixtures",
+        "skills",
+        "skills/skill-creator/fixtures"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "n8n",
+      "label": "n8n workflows",
+      "repo": "https://github.com/czlonkowski/n8n-skills",
+      "clone": "czlonkowski_n8n-skills",
+      "commit": "ecdeca6f760b56bb1b11c0a7c961f11b69cb87d5",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "browseract",
+      "label": "Browser Act",
+      "repo": "https://github.com/browser-act/skills",
+      "clone": "browser-act_skills",
+      "commit": "593316aa0f8ccd88bdf745c92b24a50641701973",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".",
+        "solutions/ecommerce",
+        "solutions/lead-generation",
+        "solutions/search-research",
+        "solutions/social-listening",
+        "solutions/video-platforms"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "coupler",
+      "label": "Coupler",
+      "repo": "https://github.com/coupler-io/skills",
+      "clone": "coupler-io_skills",
+      "commit": "1b940388c285ad52cc1362ac645a7da01ee94d12",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        "capability",
+        "ecommerce",
+        "ecommerce/cin7",
+        "ecommerce/gorgias",
+        "ecommerce/klaviyo",
+        "ecommerce/shopify",
+        "finance",
+        "finance/quickbooks",
+        "finance/xero",
+        "marketing-and-ads",
+        "marketing-and-ads/amazon-ads",
+        "marketing-and-ads/black-friday",
+        "marketing-and-ads/facebook-ads",
+        "marketing-and-ads/google-ads",
+        "marketing-and-ads/linkedin-ads",
+        "marketing-and-ads/microsoft-ads",
+        "marketing-and-ads/tiktok-ads",
+        "sales",
+        "seo-and-geo",
+        "utilities"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "acedata",
+      "label": "Ace Data Cloud",
+      "repo": "https://github.com/AceDataCloud/Skills",
+      "clone": "AceDataCloud_Skills",
+      "commit": "fcf0e8e89bc1c386ccde32deb9effc0ba57d6d48",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".",
+        "claude-plugins/ace-music-by-ace-data-cloud/skills",
+        "claude-plugins/gpt-image-by-ace-data-cloud/skills",
+        "claude-plugins/happyhorse-by-ace-data-cloud/skills",
+        "claude-plugins/nano-banana-by-ace-data-cloud/skills",
+        "claude-plugins/seedance-by-ace-data-cloud/skills",
+        "claude-plugins/suno-by-ace-data-cloud/skills",
+        "clawhub",
+        "platforms/amp/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "metalbear",
+      "label": "MetalBear",
+      "repo": "https://github.com/metalbear-co/skills",
+      "clone": "metalbear-co_skills",
+      "commit": "9bd05c781db613e4775c7e7de24acf4d2abf8407",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "janestreet",
+      "label": "Jane Street",
+      "repo": "https://github.com/janestreet/agent_skills",
+      "clone": "janestreet_agent_skills",
+      "commit": "469868f4489cbdbe178c775a0af05bb6bef63689",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "."
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "ghcopilot",
+      "label": "GitHub Copilot",
+      "repo": "https://github.com/github/awesome-copilot",
+      "clone": "github_awesome-copilot",
+      "commit": "a255a193d1318e5a9ca3e9e575897f9a7845c099",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/skills",
+        "skills",
+        "skills/qdrant-monitoring",
+        "skills/qdrant-performance-optimization",
+        "skills/qdrant-scaling",
+        "skills/qdrant-scaling/scaling-data-volume",
+        "skills/qdrant-search-quality"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "gagents",
+      "label": "Google Agents CLI",
+      "repo": "https://github.com/google/agents-cli",
+      "clone": "google_agents-cli",
+      "commit": "2fa159a803aceec3b4df808901e53a08a6f1fb2a",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "extensions/claude/template/.agents/skills",
+        "extensions/langchain/template/.agents/skills",
+        "skills",
+        "src/google/agents/cli/skills/data"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "gworkspace",
+      "label": "Google Workspace",
+      "repo": "https://github.com/googleworkspace/cli",
+      "clone": "googleworkspace_cli",
+      "commit": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "alibaba",
+      "label": "Alibaba code review",
+      "repo": "https://github.com/alibaba/open-code-review",
+      "clone": "alibaba_open-code-review",
+      "commit": "5d6552adafb6cbedfb54793214b777cd134dc97b",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugins/open-code-review/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "rea",
+      "label": "Reverse engineering",
+      "repo": "https://github.com/morluto/rea",
+      "clone": "morluto_rea",
+      "commit": "93fb79e3b881c2997e0a625bab1c416de0e2e170",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        ".cursor-plugin/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "contexteng",
+      "label": "Context engineering",
+      "repo": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "clone": "muratcankoylan_Agent-Skills-for-Context-Engineering",
+      "commit": "9ff0c99108b36d3b886defd825d8ac1f47dba374",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".",
+        "examples",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "oxylabs",
+      "label": "Oxylabs",
+      "repo": "https://github.com/oxylabs/agent-skills",
+      "clone": "oxylabs_agent-skills",
+      "commit": "eae85fb5703096f3ea38b6b3f4bbaa684e8fe75f",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "skillspector",
+      "label": "NVIDIA Skill Inspector",
+      "repo": "https://github.com/NVIDIA/SkillSpector",
+      "clone": "NVIDIA_SkillSpector",
+      "commit": "4bd05188dcf3875c22ac20c6c203f65429d8fbad",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "gamedev",
+      "label": "Game development",
+      "repo": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "clone": "gamedev-skills_awesome-gamedev-agent-skills",
+      "commit": "c6ca6c41c839b68319ffc08430b99ab768debc32",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".",
+        "skills/disciplines",
+        "skills/ebitengine",
+        "skills/genres",
+        "skills/godot",
+        "skills/other-engines",
+        "skills/unity",
+        "skills/unreal",
+        "skills/web-engines",
+        "skills/workflows"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "devsec",
+      "label": "DevOps and security",
+      "repo": "https://github.com/BagelHole/DevOps-Security-Agent-Skills",
+      "clone": "BagelHole_DevOps-Security-Agent-Skills",
+      "commit": "0365f57a079b1332f95cf26e31dd2d5332a8399f",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "compliance/auditing",
+        "compliance/continuity",
+        "compliance/frameworks",
+        "compliance/governance",
+        "devops/ai",
+        "devops/ci-cd",
+        "devops/containers",
+        "devops/developer-experience",
+        "devops/observability",
+        "devops/orchestration",
+        "devops/platforms",
+        "devops/release",
+        "infrastructure/cloud-aws",
+        "infrastructure/cloud-azure",
+        "infrastructure/cloud-gcp",
+        "infrastructure/cloudflare",
+        "infrastructure/databases",
+        "infrastructure/iac",
+        "infrastructure/it",
+        "infrastructure/local-ai",
+        "infrastructure/networking",
+        "infrastructure/platforms",
+        "infrastructure/servers",
+        "infrastructure/storage",
+        "security/ai",
+        "security/hardening",
+        "security/network",
+        "security/operations",
+        "security/scanning",
+        "security/secrets"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "twilio",
+      "label": "Twilio",
+      "repo": "https://github.com/twilio/skills",
+      "clone": "twilio_skills",
+      "commit": "bb61456b5ac968d70d185f0a3df59511e58951ae",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills/sendgrid",
+        "skills/twilio"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "repo": "https://github.com/docker/skills",
+      "clone": "docker_skills",
+      "commit": "a65ae5b65d22f0613375d6c3e5ea8bb287698cc0",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "playwright",
+      "label": "Playwright",
+      "repo": "https://github.com/microsoft/playwright",
+      "clone": "microsoft_playwright",
+      "commit": "4df46f33c2d61eb8308f1ff36d5f08bfd27ca1d1",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".claude/skills",
+        "packages/playwright-core/src/tools/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "clapoff",
+      "label": "Anthropic official plugins",
+      "repo": "https://github.com/anthropics/claude-plugins-official",
+      "clone": "anthropics_claude-plugins-official",
+      "commit": "6d491811023d7af2c96a7fab274935922b29ed01",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "external_plugins/discord/skills",
+        "external_plugins/imessage/skills",
+        "external_plugins/telegram/skills",
+        "plugins/champion-kit/skills",
+        "plugins/claude-code-setup/skills",
+        "plugins/claude-for-manufacturing/skills",
+        "plugins/claude-md-management/skills",
+        "plugins/claude-security/skills",
+        "plugins/cwc-makers/skills",
+        "plugins/example-plugin/skills",
+        "plugins/frontend-design/skills",
+        "plugins/hookify/skills",
+        "plugins/math-olympiad/skills",
+        "plugins/math-proof/skills",
+        "plugins/mcp-server-dev/skills",
+        "plugins/playground/skills",
+        "plugins/plugin-dev/skills",
+        "plugins/project-artifact/skills",
+        "plugins/receipts/skills",
+        "plugins/session-report/skills",
+        "plugins/skill-creator/skills"
+      ],
+      "include": "clean"
     }
   ]
 }

@@ -51,7 +51,30 @@
       "lambdatest": "LambdaTest",
       "mattpocock": "TypeScript engineering (Matt Pocock)",
       "emilkowalski": "Frontend craft (Emil Kowalski)",
-      "typesafe": "TypeSafe"
+      "typesafe": "TypeSafe",
+      "prisma": "Prisma",
+      "tencent": "Tencent AI Infra Guard",
+      "capgo": "Cap-go",
+      "n8n": "n8n workflows",
+      "browseract": "Browser Act",
+      "coupler": "Coupler",
+      "acedata": "Ace Data Cloud",
+      "metalbear": "MetalBear",
+      "janestreet": "Jane Street",
+      "ghcopilot": "GitHub Copilot",
+      "gagents": "Google Agents CLI",
+      "gworkspace": "Google Workspace",
+      "alibaba": "Alibaba code review",
+      "rea": "Reverse engineering",
+      "contexteng": "Context engineering",
+      "oxylabs": "Oxylabs",
+      "skillspector": "NVIDIA Skill Inspector",
+      "gamedev": "Game development",
+      "devsec": "DevOps and security",
+      "twilio": "Twilio",
+      "docker": "Docker",
+      "playwright": "Playwright",
+      "clapoff": "Anthropic official plugins"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -98,7 +121,30 @@
       "lambdatest": "2026.11.17+298d868",
       "mattpocock": "2026.11.12+5863806",
       "emilkowalski": "2026.11.15+64eb3de",
-      "typesafe": "2026.10.23+302eea6"
+      "typesafe": "2026.10.23+302eea6",
+      "prisma": "2026.11.9+a6f1929",
+      "tencent": "2026.11.18+f54ac29",
+      "capgo": "2026.11.12+e82217b",
+      "n8n": "2026.11.18+ecdeca6",
+      "browseract": "2026.11.4+593316a",
+      "coupler": "2026.11.16+1b94038",
+      "acedata": "2026.11.18+fcf0e8e",
+      "metalbear": "2026.11.18+9bd05c7",
+      "janestreet": "2026.11.17+469868f",
+      "ghcopilot": "2026.11.18+a255a19",
+      "gagents": "2026.11.17+2fa159a",
+      "gworkspace": "2026.10.30+cd3697e",
+      "alibaba": "2026.11.18+5d6552a",
+      "rea": "2026.11.18+93fb79e",
+      "contexteng": "2026.10.11+9ff0c99",
+      "oxylabs": "2026.11.18+eae85fb",
+      "skillspector": "2026.11.18+4bd0518",
+      "gamedev": "2026.11.12+c6ca6c4",
+      "devsec": "2026.5.22+0365f57",
+      "twilio": "2026.11.10+bb61456",
+      "docker": "2026.11.13+a65ae5b",
+      "playwright": "2026.11.18+4df46f3",
+      "clapoff": "2026.11.18+6d49181"
     }
   },
   "plugins": [
@@ -936,6 +982,434 @@
         "Write a typed question for this System One model",
         "Debug this TypeSafe call",
         "Replace this prompt-and-parse step with TypeSafe"
+      ]
+    },
+    {
+      "name": "prisma-skills",
+      "displayName": "Prisma",
+      "version": "2026.11.9+a6f1929",
+      "description": "Eleven skills for Prisma: the CLI, the client API, compute, driver adapters, and setting up, upgrading and moving a project to Postgres or MongoDB.",
+      "author": "Prisma",
+      "license": "MIT",
+      "homepage": "https://github.com/prisma/skills",
+      "category": "Code",
+      "icon": "icons/prisma-skills.png",
+      "packages": [
+        "prisma"
+      ],
+      "exampleQueries": [
+        "Set up Prisma against this database",
+        "Upgrade this project to Prisma v7",
+        "Write the query for this model"
+      ]
+    },
+    {
+      "name": "tencent-ai-infra-skills",
+      "displayName": "Tencent AI Infra Guard",
+      "version": "2026.11.18+f54ac29",
+      "description": "Fourteen skills for securing agents and AI infrastructure: hardcoded secrets, path traversal, authorisation bypass, data leakage, memory poisoning, inter-agent communication, cascading failures and supply-chain detection.",
+      "author": "Tencent",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/Tencent/AI-Infra-Guard",
+      "category": "Code",
+      "icon": "icons/tencent-ai-infra-skills.png",
+      "packages": [
+        "tencent"
+      ],
+      "exampleQueries": [
+        "Check this code for hardcoded secrets",
+        "Look for memory poisoning in this agent",
+        "Is this agent handling authorisation correctly?"
+      ]
+    },
+    {
+      "name": "capgo-skills",
+      "displayName": "Cap-go",
+      "version": "2026.11.12+e82217b",
+      "description": "Fifty skills for Cap-go: shipping updates to apps that are already installed, upgrading a Capacitor app and its plugins, app store and Play Store releases, accessibility and app intents.",
+      "author": "Cap-go",
+      "license": "MIT",
+      "homepage": "https://github.com/Cap-go/capgo-skills",
+      "category": "Code",
+      "icon": "icons/capgo-skills.png",
+      "packages": [
+        "capgo"
+      ],
+      "exampleQueries": [
+        "Ship this fix to the installed app",
+        "Upgrade this Capacitor project to the next version",
+        "Get this build into the Play Store"
+      ]
+    },
+    {
+      "name": "n8n-skills",
+      "displayName": "n8n Workflows",
+      "version": "2026.11.18+ecdeca6",
+      "description": "Thirteen skills for n8n: writing nodes and code steps in JavaScript and Python, expressions, tools, binary and data handling, error handling, MCP tools, agents and multi-instance setups.",
+      "author": "czlonkowski",
+      "license": "MIT",
+      "homepage": "https://github.com/czlonkowski/n8n-skills",
+      "category": "Code",
+      "icon": "icons/n8n-skills.png",
+      "packages": [
+        "n8n"
+      ],
+      "exampleQueries": [
+        "Write the JavaScript for this n8n node",
+        "Fix this n8n expression",
+        "Set up an MCP tool in this workflow"
+      ]
+    },
+    {
+      "name": "browser-act-skills",
+      "displayName": "Browser Act",
+      "version": "2026.11.4+593316a",
+      "description": "Five skills for Browser Act: driving a real browser from an agent, forging new Skills for it, and the TikTok and Xiaohongshu workflows.",
+      "author": "Browser Act",
+      "license": "MIT",
+      "homepage": "https://github.com/browser-act/skills",
+      "category": "Code",
+      "icon": "icons/browser-act-skills.png",
+      "packages": [
+        "browseract"
+      ],
+      "exampleQueries": [
+        "Open this site and pull the data I need",
+        "Write a new Skill for this browser flow"
+      ]
+    },
+    {
+      "name": "coupler-skills",
+      "displayName": "Coupler",
+      "version": "2026.11.16+1b94038",
+      "description": "Seventy-eight skills for Coupler: connecting apps and data without hand-written glue, ecommerce and inventory reporting, ad spend and traffic analysis, and building data flows.",
+      "author": "Coupler",
+      "license": "MIT",
+      "homepage": "https://github.com/coupler-io/skills",
+      "category": "Code",
+      "icon": "icons/coupler-skills.png",
+      "packages": [
+        "coupler"
+      ],
+      "exampleQueries": [
+        "Sync the orders into this sheet",
+        "Set up a flow between these two apps",
+        "Build the weekly ad spend report"
+      ]
+    },
+    {
+      "name": "ace-data-cloud-skills",
+      "displayName": "Ace Data Cloud",
+      "version": "2026.11.18+fcf0e8e",
+      "description": "Fifty-six skills for the Ace Data Cloud APIs: image and video generation, face transforms, chat, uploads, and publishing to Devto, Douyin and the other channels.",
+      "author": "Ace Data Cloud",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/AceDataCloud/Skills",
+      "category": "Studio",
+      "icon": "icons/ace-data-cloud-skills.png",
+      "packages": [
+        "acedata"
+      ],
+      "exampleQueries": [
+        "Generate an image for this post",
+        "Publish this article to Devto",
+        "Turn this photo with a face transform"
+      ]
+    },
+    {
+      "name": "metalbear-skills",
+      "displayName": "MetalBear",
+      "version": "2026.11.18+9bd05c7",
+      "description": "Ten skills for mirrord: running against production, local Kafka and Temporal, database branching, header propagation, chaos testing, the operator and the quickstart.",
+      "author": "MetalBear",
+      "license": "MIT",
+      "homepage": "https://github.com/metalbear-co/skills",
+      "category": "Code",
+      "icon": "icons/metalbear-skills.png",
+      "packages": [
+        "metalbear"
+      ],
+      "exampleQueries": [
+        "Run this against the real service locally",
+        "Branch the database for this test",
+        "Test what happens when this service fails"
+      ]
+    },
+    {
+      "name": "jane-street-skills",
+      "displayName": "Jane Street",
+      "version": "2026.11.17+469868f",
+      "description": "One skill from Jane Street: a Socratic tutor that asks you the questions instead of handing you the answer.",
+      "author": "Jane Street",
+      "license": "MIT",
+      "homepage": "https://github.com/janestreet/agent_skills",
+      "category": "Code",
+      "icon": "icons/jane-street-skills.png",
+      "packages": [
+        "janestreet"
+      ],
+      "exampleQueries": [
+        "Quiz me on this topic",
+        "Ask me questions until I understand it"
+      ]
+    },
+    {
+      "name": "github-copilot-skills",
+      "displayName": "GitHub Copilot",
+      "version": "2026.11.18+a255a19",
+      "description": "392 skills from GitHub’s Copilot collection: API breaking-change detection, agent governance and evaluation, OWASP and supply-chain review, accessibility, and a wide set of framework and platform ones.",
+      "author": "GitHub",
+      "license": "MIT",
+      "homepage": "https://github.com/github/awesome-copilot",
+      "category": "Code",
+      "icon": "icons/github-copilot-skills.png",
+      "packages": [
+        "ghcopilot"
+      ],
+      "exampleQueries": [
+        "Did this change break the API?",
+        "Review this repo against the OWASP agentic guidance",
+        "Generate the instructions for this repo"
+      ]
+    },
+    {
+      "name": "google-agents-skills",
+      "displayName": "Google Agents CLI",
+      "version": "2026.11.17+2fa159a",
+      "description": "Nine skills for the Google Agents CLI: scaffolding an ADK project, writing agent code and workflows, evaluating and observing them, deploying and publishing, and the Claude and LangChain templates.",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/google/agents-cli",
+      "category": "Code",
+      "icon": "icons/google-agents-skills.png",
+      "packages": [
+        "gagents"
+      ],
+      "exampleQueries": [
+        "Scaffold an ADK agent project",
+        "Evaluate this agent before I deploy it",
+        "Deploy this agent to Google Cloud"
+      ]
+    },
+    {
+      "name": "google-workspace-skills",
+      "displayName": "Google Workspace",
+      "version": "2026.10.30+cd3697e",
+      "description": "Ninety-three skills for Google Workspace: Drive, Docs, Sheets and uploads, Gmail, Calendar and agenda, Classroom, Chat, Admin reports and the events API.",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/googleworkspace/cli",
+      "category": "Productivity",
+      "icon": "icons/google-workspace-skills.png",
+      "packages": [
+        "gworkspace"
+      ],
+      "exampleQueries": [
+        "Read the latest Gmail about this project",
+        "Put this on the team calendar",
+        "Pull this sheet into the report"
+      ]
+    },
+    {
+      "name": "alibaba-code-review-skills",
+      "displayName": "Alibaba Code Review",
+      "version": "2026.11.18+5d6552a",
+      "description": "Two skills for Alibaba’s open code review: running a review and handing one to another agent.",
+      "author": "Alibaba",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/alibaba/open-code-review",
+      "category": "Code",
+      "icon": "icons/alibaba-code-review-skills.png",
+      "packages": [
+        "alibaba"
+      ],
+      "exampleQueries": [
+        "Run a code review on this branch",
+        "Delegate this review to another agent"
+      ]
+    },
+    {
+      "name": "reverse-engineering-skills",
+      "displayName": "Reverse Engineering",
+      "version": "2026.11.18+93fb79e",
+      "description": "One skill for reverse engineering: working out how an application behaves from the outside, from binaries, network traffic and data.",
+      "author": "Morluto",
+      "license": "MIT",
+      "homepage": "https://github.com/morluto/rea",
+      "category": "Code",
+      "icon": "icons/reverse-engineering-skills.png",
+      "packages": [
+        "rea"
+      ],
+      "exampleQueries": [
+        "Work out how this app works",
+        "What is this binary doing?"
+      ]
+    },
+    {
+      "name": "context-engineering-skills",
+      "displayName": "Context Engineering",
+      "version": "2026.10.11+9ff0c99",
+      "description": "Five skills for context engineering: managing a long context, compressing it, spotting degradation, latent briefing, long-horizon prompting and self-improvement loops.",
+      "author": "Muratcan Koylan",
+      "license": "MIT",
+      "homepage": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "category": "Code",
+      "icon": "icons/context-engineering-skills.png",
+      "packages": [
+        "contexteng"
+      ],
+      "exampleQueries": [
+        "Compress this context without losing the decisions",
+        "This session is getting long — what should I drop?"
+      ]
+    },
+    {
+      "name": "oxylabs-skills",
+      "displayName": "Oxylabs",
+      "version": "2026.11.18+eae85fb",
+      "description": "Four skills for the Oxylabs products: the Web Scraper API, the Web Unblocker, residential proxies and video data.",
+      "author": "Oxylabs",
+      "license": "MIT",
+      "homepage": "https://github.com/oxylabs/agent-skills",
+      "category": "Code",
+      "icon": "icons/oxylabs-skills.png",
+      "packages": [
+        "oxylabs"
+      ],
+      "exampleQueries": [
+        "Scrape this page through the Web Scraper API",
+        "Get past this block with the Web Unblocker"
+      ]
+    },
+    {
+      "name": "skill-inspector-skills",
+      "displayName": "NVIDIA Skill Inspector",
+      "version": "2026.11.18+4bd0518",
+      "description": "One skill from NVIDIA: inspecting agent Skills for vulnerabilities and unsafe instructions before you run them.",
+      "author": "NVIDIA",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/NVIDIA/SkillSpector",
+      "category": "Code",
+      "icon": "icons/skill-inspector-skills.png",
+      "packages": [
+        "skillspector"
+      ],
+      "exampleQueries": [
+        "Check this Skill before I install it",
+        "Does this Skill do anything unsafe?"
+      ]
+    },
+    {
+      "name": "game-development-skills",
+      "displayName": "Game Development",
+      "version": "2026.11.12+c6ca6c4",
+      "description": "Sixty-three skills for game development: AI behaviour trees and utility AI, camera systems, audio, dialogue, card games, FPS and Bevy ECS.",
+      "author": "gamedev-skills",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "category": "Code",
+      "icon": "icons/game-development-skills.png",
+      "packages": [
+        "gamedev"
+      ],
+      "exampleQueries": [
+        "Write the behaviour tree for this enemy",
+        "Set up the camera in this game",
+        "How do I structure this Bevy ECS?"
+      ]
+    },
+    {
+      "name": "devops-security-skills",
+      "displayName": "DevOps and Security",
+      "version": "2026.5.22+0365f57",
+      "description": "Fifty skills for DevOps, security and compliance: CI/CD, containers, orchestration, observability, platforms and release, infrastructure as code, cloud setups for AWS, Azure, GCP and Cloudflare, databases, networking, secrets, scanning, hardening and audit logging.",
+      "author": "BagelHole",
+      "license": "MIT",
+      "homepage": "https://github.com/BagelHole/DevOps-Security-Agent-Skills",
+      "category": "Code",
+      "icon": "icons/devops-security-skills.png",
+      "packages": [
+        "devsec"
+      ],
+      "exampleQueries": [
+        "Set up CI/CD for this service",
+        "Harden this server",
+        "Write the audit log for this action"
+      ]
+    },
+    {
+      "name": "twilio-skills",
+      "displayName": "Twilio",
+      "version": "2026.11.10+bb61456",
+      "description": "One skill for Twilio: moving a messaging integration over to Verify.",
+      "author": "Twilio",
+      "license": "MIT",
+      "homepage": "https://github.com/twilio/skills",
+      "category": "Code",
+      "icon": "icons/twilio-skills.png",
+      "packages": [
+        "twilio"
+      ],
+      "exampleQueries": [
+        "Migrate this messaging code to Twilio Verify"
+      ]
+    },
+    {
+      "name": "docker-skills",
+      "displayName": "Docker",
+      "version": "2026.11.13+a65ae5b",
+      "description": "Seven skills for Docker: running and deploying containers, agent configuration, sandboxes with their network and credentials, guardrails against destructive commands, and the documentation.",
+      "author": "Docker",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/docker/skills",
+      "category": "Code",
+      "icon": "icons/docker-skills.png",
+      "packages": [
+        "docker"
+      ],
+      "exampleQueries": [
+        "Run this container with my change",
+        "Set up a sandbox for this agent",
+        "Is this Docker command destructive?"
+      ]
+    },
+    {
+      "name": "playwright-skills",
+      "displayName": "Playwright",
+      "version": "2026.11.18+4df46f3",
+      "description": "Five skills for Playwright: driving the browser from the command line, reading a trace, making sense of test results, picking a change back into the right branch, and the release notes.",
+      "author": "Microsoft",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/microsoft/playwright",
+      "category": "Code",
+      "icon": "icons/playwright-skills.png",
+      "packages": [
+        "playwright"
+      ],
+      "exampleQueries": [
+        "Run this test and show me the trace",
+        "Pick this fix into the right branch",
+        "What changed in this Playwright release?"
+      ]
+    },
+    {
+      "name": "anthropic-plugins-skills",
+      "displayName": "Anthropic Plugins",
+      "version": "2026.11.18+6d49181",
+      "description": "Thirty-eight skills from Anthropic’s own plugin collection: working with Discord, iMessage and Telegram, building MCP servers and apps, security review, plugin and Skill development, and the frontend and maths plugins.",
+      "author": "Anthropic",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/anthropics/claude-plugins-official",
+      "category": "Code",
+      "icon": "icons/anthropic-plugins-skills.png",
+      "packages": [
+        "clapoff"
+      ],
+      "exampleQueries": [
+        "Build an MCP server for this API",
+        "Review this plugin for security",
+        "Set up the Telegram integration"
       ]
     },
     {

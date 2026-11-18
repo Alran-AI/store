@@ -567,6 +567,296 @@
         "Debug this TypeSafe call",
         "Replace this prompt-and-parse step with TypeSafe"
       ]
+    },
+    {
+      "source": "docker",
+      "name": "docker-skills",
+      "displayName": "Docker",
+      "author": "Docker",
+      "category": "Code",
+      "description": "{N} skills for Docker: running and deploying containers, agent configuration, sandboxes with their network and credentials, guardrails against destructive commands, and the documentation.",
+      "exampleQueries": [
+        "Run this container with my change",
+        "Set up a sandbox for this agent",
+        "Is this Docker command destructive?"
+      ]
+    },
+    {
+      "source": "twilio",
+      "name": "twilio-skills",
+      "displayName": "Twilio",
+      "author": "Twilio",
+      "category": "Code",
+      "description": "{N} skill for Twilio: moving a messaging integration over to Verify.",
+      "exampleQueries": [
+        "Migrate this messaging code to Twilio Verify"
+      ]
+    },
+    {
+      "source": "gworkspace",
+      "name": "google-workspace-skills",
+      "displayName": "Google Workspace",
+      "author": "Google",
+      "category": "Productivity",
+      "description": "{N} skills for Google Workspace: Drive, Docs, Sheets and uploads, Gmail, Calendar and agenda, Classroom, Chat, Admin reports and the events API.",
+      "exampleQueries": [
+        "Read the latest Gmail about this project",
+        "Put this on the team calendar",
+        "Pull this sheet into the report"
+      ]
+    },
+    {
+      "source": "gagents",
+      "name": "google-agents-skills",
+      "displayName": "Google Agents CLI",
+      "author": "Google",
+      "category": "Code",
+      "description": "{N} skills for the Google Agents CLI: scaffolding an ADK project, writing agent code and workflows, evaluating and observing them, deploying and publishing, and the Claude and LangChain templates.",
+      "exampleQueries": [
+        "Scaffold an ADK agent project",
+        "Evaluate this agent before I deploy it",
+        "Deploy this agent to Google Cloud"
+      ]
+    },
+    {
+      "source": "prisma",
+      "name": "prisma-skills",
+      "displayName": "Prisma",
+      "author": "Prisma",
+      "category": "Code",
+      "description": "{N} skills for Prisma: the CLI, the client API, compute, driver adapters, and setting up, upgrading and moving a project to Postgres or MongoDB.",
+      "exampleQueries": [
+        "Set up Prisma against this database",
+        "Upgrade this project to Prisma v7",
+        "Write the query for this model"
+      ]
+    },
+    {
+      "source": "playwright",
+      "name": "playwright-skills",
+      "displayName": "Playwright",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for Playwright: driving the browser from the command line, reading a trace, making sense of test results, picking a change back into the right branch, and the release notes.",
+      "exampleQueries": [
+        "Run this test and show me the trace",
+        "Pick this fix into the right branch",
+        "What changed in this Playwright release?"
+      ]
+    },
+    {
+      "source": "clapoff",
+      "name": "anthropic-plugins-skills",
+      "displayName": "Anthropic Plugins",
+      "author": "Anthropic",
+      "category": "Code",
+      "description": "{N} skills from Anthropic’s own plugin collection: working with Discord, iMessage and Telegram, building MCP servers and apps, security review, plugin and Skill development, and the frontend and maths plugins.",
+      "exampleQueries": [
+        "Build an MCP server for this API",
+        "Review this plugin for security",
+        "Set up the Telegram integration"
+      ]
+    },
+    {
+      "source": "ghcopilot",
+      "name": "github-copilot-skills",
+      "displayName": "GitHub Copilot",
+      "author": "GitHub",
+      "category": "Code",
+      "description": "{N} skills from GitHub’s Copilot collection: API breaking-change detection, agent governance and evaluation, OWASP and supply-chain review, accessibility, and a wide set of framework and platform ones.",
+      "exampleQueries": [
+        "Did this change break the API?",
+        "Review this repo against the OWASP agentic guidance",
+        "Generate the instructions for this repo"
+      ]
+    },
+    {
+      "source": "alibaba",
+      "name": "alibaba-code-review-skills",
+      "displayName": "Alibaba Code Review",
+      "author": "Alibaba",
+      "category": "Code",
+      "description": "{N} skills for Alibaba’s open code review: running a review and handing one to another agent.",
+      "exampleQueries": [
+        "Run a code review on this branch",
+        "Delegate this review to another agent"
+      ]
+    },
+    {
+      "source": "tencent",
+      "name": "tencent-ai-infra-skills",
+      "displayName": "Tencent AI Infra Guard",
+      "author": "Tencent",
+      "category": "Code",
+      "description": "{N} skills for securing agents and AI infrastructure: hardcoded secrets, path traversal, authorisation bypass, data leakage, memory poisoning, inter-agent communication, cascading failures and supply-chain detection.",
+      "exampleQueries": [
+        "Check this code for hardcoded secrets",
+        "Look for memory poisoning in this agent",
+        "Is this agent handling authorisation correctly?"
+      ]
+    },
+    {
+      "source": "capgo",
+      "name": "capgo-skills",
+      "displayName": "Cap-go",
+      "author": "Cap-go",
+      "category": "Code",
+      "description": "{N} skills for Cap-go: shipping updates to apps that are already installed, upgrading a Capacitor app and its plugins, app store and Play Store releases, accessibility and app intents.",
+      "exampleQueries": [
+        "Ship this fix to the installed app",
+        "Upgrade this Capacitor project to the next version",
+        "Get this build into the Play Store"
+      ]
+    },
+    {
+      "source": "coupler",
+      "name": "coupler-skills",
+      "displayName": "Coupler",
+      "author": "Coupler",
+      "category": "Code",
+      "description": "{N} skills for Coupler: connecting apps and data without hand-written glue, ecommerce and inventory reporting, ad spend and traffic analysis, and building data flows.",
+      "exampleQueries": [
+        "Sync the orders into this sheet",
+        "Set up a flow between these two apps",
+        "Build the weekly ad spend report"
+      ]
+    },
+    {
+      "source": "browseract",
+      "name": "browser-act-skills",
+      "displayName": "Browser Act",
+      "author": "Browser Act",
+      "category": "Code",
+      "description": "{N} skills for Browser Act: driving a real browser from an agent, forging new Skills for it, and the TikTok and Xiaohongshu workflows.",
+      "exampleQueries": [
+        "Open this site and pull the data I need",
+        "Write a new Skill for this browser flow"
+      ]
+    },
+    {
+      "source": "acedata",
+      "name": "ace-data-cloud-skills",
+      "displayName": "Ace Data Cloud",
+      "author": "Ace Data Cloud",
+      "category": "Studio",
+      "description": "{N} skills for the Ace Data Cloud APIs: image and video generation, face transforms, chat, uploads, and publishing to Devto, Douyin and the other channels.",
+      "exampleQueries": [
+        "Generate an image for this post",
+        "Publish this article to Devto",
+        "Turn this photo with a face transform"
+      ]
+    },
+    {
+      "source": "n8n",
+      "name": "n8n-skills",
+      "displayName": "n8n Workflows",
+      "author": "czlonkowski",
+      "category": "Code",
+      "description": "{N} skills for n8n: writing nodes and code steps in JavaScript and Python, expressions, tools, binary and data handling, error handling, MCP tools, agents and multi-instance setups.",
+      "exampleQueries": [
+        "Write the JavaScript for this n8n node",
+        "Fix this n8n expression",
+        "Set up an MCP tool in this workflow"
+      ]
+    },
+    {
+      "source": "oxylabs",
+      "name": "oxylabs-skills",
+      "displayName": "Oxylabs",
+      "author": "Oxylabs",
+      "category": "Code",
+      "description": "{N} skills for the Oxylabs products: the Web Scraper API, the Web Unblocker, residential proxies and video data.",
+      "exampleQueries": [
+        "Scrape this page through the Web Scraper API",
+        "Get past this block with the Web Unblocker"
+      ]
+    },
+    {
+      "source": "devsec",
+      "name": "devops-security-skills",
+      "displayName": "DevOps and Security",
+      "author": "BagelHole",
+      "category": "Code",
+      "description": "{N} skills for DevOps, security and compliance: CI/CD, containers, orchestration, observability, platforms and release, infrastructure as code, cloud setups for AWS, Azure, GCP and Cloudflare, databases, networking, secrets, scanning, hardening and audit logging.",
+      "exampleQueries": [
+        "Set up CI/CD for this service",
+        "Harden this server",
+        "Write the audit log for this action"
+      ]
+    },
+    {
+      "source": "contexteng",
+      "name": "context-engineering-skills",
+      "displayName": "Context Engineering",
+      "author": "Muratcan Koylan",
+      "category": "Code",
+      "description": "{N} skills for context engineering: managing a long context, compressing it, spotting degradation, latent briefing, long-horizon prompting and self-improvement loops.",
+      "exampleQueries": [
+        "Compress this context without losing the decisions",
+        "This session is getting long — what should I drop?"
+      ]
+    },
+    {
+      "source": "gamedev",
+      "name": "game-development-skills",
+      "displayName": "Game Development",
+      "author": "gamedev-skills",
+      "category": "Code",
+      "description": "{N} skills for game development: AI behaviour trees and utility AI, camera systems, audio, dialogue, card games, FPS and Bevy ECS.",
+      "exampleQueries": [
+        "Write the behaviour tree for this enemy",
+        "Set up the camera in this game",
+        "How do I structure this Bevy ECS?"
+      ]
+    },
+    {
+      "source": "skillspector",
+      "name": "skill-inspector-skills",
+      "displayName": "NVIDIA Skill Inspector",
+      "author": "NVIDIA",
+      "category": "Code",
+      "description": "{N} skill from NVIDIA: inspecting agent Skills for vulnerabilities and unsafe instructions before you run them.",
+      "exampleQueries": [
+        "Check this Skill before I install it",
+        "Does this Skill do anything unsafe?"
+      ]
+    },
+    {
+      "source": "rea",
+      "name": "reverse-engineering-skills",
+      "displayName": "Reverse Engineering",
+      "author": "Morluto",
+      "category": "Code",
+      "description": "{N} skill for reverse engineering: working out how an application behaves from the outside, from binaries, network traffic and data.",
+      "exampleQueries": [
+        "Work out how this app works",
+        "What is this binary doing?"
+      ]
+    },
+    {
+      "source": "janestreet",
+      "name": "jane-street-skills",
+      "displayName": "Jane Street",
+      "author": "Jane Street",
+      "category": "Code",
+      "description": "{N} skill from Jane Street: a Socratic tutor that asks you the questions instead of handing you the answer.",
+      "exampleQueries": [
+        "Quiz me on this topic",
+        "Ask me questions until I understand it"
+      ]
+    },
+    {
+      "source": "metalbear",
+      "name": "metalbear-skills",
+      "displayName": "MetalBear",
+      "author": "MetalBear",
+      "category": "Code",
+      "description": "{N} skills for mirrord: running against production, local Kafka and Temporal, database branching, header propagation, chaos testing, the operator and the quickstart.",
+      "exampleQueries": [
+        "Run this against the real service locally",
+        "Branch the database for this test",
+        "Test what happens when this service fails"
+      ]
     }
   ]
 }

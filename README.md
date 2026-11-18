@@ -6,21 +6,24 @@ own licence. All are **unmodified**, except the Superpowers package, whose diffe
 listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **46 Plugins**
-(45 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **968
-individually installable Skills**; 1003 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **69 Plugins**
+(68 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **1877
+individually installable Skills**; 1912 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
 Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
 call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package) |
-| Cloud and hosting | Cloudflare, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski) |
+| Cloud and hosting | Cloudflare, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker |
 | Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt |
-| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io |
-| Review and quality | Sentry engineering, CodeRabbit, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), LambdaTest |
+| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Prisma, MetalBear (mirrord) |
+| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud |
+| Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs |
+| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector |
+| Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit, Google Agents CLI |
 | Business | Marketing (Corey Haines), Product management (Paweł Huryn) |
-| Science | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe |
+| Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street |
 
 ```sh
 alran plugin marketplace add /path/to/alran-store/store     # or the URL it is hosted at
@@ -95,7 +98,8 @@ A source lists its Skills by name, or takes `"include": "clean"`: every Skill th
 `scripts/vendor.mjs` takes a Skill only if
 
 - it has no script or executable and nothing but plain text files (`.md`, `.txt`, `.json`, `.yaml`, `.csv`),
-  no symlinks, and only file names a portable archive can hold;
+  no symlinks, and only file names a portable archive can hold. An image is left out as well, so that every
+  file in the store can be read;
 - its `SKILL.md` names its own folder, and its name is not one of the Skills built in to Alran Code;
 - it has no invisible characters or data URIs, and no line that pipes a download into a shell, decodes a base64
   blob, loads a remote script or tells the model to ignore its instructions (unless the line itself marks it
@@ -155,6 +159,21 @@ Facts about the source, not quality judgements:
   scripts, or a line that pipes a download into a shell.
 - [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) (BSD-3-Clause): its Skills
   carry `.qml` and `.py` files, and some ship a licence file of their own.
+- [twilio/skills](https://github.com/twilio/skills) (MIT): 56 of its 57 Skills carry a PNG icon, so only the one
+  without an image is in the store. The rule above is what keeps the store text-only; allowing `.png` and
+  `.jpg` would bring the other 56 in.
+- [MetaMask/agent-skills](https://github.com/MetaMask/agent-skills) (MIT): its Skill ships Python scripts.
+- [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) (MIT): the validator
+  scripts are the Skill, and it cannot do its work without them.
+- [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) (Apache-2.0): every Skill
+  carries an SVG icon.
+- [vmware-skills/VMware-AIops](https://github.com/vmware-skills/VMware-AIops) (MIT): its Skill links to Skills
+  the repository does not carry.
+- [n8n-io/n8n](https://github.com/n8n-io/n8n): the Sustainable Use License, which is not an open-source licence.
+  The community [n8n skills](https://github.com/czlonkowski/n8n-skills) (MIT) are in the store.
+- [snyk/agent-scan](https://github.com/snyk/agent-scan) (Apache-2.0): the Skills in it are test fixtures.
+- [NVIDIA/skills](https://github.com/NVIDIA/skills) and [angular/skills](https://github.com/angular/skills):
+  no licence file.
 - [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) (Apache-2.0): its
   Skills assume MCP connectors for Slack, Linear and similar, which are not set up here.
 - [openai/skills](https://github.com/openai/skills) and [anthropics/skills](https://github.com/anthropics/skills):

@@ -605,3 +605,698 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `improve-animations`: PLAN-TEMPLATE.md contains invisible characters; SKILL.md contains an instruction-override phrase
 - `prototype`: the name is already taken by mattpocock
 - `remove-animations`: SKILL.md contains an instruction-override phrase
+
+## tencent (7)
+
+- `aig-agent-redteam`: assets/templates/report.html is not a plain text file (.html); modules/infra-attack/scripts/fingerprint_engine.py is not a plain text file (.py); modules/infra-attack/scripts/run.py is not a plain text file (.py); modules/infra-attack/scripts/vuln_engine.py is not a plain text file (.py); modules/mutation-attack/scripts/encodings.py is not a plain text file (.py); modules/mutation-attack/scripts/render_operator.py is not a plain text file (.py); modules/mutation-attack/scripts/run.py is not a plain text file (.py); modules/mutation-attack/scripts/select_operators.py is not a plain text file (.py); modules/mutation-attack/scripts/validate_ledger.py is not a plain text file (.py); scripts/aggregator.py is not a plain text file (.py); scripts/aig_data.py is not a plain text file (.py); scripts/common/http_probe.py is not a plain text file (.py); scripts/common/llm_client.py is not a plain text file (.py); scripts/dispatcher.py is not a plain text file (.py); scripts/profiler.py is not a plain text file (.py); modules/mutation-attack/operators/stego_zero_width.md contains invisible characters
+- `carriers`: SKILL.md names another skill than its folder; __init__.py is not a plain text file (.py); _make_pdf.py is not a plain text file (.py); calendar.ics is not a plain text file (.ics); code.py is not a plain text file (.py); email.eml is not a plain text file (.eml); logfile.log is not a plain text file (.log); report.pdf is not a plain text file (.pdf); webpage.html is not a plain text file (.html)
+- `demo_skill`: "demo_skill" is not a Skill name; SKILL.md names another skill than its folder
+- `direct-injection-detection`: SKILL.md contains an instruction-override phrase
+- `edgeone-skill-scanner`: SKILL.md names another skill than its folder
+- `indirect-injection-detection`: SKILL.md contains an instruction-override phrase
+- `unexpected-code-execution-detection`: SKILL.md pipes a download into a shell
+
+## capgo (63)
+
+- `broken-skill`: SKILL.md names another skill than its folder
+- `broken-skill`: SKILL.md names another skill than its folder
+- `capacitor-accessibility`: another copy of this Skill in this source (skills/capacitor-accessibility) was left out; the store holds one copy
+- `capacitor-app-intents`: another copy of this Skill in this source (skills/capacitor-app-intents) was left out; the store holds one copy
+- `capacitor-app-store`: another copy of this Skill in this source (skills/capacitor-app-store) was left out; the store holds one copy
+- `capacitor-app-upgrade-v4-to-v5`: another copy of this Skill in this source (skills/capacitor-app-upgrade-v4-to-v5) was left out; the store holds one copy
+- `capacitor-app-upgrade-v5-to-v6`: another copy of this Skill in this source (skills/capacitor-app-upgrade-v5-to-v6) was left out; the store holds one copy
+- `capacitor-app-upgrade-v6-to-v7`: another copy of this Skill in this source (skills/capacitor-app-upgrade-v6-to-v7) was left out; the store holds one copy
+- `capacitor-app-upgrade-v7-to-v8`: another copy of this Skill in this source (skills/capacitor-app-upgrade-v7-to-v8) was left out; the store holds one copy
+- `capacitor-app-upgrade-v8-to-v9`: another copy of this Skill in this source (skills/capacitor-app-upgrade-v8-to-v9) was left out; the store holds one copy
+- `capacitor-app-upgrades`: another copy of this Skill in this source (skills/capacitor-app-upgrades) was left out; the store holds one copy
+- `capacitor-apple-review-preflight`: another copy of this Skill in this source (skills/capacitor-apple-review-preflight) was left out; the store holds one copy
+- `capacitor-best-practices`: another copy of this Skill in this source (skills/capacitor-best-practices) was left out; the store holds one copy
+- `capacitor-ci-cd`: references/github-actions.md decodes a base64 blob; references/gitlab-ci.md decodes a base64 blob; references/signing-and-secrets.md decodes a base64 blob
+- `capacitor-ci-cd`: references/github-actions.md decodes a base64 blob; references/gitlab-ci.md decodes a base64 blob; references/signing-and-secrets.md decodes a base64 blob
+- `capacitor-deep-linking`: another copy of this Skill in this source (skills/capacitor-deep-linking) was left out; the store holds one copy
+- `capacitor-ios-resizability`: scripts/scan-legacy-apis.sh is not a plain text file (.sh)
+- `capacitor-ios-resizability`: scripts/scan-legacy-apis.sh is not a plain text file (.sh)
+- `capacitor-ios-security-hardening`: scripts/audit-build-settings.mjs is not a plain text file (.mjs)
+- `capacitor-ios-security-hardening`: scripts/audit-build-settings.mjs is not a plain text file (.mjs)
+- `capacitor-keyboard`: another copy of this Skill in this source (skills/capacitor-keyboard) was left out; the store holds one copy
+- `capacitor-mcp`: another copy of this Skill in this source (skills/capacitor-mcp) was left out; the store holds one copy
+- `capacitor-offline-first`: another copy of this Skill in this source (skills/capacitor-offline-first) was left out; the store holds one copy
+- `capacitor-performance`: another copy of this Skill in this source (skills/capacitor-performance) was left out; the store holds one copy
+- `capacitor-plugin-spm-support`: another copy of this Skill in this source (skills/capacitor-plugin-spm-support) was left out; the store holds one copy
+- `capacitor-plugin-upgrade-v4-to-v5`: another copy of this Skill in this source (skills/capacitor-plugin-upgrade-v4-to-v5) was left out; the store holds one copy
+- `capacitor-plugin-upgrade-v5-to-v6`: another copy of this Skill in this source (skills/capacitor-plugin-upgrade-v5-to-v6) was left out; the store holds one copy
+- `capacitor-plugin-upgrade-v6-to-v7`: another copy of this Skill in this source (skills/capacitor-plugin-upgrade-v6-to-v7) was left out; the store holds one copy
+- `capacitor-plugin-upgrade-v7-to-v8`: another copy of this Skill in this source (skills/capacitor-plugin-upgrade-v7-to-v8) was left out; the store holds one copy
+- `capacitor-plugin-upgrade-v8-to-v9`: another copy of this Skill in this source (skills/capacitor-plugin-upgrade-v8-to-v9) was left out; the store holds one copy
+- `capacitor-plugin-upgrades`: another copy of this Skill in this source (skills/capacitor-plugin-upgrades) was left out; the store holds one copy
+- `capacitor-plugins`: another copy of this Skill in this source (skills/capacitor-plugins) was left out; the store holds one copy
+- `capacitor-push-notifications`: another copy of this Skill in this source (skills/capacitor-push-notifications) was left out; the store holds one copy
+- `capacitor-security`: another copy of this Skill in this source (skills/capacitor-security) was left out; the store holds one copy
+- `capacitor-splash-screen`: another copy of this Skill in this source (skills/capacitor-splash-screen) was left out; the store holds one copy
+- `capacitor-testing`: another copy of this Skill in this source (skills/capacitor-testing) was left out; the store holds one copy
+- `capacitor-uiscene-migration`: another copy of this Skill in this source (plugins/capacitor-plugin-dev/skills/capacitor-uiscene-migration) was left out; the store holds one copy
+- `capacitor-uiscene-migration`: another copy of this Skill in this source (skills/capacitor-uiscene-migration) was left out; the store holds one copy
+- `capawesome-live-update-migration`: another copy of this Skill in this source (skills/capawesome-live-update-migration) was left out; the store holds one copy
+- `capgo-cli-usage`: another copy of this Skill in this source (skills/capgo-cli-usage) was left out; the store holds one copy
+- `capgo-cloud`: another copy of this Skill in this source (skills/capgo-cloud) was left out; the store holds one copy
+- `capgo-live-updates`: another copy of this Skill in this source (skills/capgo-live-updates) was left out; the store holds one copy
+- `capgo-native-builds`: another copy of this Skill in this source (skills/capgo-native-builds) was left out; the store holds one copy
+- `capgo-organization-management`: another copy of this Skill in this source (skills/capgo-organization-management) was left out; the store holds one copy
+- `capgo-release-management`: another copy of this Skill in this source (skills/capgo-release-management) was left out; the store holds one copy
+- `capgo-release-workflows`: another copy of this Skill in this source (skills/capgo-release-workflows) was left out; the store holds one copy
+- `cocoapods-to-spm`: another copy of this Skill in this source (skills/cocoapods-to-spm) was left out; the store holds one copy
+- `cordova-to-capacitor`: another copy of this Skill in this source (skills/cordova-to-capacitor) was left out; the store holds one copy
+- `debugging-capacitor`: another copy of this Skill in this source (skills/debugging-capacitor) was left out; the store holds one copy
+- `framework-to-capacitor`: another copy of this Skill in this source (skills/framework-to-capacitor) was left out; the store holds one copy
+- `ionic-appflow-migration`: another copy of this Skill in this source (skills/ionic-appflow-migration) was left out; the store holds one copy
+- `ionic-design`: another copy of this Skill in this source (skills/ionic-design) was left out; the store holds one copy
+- `ionic-enterprise-sdk-migration`: another copy of this Skill in this source (skills/ionic-enterprise-sdk-migration) was left out; the store holds one copy
+- `ios-android-logs`: another copy of this Skill in this source (skills/ios-android-logs) was left out; the store holds one copy
+- `konsta-ui`: another copy of this Skill in this source (skills/konsta-ui) was left out; the store holds one copy
+- `safe-area-handling`: another copy of this Skill in this source (skills/safe-area-handling) was left out; the store holds one copy
+- `skill-creator`: graders/check-skill.js is not a plain text file (.js); the name belongs to a Skill built in to Alran Code
+- `skill-creator`: graders/check-skill.js is not a plain text file (.js); the name belongs to a Skill built in to Alran Code
+- `sqlite-to-fast-sql`: another copy of this Skill in this source (skills/sqlite-to-fast-sql) was left out; the store holds one copy
+- `subscription-app-revenue`: another copy of this Skill in this source (skills/subscription-app-revenue) was left out; the store holds one copy
+- `tailwind-capacitor`: another copy of this Skill in this source (skills/tailwind-capacitor) was left out; the store holds one copy
+- `webapp-to-capacitor`: another copy of this Skill in this source (skills/webapp-to-capacitor) was left out; the store holds one copy
+- `capacitor-plugin-upgrade-v8-to-v9`: links to /updating/plugins/3-0, which is not in the store
+
+## n8n (2)
+
+- `n8n-self-hosting`: assets/.env.queue.example is not a plain text file (.example); assets/.env.single.example is not a plain text file (.example); assets/init-data.sh is not a plain text file (.sh)
+- `n8n-workflow-patterns`: links to ../../n8n-expression-syntax/SKILL.md, which is not in the store
+
+## browseract (98)
+
+- `1688-product-detail`: scripts/extract-product-detail.py is not a plain text file (.py); scripts/extract-promotions.py is not a plain text file (.py); scripts/extract-seller-params.py is not a plain text file (.py); scripts/extract-sku-details.py is not a plain text file (.py)
+- `airbnb-listing-detail`: scripts/listing-detail.py is not a plain text file (.py)
+- `airbnb-search-listing`: scripts/search-listing.py is not a plain text file (.py)
+- `amazon-alexa-qa`: scripts/check-alexa-panel.py is not a plain text file (.py); scripts/extract-response.py is not a plain text file (.py); scripts/inject-question.py is not a plain text file (.py)
+- `amazon-asin-lookup-api-skill`: scripts/amazon_asin_lookup_api.py is not a plain text file (.py)
+- `amazon-best-selling-products-finder-api-skill`: scripts/amazon_best_selling_products_finder_api.py is not a plain text file (.py)
+- `amazon-bestseller-listing`: scripts/extract-bestseller.py is not a plain text file (.py)
+- `amazon-buy-box-monitor-api-skill`: scripts/amazon_buy_box_monitor_api.py is not a plain text file (.py)
+- `amazon-competitor-analyzer`: .env.example is not a plain text file (.example); amazon_competitor_analyzer.py is not a plain text file (.py)
+- `amazon-listing-competitor-analysis-skill`: scripts/amazon_listing_competitor_analysis.py is not a plain text file (.py)
+- `amazon-product-api-skill`: scripts/amazon_product_api.py is not a plain text file (.py)
+- `amazon-product-detail`: scripts/extract-product-detail.py is not a plain text file (.py)
+- `amazon-product-search-api-skill`: scripts/amazon_product_search_api.py is not a plain text file (.py)
+- `amazon-reviews-api-skill`: scripts/amazon_reviews_api.py is not a plain text file (.py)
+- `amazon-search-listing`: scripts/extract-search-results.py is not a plain text file (.py)
+- `business-contact-social-links-skill`: scripts/business_contact_social_links.py is not a plain text file (.py)
+- `douyin-video-search`: scripts/search-videos.py is not a plain text file (.py)
+- `ebay-item-detail`: scripts/extract-item-detail.py is not a plain text file (.py)
+- `ebay-search-listing`: scripts/extract-listing.py is not a plain text file (.py)
+- `ebay-sold-listings-search`: scripts/build-url.py is not a plain text file (.py); scripts/enum-categories.py is not a plain text file (.py); scripts/extract-page.py is not a plain text file (.py)
+- `ecommerce-listing`: scripts/extract-listing-next-page.py is not a plain text file (.py); scripts/extract-listing.py is not a plain text file (.py)
+- `ecommerce-product-detail`: scripts/extract-product.py is not a plain text file (.py)
+- `ecommerce-reviews`: scripts/extract-reviews.py is not a plain text file (.py)
+- `ecommerce-seller-info`: scripts/extract-seller.py is not a plain text file (.py)
+- `etsy-category-listing`: scripts/extract-listings.py is not a plain text file (.py)
+- `etsy-keyword-search`: scripts/extract-listings.py is not a plain text file (.py)
+- `etsy-product-detail`: scripts/extract-detail.py is not a plain text file (.py)
+- `etsy-shop-catalog`: scripts/extract-listings.py is not a plain text file (.py)
+- `facebook-ads-library-search`: scripts/search-ads.py is not a plain text file (.py)
+- `facebook-groups-scrape-posts`: scripts/scrape-posts.py is not a plain text file (.py)
+- `facebook-page-posts`: scripts/get-page-id.py is not a plain text file (.py); scripts/get-page-posts.py is not a plain text file (.py)
+- `facebook-page-profile-posts`: scripts/get-page-id.py is not a plain text file (.py); scripts/get-page-posts.py is not a plain text file (.py)
+- `github-project-contributor-finder-api-skill`: scripts/github_project_contributor_finder_api.py is not a plain text file (.py)
+- `goofish-item-detail`: scripts/extract-item-detail.py is not a plain text file (.py)
+- `goofish-search-list`: scripts/apply-search-filters.py is not a plain text file (.py); scripts/extract-search-items.py is not a plain text file (.py); scripts/goto-page.py is not a plain text file (.py)
+- `google-image-api-skill`: scripts/google_image_api.py is not a plain text file (.py)
+- `google-maps-api-skill`: scripts/google_maps_api.py is not a plain text file (.py)
+- `google-maps-contact-extract`: scripts/extract-contacts.py is not a plain text file (.py); scripts/place-detail.py is not a plain text file (.py); scripts/search-places.py is not a plain text file (.py)
+- `google-maps-reviews-api-skill`: scripts/google_maps_reviews_api.py is not a plain text file (.py)
+- `google-maps-search-api-skill`: scripts/google_maps_search_api.py is not a plain text file (.py)
+- `google-news-api-skill`: scripts/google_news_api.py is not a plain text file (.py)
+- `google-search-serp`: scripts/serp-extract.py is not a plain text file (.py)
+- `google-social-media-finder`: scripts/extract-social-profiles.py is not a plain text file (.py)
+- `indeed-job-search`: scripts/fetch-job-detail.py is not a plain text file (.py); scripts/search-jobs.py is not a plain text file (.py)
+- `industry-key-contact-radar-api-skill`: scripts/industry_key_contact_radar_api.py is not a plain text file (.py)
+- `instagram-hashtag-posts`: scripts/fetch-hashtag-posts.py is not a plain text file (.py); scripts/parse-hashtag-response.py is not a plain text file (.py)
+- `instagram-place-posts`: scripts/get-place-posts.py is not a plain text file (.py); scripts/search-location.py is not a plain text file (.py)
+- `instagram-post-comments`: scripts/get-media-id.py is not a plain text file (.py); scripts/get-post-comments.py is not a plain text file (.py)
+- `instagram-profile-meta`: scripts/get-profile-meta.py is not a plain text file (.py)
+- `instagram-profile-posts`: scripts/get-profile-posts.py is not a plain text file (.py); scripts/get-user-id.py is not a plain text file (.py)
+- `linkedin-jobs-search`: scripts/job-detail.py is not a plain text file (.py); scripts/search-jobs.py is not a plain text file (.py)
+- `producthunt-launches`: scripts/extract-launch-detail.py is not a plain text file (.py); scripts/extract-leaderboard.py is not a plain text file (.py); scripts/extract-maker-profile.py is not a plain text file (.py); scripts/extract-website-content.py is not a plain text file (.py)
+- `reddit-competitor-analysis-api-skill`: scripts/reddit_competitor_analysis_api.py is not a plain text file (.py)
+- `reddit-warmup`: assets/config.yaml.template is not a plain text file (.template); assets/persona.json.template is not a plain text file (.template); assets/progress.json.template is not a plain text file (.template); assets/sub_profiles.json.template is not a plain text file (.template); references/activity-log-schema.md contains invisible characters; references/comment-follow-up.md contains invisible characters; references/comment-rules.md contains invisible characters; references/scheduling.md contains invisible characters; references/stage2-comment.md contains invisible characters
+- `social-media-finder-skill`: scripts/social_media_finder.py is not a plain text file (.py)
+- `taobao-keyword-search`: scripts/search-products.py is not a plain text file (.py)
+- `taobao-product-detail`: scripts/extract-product.py is not a plain text file (.py)
+- `taobao-product-reviews`: scripts/extract-reviews.py is not a plain text file (.py); scripts/next-review-page.py is not a plain text file (.py)
+- `taobao-shop-catalog`: scripts/extract-catalog.py is not a plain text file (.py)
+- `threads-keyword-search`: scripts/extract-search-results.py is not a plain text file (.py)
+- `threads-profile-search`: scripts/extract-profile-search.py is not a plain text file (.py); scripts/get-profile-details.py is not a plain text file (.py)
+- `threads-user-posts`: scripts/extract-posts.py is not a plain text file (.py); scripts/scroll-load-more.py is not a plain text file (.py)
+- `tiktok-hashtag-videos`: scripts/get-challenge-id.py is not a plain text file (.py)
+- `tiktok-video-detail`: scripts/extract-video-detail.py is not a plain text file (.py)
+- `trustpilot-company-info`: scripts/extract-company-info.py is not a plain text file (.py)
+- `trustpilot-company-info`: scripts/extract-company-info.py is not a plain text file (.py)
+- `trustpilot-reviews`: scripts/extract-reviews.py is not a plain text file (.py)
+- `walmart-category-listing`: scripts/extract-listing.py is not a plain text file (.py)
+- `walmart-keyword-search`: scripts/extract-listing.py is not a plain text file (.py)
+- `walmart-product-detail`: scripts/extract-product-detail.py is not a plain text file (.py)
+- `walmart-product-reviews`: scripts/extract-reviews.py is not a plain text file (.py)
+- `web-research-assistant`: scripts/research.py is not a plain text file (.py)
+- `web-search-scraper-api-skill`: scripts/web_search_scraper_api.py is not a plain text file (.py)
+- `webcrawler-deep-crawl`: scripts/discover-links.py is not a plain text file (.py); scripts/discover-llms-txt.py is not a plain text file (.py); scripts/discover-sitemap.py is not a plain text file (.py); scripts/extract-page-content.py is not a plain text file (.py)
+- `wechat-article-search-api-skill`: scripts/wechat_article_search_api.py is not a plain text file (.py)
+- `x-dm-auto-chat`: scripts/check-composer.py is not a plain text file (.py); scripts/check-page-state.py is not a plain text file (.py); scripts/fetch-inbox-api.py is not a plain text file (.py); scripts/open-conversation-by-user.py is not a plain text file (.py); scripts/read-conversation.py is not a plain text file (.py); scripts/scan-inbox-merged.py is not a plain text file (.py); scripts/scroll-load-history.py is not a plain text file (.py); scripts/search-users.py is not a plain text file (.py); scripts/verify-sent.py is not a plain text file (.py)
+- `x-keyword-comment`: scripts/click-reply.py is not a plain text file (.py); scripts/scan-search-tweets.py is not a plain text file (.py)
+- `x-tweet-by-conversation`: scripts/build-conversation-url.py is not a plain text file (.py); scripts/parse-tweets.py is not a plain text file (.py)
+- `x-tweet-by-handle`: scripts/build-profile-url.py is not a plain text file (.py); scripts/parse-tweets.py is not a plain text file (.py)
+- `x-tweet-by-url`: scripts/classify-url.py is not a plain text file (.py); scripts/parse-tweets.py is not a plain text file (.py)
+- `x-tweet-search`: scripts/extract-tweets.py is not a plain text file (.py)
+- `x-tweet-search-by-query`: scripts/build-search-url.py is not a plain text file (.py); scripts/parse-tweets.py is not a plain text file (.py)
+- `xiaohongshu-note-detail`: scripts/extract-note-comments.py is not a plain text file (.py); scripts/extract-note-detail.py is not a plain text file (.py)
+- `xiaohongshu-search`: scripts/extract-search.py is not a plain text file (.py)
+- `xiaohongshu-search-full`: scripts/extract-note-detail.py is not a plain text file (.py); scripts/extract-search-feeds.py is not a plain text file (.py)
+- `xiaohongshu-user-profile`: scripts/extract-user-notes.py is not a plain text file (.py); scripts/extract-user-profile.py is not a plain text file (.py)
+- `youtube-api-skill`: scripts/youtube_api.py is not a plain text file (.py)
+- `youtube-batch-transcript-extractor-api-skill`: scripts/youtube_batch_transcript_extractor_api.py is not a plain text file (.py)
+- `youtube-channel-api-skill`: scripts/youtube_channel_api.py is not a plain text file (.py)
+- `youtube-channel-business-email`: scripts/extract-channel-about.py is not a plain text file (.py); scripts/extract-emails-from-text.py is not a plain text file (.py); scripts/normalize-channel-input.py is not a plain text file (.py)
+- `youtube-comments-api-skill`: scripts/youtube_comments_api.py is not a plain text file (.py)
+- `youtube-influencer-finder-api-skill`: scripts/youtube_influencer_finder_api.py is not a plain text file (.py)
+- `youtube-search-api-skill`: scripts/youtube_search_api.py is not a plain text file (.py)
+- `youtube-transcript`: scripts/extract-transcript-segments.py is not a plain text file (.py); scripts/get-languages.py is not a plain text file (.py); scripts/open-transcript-panel.py is not a plain text file (.py)
+- `youtube-transcript-analysis-api-skill`: scripts/youtube_transcript_analysis_api.py is not a plain text file (.py)
+- `youtube-transcript-extractor-api-skill`: scripts/youtube_transcript_extractor_api.py is not a plain text file (.py)
+- `youtube-video-api-skill`: scripts/youtube_video_api.py is not a plain text file (.py)
+- `zhihu-search-api-skill`: scripts/zhihu_search_api.py is not a plain text file (.py)
+
+## coupler (42)
+
+- `ai-search-citations-to-revenue`: needs an MCP server that Alran Code does not set up
+- `amazon-ads-account-settings-and-structure-audit`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-attribution-and-metrics-audit`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-budget-pacing`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-client-report`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-keyword-and-product-targeting`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-new-to-brand-and-halo-sales`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-performance-report`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-placement-and-top-of-search-share`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-product-and-asin-performance`: SKILL.md contains an instruction-override phrase
+- `amazon-ads-wasted-spend-and-scaling`: SKILL.md contains an instruction-override phrase
+- `bing-ads-account-settings-audit`: SKILL.md contains an instruction-override phrase
+- `bing-ads-audience-targeting-analysis`: SKILL.md contains an instruction-override phrase
+- `bing-ads-budget-pacing`: SKILL.md contains an instruction-override phrase
+- `bing-ads-client-report`: SKILL.md contains an instruction-override phrase
+- `bing-ads-conversion-tracking-audit`: SKILL.md contains an instruction-override phrase
+- `bing-ads-impression-share-and-auction-insights`: SKILL.md contains an instruction-override phrase
+- `bing-ads-keyword-and-quality-score-analysis`: SKILL.md contains an instruction-override phrase
+- `bing-ads-location-device-and-dayparting`: SKILL.md contains an instruction-override phrase
+- `bing-ads-performance-report`: SKILL.md contains an instruction-override phrase
+- `bing-ads-wasted-spend-and-scaling`: SKILL.md contains an instruction-override phrase
+- `bing-shopping-ads-product-performance`: SKILL.md contains an instruction-override phrase
+- `coupler-io-live-dashboard`: references/snippets.js is not a plain text file (.js); references/widget-template.html is not a plain text file (.html)
+- `google-ads-performance-report`: SKILL.md contains an instruction-override phrase
+- `gorgias-support-tickets-per-order`: SKILL.md contains an instruction-override phrase
+- `klaviyo-flow-performance-vs-benchmarks`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-account-settings-and-structure-audit`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-budget-pacing`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-client-report`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-conversion-tracking-audit`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-creative-fatigue`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-creative-performance-analysis`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-performance-report`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-placement-and-device-breakdown`: SKILL.md contains an instruction-override phrase
+- `linkedin-ads-wasted-spend-and-scaling`: SKILL.md contains an instruction-override phrase
+- `linkedin-lead-gen-form-performance`: SKILL.md contains an instruction-override phrase
+- `quickbooks-books-health-and-close-check`: SKILL.md contains an instruction-override phrase
+- `shopify-customer-retention-and-ltv`: SKILL.md contains an instruction-override phrase
+- `shopify-inventory-report-and-stockout-forecast`: SKILL.md contains an instruction-override phrase
+- `shopify-product-and-variant-performance`: SKILL.md contains an instruction-override phrase
+- `shopify-sales-report`: SKILL.md contains an instruction-override phrase
+- `xero-books-health-and-close-check`: SKILL.md contains an instruction-override phrase
+
+## acedata (82)
+
+- `ace-music`: another copy of this Skill in this source (skills/ace-music) was left out; the store holds one copy
+- `ace-recharge-card`: operator/broker.py is not a plain text file (.py); operator/render.py is not a plain text file (.py); scripts/deliver.py is not a plain text file (.py); tests/test_broker.py is not a plain text file (.py); tests/test_client.py is not a plain text file (.py)
+- `acedatacloud`: needs an MCP server that Alran Code does not set up; scripts/acedatacloud.py is not a plain text file (.py)
+- `aliyun-community`: scripts/aliyun_community.py is not a plain text file (.py); scripts/publishing_http.py is not a plain text file (.py)
+- `apple-notes`: scripts/notes.py is not a plain text file (.py)
+- `baijiahao`: scripts/baijiahao.py is not a plain text file (.py)
+- `bilibili`: scripts/bilibili.py is not a plain text file (.py)
+- `bluesky`: scripts/bluesky.py is not a plain text file (.py)
+- `capability-spotlight-video`: needs an MCP server that Alran Code does not set up
+- `cnblogs`: scripts/cnblogs.py is not a plain text file (.py); tests/test_cnblogs.py is not a plain text file (.py)
+- `csdn`: scripts/csdn.py is not a plain text file (.py)
+- `cto51`: scripts/cto51.py is not a plain text file (.py)
+- `didi-ride`: scripts/didi.py is not a plain text file (.py)
+- `discord`: scripts/discord_user.py is not a plain text file (.py)
+- `discordbot`: scripts/discordbot.py is not a plain text file (.py)
+- `douban`: scripts/douban.py is not a plain text file (.py); scripts/publishing_http.py is not a plain text file (.py)
+- `flux-image`: needs an MCP server that Alran Code does not set up
+- `ghost`: scripts/ghost.py is not a plain text file (.py); tests/test_ghost.py is not a plain text file (.py)
+- `google-gmail`: SKILL.md decodes a base64 blob
+- `google-search`: needs an MCP server that Alran Code does not set up
+- `habr`: scripts/habr.py is not a plain text file (.py); tests/test_habr.py is not a plain text file (.py)
+- `hashnode`: scripts/hashnode.py is not a plain text file (.py)
+- `infoq`: scripts/infoq.py is not a plain text file (.py); scripts/publishing_http.py is not a plain text file (.py)
+- `jianshu`: scripts/jianshu.py is not a plain text file (.py); scripts/publishing_http.py is not a plain text file (.py)
+- `juejin`: scripts/juejin.py is not a plain text file (.py)
+- `kuaishou`: scripts/kuaishou.py is not a plain text file (.py); tests/test_kuaishou.py is not a plain text file (.py)
+- `linkedin-company-page`: scripts/linkedin_company_page.py is not a plain text file (.py); tests/test_linkedin_company_page.py is not a plain text file (.py)
+- `luma-video`: needs an MCP server that Alran Code does not set up
+- `maestro-video`: needs an MCP server that Alran Code does not set up
+- `medium`: scripts/medium.py is not a plain text file (.py)
+- `midjourney-image`: needs an MCP server that Alran Code does not set up
+- `minimax-video`: needs an MCP server that Alran Code does not set up
+- `modelscope`: scripts/modelscope.py is not a plain text file (.py); scripts/publishing_http.py is not a plain text file (.py)
+- `netease`: scripts/netease.py is not a plain text file (.py); scripts/publishing_http.py is not a plain text file (.py)
+- `onepage-pdf`: examples/demo-fixes.css is not a plain text file (.css); examples/demo.html is not a plain text file (.html); scripts/onepage_pdf.py is not a plain text file (.py)
+- `oschina`: scripts/oschina.py is not a plain text file (.py)
+- `personal-wechat`: scripts/personal_wechat.py is not a plain text file (.py); scripts/unattended.py is not a plain text file (.py); tests/test_personal_wechat.py is not a plain text file (.py)
+- `pinterest`: scripts/pinterest.py is not a plain text file (.py); tests/test_pinterest.py is not a plain text file (.py)
+- `postman-publisher`: scripts/postman_publisher.py is not a plain text file (.py); tests/test_postman_publisher.py is not a plain text file (.py)
+- `qwen-image`: needs an MCP server that Alran Code does not set up
+- `reddit`: scripts/reddit.py is not a plain text file (.py); tests/test_reddit.py is not a plain text file (.py)
+- `segmentfault`: scripts/segmentfault.py is not a plain text file (.py)
+- `short-url`: needs an MCP server that Alran Code does not set up
+- `sohu`: scripts/publishing_http.py is not a plain text file (.py); scripts/sohu.py is not a plain text file (.py)
+- `sora-video`: needs an MCP server that Alran Code does not set up
+- `substack`: scripts/substack.py is not a plain text file (.py)
+- `telegram`: scripts/tg.py is not a plain text file (.py)
+- `template`: SKILL.md names another skill than its folder
+- `tencentcloud-cls`: scripts/cls.py is not a plain text file (.py)
+- `tencentcloud-cls-alarm`: scripts/cls_alarm.py is not a plain text file (.py)
+- `tencentcloud-community`: scripts/publishing_http.py is not a plain text file (.py); scripts/tencentcloud_community.py is not a plain text file (.py)
+- `tencentcloud-cos`: scripts/cos.py is not a plain text file (.py)
+- `tencentcloud-dns`: scripts/dns.py is not a plain text file (.py)
+- `tencentcloud-edgeone`: scripts/edgeone.py is not a plain text file (.py)
+- `tencentcloud-tke`: scripts/tke.py is not a plain text file (.py)
+- `tgstat`: scripts/tgstat.py is not a plain text file (.py)
+- `tiktok`: scripts/tiktok.py is not a plain text file (.py)
+- `toutiao`: scripts/toutiao.py is not a plain text file (.py)
+- `veo-video`: needs an MCP server that Alran Code does not set up
+- `volcengine-community`: scripts/publishing_http.py is not a plain text file (.py); scripts/volcengine_community.py is not a plain text file (.py)
+- `wan-video`: needs an MCP server that Alran Code does not set up
+- `webextrator`: needs an MCP server that Alran Code does not set up
+- `weibo`: scripts/weibo.py is not a plain text file (.py)
+- `whatsapp-business`: scripts/whatsapp_business.py is not a plain text file (.py); tests/test_whatsapp_business.py is not a plain text file (.py)
+- `x`: scripts/x.py is not a plain text file (.py)
+- `xiaohongshu`: scripts/xhs_contract.py is not a plain text file (.py); tests/test_browser_contract.py is not a plain text file (.py); tests/test_contract_script.py is not a plain text file (.py); tests/test_cross_site_boundary.py is not a plain text file (.py)
+- `yandex-metrica`: scripts/yandex_metrica.py is not a plain text file (.py); tests/test_yandex_metrica.py is not a plain text file (.py)
+- `yandex-webmaster`: scripts/yandex_webmaster.py is not a plain text file (.py); tests/test_yandex_webmaster.py is not a plain text file (.py)
+- `youtube`: scripts/list_uploads.py is not a plain text file (.py)
+- `yuque`: scripts/yuque.py is not a plain text file (.py); tests/test_yuque.py is not a plain text file (.py)
+- `zhihu`: scripts/blog.py is not a plain text file (.py); scripts/search.py is not a plain text file (.py)
+- `ace-music`: links to ../../README.md, which is not in the store
+- `dreamina-video`: links to ../_shared/authentication.md, ../_shared/async-tasks.md, ../_shared/mcp-servers.md, which is not in the store
+- `gpt-image`: links to ../../README.md, which is not in the store
+- `gpt-image-2`: links to ../_shared/authentication.md, which is not in the store
+- `grok-video`: links to ../_shared/authentication.md, ../_shared/async-tasks.md, ../_shared/mcp-servers.md, which is not in the store
+- `happyhorse`: links to ../../README.md, which is not in the store
+- `nano-banana`: links to ../../README.md, which is not in the store
+- `seedance`: links to ../../README.md, which is not in the store
+- `suno`: links to ../../README.md, which is not in the store
+- `turnstile`: links to ../_shared/authentication.md, ../_shared/async-tasks.md, ../_shared/mcp-servers.md, which is not in the store
+- `wecom`: links to ../_shared/wecom.md, which is not in the store
+
+## metalbear (3)
+
+- `mirrord-ci`: SKILL.md decodes a base64 blob
+- `mirrord-prev-env`: SKILL.md decodes a base64 blob
+- `mirrord-propagation-discovery`: scripts/dump_stats.py is not a plain text file (.py); scripts/request_recorder.py is not a plain text file (.py)
+
+## ghcopilot (90)
+
+- `acquire-codebase-knowledge`: scripts/scan.py is not a plain text file (.py)
+- `acreadiness-assess`: report-template.html is not a plain text file (.html)
+- `adobe-illustrator-scripting`: scripts/batch-export-png.jsx is not a plain text file (.jsx); scripts/create-color-grid.jsx is not a plain text file (.jsx); scripts/find-replace-text.jsx is not a plain text file (.jsx)
+- `agent-architecture`: already has a LICENSE.txt or SOURCE.md
+- `agent-skill-stack`: scripts/inventory_skills.py is not a plain text file (.py); scripts/project_profile.py is not a plain text file (.py); scripts/render_stack_card.py is not a plain text file (.py); scripts/skill_index.py is not a plain text file (.py); scripts/stage_install.py is not a plain text file (.py)
+- `agentic-workflows`: the name is already taken by dotnet
+- `anti-ui-slop`: CHECKSUMS.sha256 is not a plain text file (.sha256)
+- `appinsights-instrumentation`: already has a LICENSE.txt or SOURCE.md; examples/appinsights.bicep is not a plain text file (.bicep); scripts/appinsights.ps1 is not a plain text file (.ps1)
+- `aspire`: SKILL.md pipes a download into a shell; references/cli-reference.md pipes a download into a shell; references/deployment.md pipes a download into a shell
+- `azure-architecture-autopilot`: assets/06-architecture-diagram.png is not a plain text file (.png); assets/07-azure-portal-resources.png is not a plain text file (.png); assets/08-deployment-succeeded.png is not a plain text file (.png); scripts/cli.py is not a plain text file (.py); scripts/generator.py is not a plain text file (.py); scripts/icons.py is not a plain text file (.py); scripts/icons.py is larger than 2 MiB
+- `azure-resource-visualizer`: already has a LICENSE.txt or SOURCE.md
+- `azure-role-selector`: already has a LICENSE.txt or SOURCE.md
+- `batch-script-progress`: examples/batch.mjs is not a plain text file (.mjs); examples/batch.ps1 is not a plain text file (.ps1); examples/batch.py is not a plain text file (.py); tests/verify-examples.mjs is not a plain text file (.mjs)
+- `bug-receipt`: scripts/validate-receipt.mjs is not a plain text file (.mjs)
+- `build-evidence-map`: scripts/contract.mjs is not a plain text file (.mjs); scripts/validate.mjs is not a plain text file (.mjs)
+- `code-review`: the name belongs to a Skill built in to Alran Code
+- `code-tour`: scripts/generate_from_docs.py is not a plain text file (.py); scripts/validate_tour.py is not a plain text file (.py)
+- `convert-excel-to-md`: scripts/convert_excel_to_md.py is not a plain text file (.py)
+- `convert-pdf-to-md`: scripts/convert_pdf_to_md.py is not a plain text file (.py)
+- `convert-word-to-md`: scripts/convert_word_to_md.py is not a plain text file (.py)
+- `copilot-cli-quickstart`: SKILL.md contains invisible characters
+- `copilot-pr-autopilot`: scripts/01-request-review.ps1 is not a plain text file (.ps1); scripts/02-check-review-status.ps1 is not a plain text file (.ps1); scripts/03-list-open-threads.ps1 is not a plain text file (.ps1); scripts/08-reply-and-resolve.ps1 is not a plain text file (.ps1); scripts/09-review-round.ps1 is not a plain text file (.ps1); scripts/10-cleanup-outdated.ps1 is not a plain text file (.ps1); scripts/_lib.ps1 is not a plain text file (.ps1)
+- `copilot-sdk`: the name is already taken by microsoft
+- `copilot-usage-metrics`: get-enterprise-metrics.sh is not a plain text file (.sh); get-enterprise-user-metrics.sh is not a plain text file (.sh); get-org-metrics.sh is not a plain text file (.sh); get-org-user-metrics.sh is not a plain text file (.sh)
+- `cypress-flake-fixer`: scripts/scan-cypress.mjs is not a plain text file (.mjs)
+- `daily-focus-board`: assets/board.template.html is not a plain text file (.html); examples/sample-board.html is not a plain text file (.html); scripts/serve-board.ps1 is not a plain text file (.ps1)
+- `datanalysis-credit-risk`: references/analysis.py is not a plain text file (.py); references/func.py is not a plain text file (.py); scripts/example.py is not a plain text file (.py)
+- `debugging`: SKILL.md names another skill than its folder
+- `diagnosis`: SKILL.md names another skill than its folder
+- `docs-sync-audit`: scripts/docs_drift.py is not a plain text file (.py)
+- `draw-io-diagram-generator`: assets/templates/architecture.drawio is not a plain text file (.drawio); assets/templates/er-diagram.drawio is not a plain text file (.drawio); assets/templates/flowchart.drawio is not a plain text file (.drawio); assets/templates/sequence.drawio is not a plain text file (.drawio); assets/templates/uml-class.drawio is not a plain text file (.drawio); scripts/add-shape.py is not a plain text file (.py); scripts/validate-drawio.py is not a plain text file (.py)
+- `drawio`: scripts/drawio-to-png.mjs is not a plain text file (.mjs)
+- `editorconfig`: SKILL.md contains invisible characters
+- `embedding-anisotropy-check`: scripts/anisotropy_check.py is not a plain text file (.py); scripts/example_scifact_halves.py is not a plain text file (.py)
+- `eval-driven-dev`: resources/setup.sh is not a plain text file (.sh); resources/verify_step6_completion.py is not a plain text file (.py)
+- `excalidraw-diagram-generator`: scripts/add-arrow.py is not a plain text file (.py); scripts/add-icon-to-diagram.py is not a plain text file (.py); scripts/split-excalidraw-library.py is not a plain text file (.py); templates/business-flow-swimlane-template.excalidraw is not a plain text file (.excalidraw); templates/class-diagram-template.excalidraw is not a plain text file (.excalidraw); templates/data-flow-diagram-template.excalidraw is not a plain text file (.excalidraw); templates/er-diagram-template.excalidraw is not a plain text file (.excalidraw); templates/flowchart-template.excalidraw is not a plain text file (.excalidraw); templates/mindmap-template.excalidraw is not a plain text file (.excalidraw); templates/relationship-template.excalidraw is not a plain text file (.excalidraw); templates/sequence-diagram-template.excalidraw is not a plain text file (.excalidraw)
+- `eyeball`: tools/eyeball.py is not a plain text file (.py)
+- `foundry-agentic-loop`: evals/fixtures/sdd-paused/src/backend/routing.py is not a plain text file (.py); evals/fixtures/sdd-paused/tests/contract/test_routing.py is not a plain text file (.py); references/check_rbac_preflight.py is not a plain text file (.py); references/copilot-sdk-with-toolbox.py is not a plain text file (.py); scripts/evals.mjs is not a plain text file (.mjs)
+- `game-engine`: references/3d-web-games.md loads a remote script; references/game-control-mechanisms.md loads a remote script
+- `geofeed-tuner`: scripts/templates/index.html is not a plain text file (.html); references/rfc8805.txt contains invisible characters
+- `gitmoji`: references/gitmoji-reference.md contains invisible characters
+- `gsap-framer-scroll-animation`: references/gsap.md loads a remote script
+- `horizontal-scaling`: SKILL.md names another skill than its folder
+- `indexing-performance-optimization`: SKILL.md names another skill than its folder
+- `java-mcp-server-generator`: needs an MCP server that Alran Code does not set up
+- `latchshot-page-capture`: scripts/latchshot.mjs is not a plain text file (.mjs)
+- `logicapps-custom-code-net10-migration`: scripts/migrate.py is not a plain text file (.py); tests/test_migrate.py is not a plain text file (.py)
+- `markdown-to-html`: references/marked.md loads a remote script
+- `markdown-to-word-mermaid`: scripts/markdown_to_word.py is not a plain text file (.py); tests/test_markdown_to_word.py is not a plain text file (.py)
+- `md-to-docx`: scripts/md-to-docx.mjs is not a plain text file (.mjs)
+- `memory-usage-optimization`: SKILL.md names another skill than its folder
+- `microsoft-docs`: the name is already taken by microsoft
+- `microsoft-store-publisher`: scripts/inspect-msix.ps1 is not a plain text file (.ps1); scripts/invoke-wack.ps1 is not a plain text file (.ps1); scripts/partner-center-control.mjs is not a plain text file (.mjs)
+- `mini-context-graph`: scripts/config.py is not a plain text file (.py); scripts/contextgraph.py is not a plain text file (.py); scripts/template_agent_workflow.py is not a plain text file (.py); scripts/tools/__init__.py is not a plain text file (.py); scripts/tools/documents_store.py is not a plain text file (.py); scripts/tools/graph_store.py is not a plain text file (.py); scripts/tools/index_store.py is not a plain text file (.py); scripts/tools/ontology_store.py is not a plain text file (.py); scripts/tools/retrieval_engine.py is not a plain text file (.py); scripts/tools/wiki_store.py is not a plain text file (.py)
+- `minimize-latency`: SKILL.md names another skill than its folder
+- `namecheap`: namecheap.py is not a plain text file (.py)
+- `nano-banana-pro-openrouter`: scripts/generate_image.py is not a plain text file (.py)
+- `napkin`: assets/napkin.html is not a plain text file (.html); assets/step1-activate.svg is not a plain text file (.svg); assets/step2-whiteboard.svg is not a plain text file (.svg); assets/step3-draw.svg is not a plain text file (.svg); assets/step4-share.svg is not a plain text file (.svg); assets/step5-response.svg is not a plain text file (.svg)
+- `on-device-delegate`: scripts/Set-LocalOutputCap.ps1 is not a plain text file (.ps1); scripts/Update-LocalCodingPlugin.ps1 is not a plain text file (.ps1)
+- `optimize-simplicite-logs`: scripts/SimpliciteLog2Json.ps1 is not a plain text file (.ps1); scripts/simplicite-log2json.py is not a plain text file (.py)
+- `poka-yoke`: scripts/detect_hazards.py is not a plain text file (.py)
+- `pr-dashboard`: assets/dashboard.html is not a plain text file (.html); scripts/lib/utils.mjs is not a plain text file (.mjs); scripts/pr-dashboard-cli.mjs is not a plain text file (.mjs)
+- `prompt-optimizer`: the name is already taken by sentry
+- `publish-to-pages`: scripts/convert-pdf.py is not a plain text file (.py); scripts/convert-pptx.py is not a plain text file (.py); scripts/publish.sh is not a plain text file (.sh)
+- `python-mcp-server-generator`: needs an MCP server that Alran Code does not set up
+- `python-pypi-package-builder`: scripts/scaffold.py is not a plain text file (.py)
+- `quality-playbook`: already has a LICENSE.txt or SOURCE.md; quality_gate.py is not a plain text file (.py)
+- `roslyn-analyzers`: references/CSharpCodeFixVerifier.cs is not a plain text file (.cs); references/SourceWriter.cs is not a plain text file (.cs)
+- `sandbox-npm-install`: scripts/install.sh is not a plain text file (.sh)
+- `scaling-data-volume`: SKILL.md names another skill than its folder
+- `scaling-qps`: SKILL.md names another skill than its folder
+- `scaling-query-volume`: SKILL.md names another skill than its folder
+- `scout-issue`: scripts/validate-skill.sh is not a plain text file (.sh); references/investigation-templates.md contains invisible characters
+- `search-speed-optimization`: SKILL.md names another skill than its folder
+- `search-strategies`: SKILL.md names another skill than its folder
+- `security-review`: the name is already taken by sentry
+- `setup`: SKILL.md names another skill than its folder
+- `setup-my-iq`: assets/templates/AGENTS.md contains an instruction-override phrase
+- `skill-distribution-audit`: assets/copilot-validation/outputs/annotate-findings.mjs is not a plain text file (.mjs); assets/copilot-validation/outputs/derive-audit-inputs.mjs is not a plain text file (.mjs); assets/copilot-validation/outputs/run-comparisons.mjs is not a plain text file (.mjs); assets/copilot-validation/reproduce.mjs is not a plain text file (.mjs); scripts/compare-discovery.mjs is not a plain text file (.mjs); scripts/compare-discovery.test.mjs is not a plain text file (.mjs)
+- `sliding-time-window`: SKILL.md names another skill than its folder
+- `speak-summary`: scripts/tts.sh is not a plain text file (.sh)
+- `sql-server-table-reconciliation`: scripts/reconcile.py is not a plain text file (.py)
+- `tenant-scaling`: SKILL.md names another skill than its folder
+- `terraform-azurerm-set-diff-analyzer`: scripts/analyze_plan.py is not a plain text file (.py)
+- `test-gap-audit`: scripts/coverage_map.py is not a plain text file (.py)
+- `tm7-threat-model`: assets/example-minimal.tm7 is not a plain text file (.tm7)
+- `vertical-scaling`: SKILL.md names another skill than its folder
+- `webapp-testing`: assets/test-helper.js is not a plain text file (.js)
+- `webmcpify`: scripts/workbench.mjs is not a plain text file (.mjs); templates/mutation-journal.js is not a plain text file (.js); templates/mutation-journal.ts is not a plain text file (.ts); templates/webmcp-compat.js is not a plain text file (.js); templates/webmcp-jsx.d.ts is not a plain text file (.ts); templates/webmcp-workbench.js is not a plain text file (.js); templates/webmcp.d.ts is not a plain text file (.ts); templates/webmcp.spec.ts is not a plain text file (.ts); templates/webmcpify.js is not a plain text file (.js); templates/webmcpify.ts is not a plain text file (.ts); tests/workbench-cli.test.mjs is not a plain text file (.mjs); tests/workbench.test.mjs is not a plain text file (.mjs)
+- `winmd-api-search`: already has a LICENSE.txt or SOURCE.md; scripts/Invoke-WinMdQuery.ps1 is not a plain text file (.ps1); scripts/Update-WinMdCache.ps1 is not a plain text file (.ps1); scripts/cache-generator/CacheGenerator.csproj is not a plain text file (.csproj); scripts/cache-generator/Directory.Build.props is not a plain text file (.props); scripts/cache-generator/Directory.Build.targets is not a plain text file (.targets); scripts/cache-generator/Directory.Packages.props is not a plain text file (.props); scripts/cache-generator/Program.cs is not a plain text file (.cs)
+
+## gagents (7)
+
+- `google-agents-cli-adk-code`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-adk-code) was left out; the store holds one copy
+- `google-agents-cli-deploy`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-deploy) was left out; the store holds one copy
+- `google-agents-cli-eval`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-eval) was left out; the store holds one copy
+- `google-agents-cli-observability`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-observability) was left out; the store holds one copy
+- `google-agents-cli-publish`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-publish) was left out; the store holds one copy
+- `google-agents-cli-scaffold`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-scaffold) was left out; the store holds one copy
+- `google-agents-cli-workflow`: another copy of this Skill in this source (src/google/agents/cli/skills/data/google-agents-cli-workflow) was left out; the store holds one copy
+
+## gworkspace (2)
+
+- `gws-chat`: links to /chat/api/guides/v1/spaces/find-direct-message, which is not in the store
+- `gws-chat-send`: links to ../gws-chat/SKILL.md, which is not in the store
+
+## alibaba (2)
+
+- `open-code-review`: another copy of this Skill in this source (skills/open-code-review) was left out; the store holds one copy
+- `open-code-review-delegate`: another copy of this Skill in this source (skills/open-code-review-delegate) was left out; the store holds one copy
+
+## rea (5)
+
+- `reverse-engineer-anything`: another copy of this Skill in this source (.cursor-plugin/skills/reverse-engineer-anything) was left out; the store holds one copy
+- `rea-analysis-optimization`: links to ../../../AGENTS.md, ../../../docs/development/tool-design.md, ../../../docs/development/testing.md, which is not in the store
+- `rea-changelog-update`: links to ../../../docs/development/releasing.md, which is not in the store
+- `rea-ci-tests-audit`: links to ../../../docs/development/testing.md, ../../../CONTRIBUTING.md, which is not in the store
+- `rea-tool-design`: links to ../../../docs/development/tool-design.md, ../../../docs/development/testing.md, ../../../docs/development/client-verification.md, which is not in the store
+
+## contexteng (17)
+
+- `advanced-evaluation`: scripts/evaluation_example.py is not a plain text file (.py)
+- `book-sft-pipeline`: examples/gertrude-stein/dataset_sample.jsonl is not a plain text file (.jsonl); examples/gertrude-stein/pangram/Screenshot 2025-12-27 at 3.05.04 AM.png is not a portable file name; examples/gertrude-stein/pangram/Screenshot 2025-12-27 at 3.05.04 AM.png is not a plain text file (.png); examples/gertrude-stein/pangram/Screenshot 2025-12-27 at 3.05.36 AM.png is not a portable file name; examples/gertrude-stein/pangram/Screenshot 2025-12-27 at 3.05.36 AM.png is not a plain text file (.png); examples/gertrude-stein/pangram/Screenshot 2025-12-27 at 3.07.18 AM.png is not a portable file name; examples/gertrude-stein/pangram/Screenshot 2025-12-27 at 3.07.18 AM.png is not a plain text file (.png); scripts/pipeline_example.py is not a plain text file (.py)
+- `context-compression`: scripts/compression_evaluator.py is not a plain text file (.py); tests/test_compression_evaluator.py is not a plain text file (.py)
+- `context-degradation`: scripts/degradation_detector.py is not a plain text file (.py)
+- `context-fundamentals`: scripts/context_manager.py is not a plain text file (.py)
+- `context-optimization`: scripts/compaction.py is not a plain text file (.py)
+- `digital-brain-skill`: SKILL.md names another skill than its folder; agents/scripts/content_ideas.py is not a plain text file (.py); agents/scripts/idea_to_draft.py is not a plain text file (.py); agents/scripts/stale_contacts.py is not a plain text file (.py); agents/scripts/weekly_review.py is not a plain text file (.py); content/engagement.jsonl is not a plain text file (.jsonl); content/ideas.jsonl is not a plain text file (.jsonl); content/posts.jsonl is not a plain text file (.jsonl); identity/prompts/content-generation.xml is not a plain text file (.xml); identity/prompts/reply-generator.xml is not a plain text file (.xml); knowledge/bookmarks.jsonl is not a plain text file (.jsonl); network/contacts.jsonl is not a plain text file (.jsonl); network/interactions.jsonl is not a plain text file (.jsonl); operations/meetings.jsonl is not a plain text file (.jsonl); operations/metrics.jsonl is not a plain text file (.jsonl); scripts/install.sh is not a plain text file (.sh)
+- `evaluation`: scripts/evaluator.py is not a plain text file (.py)
+- `filesystem-context`: scripts/filesystem_context.py is not a plain text file (.py)
+- `harness-engineering`: the name is already taken by ghcopilot
+- `hosted-agents`: scripts/sandbox_manager.py is not a plain text file (.py)
+- `interleaved-thinking`: SKILL.md names another skill than its folder; examples/01_basic_capture.py is not a plain text file (.py); examples/02_tool_usage.py is not a plain text file (.py); examples/03_full_optimization.py is not a plain text file (.py); pyproject.toml is not a plain text file (.toml); reasoning_trace_optimizer/__init__.py is not a plain text file (.py); reasoning_trace_optimizer/analyzer.py is not a plain text file (.py); reasoning_trace_optimizer/capture.py is not a plain text file (.py); reasoning_trace_optimizer/cli.py is not a plain text file (.py); reasoning_trace_optimizer/loop.py is not a plain text file (.py); reasoning_trace_optimizer/models.py is not a plain text file (.py); reasoning_trace_optimizer/optimizer.py is not a plain text file (.py); reasoning_trace_optimizer/skill_generator.py is not a plain text file (.py); tests/__init__.py is not a plain text file (.py); tests/test_models.py is not a plain text file (.py)
+- `memory-systems`: scripts/memory_store.py is not a plain text file (.py)
+- `multi-agent-patterns`: scripts/coordination.py is not a plain text file (.py)
+- `project-development`: scripts/pipeline_template.py is not a plain text file (.py)
+- `template`: SKILL.md names another skill than its folder
+- `tool-design`: scripts/description_generator.py is not a plain text file (.py)
+
+## oxylabs (1)
+
+- `agent-browser`: scripts/playwright_scrape.js is not a plain text file (.js); scripts/playwright_scrape.py is not a plain text file (.py)
+
+## gamedev (17)
+
+- `create-game-assets`: scripts/asset_report.py is not a plain text file (.py); scripts/build_preview_sheet.py is not a plain text file (.py)
+- `defold-core`: scripts/check_defold_project.py is not a plain text file (.py)
+- `ebitengine-game`: assets/starter/assets.go is not a plain text file (.go); assets/starter/game.go is not a plain text file (.go); assets/starter/input.go is not a plain text file (.go); assets/starter/main.go is not a plain text file (.go); assets/starter/scenes.go is not a plain text file (.go); assets/starter/sound.go is not a plain text file (.go); assets/starter/web/index.html is not a plain text file (.html); assets/starter/world/world.go is not a plain text file (.go); assets/starter/world/world_test.go is not a plain text file (.go); scripts/check_ebitengine.py is not a plain text file (.py); scripts/new_game.py is not a plain text file (.py); scripts/package_macos_app.py is not a plain text file (.py)
+- `game-docs`: scripts/check_docs.py is not a plain text file (.py)
+- `godot-2d-movement`: assets/test_character_controller.gd is not a plain text file (.gd)
+- `godot-3d-essentials`: assets/check_3d_scene.gd is not a plain text file (.gd)
+- `godot-animation`: assets/test_animation_states.gd is not a plain text file (.gd)
+- `godot-audio`: assets/check_audio_buses.gd is not a plain text file (.gd)
+- `godot-gdscript`: assets/check_scripts_compile.gd is not a plain text file (.gd)
+- `godot-nodes-scenes`: scripts/check_godot_project.py is not a plain text file (.py)
+- `performance-optimization`: the name is already taken by addyosmani
+- `platformer`: scripts/jump_tuner.py is not a plain text file (.py)
+- `roblox-simulator-economy`: scripts/balance.luau is not a plain text file (.luau); scripts/economy_math.luau is not a plain text file (.luau); scripts/test_economy_math.luau is not a plain text file (.luau)
+- `steam-publish`: scripts/check_steam_build.py is not a plain text file (.py); references/steampipe-build-scripts.md decodes a base64 blob
+- `tower-defense`: scripts/td_curve_check.py is not a plain text file (.py)
+- `unity-build-size`: scripts/build_report.py is not a plain text file (.py); scripts/check_unity_build_size.py is not a plain text file (.py)
+- `unity-csharp-scripting`: scripts/check_unity_project.py is not a plain text file (.py); references/agent-checks.md pipes a download into a shell
+
+## devsec (113)
+
+- `access-review`: SKILL.md decodes a base64 blob
+- `agent-evals`: SKILL.md contains an instruction-override phrase
+- `ai-agent-security`: SKILL.md contains an instruction-override phrase
+- `ai-red-teaming`: SKILL.md contains an instruction-override phrase
+- `argocd-gitops`: SKILL.md decodes a base64 blob
+- `aws-iam`: SKILL.md decodes a base64 blob
+- `container-scanning`: SKILL.md pipes a download into a shell
+- `dependency-scanning`: SKILL.md pipes a download into a shell
+- `devcontainers-nix`: SKILL.md pipes a download into a shell
+- `firewall-config`: assets/iptables-rules.sh is not a plain text file (.sh); scripts/firewall-audit.sh is not a plain text file (.sh); scripts/setup-ufw.sh is not a plain text file (.sh)
+- `github-actions`: the name is already taken by callstack
+- `hashicorp-vault`: assets/vault-config.hcl is not a plain text file (.hcl); scripts/vault-backup.sh is not a plain text file (.sh); scripts/vault-init.sh is not a plain text file (.sh)
+- `hipaa-compliance`: SKILL.md decodes a base64 blob
+- `incident-response`: scripts/collect-evidence.sh is not a plain text file (.sh); references/ioc-hunting.md decodes a base64 blob
+- `kubernetes-ops`: scripts/cluster-health-check.sh is not a plain text file (.sh); scripts/namespace-cleanup.sh is not a plain text file (.sh); scripts/pod-debug.sh is not a plain text file (.sh); references/troubleshooting-guide.md decodes a base64 blob
+- `linux-hardening`: assets/ssh-hardening.conf is not a plain text file (.conf); assets/sysctl-hardening.conf is not a plain text file (.conf); scripts/audit-system.sh is not a plain text file (.sh); scripts/harden-system.sh is not a plain text file (.sh)
+- `new-relic`: SKILL.md pipes a download into a shell
+- `ollama-stack`: SKILL.md pipes a download into a shell
+- `prometheus-grafana`: scripts/backup-grafana.sh is not a plain text file (.sh); scripts/prometheus-health-check.sh is not a plain text file (.sh)
+- `prompt-injection-defense`: SKILL.md contains an instruction-override phrase
+- `saas-security-posture`: SKILL.md decodes a base64 blob
+- `sbom-supply-chain`: SKILL.md decodes a base64 blob; SKILL.md pipes a download into a shell
+- `service-mesh`: SKILL.md pipes a download into a shell
+- `soc2-compliance`: SKILL.md decodes a base64 blob
+- `supply-chain-attack-response`: SKILL.md decodes a base64 blob
+- `terraform-aws`: assets/vpc-module.tf is not a plain text file (.tf); scripts/tf-init.sh is not a plain text file (.sh)
+- `terraform-azure`: assets/vnet-module.tf is not a plain text file (.tf); scripts/tf-init-azure.sh is not a plain text file (.sh)
+- `terraform-gcp`: assets/vpc-module.tf is not a plain text file (.tf); scripts/tf-init-gcp.sh is not a plain text file (.sh)
+- `vpn-setup`: SKILL.md pipes a download into a shell
+- `vulnerability-scanning`: scripts/scan-images.sh is not a plain text file (.sh); scripts/scan-repo.sh is not a plain text file (.sh)
+- `agent-observability`: links to ../agent-evals/, which is not in the store
+- `ai-inference-service-mesh`: links to ../service-mesh/, which is not in the store
+- `ai-pipeline-orchestration`: links to ../agent-observability/, ../../orchestration/kubernetes-ops/, which is not in the store
+- `ai-security-hardening`: links to ../../secrets/hashicorp-vault/, ../../network/, ../../hardening/linux-hardening/, which is not in the store
+- `ai-sre-incident-response`: links to ../../../security/operations/incident-response/, ../agent-observability/, which is not in the store
+- `alerting-oncall`: links to ../prometheus-grafana/, ../../../security/operations/incident-response/, which is not in the store
+- `aws-cost-optimization`: links to ../terraform-aws/, which is not in the store
+- `aws-ec2`: links to ../aws-iam/, ../aws-cost-optimization/, ../terraform-aws/, which is not in the store
+- `aws-ecs-fargate`: links to ../aws-iam/, ../terraform-aws/, which is not in the store
+- `aws-lambda`: links to ../aws-iam/, ../terraform-aws/, ../aws-cost-optimization/, which is not in the store
+- `aws-rds`: links to ../terraform-aws/, ../aws-iam/, ../aws-cost-optimization/, which is not in the store
+- `aws-s3`: links to ../aws-iam/, ../aws-cost-optimization/, ../terraform-aws/, which is not in the store
+- `aws-secrets-manager`: links to ../hashicorp-vault/, ../../../infrastructure/cloud-aws/aws-iam/, which is not in the store
+- `aws-vpc`: links to ../aws-ec2/, ../aws-ecs-fargate/, ../aws-rds/, which is not in the store
+- `azure-devops`: links to ../github-actions/, ../../../infrastructure/cloud-azure/terraform-azure/, which is not in the store
+- `azure-keyvault`: links to ../hashicorp-vault/, ../aws-secrets-manager/, which is not in the store
+- `blue-green-deploy`: links to ../../orchestration/kubernetes-ops/, ../../orchestration/argocd-gitops/, which is not in the store
+- `circleci`: links to ../github-actions/, ../../../infrastructure/cloud-aws/aws-ecs-fargate/, which is not in the store
+- `cis-benchmarks`: links to ../linux-hardening/, ../../scanning/vulnerability-scanning/, which is not in the store
+- `cloudflare-zero-trust`: links to ../../networking/service-mesh/, which is not in the store
+- `cloudformation`: links to ../terraform-aws/, ../aws-iam/, ../aws-vpc/, which is not in the store
+- `container-hardening`: links to ../../scanning/container-scanning/, which is not in the store
+- `container-registries`: links to ../../../security/scanning/container-scanning/, ../../../infrastructure/cloud-aws/aws-iam/, which is not in the store
+- `convex-backend`: links to ../../../devops/ai/agent-observability/, which is not in the store
+- `datadog`: links to ../prometheus-grafana/, ../alerting-oncall/, ../../../infrastructure/cloud-aws/aws-vpc/, which is not in the store
+- `dns-management`: links to ../../cloudflare/cloudflare-zero-trust/, which is not in the store
+- `docker-compose`: links to ../../orchestration/kubernetes-ops/, which is not in the store
+- `docker-management`: links to ../docker-compose/, ../../../security/scanning/container-scanning/, ../../../security/hardening/container-hardening/, which is not in the store
+- `elk-stack`: links to ../prometheus-grafana/, which is not in the store
+- `feature-flags`: links to ../blue-green-deploy/, ../../observability/alerting-oncall/, which is not in the store
+- `firebase-app-platform`: links to ../convex-backend/, which is not in the store
+- `gcp-secret-manager`: links to ../hashicorp-vault/, ../aws-secrets-manager/, ../azure-keyvault/, which is not in the store
+- `git-workflow`: links to ../../ci-cd/github-actions/, ../feature-flags/, which is not in the store
+- `gitlab-ci`: links to ../github-actions/, ../../orchestration/argocd-gitops/, ../../containers/container-registries/, which is not in the store
+- `gpu-server-management`: links to ../../../security/hardening/linux-hardening/, ../../../devops/observability/prometheus-grafana/, which is not in the store
+- `helm-charts`: links to ../kubernetes-ops/, ../argocd-gitops/, which is not in the store
+- `jenkins`: links to ../github-actions/, ../../orchestration/kubernetes-ops/, ../../containers/docker-management/, which is not in the store
+- `kubernetes-hardening`: links to ../../../devops/orchestration/kubernetes-ops/, ../container-hardening/, which is not in the store
+- `kustomize`: links to ../kubernetes-ops/, ../helm-charts/, ../argocd-gitops/, which is not in the store
+- `llm-app-security`: links to ../ai-agent-security/, which is not in the store
+- `llm-caching`: links to ../agent-observability/, which is not in the store
+- `llm-cost-optimization`: links to ../llm-caching/, ../agent-observability/, which is not in the store
+- `llm-fine-tuning`: links to ../../servers/gpu-server-management/, ../../../devops/ai/ai-pipeline-orchestration/, which is not in the store
+- `llm-gateway`: links to ../../../devops/ai/llm-caching/, ../../../devops/ai/llm-cost-optimization/, which is not in the store
+- `llm-inference-scaling`: links to ../../servers/gpu-server-management/, ../../../devops/orchestration/kubernetes-ops/, ../../../devops/ai/llm-cost-optimization/, which is not in the store
+- `llmops-platform-engineering`: links to ../ai-pipeline-orchestration/, ../agent-evals/, ../../../infrastructure/networking/llm-gateway/, which is not in the store
+- `load-balancing`: links to ../dns-management/, ../service-mesh/, which is not in the store
+- `loki-logging`: links to ../prometheus-grafana/, ../elk-stack/, ../alerting-oncall/, which is not in the store
+- `mac-mini-llm-lab`: links to ../ollama-stack/, ../../../security/network/vpn-setup/, which is not in the store
+- `model-registry-governance`: links to ../../../security/scanning/sbom-supply-chain/, ../../../infrastructure/local-ai/llm-fine-tuning/, ../llmops-platform-engineering/, which is not in the store
+- `model-serving-kubernetes`: links to ../../../infrastructure/local-ai/llm-inference-scaling/, ../kubernetes-ops/, ../../../infrastructure/servers/gpu-server-management/, which is not in the store
+- `model-supply-chain-security`: links to ../../scanning/sbom-supply-chain/, ../../hardening/container-hardening/, ../../../devops/ai/model-registry-governance/, which is not in the store
+- `multi-tenant-llm-hosting`: links to ../../networking/llm-gateway/, ../../../devops/ai/llm-cost-optimization/, ../llm-inference-scaling/, which is not in the store
+- `openclaw-deployment-hardening`: links to ../container-hardening/, ../kubernetes-hardening/, ../../scanning/sbom-supply-chain/, which is not in the store
+- `openclaw-local-mac-mini`: links to ../ollama-stack/, ../mac-mini-llm-lab/, which is not in the store
+- `openclaw-security-hardening`: links to ../openclaw-local-mac-mini/, ../multi-tenant-llm-hosting/, which is not in the store
+- `openshift`: links to ../kubernetes-ops/, ../helm-charts/, ../../containers/container-registries/, which is not in the store
+- `opentelemetry`: links to ../prometheus-grafana/, ../datadog/, ../alerting-oncall/, which is not in the store
+- `opentofu-migration`: links to ../../cloud-aws/terraform-aws/, ../../cloud-azure/terraform-azure/, ../../cloud-gcp/terraform-gcp/, which is not in the store
+- `penetration-testing`: links to ../../scanning/vulnerability-scanning/, which is not in the store
+- `podman`: links to ../docker-management/, ../../orchestration/kubernetes-ops/, ../../../security/hardening/container-hardening/, which is not in the store
+- `rag-infrastructure`: links to ../ollama-stack/, ../../../devops/ai/ai-pipeline-orchestration/, which is not in the store
+- `rag-observability-evals`: links to ../../../infrastructure/local-ai/rag-infrastructure/, ../agent-observability/, ../agent-evals/, which is not in the store
+- `reverse-proxy`: links to ../load-balancing/, ../dns-management/, ../service-mesh/, which is not in the store
+- `sast-scanning`: links to ../dependency-scanning/, ../../../devops/ci-cd/github-actions/, which is not in the store
+- `security-automation`: links to ../../../devops/ci-cd/github-actions/, which is not in the store
+- `semantic-versioning`: links to ../git-workflow/, ../../ci-cd/github-actions/, ../feature-flags/, which is not in the store
+- `sops-encryption`: links to ../hashicorp-vault/, ../../../devops/orchestration/argocd-gitops/, which is not in the store
+- `sre-dashboards`: links to ../prometheus-grafana/, ../opentelemetry/, ../alerting-oncall/, which is not in the store
+- `ssl-tls-management`: links to ../../secrets/hashicorp-vault/, which is not in the store
+- `threat-modeling`: links to ../../scanning/sast-scanning/, ../penetration-testing/, ../incident-response/, which is not in the store
+- `vector-database-ops`: links to ../../local-ai/rag-infrastructure/, ../, which is not in the store
+- `vercel-deployments`: links to ../../../devops/ci-cd/github-actions/, ../../../security/network/ssl-tls-management/, which is not in the store
+- `vllm-server`: links to ../llm-inference-scaling/, ../../servers/gpu-server-management/, ../../networking/llm-gateway/, which is not in the store
+- `waf-setup`: links to ../ssl-tls-management/, ../firewall-config/, which is not in the store
+- `windows-hardening`: links to ../cis-benchmarks/, ../linux-hardening/, which is not in the store
+- `zero-trust`: links to ../../../infrastructure/networking/service-mesh/, ../../hardening/kubernetes-hardening/, ../vpn-setup/, which is not in the store
+- `cdn-setup`: links to ../dns-management/, ../reverse-proxy/, ../load-balancing/, which is not in the store
+- `cloudflare-pages`: links to ../cloudflare-zero-trust/, ../../networking/cdn-setup/, which is not in the store
+- `cloudflare-r2`: links to ../cloudflare-pages/, ../../networking/cdn-setup/, which is not in the store
+- `cloudflare-workers`: links to ../cloudflare-pages/, ../cloudflare-r2/, ../cloudflare-zero-trust/, which is not in the store
+- `dast-scanning`: links to ../sast-scanning/, ../../operations/penetration-testing/, ../../network/waf-setup/, which is not in the store
+- `gpu-kubernetes-operations`: links to ../llm-inference-scaling/, ../../../devops/orchestration/model-serving-kubernetes/, ../../servers/gpu-server-management/, which is not in the store
+
+## twilio (56)
+
+- `twilio-account-setup`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-agent-augmentation-architect`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-agent-connect`: SKILL.md names another skill than its folder; assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-ai-agent-architect`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-call-recordings`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-cli-reference`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-compliance-onboarding`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-compliance-traffic`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-conference-calls`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-content-template-builder`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-conversation-intelligence`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-conversation-memory`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-conversation-orchestrator`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-conversations-classic-api`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-customer-support-architect`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-debugging-observability`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-email-deliverability-advisor`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-email-send`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-enterprise-knowledge`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-iam-auth-setup`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-identity-verification-advisor`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-lookup-phone-intelligence`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-marketing-promotions-advisor`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-messaging-channel-advisor`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-messaging-overview`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-messaging-services`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-messaging-webhooks`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-notifications-alerts-advisor`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-numbers-senders`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-organizations-setup`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-rcs-messaging`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-regulatory-compliance-bundles`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-reliability-patterns`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-security-api-auth`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-security-compliance-hipaa`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-security-hardening`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-send-message`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-account-setup`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-deliverability-advisor`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-email-send`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-email-settings`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-engagement-quality`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-inbound-parse`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-suppressions`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sendgrid-webhooks`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sms-isv-setup`: SKILL.md names another skill than its folder; assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-sms-send-message`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-studio-flows`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-taskrouter-routing`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-verify-send-otp`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-voice-conversation-relay`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-voice-outbound-calls`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-voice-twiml`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-webhook-architecture`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-whatsapp-manage-senders`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+- `twilio-whatsapp-send-message`: assets/icon-large.png is not a plain text file (.png); assets/icon-small.png is not a plain text file (.png)
+
+## docker (4)
+
+- `docker-build-strategies`: assets/Dockerfile.go is not a plain text file (.go); assets/Dockerfile.nodejs is not a plain text file (.nodejs); assets/Dockerfile.python is not a plain text file (.python); scripts/verify-build.sh is not a plain text file (.sh)
+- `docker-compose-patterns`: scripts/verify-compose.sh is not a plain text file (.sh)
+- `docker-project-foundations`: assets/Dockerfile.simple is not a plain text file (.simple); scripts/verify-setup.sh is not a plain text file (.sh)
+- `docker-sandboxes-kits`: scripts/audit-layer-owners.py is not a plain text file (.py)
+
+## playwright (5)
+
+- `api-review`: template.html is not a plain text file (.html); SKILL.md decodes a base64 blob
+- `playwright-audit-deps`: audit-deps.mjs is not a plain text file (.mjs)
+- `playwright-component-testing`: templates/react/Button.story.tsx is not a plain text file (.tsx); templates/react/button.spec.ts is not a plain text file (.ts); templates/vue/Button.story.ts is not a plain text file (.ts); templates/vue/button.spec.ts is not a plain text file (.ts)
+- `playwright-devops`: fetch-commit-logs.sh is not a plain text file (.sh)
+- `playwright-dev`: links to ../../../AGENTS.md, ../../../packages/playwright-core/src/server/webkit/wkBrowser.ts, ../../../packages/playwright-core/src/server/webkit/webview/, which is not in the store
+
+## clapoff (19)
+
+- `access`: another copy of this Skill in this source (external_plugins/imessage/skills/access) was left out; the store holds one copy
+- `access`: another copy of this Skill in this source (external_plugins/telegram/skills/access) was left out; the store holds one copy
+- `agent-development`: scripts/validate-agent.sh is not a plain text file (.sh)
+- `configure`: another copy of this Skill in this source (external_plugins/imessage/skills/configure) was left out; the store holds one copy
+- `configure`: another copy of this Skill in this source (external_plugins/telegram/skills/configure) was left out; the store holds one copy
+- `custom-connector`: needs an MCP server that Alran Code does not set up
+- `frontend-design`: already has a LICENSE.txt or SOURCE.md
+- `hook-development`: examples/load-context.sh is not a plain text file (.sh); examples/validate-bash.sh is not a plain text file (.sh); examples/validate-write.sh is not a plain text file (.sh); scripts/hook-linter.sh is not a plain text file (.sh); scripts/test-hook.sh is not a plain text file (.sh); scripts/validate-hook-schema.sh is not a plain text file (.sh)
+- `math-olympiad`: scripts/check_latex.sh is not a plain text file (.sh); scripts/compile_pdf.sh is not a plain text file (.sh)
+- `maturity`: report-template.html is not a plain text file (.html)
+- `morning-plant-pulse`: scripts/pulse_compute.py is not a plain text file (.py); scripts/render_short.py is not a plain text file (.py)
+- `onboarding`: the name is already taken by marketing
+- `plugin-settings`: examples/read-settings-hook.sh is not a plain text file (.sh); scripts/parse-frontmatter.sh is not a plain text file (.sh); scripts/validate-settings.sh is not a plain text file (.sh)
+- `project-artifact`: template.html is not a plain text file (.html)
+- `receipts`: scripts/mine-transcripts.mjs is not a plain text file (.mjs); SKILL.md contains an instruction-override phrase
+- `session-report`: analyze-sessions.mjs is not a plain text file (.mjs); template.html is not a plain text file (.html)
+- `siege`: scripts/ledger.py is not a plain text file (.py)
+- `skill-creator`: already has a LICENSE.txt or SOURCE.md; assets/eval_review.html is not a plain text file (.html); eval-viewer/generate_review.py is not a plain text file (.py); eval-viewer/viewer.html is not a plain text file (.html); scripts/__init__.py is not a plain text file (.py); scripts/aggregate_benchmark.py is not a plain text file (.py); scripts/generate_report.py is not a plain text file (.py); scripts/improve_description.py is not a plain text file (.py); scripts/package_skill.py is not a plain text file (.py); scripts/quick_validate.py is not a plain text file (.py); scripts/run_eval.py is not a plain text file (.py); scripts/run_loop.py is not a plain text file (.py); scripts/utils.py is not a plain text file (.py); the name belongs to a Skill built in to Alran Code
+- `writing-rules`: SKILL.md names another skill than its folder
