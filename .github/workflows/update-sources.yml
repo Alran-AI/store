@@ -108,7 +108,10 @@ jobs:
           git config user.name "alran-store"
           git config user.email "alran-store@users.noreply.github.com"
           git checkout -b chore/update-sources
-          git add sources.json versions.json EXCLUDED.md THIRD_PARTY_NOTICES.md skills shared
+          # Everything the vendor writes, but not the built store: .gitignore keeps store/index.json,
+          # store/archives/, store/icons/ and store/store.config.json out of the commit. The built store
+          # is published as a release instead (.github/workflows/release-store.yml).
+          git add -A
           git commit -m "Update sources"
           git push --force origin chore/update-sources
           gh pr create \

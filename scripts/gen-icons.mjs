@@ -124,11 +124,15 @@ for (const [name, [glyphName, from, to]] of Object.entries(ICONS)) {
     return [color[0], color[1], color[2], Math.round((255 * covered) / 9)];
   });
   writeFileSync(join(OUT, `${name}.png`), data);
-  // A package carries its icon inside itself.
+  // A package carries its icon inside itself. An icon that is already there is kept: the package is
+  // pinned file by file, and the store that is published has to be the one the repository holds.
   const pkg = PACKAGES.find((entry) => entry.name === name);
   if (pkg) {
-    mkdirSync(join(ROOT, "packages", pkg.id), { recursive: true });
-    writeFileSync(join(ROOT, "packages", pkg.id, "icon.png"), data);
+    const icon = join(ROOT, "packages", pkg.id, "icon.png");
+    if (!existsSync(icon)) {
+      mkdirSync(join(ROOT, "packages", pkg.id), { recursive: true });
+      writeFileSync(icon, data);
+    }
   }
 }
 console.log(`wrote ${Object.keys(ICONS).length} icons to ${OUT}`);

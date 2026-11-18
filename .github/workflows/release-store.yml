@@ -1,0 +1,139 @@
+name: Release store
+
+# After an update pull request is merged — or by hand — the store is built, checked and published as
+# a release artifact. The built store/ folder is not a commit in this repository: it is the asset of
+# the release. The platform takes the asset from there and opens a pull request of its own
+# (alran-platform/.github/workflows/sync-store.yml); nothing is deployed from here.
+#
+# Every release keeps the store it published, so a bad build is rolled back by taking the release
+# before it (see README.md, "Rolling a release back").
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "shared/**"
+      - "packages/**"
+      - "packages.json"
+      - "sources.json"
+      - "versions.json"
+      - "store/plugins.json"
+      - "tools/**"
+      - "scripts/**"
+      - ".github/workflows/release-store.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-store
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and check the store
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
+      previous: ${{ steps.version.outputs.previous }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Build the store
+        run: |
+          node scripts/gen-icons.mjs
+          node scripts/gen-config.mjs
+          node tools/store/build-store.mjs --source .
+          node tools/store/build-store.mjs --source . --check
+
+      - name: Name the release and find the build before it
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          date=$(git log -1 --format=%cs | tr -d '-')
+          echo "tag=store-${date}-r${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT"
+          previous=$(gh release view --json tagName --jq .tagName 2>/dev/null || true)
+          echo "previous=${previous}" >> "$GITHUB_OUTPUT"
+
+      - name: Take the index of the last release as the baseline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p baseline
+          gh release download --pattern index.json --dir baseline || echo "no earlier release: the counts are not checked"
+
+      - name: Check the store
+        run: |
+          if [ -f baseline/index.json ]; then
+            node scripts/check-store.mjs --store store --baseline baseline/index.json --max-drop 5
+          else
+            node scripts/check-store.mjs --store store --max-drop 5
+          fi
+
+      - name: Pack the store
+        run: |
+          # Exactly what a deployment serves: the index, the archives and the licences of what is in them.
+          tar -czf store.tar.gz store/index.json store/archives THIRD_PARTY_NOTICES.md
+          sha256sum store.tar.gz > store.tar.gz.sha256
+          node -e '
+          const i = require("./store/index.json");
+          console.log(`${i.plugins.length} Plugins, ${i.skills.length} Skills`);
+          ' | tee build-counts.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: store
+          path: |
+            store.tar.gz
+            store.tar.gz.sha256
+            store/index.json
+            build-counts.txt
+          compression-level: 0
+          retention-days: 30
+
+  publish:
+    name: Publish the release
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: store
+
+      - name: Publish the store as a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.build.outputs.tag }}
+          PREVIOUS: ${{ needs.build.outputs.previous }}
+        run: |
+          counts=$(cat build-counts.txt)
+          {
+            echo "The built store of \`${GITHUB_SHA}\`."
+            echo ""
+            echo "- ${counts}"
+            echo "- archive: \`store.tar.gz\` (with \`store.tar.gz.sha256\`)"
+            echo "- index: \`index.json\`"
+            echo ""
+            echo "The platform takes this release in a pull request of its own; nothing is deployed from here."
+            if [ -n "${PREVIOUS}" ]; then
+              echo ""
+              echo "The build before this one is \`${PREVIOUS}\`. To go back to it, take that release instead."
+            fi
+          } > notes.md
+          gh release create "${TAG}" store.tar.gz store.tar.gz.sha256 index.json --title "Store ${TAG#store-}" --notes-file notes.md
+          echo "published ${TAG}"
