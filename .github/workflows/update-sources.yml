@@ -70,7 +70,7 @@ jobs:
           }'
 
       - name: Write the summary
-        if: always()
+        if: always() && hashFiles('updates.json') != ''
         run: |
           {
             echo "## Sources"
