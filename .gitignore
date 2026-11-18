@@ -1,0 +1,6 @@
+# The store is built, not committed: `node tools/store/build-store.mjs --source .` writes it, and the
+# release workflow publishes it as an artifact. Only the hand-written Plugin list lives here.
+store/index.json
+store/archives/
+store/icons/
+store/store.config.json
