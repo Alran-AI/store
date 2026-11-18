@@ -2498,7 +2498,7 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `soc2-audit-prep`: links to ../../agents/cs-soc2-auditor.md, which is not in the store
 - `vpe-review`: links to ../../agents/cs-vpe-advisor.md, which is not in the store
 
-## aas (7608)
+## aas (7618)
 
 - `00-andruia-consultant`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/00-andruia-consultant) was left out; the store holds one copy
 - `00-andruia-consultant`: another copy of this Skill in this source (skills/00-andruia-consultant) was left out; the store holds one copy
@@ -4088,6 +4088,8 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `capacity-workload-planner`: another copy of this Skill in this source (skills/capacity-workload-planner) was left out; the store holds one copy
 - `capturekit-mcp`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/capturekit-mcp) was left out; the store holds one copy
 - `capturekit-mcp`: another copy of this Skill in this source (skills/capturekit-mcp) was left out; the store holds one copy
+- `carbonmark-carbon-retirement`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/carbonmark-carbon-retirement) was left out; the store holds one copy
+- `carbonmark-carbon-retirement`: another copy of this Skill in this source (skills/carbonmark-carbon-retirement) was left out; the store holds one copy
 - `card-based-design`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/design-it/card-based-design) was left out; the store holds one copy
 - `card-based-design`: another copy of this Skill in this source (skills/design-it/card-based-design) was left out; the store holds one copy
 - `career-ops`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/career-ops) was left out; the store holds one copy
@@ -5711,6 +5713,8 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `gha-security-review`: another copy of this Skill in this source (skills/gha-security-review) was left out; the store holds one copy
 - `ghidra-reverse`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/ghidra-reverse) was left out; the store holds one copy
 - `ghidra-reverse`: another copy of this Skill in this source (skills/ghidra-reverse) was left out; the store holds one copy
+- `ghost-qa`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/ghost-qa) was left out; the store holds one copy
+- `ghost-qa`: another copy of this Skill in this source (skills/ghost-qa) was left out; the store holds one copy
 - `git-advanced-workflows`: another copy of this Skill in this source (plugins/agentic-awesome-skills-claude/skills/git-advanced-workflows) was left out; the store holds one copy
 - `git-advanced-workflows`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/git-advanced-workflows) was left out; the store holds one copy
 - `git-advanced-workflows`: another copy of this Skill in this source (plugins/agentic-bundle-oss-maintainer/skills/git-advanced-workflows) was left out; the store holds one copy
@@ -8143,6 +8147,8 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `quinn`: another copy of this Skill in this source (skills/agent-squad/quinn) was left out; the store holds one copy
 - `quit-sponsor`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/quit-sponsor) was left out; the store holds one copy
 - `quit-sponsor`: another copy of this Skill in this source (skills/quit-sponsor) was left out; the store holds one copy
+- `qurl-private-review`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/qurl-private-review) was left out; the store holds one copy
+- `qurl-private-review`: another copy of this Skill in this source (skills/qurl-private-review) was left out; the store holds one copy
 - `radar-satellite-analysis`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/radar-satellite-analysis) was left out; the store holds one copy
 - `radar-satellite-analysis`: another copy of this Skill in this source (skills/radar-satellite-analysis) was left out; the store holds one copy
 - `radare2`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/radare2) was left out; the store holds one copy
@@ -9117,6 +9123,8 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `supabase`: the name is already taken by supabase
 - `supabase-automation`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/supabase-automation) was left out; the store holds one copy
 - `supabase-automation`: another copy of this Skill in this source (skills/supabase-automation) was left out; the store holds one copy
+- `supabase-edge-function-caller-auth`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/supabase-edge-function-caller-auth) was left out; the store holds one copy
+- `supabase-edge-function-caller-auth`: another copy of this Skill in this source (skills/supabase-edge-function-caller-auth) was left out; the store holds one copy
 - `supabase-postgres-best-practices`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/supabase-postgres-best-practices) was left out; the store holds one copy
 - `supabase-postgres-best-practices`: another copy of this Skill in this source (skills/supabase-postgres-best-practices) was left out; the store holds one copy
 - `supabase-postgres-best-practices`: the name is already taken by supabase
@@ -9600,6 +9608,8 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `unslop-ui`: references/refs/beacon-engraving.webp is not a plain text file (.webp); references/refs/meadow-3d.webp is not a plain text file (.webp); references/refs/story-dashboard-frames.webp is not a plain text file (.webp); references/refs/unslop-dashboard-after.webp is not a plain text file (.webp); references/refs/unslop-hero-after.webp is not a plain text file (.webp); scripts/snapshot.mjs is not a plain text file (.mjs); scripts/story.mjs is not a plain text file (.mjs)
 - `unslop-ui`: references/refs/beacon-engraving.webp is not a plain text file (.webp); references/refs/meadow-3d.webp is not a plain text file (.webp); references/refs/story-dashboard-frames.webp is not a plain text file (.webp); references/refs/unslop-dashboard-after.webp is not a plain text file (.webp); references/refs/unslop-hero-after.webp is not a plain text file (.webp); scripts/snapshot.mjs is not a plain text file (.mjs); scripts/story.mjs is not a plain text file (.mjs)
 - `unslop-ui`: references/refs/beacon-engraving.webp is not a plain text file (.webp); references/refs/meadow-3d.webp is not a plain text file (.webp); references/refs/story-dashboard-frames.webp is not a plain text file (.webp); references/refs/unslop-dashboard-after.webp is not a plain text file (.webp); references/refs/unslop-hero-after.webp is not a plain text file (.webp); scripts/snapshot.mjs is not a plain text file (.mjs); scripts/story.mjs is not a plain text file (.mjs)
+- `unslop-ui-audit`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/unslop-ui-audit) was left out; the store holds one copy
+- `unslop-ui-audit`: another copy of this Skill in this source (skills/unslop-ui-audit) was left out; the store holds one copy
 - `unsloth-finetuning`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/unsloth-finetuning) was left out; the store holds one copy
 - `unsloth-finetuning`: another copy of this Skill in this source (skills/unsloth-finetuning) was left out; the store holds one copy
 - `unsplash-integration`: another copy of this Skill in this source (plugins/agentic-awesome-skills/skills/unsplash-integration) was left out; the store holds one copy

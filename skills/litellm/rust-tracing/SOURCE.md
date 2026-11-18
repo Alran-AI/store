@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `litellm/rust/.agents/skills/rust-tracing` from https://github.com/BerriAI/litellm
-at commit 0e62b0690249755e3d3bfa2c97d2a31f3d4b4155 (2026-11-18), under the MIT licence.
+at commit b195f06c1364a22839e0f3f474964f09c0d9a020 (2026-11-18), under the MIT licence.
 
 Copyright (c) 2023 Berri AI
 

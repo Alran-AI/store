@@ -6,14 +6,14 @@ their licences. Each folder carries its own `LICENSE.txt` and `SOURCE.md`. This 
 
 | Source | Repository | Commit | Licence | Skills |
 | --- | --- | --- | --- | ---: |
-| Engineering workflow | https://github.com/addyosmani/agent-skills | 39b723c (2026-11-13) | MIT | 21 |
+| Engineering workflow | https://github.com/addyosmani/agent-skills | 8c99fa3 (2026-11-18) | MIT | 21 |
 | Cloudflare | https://github.com/cloudflare/skills | 5108325 (2026-11-17) | Apache-2.0 | 13 |
 | Firebase | https://github.com/firebase/agent-skills | 99954a3 (2026-11-09) | Apache-2.0 | 10 |
 | Supabase | https://github.com/supabase/agent-skills | c9be0e9 (2026-10-02) | MIT | 2 |
 | Stripe | https://github.com/stripe/ai | 72e7e79 (2026-11-18) | MIT | 3 |
 | Expo | https://github.com/expo/skills | dfdebcc (2026-11-15) | MIT | 10 |
 | ClickHouse | https://github.com/ClickHouse/agent-skills | 19b3242 (2026-11-17) | Apache-2.0 | 5 |
-| Google Gemini API | https://github.com/google-gemini/gemini-skills | 87fb017 (2026-11-12) | Apache-2.0 | 2 |
+| Google Gemini API | https://github.com/google-gemini/gemini-skills | c4d0c62 (2026-11-18) | Apache-2.0 | 2 |
 | MongoDB | https://github.com/mongodb/agent-skills | 4946a8d (2026-11-18) | Apache-2.0 | 7 |
 | Neon | https://github.com/neondatabase/agent-skills | 23aa24e (2026-11-18) | Apache-2.0 | 7 |
 | Flutter and Dart | https://github.com/flutter/skills | ff6d472 (2026-11-18) | BSD-3-Clause | 22 |
@@ -34,7 +34,7 @@ their licences. Each folder carries its own `LICENSE.txt` and `SOURCE.md`. This 
 | Sentry (engineering) | https://github.com/getsentry/skills | a582c51 (2026-11-14) | Apache-2.0 | 10 |
 | Marketing (Corey Haines) | https://github.com/coreyhaines31/marketingskills | 73573e9 (2026-11-17) | MIT | 45 |
 | Product management (Paweł Huryn) | https://github.com/phuryn/pm-skills | 9af7bfd (2026-11-08) | MIT | 57 |
-| Google Cloud | https://github.com/google/skills | d2b18e8 (2026-11-18) | Apache-2.0 | 144 |
+| Google Cloud | https://github.com/google/skills | 2af5f95 (2026-11-18) | Apache-2.0 | 148 |
 | Microsoft SDKs | https://github.com/microsoft/skills | b35d2c6 (2026-11-16) | MIT | 135 |
 | Microsoft Azure | https://github.com/microsoft/azure-skills | 0e26cd9 (2026-11-18) | MIT | 26 |
 | .NET | https://github.com/dotnet/skills | 2877c71 (2026-11-11) | MIT | 103 |
@@ -58,53 +58,53 @@ their licences. Each folder carries its own `LICENSE.txt` and `SOURCE.md`. This 
 | Browser Act | https://github.com/browser-act/skills | 593316a (2026-11-04) | MIT | 5 |
 | Coupler | https://github.com/coupler-io/skills | 1b94038 (2026-11-16) | MIT | 78 |
 | Ace Data Cloud | https://github.com/AceDataCloud/Skills | fcf0e8e (2026-11-18) | Apache-2.0 | 56 |
-| MetalBear | https://github.com/metalbear-co/skills | 9bd05c7 (2026-11-18) | MIT | 10 |
+| MetalBear | https://github.com/metalbear-co/skills | e003956 (2026-11-19) | MIT | 10 |
 | Jane Street | https://github.com/janestreet/agent_skills | 469868f (2026-11-17) | MIT | 1 |
-| GitHub Copilot | https://github.com/github/awesome-copilot | a255a19 (2026-11-18) | MIT | 392 |
+| GitHub Copilot | https://github.com/github/awesome-copilot | 74b9897 (2026-11-18) | MIT | 392 |
 | Google Agents CLI | https://github.com/google/agents-cli | 2fa159a (2026-11-17) | Apache-2.0 | 9 |
 | Google Workspace | https://github.com/googleworkspace/cli | cd3697e (2026-10-30) | Apache-2.0 | 93 |
 | Alibaba code review | https://github.com/alibaba/open-code-review | 5d6552a (2026-11-18) | Apache-2.0 | 2 |
-| Reverse engineering | https://github.com/morluto/rea | 93fb79e (2026-11-18) | MIT | 1 |
+| Reverse engineering | https://github.com/morluto/rea | caab34d (2026-11-18) | MIT | 1 |
 | Context engineering | https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering | 9ff0c99 (2026-10-11) | MIT | 5 |
 | Oxylabs | https://github.com/oxylabs/agent-skills | eae85fb (2026-11-18) | MIT | 4 |
-| NVIDIA Skill Inspector | https://github.com/NVIDIA/SkillSpector | 4bd0518 (2026-11-18) | Apache-2.0 | 1 |
+| NVIDIA Skill Inspector | https://github.com/NVIDIA/SkillSpector | ee4576e (2026-11-19) | Apache-2.0 | 1 |
 | Game development | https://github.com/gamedev-skills/awesome-gamedev-agent-skills | c6ca6c4 (2026-11-12) | Apache-2.0 | 63 |
 | DevOps and security | https://github.com/BagelHole/DevOps-Security-Agent-Skills | 0365f57 (2026-05-22) | MIT | 50 |
 | Twilio | https://github.com/twilio/skills | bb61456 (2026-11-10) | MIT | 1 |
 | Docker | https://github.com/docker/skills | a65ae5b (2026-11-13) | Apache-2.0 | 7 |
-| Playwright | https://github.com/microsoft/playwright | 4df46f3 (2026-11-18) | Apache-2.0 | 5 |
+| Playwright | https://github.com/microsoft/playwright | e245c3f (2026-11-18) | Apache-2.0 | 5 |
 | Anthropic official plugins | https://github.com/anthropics/claude-plugins-official | 6d49181 (2026-11-18) | Apache-2.0 | 38 |
 | oaiagentspy | https://github.com/openai/openai-agents-python | 91fb508 (2026-11-18) | MIT | 7 |
-| adkpy | https://github.com/google/adk-python | 43e959e (2026-11-18) | Apache-2.0 | 8 |
+| adkpy | https://github.com/google/adk-python | aa0f434 (2026-11-18) | Apache-2.0 | 8 |
 | speckit | https://github.com/github/spec-kit | 617e9a0 (2026-11-18) | MIT | 1 |
-| pydantic | https://github.com/pydantic/pydantic-ai | f41f7fd (2026-11-18) | MIT | 16 |
+| pydantic | https://github.com/pydantic/pydantic-ai | 75e4b55 (2026-11-18) | MIT | 16 |
 | grafana | https://github.com/grafana/skills | 8fb72a5 (2026-10-27) | Apache-2.0 | 43 |
 | stripekit | https://github.com/Stripe/agent-toolkit | 72e7e79 (2026-11-18) | MIT | 6 |
-| posthog | https://github.com/PostHog/posthog | 2749c2a (2026-11-18) | MIT | 186 |
+| posthog | https://github.com/PostHog/posthog | 7917ace (2026-11-18) | MIT | 186 |
 | streamlit | https://github.com/streamlit/streamlit | 46e35d3 (2026-11-18) | Apache-2.0 | 22 |
 | gradio | https://github.com/gradio-app/gradio | ec06278 (2026-11-13) | Apache-2.0 | 3 |
 | astronomer | https://github.com/astronomer/astronomer | b0c6481 (2026-11-18) | Apache-2.0 | 3 |
 | temporalui | https://github.com/temporalio/ui | cbd2aba (2026-11-17) | MIT | 8 |
-| litellm | https://github.com/BerriAI/litellm | 0e62b06 (2026-11-18) | MIT | 7 |
+| litellm | https://github.com/BerriAI/litellm | b195f06 (2026-11-18) | MIT | 7 |
 | e2b | https://github.com/e2b-dev/E2B | 08c4eeb (2026-11-18) | Apache-2.0 | 1 |
-| unsloth | https://github.com/unslothai/unsloth | cf0d153 (2026-11-18) | Apache-2.0 | 1 |
-| azpy | https://github.com/Azure/azure-sdk-for-python | 993f110 (2026-11-18) | MIT | 19 |
-| aznet | https://github.com/Azure/azure-sdk-for-net | 787c2e2 (2026-11-18) | MIT | 9 |
+| unsloth | https://github.com/unslothai/unsloth | a2b4f89 (2026-11-18) | Apache-2.0 | 1 |
+| azpy | https://github.com/Azure/azure-sdk-for-python | 1f0f67b (2026-11-18) | MIT | 19 |
+| aznet | https://github.com/Azure/azure-sdk-for-net | 4e0a443 (2026-11-18) | MIT | 9 |
 | playwrightpy | https://github.com/microsoft/playwright-python | 6137272 (2026-11-18) | Apache-2.0 | 3 |
 | gitlab | https://github.com/gitlabhq/gitlabhq | d7b9a61 (2026-10-23) | MIT | 3 |
-| cfagents | https://github.com/cloudflare/agents | 1a450e7 (2026-11-18) | MIT | 2 |
-| azspec | https://github.com/Azure/azure-rest-api-specs | 03baad7 (2026-11-18) | MIT | 3 |
+| cfagents | https://github.com/cloudflare/agents | 3d33563 (2026-11-18) | MIT | 2 |
+| azspec | https://github.com/Azure/azure-rest-api-specs | a6eb524 (2026-11-18) | MIT | 3 |
 | airflow | https://github.com/apache/airflow | f01e432 (2026-11-18) | Apache-2.0 | 7 |
 | trigger | https://github.com/triggerdotdev/trigger.dev | 74765f9 (2026-11-18) | Apache-2.0 | 11 |
 | deno | https://github.com/denoland/deno | d8c551b (2026-11-17) | MIT | 6 |
-| prefect | https://github.com/PrefectHQ/prefect | 67380b6 (2026-11-18) | Apache-2.0 | 3 |
+| prefect | https://github.com/PrefectHQ/prefect | ec4b188 (2026-11-18) | Apache-2.0 | 3 |
 | langfuse | https://github.com/langfuse/langfuse | 6dfeb60 (2026-11-18) | MIT | 13 |
-| paperclip | https://github.com/paperclipai/paperclip | 33fac97 (2026-11-18) | MIT | 48 |
-| cognee | https://github.com/topoteretes/cognee | e6b5b5b (2026-11-18) | Apache-2.0 | 17 |
+| paperclip | https://github.com/paperclipai/paperclip | d668eeb (2026-11-18) | MIT | 48 |
+| cognee | https://github.com/topoteretes/cognee | c8a0943 (2026-11-18) | Apache-2.0 | 17 |
 | wshobson | https://github.com/wshobson/agents | 4220308 (2026-11-18) | MIT | 171 |
-| templates | https://github.com/davila7/claude-code-templates | d3a2956 (2026-11-18) | MIT | 534 |
+| templates | https://github.com/davila7/claude-code-templates | 7deaf76 (2026-11-18) | MIT | 534 |
 | alirez | https://github.com/alirezarezvani/claude-skills | f8593c4 (2026-11-17) | MIT | 90 |
-| aas | https://github.com/sickn33/agentic-awesome-skills | 12c0d66 (2026-11-17) | MIT | 2026 |
+| aas | https://github.com/sickn33/agentic-awesome-skills | 64d4b72 (2026-11-18) | MIT | 2031 |
 | baoyu | https://github.com/JimLiu/baoyu-skills | ca703c2 (2026-11-06) | MIT | 5 |
 | ponytail | https://github.com/DietrichGebert/ponytail | 96608e0 (2026-10-29) | MIT | 6 |
 | openmotion | https://github.com/nexu-io/openmotion | 51bcb20 (2026-11-18) | Apache-2.0 | 98 |
@@ -126,7 +126,7 @@ their licences. Each folder carries its own `LICENSE.txt` and `SOURCE.md`. This 
 | ctf | https://github.com/ljagiello/ctf-skills | 20d182d (2026-11-14) | MIT | 1 |
 | effectivehtml | https://github.com/plannotator/effective-html | 5ce160a (2026-10-31) | MIT | 8 |
 | shipswift | https://github.com/signerlabs/ShipSwift | d05d75e (2026-11-12) | MIT | 3 |
-| dmcg | https://github.com/datamodel-code-generator/datamodel-code-generator | 405edcb (2026-11-18) | MIT | 1 |
+| dmcg | https://github.com/datamodel-code-generator/datamodel-code-generator | 1ca56bb (2026-11-18) | MIT | 1 |
 | tinybase | https://github.com/tinyplex/tinybase | 540cd40 (2026-11-12) | MIT | 1 |
 | rustanything | https://github.com/erkamyaman/rust-anything | 98adbe2 (2026-11-19) | MIT | 1 |
 | blender2 | https://github.com/EL4CTEO/blender-skills | 9e7e04a (2026-11-17) | MIT | 1 |

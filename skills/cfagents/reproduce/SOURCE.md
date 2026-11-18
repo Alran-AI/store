@@ -1,6 +1,6 @@
 # Source
 
 Unmodified copy of `agent-think/skills/reproduce` from https://github.com/cloudflare/agents
-at commit 1a450e71325c25ca1ec8b0013d756fe0c733b6f3 (2026-11-18), under the MIT licence.
+at commit 3d335639c54d2e91149c5d1960e87e439cd9d8bf (2026-11-18), under the MIT licence.
 
 The licence text is in LICENSE.txt. Nothing in this folder was edited.

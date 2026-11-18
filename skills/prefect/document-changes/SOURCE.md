@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `.claude/skills/document-changes` from https://github.com/PrefectHQ/prefect
-at commit 67380b6d06065205ee507d23daa9bcd044ed641e (2026-11-18), under the Apache-2.0 licence.
+at commit ec4b188a19371cb79bc91afe897042bca3a3c95f (2026-11-18), under the Apache-2.0 licence.
 
 Copyright 2019- Prefect Technologies, Inc.
 

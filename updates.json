@@ -1,0 +1,271 @@
+{
+  "moved": [
+    {
+      "source": "addyosmani",
+      "repo": "https://github.com/addyosmani/agent-skills",
+      "from": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "to": "8c99fa36d90068c82d547f7c12a9d67a3e95f4ee"
+    },
+    {
+      "source": "gemini",
+      "repo": "https://github.com/google-gemini/gemini-skills",
+      "from": "87fb0173d36fea4f87de4c3fbd0678cf929c0588",
+      "to": "c4d0c62c1240e08a90546186bf320600ab6a039a"
+    },
+    {
+      "source": "google",
+      "repo": "https://github.com/google/skills",
+      "from": "d2b18e85f79e98cc932fff9e72a0f488a4bf8c63",
+      "to": "2af5f957e138d4240c39fd26732f0f6cdf10d579"
+    },
+    {
+      "source": "metalbear",
+      "repo": "https://github.com/metalbear-co/skills",
+      "from": "9bd05c781db613e4775c7e7de24acf4d2abf8407",
+      "to": "e0039565657f415097614295338e2c23cb7785ef"
+    },
+    {
+      "source": "ghcopilot",
+      "repo": "https://github.com/github/awesome-copilot",
+      "from": "a255a193d1318e5a9ca3e9e575897f9a7845c099",
+      "to": "74b98979877d209fb6277a9364f7b21e2f3fe222"
+    },
+    {
+      "source": "rea",
+      "repo": "https://github.com/morluto/rea",
+      "from": "93fb79e3b881c2997e0a625bab1c416de0e2e170",
+      "to": "caab34d0de3d371d6060c2dd6573c75f7f7df42b"
+    },
+    {
+      "source": "skillspector",
+      "repo": "https://github.com/NVIDIA/SkillSpector",
+      "from": "4bd05188dcf3875c22ac20c6c203f65429d8fbad",
+      "to": "ee4576e047991cebaf31aab7af8bc18efc436824"
+    },
+    {
+      "source": "playwright",
+      "repo": "https://github.com/microsoft/playwright",
+      "from": "4df46f33c2d61eb8308f1ff36d5f08bfd27ca1d1",
+      "to": "e245c3f75bb0db96f2f0b92d8c63dedff782a5c6"
+    },
+    {
+      "source": "adkpy",
+      "repo": "https://github.com/google/adk-python",
+      "from": "43e959ee4611a3cf9b6d084a7aeaf33f68b489ea",
+      "to": "aa0f434a8b09de181db5812268e00e9e2f27e20f"
+    },
+    {
+      "source": "pydantic",
+      "repo": "https://github.com/pydantic/pydantic-ai",
+      "from": "f41f7fd21650a8ad154b1945ad0fe9a293b5bcd9",
+      "to": "75e4b551468675870ed86eb4d3a017a82b0a07ee"
+    },
+    {
+      "source": "posthog",
+      "repo": "https://github.com/PostHog/posthog",
+      "from": "2749c2af910ad9a9a8606ee80075604dd5b7692c",
+      "to": "7917ace4699acf8c1be743e25eb767df41627c3b"
+    },
+    {
+      "source": "litellm",
+      "repo": "https://github.com/BerriAI/litellm",
+      "from": "0e62b0690249755e3d3bfa2c97d2a31f3d4b4155",
+      "to": "b195f06c1364a22839e0f3f474964f09c0d9a020"
+    },
+    {
+      "source": "unsloth",
+      "repo": "https://github.com/unslothai/unsloth",
+      "from": "cf0d15313fbd9c229e64f5acb2bf348dd7b7843a",
+      "to": "a2b4f89de4453ff74e3d5a1ee779d19d150bd48e"
+    },
+    {
+      "source": "azpy",
+      "repo": "https://github.com/Azure/azure-sdk-for-python",
+      "from": "993f1109f38729b3765089468399890e46fd1a61",
+      "to": "1f0f67b8ac64d04fc5d26f8e9bde476aef52aac2"
+    },
+    {
+      "source": "aznet",
+      "repo": "https://github.com/Azure/azure-sdk-for-net",
+      "from": "787c2e279fed61bf2af34241da0e5b387b20a297",
+      "to": "4e0a443400dbd982431646b449475bf5d4aadf94"
+    },
+    {
+      "source": "cfagents",
+      "repo": "https://github.com/cloudflare/agents",
+      "from": "1a450e71325c25ca1ec8b0013d756fe0c733b6f3",
+      "to": "3d335639c54d2e91149c5d1960e87e439cd9d8bf"
+    },
+    {
+      "source": "azspec",
+      "repo": "https://github.com/Azure/azure-rest-api-specs",
+      "from": "03baad733d8173f754e4881cf1a336a6349dacaf",
+      "to": "a6eb524d8ce86750ed6881e1fb89da8870499cca"
+    },
+    {
+      "source": "prefect",
+      "repo": "https://github.com/PrefectHQ/prefect",
+      "from": "67380b6d06065205ee507d23daa9bcd044ed641e",
+      "to": "ec4b188a19371cb79bc91afe897042bca3a3c95f"
+    },
+    {
+      "source": "paperclip",
+      "repo": "https://github.com/paperclipai/paperclip",
+      "from": "33fac97cad5d4e4393403bee01d4a16ef472e17b",
+      "to": "d668eeb66056f51659494250d9d5b533c1189273"
+    },
+    {
+      "source": "cognee",
+      "repo": "https://github.com/topoteretes/cognee",
+      "from": "e6b5b5b9c1f1a3056136ddc3c082a0887fd8ace7",
+      "to": "c8a094375821f2d8c7c4945d3b2202e2e5d6603e"
+    },
+    {
+      "source": "templates",
+      "repo": "https://github.com/davila7/claude-code-templates",
+      "from": "d3a29567e1d4707db3377e5521a62f8ae5288aab",
+      "to": "7deaf763dc0c3e06fb500eeacf46f3bc121fb2df"
+    },
+    {
+      "source": "aas",
+      "repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "from": "12c0d66d3c007b8109edb0e7211812119be09d84",
+      "to": "64d4b7263f2ae74790437fbe378655e606eb2b65"
+    },
+    {
+      "source": "dmcg",
+      "repo": "https://github.com/datamodel-code-generator/datamodel-code-generator",
+      "from": "405edcb17a7d7d7c063a78d4476c758cd2a4822d",
+      "to": "1ca56bbc76645024bfad4821c81014723da1de8e"
+    }
+  ],
+  "unchanged": [
+    "cloudflare",
+    "firebase",
+    "supabase",
+    "stripe",
+    "expo",
+    "clickhouse",
+    "mongodb",
+    "neon",
+    "flutter",
+    "apollo",
+    "brave",
+    "callstack",
+    "coderabbit",
+    "cypress",
+    "duckdb",
+    "redis",
+    "resend",
+    "sanity",
+    "netlify",
+    "terraform",
+    "packer",
+    "huggingface",
+    "sentry",
+    "marketing",
+    "pm",
+    "microsoft",
+    "azure",
+    "dotnet",
+    "android",
+    "kotlin",
+    "elastic",
+    "dbt",
+    "aws",
+    "builderio",
+    "antfu",
+    "deepmind",
+    "kdense",
+    "lambdatest",
+    "mattpocock",
+    "emilkowalski",
+    "typesafe",
+    "prisma",
+    "tencent",
+    "capgo",
+    "n8n",
+    "browseract",
+    "coupler",
+    "acedata",
+    "janestreet",
+    "gagents",
+    "gworkspace",
+    "alibaba",
+    "contexteng",
+    "oxylabs",
+    "gamedev",
+    "devsec",
+    "twilio",
+    "docker",
+    "clapoff",
+    "oaiagentspy",
+    "speckit",
+    "grafana",
+    "stripekit",
+    "streamlit",
+    "gradio",
+    "astronomer",
+    "temporalui",
+    "e2b",
+    "playwrightpy",
+    "gitlab",
+    "airflow",
+    "trigger",
+    "deno",
+    "langfuse",
+    "wshobson",
+    "alirez",
+    "baoyu",
+    "ponytail",
+    "openmotion",
+    "socialupload",
+    "obsidian",
+    "gentleai",
+    "archify",
+    "opendesign",
+    "scenariolabs",
+    "blender",
+    "ccsdd",
+    "designskills",
+    "pstack",
+    "golang",
+    "openscience",
+    "linkedin",
+    "finance",
+    "argent",
+    "ctf",
+    "effectivehtml",
+    "shipswift",
+    "tinybase",
+    "rustanything",
+    "blender2",
+    "osint",
+    "bama",
+    "ccthink",
+    "selfhost",
+    "dzhng",
+    "opc",
+    "skillhub",
+    "evo",
+    "skillkit",
+    "pmskills",
+    "secondbrainos",
+    "courier",
+    "notioncookbook",
+    "mailtrap",
+    "teable",
+    "helius",
+    "videodb",
+    "rork",
+    "zapier"
+  ],
+  "unreachable": [],
+  "frozen": [
+    {
+      "source": "replicate",
+      "repo": "https://github.com/replicate/skills",
+      "commit": "2f36e415965ae63baa1c9f6635888092bcd771d3"
+    }
+  ]
+}

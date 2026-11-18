@@ -29,7 +29,7 @@
       "label": "Engineering workflow",
       "repo": "https://github.com/addyosmani/agent-skills",
       "clone": "addyosmani_agent-skills",
-      "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "commit": "8c99fa36d90068c82d547f7c12a9d67a3e95f4ee",
       "spdx": "MIT",
       "skills": [
         "api-and-interface-design",
@@ -184,7 +184,7 @@
       "label": "Google Gemini API",
       "repo": "https://github.com/google-gemini/gemini-skills",
       "clone": "google-gemini_gemini-skills",
-      "commit": "87fb0173d36fea4f87de4c3fbd0678cf929c0588",
+      "commit": "c4d0c62c1240e08a90546186bf320600ab6a039a",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -456,7 +456,7 @@
       "label": "Google Cloud",
       "repo": "https://github.com/google/skills",
       "clone": "google_skills",
-      "commit": "d2b18e85f79e98cc932fff9e72a0f488a4bf8c63",
+      "commit": "2af5f957e138d4240c39fd26732f0f6cdf10d579",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "plugins/cloud/google-cloud-developer/skills",
@@ -887,7 +887,7 @@
       "label": "MetalBear",
       "repo": "https://github.com/metalbear-co/skills",
       "clone": "metalbear-co_skills",
-      "commit": "9bd05c781db613e4775c7e7de24acf4d2abf8407",
+      "commit": "e0039565657f415097614295338e2c23cb7785ef",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -911,7 +911,7 @@
       "label": "GitHub Copilot",
       "repo": "https://github.com/github/awesome-copilot",
       "clone": "github_awesome-copilot",
-      "commit": "a255a193d1318e5a9ca3e9e575897f9a7845c099",
+      "commit": "74b98979877d209fb6277a9364f7b21e2f3fe222",
       "spdx": "MIT",
       "skillsDirs": [
         ".github/skills",
@@ -969,7 +969,7 @@
       "label": "Reverse engineering",
       "repo": "https://github.com/morluto/rea",
       "clone": "morluto_rea",
-      "commit": "93fb79e3b881c2997e0a625bab1c416de0e2e170",
+      "commit": "caab34d0de3d371d6060c2dd6573c75f7f7df42b",
       "spdx": "MIT",
       "skillsDirs": [
         ".agents/skills",
@@ -1008,7 +1008,7 @@
       "label": "NVIDIA Skill Inspector",
       "repo": "https://github.com/NVIDIA/SkillSpector",
       "clone": "NVIDIA_SkillSpector",
-      "commit": "4bd05188dcf3875c22ac20c6c203f65429d8fbad",
+      "commit": "ee4576e047991cebaf31aab7af8bc18efc436824",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -1107,7 +1107,7 @@
       "label": "Playwright",
       "repo": "https://github.com/microsoft/playwright",
       "clone": "microsoft_playwright",
-      "commit": "4df46f33c2d61eb8308f1ff36d5f08bfd27ca1d1",
+      "commit": "e245c3f75bb0db96f2f0b92d8c63dedff782a5c6",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         ".claude/skills",
@@ -1164,7 +1164,7 @@
       "label": "adkpy",
       "repo": "https://github.com/google/adk-python",
       "clone": "google_adk-python",
-      "commit": "43e959ee4611a3cf9b6d084a7aeaf33f68b489ea",
+      "commit": "aa0f434a8b09de181db5812268e00e9e2f27e20f",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         ".agents/skills",
@@ -1189,7 +1189,7 @@
       "label": "pydantic",
       "repo": "https://github.com/pydantic/pydantic-ai",
       "clone": "pydantic_pydantic-ai",
-      "commit": "f41f7fd21650a8ad154b1945ad0fe9a293b5bcd9",
+      "commit": "75e4b551468675870ed86eb4d3a017a82b0a07ee",
       "spdx": "MIT",
       "skillsDirs": [
         ".agents/skills",
@@ -1240,7 +1240,7 @@
       "label": "posthog",
       "repo": "https://github.com/PostHog/posthog",
       "clone": "PostHog_posthog",
-      "commit": "2749c2af910ad9a9a8606ee80075604dd5b7692c",
+      "commit": "7917ace4699acf8c1be743e25eb767df41627c3b",
       "spdx": "MIT",
       "skillsDirs": [
         ".agents/skills",
@@ -1357,7 +1357,7 @@
       "label": "litellm",
       "repo": "https://github.com/BerriAI/litellm",
       "clone": "BerriAI_litellm",
-      "commit": "0e62b0690249755e3d3bfa2c97d2a31f3d4b4155",
+      "commit": "b195f06c1364a22839e0f3f474964f09c0d9a020",
       "spdx": "MIT",
       "skillsDirs": [
         "litellm/rust/.agents/skills",
@@ -1382,7 +1382,7 @@
       "label": "unsloth",
       "repo": "https://github.com/unslothai/unsloth",
       "clone": "unslothai_unsloth",
-      "commit": "cf0d15313fbd9c229e64f5acb2bf348dd7b7843a",
+      "commit": "a2b4f89de4453ff74e3d5a1ee779d19d150bd48e",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "studio/backend/core/inference/bundled_skills"
@@ -1394,7 +1394,7 @@
       "label": "azpy",
       "repo": "https://github.com/Azure/azure-sdk-for-python",
       "clone": "Azure_azure-sdk-for-python",
-      "commit": "993f1109f38729b3765089468399890e46fd1a61",
+      "commit": "1f0f67b8ac64d04fc5d26f8e9bde476aef52aac2",
       "spdx": "MIT",
       "skillsDirs": [
         ".github/skills",
@@ -1411,7 +1411,7 @@
       "label": "aznet",
       "repo": "https://github.com/Azure/azure-sdk-for-net",
       "clone": "Azure_azure-sdk-for-net",
-      "commit": "787c2e279fed61bf2af34241da0e5b387b20a297",
+      "commit": "4e0a443400dbd982431646b449475bf5d4aadf94",
       "spdx": "MIT",
       "skillsDirs": [
         ".github/skills",
@@ -1450,7 +1450,7 @@
       "label": "cfagents",
       "repo": "https://github.com/cloudflare/agents",
       "clone": "cloudflare_agents",
-      "commit": "1a450e71325c25ca1ec8b0013d756fe0c733b6f3",
+      "commit": "3d335639c54d2e91149c5d1960e87e439cd9d8bf",
       "spdx": "MIT",
       "skillsDirs": [
         "",
@@ -1463,7 +1463,7 @@
       "label": "azspec",
       "repo": "https://github.com/Azure/azure-rest-api-specs",
       "clone": "Azure_azure-rest-api-specs",
-      "commit": "03baad733d8173f754e4881cf1a336a6349dacaf",
+      "commit": "a6eb524d8ce86750ed6881e1fb89da8870499cca",
       "spdx": "MIT",
       "skillsDirs": [
         ".github/skills",
@@ -1516,7 +1516,7 @@
       "label": "prefect",
       "repo": "https://github.com/PrefectHQ/prefect",
       "clone": "PrefectHQ_prefect",
-      "commit": "67380b6d06065205ee507d23daa9bcd044ed641e",
+      "commit": "ec4b188a19371cb79bc91afe897042bca3a3c95f",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         ".claude/skills"
@@ -1542,7 +1542,7 @@
       "label": "paperclip",
       "repo": "https://github.com/paperclipai/paperclip",
       "clone": "paperclipai_paperclip",
-      "commit": "33fac97cad5d4e4393403bee01d4a16ef472e17b",
+      "commit": "d668eeb66056f51659494250d9d5b533c1189273",
       "spdx": "MIT",
       "skillsDirs": [
         ".agents/skills",
@@ -1573,7 +1573,7 @@
       "label": "cognee",
       "repo": "https://github.com/topoteretes/cognee",
       "clone": "topoteretes_cognee",
-      "commit": "e6b5b5b9c1f1a3056136ddc3c082a0887fd8ace7",
+      "commit": "c8a094375821f2d8c7c4945d3b2202e2e5d6603e",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         ".agents/skills"
@@ -1648,7 +1648,7 @@
       "label": "templates",
       "repo": "https://github.com/davila7/claude-code-templates",
       "clone": "davila7_claude-code-templates",
-      "commit": "d3a29567e1d4707db3377e5521a62f8ae5288aab",
+      "commit": "7deaf763dc0c3e06fb500eeacf46f3bc121fb2df",
       "spdx": "MIT",
       "skillsDirs": [
         ".claude-plugin/skills",
@@ -1819,7 +1819,7 @@
       "label": "aas",
       "repo": "https://github.com/sickn33/agentic-awesome-skills",
       "clone": "sickn33_agentic-awesome-skills",
-      "commit": "12c0d66d3c007b8109edb0e7211812119be09d84",
+      "commit": "64d4b7263f2ae74790437fbe378655e606eb2b65",
       "spdx": "MIT",
       "skillsDirs": [
         "plugins/aasb-aas-accessibility-inclusive-ux/skills",
@@ -2213,7 +2213,7 @@
       "label": "dmcg",
       "repo": "https://github.com/datamodel-code-generator/datamodel-code-generator",
       "clone": "datamodel-code-generator_datamodel-code-generator",
-      "commit": "405edcb17a7d7d7c063a78d4476c758cd2a4822d",
+      "commit": "1ca56bbc76645024bfad4821c81014723da1de8e",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"

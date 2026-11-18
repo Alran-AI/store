@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `.github/skills/refresh-arm-sdk-release` from https://github.com/Azure/azure-sdk-for-net
-at commit 787c2e279fed61bf2af34241da0e5b387b20a297 (2026-11-18), under the MIT licence.
+at commit 4e0a443400dbd982431646b449475bf5d4aadf94 (2026-11-18), under the MIT licence.
 
 Copyright (c) 2015 Microsoft
 

@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `plugins/agentic-awesome-skills-claude/skills/neon-postgres-branches` from https://github.com/sickn33/agentic-awesome-skills
-at commit 12c0d66d3c007b8109edb0e7211812119be09d84 (2026-11-17), under the MIT licence.
+at commit 64d4b7263f2ae74790437fbe378655e606eb2b65 (2026-11-18), under the MIT licence.
 
 Copyright (c) 2026 Antigravity User
 

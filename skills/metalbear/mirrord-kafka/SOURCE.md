@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/mirrord-kafka` from https://github.com/metalbear-co/skills
-at commit 9bd05c781db613e4775c7e7de24acf4d2abf8407 (2026-11-18), under the MIT licence.
+at commit e0039565657f415097614295338e2c23cb7785ef (2026-11-19), under the MIT licence.
 
 Copyright (c) 2026 MetalBear
 
