@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/upgrade-stripe` from https://github.com/stripe/ai
-at commit 1ef4a81f8c9a092e6cba925d1cca6a78ac29c37b (2026-11-12), under the MIT licence.
+at commit 72e7e79e08e245063e87d61f60340e55e54c68f4 (2026-11-18), under the MIT licence.
 
 Copyright (c) 2024–2025 Stripe
 

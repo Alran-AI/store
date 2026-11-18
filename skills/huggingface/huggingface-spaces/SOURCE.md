@@ -1,6 +1,6 @@
 # Source
 
 Unmodified copy of `skills/huggingface-spaces` from https://github.com/huggingface/skills
-at commit 25910b3d0ba31a2ba102f901cdc9e008c278a69c (2026-10-29), under the Apache-2.0 licence.
+at commit 5291c2b9365e06b175dc04817610c778623f4836 (2026-11-17), under the Apache-2.0 licence.
 
 The licence text is in LICENSE.txt. Nothing in this folder was edited.

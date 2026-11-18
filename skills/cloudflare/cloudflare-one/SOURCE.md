@@ -1,6 +1,6 @@
 # Source
 
 Unmodified copy of `skills/cloudflare-one` from https://github.com/cloudflare/skills
-at commit cbf893b954222276bf1af57e5f23379231e0efb9 (2026-11-10), under the Apache-2.0 licence.
+at commit 5108325ecceabc899c761e07aa617b09c02445ee (2026-11-17), under the Apache-2.0 licence.
 
 The licence text is in LICENSE.txt. Nothing in this folder was edited.

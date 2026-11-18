@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/spatial` from https://github.com/duckdb/duckdb-skills
-at commit 7feda8e01e22bc0886c86123f3884947e36d8c69 (2026-04-14), under the MIT licence.
+at commit 44dfbbb414e54187964a2212eae28495f6ae21d9 (2026-11-17), under the MIT licence.
 
 Copyright 2018-2025 Stichting DuckDB Foundation
 

@@ -1,6 +1,6 @@
 {
   "schema": "alran.store.vendor/v1",
-  "note": "Every Skill in this store is an unmodified copy from one of these repositories, at the pinned commit, under its own licence. Edit this file, then run scripts/vendor.mjs.",
+  "note": "Every Skill in this store is an unmodified copy from one of these repositories, at the pinned commit, under its own licence. Edit this file, then run scripts/vendor.mjs. A source whose upstream repository is gone is marked \"frozen\": its vendored Skills stay as they are and no clone is needed.",
   "reservedNote": "Names of the Skills that ship inside Alran Code (dist/assets/skills and the alran agent's skills). A store Skill with one of these names would replace the built-in one, so the vendoring script refuses them.",
   "reservedNames": [
     "alran-code-product",
@@ -29,7 +29,7 @@
       "label": "Engineering workflow",
       "repo": "https://github.com/addyosmani/agent-skills",
       "clone": "addyosmani_agent-skills",
-      "commit": "301b02b12bff98e4688e6984af6556802322bbde",
+      "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
       "spdx": "MIT",
       "skills": [
         "api-and-interface-design",
@@ -69,7 +69,7 @@
       "label": "Cloudflare",
       "repo": "https://github.com/cloudflare/skills",
       "clone": "cloudflare_skills",
-      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "commit": "5108325ecceabc899c761e07aa617b09c02445ee",
       "spdx": "Apache-2.0",
       "skills": [
         "agents-sdk",
@@ -133,7 +133,7 @@
       "label": "Stripe",
       "repo": "https://github.com/stripe/ai",
       "clone": "stripe_ai",
-      "commit": "1ef4a81f8c9a092e6cba925d1cca6a78ac29c37b",
+      "commit": "72e7e79e08e245063e87d61f60340e55e54c68f4",
       "spdx": "MIT",
       "skills": [
         "stripe-apps",
@@ -149,7 +149,7 @@
       "label": "Expo",
       "repo": "https://github.com/expo/skills",
       "clone": "expo_skills",
-      "commit": "acc0b21ce09be356b5cf0323482bdfe7db0b7a1e",
+      "commit": "dfdebcc6c4c1bf7a9471cefd6b6f39c7ba6c884d",
       "spdx": "MIT",
       "skills": [
         "eas-app-stores",
@@ -172,7 +172,7 @@
       "label": "ClickHouse",
       "repo": "https://github.com/ClickHouse/agent-skills",
       "clone": "ClickHouse_agent-skills",
-      "commit": "d3b2b5ba43a8b80c2d08858b68d53edc701b5ace",
+      "commit": "19b32426959fe67b692aa1ed944e2259c0a82a9e",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -196,7 +196,7 @@
       "label": "MongoDB",
       "repo": "https://github.com/mongodb/agent-skills",
       "clone": "mongodb_agent-skills",
-      "commit": "7b44a4a06a8ac94f9911d7c94f3f7dc4a13d2d0a",
+      "commit": "4946a8d3ca032c01c5d2374c558e2fcbbfcefeca",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -208,7 +208,7 @@
       "label": "Neon",
       "repo": "https://github.com/neondatabase/agent-skills",
       "clone": "neondatabase_agent-skills",
-      "commit": "fa44b92d2fd129dcd443b677629f76b7d781a560",
+      "commit": "23aa24ec7c44e72ed606cf46825c7b0a85760f9c",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -220,7 +220,7 @@
       "label": "Flutter and Dart",
       "repo": "https://github.com/flutter/skills",
       "clone": "flutter_skills",
-      "commit": "e5a88d2be19cbf7ba1ef974375e5846492aca2ac",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
       "spdx": "BSD-3-Clause",
       "skillsDirs": [
         "skills"
@@ -268,7 +268,7 @@
       "label": "CodeRabbit",
       "repo": "https://github.com/coderabbitai/skills",
       "clone": "coderabbitai_skills",
-      "commit": "45bd1ae2c471cd861b8b6903f7dcab7c57aa0e59",
+      "commit": "bb71cd4c28ce384e2cc078bd6e1137496da56a8d",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -280,7 +280,7 @@
       "label": "Cypress",
       "repo": "https://github.com/cypress-io/ai-toolkit",
       "clone": "cypress-io_ai-toolkit",
-      "commit": "1b8717293726d06203e8d98ee17b821e377c683a",
+      "commit": "e40f7be90bf1c09de6064ddaa36f0cefc3a59df0",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -292,7 +292,7 @@
       "label": "DuckDB",
       "repo": "https://github.com/duckdb/duckdb-skills",
       "clone": "duckdb_duckdb-skills",
-      "commit": "7feda8e01e22bc0886c86123f3884947e36d8c69",
+      "commit": "44dfbbb414e54187964a2212eae28495f6ae21d9",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -316,7 +316,7 @@
       "label": "Resend",
       "repo": "https://github.com/resend/resend-skills",
       "clone": "resend_resend-skills",
-      "commit": "f3e86d84960887bfc6e76e504c642ab6bc748f0c",
+      "commit": "0b003d3c4c7dcd675d0bd30949aa7c95c2b91d1f",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -328,7 +328,7 @@
       "label": "Sanity",
       "repo": "https://github.com/sanity-io/agent-toolkit",
       "clone": "sanity-io_agent-toolkit",
-      "commit": "3ed3a143f8d3413faa7790ac0b2274fd3a8a6320",
+      "commit": "5cb78d3aed2f8068c012e30180168f3ccdc7bae2",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -340,7 +340,7 @@
       "label": "Netlify",
       "repo": "https://github.com/netlify/context-and-tools",
       "clone": "netlify_context-and-tools",
-      "commit": "905256ef236890a842be1ff1c5fd6bb07baa1890",
+      "commit": "f75a2839ff954314d6b653d811341d601d509b07",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -381,14 +381,19 @@
       "skillsDirs": [
         "skills"
       ],
-      "include": "clean"
+      "include": "clean",
+      "frozen": {
+        "date": "2026-06-04",
+        "copyright": "Copyright 2025 Replicate, Inc.",
+        "reason": "The upstream repository was deleted in November 2026. The Skills in the store are the unmodified copies taken at the pinned commit and stay as they are; the source cannot be checked or refreshed until the project publishes them elsewhere."
+      }
     },
     {
       "id": "huggingface",
       "label": "Hugging Face",
       "repo": "https://github.com/huggingface/skills",
       "clone": "huggingface_skills",
-      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "commit": "5291c2b9365e06b175dc04817610c778623f4836",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -400,7 +405,7 @@
       "label": "Sentry (engineering)",
       "repo": "https://github.com/getsentry/skills",
       "clone": "getsentry_skills",
-      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "commit": "a582c51ee29d0f35e6ac321340796f77d43da733",
       "spdx": "Apache-2.0",
       "skillsDirs": [
         "skills"
@@ -423,7 +428,7 @@
       "label": "Marketing (Corey Haines)",
       "repo": "https://github.com/coreyhaines31/marketingskills",
       "clone": "coreyhaines31_marketingskills",
-      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "commit": "73573e94a06a39965978b3fa1f9c1eace8cebc7c",
       "spdx": "MIT",
       "skillsDirs": [
         "skills"
@@ -432,7 +437,7 @@
     },
     {
       "id": "pm",
-      "label": "Product management (Pawe\u0142 Huryn)",
+      "label": "Product management (Paweł Huryn)",
       "repo": "https://github.com/phuryn/pm-skills",
       "clone": "phuryn_pm-skills",
       "commit": "9af7bfd0bc47fdad43c2eaa7a43cd13918e7aaef",
@@ -443,6 +448,303 @@
         "pm-product-strategy/skills",
         "pm-market-research/skills",
         "pm-go-to-market/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "google",
+      "label": "Google Cloud",
+      "repo": "https://github.com/google/skills",
+      "clone": "google_skills",
+      "commit": "d2b18e85f79e98cc932fff9e72a0f488a4bf8c63",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugins/cloud/google-cloud-developer/skills",
+        "skills/ads",
+        "skills/analytics",
+        "skills/cloud",
+        "skills/developers",
+        "skills/identity",
+        "skills/platform-devices"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "microsoft",
+      "label": "Microsoft SDKs",
+      "repo": "https://github.com/microsoft/skills",
+      "clone": "microsoft_skills",
+      "commit": "b35d2c60fac796bfd2cfd14ad3f550c73e92d9bb",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/plugins/azure-sdk-dotnet/skills",
+        ".github/plugins/azure-sdk-java/skills",
+        ".github/plugins/azure-sdk-python/skills",
+        ".github/plugins/azure-sdk-rust/skills",
+        ".github/plugins/azure-sdk-typescript/skills",
+        ".github/plugins/deep-wiki/skills",
+        ".github/plugins/microsoft-365-agents-toolkit/skills",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer",
+        ".github/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "azure",
+      "label": "Microsoft Azure",
+      "repo": "https://github.com/microsoft/azure-skills",
+      "clone": "microsoft_azure-skills",
+      "commit": "0e26cd9c153ca37a04ad7b01f0dc8766a9e14038",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".github/plugins/aks-skills/skills",
+        ".github/plugins/azure-advisor/skills",
+        ".github/plugins/azure-cost/skills",
+        ".github/plugins/azure-kusto-graph-skills/skills",
+        ".github/plugins/azure-local-skills/skills",
+        ".github/plugins/azure-observability/skills",
+        ".github/plugins/azure-skills/skills/azure-kubernetes",
+        ".github/plugins/azure-skills/skills/microsoft-foundry",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/models",
+        ".github/plugins/foundry-iq-skills/skills",
+        "skills",
+        "skills/azure-kubernetes",
+        "skills/microsoft-foundry",
+        "skills/microsoft-foundry/models",
+        "skills/microsoft-foundry/models/deploy-model"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "dotnet",
+      "label": ".NET",
+      "repo": "https://github.com/dotnet/skills",
+      "clone": "dotnet_skills",
+      "commit": "2877c712edc20643b72f64e2983b168e6661d607",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        ".github/skills",
+        "plugins/dotnet-advanced/skills",
+        "plugins/dotnet-ai/skills",
+        "plugins/dotnet-aspnetcore/skills",
+        "plugins/dotnet-blazor/skills",
+        "plugins/dotnet-data/skills",
+        "plugins/dotnet-diag/skills",
+        "plugins/dotnet-experimental/skills",
+        "plugins/dotnet-maui/skills",
+        "plugins/dotnet-msbuild/skills",
+        "plugins/dotnet-nuget/skills",
+        "plugins/dotnet-template-engine/skills",
+        "plugins/dotnet-test-migration/skills",
+        "plugins/dotnet-test/skills",
+        "plugins/dotnet-upgrade/skills",
+        "plugins/dotnet-winforms/skills",
+        "plugins/dotnet/skills",
+        "plugins/dotnet11/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "android",
+      "label": "Android",
+      "repo": "https://github.com/android/skills",
+      "clone": "android_skills",
+      "commit": "c72942584fff970dac86ced78b367fce0c441e52",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "build-system/agp",
+        "camera",
+        "cars",
+        "device-ai",
+        "device-ai/litert",
+        "devtools",
+        "identity",
+        "jetpack-compose",
+        "jetpack-compose/ink",
+        "jetpack-compose/migration",
+        "media",
+        "migration",
+        "navigation",
+        "performance",
+        "play",
+        "profilers",
+        "security",
+        "system",
+        "testing",
+        "tv",
+        "wear",
+        "xr"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "kotlin",
+      "label": "Kotlin",
+      "repo": "https://github.com/Kotlin/kotlin-agent-skills",
+      "clone": "Kotlin_kotlin-agent-skills",
+      "commit": "087f5689c1934135ed58718cdf524525e452b7e9",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "elastic",
+      "label": "Elastic",
+      "repo": "https://github.com/elastic/agent-skills",
+      "clone": "elastic_agent-skills",
+      "commit": "09d879dfe23436684e11391a5e5a74a2aedd6b04",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugins/cloud/skills",
+        "plugins/elasticsearch/skills",
+        "plugins/kibana/skills",
+        "plugins/observability/skills",
+        "plugins/security/skills",
+        "skills/cloud",
+        "skills/elasticsearch",
+        "skills/kibana",
+        "skills/observability",
+        "skills/security"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "dbt",
+      "label": "dbt",
+      "repo": "https://github.com/dbt-labs/dbt-agent-skills",
+      "clone": "dbt-labs_dbt-agent-skills",
+      "commit": "b8facde20b7a92c40ce3e6b86b71c4b92aa44040",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        ".claude/skills",
+        "skills/dbt-extras/skills",
+        "skills/dbt-migration/skills",
+        "skills/dbt/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "aws",
+      "label": "AWS",
+      "repo": "https://github.com/awslabs/agent-plugins",
+      "clone": "awslabs_agent-plugins",
+      "commit": "48a6f48fe50eac3838845a6e00cf63137f9c0d4a",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "plugins/amazon-location-service/skills",
+        "plugins/aws-amplify/skills",
+        "plugins/aws-serverless/skills",
+        "plugins/aws-transform/skills",
+        "plugins/codebase-documentor-for-aws/skills",
+        "plugins/databases-on-aws/skills",
+        "plugins/deploy-on-aws/skills",
+        "plugins/sagemaker-ai/skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "builderio",
+      "label": "Builder.io",
+      "repo": "https://github.com/BuilderIO/skills",
+      "clone": "BuilderIO_skills",
+      "commit": "d8e348172e25399b663b3f7ccb95ffe5a65720ef",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".agents/skills",
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "antfu",
+      "label": "Vue and Vite (Anthony Fu)",
+      "repo": "https://github.com/antfu/skills",
+      "clone": "antfu_skills",
+      "commit": "4a6bb39e7b45e26402eb215393c51ccf5df1ca4c",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "deepmind",
+      "label": "Google DeepMind science",
+      "repo": "https://github.com/google-deepmind/science-skills",
+      "clone": "google-deepmind_science-skills",
+      "commit": "370f8f33e5bb27dffe8289ea9bdec436686613ce",
+      "spdx": "Apache-2.0",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "kdense",
+      "label": "Scientific agent skills",
+      "repo": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "clone": "K-Dense-AI_scientific-agent-skills",
+      "commit": "ec59a29a03d5c40f73ab40878df04860bc00e876",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "lambdatest",
+      "label": "LambdaTest",
+      "repo": "https://github.com/LambdaTest/agent-skills",
+      "clone": "LambdaTest_agent-skills",
+      "commit": "298d8688a015e34f77f4db3a8f5a0f1d0e53ccd7",
+      "spdx": "MIT",
+      "skillsDirs": [
+        ".",
+        "api-skill",
+        "api-skill/newman",
+        "api-skill/postman"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "mattpocock",
+      "label": "TypeScript engineering (Matt Pocock)",
+      "repo": "https://github.com/mattpocock/skills",
+      "clone": "mattpocock_skills",
+      "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills/engineering",
+        "skills/in-progress",
+        "skills/misc",
+        "skills/productivity"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "emilkowalski",
+      "label": "Frontend craft (Emil Kowalski)",
+      "repo": "https://github.com/emilkowalski/skills",
+      "clone": "emilkowalski_skills",
+      "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
+      ],
+      "include": "clean"
+    },
+    {
+      "id": "typesafe",
+      "label": "TypeSafe",
+      "repo": "https://github.com/typesafe-ai/skills",
+      "clone": "typesafe-ai_skills",
+      "commit": "302eea662c54bca6730873fe245bec1d69ebc23d",
+      "spdx": "MIT",
+      "skillsDirs": [
+        "skills"
       ],
       "include": "clean"
     }

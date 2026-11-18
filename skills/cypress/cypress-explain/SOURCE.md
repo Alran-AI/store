@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/cypress-explain` from https://github.com/cypress-io/ai-toolkit
-at commit 1b8717293726d06203e8d98ee17b821e377c683a (2026-11-06), under the MIT licence.
+at commit e40f7be90bf1c09de6064ddaa36f0cefc3a59df0 (2026-11-16), under the MIT licence.
 
 Copyright (c) 2026 Cypress.io
 

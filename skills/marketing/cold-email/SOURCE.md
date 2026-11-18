@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/cold-email` from https://github.com/coreyhaines31/marketingskills
-at commit 1f837447b20bb6f0e72d87b80ece1c221c362c7d (2026-11-11), under the MIT licence.
+at commit 73573e94a06a39965978b3fa1f9c1eace8cebc7c (2026-11-17), under the MIT licence.
 
 Copyright (c) 2025 Corey Haines
 

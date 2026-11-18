@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/autofix` from https://github.com/coderabbitai/skills
-at commit 45bd1ae2c471cd861b8b6903f7dcab7c57aa0e59 (2026-11-12), under the MIT licence.
+at commit bb71cd4c28ce384e2cc078bd6e1137496da56a8d (2026-11-18), under the MIT licence.
 
 Copyright (c) 2026 CodeRabbit AI
 

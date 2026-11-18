@@ -1,6 +1,6 @@
 # Source
 
 Unmodified copy of `skills/clickhouse-managed-postgres-rca` from https://github.com/ClickHouse/agent-skills
-at commit d3b2b5ba43a8b80c2d08858b68d53edc701b5ace (2026-11-02), under the Apache-2.0 licence.
+at commit 19b32426959fe67b692aa1ed944e2259c0a82a9e (2026-11-17), under the Apache-2.0 licence.
 
 The licence text is in LICENSE.txt. Nothing in this folder was edited.

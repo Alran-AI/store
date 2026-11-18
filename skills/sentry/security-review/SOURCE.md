@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/security-review` from https://github.com/getsentry/skills
-at commit e94f22214528d69899d09c627b3315ddc3544816 (2026-11-05), under the Apache-2.0 licence.
+at commit a582c51ee29d0f35e6ac321340796f77d43da733 (2026-11-14), under the Apache-2.0 licence.
 
 Copyright 2025 Functional Software, Inc. dba Sentry
 

@@ -1,0 +1,115 @@
+name: Update sources
+
+# Every source in sources.json is checked; the ones that moved are vendored again and the store is
+# rebuilt. Nothing is published from here: the workflow opens a pull request, which is read and merged
+# by hand. See the "Keeping it up to date" section of README.md.
+
+on:
+  schedule:
+    # 04:23 UTC, every morning. Not on the hour: many workflows run at 00:00 and the runners are busy.
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-sources
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Look up the upstream head of every source
+        run: node scripts/update-sources.mjs --work "$RUNNER_TEMP/clones" --report updates.json
+
+      - name: Has anything moved?
+        id: moved
+        run: |
+          count=$(jq '.moved | length' updates.json)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Move the pins and vendor the Skills again
+        if: steps.moved.outputs.count != '0'
+        run: node scripts/update-sources.mjs --work "$RUNNER_TEMP/clones" --apply --report updates.json
+
+      - name: Rebuild the store
+        if: steps.moved.outputs.count != '0'
+        run: |
+          node scripts/gen-icons.mjs
+          node scripts/gen-config.mjs
+          node tools/store/build-store.mjs --source .
+          node tools/store/build-store.mjs --source . --check
+
+      - name: Has the Superpowers package moved?
+        if: always()
+        run: |
+          node -e '
+          const { execFileSync } = require("node:child_process");
+          for (const pkg of require("./packages.json").packages) {
+            let head;
+            try {
+              head = execFileSync("git", ["ls-remote", pkg.repo, "HEAD"], { encoding: "utf8" }).trim().split(/\s+/)[0];
+            } catch {
+              console.log(`::notice::${pkg.id}: the repository cannot be reached`);
+              continue;
+            }
+            if (head === pkg.commit) console.log(`${pkg.id}: at its pin`);
+            else console.log(`::warning::${pkg.id} has moved (${pkg.commit.slice(0, 7)} -> ${head.slice(0, 7)}). Its files are pinned by SHA-256: read the change, then run scripts/vendor-package.mjs --work <work> --pin.`);
+          }'
+
+      - name: Write the summary
+        if: always()
+        run: |
+          {
+            echo "## Sources"
+            echo ""
+            echo "| Source | Was | Now |"
+            echo "| --- | --- | --- |"
+            while read -r source from to; do
+              echo "| $source | \`${from:0:7}\` | \`${to:0:7}\` |"
+            done < <(jq -r '.moved[] | "\(.source) \(.from) \(.to)"' updates.json)
+            echo ""
+            echo "Unchanged: $(jq '.unchanged | length' updates.json) · Unreachable: $(jq '.unreachable | length' updates.json) · Frozen: $(jq '.frozen | length' updates.json)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open a pull request
+        if: steps.moved.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "The upstream head of $(jq '.moved | length' updates.json) source(s) moved. The pins in"
+            echo "\`sources.json\` were moved, the Skills were vendored again and the store was rebuilt."
+            echo ""
+            echo "| Source | Was | Now |"
+            echo "| --- | --- | --- |"
+            jq -r '.moved[] | "| \(.source) | `\(.from[0:7])` | `\(.to[0:7])` |"' updates.json
+            echo ""
+            echo "Read \`EXCLUDED.md\` for the Skills that were left out and why. The Superpowers package is"
+            echo "not touched by this run: its files are pinned by SHA-256 and have to be read again."
+            echo ""
+            echo "This pull request is built by \`.github/workflows/update-sources.yml\`."
+          } > pr-body.md
+          git config user.name "alran-store"
+          git config user.email "alran-store@users.noreply.github.com"
+          git checkout -b chore/update-sources
+          git add -A
+          git commit -m "Update sources"
+          git push --force origin chore/update-sources
+          gh pr create \
+            --base "${{ github.event.repository.default_branch }}" \
+            --head chore/update-sources \
+            --title "Update sources" \
+            --body-file pr-body.md

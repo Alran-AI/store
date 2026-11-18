@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/portable-text-conversion` from https://github.com/sanity-io/agent-toolkit
-at commit 3ed3a143f8d3413faa7790ac0b2274fd3a8a6320 (2026-10-27), under the MIT licence.
+at commit 5cb78d3aed2f8068c012e30180168f3ccdc7bae2 (2026-11-17), under the MIT licence.
 
 Copyright (c) 2025 Sanity
 

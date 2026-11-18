@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/dart-migrate-to-checks-package` from https://github.com/flutter/skills
-at commit e5a88d2be19cbf7ba1ef974375e5846492aca2ac (2026-11-11), under the BSD-3-Clause licence.
+at commit ff6d472ee66dbed566c4500edee460c94fde0a02 (2026-11-18), under the BSD-3-Clause licence.
 
 Copyright 2026 The Flutter Authors. All rights reserved.
 

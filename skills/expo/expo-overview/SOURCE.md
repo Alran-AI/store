@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `plugins/expo/skills/expo-overview` from https://github.com/expo/skills
-at commit acc0b21ce09be356b5cf0323482bdfe7db0b7a1e (2026-11-12), under the MIT licence.
+at commit dfdebcc6c4c1bf7a9471cefd6b6f39c7ba6c884d (2026-11-15), under the MIT licence.
 
 Copyright (c) 2025-present 650 Industries, Inc. (aka Expo)
 

@@ -34,44 +34,78 @@
       "huggingface": "Hugging Face",
       "sentry": "Sentry (engineering)",
       "marketing": "Marketing (Corey Haines)",
-      "pm": "Product management (Paweł Huryn)"
+      "pm": "Product management (Paweł Huryn)",
+      "google": "Google Cloud",
+      "microsoft": "Microsoft SDKs",
+      "azure": "Microsoft Azure",
+      "dotnet": ".NET",
+      "android": "Android",
+      "kotlin": "Kotlin",
+      "elastic": "Elastic",
+      "dbt": "dbt",
+      "aws": "AWS",
+      "builderio": "Builder.io",
+      "antfu": "Vue and Vite (Anthony Fu)",
+      "deepmind": "Google DeepMind science",
+      "kdense": "Scientific agent skills",
+      "lambdatest": "LambdaTest",
+      "mattpocock": "TypeScript engineering (Matt Pocock)",
+      "emilkowalski": "Frontend craft (Emil Kowalski)",
+      "typesafe": "TypeSafe"
     },
     "versions": {
-      "addyosmani": "2026.11.1+301b02b",
-      "cloudflare": "2026.11.10+cbf893b",
+      "addyosmani": "2026.11.13+39b723c",
+      "cloudflare": "2026.11.17+5108325",
       "firebase": "2026.11.9+99954a3",
       "supabase": "2026.10.2+c9be0e9",
-      "stripe": "2026.11.12+1ef4a81",
-      "expo": "2026.11.12+acc0b21",
-      "clickhouse": "2026.11.2+d3b2b5b",
+      "stripe": "2026.11.18+72e7e79",
+      "expo": "2026.11.15+dfdebcc",
+      "clickhouse": "2026.11.17+19b3242",
       "gemini": "2026.11.12+87fb017",
-      "mongodb": "2026.11.12+7b44a4a",
-      "neon": "2026.11.12+fa44b92",
-      "flutter": "2026.11.11+e5a88d2",
+      "mongodb": "2026.11.18+4946a8d",
+      "neon": "2026.11.18+23aa24e",
+      "flutter": "2026.11.18+ff6d472",
       "apollo": "2026.10.30+9dda139",
       "brave": "2026.8.12+62793e0",
       "callstack": "2026.10.8+59e9d17",
-      "coderabbit": "2026.11.12+45bd1ae",
-      "cypress": "2026.11.6+1b87172",
-      "duckdb": "2026.4.14+7feda8e",
+      "coderabbit": "2026.11.18+bb71cd4",
+      "cypress": "2026.11.16+e40f7be",
+      "duckdb": "2026.11.17+44dfbbb",
       "redis": "2026.11.5+74708da",
-      "resend": "2026.11.9+f3e86d8",
-      "sanity": "2026.10.27+3ed3a14",
-      "netlify": "2026.11.10+905256e",
+      "resend": "2026.11.17+0b003d3",
+      "sanity": "2026.11.17+5cb78d3",
+      "netlify": "2026.11.18+f75a283",
       "terraform": "2026.11.3+5e30fa5",
       "packer": "2026.11.3+5e30fa5",
       "replicate": "2026.6.4+2f36e41",
-      "huggingface": "2026.10.29+25910b3",
-      "sentry": "2026.11.5+e94f222",
-      "marketing": "2026.11.11+1f83744",
-      "pm": "2026.11.8+9af7bfd"
+      "huggingface": "2026.11.17+5291c2b",
+      "sentry": "2026.11.14+a582c51",
+      "marketing": "2026.11.17+73573e9",
+      "pm": "2026.11.8+9af7bfd",
+      "google": "2026.11.18+d2b18e8",
+      "microsoft": "2026.11.16+b35d2c6",
+      "azure": "2026.11.18+0e26cd9",
+      "dotnet": "2026.11.11+2877c71",
+      "android": "2026.11.15+c729425",
+      "kotlin": "2026.10.30+087f568",
+      "elastic": "2026.10.29+09d879d",
+      "dbt": "2026.10.21+b8facde",
+      "aws": "2026.11.16+48a6f48",
+      "builderio": "2026.11.18+d8e3481",
+      "antfu": "2026.11.16+4a6bb39",
+      "deepmind": "2026.11.10+370f8f3",
+      "kdense": "2026.11.16+ec59a29",
+      "lambdatest": "2026.11.17+298d868",
+      "mattpocock": "2026.11.12+5863806",
+      "emilkowalski": "2026.11.15+64eb3de",
+      "typesafe": "2026.10.23+302eea6"
     }
   },
   "plugins": [
     {
       "name": "engineering-workflow",
       "displayName": "Engineering Workflow",
-      "version": "2026.11.1+301b02b",
+      "version": "2026.11.13+39b723c",
       "description": "Twenty-one skills for working with a coding agent: specs and task breakdown, incremental implementation, test-driven development, debugging, code review and simplification, security and performance, git workflow, CI/CD, observability and shipping.",
       "author": "Addy Osmani",
       "license": "MIT",
@@ -96,7 +130,7 @@
     {
       "name": "cloudflare-skills",
       "displayName": "Cloudflare",
-      "version": "2026.11.10+cbf893b",
+      "version": "2026.11.17+5108325",
       "description": "Thirteen skills for building on Cloudflare: Workers development and best practices, Wrangler, Durable Objects, the Agents SDK, frameworks and Next.js on Cloudflare, performance and profiling, Cloudflare One, and a broad platform reference.",
       "author": "Cloudflare",
       "license": "Apache-2.0",
@@ -152,7 +186,7 @@
     {
       "name": "stripe-skills",
       "displayName": "Stripe",
-      "version": "2026.11.12+1ef4a81",
+      "version": "2026.11.18+72e7e79",
       "description": "Three skills for Stripe: integration best practices, upgrading to current API and SDK versions, and building Stripe Apps.",
       "author": "Stripe",
       "license": "MIT",
@@ -170,7 +204,7 @@
     {
       "name": "expo-skills",
       "displayName": "Expo",
-      "version": "2026.11.12+acc0b21",
+      "version": "2026.11.15+dfdebcc",
       "description": "Ten skills for Expo and React Native apps: Expo Router, native modules, data fetching, dev clients, project structure, SDK upgrades, and EAS Update, Hosting and app store releases.",
       "author": "Expo",
       "license": "MIT",
@@ -188,7 +222,7 @@
     {
       "name": "clickhouse-skills",
       "displayName": "ClickHouse",
-      "version": "2026.11.2+d3b2b5b",
+      "version": "2026.11.17+19b3242",
       "description": "Five skills for ClickHouse: architecture advice, best practices, coding and troubleshooting with the Node.js client, and root-cause analysis for managed Postgres.",
       "author": "ClickHouse",
       "license": "Apache-2.0",
@@ -224,7 +258,7 @@
     {
       "name": "mongodb-skills",
       "displayName": "MongoDB",
-      "version": "2026.11.12+7b44a4a",
+      "version": "2026.11.18+4946a8d",
       "description": "Seven skills for MongoDB: connections, schema design, query optimisation, natural-language querying, Queryable Encryption sizing, MCP setup and Atlas stream processing.",
       "author": "MongoDB",
       "license": "Apache-2.0",
@@ -242,7 +276,7 @@
     {
       "name": "neon-skills",
       "displayName": "Neon",
-      "version": "2026.11.12+fa44b92",
+      "version": "2026.11.18+23aa24e",
       "description": "Seven skills for Neon serverless Postgres: the platform, Auth, Functions, Object Storage, Realtime and the AI Gateway.",
       "author": "Neon",
       "license": "Apache-2.0",
@@ -260,7 +294,7 @@
     {
       "name": "flutter-skills",
       "displayName": "Flutter and Dart",
-      "version": "2026.11.11+e5a88d2",
+      "version": "2026.11.18+ff6d472",
       "description": "Twenty-two skills from the Flutter and Dart teams: unit, widget and integration tests, coverage, static analysis, FFI, documentation, widget previews and architecture best practices.",
       "author": "Flutter",
       "license": "BSD-3-Clause",
@@ -333,7 +367,7 @@
     {
       "name": "coderabbit-skills",
       "displayName": "CodeRabbit",
-      "version": "2026.11.12+45bd1ae",
+      "version": "2026.11.18+bb71cd4",
       "description": "Two skills for working with CodeRabbit: configuring it and applying its review fixes. They expect the CodeRabbit tooling to be set up.",
       "author": "CodeRabbit",
       "license": "MIT",
@@ -351,7 +385,7 @@
     {
       "name": "cypress-skills",
       "displayName": "Cypress",
-      "version": "2026.11.6+1b87172",
+      "version": "2026.11.16+e40f7be",
       "description": "Five skills for Cypress: authoring tests, the Cypress Cloud CLI, documentation lookup, and explaining test runs.",
       "author": "Cypress",
       "license": "MIT",
@@ -369,7 +403,7 @@
     {
       "name": "duckdb-skills",
       "displayName": "DuckDB",
-      "version": "2026.4.14+7feda8e",
+      "version": "2026.11.17+44dfbbb",
       "description": "Eight skills for DuckDB: running queries, attaching databases, reading and converting files, exploring S3, spatial data, and documentation lookup.",
       "author": "DuckDB",
       "license": "MIT",
@@ -405,7 +439,7 @@
     {
       "name": "resend-skills",
       "displayName": "Email (Resend)",
-      "version": "2026.11.9+f3e86d8",
+      "version": "2026.11.17+0b003d3",
       "description": "Three skills for email: best practices, React Email, and the Resend CLI.",
       "author": "Resend",
       "license": "MIT",
@@ -423,7 +457,7 @@
     {
       "name": "sanity-skills",
       "displayName": "Sanity",
-      "version": "2026.10.27+3ed3a14",
+      "version": "2026.11.17+5cb78d3",
       "description": "Nine skills for Sanity: content modelling and experimentation, Portable Text, migrations, Studio upgrades, form components, singletons and SEO.",
       "author": "Sanity",
       "license": "MIT",
@@ -441,7 +475,7 @@
     {
       "name": "netlify-skills",
       "displayName": "Netlify",
-      "version": "2026.11.10+905256e",
+      "version": "2026.11.18+f75a283",
       "description": "Sixteen skills for Netlify: Functions and Edge Functions, Blobs, Database, Forms, Identity, caching, the image CDN, configuration, deploys, the AI Gateway, access control and frameworks.",
       "author": "Netlify",
       "license": "MIT",
@@ -513,7 +547,7 @@
     {
       "name": "huggingface-skills",
       "displayName": "Hugging Face",
-      "version": "2026.10.29+25910b3",
+      "version": "2026.11.17+5291c2b",
       "description": "Thirteen skills for Hugging Face: datasets, Spaces, Gradio, local models, papers, Trackio, ZeroGPU, Transformers.js, TRL training and AWS deployment planning.",
       "author": "Hugging Face",
       "license": "Apache-2.0",
@@ -531,7 +565,7 @@
     {
       "name": "sentry-engineering-skills",
       "displayName": "Sentry Engineering",
-      "version": "2026.11.5+e94f222",
+      "version": "2026.11.14+a582c51",
       "description": "Ten engineering skills from Sentry: AGENTS.md, code simplification, bug finding, security review, secret leaks in serialization, Django access and performance review, PR descriptions, prompt optimisation and documentation.",
       "author": "Sentry",
       "license": "Apache-2.0",
@@ -549,7 +583,7 @@
     {
       "name": "marketing-skills",
       "displayName": "Marketing",
-      "version": "2026.11.11+1f83744",
+      "version": "2026.11.17+73573e9",
       "description": "Forty-five marketing skills: copywriting and editing, conversion optimisation, SEO, email and cold outreach, pricing and paywalls, launches, analytics and attribution, and more.",
       "author": "Corey Haines",
       "license": "MIT",
@@ -580,6 +614,328 @@
       "exampleQueries": [
         "Write a PRD for this feature",
         "Run a pre-mortem on this launch"
+      ]
+    },
+    {
+      "name": "google-cloud-skills",
+      "displayName": "Google Cloud",
+      "version": "2026.11.18+d2b18e8",
+      "description": "144 skills for Google Cloud: Compute, GKE, Cloud Run, BigQuery, Spanner, Cloud SQL, Storage, Cloud Build, Cloud Logging and Monitoring, IAM, networking and security, the Agent Platform and the Gemini API, plus Google Ads, Mobile Ads and Analytics.",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/google/skills",
+      "category": "Code",
+      "icon": "icons/google-cloud-skills.png",
+      "packages": [
+        "google"
+      ],
+      "exampleQueries": [
+        "Set up a GKE cluster for this service",
+        "Why is this BigQuery query slow?",
+        "Design the Cloud Run deployment for this API"
+      ]
+    },
+    {
+      "name": "microsoft-skills",
+      "displayName": "Microsoft SDKs",
+      "version": "2026.11.16+b35d2c6",
+      "description": "135 skills for Microsoft’s SDKs and services: Azure AI and OpenAI, Cosmos DB, Event Hubs, Service Bus, Key Vault, Storage and Identity in Java, Python, TypeScript, .NET and Rust, plus the Copilot SDK and Microsoft 365 Agents.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/microsoft/skills",
+      "category": "Code",
+      "icon": "icons/microsoft-skills.png",
+      "packages": [
+        "microsoft"
+      ],
+      "exampleQueries": [
+        "Send a message to Azure Event Hubs from Python",
+        "Store secrets in Azure Key Vault from TypeScript",
+        "Build an Azure OpenAI agent in Java"
+      ]
+    },
+    {
+      "name": "azure-skills",
+      "displayName": "Microsoft Azure",
+      "version": "2026.11.18+0e26cd9",
+      "description": "Twenty-six skills for Microsoft Azure: AKS setup, cost and known issues, Azure Advisor, the AI Gateway, Kusto and Kusto Graph, messaging, local and hybrid infrastructure, compliance, cost governance and resource discovery.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/microsoft/azure-skills",
+      "category": "Code",
+      "icon": "icons/azure-skills.png",
+      "packages": [
+        "azure"
+      ],
+      "exampleQueries": [
+        "Set up an AKS cluster for this workload",
+        "Review this Azure bill for savings",
+        "Query Azure Kusto for this telemetry"
+      ]
+    },
+    {
+      "name": "dotnet-skills",
+      "displayName": ".NET",
+      "version": "2026.11.11+2877c71",
+      "description": "103 skills for .NET: MSBuild and build performance, test frameworks (MSTest, xUnit, NUnit) and test analysis, Blazor, MAUI and WinForms, EF Core, AOT and interop, upgrades to .NET 10 and 11, profiling and diagnostics.",
+      "author": "Microsoft",
+      "license": "MIT",
+      "homepage": "https://github.com/dotnet/skills",
+      "category": "Code",
+      "icon": "icons/dotnet-skills.png",
+      "packages": [
+        "dotnet"
+      ],
+      "exampleQueries": [
+        "Speed up this MSBuild solution",
+        "Migrate these xUnit tests to MSTest",
+        "Build a Blazor component for this screen"
+      ]
+    },
+    {
+      "name": "android-skills",
+      "displayName": "Android",
+      "version": "2026.11.15+c729425",
+      "description": "Thirty-one skills for Android: Jetpack Compose and its performance, migrating XML views to Compose, navigation, CameraX and Media3, ML Kit, permissions and intent security, ANR analysis, wear and TV apps, and in-app billing.",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/android/skills",
+      "category": "Code",
+      "icon": "icons/android-skills.png",
+      "packages": [
+        "android"
+      ],
+      "exampleQueries": [
+        "Migrate this XML layout to Jetpack Compose",
+        "Fix this ANR on the main thread",
+        "Add CameraX to this screen"
+      ]
+    },
+    {
+      "name": "kotlin-skills",
+      "displayName": "Kotlin",
+      "version": "2026.10.30+087f568",
+      "description": "Eight skills from the Kotlin team: the Kotlin toolchain and its Gradle plugin, Java-to-Kotlin migration, Cocoapods and SPM migration, immutable collections, and JPA entity mapping.",
+      "author": "JetBrains",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/Kotlin/kotlin-agent-skills",
+      "category": "Code",
+      "icon": "icons/kotlin-skills.png",
+      "packages": [
+        "kotlin"
+      ],
+      "exampleQueries": [
+        "Move this Java class to Kotlin",
+        "Set up the Kotlin toolchain in this Gradle project",
+        "Map this JPA entity to a Kotlin data class"
+      ]
+    },
+    {
+      "name": "elastic-skills",
+      "displayName": "Elastic",
+      "version": "2026.10.29+09d879d",
+      "description": "Seventeen skills for Elastic: Elasticsearch index design, ingest, query optimisation, ES|QL, search relevance, reindexing, anomaly detection and cluster health, plus Kibana dashboards, alerting, cases and workflows.",
+      "author": "Elastic",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/elastic/agent-skills",
+      "category": "Code",
+      "icon": "icons/elastic-skills.png",
+      "packages": [
+        "elastic"
+      ],
+      "exampleQueries": [
+        "Design the index for this data",
+        "Why is this Elasticsearch query slow?",
+        "Write a Kibana alerting rule for this metric"
+      ]
+    },
+    {
+      "name": "dbt-skills",
+      "displayName": "dbt",
+      "version": "2026.10.21+b8facde",
+      "description": "Thirteen skills for dbt: running commands, writing unit tests, the semantic layer and mesh, the information schema, migrations to dbt Core v2 and between platforms, job errors and analytics engineering.",
+      "author": "dbt Labs",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/dbt-labs/dbt-agent-skills",
+      "category": "Code",
+      "icon": "icons/dbt-skills.png",
+      "packages": [
+        "dbt"
+      ],
+      "exampleQueries": [
+        "Add a unit test to this dbt model",
+        "Migrate this dbt project to dbt Core v2",
+        "Why did this dbt job fail?"
+      ]
+    },
+    {
+      "name": "aws-skills",
+      "displayName": "AWS",
+      "version": "2026.11.16+48a6f48",
+      "description": "Ten skills for AWS: getting started with the SDK, Lambda with Durable Functions and microVMs, Elastic Beanstalk, Amplify workflows, deployment, document services and planning a use case.",
+      "author": "Amazon Web Services",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/awslabs/agent-plugins",
+      "category": "Code",
+      "icon": "icons/aws-skills.png",
+      "packages": [
+        "aws"
+      ],
+      "exampleQueries": [
+        "Set up the AWS SDK in this project",
+        "Model this workflow with Lambda Durable Functions",
+        "Plan this feature for AWS"
+      ]
+    },
+    {
+      "name": "builderio-skills",
+      "displayName": "Builder.io",
+      "version": "2026.11.18+d8e3481",
+      "description": "Sixteen skills for working with Builder.io and with agent harnesses: visual editing and visual plans, reading the docs before coding, remix and rewind, keeping a plan within its limits, and connecting a web app to the MCP server.",
+      "author": "Builder.io",
+      "license": "MIT",
+      "homepage": "https://github.com/BuilderIO/skills",
+      "category": "Code",
+      "icon": "icons/builderio-skills.png",
+      "packages": [
+        "builderio"
+      ],
+      "exampleQueries": [
+        "Make a visual plan for this page",
+        "Rewind this change and try another way",
+        "Read the docs for this component before I use it"
+      ]
+    },
+    {
+      "name": "vue-vite-skills",
+      "displayName": "Vue and Vite",
+      "version": "2026.11.16+4a6bb39",
+      "description": "Twelve skills from Anthony Fu for the Vue and Vite ecosystem: Nuxt, Nitro, Pinia, Unocss, Vitest and pnpm, together with ways of working with the code itself.",
+      "author": "Anthony Fu",
+      "license": "MIT",
+      "homepage": "https://github.com/antfu/skills",
+      "category": "Code",
+      "icon": "icons/vue-vite-skills.png",
+      "packages": [
+        "antfu"
+      ],
+      "exampleQueries": [
+        "Set up Nuxt for this project",
+        "Organise this Pinia store",
+        "Speed up this Vite build"
+      ]
+    },
+    {
+      "name": "deepmind-skills",
+      "displayName": "Google DeepMind",
+      "version": "2026.11.10+370f8f3",
+      "description": "One skill from Google DeepMind: a protocol for handling API keys and credentials safely, checking that they are present and asking the user to add them when they are not.",
+      "author": "Google DeepMind",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/google-deepmind/science-skills",
+      "category": "Science & Healthcare",
+      "icon": "icons/deepmind-skills.png",
+      "packages": [
+        "deepmind"
+      ],
+      "exampleQueries": [
+        "Ask me for the API key this needs",
+        "Check which credentials are missing for this script"
+      ]
+    },
+    {
+      "name": "scientific-agent-skills",
+      "displayName": "Scientific Agent Skills",
+      "version": "2026.11.16+ec59a29",
+      "description": "Fifty-two skills for scientific work: Biopython, statsmodels and scikit-bio, Torch Geometric and scvi-tools, Polars, AnnData and Dask, molecular dynamics and drug-discovery tools, with the research, grant and evidence workflows around them.",
+      "author": "K-Dense AI",
+      "license": "MIT",
+      "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "category": "Science & Healthcare",
+      "icon": "icons/scientific-agent-skills.png",
+      "packages": [
+        "kdense"
+      ],
+      "exampleQueries": [
+        "Analyse this sequence with Biopython",
+        "Write an scvi-tools model for this dataset",
+        "Summarise this paper with the right citations"
+      ]
+    },
+    {
+      "name": "lambdatest-skills",
+      "displayName": "LambdaTest",
+      "version": "2026.11.17+298d868",
+      "description": "Forty-one skills for testing: writing tests in Jest, Vitest, Mocha, Pytest, JUnit, NUnit, xUnit and MSTest, plus Cucumber and other BDD, Appium, Detox and XCUITest, accessibility checks, CI/CD pipelines and Postman collections.",
+      "author": "LambdaTest",
+      "license": "MIT",
+      "homepage": "https://github.com/LambdaTest/agent-skills",
+      "category": "Code",
+      "icon": "icons/lambdatest-skills.png",
+      "packages": [
+        "lambdatest"
+      ],
+      "exampleQueries": [
+        "Write a Vitest test for this component",
+        "Turn this OpenAPI spec into a Postman collection",
+        "Set up a mobile test pipeline for this app"
+      ]
+    },
+    {
+      "name": "typescript-engineering-skills",
+      "displayName": "TypeScript Engineering",
+      "version": "2026.11.12+5863806",
+      "description": "Thirty-two skills for TypeScript projects: designing a codebase and its domain model, prototyping, implementing from a spec, test-driven development, grilling a design before it is built, writing for agents, and the research and triage workflows around them.",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "homepage": "https://github.com/mattpocock/skills",
+      "category": "Code",
+      "icon": "icons/typescript-engineering-skills.png",
+      "packages": [
+        "mattpocock"
+      ],
+      "exampleQueries": [
+        "Design the domain model for this feature",
+        "Implement this spec test-first",
+        "Grill this design before I build it"
+      ]
+    },
+    {
+      "name": "frontend-craft-skills",
+      "displayName": "Frontend Craft",
+      "version": "2026.11.15+64eb3de",
+      "description": "Fourteen skills for interface craft: animation vocabulary and performance, reviewing animations, gestures, Apple-style design, native mobile and Swift work, picking a UI library and learning taste.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "homepage": "https://github.com/emilkowalski/skills",
+      "category": "Code",
+      "icon": "icons/frontend-craft-skills.png",
+      "packages": [
+        "emilkowalski"
+      ],
+      "exampleQueries": [
+        "Review this animation for performance",
+        "Add a gesture to this screen",
+        "Which UI library fits this app?"
+      ]
+    },
+    {
+      "name": "typesafe-skills",
+      "displayName": "TypeSafe",
+      "version": "2026.10.23+302eea6",
+      "description": "One skill from TypeSafe: integration craft for System One models, the typed questions they answer and the state they work with, for building, reviewing and debugging code that calls them.",
+      "author": "TypeSafe",
+      "license": "MIT",
+      "homepage": "https://github.com/typesafe-ai/skills",
+      "category": "Code",
+      "icon": "icons/typesafe-skills.png",
+      "packages": [
+        "typesafe"
+      ],
+      "exampleQueries": [
+        "Write a typed question for this System One model",
+        "Debug this TypeSafe call",
+        "Replace this prompt-and-parse step with TypeSafe"
       ]
     },
     {

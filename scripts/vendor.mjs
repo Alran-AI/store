@@ -59,6 +59,18 @@ function frontmatterName(text) {
   return line ? line[1].trim().replace(/^["']|["']$/gu, "") : undefined;
 }
 
+/** The text of one frontmatter field, including the lines of a folded or literal block. */
+function frontmatterField(text, field) {
+  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  if (!match) return undefined;
+  const lines = match[1].split(/\r?\n/u);
+  const start = lines.findIndex((line) => new RegExp(`^${field}\\s*:`, "u").test(line));
+  if (start < 0) return undefined;
+  const parts = [lines[start].slice(lines[start].indexOf(":") + 1).trim()];
+  for (let i = start + 1; i < lines.length && /^\s+\S/u.test(lines[i]); i += 1) parts.push(lines[i].trim());
+  return parts.join(" ").replace(/^[>|][-+]?\s*/u, "").trim();
+}
+
 /** Every file under `directory` as paths relative to it; records problems with the file kinds. */
 function listFiles(directory, reasons) {
   const files = [];
@@ -92,7 +104,16 @@ function admit(directory, name) {
   const reasons = [];
   if (!SKILL_NAME.test(name)) reasons.push(`"${name}" is not a Skill name`);
   if (!existsSync(join(directory, "SKILL.md"))) return [...reasons, "has no SKILL.md"];
-  if (frontmatterName(readFileSync(join(directory, "SKILL.md"), "utf8")) !== name) reasons.push("SKILL.md names another skill than its folder");
+  const skillText = readFileSync(join(directory, "SKILL.md"), "utf8");
+  if (frontmatterName(skillText) !== name) reasons.push("SKILL.md names another skill than its folder");
+  // A Skill that needs an MCP server cannot work here: Alran Code sets up no MCP connectors, so
+  // the Skill would ask for a tool that does not exist. A Skill that names an MCP server and a way
+  // around it (a CLI, an SDK, curl, an API) is kept.
+  const compatibility = frontmatterField(skillText, "compatibility");
+  const wayAround = /\boptional\b|\bbest with\b|\bworks? without\b|fall\s?back|\bwithout (?:either|it|them|mcp)\b|\bif (?:available|unavailable|not available)\b|\bwhen (?:available|configured)\b|\bmay use\b|\bcli\b|\bsdk\b|\bcurl\b|\bwget\b|\brest api\b|\bhttp api\b/iu;
+  if (compatibility && /\bmcp(?:\b|_)/iu.test(compatibility) && !wayAround.test(compatibility)) {
+    reasons.push("needs an MCP server that Alran Code does not set up");
+  }
   if (existsSync(join(directory, "LICENSE.txt")) || existsSync(join(directory, "SOURCE.md"))) reasons.push("already has a LICENSE.txt or SOURCE.md");
   const files = listFiles(directory, reasons);
   for (const file of files) {
@@ -132,8 +153,17 @@ function outwardLinks(directory) {
   return links;
 }
 
-function licenseNotice(clone) {
-  const text = readFileSync(join(clone, "LICENSE"), "utf8");
+/** The licence file of a clone: LICENSE, or LICENSE.txt / LICENSE.md when the repository names it so. */
+function licenseFile(clone) {
+  for (const name of ["LICENSE", "LICENSE.txt", "LICENSE.md"]) {
+    const path = join(clone, name);
+    if (existsSync(path) && statSync(path).isFile()) return path;
+  }
+  return undefined;
+}
+
+function licenseNotice(path) {
+  const text = readFileSync(path, "utf8");
   // Only a real notice ("Copyright (c) 2025 Name"), never boilerplate such as Apache-2.0's own wording.
   const copyright = text.split(/\r?\n/u).find((line) => /^\s*copyright\s*(\(c\)|©)?\s*\d{4}/iu.test(line))?.trim();
   return { text, copyright };
@@ -165,17 +195,37 @@ const excluded = [];
 const notices = [];
 const taken = new Map();
 const staged = [];
+const frozen = new Set();
 
 for (const source of manifest.sources) {
+  // A frozen source is one whose upstream repository is gone: the Skills that were taken from it
+  // stay in the store as they were taken. Nothing is copied and no clone is needed, so the source
+  // cannot be checked or refreshed; it keeps the version and the licence it was taken under.
+  if (source.frozen) {
+    const vendored = join(ROOT, "skills", source.id);
+    if (!existsSync(vendored)) die(`${source.id}: frozen, but there are no vendored Skills`);
+    const folders = readdirSync(vendored, { withFileTypes: true }).filter((entry) => entry.isDirectory());
+    const licensed = folders.find((entry) => existsSync(join(vendored, entry.name, "LICENSE.txt")));
+    if (!licensed) die(`${source.id}: frozen, but no vendored Skill carries a LICENSE.txt`);
+    const licenseText = readFileSync(join(vendored, licensed.name, "LICENSE.txt"), "utf8");
+    notices.push({ source, licenseText, sha: source.commit, date: source.frozen.date, copyright: source.frozen.copyright, count: folders.length });
+    frozen.add(source.id);
+    continue;
+  }
   const clone = join(work, source.clone);
   if (!existsSync(join(clone, ".git"))) die(`${source.id}: no clone at ${clone}`);
   const sha = git(clone, "rev-parse", "HEAD");
   if (sha !== source.commit) die(`${source.id}: the clone is at ${sha}, sources.json pins ${source.commit}`);
   if (git(clone, "status", "--porcelain")) die(`${source.id}: the clone has local changes`);
   const date = git(clone, "log", "-1", "--format=%cs");
-  const { text: licenseText, copyright } = licenseNotice(clone);
+  const licensePath = licenseFile(clone);
+  if (!licensePath) die(`${source.id}: ${clone} has no LICENSE, LICENSE.txt or LICENSE.md`);
+  const { text: licenseText, copyright } = licenseNotice(licensePath);
 
-  // Candidates: folder name -> directory, from every skills directory of the source.
+  // Candidates: folder name -> every directory that holds a Skill of that name, from every skills
+  // directory of the source. A source may ship the same Skill twice (a plugin bundle next to the
+  // copy it was built from): the first copy that is admitted is taken, the others are left out and
+  // listed in EXCLUDED.md.
   const dirs = source.skillsDirs ?? [source.skillsDir];
   const candidates = new Map();
   for (const dir of dirs) {
@@ -183,8 +233,9 @@ for (const source of manifest.sources) {
     if (!existsSync(base)) die(`${source.id}: ${dir} does not exist`);
     for (const entry of readdirSync(base, { withFileTypes: true })) {
       if (!entry.isDirectory() || !existsSync(join(base, entry.name, "SKILL.md"))) continue;
-      if (candidates.has(entry.name)) die(`${source.id}: ${entry.name} is in two skills directories`);
-      candidates.set(entry.name, { directory: join(base, entry.name), relPath: `${dir}/${entry.name}` });
+      const found = candidates.get(entry.name) ?? [];
+      found.push({ directory: join(base, entry.name), relPath: `${dir}/${entry.name}` });
+      candidates.set(entry.name, found);
     }
   }
   const named = source.skills !== undefined;
@@ -192,27 +243,43 @@ for (const source of manifest.sources) {
   const wanted = named ? source.skills : [...candidates.keys()].filter((name) => !(source.exclude ?? []).includes(name));
   const members = new Map();
   for (const name of [...new Set(wanted)].sort()) {
-    const candidate = candidates.get(name);
-    if (!candidate) {
+    const found = candidates.get(name);
+    if (!found) {
       fatal.push(`${source.id}/${name}: not found in ${dirs.join(", ")}`);
       continue;
     }
-    const reasons = admit(candidate.directory, name);
-    if (reserved.has(name)) reasons.push("the name belongs to a Skill built in to Alran Code");
-    if (named && reasons.length > 0) {
-      fatal.push(`${source.id}/${name}: ${reasons.join("; ")}`);
-      continue;
-    }
-    if (reasons.length > 0) {
-      excluded.push({ source, name, reasons });
-      continue;
+    const evaluated = found.map((candidate) => {
+      const reasons = admit(candidate.directory, name);
+      if (reserved.has(name)) reasons.push("the name belongs to a Skill built in to Alran Code");
+      return { candidate, reasons };
+    });
+    const passing = evaluated.filter((entry) => entry.reasons.length === 0);
+    let chosen;
+    if (named) {
+      // a named Skill has to be admitted in every copy the source ships of it
+      const failing = evaluated.find((entry) => entry.reasons.length > 0);
+      if (failing) {
+        fatal.push(`${source.id}/${name}: ${failing.reasons.join("; ")}`);
+        continue;
+      }
+      chosen = passing[0]?.candidate;
+    } else {
+      for (const entry of evaluated) {
+        if (entry.reasons.length > 0) excluded.push({ source, name, reasons: entry.reasons });
+      }
+      if (passing.length === 0) continue;
+      chosen = passing[0].candidate;
+      // the store holds one copy of a Skill: any further copy of it is left out
+      for (const entry of evaluated.slice(evaluated.indexOf(passing[0]) + 1)) {
+        excluded.push({ source, name, reasons: [`another copy of this Skill in this source (${entry.candidate.relPath}) was left out; the store holds one copy`] });
+      }
     }
     if (taken.has(name)) {
       if (named) fatal.push(`${name} is in both ${taken.get(name)} and ${source.id}`);
       else excluded.push({ source, name, reasons: [`the name is already taken by ${taken.get(name)}`] });
       continue;
     }
-    members.set(name, candidate);
+    members.set(name, chosen);
   }
 
   // Links that leave a Skill must land on another Skill of this source (or a shared folder) that is in.
@@ -252,6 +319,7 @@ for (const source of manifest.sources) {
 if (fatal.length > 0) die(`refused:\n${fatal.map((line) => `  ${line}`).join("\n")}`);
 
 for (const id of new Set(manifest.sources.map((source) => source.id))) {
+  if (frozen.has(id)) continue; // the vendored Skills of a frozen source stay as they are
   rmSync(join(ROOT, "skills", id), { recursive: true, force: true });
   rmSync(join(ROOT, "shared", id), { recursive: true, force: true });
 }
@@ -312,4 +380,5 @@ const versions = Object.fromEntries(notices.map(({ source, sha, date }) => [sour
 const counts = Object.fromEntries(notices.map(({ source, count }) => [source.id, count]));
 writeFileSync(join(ROOT, "versions.json"), `${JSON.stringify({ versions, counts }, null, 2)}\n`);
 console.log(`vendored ${staged.filter((item) => item.kind === "skill").length} skills from ${manifest.sources.length} sources; left out ${excluded.length} (EXCLUDED.md)`);
+console.log(`frozen sources (upstream gone): ${[...frozen].join(", ") || "none"}`);
 console.log("versions and counts written to versions.json (scripts/gen-config.mjs reads them)");

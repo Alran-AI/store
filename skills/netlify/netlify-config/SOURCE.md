@@ -1,7 +1,7 @@
 # Source
 
 Unmodified copy of `skills/netlify-config` from https://github.com/netlify/context-and-tools
-at commit 905256ef236890a842be1ff1c5fd6bb07baa1890 (2026-11-10), under the MIT licence.
+at commit f75a2839ff954314d6b653d811341d601d509b07 (2026-11-18), under the MIT licence.
 
 Copyright (c) 2025 Netlify
 
