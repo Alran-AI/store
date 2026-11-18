@@ -1159,6 +1159,173 @@
         "Build an agent on Cloudflare Agents",
         "Add state to this agent"
       ]
+    },
+    {
+      "source": "paperclip",
+      "name": "paperclip-skills",
+      "displayName": "Paperclip",
+      "author": "Paperclip",
+      "category": "Productivity",
+      "description": "{N} skills for Paperclip, the control plane for agents: the tasks, their assignments, the governance around them and the APIs behind it.",
+      "exampleQueries": [
+        "What is assigned to me?",
+        "Check the governance rules for this task"
+      ]
+    },
+    {
+      "source": "cognee",
+      "name": "cognee-skills",
+      "displayName": "Cognee",
+      "author": "Topoteretes",
+      "category": "Code",
+      "description": "{N} skills for Cognee, the open-source memory engine for agents: indexing documents into a knowledge graph, the CLI, custom pipelines and graph models, and running it in Docker.",
+      "exampleQueries": [
+        "Index this folder into Cognee",
+        "Write a custom pipeline for this data"
+      ]
+    },
+    {
+      "source": "wshobson",
+      "name": "agent-plugin-marketplace-skills",
+      "displayName": "Agent Plugin Marketplace",
+      "author": "wshobson",
+      "category": "Code",
+      "description": "{N} skills from a plugin marketplace: accessibility and compliance, agent teams, API scaffolding, cloud and databases, DevOps, frontend, MCP, security and testing.",
+      "exampleQueries": [
+        "Make this UI accessible",
+        "Scaffold an API for this service"
+      ]
+    },
+    {
+      "source": "templates",
+      "name": "claude-code-templates-skills",
+      "displayName": "Claude Code Templates",
+      "author": "davila7",
+      "category": "Code",
+      "description": "{N} skills that come with a large set of Claude Code templates, agents and commands.",
+      "exampleQueries": [
+        "Set up this repo from a template",
+        "Which template fits this project?"
+      ]
+    },
+    {
+      "source": "alirez",
+      "name": "claude-skills-catalog-skills",
+      "displayName": "Claude Skills Catalogue",
+      "author": "Alireza Rezvani",
+      "category": "Code",
+      "description": "{N} skills across forty-odd areas: agents, backend, cloud, databases, DevOps, frontend, MCP, machine learning, security and testing.",
+      "exampleQueries": [
+        "Set up Kubernetes for this service",
+        "Write this component the way this repo does"
+      ]
+    },
+    {
+      "source": "aas",
+      "name": "agentic-awesome-skills-skills",
+      "displayName": "Agentic Awesome Skills",
+      "author": "sickn33",
+      "category": "Code",
+      "description": "{N} skills in one Plugin — the largest collection of agentic Skills on GitHub, from accessibility and architecture to 3D, data and DevOps.",
+      "exampleQueries": [
+        "Is there a Skill for this?",
+        "Find me a Skill that does this kind of work"
+      ]
+    },
+    {
+      "source": "baoyu",
+      "name": "baoyu-skills",
+      "displayName": "Baoyu",
+      "author": "JimLiu",
+      "category": "Studio",
+      "description": "{N} skills for images: article illustrations, cover images, infographics and the set for Xiaohongshu.",
+      "exampleQueries": [
+        "Make a cover image for this article",
+        "Illustrate this piece"
+      ]
+    },
+    {
+      "source": "ponytail",
+      "name": "ponytail-skills",
+      "displayName": "Ponytail",
+      "author": "DietrichGebert",
+      "category": "Code",
+      "description": "{N} skills for auditing a repository and keeping track of the debt in it: what breaks under load, what is risky without tests, what to delete or merge, and the ledger that follows it.",
+      "exampleQueries": [
+        "Audit this repo",
+        "What debt has this codebase built up?"
+      ]
+    },
+    {
+      "source": "openmotion",
+      "name": "openmotion-skills",
+      "displayName": "OpenMotion",
+      "author": "nexu-io",
+      "category": "Studio",
+      "description": "{N} skills for motion design: the vocabulary of animation, timing and easing, and the libraries to build it with.",
+      "exampleQueries": [
+        "Animate this transition",
+        "What easing should this use?"
+      ]
+    },
+    {
+      "source": "socialupload",
+      "name": "social-auto-upload-skills",
+      "displayName": "Social Auto Upload",
+      "author": "dreammis",
+      "category": "Studio",
+      "description": "{N} skills for publishing where people actually are: Xiaohongshu, Douyin, Bilibili, TikTok, WeChat, Zhihu, Hupu and Tencent.",
+      "exampleQueries": [
+        "Post this video to TikTok",
+        "Publish this article on Xiaohongshu"
+      ]
+    },
+    {
+      "source": "obsidian",
+      "name": "obsidian-skills",
+      "displayName": "Obsidian",
+      "author": "AgriciDaniel",
+      "category": "Productivity",
+      "description": "{N} skill for thinking through an Obsidian vault: the loop that turns notes into something connected.",
+      "exampleQueries": [
+        "Think through this note with me"
+      ]
+    },
+    {
+      "source": "gentleai",
+      "name": "gentle-ai-skills",
+      "displayName": "Gentle AI",
+      "author": "Gentleman-Programming",
+      "category": "Code",
+      "description": "{N} skills for working with others in a codebase: design docs that reduce cognitive load, comments worth reading, triaging issues at the root, and commits as reviewable units.",
+      "exampleQueries": [
+        "Review this doc for cognitive load",
+        "Split this into reviewable commits"
+      ]
+    },
+    {
+      "source": "archify",
+      "name": "archify-skills",
+      "displayName": "Archify",
+      "author": "tt-a1i",
+      "category": "Code",
+      "description": "{N} skills for the shape of the code: simplifying a codebase and judging whether a test earns its cost.",
+      "exampleQueries": [
+        "Simplify this codebase",
+        "Is this test worth keeping?"
+      ]
+    },
+    {
+      "source": "opendesign",
+      "name": "open-design-skills",
+      "displayName": "Open Design",
+      "author": "nexu-io",
+      "category": "Design & Sites",
+      "description": "{N} skills for the interfaces an agent builds: layout, colour, typography and the craft between them.",
+      "exampleQueries": [
+        "Design this screen",
+        "Fix the spacing in this component"
+      ]
     }
   ]
 }

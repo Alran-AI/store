@@ -99,7 +99,21 @@
       "trigger": "trigger",
       "deno": "deno",
       "prefect": "prefect",
-      "langfuse": "langfuse"
+      "langfuse": "langfuse",
+      "paperclip": "paperclip",
+      "cognee": "cognee",
+      "wshobson": "wshobson",
+      "templates": "templates",
+      "alirez": "alirez",
+      "aas": "aas",
+      "baoyu": "baoyu",
+      "ponytail": "ponytail",
+      "openmotion": "openmotion",
+      "socialupload": "socialupload",
+      "obsidian": "obsidian",
+      "gentleai": "gentleai",
+      "archify": "archify",
+      "opendesign": "opendesign"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -194,7 +208,21 @@
       "trigger": "2026.11.18+74765f9",
       "deno": "2026.11.17+d8c551b",
       "prefect": "2026.11.18+67380b6",
-      "langfuse": "2026.11.18+6dfeb60"
+      "langfuse": "2026.11.18+6dfeb60",
+      "paperclip": "2026.11.18+33fac97",
+      "cognee": "2026.11.18+e6b5b5b",
+      "wshobson": "2026.11.18+4220308",
+      "templates": "2026.11.18+d3a2956",
+      "alirez": "2026.11.17+f8593c4",
+      "aas": "2026.11.17+12c0d66",
+      "baoyu": "2026.11.6+ca703c2",
+      "ponytail": "2026.10.29+96608e0",
+      "openmotion": "2026.11.18+51bcb20",
+      "socialupload": "2026.10.23+3847fff",
+      "obsidian": "2026.10.22+2e54556",
+      "gentleai": "2026.11.18+08317b9",
+      "archify": "2026.11.17+4478129",
+      "opendesign": "2026.11.18+0725880"
     }
   },
   "plugins": [
@@ -1912,6 +1940,257 @@
       "exampleQueries": [
         "Trace this LLM call",
         "Set up Langfuse for this service"
+      ]
+    },
+    {
+      "name": "paperclip-skills",
+      "displayName": "Paperclip",
+      "version": "2026.11.18+33fac97",
+      "description": "Forty-eight skills for Paperclip, the control plane for agents: the tasks, their assignments, the governance around them and the APIs behind it.",
+      "author": "Paperclip",
+      "license": "MIT",
+      "homepage": "https://github.com/paperclipai/paperclip",
+      "category": "Productivity",
+      "icon": "icons/paperclip-skills.png",
+      "packages": [
+        "paperclip"
+      ],
+      "exampleQueries": [
+        "What is assigned to me?",
+        "Check the governance rules for this task"
+      ]
+    },
+    {
+      "name": "cognee-skills",
+      "displayName": "Cognee",
+      "version": "2026.11.18+e6b5b5b",
+      "description": "Seventeen skills for Cognee, the open-source memory engine for agents: indexing documents into a knowledge graph, the CLI, custom pipelines and graph models, and running it in Docker.",
+      "author": "Topoteretes",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/topoteretes/cognee",
+      "category": "Code",
+      "icon": "icons/cognee-skills.png",
+      "packages": [
+        "cognee"
+      ],
+      "exampleQueries": [
+        "Index this folder into Cognee",
+        "Write a custom pipeline for this data"
+      ]
+    },
+    {
+      "name": "agent-plugin-marketplace-skills",
+      "displayName": "Agent Plugin Marketplace",
+      "version": "2026.11.18+4220308",
+      "description": "171 skills from a plugin marketplace: accessibility and compliance, agent teams, API scaffolding, cloud and databases, DevOps, frontend, MCP, security and testing.",
+      "author": "wshobson",
+      "license": "MIT",
+      "homepage": "https://github.com/wshobson/agents",
+      "category": "Code",
+      "icon": "icons/agent-plugin-marketplace-skills.png",
+      "packages": [
+        "wshobson"
+      ],
+      "exampleQueries": [
+        "Make this UI accessible",
+        "Scaffold an API for this service"
+      ]
+    },
+    {
+      "name": "claude-code-templates-skills",
+      "displayName": "Claude Code Templates",
+      "version": "2026.11.18+d3a2956",
+      "description": "534 skills that come with a large set of Claude Code templates, agents and commands.",
+      "author": "davila7",
+      "license": "MIT",
+      "homepage": "https://github.com/davila7/claude-code-templates",
+      "category": "Code",
+      "icon": "icons/claude-code-templates-skills.png",
+      "packages": [
+        "templates"
+      ],
+      "exampleQueries": [
+        "Set up this repo from a template",
+        "Which template fits this project?"
+      ]
+    },
+    {
+      "name": "claude-skills-catalog-skills",
+      "displayName": "Claude Skills Catalogue",
+      "version": "2026.11.17+f8593c4",
+      "description": "Ninety skills across forty-odd areas: agents, backend, cloud, databases, DevOps, frontend, MCP, machine learning, security and testing.",
+      "author": "Alireza Rezvani",
+      "license": "MIT",
+      "homepage": "https://github.com/alirezarezvani/claude-skills",
+      "category": "Code",
+      "icon": "icons/claude-skills-catalog-skills.png",
+      "packages": [
+        "alirez"
+      ],
+      "exampleQueries": [
+        "Set up Kubernetes for this service",
+        "Write this component the way this repo does"
+      ]
+    },
+    {
+      "name": "agentic-awesome-skills-skills",
+      "displayName": "Agentic Awesome Skills",
+      "version": "2026.11.17+12c0d66",
+      "description": "2026 skills in one Plugin — the largest collection of agentic Skills on GitHub, from accessibility and architecture to 3D, data and DevOps.",
+      "author": "sickn33",
+      "license": "MIT",
+      "homepage": "https://github.com/sickn33/agentic-awesome-skills",
+      "category": "Code",
+      "icon": "icons/agentic-awesome-skills-skills.png",
+      "packages": [
+        "aas"
+      ],
+      "exampleQueries": [
+        "Is there a Skill for this?",
+        "Find me a Skill that does this kind of work"
+      ]
+    },
+    {
+      "name": "baoyu-skills",
+      "displayName": "Baoyu",
+      "version": "2026.11.6+ca703c2",
+      "description": "Five skills for images: article illustrations, cover images, infographics and the set for Xiaohongshu.",
+      "author": "JimLiu",
+      "license": "MIT",
+      "homepage": "https://github.com/JimLiu/baoyu-skills",
+      "category": "Studio",
+      "icon": "icons/baoyu-skills.png",
+      "packages": [
+        "baoyu"
+      ],
+      "exampleQueries": [
+        "Make a cover image for this article",
+        "Illustrate this piece"
+      ]
+    },
+    {
+      "name": "ponytail-skills",
+      "displayName": "Ponytail",
+      "version": "2026.10.29+96608e0",
+      "description": "Six skills for auditing a repository and keeping track of the debt in it: what breaks under load, what is risky without tests, what to delete or merge, and the ledger that follows it.",
+      "author": "DietrichGebert",
+      "license": "MIT",
+      "homepage": "https://github.com/DietrichGebert/ponytail",
+      "category": "Code",
+      "icon": "icons/ponytail-skills.png",
+      "packages": [
+        "ponytail"
+      ],
+      "exampleQueries": [
+        "Audit this repo",
+        "What debt has this codebase built up?"
+      ]
+    },
+    {
+      "name": "openmotion-skills",
+      "displayName": "OpenMotion",
+      "version": "2026.11.18+51bcb20",
+      "description": "Ninety-eight skills for motion design: the vocabulary of animation, timing and easing, and the libraries to build it with.",
+      "author": "nexu-io",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/nexu-io/openmotion",
+      "category": "Studio",
+      "icon": "icons/openmotion-skills.png",
+      "packages": [
+        "openmotion"
+      ],
+      "exampleQueries": [
+        "Animate this transition",
+        "What easing should this use?"
+      ]
+    },
+    {
+      "name": "social-auto-upload-skills",
+      "displayName": "Social Auto Upload",
+      "version": "2026.10.23+3847fff",
+      "description": "Eight skills for publishing where people actually are: Xiaohongshu, Douyin, Bilibili, TikTok, WeChat, Zhihu, Hupu and Tencent.",
+      "author": "dreammis",
+      "license": "MIT",
+      "homepage": "https://github.com/dreammis/social-auto-upload",
+      "category": "Studio",
+      "icon": "icons/social-auto-upload-skills.png",
+      "packages": [
+        "socialupload"
+      ],
+      "exampleQueries": [
+        "Post this video to TikTok",
+        "Publish this article on Xiaohongshu"
+      ]
+    },
+    {
+      "name": "obsidian-skills",
+      "displayName": "Obsidian",
+      "version": "2026.10.22+2e54556",
+      "description": "One skill for thinking through an Obsidian vault: the loop that turns notes into something connected.",
+      "author": "AgriciDaniel",
+      "license": "MIT",
+      "homepage": "https://github.com/AgriciDaniel/claude-obsidian",
+      "category": "Productivity",
+      "icon": "icons/obsidian-skills.png",
+      "packages": [
+        "obsidian"
+      ],
+      "exampleQueries": [
+        "Think through this note with me"
+      ]
+    },
+    {
+      "name": "gentle-ai-skills",
+      "displayName": "Gentle AI",
+      "version": "2026.11.18+08317b9",
+      "description": "Nine skills for working with others in a codebase: design docs that reduce cognitive load, comments worth reading, triaging issues at the root, and commits as reviewable units.",
+      "author": "Gentleman-Programming",
+      "license": "MIT",
+      "homepage": "https://github.com/Gentleman-Programming/gentle-ai",
+      "category": "Code",
+      "icon": "icons/gentle-ai-skills.png",
+      "packages": [
+        "gentleai"
+      ],
+      "exampleQueries": [
+        "Review this doc for cognitive load",
+        "Split this into reviewable commits"
+      ]
+    },
+    {
+      "name": "archify-skills",
+      "displayName": "Archify",
+      "version": "2026.11.17+4478129",
+      "description": "Two skills for the shape of the code: simplifying a codebase and judging whether a test earns its cost.",
+      "author": "tt-a1i",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/tt-a1i/archify",
+      "category": "Code",
+      "icon": "icons/archify-skills.png",
+      "packages": [
+        "archify"
+      ],
+      "exampleQueries": [
+        "Simplify this codebase",
+        "Is this test worth keeping?"
+      ]
+    },
+    {
+      "name": "open-design-skills",
+      "displayName": "Open Design",
+      "version": "2026.11.18+0725880",
+      "description": "106 skills for the interfaces an agent builds: layout, colour, typography and the craft between them.",
+      "author": "nexu-io",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/nexu-io/open-design",
+      "category": "Design & Sites",
+      "icon": "icons/open-design-skills.png",
+      "packages": [
+        "opendesign"
+      ],
+      "exampleQueries": [
+        "Design this screen",
+        "Fix the spacing in this component"
       ]
     },
     {

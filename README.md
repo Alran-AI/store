@@ -6,24 +6,26 @@ own licence. All are **unmodified**, except the Superpowers package, whose diffe
 listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **94 Plugins**
-(93 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **2269
-individually installable Skills**; 2304 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **108 Plugins**
+(107 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **5390
+individually installable Skills**; 5425 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
 Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
 call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates |
 | Cloud and hosting | Cloudflare, Cloudflare Workers SDK, Cloudflare Agents, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker, Deno |
-| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs |
+| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee |
 | Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio |
-| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot |
-| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab |
+| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip |
+| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian |
 | Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs, Temporal, Prefect, Apache Airflow, Astronomer, Trigger.dev |
 | Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana |
 | Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit |
-| Business | Marketing (Corey Haines), Product management (Paweł Huryn), PostHog |
+| Design and media | OpenMotion, Open Design, Baoyu, Social Auto Upload |
+| Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace |
+| Business | Marketing (Corey Haines), Product management (Paweł Huryn) |
 | Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street |
 
 ```sh
@@ -193,6 +195,17 @@ Facts about the source, not quality judgements:
 - [grafana/grafana](https://github.com/grafana/grafana): the AGPL. [Grafana's own skills](https://github.com/grafana/skills)
   are in the store.
 - [vercel/next.js](https://github.com/vercel/next.js): no licence file at the root of the repository.
+- [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills),
+  [eclipse-theia/theia](https://github.com/eclipse-theia/theia) and
+  [nocobase/nocobase](https://github.com/nocobase/nocobase): no licence file at the root of the repository.
+- [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) (MIT),
+  [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) (MIT),
+  [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (Apache-2.0),
+  [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) (MIT) and
+  [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) (MIT): every Skill in them ships a
+  script, a command file or a binary asset.
+- [eigent-ai/eigent](https://github.com/eigent-ai/eigent) (Apache-2.0): its Skills are the document skills
+  (docx, pdf, pptx) that Alran Code builds in itself, and they ship scripts.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) (Apache-2.0): the Skills in it are test fixtures.
 - [NVIDIA/skills](https://github.com/NVIDIA/skills) and [angular/skills](https://github.com/angular/skills):
   no licence file.

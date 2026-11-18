@@ -92,7 +92,21 @@
     "trigger": "2026.11.18+74765f9",
     "deno": "2026.11.17+d8c551b",
     "prefect": "2026.11.18+67380b6",
-    "langfuse": "2026.11.18+6dfeb60"
+    "langfuse": "2026.11.18+6dfeb60",
+    "paperclip": "2026.11.18+33fac97",
+    "cognee": "2026.11.18+e6b5b5b",
+    "wshobson": "2026.11.18+4220308",
+    "templates": "2026.11.18+d3a2956",
+    "alirez": "2026.11.17+f8593c4",
+    "aas": "2026.11.17+12c0d66",
+    "baoyu": "2026.11.6+ca703c2",
+    "ponytail": "2026.10.29+96608e0",
+    "openmotion": "2026.11.18+51bcb20",
+    "socialupload": "2026.10.23+3847fff",
+    "obsidian": "2026.10.22+2e54556",
+    "gentleai": "2026.11.18+08317b9",
+    "archify": "2026.11.17+4478129",
+    "opendesign": "2026.11.18+0725880"
   },
   "counts": {
     "addyosmani": 21,
@@ -187,6 +201,20 @@
     "trigger": 11,
     "deno": 6,
     "prefect": 3,
-    "langfuse": 13
+    "langfuse": 13,
+    "paperclip": 48,
+    "cognee": 17,
+    "wshobson": 171,
+    "templates": 534,
+    "alirez": 90,
+    "aas": 2026,
+    "baoyu": 5,
+    "ponytail": 6,
+    "openmotion": 98,
+    "socialupload": 8,
+    "obsidian": 1,
+    "gentleai": 9,
+    "archify": 2,
+    "opendesign": 106
   }
 }
