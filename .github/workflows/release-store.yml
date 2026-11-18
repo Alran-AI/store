@@ -91,6 +91,8 @@ jobs:
           const i = require("./store/index.json");
           console.log(`${i.plugins.length} Plugins, ${i.skills.length} Skills`);
           ' | tee build-counts.txt
+          # The index next to the archive, flat: the release carries it as its own asset.
+          cp store/index.json index.json
 
       - uses: actions/upload-artifact@v4
         with:
