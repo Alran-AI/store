@@ -6,25 +6,25 @@ own licence. All are **unmodified**, except the Superpowers package, whose diffe
 listed in `packages/superpowers/PATCHES.md`. `THIRD_PARTY_NOTICES.md` lists every source with its commit and licence
 text; each Skill folder also carries its own `LICENSE.txt` and `SOURCE.md`.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **124 Plugins**
-(123 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **5790
-individually installable Skills**; 5824 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **144 Plugins**
+(143 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **7139
+individually installable Skills**; 7173 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
 Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
 call each other by the Plugin's name.
 
 | Area | Sources |
 | --- | --- |
-| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack |
-| Cloud and hosting | Cloudflare, Cloudflare Workers SDK, Cloudflare Agents, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker, Deno |
-| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase |
-| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator |
-| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip, Fast Agent |
-| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills |
+| Engineering workflow | Addy Osmani (MIT), Superpowers (MIT, a package), Context engineering, TypeScript engineering (Matt Pocock), Frontend craft (Emil Kowalski), GitHub Spec Kit, Planning with files, Ponytail, Gentle AI, Archify, Claude Code Templates, Spec-Driven Development, PStack, Skillkit, dzhng, Bama, Skills Hub, Evo |
+| Cloud and hosting | Cloudflare, Cloudflare Workers SDK, Cloudflare Agents, Netlify, Firebase, Supabase, Neon, Terraform, Packer, Google Cloud, Microsoft Azure, Microsoft SDKs, AWS, Docker, Deno, Self-Host |
+| Data | MongoDB, Redis, ClickHouse, DuckDB, Hugging Face, Replicate, Gemini API, Elastic, dbt, Azure SDK for Python, Azure SDK for .NET, Azure REST APIs, Cognee, TinyBase, Teable |
+| Frameworks and tooling | Expo, Flutter and Dart, React Native (Callstack), Apollo GraphQL, Sanity, Cypress, Resend, Stripe, Stripe Agent Toolkit, Brave Search, .NET, Android, Kotlin, Vue and Vite, Builder.io, Playwright, Playwright for Python, Prisma, MetalBear (mirrord), Langfuse, LiteLLM, Streamlit, Gradio, Go, Rust Anything, Argent (Software Mansion), Data Model Code Generator, App Store Connect, VideoDB, Helius, Mailtrap, Courier, Zapier, OpenOSINT |
+| Agents and agent frameworks | Google Agents CLI, Google ADK, OpenAI Agents, Microsoft agents, Pydantic AI, Anthropic Plugins, E2B, Unsloth, GitHub Copilot, Paperclip, Fast Agent, OPC |
+| Work, messaging and money | Google Workspace, Twilio, MetaMask, Cap-go, Ace Data Cloud, PostHog, GitLab, Obsidian, LinkedIn Skills, Finance Skills, Notion Cookbook, Second Brain OS |
 | Automation and integration | n8n workflows, Coupler, Browser Act, Oxylabs, Temporal, Prefect, Apache Airflow, Astronomer, Trigger.dev, ShipSwift |
-| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills |
+| Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills, Thinking Skills |
 | Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit |
 | Design, media and 3D | OpenMotion, Open Design, Baoyu, Social Auto Upload, Blender Skills, Scenario Labs, Awesome Design Skills, Effective HTML, LottieFiles |
-| Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace |
+| Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace, Product Management Skills |
 | Business | Marketing (Corey Haines), Product management (Paweł Huryn) |
 | Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science |
 
@@ -217,6 +217,22 @@ Facts about the source, not quality judgements:
   Skills ship JavaScript, CSS or HTML files.
 - [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) (MIT): its Skills are about attacks, and the
   store does not take a Skill whose text decodes a base64 blob or carries an instruction-override phrase.
+- [transloadit/skills](https://github.com/transloadit/skills),
+  [makenotion/claude-code-notion-plugin](https://github.com/makenotion/claude-code-notion-plugin),
+  [firecrawl/cli](https://github.com/firecrawl/cli) and
+  [PSPDFKit-labs/nutrient-agent-skill](https://github.com/PSPDFKit-labs/nutrient-agent-skill): no licence file at
+  the root of the repository. [gitroomhq/postiz-agent](https://github.com/gitroomhq/postiz-agent) is under the AGPL.
+- [AvdLee/SwiftUI-Agent-Skill](https://github.com/AvdLee/SwiftUI-Agent-Skill) and
+  [AvdLee/Swift-Concurrency-Agent-Skill](https://github.com/AvdLee/Swift-Concurrency-Agent-Skill) (MIT): their
+  Skills carry a PNG and an SVG logo.
+- [zxkane/aws-skills](https://github.com/zxkane/aws-skills) (MIT),
+  [coji/natural-japanese](https://github.com/coji/natural-japanese) (MIT) and
+  [UiPath/coder_eval](https://github.com/UiPath/coder_eval) (Apache-2.0): their Skills ship scripts, or name
+  another Skill than their folder.
+- [imxv/Pretty-mermaid-skills](https://github.com/imxv/Pretty-mermaid-skills) (MIT),
+  [Gabberflast/academic-pptx-skill](https://github.com/Gabberflast/academic-pptx-skill) (MIT) and
+  [zilliztech/milvus-skill](https://github.com/zilliztech/milvus-skill) (Apache-2.0): the SKILL.md sits at the
+  root of the repository, not in a folder of its own.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) (Apache-2.0): the Skills in it are test fixtures.
 - [NVIDIA/skills](https://github.com/NVIDIA/skills) and [angular/skills](https://github.com/angular/skills):
   no licence file.

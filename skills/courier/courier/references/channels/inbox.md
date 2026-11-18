@@ -1,0 +1,183 @@
+# Inbox Channel
+
+Sending to Courier's in-app inbox. The inbox is a delivery channel like email or SMS. You address it the same way, and Courier stores the message for the user to read in your app.
+
+**Rendering the inbox in your app is a separate concern**, JWT auth, the React / Vue / Angular / Web Component / React Native / iOS / Android / Flutter SDKs, read state, and real-time updates all live in [inbox/rendering.md](../inbox/rendering.md).
+
+**Contents:** [Quick Reference](#quick-reference) · [Setup](#setup) · [Sending to Inbox](#sending-to-inbox) · [Read State](#read-state) · [Cross-Channel Sync](#cross-channel-sync) · [Elemental Content for Inbox](#elemental-content-for-inbox) · [Troubleshooting](#troubleshooting) · [Related](#related)
+
+## Quick Reference
+
+### Rules
+
+- Always include deep-link data in `data`, a click with nowhere to go is a dead end
+- Batch similar events into one message rather than one per event, see [batching.md](../guides/batching.md)
+- Route the in-app feed with the `inbox` channel. Courier Inbox also answers the `push` channel as a last resort, so route device push by provider key, see [push.md](./push.md#quick-reference)
+- No OS permission needed, so the inbox reaches every user. It is the safe default channel: the `courier` provider is already configured in production and test, so don't add it there (see [Setup](#setup))
+
+### Common mistakes
+
+- Not archiving the inbox copy when the user engages via email or push, see [Cross-Channel Sync](#cross-channel-sync)
+- Sending a template by id with `routing: null` and no `routing` on the send. It fails `UNROUTABLE`, see [Troubleshooting](#troubleshooting)
+- Reaching for the `{ title, body }` sugar in a stored template. That form is inline-only, see [Elemental Content for Inbox](#elemental-content-for-inbox)
+
+---
+
+## Setup
+
+**Already configured in production and test.** The inbox delivers through a built-in provider named `courier`. Every workspace gets it at signup in its production and test environments, with `simple_profile_req` on, so there is nothing to install.
+
+Add it only in a custom environment, or if someone deleted it:
+
+```bash
+curl -X POST https://api.courier.com/providers \
+  -H "Authorization: Bearer $COURIER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "provider": "courier",
+    "settings": { "jwt_enabled": true, "simple_profile_req": true }
+  }'
+```
+
+| Setting | Why |
+|---|---|
+| `jwt_enabled` | Lets browser and mobile clients authenticate with a short-lived JWT, which the v8 inbox SDKs require. See [inbox/auth.md](../inbox/auth.md) |
+| `simple_profile_req` | Without it, the provider expects a `courier.channel` value inside each user's profile and sends fail with "Information required by the provider was not included." |
+
+See [Troubleshooting](#troubleshooting), and [providers.md](../guides/providers.md) for the provider API in general.
+
+## Sending to Inbox
+
+### Basic Inbox Message
+
+```typescript
+import Courier from "@trycourier/courier";
+
+const client = new Courier();
+
+await client.send.message({
+  message: {
+    to: { user_id: "user-123" },
+    template: "nt_01kmrbvb7x1q5v8d2c6n4w9hj",
+    data: {
+      commenterName: "Jane",
+      commentPreview: "Great post!",
+      postId: "post-456"
+    },
+    routing: {
+      method: "single",
+      channels: ["inbox"]
+    }
+  }
+});
+```
+
+### Inbox with Actions
+
+```typescript
+await client.send.message({
+  message: {
+    to: { user_id: "user-123" },
+    content: {
+      title: "New friend request",
+      body: "Jane Doe wants to connect"
+    },
+    data: {
+      requestId: "req-789"
+    },
+    channels: {
+      inbox: {
+        override: {
+          actions: [
+            {
+              content: "Accept",
+              href: "acme://friends/accept/req-789",
+              style: "primary"
+            },
+            {
+              content: "Decline",
+              href: "acme://friends/decline/req-789",
+              style: "secondary"
+            }
+          ]
+        }
+      }
+    }
+  }
+});
+```
+
+## Read State
+
+Read and unread are set from the client through the Inbox SDK, see [rendering.md](../inbox/rendering.md#read-state-and-unread-counts). From the server you can only archive, which removes the message from the user's inbox: `client.requests.archive(requestId)`.
+
+## Cross-Channel Sync
+
+Courier marks the inbox copy read when the user opens the email, as long as email open tracking is on (Settings → Tracking). Nothing to build. To remove the inbox copy after the user acts on another channel, archive it from the click webhook or in-app event:
+
+```typescript
+await client.requests.archive(requestId);
+```
+
+## Elemental Content for Inbox
+
+The `{ title, body }` shorthand used in the examples above **only works for inline sends**. It is not valid for template creation via the API ([elemental.md](../guides/elemental.md)). A stored inbox template uses Elemental wrapped in a `channel` element. Flat top-level elements are rejected on create (`POST /notifications`) with a `400`. `replace` and `putContent` store them, but Design Studio can't open the result:
+
+```json
+{
+  "version": "2022-01-01",
+  "elements": [
+    {
+      "type": "channel",
+      "channel": "inbox",
+      "elements": [
+        { "type": "meta", "title": "Your report is ready" },
+        { "type": "text", "content": "The August usage report finished generating.", "align": "left" },
+        { "type": "action", "content": "View report", "href": "{{report_url}}" }
+      ]
+    }
+  ]
+}
+```
+
+The `channel` wrapper selects which content renders on the inbox. It does not select delivery, see [the four places a channel is named](../guides/elemental.md#the-channel-element-vs-the-three-other-places-a-channel-is-named).
+
+## Troubleshooting
+
+| Symptom | Cause |
+|---|---|
+| `UNROUTABLE`, no `reason` and no `error` field | No `courier` provider in this environment (a custom environment, or it was deleted). See [Setup](#setup) |
+| `UNROUTABLE`, "Information required by the provider was not included." | A re-added `courier` provider is missing `simple_profile_req`. See [Setup](#setup) |
+| `UNROUTABLE` / `PROVIDER_ERROR`, "No provider(s) courier in the list of message channel provider(s): undefined." | The template has no routing strategy attached. See below |
+| Template send fails but the same content sent inline succeeds | Same cause. Inline content never consults the template's routing, so this comparison misleads rather than isolating the bug |
+| Message sent, never visible in the app | Client-side. See [inbox/rendering.md](../inbox/rendering.md) |
+
+### "No provider(s) courier ... : undefined"
+
+The `undefined` in that error is the template's missing routing strategy: `GET /notifications/{id}` on a template that fails this way returns `routing: null`. A template in that state cannot be sent to the inbox by id, because nothing names `courier` as the inbox provider. Templates reach that state in practice, so **check `routing` with a `GET` before assuming the template is fine**, see [templates.md](../guides/templates.md).
+
+Two ways out:
+
+- **Attach a routing strategy** whose `channels.inbox.providers` includes `courier`, via `PUT /notifications/{id}`. This is the real fix. See [routing-strategies.md](../guides/routing-strategies.md).
+- **Override on the message** with `channels: { inbox: { providers: ["courier"] } }`. This is a per-send workaround, not a general requirement, and shouldn't be copied into every send.
+
+```typescript
+await client.send.message({
+  message: {
+    to: { user_id: "user-123" },
+    template: "nt_01kmrbvb7x1q5v8d2c6n4w9hj",
+    routing: { method: "single", channels: ["inbox"] },
+    channels: { inbox: { providers: ["courier"] } }, // per-send override
+  },
+});
+```
+
+A strategy that names an unconfigured provider fails differently and just as quietly, see [routing-strategies.md](../guides/routing-strategies.md).
+
+## Related
+
+- [Push](./push.md), pair inbox with push so the message reaches users who aren't in the app
+- [Multi-Channel](../guides/multi-channel.md), inbox in routing strategies
+- [Batching](../guides/batching.md), aggregating events into one inbox message
+- [Preferences](../guides/preferences.md), letting users turn inbox categories off
+- [Elemental](../guides/elemental.md), content that renders in the inbox

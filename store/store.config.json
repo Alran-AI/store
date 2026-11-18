@@ -129,7 +129,27 @@
       "shipswift": "shipswift",
       "dmcg": "dmcg",
       "tinybase": "tinybase",
-      "rustanything": "rustanything"
+      "rustanything": "rustanything",
+      "blender2": "blender2",
+      "osint": "osint",
+      "bama": "bama",
+      "ccthink": "ccthink",
+      "selfhost": "selfhost",
+      "dzhng": "dzhng",
+      "opc": "opc",
+      "skillhub": "skillhub",
+      "evo": "evo",
+      "skillkit": "skillkit",
+      "pmskills": "pmskills",
+      "secondbrainos": "secondbrainos",
+      "courier": "courier",
+      "notioncookbook": "notioncookbook",
+      "mailtrap": "mailtrap",
+      "teable": "teable",
+      "helius": "helius",
+      "videodb": "videodb",
+      "rork": "rork",
+      "zapier": "zapier"
     },
     "versions": {
       "addyosmani": "2026.11.13+39b723c",
@@ -254,7 +274,27 @@
       "shipswift": "2026.11.12+d05d75e",
       "dmcg": "2026.11.18+405edcb",
       "tinybase": "2026.11.12+540cd40",
-      "rustanything": "2026.11.19+98adbe2"
+      "rustanything": "2026.11.19+98adbe2",
+      "blender2": "2026.11.17+9e7e04a",
+      "osint": "2026.11.15+c08848e",
+      "bama": "2026.11.5+22dc792",
+      "ccthink": "2026.8.7+7b8fece",
+      "selfhost": "2026.11.15+c8371ba",
+      "dzhng": "2026.11.13+c363ed3",
+      "opc": "2026.11.18+0c44a6a",
+      "skillhub": "2026.11.17+822da32",
+      "evo": "2026.11.17+ef9d869",
+      "skillkit": "2026.6.2+d2e5c34",
+      "pmskills": "2026.11.16+c4679f9",
+      "secondbrainos": "2026.11.3+53aea82",
+      "courier": "2026.11.17+7b0e656",
+      "notioncookbook": "2026.11.13+7e5e928",
+      "mailtrap": "2026.11.12+13969f6",
+      "teable": "2026.11.12+78a6ec6",
+      "helius": "2026.11.15+fdd6311",
+      "videodb": "2026.11.19+2695099",
+      "rork": "2026.11.16+6d1c3c5",
+      "zapier": "2026.11.18+4e347e2"
     }
   },
   "plugins": [
@@ -2510,6 +2550,361 @@
       "exampleQueries": [
         "Write this in Rust",
         "Explain this Rust code"
+      ]
+    },
+    {
+      "name": "blender-skills-skills",
+      "displayName": "Blender Skills (EL4CTEO)",
+      "version": "2026.11.17+9e7e04a",
+      "description": "One skill for Blender: the core of working with Blender from an agent.",
+      "author": "EL4CTEO",
+      "license": "MIT",
+      "homepage": "https://github.com/EL4CTEO/blender-skills",
+      "category": "Studio",
+      "icon": "icons/blender-skills-skills.png",
+      "packages": [
+        "blender2"
+      ],
+      "exampleQueries": [
+        "Work with Blender from here"
+      ]
+    },
+    {
+      "name": "openosint-skills",
+      "displayName": "OpenOSINT",
+      "version": "2026.11.15+c08848e",
+      "description": "Two skills for open-source intelligence: gathering what is out there and what it says about you.",
+      "author": "OpenOSINT",
+      "license": "MIT",
+      "homepage": "https://github.com/OpenOSINT/OpenOSINT",
+      "category": "Code",
+      "icon": "icons/openosint-skills.png",
+      "packages": [
+        "osint"
+      ],
+      "exampleQueries": [
+        "What can be found about this company?",
+        "Check what is exposed about this person"
+      ]
+    },
+    {
+      "name": "bama-skills",
+      "displayName": "Bama",
+      "version": "2026.11.5+22dc792",
+      "description": "Thirteen skills from Dave Bebbelaar: architecture, performance, operating-system integrations and the app and design work around them.",
+      "author": "daveebbelaar",
+      "license": "MIT",
+      "homepage": "https://github.com/daveebbelaar/bama",
+      "category": "Code",
+      "icon": "icons/bama-skills.png",
+      "packages": [
+        "bama"
+      ],
+      "exampleQueries": [
+        "Improve the architecture of this app",
+        "Make this faster"
+      ]
+    },
+    {
+      "name": "thinking-skills",
+      "displayName": "Thinking Skills",
+      "version": "2026.8.7+7b8fece",
+      "description": "Twenty-eight skills for thinking: first principles, five whys, the circle of competence, bounded rationality, effectuation, Cynefin, jobs to be done and the Kepner-Tregoe matrix.",
+      "author": "tjboudreaux",
+      "license": "MIT",
+      "homepage": "https://github.com/tjboudreaux/cc-thinking-skills",
+      "category": "Productivity",
+      "icon": "icons/thinking-skills.png",
+      "packages": [
+        "ccthink"
+      ],
+      "exampleQueries": [
+        "Help me think about this with first principles",
+        "Which of these options is right?"
+      ]
+    },
+    {
+      "name": "self-host-skills",
+      "displayName": "Self-Host",
+      "version": "2026.11.15+c8371ba",
+      "description": "Four skills for running your own services: the catalogue, the containers and the release.",
+      "author": "ajnart",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/ajnart/self-host",
+      "category": "Code",
+      "icon": "icons/self-host-skills.png",
+      "packages": [
+        "selfhost"
+      ],
+      "exampleQueries": [
+        "Add this service to my catalogue",
+        "Ship this self-hosted service"
+      ]
+    },
+    {
+      "name": "dzhng-skills",
+      "displayName": "dzhng Skills",
+      "version": "2026.11.13+c363ed3",
+      "description": "Seventeen skills from dzhng: auditing and evaluating agents, writing Skills, and the graphics and video work.",
+      "author": "dzhng",
+      "license": "MIT",
+      "homepage": "https://github.com/dzhng/skills",
+      "category": "Code",
+      "icon": "icons/dzhng-skills.png",
+      "packages": [
+        "dzhng"
+      ],
+      "exampleQueries": [
+        "Audit this agent",
+        "Write a Skill for this"
+      ]
+    },
+    {
+      "name": "opc-skills",
+      "displayName": "OPC",
+      "version": "2026.11.18+0c44a6a",
+      "description": "Two skills for OPC: the templates, the archive and the tools around a research project.",
+      "author": "ReScienceLab",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/ReScienceLab/opc-skills",
+      "category": "Code",
+      "icon": "icons/opc-skills.png",
+      "packages": [
+        "opc"
+      ],
+      "exampleQueries": [
+        "Set up this research project"
+      ]
+    },
+    {
+      "name": "skills-hub-skills",
+      "displayName": "Skills Hub",
+      "version": "2026.11.17+822da32",
+      "description": "Ten skills for working in a codebase: code review, the client UI, error handling, finding simplifications and the checks before a push.",
+      "author": "qufei1993",
+      "license": "MIT",
+      "homepage": "https://github.com/qufei1993/skills-hub",
+      "category": "Code",
+      "icon": "icons/skills-hub-skills.png",
+      "packages": [
+        "skillhub"
+      ],
+      "exampleQueries": [
+        "Review this code",
+        "What can I simplify here?"
+      ]
+    },
+    {
+      "name": "evo-skills",
+      "displayName": "Evo",
+      "version": "2026.11.17+ef9d869",
+      "description": "Four skills for Evo: setting up the infrastructure, discovering what is there, reporting, shipping, subagents and fine-tuning.",
+      "author": "evo-hq",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/evo-hq/evo",
+      "category": "Code",
+      "icon": "icons/evo-skills.png",
+      "packages": [
+        "evo"
+      ],
+      "exampleQueries": [
+        "Set up Evo for this repo",
+        "Ship this with Evo"
+      ]
+    },
+    {
+      "name": "skillkit-skills",
+      "displayName": "Skillkit",
+      "version": "2026.6.2+d2e5c34",
+      "description": "Eleven skills for the craft of working with an agent: handoff protocols, parallel investigation, structured review, hypothesis testing, root-cause analysis, tracing and designing before writing.",
+      "author": "rohitg00",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/rohitg00/skillkit",
+      "category": "Code",
+      "icon": "icons/skillkit-skills.png",
+      "packages": [
+        "skillkit"
+      ],
+      "exampleQueries": [
+        "Find the root cause of this",
+        "Hand this over to another agent"
+      ]
+    },
+    {
+      "name": "pm-claude-skills",
+      "displayName": "Product Management Skills",
+      "version": "2026.11.16+c4679f9",
+      "description": "1179 skills for product management: hiring for a team, the API you build for yourself, disclosure policy, context bankruptcy, deepfakes and the rest of the working life of a product.",
+      "author": "mohitagw15856",
+      "license": "MIT",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+      "category": "Business",
+      "icon": "icons/pm-claude-skills.png",
+      "packages": [
+        "pmskills"
+      ],
+      "exampleQueries": [
+        "Plan this product quarter",
+        "Write the policy for this"
+      ]
+    },
+    {
+      "name": "second-brain-os-skills",
+      "displayName": "Second Brain OS",
+      "version": "2026.11.3+53aea82",
+      "description": "Twenty-three skills for a second brain: auditing the context, backfilling it, the gate checks, the goal tests and the harness audits around it.",
+      "author": "undefined-ui",
+      "license": "MIT",
+      "homepage": "https://github.com/undefined-ui/second-brain-os",
+      "category": "Productivity",
+      "icon": "icons/second-brain-os-skills.png",
+      "packages": [
+        "secondbrainos"
+      ],
+      "exampleQueries": [
+        "Audit my context",
+        "Backfill this into my notes"
+      ]
+    },
+    {
+      "name": "courier-skills",
+      "displayName": "Courier",
+      "version": "2026.11.17+7b0e656",
+      "description": "One skill for Courier: sending notifications and the API behind them.",
+      "author": "Courier",
+      "license": "MIT",
+      "homepage": "https://github.com/trycourier/courier-skills",
+      "category": "Code",
+      "icon": "icons/courier-skills.png",
+      "packages": [
+        "courier"
+      ],
+      "exampleQueries": [
+        "Send this notification"
+      ]
+    },
+    {
+      "name": "notion-cookbook-skills",
+      "displayName": "Notion Cookbook",
+      "version": "2026.11.13+7e5e928",
+      "description": "Ten skills for Notion: connections, custom blocks, Notion as code, sketching, sync and workflows.",
+      "author": "Make",
+      "license": "MIT",
+      "homepage": "https://github.com/makenotion/notion-cookbook",
+      "category": "Productivity",
+      "icon": "icons/notion-cookbook-skills.png",
+      "packages": [
+        "notioncookbook"
+      ],
+      "exampleQueries": [
+        "Build a block for this page",
+        "Sync this with my database"
+      ]
+    },
+    {
+      "name": "mailtrap-skills",
+      "displayName": "Mailtrap",
+      "version": "2026.11.12+13969f6",
+      "description": "Seven skills for Mailtrap: sending and receiving email, the templates, the contacts and the sending domain.",
+      "author": "Mailtrap",
+      "license": "MIT",
+      "homepage": "https://github.com/mailtrap/mailtrap-skills",
+      "category": "Code",
+      "icon": "icons/mailtrap-skills.png",
+      "packages": [
+        "mailtrap"
+      ],
+      "exampleQueries": [
+        "Send this email through Mailtrap",
+        "Set up the sending domain"
+      ]
+    },
+    {
+      "name": "teable-skills",
+      "displayName": "Teable",
+      "version": "2026.11.12+78a6ec6",
+      "description": "One skills for Teable: building an app on it and running its operations.",
+      "author": "Teable",
+      "license": "MIT",
+      "homepage": "https://github.com/teableio/agent-skills",
+      "category": "Code",
+      "icon": "icons/teable-skills.png",
+      "packages": [
+        "teable"
+      ],
+      "exampleQueries": [
+        "Build this app in Teable"
+      ]
+    },
+    {
+      "name": "helius-skills",
+      "displayName": "Helius",
+      "version": "2026.11.15+fdd6311",
+      "description": "Four skills for Helius: the Solana RPC, its APIs and the services around them.",
+      "author": "Helius",
+      "license": "MIT",
+      "homepage": "https://github.com/helius-labs/core-ai",
+      "category": "Code",
+      "icon": "icons/helius-skills.png",
+      "packages": [
+        "helius"
+      ],
+      "exampleQueries": [
+        "Query Solana through Helius",
+        "Set up the Jupiter integration"
+      ]
+    },
+    {
+      "name": "videodb-skills",
+      "displayName": "VideoDB",
+      "version": "2026.11.19+2695099",
+      "description": "Five skills for VideoDB: searching a video library, cutting clips, editing, live capture and subtitles.",
+      "author": "VideoDB",
+      "license": "MIT",
+      "homepage": "https://github.com/video-db/skills",
+      "category": "Studio",
+      "icon": "icons/videodb-skills.png",
+      "packages": [
+        "videodb"
+      ],
+      "exampleQueries": [
+        "Find the moment in this video",
+        "Cut the clips out of this recording"
+      ]
+    },
+    {
+      "name": "app-store-connect-skills",
+      "displayName": "App Store Connect",
+      "version": "2026.11.16+6d1c3c5",
+      "description": "Twenty-six skills for the App Store Connect API: building and releasing, the analytics reports, ad hoc distribution, Apple Ads and the ASO audit.",
+      "author": "Rork",
+      "license": "MIT",
+      "homepage": "https://github.com/rorkai/app-store-connect-cli-skills",
+      "category": "Code",
+      "icon": "icons/app-store-connect-skills.png",
+      "packages": [
+        "rork"
+      ],
+      "exampleQueries": [
+        "Upload this build to TestFlight",
+        "Pull the analytics for this app"
+      ]
+    },
+    {
+      "name": "zapier-skills",
+      "displayName": "Zapier",
+      "version": "2026.11.18+4e347e2",
+      "description": "One skill for Zapier: keeping a plugin's description in step with what it does.",
+      "author": "Zapier",
+      "license": "MIT",
+      "homepage": "https://github.com/zapier/zapier-mcp",
+      "category": "Code",
+      "icon": "icons/zapier-skills.png",
+      "packages": [
+        "zapier"
+      ],
+      "exampleQueries": [
+        "Write the description for this Zapier plugin"
       ]
     },
     {

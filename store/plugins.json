@@ -1517,6 +1517,241 @@
         "Write this in Rust",
         "Explain this Rust code"
       ]
+    },
+    {
+      "source": "blender2",
+      "name": "blender-skills-skills",
+      "displayName": "Blender Skills (EL4CTEO)",
+      "author": "EL4CTEO",
+      "category": "Studio",
+      "description": "{N} skill for Blender: the core of working with Blender from an agent.",
+      "exampleQueries": [
+        "Work with Blender from here"
+      ]
+    },
+    {
+      "source": "osint",
+      "name": "openosint-skills",
+      "displayName": "OpenOSINT",
+      "author": "OpenOSINT",
+      "category": "Code",
+      "description": "{N} skills for open-source intelligence: gathering what is out there and what it says about you.",
+      "exampleQueries": [
+        "What can be found about this company?",
+        "Check what is exposed about this person"
+      ]
+    },
+    {
+      "source": "bama",
+      "name": "bama-skills",
+      "displayName": "Bama",
+      "author": "daveebbelaar",
+      "category": "Code",
+      "description": "{N} skills from Dave Bebbelaar: architecture, performance, operating-system integrations and the app and design work around them.",
+      "exampleQueries": [
+        "Improve the architecture of this app",
+        "Make this faster"
+      ]
+    },
+    {
+      "source": "ccthink",
+      "name": "thinking-skills",
+      "displayName": "Thinking Skills",
+      "author": "tjboudreaux",
+      "category": "Productivity",
+      "description": "{N} skills for thinking: first principles, five whys, the circle of competence, bounded rationality, effectuation, Cynefin, jobs to be done and the Kepner-Tregoe matrix.",
+      "exampleQueries": [
+        "Help me think about this with first principles",
+        "Which of these options is right?"
+      ]
+    },
+    {
+      "source": "selfhost",
+      "name": "self-host-skills",
+      "displayName": "Self-Host",
+      "author": "ajnart",
+      "category": "Code",
+      "description": "{N} skills for running your own services: the catalogue, the containers and the release.",
+      "exampleQueries": [
+        "Add this service to my catalogue",
+        "Ship this self-hosted service"
+      ]
+    },
+    {
+      "source": "dzhng",
+      "name": "dzhng-skills",
+      "displayName": "dzhng Skills",
+      "author": "dzhng",
+      "category": "Code",
+      "description": "{N} skills from dzhng: auditing and evaluating agents, writing Skills, and the graphics and video work.",
+      "exampleQueries": [
+        "Audit this agent",
+        "Write a Skill for this"
+      ]
+    },
+    {
+      "source": "opc",
+      "name": "opc-skills",
+      "displayName": "OPC",
+      "author": "ReScienceLab",
+      "category": "Code",
+      "description": "{N} skills for OPC: the templates, the archive and the tools around a research project.",
+      "exampleQueries": [
+        "Set up this research project"
+      ]
+    },
+    {
+      "source": "skillhub",
+      "name": "skills-hub-skills",
+      "displayName": "Skills Hub",
+      "author": "qufei1993",
+      "category": "Code",
+      "description": "{N} skills for working in a codebase: code review, the client UI, error handling, finding simplifications and the checks before a push.",
+      "exampleQueries": [
+        "Review this code",
+        "What can I simplify here?"
+      ]
+    },
+    {
+      "source": "evo",
+      "name": "evo-skills",
+      "displayName": "Evo",
+      "author": "evo-hq",
+      "category": "Code",
+      "description": "{N} skills for Evo: setting up the infrastructure, discovering what is there, reporting, shipping, subagents and fine-tuning.",
+      "exampleQueries": [
+        "Set up Evo for this repo",
+        "Ship this with Evo"
+      ]
+    },
+    {
+      "source": "skillkit",
+      "name": "skillkit-skills",
+      "displayName": "Skillkit",
+      "author": "rohitg00",
+      "category": "Code",
+      "description": "{N} skills for the craft of working with an agent: handoff protocols, parallel investigation, structured review, hypothesis testing, root-cause analysis, tracing and designing before writing.",
+      "exampleQueries": [
+        "Find the root cause of this",
+        "Hand this over to another agent"
+      ]
+    },
+    {
+      "source": "pmskills",
+      "name": "pm-claude-skills",
+      "displayName": "Product Management Skills",
+      "author": "mohitagw15856",
+      "category": "Business",
+      "description": "{N} skills for product management: hiring for a team, the API you build for yourself, disclosure policy, context bankruptcy, deepfakes and the rest of the working life of a product.",
+      "exampleQueries": [
+        "Plan this product quarter",
+        "Write the policy for this"
+      ]
+    },
+    {
+      "source": "secondbrainos",
+      "name": "second-brain-os-skills",
+      "displayName": "Second Brain OS",
+      "author": "undefined-ui",
+      "category": "Productivity",
+      "description": "{N} skills for a second brain: auditing the context, backfilling it, the gate checks, the goal tests and the harness audits around it.",
+      "exampleQueries": [
+        "Audit my context",
+        "Backfill this into my notes"
+      ]
+    },
+    {
+      "source": "courier",
+      "name": "courier-skills",
+      "displayName": "Courier",
+      "author": "Courier",
+      "category": "Code",
+      "description": "{N} skill for Courier: sending notifications and the API behind them.",
+      "exampleQueries": [
+        "Send this notification"
+      ]
+    },
+    {
+      "source": "notioncookbook",
+      "name": "notion-cookbook-skills",
+      "displayName": "Notion Cookbook",
+      "author": "Make",
+      "category": "Productivity",
+      "description": "{N} skills for Notion: connections, custom blocks, Notion as code, sketching, sync and workflows.",
+      "exampleQueries": [
+        "Build a block for this page",
+        "Sync this with my database"
+      ]
+    },
+    {
+      "source": "mailtrap",
+      "name": "mailtrap-skills",
+      "displayName": "Mailtrap",
+      "author": "Mailtrap",
+      "category": "Code",
+      "description": "{N} skills for Mailtrap: sending and receiving email, the templates, the contacts and the sending domain.",
+      "exampleQueries": [
+        "Send this email through Mailtrap",
+        "Set up the sending domain"
+      ]
+    },
+    {
+      "source": "teable",
+      "name": "teable-skills",
+      "displayName": "Teable",
+      "author": "Teable",
+      "category": "Code",
+      "description": "{N} skills for Teable: building an app on it and running its operations.",
+      "exampleQueries": [
+        "Build this app in Teable"
+      ]
+    },
+    {
+      "source": "helius",
+      "name": "helius-skills",
+      "displayName": "Helius",
+      "author": "Helius",
+      "category": "Code",
+      "description": "{N} skills for Helius: the Solana RPC, its APIs and the services around them.",
+      "exampleQueries": [
+        "Query Solana through Helius",
+        "Set up the Jupiter integration"
+      ]
+    },
+    {
+      "source": "videodb",
+      "name": "videodb-skills",
+      "displayName": "VideoDB",
+      "author": "VideoDB",
+      "category": "Studio",
+      "description": "{N} skills for VideoDB: searching a video library, cutting clips, editing, live capture and subtitles.",
+      "exampleQueries": [
+        "Find the moment in this video",
+        "Cut the clips out of this recording"
+      ]
+    },
+    {
+      "source": "rork",
+      "name": "app-store-connect-skills",
+      "displayName": "App Store Connect",
+      "author": "Rork",
+      "category": "Code",
+      "description": "{N} skills for the App Store Connect API: building and releasing, the analytics reports, ad hoc distribution, Apple Ads and the ASO audit.",
+      "exampleQueries": [
+        "Upload this build to TestFlight",
+        "Pull the analytics for this app"
+      ]
+    },
+    {
+      "source": "zapier",
+      "name": "zapier-skills",
+      "displayName": "Zapier",
+      "author": "Zapier",
+      "category": "Code",
+      "description": "{N} skill for Zapier: keeping a plugin's description in step with what it does.",
+      "exampleQueries": [
+        "Write the description for this Zapier plugin"
+      ]
     }
   ]
 }

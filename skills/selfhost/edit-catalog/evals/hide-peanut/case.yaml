@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: hide-peanut
+expected_outcome: |
+  Peanut is added to the unavailable map with its reason and issue link, regeneration drops it from both JSON files, counts.apps in catalog.json falls by one with no README edit, the TUI goldens' 'N more' line is one lower, and counts.allApps and e2e/testdata/inventory.json still include peanut.

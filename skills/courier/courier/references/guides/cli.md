@@ -1,0 +1,309 @@
+# Courier CLI
+
+**Contents:** [Quick Reference](#quick-reference) · [Installation](#installation) · [Authentication](#authentication) · [Inline Sends](#inline-sends) · [User Profiles](#user-profiles) · [Lists and Bulk](#lists-and-bulk) · [Tenants, Journeys, and Preferences](#tenants-journeys-and-preferences) · [Debugging Workflow](#debugging-workflow) · [Template Metrics](#template-metrics) · [Machine-Readable Output](#machine-readable-output) · [Global Flags](#global-flags) · [Related](#related)
+
+## Quick Reference
+
+### Rules
+- CLI is for ad-hoc operations, debugging, and agent workflows; use SDKs for production app code
+- Auth via `COURIER_API_KEY` env var; `--api-key` flag overrides per command
+- All commands support `--format json` for machine-readable output
+- Resource-based command structure: `courier [resource] <command> [flags]`
+- One level of dot-notation for top-level nested args with inline JSON values: `--message.to '{"user_id":"abc"}'`. Two-level dots like `--message.to.user_id "abc"` are **not** supported; pass the full sub-object as a JSON string instead.
+
+### Common Commands
+
+| Task | Command |
+|------|---------|
+| Send with a template | `courier send message --message.to '{"user_id":"user-123"}' --message.template "nt_01kmrbq6ypf25tsge12qek41r0"` |
+| Send inline (no template) | `courier send message --message.to '{"email":"a@b.com"}' --message.content '{"title":"Title","body":"Body"}'` |
+| Send to a list | `courier send message --message.to '{"list_id":"beta-testers"}' --message.template "nt_01kmrbq6ypf25tsge12qek41r0"` |
+| List recent messages | `courier messages list` |
+| Inspect a message | `courier messages retrieve --message-id "1-abc123"` |
+| View delivery history | `courier messages history --message-id "1-abc123"` |
+| View rendered content | `courier messages content --message-id "1-abc123"` |
+| Create a user profile | `courier profiles create --user-id "user-123" --profile '{"email": "a@b.com"}'` |
+| Get a user profile | `courier profiles retrieve --user-id "user-123"` |
+| Check user preferences | `courier users:preferences retrieve --user-id "user-123"` |
+| When a user changed a preference | `courier workspace-preferences list-logs --user-id "user-123"` |
+| See what a digest is holding | `courier digests:schedules list-instances --schedule-id "sch_..."` |
+| Release one user's digest now | `courier workspace-preferences:topics release-digest --section-id "$SECTION_ID" --topic-id "$TOPIC_ID" --user-id "user-123"` |
+| Turn off a topic's digest | `courier workspace-preferences:topics delete-digest --section-id "$SECTION_ID" --topic-id "$TOPIC_ID"` |
+| Invoke a journey (recommended for multi-step flows) | `courier journeys invoke --template-id "$JOURNEY_ID" --user-id "user-123" --data '{"plan":"pro"}'` |
+| List templates | `courier notifications list` |
+| Template delivery metrics | `courier notifications get-metrics --id "nt_01kmrbq6ypf25tsge12qek41r0" --lookback P7D --granularity DAY` |
+| Write one locale's translations | `courier notifications put-locale --id "nt_01kmrbq6ypf25tsge12qek41r0" --locale-id es --element '{id: elem_..., content: Hola}'` |
+| List preview device sets | `courier previews list-device-sets` |
+| Start a Device Preview run (billed per device) | `courier notifications:previews:runs create --id "nt_01kmrbq6ypf25tsge12qek41r0" --device-set-id "pvs_..." --idempotency-key "$(uuidgen)"` |
+| Read a preview run | `courier notifications:previews:runs retrieve --id "nt_01kmrbq6ypf25tsge12qek41r0" --preview-run-id "pvr_..."` |
+| Send once per key (retries return the first response) | `courier send message --message '{"to":{"user_id":"user-123"},"template":"nt_01kmrbq6ypf25tsge12qek41r0"}' --idempotency-key "order-12345"` |
+| One-off broadcast to a list | `courier broadcasts create --name "Launch" --channel email`, then `courier broadcasts put-content --broadcast-id "$BROADCAST_ID" --content '{"version":"2022-01-01","elements":[...]}'`, then `courier broadcasts send --broadcast-id "$BROADCAST_ID" --recipient-type list --recipient-id "product-updates"` |
+| Change one provider setting (JSON Patch, keeps the rest; repeat `--patch` for more operations) | `courier providers patch --id "$PROVIDER_ID" --patch '{"op":"add","path":"/settings/rate_limit","value":{"rate":10,"period":"second"}}'` |
+
+### Output Formats
+
+`--format` takes `auto` (human-readable in a terminal, JSON when piped), `json`, `jsonl`, `yaml`, `pretty`, `raw`, or `explore` (interactive, terminal only). Filter with GJSON: `--transform "results.#.id"`.
+
+---
+
+## Installation
+
+```bash
+npm install -g @trycourier/cli   # or a binary from https://github.com/trycourier/courier-cli/releases
+courier --version
+```
+
+## Authentication
+
+`export COURIER_API_KEY="your-api-key"`, and override it per command with `--api-key`.
+
+## Inline Sends
+
+Inline content with fallback routing (`method: "single"` stops at the first channel that delivers):
+
+```bash
+courier send message \
+  --message.to '{"email":"alex@example.com","phone_number":"+15551234567"}' \
+  --message.content '{"title":"New login detected","body":"New login from {{city}}, {{country}}. If this wasn'\''t you, reset your password."}' \
+  --message.data '{"city": "San Francisco", "country": "US"}' \
+  --message.routing '{"method":"single","channels":["email","sms"]}'
+```
+
+## User Profiles
+
+Create a profile so you can send by `user_id` instead of passing contact info every time:
+
+```bash
+courier profiles create \
+  --user-id "user-123" \
+  --profile '{"email": "alex@example.com", "phone_number": "+15551234567", "name": "Alex Chen"}'
+```
+
+`profiles create` merges into an existing profile, so a later call with only `{"custom": {...}}` keeps the contact info. Read one back with `courier profiles retrieve --user-id "user-123" --format json`.
+
+## Lists and Bulk
+
+**Send to a group via lists:**
+
+```bash
+courier lists update --list-id "beta-testers" --name "Beta Testers"
+courier lists:subscriptions subscribe-user --list-id "beta-testers" --user-id "user-123"
+
+courier send message \
+  --message.to '{"list_id":"beta-testers"}' \
+  --message.template "feature-announcement" \
+  --message.data '{"feature": "Design Studio"}'
+```
+
+Target multiple lists with a pattern (e.g., all `eng.*` lists):
+
+```bash
+courier send message \
+  --message.to '{"list_pattern":"eng.*"}' \
+  --message.template "engineering-update"
+```
+
+Audiences work the same way, `--message.to '{"audience_id":"trial-users"}'`.
+
+A single list, list-pattern, or audience send reaches the whole group; Courier fans out server-side.
+
+**Bulk jobs** for a large recipient set that isn't a list or audience:
+
+```bash
+# 1. Create the job. --message.event is required.
+courier bulk create-job \
+  --message.event "monthly-digest" \
+  --message.data '{"month":"August"}'
+
+# 2. Ingest users. --user is singular and repeatable; batch at 1000 or fewer per call.
+courier bulk add-users --job-id "1-6a7e474b-..." \
+  --user '{"profile":{"email":"jane@example.com"},"to":{"user_id":"user-1"},"data":{"highlights":12}}' \
+  --user '{"profile":{"email":"sam@example.com"},"to":{"user_id":"user-2"},"data":{"highlights":4}}'
+
+# 3. Run it. One-way door: a job runs once.
+courier bulk run-job --job-id "1-6a7e474b-..."
+
+# 4. Follow it.
+courier bulk retrieve-job --job-id "1-6a7e474b-..."   # status + received/enqueued/failures
+courier bulk list-users --job-id "1-6a7e474b-..."     # per-recipient status and message id
+```
+
+> `--message.event` is required on `create-job` (a 400 otherwise); `--message.template` and
+> `--message.content` are optional overrides on top of it. Each `--user` value is a full
+> `InboundBulkMessageUser` object, not a bare `{"user_id": ...}`. **Email jobs need `profile.email`
+> per user**, since `to.email` alone won't route. Bulk commands need a current CLI; upgrade if they
+> are missing. See [bulk.md](./bulk.md) for the SDK equivalents and the full gotcha list.
+
+## Tenants, Journeys, and Preferences
+
+**Tenants** scope branding and preferences per customer organization (B2B):
+
+```bash
+courier tenants update \
+  --tenant-id "acme-corp" \
+  --name "Acme Corp" \
+  --brand-id "brand-acme"
+
+courier users:tenants add-single --user-id "user-123" --tenant-id "acme-corp"
+
+courier send message \
+  --message.to '{"user_id":"user-123","context":{"tenant_id":"acme-corp"}}' \
+  --message.template "welcome-email"
+```
+
+> `courier tenants update` (`PUT /tenants/{tenant_id}`) replaces the tenant; pass every field you want to keep. `properties`, `brand_id`, `user_profile` and `default_preferences` left out are cleared. `--brand-id` doesn't accept null, so omit it to remove a brand. It also creates the tenant if it doesn't exist; there is no separate `courier tenants create` command.
+
+**Journeys** are the recommended way to build multi-step notification sequences (delays, branches, throttling). The CLI covers the full lifecycle: `courier journeys` (create, replace, publish, invoke, cancel), `courier journeys:templates` for journey-scoped templates, and `courier journeys:runs` (list, retrieve, list-steps) for debugging. Publishing a journey publishes only its nodes, not its journey-scoped templates. A send whose template was never published fails at delivery (`UNDELIVERABLE`, "... has no published version"), while the run still shows `PROCESSED`. See [Journeys](./journeys.md) for the full workflow.
+
+```bash
+# Create a journey shell: a trigger first, an exit last (node ids are server-generated, don't supply your own)
+courier journeys create \
+  --name "Onboarding" \
+  --node '{"type":"trigger","trigger_type":"api-invoke"}' \
+  --node '{"type":"exit"}'
+
+# Journey-scoped template (--template-id is the journey id)
+courier journeys:templates create \
+  --template-id "$JOURNEY_ID" \
+  --channel email \
+  --notification '{"name":"Welcome","tags":[],"brand":null,"subscription":null,"content":{"version":"2022-01-01","scope":"strict","elements":[{"type":"channel","channel":"email","elements":[{"type":"meta","title":"Welcome"},{"type":"text","content":"Hi {{data.first_name}}"}]}]}}'
+
+# Publish each journey-scoped template first (or pass --state PUBLISHED on create).
+# Publishing the journey doesn't publish them.
+courier journeys:templates publish --template-id "$JOURNEY_ID" --notification-id "$TEMPLATE_ID"
+
+# Publish the journey's current draft
+courier journeys publish --template-id "$JOURNEY_ID"
+
+# Invoke a journey (mirror user_id into data so fetch URL templating works)
+courier journeys invoke \
+  --template-id "$JOURNEY_ID" \
+  --user-id "user-123" \
+  --data '{"user_id":"user-123","plan":"pro"}'
+```
+
+**Preferences**. Check what a user has opted into or out of:
+
+```bash
+courier users:preferences retrieve --user-id "user-123" --format pretty
+
+courier users:preferences retrieve-topic \
+  --user-id "user-123" \
+  --topic-id "marketing-updates"
+```
+
+## Debugging Workflow
+
+Trace why a notification failed in four steps:
+
+**1. Find the message:**
+
+```bash
+courier messages list --format json --transform "results.#(status=UNDELIVERABLE)"
+```
+
+`messages list` filter flags include `--status`, `--recipient`, `--notification`, `--event`, `--tag`, `--tags`, `--provider`, `--list`, `--message-id`, `--archived`, `--tenant-id`, `--enqueued-after`, `--cursor`, and `--trace-id`. `--trace-id` matches a send's `metadata.trace_id` (36 characters max), not its `requestId`. See the [next section](#debugging-list--bulk-sends-requestid-vs-message-id).
+
+**2. Inspect the message:**
+
+```bash
+courier messages retrieve --message-id "1-abc123" --format json
+```
+
+**3. View delivery history:**
+
+```bash
+courier messages history --message-id "1-abc123" --format json
+```
+
+The history shows each routing step, provider attempt, and delivery status with timestamps.
+
+**4. View rendered content:**
+
+```bash
+courier messages content --message-id "1-abc123" --format json
+```
+
+Shows the final content sent to the provider, after template variables and routing logic were applied. Useful for verifying what the recipient actually received.
+
+> There is no `courier messages output` command; the rendered-content command is `courier messages content` (which maps to `client.messages.content(id)` in the SDK).
+
+### Debugging list / bulk sends: requestId vs message id
+
+<a id="debugging-list-bulk-sends-requestid-vs-message-id"></a>
+
+For a single send (`to: { email }` / `to: { user_id }`), the `requestId` returned by `client.send.message` *is* the message ID. Pass it straight to `courier messages retrieve --message-id "<requestId>"` and `client.messages.retrieve(requestId)`.
+
+For **list** and **audience** sends, the `requestId` is the *job* ID, which fans out to one message per recipient. Passing it to `messages retrieve` returns `404 Message not found`. Each recipient's message ID is `<requestId>:<user_id>`. To list them, set `metadata.trace_id` on the send and filter by it (`--list <list_id>` also works for a list send):
+
+```bash
+courier messages list --trace-id "signup-wave-42" --format json --transform "results.#.id"
+```
+
+Pass each ID to `messages retrieve`, `history`, and `content` as in the steps above. The SDKs filter the same way: `client.messages.list({ traceId })` (Node), `client.messages.list(trace_id=...)` (Python).
+
+## Template Metrics
+
+`courier notifications get-metrics` returns one template's delivery funnel as a time series, the same data as the template's panel in Platform → Analytics.
+
+```bash
+courier notifications get-metrics \
+  --id "$TEMPLATE_ID" \
+  --lookback P7D \
+  --granularity DAY
+```
+
+| Flag | Notes |
+|---|---|
+| `--id` | Required. Template ID or alias |
+| `--lookback` | ISO 8601 duration, default `P30D`. Don't combine with `--start`/`--end`: the API returns `400`. The CLI `--help` and SDK say it's ignored |
+| `--granularity` | `HOUR`, `DAY` (default), `WEEK`, `MONTH` |
+| `--start` / `--end` | ISO 8601 timestamps with an offset. Supply both or neither |
+
+Pipe it through `jq` for a quick delivery rate per bucket:
+
+```bash
+courier notifications get-metrics --id "$TEMPLATE_ID" --lookback P7D --format json \
+  | jq -r '.series[] | [.period, ([.data[].sent] | add // 0), ([.data[].delivered] | add // 0)] | @tsv'
+```
+
+There is no bucket-level total, so the sums above are on you. Full semantics, plan caps, and error cases in [metrics.md](./metrics.md).
+
+## Machine-Readable Output
+
+Every command supports `--format json`. Combine with `--transform` (GJSON syntax) to extract specific fields:
+
+```bash
+# Get just message IDs
+courier messages list --format json --transform "results.#.id"
+
+# Get the status of a specific message
+courier messages retrieve --message-id "1-abc123" --format json --transform "status"
+
+# List template names. V2 templates expose `name`; legacy templates expose `title`.
+# Pull both and use whichever is populated.
+courier notifications list --format json --transform "results.#.{id:id,name:name,title:title}"
+```
+
+## Global Flags
+
+| Flag | Description |
+|------|-------------|
+| `--api-key` | Override `COURIER_API_KEY` for this command |
+| `--base-url` | Use a custom API URL |
+| `--format` | Output format (`auto`, `explore`, `json`, `jsonl`, `pretty`, `raw`, `yaml`) |
+| `--transform` | Filter output with GJSON syntax |
+| `--debug` | Show HTTP request/response details |
+| `--version`, `-v` | Print CLI version |
+| `--help` | Show command usage |
+
+## Related
+
+- [Quickstart](./quickstart.md) - Send your first notification
+- [Patterns](./patterns.md) - Reusable code patterns (includes CLI examples)
+- [Reliability](./reliability.md) - Idempotency and retry logic
+- [Multi-Channel](./multi-channel.md) - Routing strategies
+- [Template Metrics](./metrics.md) - What `notifications get-metrics` returns, and its plan caps
+
+Source code: [trycourier/courier-cli](https://github.com/trycourier/courier-cli)
+Documentation: [courier.com/docs/resources/cli](https://www.courier.com/docs/resources/cli)

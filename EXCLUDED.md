@@ -10655,3 +10655,2176 @@ Skills of an "all clean" source that `scripts/vendor.mjs` did not take, and why.
 - `ctf-osint`: links to ../ctf-web/tools-mcp.md, which is not in the store
 - `ctf-reverse`: links to ../ctf-pwn/tools-mcp.md, ../ctf-web/tools-mcp.md, which is not in the store
 - `solve-challenge`: links to ../scripts/install_ctf_tools.sh, ../ctf-web/tools-mcp.md, which is not in the store
+
+## blender2 (27)
+
+- `blender-addon-development`: assets/addon_template/__init__.py is not a plain text file (.py); assets/addon_template/blender_manifest.toml is not a plain text file (.toml); assets/addon_template/operators.py is not a plain text file (.py); assets/addon_template/ui.py is not a plain text file (.py)
+- `blender-animation`: scripts/_bpyx.py is not a plain text file (.py); scripts/bake_action.py is not a plain text file (.py); scripts/loop_check.py is not a plain text file (.py); scripts/retarget.py is not a plain text file (.py)
+- `blender-asset-qa`: scripts/_bpyx.py is not a plain text file (.py); scripts/qa_check.py is not a plain text file (.py); scripts/review_shots.py is not a plain text file (.py)
+- `blender-character-rigging`: scripts/_bpyx.py is not a plain text file (.py); scripts/bind_mesh.py is not a plain text file (.py); scripts/rig_check.py is not a plain text file (.py); scripts/rigify_build.py is not a plain text file (.py); scripts/stress_poses.py is not a plain text file (.py)
+- `blender-clothing`: scripts/_bpyx.py is not a plain text file (.py); scripts/garment.py is not a plain text file (.py)
+- `blender-core`: scripts/_bpyx.py is not a plain text file (.py); scripts/env_report.py is not a plain text file (.py); scripts/run_in_blender.py is not a plain text file (.py)
+- `blender-environment-kits`: scripts/_bpyx.py is not a plain text file (.py); scripts/kit_check.py is not a plain text file (.py); scripts/scatter.py is not a plain text file (.py); scripts/terrain.py is not a plain text file (.py)
+- `blender-export-pipelines`: scripts/_bpyx.py is not a plain text file (.py); scripts/export_asset.py is not a plain text file (.py)
+- `blender-facial-shapekeys`: scripts/_bpyx.py is not a plain text file (.py); scripts/shapekeys.py is not a plain text file (.py)
+- `blender-game-optimization`: scripts/_bpyx.py is not a plain text file (.py); scripts/make_lods.py is not a plain text file (.py); scripts/mesh_stats.py is not a plain text file (.py)
+- `blender-geometry-nodes`: scripts/_bpyx.py is not a plain text file (.py); scripts/gn_builder.py is not a plain text file (.py)
+- `blender-hair-grooming`: scripts/_bpyx.py is not a plain text file (.py); scripts/groom.py is not a plain text file (.py)
+- `blender-hardsurface-modeling`: scripts/_bpyx.py is not a plain text file (.py); scripts/apply_stack.py is not a plain text file (.py)
+- `blender-lighting-lookdev`: scripts/_bpyx.py is not a plain text file (.py); scripts/turntable.py is not a plain text file (.py)
+- `blender-pbr-materials`: scripts/_bpyx.py is not a plain text file (.py); scripts/build_pbr_material.py is not a plain text file (.py)
+- `blender-pipeline-automation`: scripts/_bpyx.py is not a plain text file (.py); scripts/batch_process.py is not a plain text file (.py)
+- `blender-rendering`: scripts/_bpyx.py is not a plain text file (.py); scripts/render_batch.py is not a plain text file (.py)
+- `blender-retopology-uv`: scripts/_bpyx.py is not a plain text file (.py); scripts/auto_retopo.py is not a plain text file (.py); scripts/texel_density.py is not a plain text file (.py); scripts/uv_pack.py is not a plain text file (.py)
+- `blender-scene-setup`: scripts/_bpyx.py is not a plain text file (.py); scripts/scene_audit.py is not a plain text file (.py)
+- `blender-sculpting`: scripts/_bpyx.py is not a plain text file (.py); scripts/sculpt_ops.py is not a plain text file (.py)
+- `blender-simulation`: scripts/_bpyx.py is not a plain text file (.py); scripts/sim_setup.py is not a plain text file (.py)
+- `blender-stylized-npr`: scripts/_bpyx.py is not a plain text file (.py); scripts/toon_setup.py is not a plain text file (.py)
+- `blender-texture-baking`: scripts/_bpyx.py is not a plain text file (.py); scripts/bake_maps.py is not a plain text file (.py)
+- `blender-texturing`: scripts/_bpyx.py is not a plain text file (.py); scripts/decal.py is not a plain text file (.py); scripts/smart_material.py is not a plain text file (.py)
+- `blender-time-of-day`: scripts/_bpyx.py is not a plain text file (.py); scripts/scene_mood.py is not a plain text file (.py)
+- `blender-video-editing`: scripts/_bpyx.py is not a plain text file (.py); scripts/track_camera.py is not a plain text file (.py); scripts/vse_edit.py is not a plain text file (.py)
+- `blender-weather-fx`: scripts/_bpyx.py is not a plain text file (.py); scripts/lightning.py is not a plain text file (.py); scripts/precipitation.py is not a plain text file (.py); scripts/surface_weather.py is not a plain text file (.py)
+
+## bama (8)
+
+- `agent-cli`: scripts/add-agent-cli.sh is not a plain text file (.sh); scripts/check-agent-cli.sh is not a plain text file (.sh); template/Agent/AgentCLI.swift is not a plain text file (.swift); template/Agent/AgentCommands.swift is not a plain text file (.swift); template/Agent/AgentCore.swift is not a plain text file (.swift); template/Agent/AgentMCP.swift is not a plain text file (.swift); template/Agent/AgentSocket.swift is not a plain text file (.swift); template/Main.swift is not a plain text file (.swift)
+- `clone`: scripts/window-shot.sh is not a plain text file (.sh)
+- `design-from-app`: scripts/compare.swift is not a plain text file (.swift); scripts/measure.swift is not a plain text file (.swift)
+- `mac-design`: scripts/hig.sh is not a plain text file (.sh)
+- `new-mac-app`: scripts/new-app.sh is not a plain text file (.sh); template/Icon/AppIcon.icon/Assets/back.svg is not a plain text file (.svg); template/Icon/AppIcon.icon/Assets/front.svg is not a plain text file (.svg); template/Info.plist.in is not a plain text file (.in); template/Package.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/App.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/ContentView.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/Models.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/SeedData.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/SelfTest.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/SettingsView.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/Snapshot.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/UI/AppearanceSettings.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/UI/Grid.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/UI/Theme.swift is not a plain text file (.swift); template/Sources/__APP_NAME__/UI/WindowBehavior.swift is not a plain text file (.swift); template/Sources/__APP_NAME__Kit/ItemTitle.swift is not a plain text file (.swift); template/Tests/__APP_NAME__KitTests/ItemTitleTests.swift is not a plain text file (.swift); template/build.sh is not a plain text file (.sh); template/tools/check-layout.swift is not a plain text file (.swift); template/tools/grid-lint.sh is not a plain text file (.sh); template/tools/icon_review.sh is not a plain text file (.sh); template/tools/icon_sheet.swift is not a plain text file (.swift); template/tools/make_icon.sh is not a plain text file (.sh); template/tools/selftest.sh is not a plain text file (.sh); template/tools/snap.sh is not a plain text file (.sh)
+- `research`: the name is already taken by mattpocock
+- `user-stories`: the name is already taken by pm
+- `swift-swiftui`: links to ../../design/mac-design/patterns.md, which is not in the store
+
+## dzhng (21)
+
+- `auto-research`: the name is already taken by aas
+- `claude`: the name is already taken by designskills
+- `code-review`: the name belongs to a Skill built in to Alran Code
+- `codex`: the name is already taken by templates
+- `compare-screenshots`: scripts/visual-parity-diff.eval.mjs is not a plain text file (.mjs); scripts/visual-parity-diff.mjs is not a plain text file (.mjs); test/fixtures/target-without-helper-packages/candidate/fixture.png is not a plain text file (.png); test/fixtures/target-without-helper-packages/reference/fixture.png is not a plain text file (.png); test/visual-parity-diff.test.mjs is not a plain text file (.mjs); vendor/pixelmatch/index.js is not a plain text file (.js); vendor/pngjs/lib/bitmapper.js is not a plain text file (.js); vendor/pngjs/lib/bitpacker.js is not a plain text file (.js); vendor/pngjs/lib/chunkstream.js is not a plain text file (.js); vendor/pngjs/lib/constants.js is not a plain text file (.js); vendor/pngjs/lib/crc.js is not a plain text file (.js); vendor/pngjs/lib/filter-pack.js is not a plain text file (.js); vendor/pngjs/lib/filter-parse-async.js is not a plain text file (.js); vendor/pngjs/lib/filter-parse-sync.js is not a plain text file (.js); vendor/pngjs/lib/filter-parse.js is not a plain text file (.js); vendor/pngjs/lib/format-normaliser.js is not a plain text file (.js); vendor/pngjs/lib/interlace.js is not a plain text file (.js); vendor/pngjs/lib/packer-async.js is not a plain text file (.js); vendor/pngjs/lib/packer-sync.js is not a plain text file (.js); vendor/pngjs/lib/packer.js is not a plain text file (.js); vendor/pngjs/lib/paeth-predictor.js is not a plain text file (.js); vendor/pngjs/lib/parser-async.js is not a plain text file (.js); vendor/pngjs/lib/parser-sync.js is not a plain text file (.js); vendor/pngjs/lib/parser.js is not a plain text file (.js); vendor/pngjs/lib/png-sync.js is not a plain text file (.js); vendor/pngjs/lib/png.js is not a plain text file (.js); vendor/pngjs/lib/sync-inflate.js is not a plain text file (.js); vendor/pngjs/lib/sync-reader.js is not a plain text file (.js)
+- `implement-spec`: the name is already taken by mattpocock
+- `isometric-motion`: examples/arcade-cabinet/arcade-cabinet-light.html is not a plain text file (.html); examples/arcade-cabinet/arcade-cabinet.css is not a plain text file (.css); examples/arcade-cabinet/arcade-cabinet.html is not a plain text file (.html); examples/arcade-cabinet/build.mjs is not a plain text file (.mjs); examples/arcade-cabinet/live.js is not a plain text file (.js); examples/arcade-cabinet/parts.mjs is not a plain text file (.mjs); examples/arcade-cabinet/screen.mjs is not a plain text file (.mjs); examples/desk-computer/build.mjs is not a plain text file (.mjs); examples/desk-computer/desk-computer-light.html is not a plain text file (.html); examples/desk-computer/desk-computer.html is not a plain text file (.html); examples/dial-indicator/build.mjs is not a plain text file (.mjs); examples/dial-indicator/dial-indicator-light.html is not a plain text file (.html); examples/dial-indicator/dial-indicator.html is not a plain text file (.html); examples/next-token/build.mjs is not a plain text file (.mjs); examples/next-token/model.mjs is not a plain text file (.mjs); examples/next-token/next-token-light.html is not a plain text file (.html); examples/next-token/next-token.html is not a plain text file (.html); examples/raptor-engine/build.mjs is not a plain text file (.mjs); examples/raptor-engine/live.js is not a plain text file (.js); examples/raptor-engine/raptor-engine-light.html is not a plain text file (.html); examples/raptor-engine/raptor-engine.html is not a plain text file (.html); examples/raptor-engine/raptor.css is not a plain text file (.css); examples/ripple-tank/build.mjs is not a plain text file (.mjs); examples/ripple-tank/live.js is not a plain text file (.js); examples/ripple-tank/model.mjs is not a plain text file (.mjs); examples/ripple-tank/ripple-tank-light.html is not a plain text file (.html); examples/ripple-tank/ripple-tank.html is not a plain text file (.html); examples/ripple-tank/ripple.css is not a plain text file (.css); examples/spot-plate/art.tsx is not a plain text file (.tsx); examples/spot-plate/drops.ts is not a plain text file (.ts); examples/spot-plate/fan.ts is not a plain text file (.ts); examples/spot-plate/figure.tsx is not a plain text file (.tsx); examples/spot-plate/geometry.ts is not a plain text file (.ts); examples/spot-plate/live.tsx is not a plain text file (.tsx); examples/spot-plate/rig.ts is not a plain text file (.ts); examples/spot-plate/spot-plate.css is not a plain text file (.css); examples/test-rig/art.tsx is not a plain text file (.tsx); examples/test-rig/figure.tsx is not a plain text file (.tsx); examples/test-rig/geometry.ts is not a plain text file (.ts); examples/test-rig/live.tsx is not a plain text file (.tsx); examples/test-rig/pose.ts is not a plain text file (.ts); examples/test-rig/rig.ts is not a plain text file (.ts); examples/test-rig/stretch.css is not a plain text file (.css); examples/test-rig/view.ts is not a plain text file (.ts); examples/turning-dial/build.mjs is not a plain text file (.mjs); examples/turning-dial/dial.css is not a plain text file (.css); examples/turning-dial/live.js is not a plain text file (.js); examples/turning-dial/stress.mjs is not a plain text file (.mjs); examples/turning-dial/turning-dial-light.html is not a plain text file (.html); examples/turning-dial/turning-dial-verify-light.html is not a plain text file (.html); examples/turning-dial/turning-dial.html is not a plain text file (.html); examples/turning-dial/turning-stress-light.html is not a plain text file (.html); kit/audit.mjs is not a plain text file (.mjs); kit/canvas-painter.mjs is not a plain text file (.mjs); kit/gl-shared.mjs is not a plain text file (.mjs); kit/gl.mjs is not a plain text file (.mjs); kit/iso-kit.mjs is not a plain text file (.mjs); kit/iso-kit.ts is not a plain text file (.ts); kit/iso.css is not a plain text file (.css); kit/lathe.mjs is not a plain text file (.mjs); kit/react/draw.tsx is not a plain text file (.tsx); kit/react/live.tsx is not a plain text file (.tsx); kit/tube.mjs is not a plain text file (.mjs); kit/turn-audit.mjs is not a plain text file (.mjs); kit/turn-build.mjs is not a plain text file (.mjs); kit/turn-fixed.mjs is not a plain text file (.mjs); kit/turn.mjs is not a plain text file (.mjs); scripts/audit-affine-bounds.test.mjs is not a plain text file (.mjs); scripts/audit-cache.test.mjs is not a plain text file (.mjs); scripts/audit-clearance-envelope.test.mjs is not a plain text file (.mjs); scripts/audit-empty-clipping.test.mjs is not a plain text file (.mjs); scripts/audit-order-convergence.test.mjs is not a plain text file (.mjs); scripts/audit-path-origin.test.mjs is not a plain text file (.mjs); scripts/audit-profile.test.mjs is not a plain text file (.mjs); scripts/audit-projection.test.mjs is not a plain text file (.mjs); scripts/audit-slide-clearance.test.mjs is not a plain text file (.mjs); scripts/audit-svg-attributes.test.mjs is not a plain text file (.mjs); scripts/audit-taper.test.mjs is not a plain text file (.mjs); scripts/capture-current-geometry.test.mjs is not a plain text file (.mjs); scripts/capture-selector.test.mjs is not a plain text file (.mjs); scripts/capture.mjs is not a plain text file (.mjs); scripts/capture.test.mjs is not a plain text file (.mjs); scripts/chrome-port.mjs is not a plain text file (.mjs); scripts/chrome-startup.test.mjs is not a plain text file (.mjs); scripts/drive-actions.test.mjs is not a plain text file (.mjs); scripts/drive-async-until.test.mjs is not a plain text file (.mjs); scripts/drive-turn-controller.test.mjs is not a plain text file (.mjs); scripts/drive.mjs is not a plain text file (.mjs); scripts/drive.test.mjs is not a plain text file (.mjs); scripts/enter-key.test.mjs is not a plain text file (.mjs); scripts/fidelity-cut.test.mjs is not a plain text file (.mjs); scripts/fidelity-tube-coverage.test.mjs is not a plain text file (.mjs); scripts/fingerprint.mjs is not a plain text file (.mjs); scripts/inline-kit.mjs is not a plain text file (.mjs); scripts/line-ends.mjs is not a plain text file (.mjs); scripts/lines-arcs.test.mjs is not a plain text file (.mjs); scripts/lines-bezier.test.mjs is not a plain text file (.mjs); scripts/lines-round.test.mjs is not a plain text file (.mjs); scripts/lines-rounded-rect.test.mjs is not a plain text file (.mjs); scripts/lines.mjs is not a plain text file (.mjs); scripts/lines.test.mjs is not a plain text file (.mjs); scripts/navigation.test.mjs is not a plain text file (.mjs); scripts/orbit-sampling.test.mjs is not a plain text file (.mjs); scripts/react-dots-opacity.test.mjs is not a plain text file (.mjs); scripts/react-readout-first-write.test.mjs is not a plain text file (.mjs); scripts/react-readout-target.test.mjs is not a plain text file (.mjs); scripts/react-solid-seamless.test.mjs is not a plain text file (.mjs); scripts/react-visibility-target.test.mjs is not a plain text file (.mjs); scripts/turn-bench.mjs is not a plain text file (.mjs); scripts/turn-check.mjs is not a plain text file (.mjs); scripts/turn-fidelity.mjs is not a plain text file (.mjs); scripts/turn-group-reference.test.mjs is not a plain text file (.mjs); scripts/turn-split-owner.test.mjs is not a plain text file (.mjs)
+- `ratchet-files`: scripts/check-file-size.mjs is not a plain text file (.mjs); scripts/install-git-hooks.mjs is not a plain text file (.mjs); scripts/install-git-hooks.test.mjs is not a plain text file (.mjs)
+- `retro`: the name is already taken by pm
+- `screenshot-critique`: scripts/receipts.eval.mjs is not a plain text file (.mjs); scripts/receipts.mjs is not a plain text file (.mjs)
+- `xiaohei-illustrations`: assets/examples/01-two-breakpoints.png is not a plain text file (.png); assets/examples/02-minimum-loop.png is not a plain text file (.png); assets/examples/03-sort-by-purpose.png is not a plain text file (.png); assets/examples/04-one-fish-many-uses.png is not a plain text file (.png); assets/examples/05-handoff-path.png is not a plain text file (.png); assets/examples/06-three-sources.png is not a plain text file (.png); assets/examples/07-three-content-jobs.png is not a plain text file (.png); assets/examples/08-handoff-copy-toolbox.png is not a plain text file (.png); assets/examples/09-common-pits-no-title.png is not a plain text file (.png); assets/examples/10-information-well.png is not a plain text file (.png); assets/examples/11-idea-press.png is not a plain text file (.png); assets/examples/12-content-fermentation.png is not a plain text file (.png); assets/examples/13-system-bearing.png is not a plain text file (.png); assets/examples/14-trust-bridge.png is not a plain text file (.png)
+- `design-with-images`: links to ../compare-screenshots/references/reference-landmarks.md, ../compare-screenshots/SKILL.md, ../screenshot-critique/SKILL.md, which is not in the store
+- `implement-spec-with-codex`: links to ../implement-spec/SKILL.md, ../codex/SKILL.md, which is not in the store
+- `implement-spec-with-goal`: links to ../implement-spec/SKILL.md, which is not in the store
+- `refactor-codebase`: links to ../ratchet-files/SKILL.md, ../code-review/SKILL.md, which is not in the store
+- `review`: links to ../code-review/SKILL.md, which is not in the store
+- `write-spec`: links to ../../visual/screenshot-critique/SKILL.md, ../../visual/compare-screenshots/SKILL.md, which is not in the store
+- `audit-tests`: links to ../review/SKILL.md, which is not in the store
+- `close-spec`: links to ../../plan/write-spec/SKILL.md, ../../review/review/SKILL.md, which is not in the store
+- `explore-unknowns`: links to ../write-spec/SKILL.md, which is not in the store
+- `write-tests`: links to ../../review/audit-tests/SKILL.md, which is not in the store
+
+## opc (11)
+
+- `archive`: hooks/load-memory.py is not a plain text file (.py)
+- `banner-creator`: examples/images/banner-01.png is not a plain text file (.png); examples/images/banner-02.png is not a plain text file (.png); examples/images/banner-03.png is not a plain text file (.png); examples/images/banner-04.png is not a plain text file (.png); examples/images/banner-05.png is not a plain text file (.png); examples/images/banner-06.png is not a plain text file (.png); examples/images/github-banner-01.png is not a plain text file (.png); examples/images/github-banner-02.png is not a plain text file (.png); examples/images/github-banner-03.png is not a plain text file (.png); examples/images/opc-banner-final.png is not a plain text file (.png); scripts/crop_banner.py is not a plain text file (.py); templates/preview.html is not a plain text file (.html)
+- `logo-creator`: examples/images/logo-01.png is not a plain text file (.png); examples/images/logo-02.png is not a plain text file (.png); examples/images/logo-03.png is not a plain text file (.png); examples/images/logo-04.png is not a plain text file (.png); examples/images/logo-05.png is not a plain text file (.png); examples/images/logo-06.png is not a plain text file (.png); examples/images/logo-07.png is not a plain text file (.png); examples/images/logo-08.png is not a plain text file (.png); examples/images/logo-09-v1.png is not a plain text file (.png); examples/images/logo-09-v2.png is not a plain text file (.png); examples/images/logo-09-v3.png is not a plain text file (.png); examples/images/logo-09-v4.png is not a plain text file (.png); examples/images/logo-09-v5.png is not a plain text file (.png); examples/images/logo-09-v6.png is not a plain text file (.png); examples/images/logo-09.png is not a plain text file (.png); examples/images/opc-logo-final.svg is not a plain text file (.svg); examples/images/opc-logo-selected.png is not a plain text file (.png); scripts/crop_logo.py is not a plain text file (.py); scripts/remove_bg.py is not a plain text file (.py); scripts/vectorize.py is not a plain text file (.py); templates/preview.html is not a plain text file (.html)
+- `nanobanana`: scripts/batch_generate.py is not a plain text file (.py); scripts/generate.py is not a plain text file (.py)
+- `producthunt`: scripts/credential.py is not a plain text file (.py); scripts/get_collection.py is not a plain text file (.py); scripts/get_collections.py is not a plain text file (.py); scripts/get_post.py is not a plain text file (.py); scripts/get_post_comments.py is not a plain text file (.py); scripts/get_posts.py is not a plain text file (.py); scripts/get_topic.py is not a plain text file (.py); scripts/get_topics.py is not a plain text file (.py); scripts/get_user.py is not a plain text file (.py); scripts/get_user_posts.py is not a plain text file (.py); scripts/producthunt_api.py is not a plain text file (.py)
+- `reddit`: scripts/credential.py is not a plain text file (.py); scripts/get_post.py is not a plain text file (.py); scripts/get_posts.py is not a plain text file (.py); scripts/get_subreddit.py is not a plain text file (.py); scripts/get_user.py is not a plain text file (.py); scripts/reddit_api.py is not a plain text file (.py); scripts/search_posts.py is not a plain text file (.py)
+- `requesthunt`: SKILL.md pipes a download into a shell
+- `seo-geo`: scripts/autocomplete_ideas.py is not a plain text file (.py); scripts/backlinks.py is not a plain text file (.py); scripts/competitor_gap.py is not a plain text file (.py); scripts/credential.py is not a plain text file (.py); scripts/dataforseo_api.py is not a plain text file (.py); scripts/domain_overview.py is not a plain text file (.py); scripts/keyword_research.py is not a plain text file (.py); scripts/related_keywords.py is not a plain text file (.py); scripts/seo_audit.py is not a plain text file (.py); scripts/serp_analysis.py is not a plain text file (.py); references/schema-templates.md pipes a download into a shell
+- `seo-geo`: scripts/autocomplete_ideas.py is not a plain text file (.py); scripts/backlinks.py is not a plain text file (.py); scripts/competitor_gap.py is not a plain text file (.py); scripts/credential.py is not a plain text file (.py); scripts/dataforseo_api.py is not a plain text file (.py); scripts/domain_overview.py is not a plain text file (.py); scripts/keyword_research.py is not a plain text file (.py); scripts/related_keywords.py is not a plain text file (.py); scripts/seo_audit.py is not a plain text file (.py); scripts/serp_analysis.py is not a plain text file (.py); references/schema-templates.md pipes a download into a shell
+- `template`: SKILL.md names another skill than its folder
+- `twitter`: scripts/batch_get_users.py is not a plain text file (.py); scripts/check_relationship.py is not a plain text file (.py); scripts/credential.py is not a plain text file (.py); scripts/get_article.py is not a plain text file (.py); scripts/get_community.py is not a plain text file (.py); scripts/get_community_members.py is not a plain text file (.py); scripts/get_community_moderators.py is not a plain text file (.py); scripts/get_community_tweets.py is not a plain text file (.py); scripts/get_followers.py is not a plain text file (.py); scripts/get_following.py is not a plain text file (.py); scripts/get_list_followers.py is not a plain text file (.py); scripts/get_list_members.py is not a plain text file (.py); scripts/get_space.py is not a plain text file (.py); scripts/get_trends.py is not a plain text file (.py); scripts/get_tweet.py is not a plain text file (.py); scripts/get_tweet_quotes.py is not a plain text file (.py); scripts/get_tweet_replies.py is not a plain text file (.py); scripts/get_tweet_retweeters.py is not a plain text file (.py); scripts/get_tweet_thread.py is not a plain text file (.py); scripts/get_user_about.py is not a plain text file (.py); scripts/get_user_info.py is not a plain text file (.py); scripts/get_user_mentions.py is not a plain text file (.py); scripts/get_user_tweets.py is not a plain text file (.py); scripts/get_verified_followers.py is not a plain text file (.py); scripts/search_community_tweets.py is not a plain text file (.py); scripts/search_tweets.py is not a plain text file (.py); scripts/search_users.py is not a plain text file (.py); scripts/twitter_api.py is not a plain text file (.py)
+
+## skillhub (2)
+
+- `dsh-engineering`: scripts/adoption.py is not a plain text file (.py)
+- `dsh-record-browser-gif`: scripts/encode_gif.py is not a plain text file (.py)
+
+## evo (9)
+
+- `discover`: references/inline_instrumentation.js is not a plain text file (.js); references/inline_instrumentation.py is not a plain text file (.py); references/sdk_node.js is not a plain text file (.js); references/sdk_python.py is not a plain text file (.py); scripts/validate_result.py is not a plain text file (.py)
+- `discover`: references/inline_instrumentation.js is not a plain text file (.js); references/inline_instrumentation.py is not a plain text file (.py); references/sdk_node.js is not a plain text file (.js); references/sdk_python.py is not a plain text file (.py); scripts/validate_result.py is not a plain text file (.py)
+- `infra-setup`: another copy of this Skill in this source (plugins/evo/skills/infra-setup) was left out; the store holds one copy
+- `optimize`: workflows/evo-optimize.js is not a plain text file (.js)
+- `optimize`: workflows/evo-optimize.js is not a plain text file (.js)
+- `report`: another copy of this Skill in this source (plugins/evo/skills/report) was left out; the store holds one copy
+- `report`: the name is already taken by alirez
+- `ship`: another copy of this Skill in this source (plugins/evo/skills/ship) was left out; the store holds one copy
+- `subagent`: another copy of this Skill in this source (plugins/evo/skills/subagent) was left out; the store holds one copy
+
+## skillkit (3)
+
+- `anti-patterns`: SKILL.md names another skill than its folder
+- `skill-authoring`: the name is already taken by grafana
+- `structured-review`: SKILL.md names another skill than its folder
+
+## pmskills (1835)
+
+- `1.0.0`: "1.0.0" is not a Skill name; SKILL.md names another skill than its folder
+- `1.0.0`: "1.0.0" is not a Skill name; SKILL.md names another skill than its folder
+- `1.0.0`: "1.0.0" is not a Skill name; SKILL.md names another skill than its folder
+- `1.0.0`: "1.0.0" is not a Skill name; SKILL.md names another skill than its folder
+- `1.0.0`: "1.0.0" is not a Skill name; SKILL.md names another skill than its folder
+- `360-feedback-template`: another copy of this Skill in this source (skills/360-feedback-template) was left out; the store holds one copy
+- `401k-plan-decoder`: another copy of this Skill in this source (skills/401k-plan-decoder) was left out; the store holds one copy
+- `ab-test-planner`: another copy of this Skill in this source (skills/ab-test-planner) was left out; the store holds one copy
+- `ab-test-readout`: another copy of this Skill in this source (skills/ab-test-readout) was left out; the store holds one copy
+- `academic-cv`: another copy of this Skill in this source (skills/academic-cv) was left out; the store holds one copy
+- `accessibility-audit`: another copy of this Skill in this source (skills/accessibility-audit) was left out; the store holds one copy
+- `accessible-travel-planner`: another copy of this Skill in this source (skills/accessible-travel-planner) was left out; the store holds one copy
+- `accommodation-request`: another copy of this Skill in this source (skills/accommodation-request) was left out; the store holds one copy
+- `account-plan`: another copy of this Skill in this source (skills/account-plan) was left out; the store holds one copy
+- `account-recovery-plan`: another copy of this Skill in this source (skills/account-recovery-plan) was left out; the store holds one copy
+- `acquirer-red-team`: another copy of this Skill in this source (skills/acquirer-red-team) was left out; the store holds one copy
+- `action-runner`: scripts/action_preview.py is not a plain text file (.py)
+- `action-runner`: scripts/action_preview.py is not a plain text file (.py)
+- `ad-copy`: another copy of this Skill in this source (skills/ad-copy) was left out; the store holds one copy
+- `aeo-optimizer`: another copy of this Skill in this source (skills/aeo-optimizer) was left out; the store holds one copy
+- `after-the-disaster`: another copy of this Skill in this source (skills/after-the-disaster) was left out; the store holds one copy
+- `agenda-or-cancel`: another copy of this Skill in this source (skills/agenda-or-cancel) was left out; the store holds one copy
+- `agent-design-review`: another copy of this Skill in this source (plugins/pm-ai/skills/agent-design-review) was left out; the store holds one copy
+- `agent-design-review`: another copy of this Skill in this source (skills/agent-design-review) was left out; the store holds one copy
+- `agent-era-pricing`: another copy of this Skill in this source (skills/agent-era-pricing) was left out; the store holds one copy
+- `agent-hiring-panel`: another copy of this Skill in this source (skills/agent-hiring-panel) was left out; the store holds one copy
+- `agent-incident-postmortem`: another copy of this Skill in this source (skills/agent-incident-postmortem) was left out; the store holds one copy
+- `agent-kill-switch-plan`: another copy of this Skill in this source (skills/agent-kill-switch-plan) was left out; the store holds one copy
+- `agent-negotiation-brief`: another copy of this Skill in this source (skills/agent-negotiation-brief) was left out; the store holds one copy
+- `agent-observability-spec`: another copy of this Skill in this source (skills/agent-observability-spec) was left out; the store holds one copy
+- `agent-project-file`: another copy of this Skill in this source (skills/agent-project-file) was left out; the store holds one copy
+- `agent-readiness-audit`: another copy of this Skill in this source (skills/agent-readiness-audit) was left out; the store holds one copy
+- `agent-severance`: another copy of this Skill in this source (skills/agent-severance) was left out; the store holds one copy
+- `agent-spec`: another copy of this Skill in this source (skills/agent-spec) was left out; the store holds one copy
+- `agent-spending-mandate`: another copy of this Skill in this source (skills/agent-spending-mandate) was left out; the store holds one copy
+- `aging-in-place-assessment`: another copy of this Skill in this source (skills/aging-in-place-assessment) was left out; the store holds one copy
+- `aging-parent-talks`: another copy of this Skill in this source (skills/aging-parent-talks) was left out; the store holds one copy
+- `agm-in-a-box`: another copy of this Skill in this source (skills/agm-in-a-box) was left out; the store holds one copy
+- `ai-agent-reliability`: another copy of this Skill in this source (skills/ai-agent-reliability) was left out; the store holds one copy
+- `ai-assisted-performance-review`: another copy of this Skill in this source (skills/ai-assisted-performance-review) was left out; the store holds one copy
+- `ai-code-review`: another copy of this Skill in this source (skills/ai-code-review) was left out; the store holds one copy
+- `ai-content-audit`: another copy of this Skill in this source (skills/ai-content-audit) was left out; the store holds one copy
+- `ai-context-primer`: another copy of this Skill in this source (skills/ai-context-primer) was left out; the store holds one copy
+- `ai-disclosure-policy`: another copy of this Skill in this source (skills/ai-disclosure-policy) was left out; the store holds one copy
+- `ai-ethics-review`: another copy of this Skill in this source (skills/ai-ethics-review) was left out; the store holds one copy
+- `ai-eval-plan`: another copy of this Skill in this source (plugins/pm-ai/skills/ai-eval-plan) was left out; the store holds one copy
+- `ai-eval-plan`: another copy of this Skill in this source (skills/ai-eval-plan) was left out; the store holds one copy
+- `ai-feature-prd`: another copy of this Skill in this source (skills/ai-feature-prd) was left out; the store holds one copy
+- `ai-output-verifier`: another copy of this Skill in this source (skills/ai-output-verifier) was left out; the store holds one copy
+- `ai-product-canvas`: another copy of this Skill in this source (skills/ai-product-canvas) was left out; the store holds one copy
+- `ai-roi-audit`: another copy of this Skill in this source (skills/ai-roi-audit) was left out; the store holds one copy
+- `ai-tool-picker`: another copy of this Skill in this source (skills/ai-tool-picker) was left out; the store holds one copy
+- `ai-usage-policy`: another copy of this Skill in this source (skills/ai-usage-policy) was left out; the store holds one copy
+- `ai-workflow-designer`: another copy of this Skill in this source (skills/ai-workflow-designer) was left out; the store holds one copy
+- `air-quality`: another copy of this Skill in this source (skills/air-quality) was left out; the store holds one copy
+- `all-hands-deck`: another copy of this Skill in this source (skills/all-hands-deck) was left out; the store holds one copy
+- `altitude-shifter`: another copy of this Skill in this source (skills/altitude-shifter) was left out; the store holds one copy
+- `ambiguity-resolver`: another copy of this Skill in this source (skills/ambiguity-resolver) was left out; the store holds one copy
+- `analyst-relations-brief`: another copy of this Skill in this source (skills/analyst-relations-brief) was left out; the store holds one copy
+- `announcement-card`: another copy of this Skill in this source (skills/announcement-card) was left out; the store holds one copy
+- `annual-report-tutor`: another copy of this Skill in this source (skills/annual-report-tutor) was left out; the store holds one copy
+- `api-docs-writer`: another copy of this Skill in this source (skills/api-docs-writer) was left out; the store holds one copy
+- `api-for-yourself`: another copy of this Skill in this source (skills/api-for-yourself) was left out; the store holds one copy
+- `api-test-plan`: another copy of this Skill in this source (skills/api-test-plan) was left out; the store holds one copy
+- `api-versioning-strategy`: another copy of this Skill in this source (skills/api-versioning-strategy) was left out; the store holds one copy
+- `apology-letter`: another copy of this Skill in this source (skills/apology-letter) was left out; the store holds one copy
+- `appliance-buying-guide`: another copy of this Skill in this source (skills/appliance-buying-guide) was left out; the store holds one copy
+- `application-tracker`: another copy of this Skill in this source (skills/application-tracker) was left out; the store holds one copy
+- `apprentice-first-week`: another copy of this Skill in this source (skills/apprentice-first-week) was left out; the store holds one copy
+- `approval-policy-designer`: another copy of this Skill in this source (skills/approval-policy-designer) was left out; the store holds one copy
+- `architectural-programme-brief`: another copy of this Skill in this source (skills/architectural-programme-brief) was left out; the store holds one copy
+- `architectural-specification`: another copy of this Skill in this source (skills/architectural-specification) was left out; the store holds one copy
+- `architecture-client-presentation`: another copy of this Skill in this source (skills/architecture-client-presentation) was left out; the store holds one copy
+- `architecture-decision-record`: another copy of this Skill in this source (skills/architecture-decision-record) was left out; the store holds one copy
+- `architecture-diagram`: another copy of this Skill in this source (skills/architecture-diagram) was left out; the store holds one copy
+- `archive-strategy`: another copy of this Skill in this source (skills/archive-strategy) was left out; the store holds one copy
+- `arrival-setup`: another copy of this Skill in this source (skills/arrival-setup) was left out; the store holds one copy
+- `ask-for-a-raise`: another copy of this Skill in this source (skills/ask-for-a-raise) was left out; the store holds one copy
+- `assumption-audit`: another copy of this Skill in this source (skills/assumption-audit) was left out; the store holds one copy
+- `assumption-bounty`: another copy of this Skill in this source (skills/assumption-bounty) was left out; the store holds one copy
+- `assumption-mapper`: SKILL.md is a symlink
+- `assumption-mapper`: another copy of this Skill in this source (skills/assumption-mapper) was left out; the store holds one copy
+- `assumption-mapper`: another copy of this Skill in this source (templates/pm-discovery-agent/skills/assumption-mapper) was left out; the store holds one copy
+- `async-decision-memo`: another copy of this Skill in this source (skills/async-decision-memo) was left out; the store holds one copy
+- `async-instead`: another copy of this Skill in this source (skills/async-instead) was left out; the store holds one copy
+- `async-standup-compiler`: another copy of this Skill in this source (skills/async-standup-compiler) was left out; the store holds one copy
+- `async-update-format`: another copy of this Skill in this source (skills/async-update-format) was left out; the store holds one copy
+- `ats-detector`: scripts/ats_detect.py is not a plain text file (.py)
+- `ats-detector`: scripts/ats_detect.py is not a plain text file (.py)
+- `attention-reset`: another copy of this Skill in this source (skills/attention-reset) was left out; the store holds one copy
+- `audited-boundary-check`: another copy of this Skill in this source (skills/audited-boundary-check) was left out; the store holds one copy
+- `auto-repair-estimate-decoder`: another copy of this Skill in this source (skills/auto-repair-estimate-decoder) was left out; the store holds one copy
+- `autopilot-charter`: another copy of this Skill in this source (skills/autopilot-charter) was left out; the store holds one copy
+- `awkward-message-helper`: another copy of this Skill in this source (skills/awkward-message-helper) was left out; the store holds one copy
+- `backup-strategy`: another copy of this Skill in this source (skills/backup-strategy) was left out; the store holds one copy
+- `band-agreement`: another copy of this Skill in this source (skills/band-agreement) was left out; the store holds one copy
+- `bank-fee-refund`: another copy of this Skill in this source (skills/bank-fee-refund) was left out; the store holds one copy
+- `bankruptcy-decision`: another copy of this Skill in this source (skills/bankruptcy-decision) was left out; the store holds one copy
+- `behavior-intervention-plan`: another copy of this Skill in this source (skills/behavior-intervention-plan) was left out; the store holds one copy
+- `beneficiary-audit`: another copy of this Skill in this source (skills/beneficiary-audit) was left out; the store holds one copy
+- `benefits-cliff-check`: another copy of this Skill in this source (skills/benefits-cliff-check) was left out; the store holds one copy
+- `benefits-decoder`: another copy of this Skill in this source (skills/benefits-decoder) was left out; the store holds one copy
+- `benefits-decoder`: another copy of this Skill in this source (skills-i18n/es/benefits-decoder) was left out; the store holds one copy
+- `benefits-decoder`: another copy of this Skill in this source (skills-i18n/id/benefits-decoder) was left out; the store holds one copy
+- `benefits-decoder`: another copy of this Skill in this source (skills-i18n/ja/benefits-decoder) was left out; the store holds one copy
+- `benefits-decoder`: another copy of this Skill in this source (skills-i18n/vi/benefits-decoder) was left out; the store holds one copy
+- `benefits-decoder`: another copy of this Skill in this source (skills-i18n/zh/benefits-decoder) was left out; the store holds one copy
+- `bennett-time-audit`: another copy of this Skill in this source (skills/bennett-time-audit) was left out; the store holds one copy
+- `bid-tender-review`: another copy of this Skill in this source (skills/bid-tender-review) was left out; the store holds one copy
+- `big-purchase-timing`: another copy of this Skill in this source (skills/big-purchase-timing) was left out; the store holds one copy
+- `bilibili-video-script`: another copy of this Skill in this source (skills/bilibili-video-script) was left out; the store holds one copy
+- `bilingual-cv-zh-en`: another copy of this Skill in this source (skills/bilingual-cv-zh-en) was left out; the store holds one copy
+- `bilingual-cv-zh-en`: another copy of this Skill in this source (skills-i18n/zh/bilingual-cv-zh-en) was left out; the store holds one copy
+- `bilingual-cv-zh-en`: another copy of this Skill in this source (skills-i18n/zh-TW/bilingual-cv-zh-en) was left out; the store holds one copy
+- `birdwatching-log`: another copy of this Skill in this source (skills/birdwatching-log) was left out; the store holds one copy
+- `blast-radius-drill`: another copy of this Skill in this source (skills/blast-radius-drill) was left out; the store holds one copy
+- `blended-family-plan`: another copy of this Skill in this source (skills/blended-family-plan) was left out; the store holds one copy
+- `board-deck-narrative`: SKILL.md is a symlink
+- `board-deck-narrative`: another copy of this Skill in this source (skills/board-deck-narrative) was left out; the store holds one copy
+- `board-deck-narrative`: another copy of this Skill in this source (templates/pm-stakeholder-comms-agent/skills/board-deck-narrative) was left out; the store holds one copy
+- `board-game-designer`: another copy of this Skill in this source (skills/board-game-designer) was left out; the store holds one copy
+- `board-game-night-planner`: another copy of this Skill in this source (skills/board-game-night-planner) was left out; the store holds one copy
+- `board-minutes`: another copy of this Skill in this source (skills/board-minutes) was left out; the store holds one copy
+- `board-pre-read`: another copy of this Skill in this source (skills/board-pre-read) was left out; the store holds one copy
+- `body-double-session`: another copy of this Skill in this source (skills/body-double-session) was left out; the store holds one copy
+- `body-doubling-partner`: another copy of this Skill in this source (skills/body-doubling-partner) was left out; the store holds one copy
+- `bom-cost-review`: another copy of this Skill in this source (skills/bom-cost-review) was left out; the store holds one copy
+- `bookkeeping-categorization`: another copy of this Skill in this source (skills/bookkeeping-categorization) was left out; the store holds one copy
+- `boolean-search-builder`: another copy of this Skill in this source (skills/boolean-search-builder) was left out; the store holds one copy
+- `br-irpf-prep`: another copy of this Skill in this source (skills/br-irpf-prep) was left out; the store holds one copy
+- `br-rescisao-clt`: another copy of this Skill in this source (skills/br-rescisao-clt) was left out; the store holds one copy
+- `brag-doc`: another copy of this Skill in this source (skills/brag-doc) was left out; the store holds one copy
+- `brainstorming`: another copy of this Skill in this source (skills/brainstorming) was left out; the store holds one copy
+- `brainstorming`: the name is already taken by templates
+- `brand-guidelines`: another copy of this Skill in this source (skills/brand-guidelines) was left out; the store holds one copy
+- `brand-guidelines`: the name is already taken by alirez
+- `brand-impersonation-response`: another copy of this Skill in this source (skills/brand-impersonation-response) was left out; the store holds one copy
+- `brief-builder`: another copy of this Skill in this source (skills/brief-builder) was left out; the store holds one copy
+- `brief-from-pile`: another copy of this Skill in this source (skills/brief-from-pile) was left out; the store holds one copy
+- `briefing-note`: another copy of this Skill in this source (skills/briefing-note) was left out; the store holds one copy
+- `browser-agent-preflight`: another copy of this Skill in this source (skills/browser-agent-preflight) was left out; the store holds one copy
+- `budget-builder`: another copy of this Skill in this source (skills/budget-builder) was left out; the store holds one copy
+- `budget-tracker-design`: another copy of this Skill in this source (skills/budget-tracker-design) was left out; the store holds one copy
+- `budget-variance-analysis`: another copy of this Skill in this source (skills/budget-variance-analysis) was left out; the store holds one copy
+- `bug-diagnosis`: another copy of this Skill in this source (skills/bug-diagnosis) was left out; the store holds one copy
+- `bug-report`: another copy of this Skill in this source (skills/bug-report) was left out; the store holds one copy
+- `bug-triage-pack`: another copy of this Skill in this source (skills/bug-triage-pack) was left out; the store holds one copy
+- `build-my-memory-file`: another copy of this Skill in this source (skills/build-my-memory-file) was left out; the store holds one copy
+- `burnout-recovery-plan`: another copy of this Skill in this source (skills/burnout-recovery-plan) was left out; the store holds one copy
+- `business-idea-validator`: another copy of this Skill in this source (skills/business-idea-validator) was left out; the store holds one copy
+- `calendar-defrag`: another copy of this Skill in this source (skills/calendar-defrag) was left out; the store holds one copy
+- `candidate-scorecard`: another copy of this Skill in this source (skills/candidate-scorecard) was left out; the store holds one copy
+- `cap-table-explainer`: another copy of this Skill in this source (skills/cap-table-explainer) was left out; the store holds one copy
+- `capacity-planning`: another copy of this Skill in this source (skills/capacity-planning) was left out; the store holds one copy
+- `capital-allocation`: scripts/capital_allocate.py is not a plain text file (.py)
+- `capital-allocation`: scripts/capital_allocate.py is not a plain text file (.py)
+- `car-buying-negotiation`: another copy of this Skill in this source (skills/car-buying-negotiation) was left out; the store holds one copy
+- `car-lease-decoder`: another copy of this Skill in this source (skills/car-lease-decoder) was left out; the store holds one copy
+- `car-tco`: scripts/car_tco.py is not a plain text file (.py)
+- `car-tco`: scripts/car_tco.py is not a plain text file (.py)
+- `carbon-accounting-check`: another copy of this Skill in this source (skills/carbon-accounting-check) was left out; the store holds one copy
+- `care-decision-family-meeting`: another copy of this Skill in this source (skills/care-decision-family-meeting) was left out; the store holds one copy
+- `care-home-contract-decoder`: another copy of this Skill in this source (skills/care-home-contract-decoder) was left out; the store holds one copy
+- `care-team-coordinator`: another copy of this Skill in this source (skills/care-team-coordinator) was left out; the store holds one copy
+- `career-changer-cv`: another copy of this Skill in this source (skills/career-changer-cv) was left out; the store holds one copy
+- `career-inventory`: another copy of this Skill in this source (skills/career-inventory) was left out; the store holds one copy
+- `career-inventory`: another copy of this Skill in this source (skills-i18n/id/career-inventory) was left out; the store holds one copy
+- `career-inventory`: another copy of this Skill in this source (skills-i18n/vi/career-inventory) was left out; the store holds one copy
+- `career-inventory`: another copy of this Skill in this source (skills-i18n/zh/career-inventory) was left out; the store holds one copy
+- `career-inventory`: another copy of this Skill in this source (skills-i18n/zh-TW/career-inventory) was left out; the store holds one copy
+- `career-ladder-map`: another copy of this Skill in this source (skills/career-ladder-map) was left out; the store holds one copy
+- `career-pivot-plan`: another copy of this Skill in this source (skills/career-pivot-plan) was left out; the store holds one copy
+- `caregiver-burnout-check`: another copy of this Skill in this source (skills/caregiver-burnout-check) was left out; the store holds one copy
+- `caregiver-coordination`: another copy of this Skill in this source (skills/caregiver-coordination) was left out; the store holds one copy
+- `case-for-support`: another copy of this Skill in this source (skills/case-for-support) was left out; the store holds one copy
+- `case-study-writeup`: another copy of this Skill in this source (skills/case-study-writeup) was left out; the store holds one copy
+- `cash-flow-forecast`: another copy of this Skill in this source (skills/cash-flow-forecast) was left out; the store holds one copy
+- `cash-watch`: another copy of this Skill in this source (skills/cash-watch) was left out; the store holds one copy
+- `category-page-brief`: another copy of this Skill in this source (skills/category-page-brief) was left out; the store holds one copy
+- `cease-and-desist-letter`: another copy of this Skill in this source (skills/cease-and-desist-letter) was left out; the store holds one copy
+- `change-management-plan`: another copy of this Skill in this source (skills/change-management-plan) was left out; the store holds one copy
+- `change-order-writer`: another copy of this Skill in this source (skills/change-order-writer) was left out; the store holds one copy
+- `changelog-for-humans`: another copy of this Skill in this source (skills/changelog-for-humans) was left out; the store holds one copy
+- `changelog-from-commits`: another copy of this Skill in this source (skills/changelog-from-commits) was left out; the store holds one copy
+- `changelog-generator`: another copy of this Skill in this source (skills/changelog-generator) was left out; the store holds one copy
+- `changelog-generator`: the name is already taken by templates
+- `changelog-writer`: another copy of this Skill in this source (skills/changelog-writer) was left out; the store holds one copy
+- `channel-hygiene`: another copy of this Skill in this source (skills/channel-hygiene) was left out; the store holds one copy
+- `chargeback-dispute-response`: another copy of this Skill in this source (skills/chargeback-dispute-response) was left out; the store holds one copy
+- `chart`: another copy of this Skill in this source (skills/chart) was left out; the store holds one copy
+- `chart-choice`: another copy of this Skill in this source (skills/chart-choice) was left out; the store holds one copy
+- `chart-data-extractor`: another copy of this Skill in this source (plugins/pm-vision/skills/chart-data-extractor) was left out; the store holds one copy
+- `chart-data-extractor`: another copy of this Skill in this source (skills/chart-data-extractor) was left out; the store holds one copy
+- `chess-opening-coach`: another copy of this Skill in this source (skills/chess-opening-coach) was left out; the store holds one copy
+- `childcare-comparison`: another copy of this Skill in this source (skills/childcare-comparison) was left out; the store holds one copy
+- `chuhai-market-entry`: another copy of this Skill in this source (skills/chuhai-market-entry) was left out; the store holds one copy
+- `chuhai-market-entry`: another copy of this Skill in this source (skills-i18n/zh/chuhai-market-entry) was left out; the store holds one copy
+- `churn-analysis`: another copy of this Skill in this source (skills/churn-analysis) was left out; the store holds one copy
+- `cicd-playbook`: another copy of this Skill in this source (skills/cicd-playbook) was left out; the store holds one copy
+- `citation-hygiene`: another copy of this Skill in this source (skills/citation-hygiene) was left out; the store holds one copy
+- `civil-service-application`: another copy of this Skill in this source (skills/civil-service-application) was left out; the store holds one copy
+- `claim-denial-decoder`: another copy of this Skill in this source (skills/claim-denial-decoder) was left out; the store holds one copy
+- `claim-denial-decoder`: another copy of this Skill in this source (skills-i18n/id/claim-denial-decoder) was left out; the store holds one copy
+- `claim-denial-decoder`: another copy of this Skill in this source (skills-i18n/ja/claim-denial-decoder) was left out; the store holds one copy
+- `claim-denial-decoder`: another copy of this Skill in this source (skills-i18n/vi/claim-denial-decoder) was left out; the store holds one copy
+- `claim-denial-decoder`: another copy of this Skill in this source (skills-i18n/zh/claim-denial-decoder) was left out; the store holds one copy
+- `claims-triage`: another copy of this Skill in this source (skills/claims-triage) was left out; the store holds one copy
+- `class-action-claim-finder`: another copy of this Skill in this source (skills/class-action-claim-finder) was left out; the store holds one copy
+- `claude-project-setup`: another copy of this Skill in this source (skills/claude-project-setup) was left out; the store holds one copy
+- `claude-superpowers`: another copy of this Skill in this source (skills/claude-superpowers) was left out; the store holds one copy
+- `clause-explainer`: another copy of this Skill in this source (skills/clause-explainer) was left out; the store holds one copy
+- `client-discharge-notes`: another copy of this Skill in this source (skills/client-discharge-notes) was left out; the store holds one copy
+- `client-discovery`: another copy of this Skill in this source (skills/client-discovery) was left out; the store holds one copy
+- `client-offboarding`: another copy of this Skill in this source (skills/client-offboarding) was left out; the store holds one copy
+- `client-onboarding-kit`: another copy of this Skill in this source (skills/client-onboarding-kit) was left out; the store holds one copy
+- `client-red-flags`: another copy of this Skill in this source (skills/client-red-flags) was left out; the store holds one copy
+- `climate-risk-assessment`: another copy of this Skill in this source (skills/climate-risk-assessment) was left out; the store holds one copy
+- `clinical-case-summary`: another copy of this Skill in this source (skills/clinical-case-summary) was left out; the store holds one copy
+- `clinical-trial-protocol`: another copy of this Skill in this source (skills/clinical-trial-protocol) was left out; the store holds one copy
+- `clip-factory`: another copy of this Skill in this source (skills/clip-factory) was left out; the store holds one copy
+- `clone-brief`: another copy of this Skill in this source (skills/clone-brief) was left out; the store holds one copy
+- `closing-disclosure-decoder`: another copy of this Skill in this source (skills/closing-disclosure-decoder) was left out; the store holds one copy
+- `cn-1688-wholesale-listing`: another copy of this Skill in this source (skills/cn-1688-wholesale-listing) was left out; the store holds one copy
+- `cn-5s-audit`: another copy of this Skill in this source (skills/cn-5s-audit) was left out; the store holds one copy
+- `cn-8d-report`: another copy of this Skill in this source (skills/cn-8d-report) was left out; the store holds one copy
+- `cn-campus-recruitment`: another copy of this Skill in this source (skills/cn-campus-recruitment) was left out; the store holds one copy
+- `cn-campus-recruitment`: another copy of this Skill in this source (skills-i18n/zh/cn-campus-recruitment) was left out; the store holds one copy
+- `cn-citation-gbt7714`: scripts/gbt7714.py is not a plain text file (.py)
+- `cn-citation-gbt7714`: scripts/gbt7714.py is not a plain text file (.py)
+- `cn-civil-exam-essay`: another copy of this Skill in this source (skills/cn-civil-exam-essay) was left out; the store holds one copy
+- `cn-civil-exam-essay`: another copy of this Skill in this source (skills-i18n/zh/cn-civil-exam-essay) was left out; the store holds one copy
+- `cn-civil-exam-interview`: another copy of this Skill in this source (skills/cn-civil-exam-interview) was left out; the store holds one copy
+- `cn-civil-exam-interview`: another copy of this Skill in this source (skills-i18n/zh/cn-civil-exam-interview) was left out; the store holds one copy
+- `cn-class-meeting`: another copy of this Skill in this source (skills/cn-class-meeting) was left out; the store holds one copy
+- `cn-company-registration`: another copy of this Skill in this source (skills/cn-company-registration) was left out; the store holds one copy
+- `cn-customer-service-scripts`: another copy of this Skill in this source (skills/cn-customer-service-scripts) was left out; the store holds one copy
+- `cn-customs-docs`: another copy of this Skill in this source (skills/cn-customs-docs) was left out; the store holds one copy
+- `cn-data-export-assessment`: another copy of this Skill in this source (skills/cn-data-export-assessment) was left out; the store holds one copy
+- `cn-data-export-assessment`: another copy of this Skill in this source (skills-i18n/zh/cn-data-export-assessment) was left out; the store holds one copy
+- `cn-double11-promotion-plan`: another copy of this Skill in this source (skills/cn-double11-promotion-plan) was left out; the store holds one copy
+- `cn-ecommerce-listing`: another copy of this Skill in this source (skills/cn-ecommerce-listing) was left out; the store holds one copy
+- `cn-equity-split`: another copy of this Skill in this source (skills/cn-equity-split) was left out; the store holds one copy
+- `cn-extracurricular-plan`: another copy of this Skill in this source (skills/cn-extracurricular-plan) was left out; the store holds one copy
+- `cn-financing-bp`: another copy of this Skill in this source (skills/cn-financing-bp) was left out; the store holds one copy
+- `cn-fupan`: another copy of this Skill in this source (skills/cn-fupan) was left out; the store holds one copy
+- `cn-fupan`: another copy of this Skill in this source (skills-i18n/zh/cn-fupan) was left out; the store holds one copy
+- `cn-gaokao-planner`: another copy of this Skill in this source (skills/cn-gaokao-planner) was left out; the store holds one copy
+- `cn-gaokao-planner`: another copy of this Skill in this source (skills-i18n/zh/cn-gaokao-planner) was left out; the store holds one copy
+- `cn-genai-filing`: another copy of this Skill in this source (skills/cn-genai-filing) was left out; the store holds one copy
+- `cn-genai-filing`: another copy of this Skill in this source (skills-i18n/zh/cn-genai-filing) was left out; the store holds one copy
+- `cn-help-parents-admin`: another copy of this Skill in this source (skills/cn-help-parents-admin) was left out; the store holds one copy
+- `cn-high-tech-enterprise-application`: another copy of this Skill in this source (skills/cn-high-tech-enterprise-application) was left out; the store holds one copy
+- `cn-home-school-comms`: another copy of this Skill in this source (skills/cn-home-school-comms) was left out; the store holds one copy
+- `cn-homework-helper-parent`: another copy of this Skill in this source (skills/cn-homework-helper-parent) was left out; the store holds one copy
+- `cn-housing-fund-withdrawal`: another copy of this Skill in this source (skills/cn-housing-fund-withdrawal) was left out; the store holds one copy
+- `cn-housing-fund-withdrawal`: another copy of this Skill in this source (skills-i18n/zh/cn-housing-fund-withdrawal) was left out; the store holds one copy
+- `cn-hukou-points`: another copy of this Skill in this source (skills/cn-hukou-points) was left out; the store holds one copy
+- `cn-hukou-points`: another copy of this Skill in this source (skills-i18n/zh/cn-hukou-points) was left out; the store holds one copy
+- `cn-iit-reconciliation`: scripts/cn_iit.py is not a plain text file (.py)
+- `cn-iit-reconciliation`: scripts/cn_iit.py is not a plain text file (.py)
+- `cn-inquiry-reply`: another copy of this Skill in this source (skills/cn-inquiry-reply) was left out; the store holds one copy
+- `cn-jargon-translator`: another copy of this Skill in this source (skills/cn-jargon-translator) was left out; the store holds one copy
+- `cn-kaoyan-planner`: another copy of this Skill in this source (skills/cn-kaoyan-planner) was left out; the store holds one copy
+- `cn-kaoyan-planner`: another copy of this Skill in this source (skills-i18n/zh/cn-kaoyan-planner) was left out; the store holds one copy
+- `cn-labour-contract-decoder`: another copy of this Skill in this source (skills/cn-labour-contract-decoder) was left out; the store holds one copy
+- `cn-labour-contract-decoder`: another copy of this Skill in this source (skills-i18n/zh/cn-labour-contract-decoder) was left out; the store holds one copy
+- `cn-lesson-plan`: another copy of this Skill in this source (skills/cn-lesson-plan) was left out; the store holds one copy
+- `cn-letter-of-credit-check`: another copy of this Skill in this source (skills/cn-letter-of-credit-check) was left out; the store holds one copy
+- `cn-level-mapper`: another copy of this Skill in this source (skills/cn-level-mapper) was left out; the store holds one copy
+- `cn-level-mapper`: another copy of this Skill in this source (skills-i18n/zh/cn-level-mapper) was left out; the store holds one copy
+- `cn-medical-insurance-claim`: another copy of this Skill in this source (skills/cn-medical-insurance-claim) was left out; the store holds one copy
+- `cn-medical-insurance-claim`: another copy of this Skill in this source (skills-i18n/zh/cn-medical-insurance-claim) was left out; the store holds one copy
+- `cn-mlps-checklist`: another copy of this Skill in this source (skills/cn-mlps-checklist) was left out; the store holds one copy
+- `cn-mlps-checklist`: another copy of this Skill in this source (skills-i18n/zh/cn-mlps-checklist) was left out; the store holds one copy
+- `cn-next-year-plan`: another copy of this Skill in this source (skills/cn-next-year-plan) was left out; the store holds one copy
+- `cn-official-document`: another copy of this Skill in this source (skills/cn-official-document) was left out; the store holds one copy
+- `cn-official-document`: another copy of this Skill in this source (skills-i18n/zh/cn-official-document) was left out; the store holds one copy
+- `cn-open-class`: another copy of this Skill in this source (skills/cn-open-class) was left out; the store holds one copy
+- `cn-parent-meeting`: another copy of this Skill in this source (skills/cn-parent-meeting) was left out; the store holds one copy
+- `cn-pipl-pia`: another copy of this Skill in this source (skills/cn-pipl-pia) was left out; the store holds one copy
+- `cn-pipl-pia`: another copy of this Skill in this source (skills-i18n/zh/cn-pipl-pia) was left out; the store holds one copy
+- `cn-prd-review`: another copy of this Skill in this source (skills/cn-prd-review) was left out; the store holds one copy
+- `cn-prd-review`: another copy of this Skill in this source (skills-i18n/zh/cn-prd-review) was left out; the store holds one copy
+- `cn-promotion-defence`: another copy of this Skill in this source (skills/cn-promotion-defence) was left out; the store holds one copy
+- `cn-promotion-defence`: another copy of this Skill in this source (skills-i18n/zh/cn-promotion-defence) was left out; the store holds one copy
+- `cn-quality-traceability`: another copy of this Skill in this source (skills/cn-quality-traceability) was left out; the store holds one copy
+- `cn-returnee-job-search`: another copy of this Skill in this source (skills/cn-returnee-job-search) was left out; the store holds one copy
+- `cn-school-entry`: another copy of this Skill in this source (skills/cn-school-entry) was left out; the store holds one copy
+- `cn-severance-calculator`: scripts/cn_severance.py is not a plain text file (.py)
+- `cn-severance-calculator`: scripts/cn_severance.py is not a plain text file (.py)
+- `cn-shuzhi-deck`: another copy of this Skill in this source (skills/cn-shuzhi-deck) was left out; the store holds one copy
+- `cn-small-business-tax`: another copy of this Skill in this source (skills/cn-small-business-tax) was left out; the store holds one copy
+- `cn-small-business-tax`: another copy of this Skill in this source (skills-i18n/zh/cn-small-business-tax) was left out; the store holds one copy
+- `cn-social-insurance-explainer`: another copy of this Skill in this source (skills/cn-social-insurance-explainer) was left out; the store holds one copy
+- `cn-social-insurance-explainer`: another copy of this Skill in this source (skills-i18n/zh/cn-social-insurance-explainer) was left out; the store holds one copy
+- `cn-soe-interview`: another copy of this Skill in this source (skills/cn-soe-interview) was left out; the store holds one copy
+- `cn-soe-interview`: another copy of this Skill in this source (skills-i18n/zh/cn-soe-interview) was left out; the store holds one copy
+- `cn-sop-writer`: another copy of this Skill in this source (skills/cn-sop-writer) was left out; the store holds one copy
+- `cn-study-abroad-essay`: another copy of this Skill in this source (skills/cn-study-abroad-essay) was left out; the store holds one copy
+- `cn-study-visa-prep`: another copy of this Skill in this source (skills/cn-study-visa-prep) was left out; the store holds one copy
+- `cn-subsidy-filing`: another copy of this Skill in this source (skills/cn-subsidy-filing) was left out; the store holds one copy
+- `cn-tech-interview-drill`: another copy of this Skill in this source (skills/cn-tech-interview-drill) was left out; the store holds one copy
+- `cn-tech-interview-drill`: another copy of this Skill in this source (skills-i18n/zh/cn-tech-interview-drill) was left out; the store holds one copy
+- `cn-term-comments`: another copy of this Skill in this source (skills/cn-term-comments) was left out; the store holds one copy
+- `cn-thesis-proposal`: another copy of this Skill in this source (skills/cn-thesis-proposal) was left out; the store holds one copy
+- `cn-thesis-proposal`: another copy of this Skill in this source (skills-i18n/zh/cn-thesis-proposal) was left out; the store holds one copy
+- `cn-trade-quotation`: another copy of this Skill in this source (skills/cn-trade-quotation) was left out; the store holds one copy
+- `cn-weekly-report`: another copy of this Skill in this source (skills/cn-weekly-report) was left out; the store holds one copy
+- `cn-weekly-report`: another copy of this Skill in this source (skills-i18n/zh/cn-weekly-report) was left out; the store holds one copy
+- `cn-year-end-bonus`: scripts/bonus_tax.py is not a plain text file (.py)
+- `cn-year-end-bonus`: scripts/bonus_tax.py is not a plain text file (.py)
+- `cn-year-end-review`: another copy of this Skill in this source (plugins/pm-china-yearend/skills/cn-year-end-review) was left out; the store holds one copy
+- `cn-year-end-review`: another copy of this Skill in this source (skills/cn-year-end-review) was left out; the store holds one copy
+- `cn-year-end-review`: another copy of this Skill in this source (skills-i18n/zh/cn-year-end-review) was left out; the store holds one copy
+- `cn-zhuanjingtexin-application`: another copy of this Skill in this source (skills/cn-zhuanjingtexin-application) was left out; the store holds one copy
+- `co-marketing`: another copy of this Skill in this source (skills/co-marketing) was left out; the store holds one copy
+- `co-marketing`: the name is already taken by marketing
+- `co-parenting-messages`: another copy of this Skill in this source (skills/co-parenting-messages) was left out; the store holds one copy
+- `coaching-season-plan`: another copy of this Skill in this source (skills/coaching-season-plan) was left out; the store holds one copy
+- `coaching-session-plan`: another copy of this Skill in this source (skills/coaching-session-plan) was left out; the store holds one copy
+- `cocktail-from-what-i-have`: another copy of this Skill in this source (skills/cocktail-from-what-i-have) was left out; the store holds one copy
+- `code-explainer`: another copy of this Skill in this source (skills/code-explainer) was left out; the store holds one copy
+- `code-review-checklist`: another copy of this Skill in this source (skills/code-review-checklist) was left out; the store holds one copy
+- `code-review-checklist`: the name is already taken by templates
+- `code-review-guide`: another copy of this Skill in this source (skills/code-review-guide) was left out; the store holds one copy
+- `code-simplification`: another copy of this Skill in this source (skills/code-simplification) was left out; the store holds one copy
+- `code-simplification`: the name is already taken by addyosmani
+- `cohort-analysis`: another copy of this Skill in this source (skills/cohort-analysis) was left out; the store holds one copy
+- `cohort-curve-model`: scripts/cohort_model.py is not a plain text file (.py)
+- `cohort-curve-model`: scripts/cohort_model.py is not a plain text file (.py)
+- `cold-email`: another copy of this Skill in this source (skills/cold-email) was left out; the store holds one copy
+- `cold-email`: the name is already taken by marketing
+- `cold-outreach-that-isnt-spam`: another copy of this Skill in this source (skills/cold-outreach-that-isnt-spam) was left out; the store holds one copy
+- `collaboration-contract`: another copy of this Skill in this source (skills/collaboration-contract) was left out; the store holds one copy
+- `collections-email`: another copy of this Skill in this source (skills/collections-email) was left out; the store holds one copy
+- `college-app-parent-guide`: another copy of this Skill in this source (skills/college-app-parent-guide) was left out; the store holds one copy
+- `college-cost`: scripts/college_cost.py is not a plain text file (.py)
+- `college-cost`: scripts/college_cost.py is not a plain text file (.py)
+- `coming-out-rehearsal`: another copy of this Skill in this source (skills/coming-out-rehearsal) was left out; the store holds one copy
+- `committee-handover-pack`: another copy of this Skill in this source (skills/committee-handover-pack) was left out; the store holds one copy
+- `community-management-playbook`: another copy of this Skill in this source (skills/community-management-playbook) was left out; the store holds one copy
+- `community-moderation-policy`: another copy of this Skill in this source (skills/community-moderation-policy) was left out; the store holds one copy
+- `company-brief`: another copy of this Skill in this source (skills/company-brief) was left out; the store holds one copy
+- `company-compare-same-definitions`: another copy of this Skill in this source (skills/company-compare-same-definitions) was left out; the store holds one copy
+- `company-event-ops`: another copy of this Skill in this source (skills/company-event-ops) was left out; the store holds one copy
+- `company-tailored-cv`: another copy of this Skill in this source (skills/company-tailored-cv) was left out; the store holds one copy
+- `company-tailored-cv`: another copy of this Skill in this source (skills-i18n/id/company-tailored-cv) was left out; the store holds one copy
+- `company-tailored-cv`: another copy of this Skill in this source (skills-i18n/vi/company-tailored-cv) was left out; the store holds one copy
+- `company-tailored-cv`: another copy of this Skill in this source (skills-i18n/zh/company-tailored-cv) was left out; the store holds one copy
+- `company-tailored-cv`: another copy of this Skill in this source (skills-i18n/zh-TW/company-tailored-cv) was left out; the store holds one copy
+- `comparative-market-analysis`: another copy of this Skill in this source (skills/comparative-market-analysis) was left out; the store holds one copy
+- `competitive-analysis`: another copy of this Skill in this source (skills/competitive-analysis) was left out; the store holds one copy
+- `competitive-analysis`: another copy of this Skill in this source (skills-i18n/zh/competitive-analysis) was left out; the store holds one copy
+- `competitive-analysis`: another copy of this Skill in this source (skills-i18n/zh-TW/competitive-analysis) was left out; the store holds one copy
+- `competitive-intelligence-monitor`: another copy of this Skill in this source (plugins/pm-strategy/skills/competitive-intelligence-monitor) was left out; the store holds one copy
+- `competitive-intelligence-monitor`: another copy of this Skill in this source (skills/competitive-intelligence-monitor) was left out; the store holds one copy
+- `competitive-scan-lite`: another copy of this Skill in this source (skills/competitive-scan-lite) was left out; the store holds one copy
+- `competitor-signal-tracker`: another copy of this Skill in this source (skills/competitor-signal-tracker) was left out; the store holds one copy
+- `competitor-teardown`: another copy of this Skill in this source (skills/competitor-teardown) was left out; the store holds one copy
+- `complaint-letter`: another copy of this Skill in this source (skills/complaint-letter) was left out; the store holds one copy
+- `compliance-checklist`: another copy of this Skill in this source (skills/compliance-checklist) was left out; the store holds one copy
+- `compound-growth-explainer`: another copy of this Skill in this source (skills/compound-growth-explainer) was left out; the store holds one copy
+- `compounding-record`: another copy of this Skill in this source (skills/compounding-record) was left out; the store holds one copy
+- `computer-use-runbook`: another copy of this Skill in this source (skills/computer-use-runbook) was left out; the store holds one copy
+- `condolence-message-helper`: another copy of this Skill in this source (skills/condolence-message-helper) was left out; the store holds one copy
+- `conference-talk-proposal`: another copy of this Skill in this source (skills/conference-talk-proposal) was left out; the store holds one copy
+- `construction-rfi-response`: another copy of this Skill in this source (skills/construction-rfi-response) was left out; the store holds one copy
+- `consulting-banking-cv`: another copy of this Skill in this source (skills/consulting-banking-cv) was left out; the store holds one copy
+- `consulting-proposal`: another copy of this Skill in this source (skills/consulting-proposal) was left out; the store holds one copy
+- `content-calendar`: SKILL.md is a symlink
+- `content-calendar`: another copy of this Skill in this source (skills/content-calendar) was left out; the store holds one copy
+- `content-calendar`: another copy of this Skill in this source (templates/pm-launch-agent/skills/content-calendar) was left out; the store holds one copy
+- `content-calendar`: the name is already taken by paperclip
+- `content-repurposer`: another copy of this Skill in this source (skills/content-repurposer) was left out; the store holds one copy
+- `content-style-guide`: another copy of this Skill in this source (skills/content-style-guide) was left out; the store holds one copy
+- `context-bankruptcy`: another copy of this Skill in this source (skills/context-bankruptcy) was left out; the store holds one copy
+- `context-budget`: another copy of this Skill in this source (skills/context-budget) was left out; the store holds one copy
+- `context-crusher`: scripts/context_crush.py is not a plain text file (.py)
+- `context-crusher`: another copy of this Skill in this source (skills/context-crusher) was left out; the store holds one copy
+- `context-engineering-review`: another copy of this Skill in this source (skills/context-engineering-review) was left out; the store holds one copy
+- `context-mode`: another copy of this Skill in this source (skills/context-mode) was left out; the store holds one copy
+- `context-switch-budget`: another copy of this Skill in this source (skills/context-switch-budget) was left out; the store holds one copy
+- `context-switch-recovery`: another copy of this Skill in this source (skills/context-switch-recovery) was left out; the store holds one copy
+- `contract-red-flags`: another copy of this Skill in this source (skills/contract-red-flags) was left out; the store holds one copy
+- `contract-renewal-brief`: another copy of this Skill in this source (skills/contract-renewal-brief) was left out; the store holds one copy
+- `contract-renewal-tracker`: another copy of this Skill in this source (plugins/pm-procurement/skills/contract-renewal-tracker) was left out; the store holds one copy
+- `contract-renewal-tracker`: another copy of this Skill in this source (skills/contract-renewal-tracker) was left out; the store holds one copy
+- `contract-review`: another copy of this Skill in this source (skills/contract-review) was left out; the store holds one copy
+- `contractor-dispute`: another copy of this Skill in this source (skills/contractor-dispute) was left out; the store holds one copy
+- `contributor-guide`: another copy of this Skill in this source (skills/contributor-guide) was left out; the store holds one copy
+- `controlled-substance-audit`: another copy of this Skill in this source (skills/controlled-substance-audit) was left out; the store holds one copy
+- `conversion-rate-optimization`: another copy of this Skill in this source (skills/conversion-rate-optimization) was left out; the store holds one copy
+- `couch-to-goal-runner`: another copy of this Skill in this source (skills/couch-to-goal-runner) was left out; the store holds one copy
+- `counteroffer-decoder`: another copy of this Skill in this source (skills/counteroffer-decoder) was left out; the store holds one copy
+- `country-cv-format`: another copy of this Skill in this source (skills/country-cv-format) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills/cover-letter) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills-i18n/de/cover-letter) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills-i18n/fr/cover-letter) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills-i18n/id/cover-letter) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills-i18n/vi/cover-letter) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills-i18n/zh/cover-letter) was left out; the store holds one copy
+- `cover-letter`: another copy of this Skill in this source (skills-i18n/zh-TW/cover-letter) was left out; the store holds one copy
+- `coverage-gap-analysis`: another copy of this Skill in this source (skills/coverage-gap-analysis) was left out; the store holds one copy
+- `creator-brand-kit`: another copy of this Skill in this source (skills/creator-brand-kit) was left out; the store holds one copy
+- `creator-deal-decoder`: another copy of this Skill in this source (skills/creator-deal-decoder) was left out; the store holds one copy
+- `creator-media-kit`: another copy of this Skill in this source (skills/creator-media-kit) was left out; the store holds one copy
+- `credential-recognition`: another copy of this Skill in this source (skills/credential-recognition) was left out; the store holds one copy
+- `credit-from-scratch`: another copy of this Skill in this source (skills/credit-from-scratch) was left out; the store holds one copy
+- `credit-memo`: another copy of this Skill in this source (skills/credit-memo) was left out; the store holds one copy
+- `crm-hygiene-sweep`: another copy of this Skill in this source (skills/crm-hygiene-sweep) was left out; the store holds one copy
+- `crop-insurance-claim`: another copy of this Skill in this source (plugins/pm-insurance/skills/crop-insurance-claim) was left out; the store holds one copy
+- `crop-insurance-claim`: another copy of this Skill in this source (skills/crop-insurance-claim) was left out; the store holds one copy
+- `crop-season-plan`: another copy of this Skill in this source (skills/crop-season-plan) was left out; the store holds one copy
+- `cross-border-listing`: another copy of this Skill in this source (skills/cross-border-listing) was left out; the store holds one copy
+- `cross-border-listing`: another copy of this Skill in this source (skills-i18n/zh/cross-border-listing) was left out; the store holds one copy
+- `cross-examine-me`: another copy of this Skill in this source (skills/cross-examine-me) was left out; the store holds one copy
+- `crossborder-platform-playbook`: another copy of this Skill in this source (skills/crossborder-platform-playbook) was left out; the store holds one copy
+- `crossborder-platform-playbook`: another copy of this Skill in this source (skills-i18n/zh/crossborder-platform-playbook) was left out; the store holds one copy
+- `crypto-prices`: another copy of this Skill in this source (skills/crypto-prices) was left out; the store holds one copy
+- `cs-escalation-brief`: another copy of this Skill in this source (skills/cs-escalation-brief) was left out; the store holds one copy
+- `cs-health-scorecard`: scripts/health_score.py is not a plain text file (.py)
+- `cs-health-scorecard`: scripts/health_score.py is not a plain text file (.py)
+- `csat-nps-analysis`: scripts/nps.py is not a plain text file (.py)
+- `csat-nps-analysis`: scripts/nps.py is not a plain text file (.py)
+- `currency-rates`: another copy of this Skill in this source (skills/currency-rates) was left out; the store holds one copy
+- `customer-advisory-board`: another copy of this Skill in this source (skills/customer-advisory-board) was left out; the store holds one copy
+- `customer-incident-update`: another copy of this Skill in this source (skills/customer-incident-update) was left out; the store holds one copy
+- `customer-journey-map`: another copy of this Skill in this source (skills/customer-journey-map) was left out; the store holds one copy
+- `customer-journey-map`: the name is already taken by pm
+- `customer-outage-notice`: another copy of this Skill in this source (skills/customer-outage-notice) was left out; the store holds one copy
+- `customer-success-plan`: another copy of this Skill in this source (skills/customer-success-plan) was left out; the store holds one copy
+- `cv-docx-export`: scripts/cv_docx.py is not a plain text file (.py)
+- `cv-docx-export`: scripts/cv_docx.py is not a plain text file (.py)
+- `cv-honesty-check`: another copy of this Skill in this source (skills/cv-honesty-check) was left out; the store holds one copy
+- `daily-cash-book`: another copy of this Skill in this source (skills/daily-cash-book) was left out; the store holds one copy
+- `dashboard-brief`: another copy of this Skill in this source (skills/dashboard-brief) was left out; the store holds one copy
+- `data-analysis-standard`: another copy of this Skill in this source (skills/data-analysis-standard) was left out; the store holds one copy
+- `data-breach-response`: another copy of this Skill in this source (skills/data-breach-response) was left out; the store holds one copy
+- `data-broker-removal`: another copy of this Skill in this source (skills/data-broker-removal) was left out; the store holds one copy
+- `data-cleaning-pass`: another copy of this Skill in this source (skills/data-cleaning-pass) was left out; the store holds one copy
+- `data-contract`: another copy of this Skill in this source (skills/data-contract) was left out; the store holds one copy
+- `data-pipeline-spec`: another copy of this Skill in this source (skills/data-pipeline-spec) was left out; the store holds one copy
+- `data-quality-audit`: another copy of this Skill in this source (skills/data-quality-audit) was left out; the store holds one copy
+- `data-quality-checks`: another copy of this Skill in this source (skills/data-quality-checks) was left out; the store holds one copy
+- `data-retention-policy`: scripts/retention_schedule.py is not a plain text file (.py)
+- `data-retention-policy`: scripts/retention_schedule.py is not a plain text file (.py)
+- `data-slide-design`: another copy of this Skill in this source (skills/data-slide-design) was left out; the store holds one copy
+- `database-migration-plan`: another copy of this Skill in this source (skills/database-migration-plan) was left out; the store holds one copy
+- `database-schema-design`: another copy of this Skill in this source (skills/database-schema-design) was left out; the store holds one copy
+- `dataset-datasheet`: another copy of this Skill in this source (skills/dataset-datasheet) was left out; the store holds one copy
+- `dating-profile-doctor`: another copy of this Skill in this source (skills/dating-profile-doctor) was left out; the store holds one copy
+- `daycare-vs-stay-home`: scripts/daycare_vs_stay_home.py is not a plain text file (.py)
+- `daycare-vs-stay-home`: scripts/daycare_vs_stay_home.py is not a plain text file (.py)
+- `dbt-model-spec`: another copy of this Skill in this source (skills/dbt-model-spec) was left out; the store holds one copy
+- `de-arbeitszeugnis-decoder`: another copy of this Skill in this source (skills/de-arbeitszeugnis-decoder) was left out; the store holds one copy
+- `de-arbeitszeugnis-decoder`: another copy of this Skill in this source (skills-i18n/de/de-arbeitszeugnis-decoder) was left out; the store holds one copy
+- `de-kuendigungsfrist-check`: another copy of this Skill in this source (skills/de-kuendigungsfrist-check) was left out; the store holds one copy
+- `de-kuendigungsfrist-check`: another copy of this Skill in this source (skills-i18n/de/de-kuendigungsfrist-check) was left out; the store holds one copy
+- `de-steuererklaerung-prep`: another copy of this Skill in this source (skills/de-steuererklaerung-prep) was left out; the store holds one copy
+- `de-steuererklaerung-prep`: another copy of this Skill in this source (skills-i18n/de/de-steuererklaerung-prep) was left out; the store holds one copy
+- `debt-collector-response`: another copy of this Skill in this source (skills/debt-collector-response) was left out; the store holds one copy
+- `debt-collector-scripts`: another copy of this Skill in this source (skills/debt-collector-scripts) was left out; the store holds one copy
+- `debt-payoff`: scripts/debt_payoff.py is not a plain text file (.py)
+- `debt-payoff`: scripts/debt_payoff.py is not a plain text file (.py)
+- `debt-payoff-plan`: another copy of this Skill in this source (skills/debt-payoff-plan) was left out; the store holds one copy
+- `debugging-log-analyser`: another copy of this Skill in this source (skills/debugging-log-analyser) was left out; the store holds one copy
+- `decision-autopsy`: another copy of this Skill in this source (skills/decision-autopsy) was left out; the store holds one copy
+- `decision-forensics`: another copy of this Skill in this source (skills/decision-forensics) was left out; the store holds one copy
+- `decision-helper`: another copy of this Skill in this source (skills/decision-helper) was left out; the store holds one copy
+- `decision-journal`: another copy of this Skill in this source (skills/decision-journal) was left out; the store holds one copy
+- `decision-log-setup`: another copy of this Skill in this source (skills/decision-log-setup) was left out; the store holds one copy
+- `decision-meeting-format`: another copy of this Skill in this source (skills/decision-meeting-format) was left out; the store holds one copy
+- `decision-memo`: another copy of this Skill in this source (skills/decision-memo) was left out; the store holds one copy
+- `decision-panel`: another copy of this Skill in this source (skills/decision-panel) was left out; the store holds one copy
+- `decision-tree-solver`: scripts/decision_tree.py is not a plain text file (.py)
+- `decision-tree-solver`: scripts/decision_tree.py is not a plain text file (.py)
+- `decision-when-tired`: another copy of this Skill in this source (skills/decision-when-tired) was left out; the store holds one copy
+- `deck-autopsy`: another copy of this Skill in this source (skills/deck-autopsy) was left out; the store holds one copy
+- `deck-from-doc`: another copy of this Skill in this source (skills/deck-from-doc) was left out; the store holds one copy
+- `deck-narrative-arc`: another copy of this Skill in this source (skills/deck-narrative-arc) was left out; the store holds one copy
+- `deck-outline-first`: another copy of this Skill in this source (skills/deck-outline-first) was left out; the store holds one copy
+- `deck-review-rubric`: another copy of this Skill in this source (skills/deck-review-rubric) was left out; the store holds one copy
+- `declutter-by-room`: another copy of this Skill in this source (skills/declutter-by-room) was left out; the store holds one copy
+- `deep-work-blocking`: another copy of this Skill in this source (skills/deep-work-blocking) was left out; the store holds one copy
+- `deepfake-drill`: another copy of this Skill in this source (skills/deepfake-drill) was left out; the store holds one copy
+- `defamation-response`: another copy of this Skill in this source (skills/defamation-response) was left out; the store holds one copy
+- `delay-claim-letter`: another copy of this Skill in this source (skills/delay-claim-letter) was left out; the store holds one copy
+- `delegate-to-ai`: another copy of this Skill in this source (skills/delegate-to-ai) was left out; the store holds one copy
+- `delegation-brief`: another copy of this Skill in this source (skills/delegation-brief) was left out; the store holds one copy
+- `deliberate-practice-plan`: another copy of this Skill in this source (skills/deliberate-practice-plan) was left out; the store holds one copy
+- `delta-briefing`: another copy of this Skill in this source (skills/delta-briefing) was left out; the store holds one copy
+- `demand-forecast-review`: another copy of this Skill in this source (skills/demand-forecast-review) was left out; the store holds one copy
+- `demand-letter`: another copy of this Skill in this source (skills/demand-letter) was left out; the store holds one copy
+- `demo-clip-storyboard`: another copy of this Skill in this source (skills/demo-clip-storyboard) was left out; the store holds one copy
+- `demo-data-generator`: references/generator-template.mjs is not a plain text file (.mjs)
+- `demo-data-generator`: references/generator-template.mjs is not a plain text file (.mjs)
+- `demo-script`: another copy of this Skill in this source (skills/demo-script) was left out; the store holds one copy
+- `dental-clinical-note`: another copy of this Skill in this source (skills/dental-clinical-note) was left out; the store holds one copy
+- `dental-emergency-triage`: another copy of this Skill in this source (skills/dental-emergency-triage) was left out; the store holds one copy
+- `dental-insurance-preauth`: another copy of this Skill in this source (skills/dental-insurance-preauth) was left out; the store holds one copy
+- `dental-recall-reactivation`: another copy of this Skill in this source (skills/dental-recall-reactivation) was left out; the store holds one copy
+- `dental-referral-letter`: another copy of this Skill in this source (skills/dental-referral-letter) was left out; the store holds one copy
+- `dependency-audit`: another copy of this Skill in this source (skills/dependency-audit) was left out; the store holds one copy
+- `dependency-check`: another copy of this Skill in this source (skills/dependency-check) was left out; the store holds one copy
+- `dependency-conflict-resolver`: another copy of this Skill in this source (skills/dependency-conflict-resolver) was left out; the store holds one copy
+- `deprecation-comms-plan`: another copy of this Skill in this source (skills/deprecation-comms-plan) was left out; the store holds one copy
+- `design-critique`: another copy of this Skill in this source (skills/design-critique) was left out; the store holds one copy
+- `design-critique`: the name is already taken by paperclip
+- `design-handoff-brief`: another copy of this Skill in this source (skills/design-handoff-brief) was left out; the store holds one copy
+- `design-system-audit`: another copy of this Skill in this source (skills/design-system-audit) was left out; the store holds one copy
+- `design-system-generate`: another copy of this Skill in this source (skills/design-system-generate) was left out; the store holds one copy
+- `desk-ergonomics-audit`: another copy of this Skill in this source (skills/desk-ergonomics-audit) was left out; the store holds one copy
+- `desk-research-sprint`: another copy of this Skill in this source (skills/desk-research-sprint) was left out; the store holds one copy
+- `desktop-zero`: another copy of this Skill in this source (skills/desktop-zero) was left out; the store holds one copy
+- `developer-onboarding-doc`: another copy of this Skill in this source (skills/developer-onboarding-doc) was left out; the store holds one copy
+- `devils-advocate-on-demand`: another copy of this Skill in this source (skills/devils-advocate-on-demand) was left out; the store holds one copy
+- `devils-twin`: another copy of this Skill in this source (skills/devils-twin) was left out; the store holds one copy
+- `diagnosis-limbo-kit`: another copy of this Skill in this source (skills/diagnosis-limbo-kit) was left out; the store holds one copy
+- `dictionary-lookup`: another copy of this Skill in this source (skills/dictionary-lookup) was left out; the store holds one copy
+- `difficult-conversation`: another copy of this Skill in this source (skills/difficult-conversation) was left out; the store holds one copy
+- `digital-legacy-planner`: another copy of this Skill in this source (skills/digital-legacy-planner) was left out; the store holds one copy
+- `dingtalk-work-log`: another copy of this Skill in this source (skills/dingtalk-work-log) was left out; the store holds one copy
+- `dingtalk-work-log`: another copy of this Skill in this source (skills-i18n/zh/dingtalk-work-log) was left out; the store holds one copy
+- `disability-benefit-appeal`: another copy of this Skill in this source (skills/disability-benefit-appeal) was left out; the store holds one copy
+- `disability-disclosure-decision`: another copy of this Skill in this source (skills/disability-disclosure-decision) was left out; the store holds one copy
+- `disability-insurance-decoder`: another copy of this Skill in this source (skills/disability-insurance-decoder) was left out; the store holds one copy
+- `disagreeing-experts`: another copy of this Skill in this source (skills/disagreeing-experts) was left out; the store holds one copy
+- `disaster-recovery-plan`: another copy of this Skill in this source (skills/disaster-recovery-plan) was left out; the store holds one copy
+- `discharge-summary`: another copy of this Skill in this source (skills/discharge-summary) was left out; the store holds one copy
+- `discovery-call-prep`: another copy of this Skill in this source (skills/discovery-call-prep) was left out; the store holds one copy
+- `discovery-eyes`: another copy of this Skill in this source (skills/discovery-eyes) was left out; the store holds one copy
+- `discovery-interview-guide`: SKILL.md is a symlink
+- `discovery-interview-guide`: another copy of this Skill in this source (skills/discovery-interview-guide) was left out; the store holds one copy
+- `discovery-interview-guide`: another copy of this Skill in this source (templates/pm-discovery-agent/skills/discovery-interview-guide) was left out; the store holds one copy
+- `dispute-letter`: another copy of this Skill in this source (skills/dispute-letter) was left out; the store holds one copy
+- `dnd-campaign-starter`: another copy of this Skill in this source (skills/dnd-campaign-starter) was left out; the store holds one copy
+- `dns-lookup`: another copy of this Skill in this source (skills/dns-lookup) was left out; the store holds one copy
+- `doc-restructure-live`: another copy of this Skill in this source (skills/doc-restructure-live) was left out; the store holds one copy
+- `doc-versioning-discipline`: another copy of this Skill in this source (skills/doc-versioning-discipline) was left out; the store holds one copy
+- `docs-quickstart`: another copy of this Skill in this source (skills/docs-quickstart) was left out; the store holds one copy
+- `doctor-visit-prep`: another copy of this Skill in this source (skills/doctor-visit-prep) was left out; the store holds one copy
+- `document-retention-map`: another copy of this Skill in this source (skills/document-retention-map) was left out; the store holds one copy
+- `docx-tracked-changes`: another copy of this Skill in this source (skills/docx-tracked-changes) was left out; the store holds one copy
+- `donor-update`: another copy of this Skill in this source (skills/donor-update) was left out; the store holds one copy
+- `double-opt-in-intro`: another copy of this Skill in this source (skills/double-opt-in-intro) was left out; the store holds one copy
+- `douyin-script`: another copy of this Skill in this source (skills/douyin-script) was left out; the store holds one copy
+- `douyin-script`: another copy of this Skill in this source (skills-i18n/zh/douyin-script) was left out; the store holds one copy
+- `downloads-triage`: another copy of this Skill in this source (skills/downloads-triage) was left out; the store holds one copy
+- `doxxing-response`: another copy of this Skill in this source (skills/doxxing-response) was left out; the store holds one copy
+- `dpa-review`: another copy of this Skill in this source (skills/dpa-review) was left out; the store holds one copy
+- `driver-incident-investigation`: another copy of this Skill in this source (skills/driver-incident-investigation) was left out; the store holds one copy
+- `driver-retention-plan`: another copy of this Skill in this source (skills/driver-retention-plan) was left out; the store holds one copy
+- `drug-interaction-intervention`: another copy of this Skill in this source (skills/drug-interaction-intervention) was left out; the store holds one copy
+- `earthquake-watch`: another copy of this Skill in this source (skills/earthquake-watch) was left out; the store holds one copy
+- `elder-scam-briefing`: another copy of this Skill in this source (skills/elder-scam-briefing) was left out; the store holds one copy
+- `elected-rep-letter`: another copy of this Skill in this source (skills/elected-rep-letter) was left out; the store holds one copy
+- `email-agent-preflight`: another copy of this Skill in this source (skills/email-agent-preflight) was left out; the store holds one copy
+- `email-campaign`: SKILL.md is a symlink
+- `email-campaign`: another copy of this Skill in this source (skills/email-campaign) was left out; the store holds one copy
+- `email-campaign`: another copy of this Skill in this source (templates/pm-launch-agent/skills/email-campaign) was left out; the store holds one copy
+- `email-sequence`: another copy of this Skill in this source (skills/email-sequence) was left out; the store holds one copy
+- `email-sequence`: the name is already taken by templates
+- `email-to-tasks`: another copy of this Skill in this source (skills/email-to-tasks) was left out; the store holds one copy
+- `email-triage`: another copy of this Skill in this source (skills/email-triage) was left out; the store holds one copy
+- `email-triage`: another copy of this Skill in this source (skills-i18n/id/email-triage) was left out; the store holds one copy
+- `email-triage`: another copy of this Skill in this source (skills-i18n/vi/email-triage) was left out; the store holds one copy
+- `email-triage-system`: another copy of this Skill in this source (skills/email-triage-system) was left out; the store holds one copy
+- `emergency-doc-kit`: another copy of this Skill in this source (skills/emergency-doc-kit) was left out; the store holds one copy
+- `emergency-fund`: scripts/emergency_fund.py is not a plain text file (.py)
+- `emergency-fund`: scripts/emergency_fund.py is not a plain text file (.py)
+- `emergency-grant-application`: another copy of this Skill in this source (skills/emergency-grant-application) was left out; the store holds one copy
+- `emil-design-eng-pointer`: another copy of this Skill in this source (skills/emil-design-eng-pointer) was left out; the store holds one copy
+- `employee-engagement-survey`: another copy of this Skill in this source (skills/employee-engagement-survey) was left out; the store holds one copy
+- `empty-state-writer`: another copy of this Skill in this source (skills/empty-state-writer) was left out; the store holds one copy
+- `end-of-day-report`: another copy of this Skill in this source (skills/end-of-day-report) was left out; the store holds one copy
+- `end-of-life-wishes-conversation`: another copy of this Skill in this source (skills/end-of-life-wishes-conversation) was left out; the store holds one copy
+- `energy-scheduling`: another copy of this Skill in this source (skills/energy-scheduling) was left out; the store holds one copy
+- `engagement-retro`: another copy of this Skill in this source (skills/engagement-retro) was left out; the store holds one copy
+- `engineering-hiring-rubric`: another copy of this Skill in this source (skills/engineering-hiring-rubric) was left out; the store holds one copy
+- `engineering-weekly-report`: another copy of this Skill in this source (skills/engineering-weekly-report) was left out; the store holds one copy
+- `entity-relationship-diagram`: another copy of this Skill in this source (skills/entity-relationship-diagram) was left out; the store holds one copy
+- `epic-progress-report`: another copy of this Skill in this source (skills/epic-progress-report) was left out; the store holds one copy
+- `error-decoder`: another copy of this Skill in this source (skills/error-decoder) was left out; the store holds one copy
+- `error-message-writer`: another copy of this Skill in this source (skills/error-message-writer) was left out; the store holds one copy
+- `escalate-or-hold`: another copy of this Skill in this source (skills/escalate-or-hold) was left out; the store holds one copy
+- `escalation-email`: another copy of this Skill in this source (skills/escalation-email) was left out; the store holds one copy
+- `escalation-tree`: another copy of this Skill in this source (skills/escalation-tree) was left out; the store holds one copy
+- `esg-disclosure-draft`: another copy of this Skill in this source (skills/esg-disclosure-draft) was left out; the store holds one copy
+- `estate-planning-kit`: another copy of this Skill in this source (skills/estate-planning-kit) was left out; the store holds one copy
+- `estate-settlement-organizer`: another copy of this Skill in this source (skills/estate-settlement-organizer) was left out; the store holds one copy
+- `eulogy-and-obituary-writer`: another copy of this Skill in this source (skills/eulogy-and-obituary-writer) was left out; the store holds one copy
+- `eulogy-writer`: another copy of this Skill in this source (skills/eulogy-writer) was left out; the store holds one copy
+- `euthanasia-conversation`: another copy of this Skill in this source (skills/euthanasia-conversation) was left out; the store holds one copy
+- `ev-vs-gas`: scripts/ev_vs_gas.py is not a plain text file (.py)
+- `ev-vs-gas`: scripts/ev_vs_gas.py is not a plain text file (.py)
+- `eval-rubric-designer`: another copy of this Skill in this source (skills/eval-rubric-designer) was left out; the store holds one copy
+- `event-budget-plan`: another copy of this Skill in this source (skills/event-budget-plan) was left out; the store holds one copy
+- `event-run-of-show`: another copy of this Skill in this source (skills/event-run-of-show) was left out; the store holds one copy
+- `event-safety-plan`: another copy of this Skill in this source (skills/event-safety-plan) was left out; the store holds one copy
+- `event-vendor-brief`: another copy of this Skill in this source (skills/event-vendor-brief) was left out; the store holds one copy
+- `evidence-grading`: another copy of this Skill in this source (skills/evidence-grading) was left out; the store holds one copy
+- `evidence-lock`: another copy of this Skill in this source (skills/evidence-lock) was left out; the store holds one copy
+- `evt-dvt-pvt-gate-review`: another copy of this Skill in this source (skills/evt-dvt-pvt-gate-review) was left out; the store holds one copy
+- `exam-prep-planner`: another copy of this Skill in this source (skills/exam-prep-planner) was left out; the store holds one copy
+- `exam-study-plan`: another copy of this Skill in this source (skills/exam-study-plan) was left out; the store holds one copy
+- `excel-model`: scripts/xlsx_tool.py is not a plain text file (.py)
+- `excel-model`: scripts/xlsx_tool.py is not a plain text file (.py)
+- `exec-vs-working-deck`: another copy of this Skill in this source (skills/exec-vs-working-deck) was left out; the store holds one copy
+- `executing-plans`: another copy of this Skill in this source (skills/executing-plans) was left out; the store holds one copy
+- `executing-plans`: the name is already taken by templates
+- `executive-cv`: another copy of this Skill in this source (skills/executive-cv) was left out; the store holds one copy
+- `executive-presence`: another copy of this Skill in this source (skills/executive-presence) was left out; the store holds one copy
+- `executive-summary`: another copy of this Skill in this source (skills/executive-summary) was left out; the store holds one copy
+- `executive-summary`: another copy of this Skill in this source (skills-i18n/es/executive-summary) was left out; the store holds one copy
+- `executive-summary`: another copy of this Skill in this source (skills-i18n/id/executive-summary) was left out; the store holds one copy
+- `executive-summary`: another copy of this Skill in this source (skills-i18n/ja/executive-summary) was left out; the store holds one copy
+- `executive-summary`: another copy of this Skill in this source (skills-i18n/vi/executive-summary) was left out; the store holds one copy
+- `executive-summary`: another copy of this Skill in this source (skills-i18n/zh/executive-summary) was left out; the store holds one copy
+- `executive-update`: SKILL.md is a symlink
+- `executive-update`: another copy of this Skill in this source (skills/executive-update) was left out; the store holds one copy
+- `executive-update`: another copy of this Skill in this source (templates/pm-stakeholder-comms-agent/skills/executive-update) was left out; the store holds one copy
+- `exit-interview-strategy`: another copy of this Skill in this source (skills/exit-interview-strategy) was left out; the store holds one copy
+- `exit-waterfall`: scripts/exit_waterfall.py is not a plain text file (.py)
+- `exit-waterfall`: scripts/exit_waterfall.py is not a plain text file (.py)
+- `expense-audit`: another copy of this Skill in this source (skills/expense-audit) was left out; the store holds one copy
+- `expense-discipline`: another copy of this Skill in this source (skills/expense-discipline) was left out; the store holds one copy
+- `expense-filer`: another copy of this Skill in this source (skills/expense-filer) was left out; the store holds one copy
+- `expense-policy`: another copy of this Skill in this source (skills/expense-policy) was left out; the store holds one copy
+- `expense-sheet-design`: another copy of this Skill in this source (skills/expense-sheet-design) was left out; the store holds one copy
+- `experiment-designer`: another copy of this Skill in this source (skills/experiment-designer) was left out; the store holds one copy
+- `experiment-readout`: scripts/ab_significance.py is not a plain text file (.py)
+- `experiment-readout`: scripts/ab_significance.py is not a plain text file (.py)
+- `expert-interview-prep`: another copy of this Skill in this source (skills/expert-interview-prep) was left out; the store holds one copy
+- `explain-my-decision-to-me`: another copy of this Skill in this source (skills/explain-my-decision-to-me) was left out; the store holds one copy
+- `explain-simply`: another copy of this Skill in this source (skills/explain-simply) was left out; the store holds one copy
+- `exploratory-test-charter`: another copy of this Skill in this source (skills/exploratory-test-charter) was left out; the store holds one copy
+- `explorer-interface-brief`: another copy of this Skill in this source (skills/explorer-interface-brief) was left out; the store holds one copy
+- `explorer-pipeline`: another copy of this Skill in this source (skills/explorer-pipeline) was left out; the store holds one copy
+- `explorer-viewer-builder`: references/viewer-template.html is not a plain text file (.html)
+- `explorer-viewer-builder`: references/viewer-template.html is not a plain text file (.html)
+- `expungement-navigator`: another copy of this Skill in this source (skills/expungement-navigator) was left out; the store holds one copy
+- `fact-check-pass`: another copy of this Skill in this source (skills/fact-check-pass) was left out; the store holds one copy
+- `factory-acceptance-test`: another copy of this Skill in this source (skills/factory-acceptance-test) was left out; the store holds one copy
+- `fair-split`: scripts/fair_split.py is not a plain text file (.py)
+- `fair-split`: scripts/fair_split.py is not a plain text file (.py)
+- `faith-transition-companion`: another copy of this Skill in this source (skills/faith-transition-companion) was left out; the store holds one copy
+- `family-cookbook-archivist`: another copy of this Skill in this source (skills/family-cookbook-archivist) was left out; the store holds one copy
+- `family-emergency-plan`: another copy of this Skill in this source (skills/family-emergency-plan) was left out; the store holds one copy
+- `fantasy-league-drafter`: another copy of this Skill in this source (skills/fantasy-league-drafter) was left out; the store holds one copy
+- `faq-builder`: another copy of this Skill in this source (skills/faq-builder) was left out; the store holds one copy
+- `farm-buyer-contract-check`: another copy of this Skill in this source (skills/farm-buyer-contract-check) was left out; the store holds one copy
+- `farm-records-book`: another copy of this Skill in this source (skills/farm-records-book) was left out; the store holds one copy
+- `farm-subsidy-application`: another copy of this Skill in this source (skills/farm-subsidy-application) was left out; the store holds one copy
+- `feature-flag-guide`: another copy of this Skill in this source (skills/feature-flag-guide) was left out; the store holds one copy
+- `feature-prioritisation`: scripts/feature_prioritisation.py is not a plain text file (.py)
+- `feature-prioritisation`: scripts/feature_prioritisation.py is not a plain text file (.py)
+- `feature-sunset-plan`: another copy of this Skill in this source (skills/feature-sunset-plan) was left out; the store holds one copy
+- `federal-resume`: another copy of this Skill in this source (skills/federal-resume) was left out; the store holds one copy
+- `feishu-doc-writer`: another copy of this Skill in this source (skills/feishu-doc-writer) was left out; the store holds one copy
+- `feishu-doc-writer`: another copy of this Skill in this source (skills-i18n/zh/feishu-doc-writer) was left out; the store holds one copy
+- `feynman-explainer`: another copy of this Skill in this source (skills/feynman-explainer) was left out; the store holds one copy
+- `figma-annotation-guide`: another copy of this Skill in this source (skills/figma-annotation-guide) was left out; the store holds one copy
+- `figma-component-audit`: another copy of this Skill in this source (skills/figma-component-audit) was left out; the store holds one copy
+- `figma-design-brief`: another copy of this Skill in this source (skills/figma-design-brief) was left out; the store holds one copy
+- `figma-design-critique-pm`: another copy of this Skill in this source (skills/figma-design-critique-pm) was left out; the store holds one copy
+- `figma-design-qa`: another copy of this Skill in this source (skills/figma-design-qa) was left out; the store holds one copy
+- `figma-design-review`: another copy of this Skill in this source (skills/figma-design-review) was left out; the store holds one copy
+- `figma-prototype-plan`: another copy of this Skill in this source (skills/figma-prototype-plan) was left out; the store holds one copy
+- `figma-spacing-system`: another copy of this Skill in this source (skills/figma-spacing-system) was left out; the store holds one copy
+- `figma-user-flow-planner`: another copy of this Skill in this source (skills/figma-user-flow-planner) was left out; the store holds one copy
+- `figma-variant-matrix`: another copy of this Skill in this source (skills/figma-variant-matrix) was left out; the store holds one copy
+- `file-access-preflight`: another copy of this Skill in this source (skills/file-access-preflight) was left out; the store holds one copy
+- `filename-convention`: another copy of this Skill in this source (skills/filename-convention) was left out; the store holds one copy
+- `financial-aid-appeal`: another copy of this Skill in this source (skills/financial-aid-appeal) was left out; the store holds one copy
+- `financial-checkup`: another copy of this Skill in this source (skills/financial-checkup) was left out; the store holds one copy
+- `financial-due-diligence`: another copy of this Skill in this source (skills/financial-due-diligence) was left out; the store holds one copy
+- `financial-independence-roadmap`: another copy of this Skill in this source (skills/financial-independence-roadmap) was left out; the store holds one copy
+- `financial-model-narrative`: another copy of this Skill in this source (skills/financial-model-narrative) was left out; the store holds one copy
+- `financial-statement-explainer`: another copy of this Skill in this source (skills/financial-statement-explainer) was left out; the store holds one copy
+- `fine-appeal-letter`: another copy of this Skill in this source (skills/fine-appeal-letter) was left out; the store holds one copy
+- `fire-number`: scripts/fire_number.py is not a plain text file (.py)
+- `fire-number`: scripts/fire_number.py is not a plain text file (.py)
+- `first-100k-plan`: another copy of this Skill in this source (skills/first-100k-plan) was left out; the store holds one copy
+- `first-90-days-out`: another copy of this Skill in this source (skills/first-90-days-out) was left out; the store holds one copy
+- `first-client-contract`: another copy of this Skill in this source (skills/first-client-contract) was left out; the store holds one copy
+- `first-hire-plan`: another copy of this Skill in this source (skills/first-hire-plan) was left out; the store holds one copy
+- `first-issue-designer`: another copy of this Skill in this source (skills/first-issue-designer) was left out; the store holds one copy
+- `first-maintainer-month`: another copy of this Skill in this source (skills/first-maintainer-month) was left out; the store holds one copy
+- `five-minds`: another copy of this Skill in this source (skills/five-minds) was left out; the store holds one copy
+- `flare-day-planner`: another copy of this Skill in this source (skills/flare-day-planner) was left out; the store holds one copy
+- `fleet-compliance-audit-prep`: another copy of this Skill in this source (skills/fleet-compliance-audit-prep) was left out; the store holds one copy
+- `fleet-maintenance-programme`: another copy of this Skill in this source (skills/fleet-maintenance-programme) was left out; the store holds one copy
+- `flight-delay-compensation`: another copy of this Skill in this source (skills/flight-delay-compensation) was left out; the store holds one copy
+- `flight-tracker`: another copy of this Skill in this source (skills/flight-tracker) was left out; the store holds one copy
+- `flow-metrics-interpreter`: another copy of this Skill in this source (skills/flow-metrics-interpreter) was left out; the store holds one copy
+- `flowchart`: another copy of this Skill in this source (skills/flowchart) was left out; the store holds one copy
+- `foia-request`: another copy of this Skill in this source (skills/foia-request) was left out; the store holds one copy
+- `folder-structure-designer`: another copy of this Skill in this source (skills/folder-structure-designer) was left out; the store holds one copy
+- `follow-up-chaser`: another copy of this Skill in this source (skills/follow-up-chaser) was left out; the store holds one copy
+- `follow-up-sequence`: another copy of this Skill in this source (skills/follow-up-sequence) was left out; the store holds one copy
+- `followup-sweep`: another copy of this Skill in this source (skills/followup-sweep) was left out; the store holds one copy
+- `form-explainer`: another copy of this Skill in this source (skills/form-explainer) was left out; the store holds one copy
+- `form-filler-operator`: another copy of this Skill in this source (skills/form-filler-operator) was left out; the store holds one copy
+- `formula-detangler`: another copy of this Skill in this source (skills/formula-detangler) was left out; the store holds one copy
+- `fortnightly-release-planner`: another copy of this Skill in this source (skills/fortnightly-release-planner) was left out; the store holds one copy
+- `founder-market-fit`: another copy of this Skill in this source (skills/founder-market-fit) was left out; the store holds one copy
+- `franchise-decoder`: another copy of this Skill in this source (skills/franchise-decoder) was left out; the store holds one copy
+- `franklin-decision-ledger`: another copy of this Skill in this source (skills/franklin-decision-ledger) was left out; the store holds one copy
+- `freelance-rate`: scripts/freelance_rate.py is not a plain text file (.py)
+- `freelance-rate`: scripts/freelance_rate.py is not a plain text file (.py)
+- `freight-rate-quote`: another copy of this Skill in this source (skills/freight-rate-quote) was left out; the store holds one copy
+- `from-first-principles`: another copy of this Skill in this source (skills/from-first-principles) was left out; the store holds one copy
+- `frontend-design`: another copy of this Skill in this source (skills/frontend-design) was left out; the store holds one copy
+- `frontend-design-pointer`: another copy of this Skill in this source (skills/frontend-design-pointer) was left out; the store holds one copy
+- `functional-assessment-prep`: another copy of this Skill in this source (skills/functional-assessment-prep) was left out; the store holds one copy
+- `fundraising-faq`: another copy of this Skill in this source (skills/fundraising-faq) was left out; the store holds one copy
+- `funeral-pricing-decoder`: another copy of this Skill in this source (skills/funeral-pricing-decoder) was left out; the store holds one copy
+- `future-selves-council`: another copy of this Skill in this source (skills/future-selves-council) was left out; the store holds one copy
+- `game-night-planner`: another copy of this Skill in this source (skills/game-night-planner) was left out; the store holds one copy
+- `gantt-roadmap`: another copy of this Skill in this source (skills/gantt-roadmap) was left out; the store holds one copy
+- `gdpr-compliance`: scripts/ropa_check.py is not a plain text file (.py)
+- `gdpr-compliance`: scripts/ropa_check.py is not a plain text file (.py)
+- `generate-then-execute`: another copy of this Skill in this source (skills/generate-then-execute) was left out; the store holds one copy
+- `get-more-from-ai`: another copy of this Skill in this source (skills/get-more-from-ai) was left out; the store holds one copy
+- `gift-card-recovery`: another copy of this Skill in this source (skills/gift-card-recovery) was left out; the store holds one copy
+- `gift-finder`: another copy of this Skill in this source (skills/gift-finder) was left out; the store holds one copy
+- `git-troubleshooter`: another copy of this Skill in this source (skills/git-troubleshooter) was left out; the store holds one copy
+- `github-repo-vitals`: another copy of this Skill in this source (skills/github-repo-vitals) was left out; the store holds one copy
+- `giving-feedback`: another copy of this Skill in this source (skills/giving-feedback) was left out; the store holds one copy
+- `glossary-builder`: another copy of this Skill in this source (skills/glossary-builder) was left out; the store holds one copy
+- `go-bag-builder`: another copy of this Skill in this source (skills/go-bag-builder) was left out; the store holds one copy
+- `go-to-market`: SKILL.md is a symlink
+- `go-to-market`: another copy of this Skill in this source (skills/go-to-market) was left out; the store holds one copy
+- `go-to-market`: another copy of this Skill in this source (skills-i18n/zh/go-to-market) was left out; the store holds one copy
+- `go-to-market`: another copy of this Skill in this source (skills-i18n/zh-TW/go-to-market) was left out; the store holds one copy
+- `go-to-market`: another copy of this Skill in this source (templates/pm-launch-agent/skills/go-to-market) was left out; the store holds one copy
+- `go-to-market-planner`: another copy of this Skill in this source (skills/go-to-market-planner) was left out; the store holds one copy
+- `good-enough-detector`: another copy of this Skill in this source (skills/good-enough-detector) was left out; the store holds one copy
+- `graduate-cv`: another copy of this Skill in this source (skills/graduate-cv) was left out; the store holds one copy
+- `grant-proposal`: another copy of this Skill in this source (skills/grant-proposal) was left out; the store holds one copy
+- `gratitude-practice`: another copy of this Skill in this source (skills/gratitude-practice) was left out; the store holds one copy
+- `greenwashing-self-audit`: another copy of this Skill in this source (skills/greenwashing-self-audit) was left out; the store holds one copy
+- `grieving-at-work`: another copy of this Skill in this source (skills/grieving-at-work) was left out; the store holds one copy
+- `grocery-budget-audit`: another copy of this Skill in this source (skills/grocery-budget-audit) was left out; the store holds one copy
+- `growth-experiment-backlog`: another copy of this Skill in this source (skills/growth-experiment-backlog) was left out; the store holds one copy
+- `guest-incident-log`: another copy of this Skill in this source (skills/guest-incident-log) was left out; the store holds one copy
+- `gulf-job-offer-check`: another copy of this Skill in this source (skills/gulf-job-offer-check) was left out; the store holds one copy
+- `gulf-job-offer-check`: another copy of this Skill in this source (skills-i18n/ar/gulf-job-offer-check) was left out; the store holds one copy
+- `gulf-residence-visa-admin`: another copy of this Skill in this source (skills/gulf-residence-visa-admin) was left out; the store holds one copy
+- `gulf-residence-visa-admin`: another copy of this Skill in this source (skills-i18n/ar/gulf-residence-visa-admin) was left out; the store holds one copy
+- `habit-builder`: another copy of this Skill in this source (skills/habit-builder) was left out; the store holds one copy
+- `handbook-page`: another copy of this Skill in this source (skills/handbook-page) was left out; the store holds one copy
+- `hardware-prd`: another copy of this Skill in this source (skills/hardware-prd) was left out; the store holds one copy
+- `hazard-risk-map`: another copy of this Skill in this source (skills/hazard-risk-map) was left out; the store holds one copy
+- `headline-options`: another copy of this Skill in this source (skills/headline-options) was left out; the store holds one copy
+- `health-inspection-prep`: another copy of this Skill in this source (skills/health-inspection-prep) was left out; the store holds one copy
+- `healthcare-system-primer`: another copy of this Skill in this source (skills/healthcare-system-primer) was left out; the store holds one copy
+- `help-center-article`: another copy of this Skill in this source (skills/help-center-article) was left out; the store holds one copy
+- `hidden-fee-auditor`: another copy of this Skill in this source (skills/hidden-fee-auditor) was left out; the store holds one copy
+- `hipaa-safeguards`: scripts/hipaa_checklist.py is not a plain text file (.py)
+- `hipaa-safeguards`: scripts/hipaa_checklist.py is not a plain text file (.py)
+- `hire-or-pass`: another copy of this Skill in this source (skills/hire-or-pass) was left out; the store holds one copy
+- `hiring-rubric`: another copy of this Skill in this source (skills/hiring-rubric) was left out; the store holds one copy
+- `hk-cantonese-copy`: another copy of this Skill in this source (skills/hk-cantonese-copy) was left out; the store holds one copy
+- `hk-mpf-explainer`: scripts/mpf.py is not a plain text file (.py)
+- `hk-mpf-explainer`: scripts/mpf.py is not a plain text file (.py)
+- `hn-digest`: another copy of this Skill in this source (skills/hn-digest) was left out; the store holds one copy
+- `hoa-decoder`: another copy of this Skill in this source (skills/hoa-decoder) was left out; the store holds one copy
+- `hoa-decoder`: another copy of this Skill in this source (skills-i18n/es/hoa-decoder) was left out; the store holds one copy
+- `hoa-decoder`: another copy of this Skill in this source (skills-i18n/ja/hoa-decoder) was left out; the store holds one copy
+- `hoa-decoder`: another copy of this Skill in this source (skills-i18n/zh/hoa-decoder) was left out; the store holds one copy
+- `hoa-violation-response`: another copy of this Skill in this source (skills/hoa-violation-response) was left out; the store holds one copy
+- `hobby-starter-kit`: another copy of this Skill in this source (skills/hobby-starter-kit) was left out; the store holds one copy
+- `home-contractor-quote-decoder`: another copy of this Skill in this source (skills/home-contractor-quote-decoder) was left out; the store holds one copy
+- `home-energy-savings`: another copy of this Skill in this source (skills/home-energy-savings) was left out; the store holds one copy
+- `home-inspection-decoder`: another copy of this Skill in this source (skills/home-inspection-decoder) was left out; the store holds one copy
+- `home-maintenance-calendar`: another copy of this Skill in this source (skills/home-maintenance-calendar) was left out; the store holds one copy
+- `home-workout-builder`: another copy of this Skill in this source (skills/home-workout-builder) was left out; the store holds one copy
+- `hook-writer`: another copy of this Skill in this source (skills/hook-writer) was left out; the store holds one copy
+- `hospital-stay-plan`: another copy of this Skill in this source (skills/hospital-stay-plan) was left out; the store holds one copy
+- `hours-of-service-check`: another copy of this Skill in this source (skills/hours-of-service-check) was left out; the store holds one copy
+- `house-style-enforcer`: another copy of this Skill in this source (skills/house-style-enforcer) was left out; the store holds one copy
+- `household-constitution`: another copy of this Skill in this source (skills/household-constitution) was left out; the store holds one copy
+- `houseplant-care`: another copy of this Skill in this source (skills/houseplant-care) was left out; the store holds one copy
+- `housing-with-a-record`: another copy of this Skill in this source (skills/housing-with-a-record) was left out; the store holds one copy
+- `huawen-business-writing`: another copy of this Skill in this source (skills/huawen-business-writing) was left out; the store holds one copy
+- `human-in-the-loop-design`: another copy of this Skill in this source (skills/human-in-the-loop-design) was left out; the store holds one copy
+- `hydration-and-energy-plan`: another copy of this Skill in this source (skills/hydration-and-energy-plan) was left out; the store holds one copy
+- `hyperfocus-exit`: another copy of this Skill in this source (skills/hyperfocus-exit) was left out; the store holds one copy
+- `i18n-readiness-review`: another copy of this Skill in this source (skills/i18n-readiness-review) was left out; the store holds one copy
+- `idea-storm`: another copy of this Skill in this source (skills/idea-storm) was left out; the store holds one copy
+- `identity-theft-recovery`: another copy of this Skill in this source (skills/identity-theft-recovery) was left out; the store holds one copy
+- `iep-504-meeting-kit`: another copy of this Skill in this source (skills/iep-504-meeting-kit) was left out; the store holds one copy
+- `iep-goal-support`: another copy of this Skill in this source (skills/iep-goal-support) was left out; the store holds one copy
+- `iep-goal-writer`: another copy of this Skill in this source (skills/iep-goal-writer) was left out; the store holds one copy
+- `immigration-document-checklist`: another copy of this Skill in this source (skills/immigration-document-checklist) was left out; the store holds one copy
+- `impact-report`: another copy of this Skill in this source (skills/impact-report) was left out; the store holds one copy
+- `impeccable-pointer`: another copy of this Skill in this source (skills/impeccable-pointer) was left out; the store holds one copy
+- `importer-scaffolder`: another copy of this Skill in this source (skills/importer-scaffolder) was left out; the store holds one copy
+- `in-epf-withdrawal-guide`: another copy of this Skill in this source (skills/in-epf-withdrawal-guide) was left out; the store holds one copy
+- `in-gratuity-calculator`: another copy of this Skill in this source (skills/in-gratuity-calculator) was left out; the store holds one copy
+- `in-gst-return-explainer`: another copy of this Skill in this source (skills/in-gst-return-explainer) was left out; the store holds one copy
+- `in-income-tax-regime-chooser`: another copy of this Skill in this source (skills/in-income-tax-regime-chooser) was left out; the store holds one copy
+- `in-labour-codes-decoder`: another copy of this Skill in this source (skills/in-labour-codes-decoder) was left out; the store holds one copy
+- `in-law-boundary-scripts`: another copy of this Skill in this source (skills/in-law-boundary-scripts) was left out; the store holds one copy
+- `in-notice-period-fnf-settlement`: another copy of this Skill in this source (skills/in-notice-period-fnf-settlement) was left out; the store holds one copy
+- `inbox-triage-live`: another copy of this Skill in this source (skills/inbox-triage-live) was left out; the store holds one copy
+- `inbox-unsubscribe-purge`: another copy of this Skill in this source (skills/inbox-unsubscribe-purge) was left out; the store holds one copy
+- `inbox-zero-operator`: another copy of this Skill in this source (skills/inbox-zero-operator) was left out; the store holds one copy
+- `incident-postmortem`: another copy of this Skill in this source (skills/incident-postmortem) was left out; the store holds one copy
+- `incident-postmortem`: another copy of this Skill in this source (skills-i18n/es/incident-postmortem) was left out; the store holds one copy
+- `incident-postmortem`: another copy of this Skill in this source (skills-i18n/zh/incident-postmortem) was left out; the store holds one copy
+- `incident-postmortem`: another copy of this Skill in this source (skills-i18n/zh-TW/incident-postmortem) was left out; the store holds one copy
+- `incident-postmortem`: the name is already taken by ghcopilot
+- `incident-public-statement`: another copy of this Skill in this source (skills/incident-public-statement) was left out; the store holds one copy
+- `incremental-implementation`: another copy of this Skill in this source (skills/incremental-implementation) was left out; the store holds one copy
+- `incremental-implementation`: the name is already taken by addyosmani
+- `index-fund-starter`: another copy of this Skill in this source (skills/index-fund-starter) was left out; the store holds one copy
+- `influencer-brief`: another copy of this Skill in this source (skills/influencer-brief) was left out; the store holds one copy
+- `informational-interview-prep`: another copy of this Skill in this source (skills/informational-interview-prep) was left out; the store holds one copy
+- `infra-as-code-review`: another copy of this Skill in this source (skills/infra-as-code-review) was left out; the store holds one copy
+- `injection-spotter`: another copy of this Skill in this source (skills/injection-spotter) was left out; the store holds one copy
+- `inspection-report-decoder`: another copy of this Skill in this source (skills/inspection-report-decoder) was left out; the store holds one copy
+- `instagram-post-downloader`: another copy of this Skill in this source (skills/instagram-post-downloader) was left out; the store holds one copy
+- `insurance-claim`: another copy of this Skill in this source (skills/insurance-claim) was left out; the store holds one copy
+- `insurance-claim-appeal`: another copy of this Skill in this source (skills/insurance-claim-appeal) was left out; the store holds one copy
+- `insurance-policy-decoder`: another copy of this Skill in this source (skills/insurance-policy-decoder) was left out; the store holds one copy
+- `insurance-policy-decoder`: another copy of this Skill in this source (skills-i18n/id/insurance-policy-decoder) was left out; the store holds one copy
+- `insurance-policy-decoder`: another copy of this Skill in this source (skills-i18n/ja/insurance-policy-decoder) was left out; the store holds one copy
+- `insurance-policy-decoder`: another copy of this Skill in this source (skills-i18n/vi/insurance-policy-decoder) was left out; the store holds one copy
+- `insurance-policy-decoder`: another copy of this Skill in this source (skills-i18n/zh/insurance-policy-decoder) was left out; the store holds one copy
+- `interrupt-rules`: another copy of this Skill in this source (skills/interrupt-rules) was left out; the store holds one copy
+- `interview-me`: another copy of this Skill in this source (skills/interview-me) was left out; the store holds one copy
+- `interview-me`: the name is already taken by addyosmani
+- `interview-prep`: another copy of this Skill in this source (skills/interview-prep) was left out; the store holds one copy
+- `interview-prep`: another copy of this Skill in this source (skills-i18n/de/interview-prep) was left out; the store holds one copy
+- `interview-prep`: another copy of this Skill in this source (skills-i18n/fr/interview-prep) was left out; the store holds one copy
+- `interview-prep`: another copy of this Skill in this source (skills-i18n/id/interview-prep) was left out; the store holds one copy
+- `interview-prep`: another copy of this Skill in this source (skills-i18n/vi/interview-prep) was left out; the store holds one copy
+- `interview-prep`: another copy of this Skill in this source (skills-i18n/zh/interview-prep) was left out; the store holds one copy
+- `interview-prep`: another copy of this Skill in this source (skills-i18n/zh-TW/interview-prep) was left out; the store holds one copy
+- `interview-question-bank`: another copy of this Skill in this source (skills/interview-question-bank) was left out; the store holds one copy
+- `interview-synthesis`: another copy of this Skill in this source (skills/interview-synthesis) was left out; the store holds one copy
+- `inventory-policy`: another copy of this Skill in this source (skills/inventory-policy) was left out; the store holds one copy
+- `inversion-thinking`: another copy of this Skill in this source (skills/inversion-thinking) was left out; the store holds one copy
+- `investing-for-beginners`: another copy of this Skill in this source (skills/investing-for-beginners) was left out; the store holds one copy
+- `investing-policy-statement`: another copy of this Skill in this source (skills/investing-policy-statement) was left out; the store holds one copy
+- `investing-vocabulary-explainer`: another copy of this Skill in this source (skills/investing-vocabulary-explainer) was left out; the store holds one copy
+- `investment-account-picker`: another copy of this Skill in this source (skills/investment-account-picker) was left out; the store holds one copy
+- `investor-cold-email`: another copy of this Skill in this source (skills/investor-cold-email) was left out; the store holds one copy
+- `investor-pitch-deck`: another copy of this Skill in this source (skills/investor-pitch-deck) was left out; the store holds one copy
+- `investor-update`: SKILL.md is a symlink
+- `investor-update`: another copy of this Skill in this source (skills/investor-update) was left out; the store holds one copy
+- `investor-update`: another copy of this Skill in this source (templates/pm-stakeholder-comms-agent/skills/investor-update) was left out; the store holds one copy
+- `invoice-generator`: another copy of this Skill in this source (skills/invoice-generator) was left out; the store holds one copy
+- `ip-lookup`: another copy of this Skill in this source (skills/ip-lookup) was left out; the store holds one copy
+- `is-this-actually-good`: another copy of this Skill in this source (skills/is-this-actually-good) was left out; the store holds one copy
+- `iso-27001-isms`: scripts/soa_coverage.py is not a plain text file (.py)
+- `iso-27001-isms`: scripts/soa_coverage.py is not a plain text file (.py)
+- `iss-tracker`: another copy of this Skill in this source (skills/iss-tracker) was left out; the store holds one copy
+- `issue-triage-live`: another copy of this Skill in this source (skills/issue-triage-live) was left out; the store holds one copy
+- `jd-decoder`: another copy of this Skill in this source (skills/jd-decoder) was left out; the store holds one copy
+- `jd-gap-score`: scripts/jd_gap.py is not a plain text file (.py)
+- `jd-gap-score`: scripts/jd_gap.py is not a plain text file (.py)
+- `job-application`: another copy of this Skill in this source (skills/job-application) was left out; the store holds one copy
+- `job-description-writer`: another copy of this Skill in this source (skills/job-description-writer) was left out; the store holds one copy
+- `job-description-writer`: another copy of this Skill in this source (skills-i18n/fr/job-description-writer) was left out; the store holds one copy
+- `job-search-with-a-record`: another copy of this Skill in this source (skills/job-search-with-a-record) was left out; the store holds one copy
+- `job-story-mapper`: SKILL.md is a symlink
+- `job-story-mapper`: another copy of this Skill in this source (skills/job-story-mapper) was left out; the store holds one copy
+- `job-story-mapper`: another copy of this Skill in this source (templates/pm-discovery-agent/skills/job-story-mapper) was left out; the store holds one copy
+- `journaling-prompts`: another copy of this Skill in this source (skills/journaling-prompts) was left out; the store holds one copy
+- `jp-resignation-procedures`: another copy of this Skill in this source (skills/jp-resignation-procedures) was left out; the store holds one copy
+- `jp-ringisho`: another copy of this Skill in this source (skills/jp-ringisho) was left out; the store holds one copy
+- `jp-tax-return`: another copy of this Skill in this source (skills/jp-tax-return) was left out; the store holds one copy
+- `jp-year-end-adjustment`: another copy of this Skill in this source (skills/jp-year-end-adjustment) was left out; the store holds one copy
+- `jury-duty-guide`: another copy of this Skill in this source (skills/jury-duty-guide) was left out; the store holds one copy
+- `jury-duty-navigator`: another copy of this Skill in this source (skills/jury-duty-navigator) was left out; the store holds one copy
+- `karaoke-song-picker`: another copy of this Skill in this source (skills/karaoke-song-picker) was left out; the store holds one copy
+- `kb-audit`: another copy of this Skill in this source (skills/kb-audit) was left out; the store holds one copy
+- `ke-mpesa-reversal-dispute`: another copy of this Skill in this source (skills/ke-mpesa-reversal-dispute) was left out; the store holds one copy
+- `ke-payslip-decoder`: another copy of this Skill in this source (skills/ke-payslip-decoder) was left out; the store holds one copy
+- `kids-online-safety-plan`: another copy of this Skill in this source (skills/kids-online-safety-plan) was left out; the store holds one copy
+- `knowledge-gap-map`: another copy of this Skill in this source (skills/knowledge-gap-map) was left out; the store holds one copy
+- `knowledge-gardening`: another copy of this Skill in this source (skills/knowledge-gardening) was left out; the store holds one copy
+- `kpi-tracker-design`: another copy of this Skill in this source (skills/kpi-tracker-design) was left out; the store holds one copy
+- `kr-cover-letter`: another copy of this Skill in this source (skills/kr-cover-letter) was left out; the store holds one copy
+- `kr-severance-pay`: scripts/kr_severance.py is not a plain text file (.py)
+- `kr-severance-pay`: scripts/kr_severance.py is not a plain text file (.py)
+- `kr-work-report`: another copy of this Skill in this source (skills/kr-work-report) was left out; the store holds one copy
+- `kr-year-end-tax-settlement`: another copy of this Skill in this source (skills/kr-year-end-tax-settlement) was left out; the store holds one copy
+- `ksa-labour-contract-decoder`: another copy of this Skill in this source (skills/ksa-labour-contract-decoder) was left out; the store holds one copy
+- `ksa-labour-contract-decoder`: another copy of this Skill in this source (skills-i18n/ar/ksa-labour-contract-decoder) was left out; the store holds one copy
+- `kyc-escalation`: another copy of this Skill in this source (skills/kyc-escalation) was left out; the store holds one copy
+- `landing-page-copy`: another copy of this Skill in this source (skills/landing-page-copy) was left out; the store holds one copy
+- `language-learning-plan`: another copy of this Skill in this source (skills/language-learning-plan) was left out; the store holds one copy
+- `last-30-days-research`: another copy of this Skill in this source (skills/last-30-days-research) was left out; the store holds one copy
+- `last-two-weeks-handoff`: another copy of this Skill in this source (skills/last-two-weeks-handoff) was left out; the store holds one copy
+- `late-invoice-chaser`: another copy of this Skill in this source (skills/late-invoice-chaser) was left out; the store holds one copy
+- `late-invoice-escalation`: another copy of this Skill in this source (skills/late-invoice-escalation) was left out; the store holds one copy
+- `launch-post`: another copy of this Skill in this source (skills/launch-post) was left out; the store holds one copy
+- `launch-readiness`: another copy of this Skill in this source (skills/launch-readiness) was left out; the store holds one copy
+- `launch-tiering-framework`: another copy of this Skill in this source (skills/launch-tiering-framework) was left out; the store holds one copy
+- `layoff-announcement`: another copy of this Skill in this source (skills/layoff-announcement) was left out; the store holds one copy
+- `layoff-communication`: another copy of this Skill in this source (skills/layoff-communication) was left out; the store holds one copy
+- `layoff-financial-triage`: another copy of this Skill in this source (skills/layoff-financial-triage) was left out; the store holds one copy
+- `layoff-first-72-hours`: another copy of this Skill in this source (skills/layoff-first-72-hours) was left out; the store holds one copy
+- `learn-anything-roadmap`: another copy of this Skill in this source (skills/learn-anything-roadmap) was left out; the store holds one copy
+- `learn-from-a-project`: another copy of this Skill in this source (skills/learn-from-a-project) was left out; the store holds one copy
+- `lease-decoder`: another copy of this Skill in this source (skills/lease-decoder) was left out; the store holds one copy
+- `lease-decoder`: another copy of this Skill in this source (skills-i18n/es/lease-decoder) was left out; the store holds one copy
+- `lease-decoder`: another copy of this Skill in this source (skills-i18n/id/lease-decoder) was left out; the store holds one copy
+- `lease-decoder`: another copy of this Skill in this source (skills-i18n/ja/lease-decoder) was left out; the store holds one copy
+- `lease-decoder`: another copy of this Skill in this source (skills-i18n/vi/lease-decoder) was left out; the store holds one copy
+- `lease-decoder`: another copy of this Skill in this source (skills-i18n/zh/lease-decoder) was left out; the store holds one copy
+- `legal-brief`: another copy of this Skill in this source (skills/legal-brief) was left out; the store holds one copy
+- `lemon-law-check`: another copy of this Skill in this source (skills/lemon-law-check) was left out; the store holds one copy
+- `lending-risk-brief`: another copy of this Skill in this source (skills/lending-risk-brief) was left out; the store holds one copy
+- `lesson-plan`: another copy of this Skill in this source (skills/lesson-plan) was left out; the store holds one copy
+- `lesson-plan-builder`: another copy of this Skill in this source (skills/lesson-plan-builder) was left out; the store holds one copy
+- `licence-notice-auditor`: another copy of this Skill in this source (skills/licence-notice-auditor) was left out; the store holds one copy
+- `lifecycle-crm-plan`: another copy of this Skill in this source (skills/lifecycle-crm-plan) was left out; the store holds one copy
+- `linkedin-profile`: another copy of this Skill in this source (skills/linkedin-profile) was left out; the store holds one copy
+- `linkedin-profile`: another copy of this Skill in this source (skills-i18n/de/linkedin-profile) was left out; the store holds one copy
+- `linkedin-profile`: another copy of this Skill in this source (skills-i18n/fr/linkedin-profile) was left out; the store holds one copy
+- `linkedin-profile`: another copy of this Skill in this source (skills-i18n/id/linkedin-profile) was left out; the store holds one copy
+- `linkedin-profile`: another copy of this Skill in this source (skills-i18n/vi/linkedin-profile) was left out; the store holds one copy
+- `literature-review`: another copy of this Skill in this source (plugins/pm-research/skills/literature-review) was left out; the store holds one copy
+- `literature-review`: another copy of this Skill in this source (skills/literature-review) was left out; the store holds one copy
+- `literature-review-builder`: another copy of this Skill in this source (skills/literature-review-builder) was left out; the store holds one copy
+- `livestream-sales-script`: another copy of this Skill in this source (skills/livestream-sales-script) was left out; the store holds one copy
+- `livestream-sales-script`: another copy of this Skill in this source (skills-i18n/zh/livestream-sales-script) was left out; the store holds one copy
+- `llm-cost-latency-budget`: another copy of this Skill in this source (plugins/pm-ai/skills/llm-cost-latency-budget) was left out; the store holds one copy
+- `llm-cost-latency-budget`: another copy of this Skill in this source (skills/llm-cost-latency-budget) was left out; the store holds one copy
+- `llm-guardrails-spec`: another copy of this Skill in this source (skills/llm-guardrails-spec) was left out; the store holds one copy
+- `load-testing-plan`: another copy of this Skill in this source (skills/load-testing-plan) was left out; the store holds one copy
+- `loan-covenant-review`: another copy of this Skill in this source (skills/loan-covenant-review) was left out; the store holds one copy
+- `loan-decoder`: another copy of this Skill in this source (skills/loan-decoder) was left out; the store holds one copy
+- `loan-decoder`: another copy of this Skill in this source (skills-i18n/es/loan-decoder) was left out; the store holds one copy
+- `loan-decoder`: another copy of this Skill in this source (skills-i18n/id/loan-decoder) was left out; the store holds one copy
+- `loan-decoder`: another copy of this Skill in this source (skills-i18n/ja/loan-decoder) was left out; the store holds one copy
+- `loan-decoder`: another copy of this Skill in this source (skills-i18n/vi/loan-decoder) was left out; the store holds one copy
+- `loan-decoder`: another copy of this Skill in this source (skills-i18n/zh/loan-decoder) was left out; the store holds one copy
+- `local-dev-setup`: another copy of this Skill in this source (skills/local-dev-setup) was left out; the store holds one copy
+- `localization-brief`: another copy of this Skill in this source (skills/localization-brief) was left out; the store holds one copy
+- `logistics-incident-report`: another copy of this Skill in this source (skills/logistics-incident-report) was left out; the store holds one copy
+- `long-distance-relationship-plan`: another copy of this Skill in this source (skills/long-distance-relationship-plan) was left out; the store holds one copy
+- `long-term-care-options`: another copy of this Skill in this source (skills/long-term-care-options) was left out; the store holds one copy
+- `lost-documents-replacement`: another copy of this Skill in this source (skills/lost-documents-replacement) was left out; the store holds one copy
+- `love-letter-helper`: another copy of this Skill in this source (skills/love-letter-helper) was left out; the store holds one copy
+- `lower-my-bill`: another copy of this Skill in this source (skills/lower-my-bill) was left out; the store holds one copy
+- `machiavelli-counsel`: another copy of this Skill in this source (skills/machiavelli-counsel) was left out; the store holds one copy
+- `maintainer-triage`: another copy of this Skill in this source (skills/maintainer-triage) was left out; the store holds one copy
+- `make-me-a-skill`: another copy of this Skill in this source (skills/make-me-a-skill) was left out; the store holds one copy
+- `malaysia-epf-explainer`: another copy of this Skill in this source (skills/malaysia-epf-explainer) was left out; the store holds one copy
+- `manager-first-90-days`: another copy of this Skill in this source (skills/manager-first-90-days) was left out; the store holds one copy
+- `managing-up`: another copy of this Skill in this source (skills/managing-up) was left out; the store holds one copy
+- `market-stall-pricing`: another copy of this Skill in this source (skills/market-stall-pricing) was left out; the store holds one copy
+- `marketing-funnel-plan`: another copy of this Skill in this source (skills/marketing-funnel-plan) was left out; the store holds one copy
+- `marketing-psychology`: another copy of this Skill in this source (skills/marketing-psychology) was left out; the store holds one copy
+- `marketing-psychology`: the name is already taken by marketing
+- `marketplace-listing-optimizer`: another copy of this Skill in this source (skills/marketplace-listing-optimizer) was left out; the store holds one copy
+- `masking-budget`: another copy of this Skill in this source (skills/masking-budget) was left out; the store holds one copy
+- `match-review`: another copy of this Skill in this source (skills/match-review) was left out; the store holds one copy
+- `mcp-server-spec`: another copy of this Skill in this source (skills/mcp-server-spec) was left out; the store holds one copy
+- `meal-prep-os`: another copy of this Skill in this source (skills/meal-prep-os) was left out; the store holds one copy
+- `media-pitch`: SKILL.md is a symlink
+- `media-pitch`: another copy of this Skill in this source (skills/media-pitch) was left out; the store holds one copy
+- `media-pitch`: another copy of this Skill in this source (templates/pm-launch-agent/skills/media-pitch) was left out; the store holds one copy
+- `medical-appointment-advocate`: another copy of this Skill in this source (skills/medical-appointment-advocate) was left out; the store holds one copy
+- `medical-bill-decoder`: another copy of this Skill in this source (skills/medical-bill-decoder) was left out; the store holds one copy
+- `medical-bill-decoder`: another copy of this Skill in this source (skills-i18n/es/medical-bill-decoder) was left out; the store holds one copy
+- `medical-bill-decoder`: another copy of this Skill in this source (skills-i18n/id/medical-bill-decoder) was left out; the store holds one copy
+- `medical-bill-decoder`: another copy of this Skill in this source (skills-i18n/ja/medical-bill-decoder) was left out; the store holds one copy
+- `medical-bill-decoder`: another copy of this Skill in this source (skills-i18n/vi/medical-bill-decoder) was left out; the store holds one copy
+- `medical-bill-decoder`: another copy of this Skill in this source (skills-i18n/zh/medical-bill-decoder) was left out; the store holds one copy
+- `medical-records-request`: another copy of this Skill in this source (skills/medical-records-request) was left out; the store holds one copy
+- `medication-management-system`: another copy of this Skill in this source (skills/medication-management-system) was left out; the store holds one copy
+- `medication-therapy-review`: another copy of this Skill in this source (skills/medication-therapy-review) was left out; the store holds one copy
+- `meeting-action-extractor`: another copy of this Skill in this source (skills/meeting-action-extractor) was left out; the store holds one copy
+- `meeting-cost-meter`: another copy of this Skill in this source (skills/meeting-cost-meter) was left out; the store holds one copy
+- `meeting-notes`: another copy of this Skill in this source (skills/meeting-notes) was left out; the store holds one copy
+- `meeting-notes`: another copy of this Skill in this source (skills-i18n/es/meeting-notes) was left out; the store holds one copy
+- `meeting-notes`: another copy of this Skill in this source (skills-i18n/id/meeting-notes) was left out; the store holds one copy
+- `meeting-notes`: another copy of this Skill in this source (skills-i18n/vi/meeting-notes) was left out; the store holds one copy
+- `meeting-notes`: another copy of this Skill in this source (skills-i18n/zh/meeting-notes) was left out; the store holds one copy
+- `meeting-notes`: another copy of this Skill in this source (skills-i18n/zh-TW/meeting-notes) was left out; the store holds one copy
+- `meeting-notes`: the name is already taken by aas
+- `meeting-prep-live`: another copy of this Skill in this source (skills/meeting-prep-live) was left out; the store holds one copy
+- `meeting-prep-pack`: another copy of this Skill in this source (skills/meeting-prep-pack) was left out; the store holds one copy
+- `meeting-room-etiquette`: another copy of this Skill in this source (skills/meeting-room-etiquette) was left out; the store holds one copy
+- `meltdown-map`: another copy of this Skill in this source (skills/meltdown-map) was left out; the store holds one copy
+- `memoir-story-capture`: another copy of this Skill in this source (skills/memoir-story-capture) was left out; the store holds one copy
+- `memory-file-maintenance`: another copy of this Skill in this source (skills/memory-file-maintenance) was left out; the store holds one copy
+- `menu-cost-engineer`: another copy of this Skill in this source (skills/menu-cost-engineer) was left out; the store holds one copy
+- `message-for-the-moment`: another copy of this Skill in this source (skills/message-for-the-moment) was left out; the store holds one copy
+- `messaging-framework`: another copy of this Skill in this source (skills/messaging-framework) was left out; the store holds one copy
+- `metric-gaslighting-detector`: another copy of this Skill in this source (skills/metric-gaslighting-detector) was left out; the store holds one copy
+- `metric-semantic-layer`: another copy of this Skill in this source (skills/metric-semantic-layer) was left out; the store holds one copy
+- `metric-tree-builder`: another copy of this Skill in this source (skills/metric-tree-builder) was left out; the store holds one copy
+- `metrics-framework`: another copy of this Skill in this source (skills/metrics-framework) was left out; the store holds one copy
+- `metrics-framework`: another copy of this Skill in this source (skills-i18n/zh/metrics-framework) was left out; the store holds one copy
+- `metrics-framework`: another copy of this Skill in this source (skills-i18n/zh-TW/metrics-framework) was left out; the store holds one copy
+- `micro-retirement-planner`: another copy of this Skill in this source (skills/micro-retirement-planner) was left out; the store holds one copy
+- `microcopy-writer`: another copy of this Skill in this source (skills/microcopy-writer) was left out; the store holds one copy
+- `microloan-comparison`: another copy of this Skill in this source (skills/microloan-comparison) was left out; the store holds one copy
+- `microservices-decomposition`: another copy of this Skill in this source (skills/microservices-decomposition) was left out; the store holds one copy
+- `migration-day-runbook`: another copy of this Skill in this source (skills/migration-day-runbook) was left out; the store holds one copy
+- `mind-map`: another copy of this Skill in this source (skills/mind-map) was left out; the store holds one copy
+- `model-card`: another copy of this Skill in this source (skills/model-card) was left out; the store holds one copy
+- `model-migration-plan`: another copy of this Skill in this source (skills/model-migration-plan) was left out; the store holds one copy
+- `model-prompt-pack`: another copy of this Skill in this source (skills/model-prompt-pack) was left out; the store holds one copy
+- `model-selection-advisor`: another copy of this Skill in this source (skills/model-selection-advisor) was left out; the store holds one copy
+- `momentum-map`: another copy of this Skill in this source (skills/momentum-map) was left out; the store holds one copy
+- `money-mindset-reset`: another copy of this Skill in this source (skills/money-mindset-reset) was left out; the store holds one copy
+- `money-priorities-order`: another copy of this Skill in this source (skills/money-priorities-order) was left out; the store holds one copy
+- `monitoring-setup-guide`: another copy of this Skill in this source (skills/monitoring-setup-guide) was left out; the store holds one copy
+- `morning-brief-designer`: another copy of this Skill in this source (skills/morning-brief-designer) was left out; the store holds one copy
+- `morning-intelligence`: another copy of this Skill in this source (plugins/pm-operations/skills/morning-intelligence) was left out; the store holds one copy
+- `morning-intelligence`: another copy of this Skill in this source (skills/morning-intelligence) was left out; the store holds one copy
+- `moving-company-estimate-decoder`: another copy of this Skill in this source (skills/moving-company-estimate-decoder) was left out; the store holds one copy
+- `moving-house-checklist`: another copy of this Skill in this source (skills/moving-house-checklist) was left out; the store holds one copy
+- `moving-quote-decoder`: another copy of this Skill in this source (skills/moving-quote-decoder) was left out; the store holds one copy
+- `multi-source-signal-synthesiser`: another copy of this Skill in this source (skills/multi-source-signal-synthesiser) was left out; the store holds one copy
+- `mx-declaracion-anual-prep`: another copy of this Skill in this source (skills/mx-declaracion-anual-prep) was left out; the store holds one copy
+- `mx-finiquito-liquidacion`: another copy of this Skill in this source (skills/mx-finiquito-liquidacion) was left out; the store holds one copy
+- `my-energy-map`: another copy of this Skill in this source (skills/my-energy-map) was left out; the store holds one copy
+- `my-failure-museum`: another copy of this Skill in this source (skills/my-failure-museum) was left out; the store holds one copy
+- `name-change-navigator`: another copy of this Skill in this source (skills/name-change-navigator) was left out; the store holds one copy
+- `name-what-im-feeling`: another copy of this Skill in this source (skills/name-what-im-feeling) was left out; the store holds one copy
+- `nda-analyser`: another copy of this Skill in this source (skills/nda-analyser) was left out; the store holds one copy
+- `neighbor-dispute-resolver`: another copy of this Skill in this source (skills/neighbor-dispute-resolver) was left out; the store holds one copy
+- `net-worth-statement`: another copy of this Skill in this source (skills/net-worth-statement) was left out; the store holds one copy
+- `networking-outreach`: another copy of this Skill in this source (skills/networking-outreach) was left out; the store holds one copy
+- `new-baby-logistics`: another copy of this Skill in this source (skills/new-baby-logistics) was left out; the store holds one copy
+- `new-manager-first-90-days`: another copy of this Skill in this source (skills/new-manager-first-90-days) was left out; the store holds one copy
+- `new-parent-logistics`: another copy of this Skill in this source (skills/new-parent-logistics) was left out; the store holds one copy
+- `newcomer-school-enrolment`: another copy of this Skill in this source (skills/newcomer-school-enrolment) was left out; the store holds one copy
+- `newsletter-digest-brief`: another copy of this Skill in this source (skills/newsletter-digest-brief) was left out; the store holds one copy
+- `newsletter-writer`: another copy of this Skill in this source (skills/newsletter-writer) was left out; the store holds one copy
+- `ng-payslip-decoder`: another copy of this Skill in this source (skills/ng-payslip-decoder) was left out; the store holds one copy
+- `ng-pension-rsa-guide`: another copy of this Skill in this source (skills/ng-pension-rsa-guide) was left out; the store holds one copy
+- `note-taking-system`: another copy of this Skill in this source (skills/note-taking-system) was left out; the store holds one copy
+- `notebooklm-connector`: another copy of this Skill in this source (skills/notebooklm-connector) was left out; the store holds one copy
+- `notes-humanizer`: another copy of this Skill in this source (skills/notes-humanizer) was left out; the store holds one copy
+- `notify-everyone-of-a-death`: another copy of this Skill in this source (skills/notify-everyone-of-a-death) was left out; the store holds one copy
+- `notion-db-hygiene`: another copy of this Skill in this source (skills/notion-db-hygiene) was left out; the store holds one copy
+- `nt-translator`: another copy of this Skill in this source (skills/nt-translator) was left out; the store holds one copy
+- `nursing-care-plan`: another copy of this Skill in this source (skills/nursing-care-plan) was left out; the store holds one copy
+- `nursing-family-update`: another copy of this Skill in this source (skills/nursing-family-update) was left out; the store holds one copy
+- `nursing-incident-report`: another copy of this Skill in this source (skills/nursing-incident-report) was left out; the store holds one copy
+- `nursing-shift-handover`: another copy of this Skill in this source (skills/nursing-shift-handover) was left out; the store holds one copy
+- `offer-comparison`: scripts/offer_comparison.py is not a plain text file (.py)
+- `offer-comparison`: scripts/offer_comparison.py is not a plain text file (.py)
+- `offer-comparison`: another copy of this Skill in this source (skills-i18n/vi/offer-comparison) was left out; the store holds one copy
+- `offer-comparison`: another copy of this Skill in this source (skills-i18n/zh/offer-comparison) was left out; the store holds one copy
+- `offer-comparison`: another copy of this Skill in this source (skills-i18n/zh-TW/offer-comparison) was left out; the store holds one copy
+- `offer-letter`: another copy of this Skill in this source (skills/offer-letter) was left out; the store holds one copy
+- `office-hours-design`: another copy of this Skill in this source (skills/office-hours-design) was left out; the store holds one copy
+- `office-move-runbook`: another copy of this Skill in this source (skills/office-move-runbook) was left out; the store holds one copy
+- `offsite-planner`: another copy of this Skill in this source (skills/offsite-planner) was left out; the store holds one copy
+- `okr-builder`: another copy of this Skill in this source (skills/okr-builder) was left out; the store holds one copy
+- `okr-builder`: another copy of this Skill in this source (skills-i18n/id/okr-builder) was left out; the store holds one copy
+- `okr-builder`: another copy of this Skill in this source (skills-i18n/vi/okr-builder) was left out; the store holds one copy
+- `okr-builder`: another copy of this Skill in this source (skills-i18n/zh/okr-builder) was left out; the store holds one copy
+- `okr-builder`: another copy of this Skill in this source (skills-i18n/zh-TW/okr-builder) was left out; the store holds one copy
+- `onboarding-buddy-plan`: another copy of this Skill in this source (skills/onboarding-buddy-plan) was left out; the store holds one copy
+- `onboarding-copy`: another copy of this Skill in this source (skills/onboarding-copy) was left out; the store holds one copy
+- `onboarding-plan`: another copy of this Skill in this source (skills/onboarding-plan) was left out; the store holds one copy
+- `oncall-handoff`: another copy of this Skill in this source (skills/oncall-handoff) was left out; the store holds one copy
+- `oncall-runbook`: another copy of this Skill in this source (skills/oncall-runbook) was left out; the store holds one copy
+- `one-hard-truth`: another copy of this Skill in this source (skills/one-hard-truth) was left out; the store holds one copy
+- `one-on-one-prep`: another copy of this Skill in this source (skills/one-on-one-prep) was left out; the store holds one copy
+- `one-pager`: another copy of this Skill in this source (skills/one-pager) was left out; the store holds one copy
+- `one-pager`: the name is already taken by effectivehtml
+- `open-house-plan`: another copy of this Skill in this source (skills/open-house-plan) was left out; the store holds one copy
+- `opposing-counsel`: another copy of this Skill in this source (skills/opposing-counsel) was left out; the store holds one copy
+- `oral-history-kit`: another copy of this Skill in this source (skills/oral-history-kit) was left out; the store holds one copy
+- `org-chart`: another copy of this Skill in this source (skills/org-chart) was left out; the store holds one copy
+- `out-of-office-designer`: another copy of this Skill in this source (skills/out-of-office-designer) was left out; the store holds one copy
+- `outcome-tracker`: scripts/outcome_calibration.py is not a plain text file (.py)
+- `outcome-tracker`: scripts/outcome_calibration.py is not a plain text file (.py)
+- `outline-before-prose`: another copy of this Skill in this source (skills/outline-before-prose) was left out; the store holds one copy
+- `outreach-message`: another copy of this Skill in this source (skills/outreach-message) was left out; the store holds one copy
+- `oversharing-audit`: another copy of this Skill in this source (skills/oversharing-audit) was left out; the store holds one copy
+- `overwhelm-triage`: another copy of this Skill in this source (skills/overwhelm-triage) was left out; the store holds one copy
+- `package-health`: another copy of this Skill in this source (skills/package-health) was left out; the store holds one copy
+- `paid-acquisition-plan`: another copy of this Skill in this source (skills/paid-acquisition-plan) was left out; the store holds one copy
+- `panel-of-experts`: another copy of this Skill in this source (skills/panel-of-experts) was left out; the store holds one copy
+- `parent-communication`: another copy of this Skill in this source (skills/parent-communication) was left out; the store holds one copy
+- `parent-conference-prep`: another copy of this Skill in this source (skills/parent-conference-prep) was left out; the store holds one copy
+- `parent-teacher-conference-prep`: another copy of this Skill in this source (skills/parent-teacher-conference-prep) was left out; the store holds one copy
+- `partnership-proposal`: another copy of this Skill in this source (skills/partnership-proposal) was left out; the store holds one copy
+- `passive-income-reality-check`: another copy of this Skill in this source (skills/passive-income-reality-check) was left out; the store holds one copy
+- `password-and-2fa-setup`: another copy of this Skill in this source (skills/password-and-2fa-setup) was left out; the store holds one copy
+- `patient-communication`: another copy of this Skill in this source (skills/patient-communication) was left out; the store holds one copy
+- `patient-education-explainer`: another copy of this Skill in this source (skills/patient-education-explainer) was left out; the store holds one copy
+- `pay-stub-decoder`: another copy of this Skill in this source (skills/pay-stub-decoder) was left out; the store holds one copy
+- `payroll-eve-check`: another copy of this Skill in this source (skills/payroll-eve-check) was left out; the store holds one copy
+- `paywall-optimization`: another copy of this Skill in this source (skills/paywall-optimization) was left out; the store holds one copy
+- `pentest-report`: another copy of this Skill in this source (skills/pentest-report) was left out; the store holds one copy
+- `performance-budget`: another copy of this Skill in this source (skills/performance-budget) was left out; the store holds one copy
+- `performance-review`: another copy of this Skill in this source (skills/performance-review) was left out; the store holds one copy
+- `performance-review`: another copy of this Skill in this source (skills-i18n/id/performance-review) was left out; the store holds one copy
+- `performance-review`: another copy of this Skill in this source (skills-i18n/vi/performance-review) was left out; the store holds one copy
+- `perimenopause-navigator`: another copy of this Skill in this source (skills/perimenopause-navigator) was left out; the store holds one copy
+- `permit-navigator`: another copy of this Skill in this source (skills/permit-navigator) was left out; the store holds one copy
+- `personal-bio`: another copy of this Skill in this source (skills/personal-bio) was left out; the store holds one copy
+- `personal-bio`: another copy of this Skill in this source (skills-i18n/de/personal-bio) was left out; the store holds one copy
+- `personal-bio`: another copy of this Skill in this source (skills-i18n/fr/personal-bio) was left out; the store holds one copy
+- `personal-bio`: another copy of this Skill in this source (skills-i18n/id/personal-bio) was left out; the store holds one copy
+- `personal-bio`: another copy of this Skill in this source (skills-i18n/vi/personal-bio) was left out; the store holds one copy
+- `personal-board-of-directors`: another copy of this Skill in this source (skills/personal-board-of-directors) was left out; the store holds one copy
+- `personal-operating-manual`: another copy of this Skill in this source (skills/personal-operating-manual) was left out; the store holds one copy
+- `personal-statement`: another copy of this Skill in this source (skills/personal-statement) was left out; the store holds one copy
+- `personal-wip-limits`: another copy of this Skill in this source (skills/personal-wip-limits) was left out; the store holds one copy
+- `persuasion-brief`: another copy of this Skill in this source (skills/persuasion-brief) was left out; the store holds one copy
+- `pharmacy-counselling-script`: another copy of this Skill in this source (skills/pharmacy-counselling-script) was left out; the store holds one copy
+- `phd-supervisor-update`: another copy of this Skill in this source (skills/phd-supervisor-update) was left out; the store holds one copy
+- `phishing-triage`: another copy of this Skill in this source (skills/phishing-triage) was left out; the store holds one copy
+- `photo-library-rescue`: another copy of this Skill in this source (skills/photo-library-rescue) was left out; the store holds one copy
+- `physio-discharge-summary`: another copy of this Skill in this source (skills/physio-discharge-summary) was left out; the store holds one copy
+- `physio-initial-assessment`: another copy of this Skill in this source (skills/physio-initial-assessment) was left out; the store holds one copy
+- `physio-progress-note`: another copy of this Skill in this source (skills/physio-progress-note) was left out; the store holds one copy
+- `pip-responder`: another copy of this Skill in this source (skills/pip-responder) was left out; the store holds one copy
+- `pip-writer`: another copy of this Skill in this source (skills/pip-writer) was left out; the store holds one copy
+- `pipl-gdpr-crosswalk`: another copy of this Skill in this source (skills/pipl-gdpr-crosswalk) was left out; the store holds one copy
+- `pipl-gdpr-crosswalk`: another copy of this Skill in this source (skills-i18n/zh/pipl-gdpr-crosswalk) was left out; the store holds one copy
+- `pitch-vs-teach`: another copy of this Skill in this source (skills/pitch-vs-teach) was left out; the store holds one copy
+- `pivot-analysis-planner`: another copy of this Skill in this source (skills/pivot-analysis-planner) was left out; the store holds one copy
+- `pixel-gif-maker`: scripts/pixel_gif.py is not a plain text file (.py)
+- `plain-language-rewrite`: another copy of this Skill in this source (skills/plain-language-rewrite) was left out; the store holds one copy
+- `plan-my-day`: another copy of this Skill in this source (skills/plan-my-day) was left out; the store holds one copy
+- `planning-application-statement`: another copy of this Skill in this source (skills/planning-application-statement) was left out; the store holds one copy
+- `playwright-cli-pointer`: another copy of this Skill in this source (skills/playwright-cli-pointer) was left out; the store holds one copy
+- `pm-weekly-review`: another copy of this Skill in this source (plugins/pm-rituals/skills/pm-weekly-review) was left out; the store holds one copy
+- `pm-weekly-review`: another copy of this Skill in this source (skills/pm-weekly-review) was left out; the store holds one copy
+- `poke-holes-in-this`: another copy of this Skill in this source (skills/poke-holes-in-this) was left out; the store holds one copy
+- `policy-drafter`: another copy of this Skill in this source (skills/policy-drafter) was left out; the store holds one copy
+- `policy-memo`: another copy of this Skill in this source (skills/policy-memo) was left out; the store holds one copy
+- `policy-renewal-review`: another copy of this Skill in this source (skills/policy-renewal-review) was left out; the store holds one copy
+- `portfolio-page`: another copy of this Skill in this source (skills/portfolio-page) was left out; the store holds one copy
+- `post-event-debrief`: another copy of this Skill in this source (skills/post-event-debrief) was left out; the store holds one copy
+- `posture-reset-plan`: another copy of this Skill in this source (skills/posture-reset-plan) was left out; the store holds one copy
+- `power-of-attorney-explainer`: another copy of this Skill in this source (skills/power-of-attorney-explainer) was left out; the store holds one copy
+- `power-outage-plan`: another copy of this Skill in this source (skills/power-outage-plan) was left out; the store holds one copy
+- `pptx-slide-auditor`: another copy of this Skill in this source (skills/pptx-slide-auditor) was left out; the store holds one copy
+- `pr-crisis-response`: another copy of this Skill in this source (skills/pr-crisis-response) was left out; the store holds one copy
+- `pr-description`: another copy of this Skill in this source (skills/pr-description) was left out; the store holds one copy
+- `pr-description-live`: another copy of this Skill in this source (skills/pr-description-live) was left out; the store holds one copy
+- `pr-description-writer`: another copy of this Skill in this source (skills/pr-description-writer) was left out; the store holds one copy
+- `prd-template`: another copy of this Skill in this source (skills/prd-template) was left out; the store holds one copy
+- `prd-template`: another copy of this Skill in this source (skills-i18n/es/prd-template) was left out; the store holds one copy
+- `prd-template`: another copy of this Skill in this source (skills-i18n/id/prd-template) was left out; the store holds one copy
+- `prd-template`: another copy of this Skill in this source (skills-i18n/vi/prd-template) was left out; the store holds one copy
+- `prd-template`: another copy of this Skill in this source (skills-i18n/zh/prd-template) was left out; the store holds one copy
+- `prd-template`: another copy of this Skill in this source (skills-i18n/zh-TW/prd-template) was left out; the store holds one copy
+- `pre-mortem-panel`: another copy of this Skill in this source (skills/pre-mortem-panel) was left out; the store holds one copy
+- `premortem-assassin`: another copy of this Skill in this source (skills/premortem-assassin) was left out; the store holds one copy
+- `prepare-for-duet`: another copy of this Skill in this source (skills/prepare-for-duet) was left out; the store holds one copy
+- `prescription-cost-navigator`: another copy of this Skill in this source (skills/prescription-cost-navigator) was left out; the store holds one copy
+- `prescription-refusal-to-fill`: another copy of this Skill in this source (skills/prescription-refusal-to-fill) was left out; the store holds one copy
+- `presenter-notes`: another copy of this Skill in this source (skills/presenter-notes) was left out; the store holds one copy
+- `press-kit-epk`: another copy of this Skill in this source (skills/press-kit-epk) was left out; the store holds one copy
+- `press-release`: another copy of this Skill in this source (skills/press-release) was left out; the store holds one copy
+- `price-increase-announcement`: another copy of this Skill in this source (skills/price-increase-announcement) was left out; the store holds one copy
+- `price-match-request`: another copy of this Skill in this source (skills/price-match-request) was left out; the store holds one copy
+- `pricing-calculator`: scripts/pricing.py is not a plain text file (.py)
+- `pricing-calculator`: scripts/pricing.py is not a plain text file (.py)
+- `pricing-page-copy`: another copy of this Skill in this source (skills/pricing-page-copy) was left out; the store holds one copy
+- `pricing-sensitivity-model`: scripts/van_westendorp.py is not a plain text file (.py)
+- `pricing-sensitivity-model`: scripts/van_westendorp.py is not a plain text file (.py)
+- `pricing-strategy`: another copy of this Skill in this source (skills/pricing-strategy) was left out; the store holds one copy
+- `pricing-strategy`: the name is already taken by pm
+- `pricing-your-services`: another copy of this Skill in this source (skills/pricing-your-services) was left out; the store holds one copy
+- `prior-authorization-letter`: another copy of this Skill in this source (skills/prior-authorization-letter) was left out; the store holds one copy
+- `privacy-policy-drafter`: another copy of this Skill in this source (skills/privacy-policy-drafter) was left out; the store holds one copy
+- `process-documentation`: another copy of this Skill in this source (skills/process-documentation) was left out; the store holds one copy
+- `product-description`: another copy of this Skill in this source (skills/product-description) was left out; the store holds one copy
+- `product-health-analysis`: another copy of this Skill in this source (skills/product-health-analysis) was left out; the store holds one copy
+- `product-launch-checklist`: SKILL.md is a symlink
+- `product-launch-checklist`: another copy of this Skill in this source (skills/product-launch-checklist) was left out; the store holds one copy
+- `product-launch-checklist`: another copy of this Skill in this source (skills-i18n/zh/product-launch-checklist) was left out; the store holds one copy
+- `product-launch-checklist`: another copy of this Skill in this source (skills-i18n/zh-TW/product-launch-checklist) was left out; the store holds one copy
+- `product-launch-checklist`: another copy of this Skill in this source (templates/pm-launch-agent/skills/product-launch-checklist) was left out; the store holds one copy
+- `product-naming`: another copy of this Skill in this source (skills/product-naming) was left out; the store holds one copy
+- `product-positioning-doc`: another copy of this Skill in this source (skills/product-positioning-doc) was left out; the store holds one copy
+- `product-recall-check`: another copy of this Skill in this source (skills/product-recall-check) was left out; the store holds one copy
+- `professional-brain`: scripts/brain_query.py is not a plain text file (.py); scripts/brain_write.py is not a plain text file (.py)
+- `professional-brain`: scripts/brain_query.py is not a plain text file (.py); scripts/brain_write.py is not a plain text file (.py)
+- `professional-translator`: another copy of this Skill in this source (skills/professional-translator) was left out; the store holds one copy
+- `profit-to-cash-walk`: another copy of this Skill in this source (skills/profit-to-cash-walk) was left out; the store holds one copy
+- `programmatic-seo`: another copy of this Skill in this source (skills/programmatic-seo) was left out; the store holds one copy
+- `programmatic-seo`: the name is already taken by marketing
+- `project-status-report`: another copy of this Skill in this source (skills/project-status-report) was left out; the store holds one copy
+- `project-status-report`: another copy of this Skill in this source (skills-i18n/de/project-status-report) was left out; the store holds one copy
+- `project-status-report`: another copy of this Skill in this source (skills-i18n/fr/project-status-report) was left out; the store holds one copy
+- `project-status-report`: another copy of this Skill in this source (skills-i18n/id/project-status-report) was left out; the store holds one copy
+- `project-status-report`: another copy of this Skill in this source (skills-i18n/vi/project-status-report) was left out; the store holds one copy
+- `promoter-draft`: another copy of this Skill in this source (skills/promoter-draft) was left out; the store holds one copy
+- `promoter-publish`: scripts/promoter_publish.py is not a plain text file (.py)
+- `promoter-publish`: scripts/promoter_publish.py is not a plain text file (.py)
+- `promoter-scan`: scripts/promoter_scan.py is not a plain text file (.py)
+- `promoter-scan`: scripts/promoter_scan.py is not a plain text file (.py)
+- `promoter-test`: scripts/promoter_test.py is not a plain text file (.py)
+- `promoter-test`: scripts/promoter_test.py is not a plain text file (.py)
+- `promotion-packet`: another copy of this Skill in this source (skills/promotion-packet) was left out; the store holds one copy
+- `promotion-plan`: another copy of this Skill in this source (skills/promotion-plan) was left out; the store holds one copy
+- `prompt-debugging`: another copy of this Skill in this source (skills/prompt-debugging) was left out; the store holds one copy
+- `prompt-library-builder`: another copy of this Skill in this source (skills/prompt-library-builder) was left out; the store holds one copy
+- `prompt-optimizer`: another copy of this Skill in this source (skills/prompt-optimizer) was left out; the store holds one copy
+- `prompt-optimizer`: the name is already taken by sentry
+- `prompt-regression-suite`: another copy of this Skill in this source (skills/prompt-regression-suite) was left out; the store holds one copy
+- `property-investment-analysis`: another copy of this Skill in this source (skills/property-investment-analysis) was left out; the store holds one copy
+- `property-listing`: another copy of this Skill in this source (skills/property-listing) was left out; the store holds one copy
+- `property-offer-letter`: another copy of this Skill in this source (skills/property-offer-letter) was left out; the store holds one copy
+- `property-tax-appeal`: another copy of this Skill in this source (skills/property-tax-appeal) was left out; the store holds one copy
+- `proposal-skeleton`: another copy of this Skill in this source (skills/proposal-skeleton) was left out; the store holds one copy
+- `proposal-writer`: another copy of this Skill in this source (skills/proposal-writer) was left out; the store holds one copy
+- `public-comment`: another copy of this Skill in this source (skills/public-comment) was left out; the store holds one copy
+- `public-holidays`: another copy of this Skill in this source (skills/public-holidays) was left out; the store holds one copy
+- `public-speaking-prep`: another copy of this Skill in this source (skills/public-speaking-prep) was left out; the store holds one copy
+- `punch-list-builder`: another copy of this Skill in this source (skills/punch-list-builder) was left out; the store holds one copy
+- `purchase-justification`: another copy of this Skill in this source (skills/purchase-justification) was left out; the store holds one copy
+- `qa-handoff-package`: another copy of this Skill in this source (skills/qa-handoff-package) was left out; the store holds one copy
+- `qa-release-signoff`: another copy of this Skill in this source (skills/qa-release-signoff) was left out; the store holds one copy
+- `qbr-deck`: another copy of this Skill in this source (skills/qbr-deck) was left out; the store holds one copy
+- `quarterly-tax-rhythm`: another copy of this Skill in this source (skills/quarterly-tax-rhythm) was left out; the store holds one copy
+- `quiz-generator`: another copy of this Skill in this source (skills/quiz-generator) was left out; the store holds one copy
+- `quote-card`: another copy of this Skill in this source (skills/quote-card) was left out; the store holds one copy
+- `raci-matrix`: another copy of this Skill in this source (skills/raci-matrix) was left out; the store holds one copy
+- `rag-architecture-review`: another copy of this Skill in this source (skills/rag-architecture-review) was left out; the store holds one copy
+- `rag-design-doc`: another copy of this Skill in this source (skills/rag-design-doc) was left out; the store holds one copy
+- `raise-vs-jump`: scripts/raise_vs_jump.py is not a plain text file (.py)
+- `raise-vs-jump`: scripts/raise_vs_jump.py is not a plain text file (.py)
+- `ranked-climb-coach`: another copy of this Skill in this source (skills/ranked-climb-coach) was left out; the store holds one copy
+- `ransomware-first-response`: another copy of this Skill in this source (skills/ransomware-first-response) was left out; the store holds one copy
+- `rate-card`: another copy of this Skill in this source (skills/rate-card) was left out; the store holds one copy
+- `reading-retention-system`: another copy of this Skill in this source (skills/reading-retention-system) was left out; the store holds one copy
+- `readme-benefit-writer`: another copy of this Skill in this source (skills/readme-benefit-writer) was left out; the store holds one copy
+- `readme-writer`: another copy of this Skill in this source (skills/readme-writer) was left out; the store holds one copy
+- `readonly-mcp-wrapper`: references/server-template.mjs is not a plain text file (.mjs)
+- `readonly-mcp-wrapper`: references/server-template.mjs is not a plain text file (.mjs)
+- `receipts-audit`: another copy of this Skill in this source (skills/receipts-audit) was left out; the store holds one copy
+- `reconnect-after-time-away`: another copy of this Skill in this source (skills/reconnect-after-time-away) was left out; the store holds one copy
+- `recovery-day-planner`: another copy of this Skill in this source (skills/recovery-day-planner) was left out; the store holds one copy
+- `recruiter-outreach`: another copy of this Skill in this source (skills/recruiter-outreach) was left out; the store holds one copy
+- `recruiter-scan-simulator`: another copy of this Skill in this source (skills/recruiter-scan-simulator) was left out; the store holds one copy
+- `recurring-meeting-pruner`: another copy of this Skill in this source (skills/recurring-meeting-pruner) was left out; the store holds one copy
+- `red-team-my-plan`: another copy of this Skill in this source (skills/red-team-my-plan) was left out; the store holds one copy
+- `red-team-review`: another copy of this Skill in this source (skills/red-team-review) was left out; the store holds one copy
+- `redundancy-consultation`: another copy of this Skill in this source (skills/redundancy-consultation) was left out; the store holds one copy
+- `refactoring-plan`: another copy of this Skill in this source (skills/refactoring-plan) was left out; the store holds one copy
+- `reference-check-script`: another copy of this Skill in this source (skills/reference-check-script) was left out; the store holds one copy
+- `reference-letter`: another copy of this Skill in this source (skills/reference-letter) was left out; the store holds one copy
+- `reference-request-kit`: another copy of this Skill in this source (skills/reference-request-kit) was left out; the store holds one copy
+- `referral-program`: another copy of this Skill in this source (skills/referral-program) was left out; the store holds one copy
+- `referral-program`: the name is already taken by templates
+- `referral-program-design`: another copy of this Skill in this source (skills/referral-program-design) was left out; the store holds one copy
+- `referral-request`: another copy of this Skill in this source (skills/referral-request) was left out; the store holds one copy
+- `refinance-breakeven`: scripts/refinance_breakeven.py is not a plain text file (.py)
+- `refinance-breakeven`: scripts/refinance_breakeven.py is not a plain text file (.py)
+- `regex-builder`: another copy of this Skill in this source (skills/regex-builder) was left out; the store holds one copy
+- `regression-test-plan`: another copy of this Skill in this source (skills/regression-test-plan) was left out; the store holds one copy
+- `regret-minimizer`: another copy of this Skill in this source (skills/regret-minimizer) was left out; the store holds one copy
+- `regulator-eyes`: another copy of this Skill in this source (skills/regulator-eyes) was left out; the store holds one copy
+- `regulatory-impact-analysis`: another copy of this Skill in this source (skills/regulatory-impact-analysis) was left out; the store holds one copy
+- `rehab-programme-design`: another copy of this Skill in this source (skills/rehab-programme-design) was left out; the store holds one copy
+- `rejection-sensitivity-reframe`: another copy of this Skill in this source (skills/rejection-sensitivity-reframe) was left out; the store holds one copy
+- `relationship-check-in`: another copy of this Skill in this source (skills/relationship-check-in) was left out; the store holds one copy
+- `release-day-countdown`: another copy of this Skill in this source (skills/release-day-countdown) was left out; the store holds one copy
+- `relocation-planner`: another copy of this Skill in this source (skills/relocation-planner) was left out; the store holds one copy
+- `renew-or-churn-call`: another copy of this Skill in this source (skills/renew-or-churn-call) was left out; the store holds one copy
+- `renewal-playbook`: another copy of this Skill in this source (skills/renewal-playbook) was left out; the store holds one copy
+- `renovation-scope-and-budget`: another copy of this Skill in this source (skills/renovation-scope-and-budget) was left out; the store holds one copy
+- `rent-increase-response`: another copy of this Skill in this source (skills/rent-increase-response) was left out; the store holds one copy
+- `rent-vs-buy`: scripts/rent_vs_buy.py is not a plain text file (.py)
+- `rent-vs-buy`: scripts/rent_vs_buy.py is not a plain text file (.py)
+- `rental-application`: another copy of this Skill in this source (skills/rental-application) was left out; the store holds one copy
+- `renting-after-disaster-damage`: another copy of this Skill in this source (skills/renting-after-disaster-damage) was left out; the store holds one copy
+- `repair-request-escalation`: another copy of this Skill in this source (skills/repair-request-escalation) was left out; the store holds one copy
+- `reply-in-their-tone`: another copy of this Skill in this source (skills/reply-in-their-tone) was left out; the store holds one copy
+- `repo-map`: scripts/repo_map.py is not a plain text file (.py)
+- `repo-map`: another copy of this Skill in this source (skills/repo-map) was left out; the store holds one copy
+- `report-a-hazard`: another copy of this Skill in this source (skills/report-a-hazard) was left out; the store holds one copy
+- `resale-flip-kit`: another copy of this Skill in this source (skills/resale-flip-kit) was left out; the store holds one copy
+- `research-protocol`: another copy of this Skill in this source (skills/research-protocol) was left out; the store holds one copy
+- `research-repo-setup`: another copy of this Skill in this source (skills/research-repo-setup) was left out; the store holds one copy
+- `resignation-letter`: another copy of this Skill in this source (skills/resignation-letter) was left out; the store holds one copy
+- `respite-care-plan`: another copy of this Skill in this source (skills/respite-care-plan) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/es/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/fr/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/id/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/ja/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/vi/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/zh/resume) was left out; the store holds one copy
+- `resume`: another copy of this Skill in this source (skills-i18n/zh-TW/resume) was left out; the store holds one copy
+- `retail-shift-handover`: another copy of this Skill in this source (skills/retail-shift-handover) was left out; the store holds one copy
+- `retention-analysis`: another copy of this Skill in this source (skills/retention-analysis) was left out; the store holds one copy
+- `retention-loop-design`: another copy of this Skill in this source (skills/retention-loop-design) was left out; the store holds one copy
+- `retro-analysis`: another copy of this Skill in this source (skills/retro-analysis) was left out; the store holds one copy
+- `retro-analysis`: another copy of this Skill in this source (skills-i18n/fr/retro-analysis) was left out; the store holds one copy
+- `retro-analysis`: another copy of this Skill in this source (skills-i18n/id/retro-analysis) was left out; the store holds one copy
+- `retro-analysis`: another copy of this Skill in this source (skills-i18n/vi/retro-analysis) was left out; the store holds one copy
+- `retro-analysis`: another copy of this Skill in this source (skills-i18n/zh/retro-analysis) was left out; the store holds one copy
+- `retro-analysis`: another copy of this Skill in this source (skills-i18n/zh-TW/retro-analysis) was left out; the store holds one copy
+- `return-refund-policy`: another copy of this Skill in this source (skills/return-refund-policy) was left out; the store holds one copy
+- `return-to-activity-criteria`: another copy of this Skill in this source (skills/return-to-activity-criteria) was left out; the store holds one copy
+- `returner-cv`: another copy of this Skill in this source (skills/returner-cv) was left out; the store holds one copy
+- `review-comments-resolver`: another copy of this Skill in this source (skills/review-comments-resolver) was left out; the store holds one copy
+- `review-response`: another copy of this Skill in this source (skills/review-response) was left out; the store holds one copy
+- `reviewer-rebuttal-letter`: another copy of this Skill in this source (skills/reviewer-rebuttal-letter) was left out; the store holds one copy
+- `rewards-optimizer`: another copy of this Skill in this source (skills/rewards-optimizer) was left out; the store holds one copy
+- `rfc-writer`: another copy of this Skill in this source (skills/rfc-writer) was left out; the store holds one copy
+- `rfp-response`: another copy of this Skill in this source (plugins/pm-procurement/skills/rfp-response) was left out; the store holds one copy
+- `rfp-response`: another copy of this Skill in this source (skills/rfp-response) was left out; the store holds one copy
+- `rfp-scoring-matrix`: another copy of this Skill in this source (plugins/pm-supplychain/skills/rfp-scoring-matrix) was left out; the store holds one copy
+- `rfp-scoring-matrix`: another copy of this Skill in this source (skills/rfp-scoring-matrix) was left out; the store holds one copy
+- `rfp-writer`: another copy of this Skill in this source (plugins/pm-procurement/skills/rfp-writer) was left out; the store holds one copy
+- `rfp-writer`: another copy of this Skill in this source (skills/rfp-writer) was left out; the store holds one copy
+- `rice-impact-matrix`: another copy of this Skill in this source (skills/rice-impact-matrix) was left out; the store holds one copy
+- `rice-prioritisation`: scripts/rice_calculator.py is not a plain text file (.py)
+- `rice-prioritisation`: scripts/rice_calculator.py is not a plain text file (.py)
+- `rice-prioritisation`: another copy of this Skill in this source (skills-i18n/zh-TW/rice-prioritisation) was left out; the store holds one copy
+- `risk-register`: another copy of this Skill in this source (skills/risk-register) was left out; the store holds one copy
+- `rma-failure-analysis`: another copy of this Skill in this source (skills/rma-failure-analysis) was left out; the store holds one copy
+- `roadmap-narrative`: another copy of this Skill in this source (skills/roadmap-narrative) was left out; the store holds one copy
+- `roadmap-presentation`: another copy of this Skill in this source (skills/roadmap-presentation) was left out; the store holds one copy
+- `roi-estimator`: scripts/roi.py is not a plain text file (.py)
+- `roi-estimator`: scripts/roi.py is not a plain text file (.py)
+- `role-redesign-for-ai`: another copy of this Skill in this source (skills/role-redesign-for-ai) was left out; the store holds one copy
+- `rollback-plan`: another copy of this Skill in this source (skills/rollback-plan) was left out; the store holds one copy
+- `roommate-agreement`: another copy of this Skill in this source (skills/roommate-agreement) was left out; the store holds one copy
+- `rss-digest`: another copy of this Skill in this source (skills/rss-digest) was left out; the store holds one copy
+- `rubric-builder`: another copy of this Skill in this source (skills/rubric-builder) was left out; the store holds one copy
+- `rules-lawyer`: another copy of this Skill in this source (skills/rules-lawyer) was left out; the store holds one copy
+- `run-an-agent-team`: another copy of this Skill in this source (skills/run-an-agent-team) was left out; the store holds one copy
+- `runbook-writer`: another copy of this Skill in this source (skills/runbook-writer) was left out; the store holds one copy
+- `runway-calculator`: scripts/runway.py is not a plain text file (.py)
+- `runway-calculator`: scripts/runway.py is not a plain text file (.py)
+- `runway-monte-carlo`: scripts/runway_sim.py is not a plain text file (.py)
+- `runway-monte-carlo`: scripts/runway_sim.py is not a plain text file (.py)
+- `runway-planner`: another copy of this Skill in this source (skills/runway-planner) was left out; the store holds one copy
+- `saas-metrics`: scripts/saas_metrics.py is not a plain text file (.py)
+- `saas-metrics`: scripts/saas_metrics.py is not a plain text file (.py)
+- `safe-online-shopping`: another copy of this Skill in this source (skills/safe-online-shopping) was left out; the store holds one copy
+- `salary-benchmarking`: another copy of this Skill in this source (skills/salary-benchmarking) was left out; the store holds one copy
+- `salary-benchmarking`: the name is already taken by aas
+- `salary-negotiation`: scripts/comp_compare.py is not a plain text file (.py)
+- `salary-negotiation`: scripts/comp_compare.py is not a plain text file (.py)
+- `salary-negotiation`: another copy of this Skill in this source (skills-i18n/vi/salary-negotiation) was left out; the store holds one copy
+- `salary-negotiation`: another copy of this Skill in this source (skills-i18n/zh/salary-negotiation) was left out; the store holds one copy
+- `salary-negotiation`: another copy of this Skill in this source (skills-i18n/zh-TW/salary-negotiation) was left out; the store holds one copy
+- `sales-battlecard`: another copy of this Skill in this source (skills/sales-battlecard) was left out; the store holds one copy
+- `sales-demo-script`: another copy of this Skill in this source (skills/sales-demo-script) was left out; the store holds one copy
+- `sales-enablement-kit`: another copy of this Skill in this source (skills/sales-enablement-kit) was left out; the store holds one copy
+- `sales-forecasting-model`: another copy of this Skill in this source (skills/sales-forecasting-model) was left out; the store holds one copy
+- `sales-page`: another copy of this Skill in this source (skills/sales-page) was left out; the store holds one copy
+- `savings-goal-plan`: another copy of this Skill in this source (skills/savings-goal-plan) was left out; the store holds one copy
+- `saying-no`: another copy of this Skill in this source (skills/saying-no) was left out; the store holds one copy
+- `saying-no-kindly`: another copy of this Skill in this source (skills/saying-no-kindly) was left out; the store holds one copy
+- `scam-message-decoder`: another copy of this Skill in this source (plugins/pm-scam-defense/skills/scam-message-decoder) was left out; the store holds one copy
+- `scam-message-decoder`: another copy of this Skill in this source (skills/scam-message-decoder) was left out; the store holds one copy
+- `schedule-monte-carlo`: scripts/schedule_sim.py is not a plain text file (.py)
+- `schedule-monte-carlo`: scripts/schedule_sim.py is not a plain text file (.py)
+- `schedule-recipe`: another copy of this Skill in this source (skills/schedule-recipe) was left out; the store holds one copy
+- `schema-markup`: another copy of this Skill in this source (skills/schema-markup) was left out; the store holds one copy
+- `schema-markup`: the name is already taken by templates
+- `scholarship-essay`: another copy of this Skill in this source (skills/scholarship-essay) was left out; the store holds one copy
+- `school-choice-decision`: another copy of this Skill in this source (skills/school-choice-decision) was left out; the store holds one copy
+- `scope-creep-response`: another copy of this Skill in this source (skills/scope-creep-response) was left out; the store holds one copy
+- `screen-time-detox`: another copy of this Skill in this source (skills/screen-time-detox) was left out; the store holds one copy
+- `screenshot-teardown`: another copy of this Skill in this source (skills/screenshot-teardown) was left out; the store holds one copy
+- `second-opinion-request`: another copy of this Skill in this source (skills/second-opinion-request) was left out; the store holds one copy
+- `secure-a-lost-phone`: another copy of this Skill in this source (skills/secure-a-lost-phone) was left out; the store holds one copy
+- `security-deposit-recovery`: another copy of this Skill in this source (skills/security-deposit-recovery) was left out; the store holds one copy
+- `security-deposit-recovery`: another copy of this Skill in this source (skills-i18n/id/security-deposit-recovery) was left out; the store holds one copy
+- `security-deposit-recovery`: another copy of this Skill in this source (skills-i18n/vi/security-deposit-recovery) was left out; the store holds one copy
+- `security-deposit-recovery`: another copy of this Skill in this source (skills-i18n/zh/security-deposit-recovery) was left out; the store holds one copy
+- `security-deposit-recovery`: another copy of this Skill in this source (skills-i18n/zh-TW/security-deposit-recovery) was left out; the store holds one copy
+- `security-incident-response`: another copy of this Skill in this source (skills/security-incident-response) was left out; the store holds one copy
+- `security-questionnaire-autofill`: another copy of this Skill in this source (skills/security-questionnaire-autofill) was left out; the store holds one copy
+- `security-review`: another copy of this Skill in this source (skills/security-review) was left out; the store holds one copy
+- `security-review`: the name is already taken by sentry
+- `security-threat-model`: another copy of this Skill in this source (skills/security-threat-model) was left out; the store holds one copy
+- `self-host-packager`: another copy of this Skill in this source (skills/self-host-packager) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills/self-review) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills-i18n/de/self-review) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills-i18n/fr/self-review) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills-i18n/id/self-review) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills-i18n/vi/self-review) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills-i18n/zh/self-review) was left out; the store holds one copy
+- `self-review`: another copy of this Skill in this source (skills-i18n/zh-TW/self-review) was left out; the store holds one copy
+- `send-approval-check`: another copy of this Skill in this source (skills/send-approval-check) was left out; the store holds one copy
+- `sensory-audit`: another copy of this Skill in this source (skills/sensory-audit) was left out; the store holds one copy
+- `seo-content-brief`: another copy of this Skill in this source (skills/seo-content-brief) was left out; the store holds one copy
+- `sequence-diagram`: another copy of this Skill in this source (skills/sequence-diagram) was left out; the store holds one copy
+- `server-training-guide`: another copy of this Skill in this source (skills/server-training-guide) was left out; the store holds one copy
+- `service-catalog-entry`: another copy of this Skill in this source (skills/service-catalog-entry) was left out; the store holds one copy
+- `session-handoff`: another copy of this Skill in this source (plugins/pm-tokens/skills/session-handoff) was left out; the store holds one copy
+- `session-handoff`: another copy of this Skill in this source (skills/session-handoff) was left out; the store holds one copy
+- `session-handoff`: the name is already taken by aas
+- `severance-agreement-decoder`: another copy of this Skill in this source (skills/severance-agreement-decoder) was left out; the store holds one copy
+- `severance-agreement-decoder`: another copy of this Skill in this source (skills-i18n/zh/severance-agreement-decoder) was left out; the store holds one copy
+- `severance-agreement-decoder`: another copy of this Skill in this source (skills-i18n/zh-TW/severance-agreement-decoder) was left out; the store holds one copy
+- `shared-agent-charter`: another copy of this Skill in this source (skills/shared-agent-charter) was left out; the store holds one copy
+- `shared-drive-cleanup`: another copy of this Skill in this source (skills/shared-drive-cleanup) was left out; the store holds one copy
+- `shift-schedule-builder`: another copy of this Skill in this source (plugins/pm-retail-shopfloor/skills/shift-schedule-builder) was left out; the store holds one copy
+- `shift-schedule-builder`: another copy of this Skill in this source (skills/shift-schedule-builder) was left out; the store holds one copy
+- `ship-or-slip`: another copy of this Skill in this source (skills/ship-or-slip) was left out; the store holds one copy
+- `shipinhao-script`: another copy of this Skill in this source (skills/shipinhao-script) was left out; the store holds one copy
+- `short-form-script`: another copy of this Skill in this source (skills/short-form-script) was left out; the store holds one copy
+- `should-i-quit-or-push`: another copy of this Skill in this source (skills/should-i-quit-or-push) was left out; the store holds one copy
+- `should-i-send-this`: another copy of this Skill in this source (skills/should-i-send-this) was left out; the store holds one copy
+- `shrink-report`: another copy of this Skill in this source (skills/shrink-report) was left out; the store holds one copy
+- `shutdown-ritual`: another copy of this Skill in this source (skills/shutdown-ritual) was left out; the store holds one copy
+- `sibling-care-summit`: another copy of this Skill in this source (skills/sibling-care-summit) was left out; the store holds one copy
+- `side-business-setup`: another copy of this Skill in this source (skills/side-business-setup) was left out; the store holds one copy
+- `signature-pipeline-watch`: another copy of this Skill in this source (skills/signature-pipeline-watch) was left out; the store holds one copy
+- `singapore-cpf-explainer`: another copy of this Skill in this source (skills/singapore-cpf-explainer) was left out; the store holds one copy
+- `singapore-employment-act`: another copy of this Skill in this source (skills/singapore-employment-act) was left out; the store holds one copy
+- `site-analysis-report`: another copy of this Skill in this source (skills/site-analysis-report) was left out; the store holds one copy
+- `site-check`: another copy of this Skill in this source (skills/site-check) was left out; the store holds one copy
+- `site-safety-briefing`: another copy of this Skill in this source (skills/site-safety-briefing) was left out; the store holds one copy
+- `skill-fusion`: another copy of this Skill in this source (skills/skill-fusion) was left out; the store holds one copy
+- `skill-plateau-breaker`: another copy of this Skill in this source (skills/skill-plateau-breaker) was left out; the store holds one copy
+- `skill-security-auditor`: references/injection-patterns.md contains an instruction-override phrase
+- `skill-security-auditor`: references/injection-patterns.md contains an instruction-override phrase
+- `skill-vetting`: another copy of this Skill in this source (skills/skill-vetting) was left out; the store holds one copy
+- `sleep-reset-plan`: another copy of this Skill in this source (skills/sleep-reset-plan) was left out; the store holds one copy
+- `slide-deck`: scripts/pptx_tool.py is not a plain text file (.py)
+- `slide-deck`: scripts/pptx_tool.py is not a plain text file (.py)
+- `slide-density-rules`: another copy of this Skill in this source (skills/slide-density-rules) was left out; the store holds one copy
+- `slo-error-budget`: another copy of this Skill in this source (skills/slo-error-budget) was left out; the store holds one copy
+- `small-claims-prep`: another copy of this Skill in this source (skills/small-claims-prep) was left out; the store holds one copy
+- `soap-note`: another copy of this Skill in this source (skills/soap-note) was left out; the store holds one copy
+- `soc2-readiness`: scripts/soc2_score.py is not a plain text file (.py)
+- `soc2-readiness`: scripts/soc2_score.py is not a plain text file (.py)
+- `social-ad-campaign`: another copy of this Skill in this source (skills/social-ad-campaign) was left out; the store holds one copy
+- `social-media-audit`: another copy of this Skill in this source (skills/social-media-audit) was left out; the store holds one copy
+- `social-media-strategy`: another copy of this Skill in this source (skills/social-media-strategy) was left out; the store holds one copy
+- `solar-breakeven`: scripts/solar_breakeven.py is not a plain text file (.py)
+- `solar-breakeven`: scripts/solar_breakeven.py is not a plain text file (.py)
+- `sop-meeting-prep`: another copy of this Skill in this source (skills/sop-meeting-prep) was left out; the store holds one copy
+- `sop-writer`: another copy of this Skill in this source (skills/sop-writer) was left out; the store holds one copy
+- `sop-writer`: another copy of this Skill in this source (skills-i18n/de/sop-writer) was left out; the store holds one copy
+- `sop-writer`: another copy of this Skill in this source (skills-i18n/fr/sop-writer) was left out; the store holds one copy
+- `sop-writer`: another copy of this Skill in this source (skills-i18n/id/sop-writer) was left out; the store holds one copy
+- `sop-writer`: another copy of this Skill in this source (skills-i18n/vi/sop-writer) was left out; the store holds one copy
+- `source-interview-prep`: another copy of this Skill in this source (skills/source-interview-prep) was left out; the store holds one copy
+- `source-protection-plan`: another copy of this Skill in this source (skills/source-protection-plan) was left out; the store holds one copy
+- `source-triangulation`: another copy of this Skill in this source (skills/source-triangulation) was left out; the store holds one copy
+- `sourcing-strategy`: another copy of this Skill in this source (skills/sourcing-strategy) was left out; the store holds one copy
+- `sourdough-troubleshooter`: another copy of this Skill in this source (skills/sourdough-troubleshooter) was left out; the store holds one copy
+- `spaced-repetition-setup`: another copy of this Skill in this source (skills/spaced-repetition-setup) was left out; the store holds one copy
+- `speak-at-the-council`: another copy of this Skill in this source (skills/speak-at-the-council) was left out; the store holds one copy
+- `spoon-planner`: another copy of this Skill in this source (skills/spoon-planner) was left out; the store holds one copy
+- `sports-parent-comms`: another copy of this Skill in this source (skills/sports-parent-comms) was left out; the store holds one copy
+- `sports-scores`: another copy of this Skill in this source (skills/sports-scores) was left out; the store holds one copy
+- `spot-ai-mistakes`: another copy of this Skill in this source (skills/spot-ai-mistakes) was left out; the store holds one copy
+- `spreadsheet-audit`: another copy of this Skill in this source (skills/spreadsheet-audit) was left out; the store holds one copy
+- `spreadsheet-audit-live`: another copy of this Skill in this source (skills/spreadsheet-audit-live) was left out; the store holds one copy
+- `spreadsheet-handover`: another copy of this Skill in this source (skills/spreadsheet-handover) was left out; the store holds one copy
+- `spreadsheet-or-database`: another copy of this Skill in this source (skills/spreadsheet-or-database) was left out; the store holds one copy
+- `sprint-brief`: SKILL.md is a symlink
+- `sprint-brief`: another copy of this Skill in this source (skills/sprint-brief) was left out; the store holds one copy
+- `sprint-brief`: another copy of this Skill in this source (templates/pm-sprint-agent/skills/sprint-brief) was left out; the store holds one copy
+- `sprint-planning`: scripts/capacity_calculator.py is not a plain text file (.py)
+- `sprint-planning`: scripts/capacity_calculator.py is not a plain text file (.py)
+- `sprint-planning`: SKILL.md is a symlink
+- `sprint-retro-facilitator`: another copy of this Skill in this source (skills/sprint-retro-facilitator) was left out; the store holds one copy
+- `sprint-velocity-analysis`: another copy of this Skill in this source (skills/sprint-velocity-analysis) was left out; the store holds one copy
+- `sql-optimizer`: another copy of this Skill in this source (skills/sql-optimizer) was left out; the store holds one copy
+- `sql-query-explainer`: another copy of this Skill in this source (skills/sql-query-explainer) was left out; the store holds one copy
+- `stage-payment-shield`: another copy of this Skill in this source (skills/stage-payment-shield) was left out; the store holds one copy
+- `stakeholder-influence-mapper`: another copy of this Skill in this source (skills/stakeholder-influence-mapper) was left out; the store holds one copy
+- `stakeholder-update`: SKILL.md is a symlink
+- `stakeholder-update`: another copy of this Skill in this source (skills/stakeholder-update) was left out; the store holds one copy
+- `stakeholder-update`: another copy of this Skill in this source (skills-i18n/id/stakeholder-update) was left out; the store holds one copy
+- `stakeholder-update`: another copy of this Skill in this source (skills-i18n/vi/stakeholder-update) was left out; the store holds one copy
+- `stakeholder-update`: another copy of this Skill in this source (skills-i18n/zh/stakeholder-update) was left out; the store holds one copy
+- `stakeholder-update`: another copy of this Skill in this source (skills-i18n/zh-TW/stakeholder-update) was left out; the store holds one copy
+- `stakeholder-update`: another copy of this Skill in this source (templates/pm-stakeholder-comms-agent/skills/stakeholder-update) was left out; the store holds one copy
+- `standing-meeting-audit`: another copy of this Skill in this source (skills/standing-meeting-audit) was left out; the store holds one copy
+- `standing-orders`: another copy of this Skill in this source (skills/standing-orders) was left out; the store holds one copy
+- `stargazing-tonight`: another copy of this Skill in this source (skills/stargazing-tonight) was left out; the store holds one copy
+- `startup-idea-validator`: another copy of this Skill in this source (skills/startup-idea-validator) was left out; the store holds one copy
+- `statement-coach`: another copy of this Skill in this source (skills/statement-coach) was left out; the store holds one copy
+- `statement-of-work`: another copy of this Skill in this source (skills/statement-of-work) was left out; the store holds one copy
+- `status-report-pipeline`: another copy of this Skill in this source (skills/status-report-pipeline) was left out; the store holds one copy
+- `steelman-the-weird-option`: another copy of this Skill in this source (skills/steelman-the-weird-option) was left out; the store holds one copy
+- `stock-snapshot`: another copy of this Skill in this source (skills/stock-snapshot) was left out; the store holds one copy
+- `stock-take-plan`: another copy of this Skill in this source (skills/stock-take-plan) was left out; the store holds one copy
+- `stoic-setback-debrief`: another copy of this Skill in this source (skills/stoic-setback-debrief) was left out; the store holds one copy
+- `stop-overthinking-this`: another copy of this Skill in this source (skills/stop-overthinking-this) was left out; the store holds one copy
+- `stop-the-bleed-triage`: another copy of this Skill in this source (skills/stop-the-bleed-triage) was left out; the store holds one copy
+- `store-watch`: another copy of this Skill in this source (skills/store-watch) was left out; the store holds one copy
+- `story-pitch`: another copy of this Skill in this source (skills/story-pitch) was left out; the store holds one copy
+- `strategic-narrative-generator`: another copy of this Skill in this source (skills/strategic-narrative-generator) was left out; the store holds one copy
+- `strategy-memo`: another copy of this Skill in this source (skills/strategy-memo) was left out; the store holds one copy
+- `stretching-routine`: another copy of this Skill in this source (skills/stretching-routine) was left out; the store holds one copy
+- `student-feedback`: another copy of this Skill in this source (skills/student-feedback) was left out; the store holds one copy
+- `student-loan-strategy`: scripts/student_loan_strategy.py is not a plain text file (.py)
+- `student-loan-strategy`: scripts/student_loan_strategy.py is not a plain text file (.py)
+- `study-notes-synthesizer`: another copy of this Skill in this source (skills/study-notes-synthesizer) was left out; the store holds one copy
+- `style-fingerprint`: another copy of this Skill in this source (skills/style-fingerprint) was left out; the store holds one copy
+- `subagent-orchestration`: another copy of this Skill in this source (skills/subagent-orchestration) was left out; the store holds one copy
+- `subagent-orchestration`: the name is already taken by posthog
+- `subcontractor-scorecard`: another copy of this Skill in this source (skills/subcontractor-scorecard) was left out; the store holds one copy
+- `subscription-audit`: scripts/subscription_audit.py is not a plain text file (.py)
+- `subscription-audit`: scripts/subscription_audit.py is not a plain text file (.py)
+- `subscription-auditor`: another copy of this Skill in this source (skills/subscription-auditor) was left out; the store holds one copy
+- `substack-notes-scraper`: another copy of this Skill in this source (skills/substack-notes-scraper) was left out; the store holds one copy
+- `subtitle-caption`: another copy of this Skill in this source (skills/subtitle-caption) was left out; the store holds one copy
+- `summarize-anything`: another copy of this Skill in this source (skills/summarize-anything) was left out; the store holds one copy
+- `sun-and-moon`: another copy of this Skill in this source (skills/sun-and-moon) was left out; the store holds one copy
+- `sun-tzu-strategy-brief`: another copy of this Skill in this source (skills/sun-tzu-strategy-brief) was left out; the store holds one copy
+- `supplier-scorecard`: another copy of this Skill in this source (plugins/pm-supplychain/skills/supplier-scorecard) was left out; the store holds one copy
+- `supplier-scorecard`: another copy of this Skill in this source (skills/supplier-scorecard) was left out; the store holds one copy
+- `support-macro`: another copy of this Skill in this source (skills/support-macro) was left out; the store holds one copy
+- `support-runbook`: another copy of this Skill in this source (skills/support-runbook) was left out; the store holds one copy
+- `support-staffing-model`: scripts/erlang_staffing.py is not a plain text file (.py)
+- `support-staffing-model`: scripts/erlang_staffing.py is not a plain text file (.py)
+- `support-the-bereaved`: another copy of this Skill in this source (skills/support-the-bereaved) was left out; the store holds one copy
+- `survey-design-basics`: another copy of this Skill in this source (skills/survey-design-basics) was left out; the store holds one copy
+- `sycophancy-challenger`: another copy of this Skill in this source (skills/sycophancy-challenger) was left out; the store holds one copy
+- `synthetic-user-research`: another copy of this Skill in this source (skills/synthetic-user-research) was left out; the store holds one copy
+- `system-design-interview`: another copy of this Skill in this source (skills/system-design-interview) was left out; the store holds one copy
+- `tabletop-negotiator`: another copy of this Skill in this source (skills/tabletop-negotiator) was left out; the store holds one copy
+- `task-to-first-step`: another copy of this Skill in this source (skills/task-to-first-step) was left out; the store holds one copy
+- `task-triage-matrix`: another copy of this Skill in this source (skills/task-triage-matrix) was left out; the store holds one copy
+- `tax-deduction-finder`: another copy of this Skill in this source (skills/tax-deduction-finder) was left out; the store holds one copy
+- `tax-planning-checklist`: another copy of this Skill in this source (skills/tax-planning-checklist) was left out; the store holds one copy
+- `tax-residency-primer`: another copy of this Skill in this source (skills/tax-residency-primer) was left out; the store holds one copy
+- `tdd-workflow`: another copy of this Skill in this source (skills/tdd-workflow) was left out; the store holds one copy
+- `tdd-workflow`: the name is already taken by templates
+- `teach-me-in-layers`: another copy of this Skill in this source (skills/teach-me-in-layers) was left out; the store holds one copy
+- `teach-the-game`: another copy of this Skill in this source (skills/teach-the-game) was left out; the store holds one copy
+- `teaching-lesson-plan`: another copy of this Skill in this source (skills/teaching-lesson-plan) was left out; the store holds one copy
+- `team-budget-tracker`: another copy of this Skill in this source (skills/team-budget-tracker) was left out; the store holds one copy
+- `team-health-check`: another copy of this Skill in this source (skills/team-health-check) was left out; the store holds one copy
+- `team-offsite-planner`: another copy of this Skill in this source (skills/team-offsite-planner) was left out; the store holds one copy
+- `tech-radar`: another copy of this Skill in this source (skills/tech-radar) was left out; the store holds one copy
+- `technical-debt-register`: another copy of this Skill in this source (skills/technical-debt-register) was left out; the store holds one copy
+- `technical-spec-template`: another copy of this Skill in this source (skills/technical-spec-template) was left out; the store holds one copy
+- `technical-spec-template`: another copy of this Skill in this source (skills-i18n/zh/technical-spec-template) was left out; the store holds one copy
+- `technical-spec-template`: another copy of this Skill in this source (skills-i18n/zh-TW/technical-spec-template) was left out; the store holds one copy
+- `template-designer`: another copy of this Skill in this source (skills/template-designer) was left out; the store holds one copy
+- `tenant-rights-explainer`: another copy of this Skill in this source (skills/tenant-rights-explainer) was left out; the store holds one copy
+- `tenant-screening-guide`: another copy of this Skill in this source (skills/tenant-screening-guide) was left out; the store holds one copy
+- `test-case-writer`: another copy of this Skill in this source (skills/test-case-writer) was left out; the store holds one copy
+- `test-strategy-doc`: another copy of this Skill in this source (skills/test-strategy-doc) was left out; the store holds one copy
+- `testimonial-request`: another copy of this Skill in this source (skills/testimonial-request) was left out; the store holds one copy
+- `the-2-minute-launch`: another copy of this Skill in this source (skills/the-2-minute-launch) was left out; the store holds one copy
+- `the-boring-answer-detector`: another copy of this Skill in this source (skills/the-boring-answer-detector) was left out; the store holds one copy
+- `the-car-dealership`: another copy of this Skill in this source (skills/the-car-dealership) was left out; the store holds one copy
+- `the-churning-customer`: another copy of this Skill in this source (skills/the-churning-customer) was left out; the store holds one copy
+- `the-due-diligence-call`: another copy of this Skill in this source (skills/the-due-diligence-call) was left out; the store holds one copy
+- `the-ethics-board`: another copy of this Skill in this source (skills/the-ethics-board) was left out; the store holds one copy
+- `the-insurance-adjuster`: another copy of this Skill in this source (skills/the-insurance-adjuster) was left out; the store holds one copy
+- `the-journalist-call`: another copy of this Skill in this source (skills/the-journalist-call) was left out; the store holds one copy
+- `the-loan-officer`: another copy of this Skill in this source (skills/the-loan-officer) was left out; the store holds one copy
+- `the-maintainers-no`: another copy of this Skill in this source (skills/the-maintainers-no) was left out; the store holds one copy
+- `the-one-thing`: another copy of this Skill in this source (skills/the-one-thing) was left out; the store holds one copy
+- `the-open-house`: another copy of this Skill in this source (skills/the-open-house) was left out; the store holds one copy
+- `the-org-simulator`: another copy of this Skill in this source (skills/the-org-simulator) was left out; the store holds one copy
+- `the-planning-committee`: another copy of this Skill in this source (skills/the-planning-committee) was left out; the store holds one copy
+- `the-price-pushback`: another copy of this Skill in this source (plugins/pm-simulators/skills/the-price-pushback) was left out; the store holds one copy
+- `the-price-pushback`: another copy of this Skill in this source (skills/the-price-pushback) was left out; the store holds one copy
+- `the-procurement-gauntlet`: another copy of this Skill in this source (skills/the-procurement-gauntlet) was left out; the store holds one copy
+- `the-promotion-committee`: another copy of this Skill in this source (skills/the-promotion-committee) was left out; the store holds one copy
+- `the-ruthless-editor`: another copy of this Skill in this source (skills/the-ruthless-editor) was left out; the store holds one copy
+- `the-school-appeal`: another copy of this Skill in this source (skills/the-school-appeal) was left out; the store holds one copy
+- `the-second-opinion`: another copy of this Skill in this source (skills/the-second-opinion) was left out; the store holds one copy
+- `the-skeptic-and-the-believer`: another copy of this Skill in this source (skills/the-skeptic-and-the-believer) was left out; the store holds one copy
+- `the-strong-no`: another copy of this Skill in this source (skills/the-strong-no) was left out; the store holds one copy
+- `the-thesis-defense`: another copy of this Skill in this source (plugins/pm-simulators/skills/the-thesis-defense) was left out; the store holds one copy
+- `the-thesis-defense`: another copy of this Skill in this source (plugins/pm-students/skills/the-thesis-defense) was left out; the store holds one copy
+- `the-thesis-defense`: another copy of this Skill in this source (skills/the-thesis-defense) was left out; the store holds one copy
+- `the-third-answer`: another copy of this Skill in this source (skills/the-third-answer) was left out; the store holds one copy
+- `the-time-capsule`: another copy of this Skill in this source (skills/the-time-capsule) was left out; the store holds one copy
+- `the-understudy`: another copy of this Skill in this source (skills/the-understudy) was left out; the store holds one copy
+- `the-union-table`: another copy of this Skill in this source (skills/the-union-table) was left out; the store holds one copy
+- `the-vibe-check`: another copy of this Skill in this source (skills/the-vibe-check) was left out; the store holds one copy
+- `the-visa-interview`: another copy of this Skill in this source (skills/the-visa-interview) was left out; the store holds one copy
+- `the-worry-decompiler`: another copy of this Skill in this source (skills/the-worry-decompiler) was left out; the store holds one copy
+- `the-year-of-firsts`: another copy of this Skill in this source (skills/the-year-of-firsts) was left out; the store holds one copy
+- `thesis-chapter-plan`: another copy of this Skill in this source (skills/thesis-chapter-plan) was left out; the store holds one copy
+- `thesis-outline`: another copy of this Skill in this source (plugins/pm-students/skills/thesis-outline) was left out; the store holds one copy
+- `thesis-outline`: another copy of this Skill in this source (skills/thesis-outline) was left out; the store holds one copy
+- `think-from-another-angle`: another copy of this Skill in this source (skills/think-from-another-angle) was left out; the store holds one copy
+- `thread-to-decision`: another copy of this Skill in this source (skills/thread-to-decision) was left out; the store holds one copy
+- `thread-to-decision-live`: another copy of this Skill in this source (skills/thread-to-decision-live) was left out; the store holds one copy
+- `threat-model`: another copy of this Skill in this source (skills/threat-model) was left out; the store holds one copy
+- `thumbnail-creator`: another copy of this Skill in this source (skills/thumbnail-creator) was left out; the store holds one copy
+- `timeshare-contract-decoder`: another copy of this Skill in this source (skills/timeshare-contract-decoder) was left out; the store holds one copy
+- `token-cost`: scripts/token_cost.py is not a plain text file (.py)
+- `token-cost`: another copy of this Skill in this source (skills/token-cost) was left out; the store holds one copy
+- `token-diet`: another copy of this Skill in this source (skills/token-diet) was left out; the store holds one copy
+- `tone-fixer`: another copy of this Skill in this source (skills/tone-fixer) was left out; the store holds one copy
+- `tool-permission-review`: another copy of this Skill in this source (skills/tool-permission-review) was left out; the store holds one copy
+- `tool-procurement-eval`: another copy of this Skill in this source (skills/tool-procurement-eval) was left out; the store holds one copy
+- `tooling-risk-assessment`: another copy of this Skill in this source (skills/tooling-risk-assessment) was left out; the store holds one copy
+- `tornado-sensitivity`: scripts/tornado.py is not a plain text file (.py)
+- `tornado-sensitivity`: scripts/tornado.py is not a plain text file (.py)
+- `tos-decoder`: another copy of this Skill in this source (skills/tos-decoder) was left out; the store holds one copy
+- `tos-decoder`: another copy of this Skill in this source (skills-i18n/es/tos-decoder) was left out; the store holds one copy
+- `tos-decoder`: another copy of this Skill in this source (skills-i18n/id/tos-decoder) was left out; the store holds one copy
+- `tos-decoder`: another copy of this Skill in this source (skills-i18n/ja/tos-decoder) was left out; the store holds one copy
+- `tos-decoder`: another copy of this Skill in this source (skills-i18n/vi/tos-decoder) was left out; the store holds one copy
+- `tos-decoder`: another copy of this Skill in this source (skills-i18n/zh/tos-decoder) was left out; the store holds one copy
+- `trade-quote-builder`: another copy of this Skill in this source (skills/trade-quote-builder) was left out; the store holds one copy
+- `transcreation`: another copy of this Skill in this source (skills/transcreation) was left out; the store holds one copy
+- `travel-brief`: another copy of this Skill in this source (skills/travel-brief) was left out; the store holds one copy
+- `treatment-plan-estimate`: another copy of this Skill in this source (skills/treatment-plan-estimate) was left out; the store holds one copy
+- `treatment-plan-presentation`: another copy of this Skill in this source (skills/treatment-plan-presentation) was left out; the store holds one copy
+- `trip-planner`: another copy of this Skill in this source (skills/trip-planner) was left out; the store holds one copy
+- `ttrpg-session-forge`: another copy of this Skill in this source (skills/ttrpg-session-forge) was left out; the store holds one copy
+- `tw-labour-standards`: scripts/tw_severance.py is not a plain text file (.py)
+- `tw-labour-standards`: scripts/tw_severance.py is not a plain text file (.py)
+- `two-worlds-translator`: another copy of this Skill in this source (skills/two-worlds-translator) was left out; the store holds one copy
+- `uae-gratuity-calculator`: another copy of this Skill in this source (skills/uae-gratuity-calculator) was left out; the store holds one copy
+- `uae-gratuity-calculator`: another copy of this Skill in this source (skills-i18n/ar/uae-gratuity-calculator) was left out; the store holds one copy
+- `ui-design-pipeline`: another copy of this Skill in this source (skills/ui-design-pipeline) was left out; the store holds one copy
+- `ui-ux-pro-max-pointer`: another copy of this Skill in this source (skills/ui-ux-pro-max-pointer) was left out; the store holds one copy
+- `unblock-protocol`: another copy of this Skill in this source (skills/unblock-protocol) was left out; the store holds one copy
+- `unclaimed-money-tracer`: another copy of this Skill in this source (skills/unclaimed-money-tracer) was left out; the store holds one copy
+- `underwriting-narrative`: another copy of this Skill in this source (skills/underwriting-narrative) was left out; the store holds one copy
+- `unit-economics`: scripts/unit_econ.py is not a plain text file (.py)
+- `unit-economics`: scripts/unit_econ.py is not a plain text file (.py)
+- `user-interview-synthesis`: SKILL.md is a symlink
+- `user-interview-synthesis`: another copy of this Skill in this source (skills/user-interview-synthesis) was left out; the store holds one copy
+- `user-interview-synthesis`: another copy of this Skill in this source (templates/pm-discovery-agent/skills/user-interview-synthesis) was left out; the store holds one copy
+- `user-journey-map`: another copy of this Skill in this source (skills/user-journey-map) was left out; the store holds one copy
+- `user-research-synthesis`: another copy of this Skill in this source (skills/user-research-synthesis) was left out; the store holds one copy
+- `user-research-synthesis`: another copy of this Skill in this source (skills-i18n/zh/user-research-synthesis) was left out; the store holds one copy
+- `user-research-synthesis`: another copy of this Skill in this source (skills-i18n/zh-TW/user-research-synthesis) was left out; the store holds one copy
+- `user-story-writer`: another copy of this Skill in this source (skills/user-story-writer) was left out; the store holds one copy
+- `user-story-writer`: another copy of this Skill in this source (skills-i18n/zh/user-story-writer) was left out; the store holds one copy
+- `user-story-writer`: another copy of this Skill in this source (skills-i18n/zh-TW/user-story-writer) was left out; the store holds one copy
+- `utility-switch-advisor`: another copy of this Skill in this source (skills/utility-switch-advisor) was left out; the store holds one copy
+- `ux-research-plan`: another copy of this Skill in this source (skills/ux-research-plan) was left out; the store holds one copy
+- `value-proposition`: another copy of this Skill in this source (skills/value-proposition) was left out; the store holds one copy
+- `value-proposition`: the name is already taken by pm
+- `values-mapped-cv`: another copy of this Skill in this source (skills/values-mapped-cv) was left out; the store holds one copy
+- `vc-partner-meeting`: another copy of this Skill in this source (skills/vc-partner-meeting) was left out; the store holds one copy
+- `vehicle-maintenance-schedule`: another copy of this Skill in this source (skills/vehicle-maintenance-schedule) was left out; the store holds one copy
+- `vendor-breakup-email`: another copy of this Skill in this source (skills/vendor-breakup-email) was left out; the store holds one copy
+- `vendor-comparison-matrix`: another copy of this Skill in this source (skills/vendor-comparison-matrix) was left out; the store holds one copy
+- `vendor-contract-checklist`: another copy of this Skill in this source (skills/vendor-contract-checklist) was left out; the store holds one copy
+- `vendor-evaluation`: another copy of this Skill in this source (skills/vendor-evaluation) was left out; the store holds one copy
+- `vendor-security-review`: scripts/vendor_risk.py is not a plain text file (.py)
+- `vendor-security-review`: scripts/vendor_risk.py is not a plain text file (.py)
+- `venue-access-check`: another copy of this Skill in this source (skills/venue-access-check) was left out; the store holds one copy
+- `venue-contract-review`: another copy of this Skill in this source (skills/venue-contract-review) was left out; the store holds one copy
+- `verification-before-completion`: another copy of this Skill in this source (skills/verification-before-completion) was left out; the store holds one copy
+- `verification-before-completion`: the name is already taken by templates
+- `version-chaos-untangler`: another copy of this Skill in this source (skills/version-chaos-untangler) was left out; the store holds one copy
+- `vet-estimate-decoder`: another copy of this Skill in this source (skills/vet-estimate-decoder) was left out; the store holds one copy
+- `viral-content-framework`: another copy of this Skill in this source (skills/viral-content-framework) was left out; the store holds one copy
+- `viva-prep-pack`: another copy of this Skill in this source (skills/viva-prep-pack) was left out; the store holds one copy
+- `voice-agent-design`: another copy of this Skill in this source (skills/voice-agent-design) was left out; the store holds one copy
+- `voice-of-customer-program`: another copy of this Skill in this source (skills/voice-of-customer-program) was left out; the store holds one copy
+- `volunteer-treasurer-basics`: another copy of this Skill in this source (skills/volunteer-treasurer-basics) was left out; the store holds one copy
+- `voting-navigator`: another copy of this Skill in this source (skills/voting-navigator) was left out; the store holds one copy
+- `vuln-triage`: another copy of this Skill in this source (skills/vuln-triage) was left out; the store holds one copy
+- `wage-garnishment-response`: another copy of this Skill in this source (skills/wage-garnishment-response) was left out; the store holds one copy
+- `warranty-claim`: another copy of this Skill in this source (skills/warranty-claim) was left out; the store holds one copy
+- `weather-now`: another copy of this Skill in this source (skills/weather-now) was left out; the store holds one copy
+- `wechat-article`: another copy of this Skill in this source (skills/wechat-article) was left out; the store holds one copy
+- `wechat-article`: another copy of this Skill in this source (skills-i18n/zh/wechat-article) was left out; the store holds one copy
+- `wecom-announcement`: another copy of this Skill in this source (skills/wecom-announcement) was left out; the store holds one copy
+- `wecom-announcement`: another copy of this Skill in this source (skills-i18n/zh/wecom-announcement) was left out; the store holds one copy
+- `wedding-budget`: scripts/wedding_budget.py is not a plain text file (.py)
+- `wedding-budget`: scripts/wedding_budget.py is not a plain text file (.py)
+- `wedding-budget`: another copy of this Skill in this source (skills/wedding-budget) was left out; the store holds one copy
+- `wedding-logistics-planner`: another copy of this Skill in this source (skills/wedding-logistics-planner) was left out; the store holds one copy
+- `wedding-speech`: another copy of this Skill in this source (skills/wedding-speech) was left out; the store holds one copy
+- `wedding-vendor-contract-decoder`: another copy of this Skill in this source (plugins/pm-wedding/skills/wedding-vendor-contract-decoder) was left out; the store holds one copy
+- `wedding-vendor-contract-decoder`: another copy of this Skill in this source (skills/wedding-vendor-contract-decoder) was left out; the store holds one copy
+- `wedding-vows-writer`: another copy of this Skill in this source (skills/wedding-vows-writer) was left out; the store holds one copy
+- `weekly-review-ritual`: another copy of this Skill in this source (skills/weekly-review-ritual) was left out; the store holds one copy
+- `weekly-rollup`: another copy of this Skill in this source (skills/weekly-rollup) was left out; the store holds one copy
+- `weekly-unstuck`: another copy of this Skill in this source (skills/weekly-unstuck) was left out; the store holds one copy
+- `wellness-plan`: another copy of this Skill in this source (skills/wellness-plan) was left out; the store holds one copy
+- `what-am-i-not-seeing`: another copy of this Skill in this source (skills/what-am-i-not-seeing) was left out; the store holds one copy
+- `what-to-ask`: another copy of this Skill in this source (skills/what-to-ask) was left out; the store holds one copy
+- `whats-for-dinner`: another copy of this Skill in this source (skills/whats-for-dinner) was left out; the store holds one copy
+- `when-someone-dies`: another copy of this Skill in this source (skills/when-someone-dies) was left out; the store holds one copy
+- `where-do-i-start`: another copy of this Skill in this source (skills/where-do-i-start) was left out; the store holds one copy
+- `which-skill`: another copy of this Skill in this source (skills/which-skill) was left out; the store holds one copy
+- `whiteboard-to-spec`: another copy of this Skill in this source (skills/whiteboard-to-spec) was left out; the store holds one copy
+- `wiki-summary`: another copy of this Skill in this source (skills/wiki-summary) was left out; the store holds one copy
+- `win-loss-analysis`: another copy of this Skill in this source (skills/win-loss-analysis) was left out; the store holds one copy
+- `winback-playbook`: another copy of this Skill in this source (skills/winback-playbook) was left out; the store holds one copy
+- `windfall-plan`: another copy of this Skill in this source (skills/windfall-plan) was left out; the store holds one copy
+- `wine-pairing`: another copy of this Skill in this source (skills/wine-pairing) was left out; the store holds one copy
+- `witness-statement-writer`: another copy of this Skill in this source (skills/witness-statement-writer) was left out; the store holds one copy
+- `word-document`: scripts/docx_tool.py is not a plain text file (.py)
+- `word-document`: scripts/docx_tool.py is not a plain text file (.py)
+- `working-agreements`: another copy of this Skill in this source (skills/working-agreements) was left out; the store holds one copy
+- `workshop-designer`: another copy of this Skill in this source (skills/workshop-designer) was left out; the store holds one copy
+- `workshop-facilitation-guide`: another copy of this Skill in this source (skills/workshop-facilitation-guide) was left out; the store holds one copy
+- `world-clock`: another copy of this Skill in this source (skills/world-clock) was left out; the store holds one copy
+- `writing-great-skills`: another copy of this Skill in this source (skills/writing-great-skills) was left out; the store holds one copy
+- `writing-great-skills`: the name is already taken by aas
+- `writing-plans`: another copy of this Skill in this source (skills/writing-plans) was left out; the store holds one copy
+- `writing-plans`: the name is already taken by templates
+- `xiaohongshu-note`: another copy of this Skill in this source (skills/xiaohongshu-note) was left out; the store holds one copy
+- `xiaohongshu-note`: another copy of this Skill in this source (skills-i18n/zh/xiaohongshu-note) was left out; the store holds one copy
+- `xiaoyuzhou-podcast-outline`: another copy of this Skill in this source (skills/xiaoyuzhou-podcast-outline) was left out; the store holds one copy
+- `year-in-review`: another copy of this Skill in this source (skills/year-in-review) was left out; the store holds one copy
+- `youtube-script`: another copy of this Skill in this source (skills/youtube-script) was left out; the store holds one copy
+- `youtube-script-writer`: another copy of this Skill in this source (skills/youtube-script-writer) was left out; the store holds one copy
+- `za-retrenchment-package-check`: another copy of this Skill in this source (skills/za-retrenchment-package-check) was left out; the store holds one copy
+- `za-uif-claim-guide`: another copy of this Skill in this source (skills/za-uif-claim-guide) was left out; the store holds one copy
+- `zhihu-answer`: another copy of this Skill in this source (skills/zhihu-answer) was left out; the store holds one copy
+- `agent-design-review`: links to ../agent-spec/SKILL.md, ../llm-guardrails-spec/SKILL.md, which is not in the store
+- `agent-spec`: links to ../action-runner/SKILL.md, ../professional-brain/SKILL.md, ../ai-eval-plan/SKILL.md, which is not in the store
+- `ai-feature-prd`: links to ../professional-brain/SKILL.md, ../agent-spec/SKILL.md, ../ai-eval-plan/SKILL.md, which is not in the store
+- `assumption-mapper`: links to ../../docs/craft/product-decisions.md, which is not in the store
+- `async-decision-memo`: links to ../professional-brain/SKILL.md, which is not in the store
+- `brief-from-pile`: links to ../repo-map/SKILL.md, ../session-handoff/SKILL.md, which is not in the store
+- `budget-tracker-design`: links to ../subscription-audit/SKILL.md, which is not in the store
+- `calendar-defrag`: links to ../../SKILLSPEC.md, which is not in the store
+- `churn-analysis`: links to ../professional-brain/SKILL.md, which is not in the store
+- `clinical-trial-protocol`: links to ../research-protocol/SKILL.md, which is not in the store
+- `cn-citation-gbt7714`: links to ../../../skills/cn-citation-gbt7714/SKILL.md, which is not in the store
+- `cn-iit-reconciliation`: links to ../../../skills/cn-iit-reconciliation/SKILL.md, which is not in the store
+- `cn-severance-calculator`: links to ../../../skills/cn-severance-calculator/SKILL.md, which is not in the store
+- `collaboration-contract`: links to ../runbook-writer/SKILL.md, which is not in the store
+- `college-app-parent-guide`: links to ../statement-coach/SKILL.md, which is not in the store
+- `company-event-ops`: links to ../wedding-logistics-planner/SKILL.md, ../wedding-budget/SKILL.md, which is not in the store
+- `competitive-analysis`: links to ../professional-brain/SKILL.md, which is not in the store
+- `context-budget`: links to ../session-handoff/SKILL.md, which is not in the store
+- `contract-renewal-tracker`: links to ../subscription-audit/SKILL.md, ../tos-decoder/SKILL.md, ../the-price-pushback/SKILL.md, which is not in the store
+- `data-breach-response`: links to ../scam-message-decoder/SKILL.md, which is not in the store
+- `decision-meeting-format`: links to ../decision-journal/SKILL.md, which is not in the store
+- `delegation-brief`: links to ../runbook-writer/SKILL.md, ../decision-meeting-format/SKILL.md, which is not in the store
+- `desk-research-sprint`: links to ../what-to-ask/SKILL.md, which is not in the store
+- `document-retention-map`: links to ../beneficiary-audit/SKILL.md, which is not in the store
+- `elder-scam-briefing`: links to ../data-breach-response/SKILL.md, which is not in the store
+- `energy-scheduling`: links to ../decision-meeting-format/SKILL.md, which is not in the store
+- `escalate-or-hold`: links to ../cs-escalation-brief/SKILL.md, ../escalation-tree/SKILL.md, which is not in the store
+- `escalation-tree`: links to ../incident-postmortem/SKILL.md, which is not in the store
+- `evidence-grading`: links to ../decision-journal/SKILL.md, which is not in the store
+- `exec-vs-working-deck`: links to ../executive-summary/SKILL.md, which is not in the store
+- `executive-update`: links to ../professional-brain/SKILL.md, which is not in the store
+- `expense-filer`: links to ../../SKILLSPEC.md, which is not in the store
+- `expense-sheet-design`: links to ../quarterly-tax-rhythm/SKILL.md, ../document-retention-map/SKILL.md, which is not in the store
+- `expert-interview-prep`: links to ../desk-research-sprint/SKILL.md, which is not in the store
+- `feature-sunset-plan`: links to ../professional-brain/SKILL.md, which is not in the store
+- `first-client-contract`: links to ../scope-creep-response/SKILL.md, ../late-invoice-escalation/SKILL.md, which is not in the store
+- `form-filler-operator`: links to ../../SKILLSPEC.md, which is not in the store
+- `go-to-market`: links to ../professional-brain/SKILL.md, which is not in the store
+- `handbook-page`: links to ../runbook-writer/SKILL.md, which is not in the store
+- `hire-or-pass`: links to ../hiring-rubric/SKILL.md, ../engineering-hiring-rubric/SKILL.md, which is not in the store
+- `hk-mpf-explainer`: links to ../../../skills/hk-mpf-explainer/SKILL.md, which is not in the store
+- `inbox-zero-operator`: links to ../../SKILLSPEC.md, which is not in the store
+- `knowledge-gardening`: links to ../session-handoff/SKILL.md, which is not in the store
+- `kpi-tracker-design`: links to ../budget-tracker-design/SKILL.md, which is not in the store
+- `landing-page-copy`: links to ../value-proposition/SKILL.md, which is not in the store
+- `meeting-prep-pack`: links to ../the-price-pushback/SKILL.md, which is not in the store
+- `metrics-framework`: links to ../professional-brain/SKILL.md, which is not in the store
+- `migration-day-runbook`: links to ../document-retention-map/SKILL.md, which is not in the store
+- `model-selection-advisor`: links to ../ai-eval-plan/SKILL.md, ../llm-cost-latency-budget/SKILL.md, which is not in the store
+- `offer-comparison`: links to ../../../skills/offer-comparison/SKILL.md, which is not in the store
+- `office-move-runbook`: links to ../relocation-planner/SKILL.md, ../handbook-page/SKILL.md, which is not in the store
+- `offsite-planner`: links to ../decision-meeting-format/SKILL.md, which is not in the store
+- `okr-builder`: links to ../professional-brain/SKILL.md, which is not in the store
+- `out-of-office-designer`: links to ../session-handoff/SKILL.md, which is not in the store
+- `outline-before-prose`: links to ../executive-summary/SKILL.md, which is not in the store
+- `personal-wip-limits`: links to ../delegation-brief/SKILL.md, ../decision-journal/SKILL.md, which is not in the store
+- `pitch-vs-teach`: links to ../exec-vs-working-deck/SKILL.md, ../handbook-page/SKILL.md, which is not in the store
+- `prd-template`: links to ../../docs/craft/product-decisions.md, ../professional-brain/SKILL.md, which is not in the store
+- `presenter-notes`: links to ../exec-vs-working-deck/SKILL.md, ../runbook-writer/SKILL.md, which is not in the store
+- `pricing-your-services`: links to ../freelance-rate/SKILL.md, which is not in the store
+- `product-launch-checklist`: links to ../action-runner/SKILL.md, ../professional-brain/SKILL.md, which is not in the store
+- `proposal-skeleton`: links to ../executive-summary/SKILL.md, which is not in the store
+- `purchase-justification`: links to ../proposal-skeleton/SKILL.md, ../exec-vs-working-deck/SKILL.md, ../token-cost/SKILL.md, which is not in the store
+- `rabbit-hole-rescue`: links to ../../plugins/pm-digital-safety/, which is not in the store
+- `rag-architecture-review`: links to ../ai-eval-plan/SKILL.md, which is not in the store
+- `rag-design-doc`: links to ../ai-eval-plan/SKILL.md, which is not in the store
+- `renew-or-churn-call`: links to ../cs-health-scorecard/SKILL.md, ../renewal-playbook/SKILL.md, ../cs-escalation-brief/SKILL.md, which is not in the store
+- `research-repo-setup`: links to ../knowledge-gardening/SKILL.md, which is not in the store
+- `rice-prioritisation`: links to ../../../skills/rice-prioritisation/SKILL.md, ../../../skills/professional-brain/SKILL.md, ../../../docs/craft/product-decisions.md, which is not in the store
+- `roadmap-narrative`: links to ../professional-brain/SKILL.md, which is not in the store
+- `salary-negotiation`: links to ../../../skills/salary-negotiation/SKILL.md, which is not in the store
+- `saying-no-kindly`: links to ../meeting-prep-pack/SKILL.md, which is not in the store
+- `shared-drive-cleanup`: links to ../document-retention-map/SKILL.md, which is not in the store
+- `ship-or-slip`: links to ../product-launch-checklist/SKILL.md, ../launch-readiness/SKILL.md, which is not in the store
+- `shutdown-ritual`: links to ../out-of-office-designer/SKILL.md, which is not in the store
+- `side-business-setup`: links to ../first-client-contract/SKILL.md, which is not in the store
+- `slide-density-rules`: links to ../outline-before-prose/SKILL.md, ../presenter-notes/SKILL.md, which is not in the store
+- `spreadsheet-or-database`: links to ../migration-day-runbook/SKILL.md, which is not in the store
+- `stakeholder-update`: links to ../professional-brain/SKILL.md, ../../SKILLSPEC.md, which is not in the store
+- `subscription-auditor`: links to ../../SKILLSPEC.md, which is not in the store
+- `survey-design-basics`: links to ../kpi-tracker-design/SKILL.md, which is not in the store
+- `task-triage-matrix`: links to ../delegation-brief/SKILL.md, which is not in the store
+- `team-budget-tracker`: links to ../budget-tracker-design/SKILL.md, ../contract-renewal-tracker/SKILL.md, ../proposal-skeleton/SKILL.md, which is not in the store
+- `the-open-house`: links to ../inspection-report-decoder/SKILL.md, which is not in the store
+- `the-price-pushback`: links to ../pricing-your-services/SKILL.md, which is not in the store
+- `thread-to-decision`: links to ../decision-meeting-format/SKILL.md, which is not in the store
+- `tool-procurement-eval`: links to ../purchase-justification/SKILL.md, ../contract-renewal-tracker/SKILL.md, ../skill-vetting/SKILL.md, which is not in the store
+- `travel-brief`: links to ../meeting-prep-pack/SKILL.md, ../out-of-office-designer/SKILL.md, ../expense-sheet-design/SKILL.md, which is not in the store
+- `tw-labour-standards`: links to ../../../skills/tw-labour-standards/SKILL.md, which is not in the store
+- `unblock-protocol`: links to ../decision-journal/SKILL.md, ../personal-wip-limits/SKILL.md, ../shutdown-ritual/SKILL.md, which is not in the store
+- `user-research-synthesis`: links to ../professional-brain/SKILL.md, which is not in the store
+- `vendor-breakup-email`: links to ../tos-decoder/SKILL.md, which is not in the store
+- `vendor-comparison-matrix`: links to ../proposal-skeleton/SKILL.md, ../vendor-breakup-email/SKILL.md, ../survey-design-basics/SKILL.md, which is not in the store
+- `wedding-logistics-planner`: links to ../sun-and-moon/SKILL.md, ../wedding-vendor-contract-decoder/SKILL.md, which is not in the store
+- `weekly-review-ritual`: links to ../task-triage-matrix/SKILL.md, ../unblock-protocol/SKILL.md, ../decision-journal/SKILL.md, which is not in the store
+- `what-to-ask`: links to ../the-car-dealership/SKILL.md, which is not in the store
+- `working-agreements`: links to ../decision-meeting-format/SKILL.md, which is not in the store
+- `workshop-designer`: links to ../outline-before-prose/SKILL.md, which is not in the store
+- `all-hands-deck`: links to ../kpi-tracker-design/SKILL.md, which is not in the store
+- `archive-strategy`: links to ../document-retention-map/SKILL.md, which is not in the store
+- `competitive-scan-lite`: links to ../evidence-grading/SKILL.md, ../proposal-skeleton/SKILL.md, which is not in the store
+- `data-slide-design`: links to ../slide-density-rules/SKILL.md, which is not in the store
+- `decision-log-setup`: links to ../decision-meeting-format/SKILL.md, ../thread-to-decision/SKILL.md, which is not in the store
+- `deck-narrative-arc`: links to ../exec-vs-working-deck/SKILL.md, ../presenter-notes/SKILL.md, ../proposal-skeleton/SKILL.md, which is not in the store
+- `deck-outline-first`: links to ../outline-before-prose/SKILL.md, ../meeting-prep-pack/SKILL.md, ../evidence-grading/SKILL.md, which is not in the store
+- `deck-review-rubric`: links to ../deck-outline-first/SKILL.md, ../evidence-grading/SKILL.md, ../slide-density-rules/SKILL.md, which is not in the store
+- `deep-work-blocking`: links to ../energy-scheduling/SKILL.md, ../weekly-review-ritual/SKILL.md, ../working-agreements/SKILL.md, which is not in the store
+- `demo-script`: links to ../deck-narrative-arc/SKILL.md, which is not in the store
+- `expense-discipline`: links to ../expense-sheet-design/SKILL.md, which is not in the store
+- `interview-synthesis`: links to ../survey-design-basics/SKILL.md, which is not in the store
+- `meeting-room-etiquette`: links to ../working-agreements/SKILL.md, ../demo-script/SKILL.md, which is not in the store
+- `onboarding-buddy-plan`: links to ../working-agreements/SKILL.md, which is not in the store
+- `recurring-meeting-pruner`: links to ../deep-work-blocking/SKILL.md, which is not in the store
+- `context-switch-budget`: links to ../deep-work-blocking/SKILL.md, ../recurring-meeting-pruner/SKILL.md, which is not in the store
+- `meeting-cost-meter`: links to ../context-switch-budget/SKILL.md, which is not in the store
+- `standing-meeting-audit`: links to ../meeting-cost-meter/SKILL.md, which is not in the store
+- `agenda-or-cancel`: links to ../standing-meeting-audit/SKILL.md, which is not in the store
+
+## notioncookbook (194)
+
+- `auth-guide`: another copy of this Skill in this source (workers/templates/airflow/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/chart-generator/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/cloudwatch-logs/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/custom-blocks/custom/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/custom-blocks/habit-tracker/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/custom-blocks/org-chart/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/custom-blocks/whiteboard/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/duckdb-query/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/duckdb-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/github-draft-release-tools/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/github-stars-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/github-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/hubspot-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/intercom-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/jira-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/linear-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/pagerduty-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/postgres-query/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/powerpoint-creator/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/raindrop-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/readwise-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/salesforce-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/sentry-pagerduty-incident-tools/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/sentry-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/snowflake-query/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/snowflake-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/sqlite-query/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/todoist-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/vercel-production-deployment-tools/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/workday-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/workers-default/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/zendesk-sync/.agents/skills/auth-guide) was left out; the store holds one copy
+- `auth-guide`: another copy of this Skill in this source (workers/templates/zendesk-webhook/.agents/skills/auth-guide) was left out; the store holds one copy
+- `build-my-engineering-wiki`: SKILL.md names another skill than its folder; evaluations/images/release-overview.png is not a plain text file (.png); evaluations/images/technical-library.png is not a plain text file (.png)
+- `create-my-team-handbook`: SKILL.md names another skill than its folder; evaluations/images/home.png is not a plain text file (.png)
+- `custom-blocks`: another copy of this Skill in this source (workers/agents/skills/custom-blocks) was left out; the store holds one copy
+- `custom-blocks`: another copy of this Skill in this source (workers/templates/custom-blocks/custom/.agents/skills/custom-blocks) was left out; the store holds one copy
+- `custom-blocks`: another copy of this Skill in this source (workers/templates/custom-blocks/habit-tracker/.agents/skills/custom-blocks) was left out; the store holds one copy
+- `custom-blocks`: another copy of this Skill in this source (workers/templates/custom-blocks/org-chart/.agents/skills/custom-blocks) was left out; the store holds one copy
+- `custom-blocks`: another copy of this Skill in this source (workers/templates/custom-blocks/whiteboard/.agents/skills/custom-blocks) was left out; the store holds one copy
+- `database-designer`: SKILL.md names another skill than its folder
+- `knowledge-capture`: SKILL.md names another skill than its folder
+- `meeting-prep`: SKILL.md names another skill than its folder
+- `organize-my-semester`: SKILL.md names another skill than its folder; evaluations/images/home.png is not a plain text file (.png)
+- `plan-marketing-campaigns`: SKILL.md names another skill than its folder
+- `research-documentation`: SKILL.md names another skill than its folder
+- `set-up-my-project`: SKILL.md names another skill than its folder; evaluations/images/design-docs.png is not a plain text file (.png); evaluations/images/design-meetings.png is not a plain text file (.png); evaluations/images/home.png is not a plain text file (.png)
+- `setup`: SKILL.md names another skill than its folder
+- `sketch`: the name is already taken by designskills
+- `spec-to-implementation`: SKILL.md names another skill than its folder
+- `sync`: another copy of this Skill in this source (workers/agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/airflow/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/chart-generator/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/cloudwatch-logs/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/custom-blocks/custom/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/custom-blocks/habit-tracker/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/custom-blocks/org-chart/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/custom-blocks/whiteboard/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/duckdb-query/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/duckdb-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/github-draft-release-tools/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/github-stars-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/github-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/hubspot-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/intercom-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/jira-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/linear-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/pagerduty-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/postgres-query/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/powerpoint-creator/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/raindrop-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/readwise-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/salesforce-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/sentry-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/snowflake-query/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/snowflake-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/sqlite-query/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/todoist-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/vercel-production-deployment-tools/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/workday-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/workers-default/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/zendesk-sync/.agents/skills/sync) was left out; the store holds one copy
+- `sync`: another copy of this Skill in this source (workers/templates/zendesk-webhook/.agents/skills/sync) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/airflow/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/chart-generator/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/cloudwatch-logs/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/custom-blocks/custom/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/custom-blocks/habit-tracker/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/custom-blocks/org-chart/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/custom-blocks/whiteboard/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/duckdb-query/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/duckdb-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/github-draft-release-tools/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/github-stars-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/github-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/hubspot-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/intercom-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/jira-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/linear-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/pagerduty-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/postgres-query/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/powerpoint-creator/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/raindrop-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/readwise-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/salesforce-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/sentry-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/snowflake-query/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/snowflake-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/sqlite-query/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/todoist-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/vercel-production-deployment-tools/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/workday-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/workers-default/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/zendesk-sync/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-debug`: another copy of this Skill in this source (workers/templates/zendesk-webhook/.agents/skills/sync-debug) was left out; the store holds one copy
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-guide`: examples/incremental-basic.ts is not a plain text file (.ts); examples/incremental-bimodal.ts is not a plain text file (.ts); examples/incremental-events.ts is not a plain text file (.ts); examples/replace-paginated.ts is not a plain text file (.ts); examples/replace-simple.ts is not a plain text file (.ts)
+- `sync-validate`: another copy of this Skill in this source (workers/templates/airflow/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/chart-generator/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/cloudwatch-logs/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/custom-blocks/custom/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/custom-blocks/habit-tracker/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/custom-blocks/org-chart/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/custom-blocks/whiteboard/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/duckdb-query/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/duckdb-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/github-draft-release-tools/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/github-stars-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/github-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/hubspot-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/intercom-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/jira-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/linear-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/pagerduty-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/postgres-query/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/powerpoint-creator/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/raindrop-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/readwise-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/salesforce-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/sentry-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/snowflake-query/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/snowflake-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/sqlite-query/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/todoist-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/vercel-production-deployment-tools/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/workday-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/workers-default/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/zendesk-sync/.agents/skills/sync-validate) was left out; the store holds one copy
+- `sync-validate`: another copy of this Skill in this source (workers/templates/zendesk-webhook/.agents/skills/sync-validate) was left out; the store holds one copy
+- `weekly-project-digest`: SKILL.md names another skill than its folder
+- `workflow`: another copy of this Skill in this source (workers/agents/skills/workflow) was left out; the store holds one copy
+- `workflow`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/workflow) was left out; the store holds one copy
+- `workflow-guide`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/workflow-guide) was left out; the store holds one copy
+- `workflow-validate`: another copy of this Skill in this source (workers/templates/workflows/workflow/.agents/skills/workflow-validate) was left out; the store holds one copy
+
+## mailtrap (1)
+
+- `converting-email-templates`: scripts/converter.py is not a plain text file (.py); tests/expected/brevo-test.html is not a plain text file (.html); tests/expected/mandrill-mergetags-test.html is not a plain text file (.html); tests/expected/postmark-test.html is not a plain text file (.html); tests/expected/sendgrid-test.html is not a plain text file (.html); tests/input/brevo-test.html is not a plain text file (.html); tests/input/mandrill-mergetags-test.html is not a plain text file (.html); tests/input/postmark-test.html is not a plain text file (.html); tests/input/sendgrid-test.html is not a plain text file (.html)
+
+## teable (1)
+
+- `teable-assistant-ops`: scripts/install.sh is not a plain text file (.sh)
+
+## helius (21)
+
+- `build`: another copy of this Skill in this source (helius-plugin/skills/build) was left out; the store holds one copy
+- `build`: the name is already taken by aas
+- `dflow`: another copy of this Skill in this source (helius-plugin/skills/dflow) was left out; the store holds one copy
+- `helius`: SKILL.md names another skill than its folder; SKILL.md has no description
+- `helius`: install.sh is not a plain text file (.sh)
+- `helius-dflow`: SKILL.md names another skill than its folder; SKILL.md has no description
+- `helius-dflow`: install.sh is not a plain text file (.sh)
+- `helius-jupiter`: SKILL.md names another skill than its folder; SKILL.md has no description; SKILL.md loads a remote script; prompts/claude.system.md loads a remote script; prompts/full.md loads a remote script; prompts/openai.developer.md loads a remote script; references/jupiter-plugin.md loads a remote script
+- `helius-jupiter`: install.sh is not a plain text file (.sh); SKILL.md loads a remote script; references/jupiter-plugin.md loads a remote script
+- `helius-okx`: SKILL.md names another skill than its folder; SKILL.md has no description
+- `helius-okx`: install.sh is not a plain text file (.sh)
+- `helius-phantom`: SKILL.md names another skill than its folder; SKILL.md has no description
+- `helius-phantom`: install.sh is not a plain text file (.sh)
+- `jupiter`: SKILL.md loads a remote script; references/jupiter-plugin.md loads a remote script
+- `jupiter`: SKILL.md loads a remote script; references/jupiter-plugin.md loads a remote script
+- `okx`: another copy of this Skill in this source (helius-plugin/skills/okx) was left out; the store holds one copy
+- `phantom`: another copy of this Skill in this source (helius-plugin/skills/phantom) was left out; the store holds one copy
+- `svm`: SKILL.md names another skill than its folder; SKILL.md has no description
+- `svm`: install.sh is not a plain text file (.sh)
+- `svm`: another copy of this Skill in this source (helius-plugin/skills/svm) was left out; the store holds one copy
+- `svm`: another copy of this Skill in this source (helius-skills/svm) was left out; the store holds one copy
+
+## videodb (1)
+
+- `python`: SKILL.md names another skill than its folder

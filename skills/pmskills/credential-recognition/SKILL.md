@@ -1,0 +1,37 @@
+---
+name: credential-recognition
+description: "Summarise what Credential Recognition does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact]."
+---
+
+# Credential Recognition Skill
+
+One-line summary of the value this skill delivers. <!-- TODO: rewrite -->
+
+## Working from a brief
+
+Deliver the full artifact even from a thin brief — infer and label assumptions, never refuse for missing context. <!-- TODO: tailor -->
+
+## Required Inputs
+
+Ask for (if not already provided), else infer and label:
+- <!-- TODO: the inputs to gather -->
+
+## Output Format
+
+<!-- TODO: a concrete template (headings/tables) of the final artifact -->
+
+## Quality Checks
+
+- [ ] <!-- TODO: a check the output must pass before hand-off -->
+
+## Anti-Patterns
+
+- [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Get my degree recognised abroad."
+- "Is my foreign license valid here?"
+- "Can I work as a [nurse/engineer/teacher] in [country] with my qualifications?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/credential-recognition.html

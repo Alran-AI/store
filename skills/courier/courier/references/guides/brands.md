@@ -1,0 +1,78 @@
+# Brands
+
+A brand is reusable visual styling (colors, logo, email header/footer, in-app widget theme)
+that Courier applies when rendering a template. Define it once, attach it, and every send
+picks it up without touching message content.
+
+**Contents:** [Quick Reference](#quick-reference) · [The Brand object](#the-brand-object) · [SDK methods](#sdk-methods) · [Brand resolution by send type](#brand-resolution-by-send-type) · [Sending unbranded email](#sending-unbranded-email)
+
+## Quick Reference
+
+### Rules
+- `brand` is required on template create: an object `{ id }` or `null` (no brand chrome).
+- Inline sends always arrive branded, with the brand you name or the workspace default.
+- To send unbranded email, use a template with `brand: null`, not an inline send.
+- **Brand chrome is email only.** The header, footer and logo render in email; `settings.inapp` themes the in-app inbox. SMS, push, Slack and Teams messages carry no brand styling, though any template can read values such as `{{brand.colors.primary}}`.
+- **Brands are per environment.** A brand created with a Test key doesn't exist in Production. **Migrate template** on a template copies its brand along with it. To copy a brand on its own, `retrieve` it with one environment's key and `create` it with the other's, passing the same `id`.
+- Brand IDs are `bnd_...`; older brands may use a slug like `default`. IDs are case-sensitive, and `create` accepts your own `id`.
+- In the console, publishing a template doesn't publish changes to its brand. Publish the brand too.
+
+## The Brand object
+
+`name` and `settings` are required on create, and `settings.colors` holds `primary` and `secondary`. Everything else is optional.
+
+```jsonc
+{
+  "id": "bnd_01kmrc2d8g5m7n3p9q4r6s8t0v", // generated, or supply your own on create
+  "name": "Acme",
+  "settings": {
+    "colors": { "primary": "#9D3789", "secondary": "#FFFFFF" },
+    "email": {                     // optional email chrome
+      "header": { /* logo, barColor */ },
+      "footer": { /* markdown, social links */ },
+      "head":   { /* raw <head> inject */ }
+    },
+    "inapp": {                     // optional in-app inbox theme
+      "colors": { "primary": "#9D3789", "secondary": "#FFFFFF" },
+      "icons": { /* … */ },
+      "widgetBackground": { /* … */ },
+      "borderRadius": "8px",
+      "placement": "bottom"        // top | bottom | left | right
+    }
+  },
+  "snippets": { "items": [{ "name": "greeting", "value": "Hi there" }] }  // legacy, not for new work
+}
+```
+
+## SDK methods
+
+| Operation | Node | Python |
+|---|---|---|
+| Create | `client.brands.create({ name, settings })` | `client.brands.create(name=…, settings=…)` |
+| Get | `client.brands.retrieve(brandId)` | `client.brands.retrieve(brand_id)` |
+| Update | `client.brands.update(brandId, { name, settings, snippets })` | `client.brands.update(brand_id, …)` |
+| List | `client.brands.list()` | `client.brands.list()` |
+| Delete | `client.brands.delete(brandId)` | `client.brands.delete(brand_id)` |
+
+`update` replaces `settings` and `snippets`. Send both in full, not a partial, or you drop the omitted keys.
+
+```ts
+const brand = await client.brands.create({
+  name: "Acme",
+  settings: { colors: { primary: "#9D3789", secondary: "#FFFFFF" } },
+});
+```
+
+## Brand resolution by send type
+
+| Send type | Brand applied |
+|---|---|
+| Inline content (`message.content`) | `message.brand_id`, else the workspace default |
+| Stored template (`message.template`) | `message.brand_id` when the send carries one, otherwise the template's own `brand` field. (Bulk API jobs document their own job-level `brand` — see [bulk.md](./bulk.md)) |
+| Any send carrying `tenant_id` | The tenant's `brand_id` is applied to the rendered template: the B2B pattern. Carry the tenant in `to.context.tenant_id` or `message.context.tenant_id` ([tenants.md](./tenants.md)) |
+
+## Sending unbranded email
+
+Store the template with `brand: null` and send it by template id: the output has no brand chrome. Inline sends always carry a brand (yours or the workspace default), so iterate inline and ship by template id. A send carrying `tenant_id` can still apply that tenant's brand. Either way, confirm the chrome-free render with a test send of the template (`client.messages.content(messageId)`).
+
+Brand `settings` carry more nested keys (email head/header/footer, in-app icons) than shown here; check the installed SDK types (`resources/brands.d.ts`).
