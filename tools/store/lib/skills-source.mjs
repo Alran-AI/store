@@ -7,6 +7,9 @@ import { join, relative, sep } from "node:path";
 const SEGMENT = /^[A-Za-z0-9._-]+$/u;
 const WINDOWS_RESERVED = /^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\..*)?$/iu;
 const SKILL_NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
+// A Skill is unpacked into a folder named after it, so its name is a path segment of the package
+// it comes from. The client holds a Skill name to the same 128 bytes the package format allows.
+const SKILL_NAME_BYTES = 128;
 const SEMVER = /^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/u;
 // Build leftovers that are never part of a Skill.
 const JUNK_DIRECTORIES = new Set(["__pycache__", ".git", "node_modules", ".pytest_cache", ".mypy_cache"]);
@@ -129,6 +132,9 @@ export function readSkills(sourceRoot, options = {}) {
     const directory = join(sourceRoot, candidate.path);
     const found = [];
     if (!SKILL_NAME.test(candidate.name)) found.push(`"${candidate.name}" is not a Skill name`);
+    else if (Buffer.byteLength(candidate.name) > SKILL_NAME_BYTES) {
+      found.push(`"${candidate.name}" is longer than ${SKILL_NAME_BYTES} bytes`);
+    }
     if (!existsSync(join(directory, "SKILL.md"))) found.push("has no SKILL.md");
     let front;
     if (found.length === 0) {
