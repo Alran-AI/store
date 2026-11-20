@@ -37,6 +37,9 @@ const CATEGORIES = [
 const PLUGIN_NAME = /^[a-z][a-z0-9]*(?:[._-][a-z0-9]+)*$/u;
 const SEMVER = /^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/u;
 const MAX_ARCHIVE_BYTES = 64 * 1024 * 1024;
+// The most files one archive may hold, the limit the client reads an archive with. A Plugin is a
+// whole source of Skills: the largest one in the store holds 10,691 files.
+const MAX_ARCHIVE_ENTRIES = 16_384;
 
 function fail(message) {
   const error = new Error(message);
@@ -200,6 +203,11 @@ const inFileName = (version) => version.replaceAll("+", "-");
 function archiveRef(files, fileName) {
   const archive = buildArchive(files);
   if (archive.length > MAX_ARCHIVE_BYTES) throw fail(`${fileName} is larger than the 64 MiB archive limit`);
+  // A Plugin of the store is a whole source of Skills, so it holds many files: the client reads an
+  // archive of up to 16,384 entries, and the builder must not make one it would refuse.
+  if (files.length > MAX_ARCHIVE_ENTRIES) {
+    throw fail(`${fileName} holds ${files.length} files, over the limit of ${MAX_ARCHIVE_ENTRIES}`);
+  }
   return {
     bytes: archive,
     ref: {
