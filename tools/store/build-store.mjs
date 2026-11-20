@@ -208,12 +208,18 @@ function archiveRef(files, fileName) {
   if (files.length > MAX_ARCHIVE_ENTRIES) {
     throw fail(`${fileName} holds ${files.length} files, over the limit of ${MAX_ARCHIVE_ENTRIES}`);
   }
+  const archiveSha256 = sha256Hex(archive);
+  // The name of an archive carries a part of the hash of its bytes: the same content keeps the
+  // same name, changed content gets a new one. A CDN that still holds the bytes of an earlier
+  // build under the old name can then never answer a request for the new content, and the client
+  // never compares a download against a hash of something else.
+  const base = fileName.endsWith(".zip") ? fileName.slice(0, -".zip".length) : fileName;
   return {
     bytes: archive,
     ref: {
-      url: `archives/${fileName}`,
+      url: `archives/${base}-${archiveSha256.slice(0, 8)}.zip`,
       size: archive.length,
-      archiveSha256: sha256Hex(archive),
+      archiveSha256,
       contentDigest: contentDigest(files),
     },
   };
