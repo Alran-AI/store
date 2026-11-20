@@ -13,6 +13,7 @@
 // ready-made package directory. Every assembled Plugin passes the public Plugin validator
 // (tools/plugins/validate-plugin.mjs) before it is archived.
 
+import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, relative, resolve, sep } from "node:path";
@@ -59,14 +60,35 @@ function jsonBytes(value) {
   return Buffer.from(`${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-function listTree(root) {
+/**
+ * The files of the source that a build may publish: the ones git keeps. A file that git ignores
+ * (the local setting of a tool, a note of a developer) is not part of the source, and a build that
+ * publishes it would differ from the build of the same source on a clean checkout. Without git, or
+ * outside a repository, every file of the tree is taken.
+ */
+function keptFiles(root) {
+  try {
+    const listed = execFileSync("git", ["-C", root, "ls-files", "--cached", "--others", "--exclude-standard"], {
+      encoding: "utf8",
+      maxBuffer: 256 * 1024 * 1024,
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    return new Set(listed.split("\n").filter(Boolean));
+  } catch {
+    return undefined;
+  }
+}
+
+function listTree(root, keep, prefix) {
   const files = [];
   const walk = (directory) => {
     for (const entry of readdirSync(directory, { withFileTypes: true })) {
       const full = join(directory, entry.name);
       if (entry.isDirectory()) walk(full);
       else if (entry.isFile()) {
-        files.push({ path: relative(root, full).split(sep).join("/"), content: readFileSync(full) });
+        const path = relative(root, full).split(sep).join("/");
+        if (keep && !keep.has(prefix ? `${prefix}/${path}` : path)) continue;
+        files.push({ path, content: readFileSync(full) });
       }
     }
   };
@@ -83,7 +105,7 @@ function materialize(files, directory) {
 }
 
 /** Assembles a bundle definition into the files of a Plugin package. */
-function assembleBundle(definition, skillsByName, skillsByPackage, configDirectory, sourceRoot) {
+function assembleBundle(definition, skillsByName, skillsByPackage, configDirectory, sourceRoot, keep) {
   const names = new Set(definition.skills ?? []);
   for (const pkg of definition.packages ?? []) {
     const members = skillsByPackage.get(pkg);
@@ -104,7 +126,8 @@ function assembleBundle(definition, skillsByName, skillsByPackage, configDirecto
     if (!entry.to || !existsSync(directory) || !statSync(directory).isDirectory()) {
       throw fail(`plugin "${definition.name}": directory "${entry.from}" does not exist in the source`);
     }
-    for (const file of listTree(directory)) files.push({ path: `${entry.to}/${file.path}`, content: file.content });
+    const prefix = relative(sourceRoot, directory).split(sep).join("/");
+    for (const file of listTree(directory, keep, prefix)) files.push({ path: `${entry.to}/${file.path}`, content: file.content });
   }
   for (const entry of definition.files ?? []) {
     const file = resolve(sourceRoot, entry.from ?? "");
@@ -232,11 +255,16 @@ export function buildStore({ source, config: configPath }) {
   const configDirectory = dirname(configFile);
   const config = readJson(configFile);
   if (config.schema !== "alran.store.build/v1") throw fail(`${configFile}: schema must be "alran.store.build/v1"`);
+  // A build publishes the files of the source that git keeps: the local setting of a tool or a
+  // note of a developer is not part of the source, and publishing it would make this build differ
+  // from the build of the same source on a clean checkout.
+  const keep = keptFiles(sourceRoot);
   const { skills, problems } = readSkills(sourceRoot, {
     exclude: (config.skills?.exclude ?? []).map((entry) => (typeof entry === "string" ? entry : entry.name)),
     titles: config.skills?.titles,
     groups: config.skills?.groups,
     versions: config.skills?.versions,
+    keep,
   });
   if (problems.length > 0) throw fail(`The Skills have problems:\n${problems.map((line) => `  ${line}`).join("\n")}`);
   const skillsByName = new Map(skills.map((skill) => [skill.name, skill]));
@@ -274,13 +302,13 @@ export function buildStore({ source, config: configPath }) {
     if (definition.directory) {
       const directory = resolve(configDirectory, definition.directory);
       if (!existsSync(directory) || !statSync(directory).isDirectory()) throw fail(`plugin "${definition.name}": ${directory} is not a directory`);
-      files = listTree(directory);
+      files = listTree(directory, keep, relative(sourceRoot, directory).split(sep).join("/"));
       manifest = JSON.parse(files.find((file) => file.path === ".alran-plugin/plugin.json").content.toString("utf8"));
       if (manifest.name !== definition.name || manifest.version !== definition.version) {
         throw fail(`plugin "${definition.name}": its manifest names ${manifest.name}@${manifest.version}`);
       }
     } else {
-      ({ files, manifest } = assembleBundle(definition, skillsByName, skillsByPackage, configDirectory, sourceRoot));
+      ({ files, manifest } = assembleBundle(definition, skillsByName, skillsByPackage, configDirectory, sourceRoot, keep));
     }
     validateAssembled(definition, files);
     const { bytes, ref } = archiveRef(files, `plugin-${definition.name}-${inFileName(definition.version)}.zip`);

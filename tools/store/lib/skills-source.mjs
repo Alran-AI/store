@@ -63,7 +63,7 @@ function titleCase(name) {
     .join(" ");
 }
 
-function listSkillFiles(directory, root, problems) {
+function listSkillFiles(directory, root, problems, keep, prefix) {
   const files = [];
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const full = join(directory, entry.name);
@@ -74,7 +74,7 @@ function listSkillFiles(directory, root, problems) {
     }
     if (info.isDirectory()) {
       if (JUNK_DIRECTORIES.has(entry.name)) continue;
-      files.push(...listSkillFiles(full, root, problems));
+      files.push(...listSkillFiles(full, root, problems, keep, prefix));
       continue;
     }
     if (!info.isFile()) {
@@ -83,6 +83,10 @@ function listSkillFiles(directory, root, problems) {
     }
     if (JUNK_FILES.test(entry.name)) continue;
     const path = relative(root, full).split(sep).join("/");
+    // A file that git ignores (the local setting of a tool, a note of a developer) is not part of
+    // the source: a build that publishes it would differ from the build of the same source on a
+    // clean checkout.
+    if (keep && !keep.has(prefix ? `${prefix}/${path}` : path)) continue;
     const segments = path.split("/");
     if (segments.length > 14) problems.push(`${path} is nested too deeply`);
     for (const segment of segments) {
@@ -107,6 +111,7 @@ export function readSkills(sourceRoot, options = {}) {
   const titles = options.titles ?? {};
   const groups = options.groups ?? {};
   const versions = options.versions ?? {};
+  const keep = options.keep;
   const problems = [];
   const candidates = [];
   const catalogPath = join(sourceRoot, "catalog.json");
@@ -150,7 +155,7 @@ export function readSkills(sourceRoot, options = {}) {
       }
       if (!front.get("description")) found.push("SKILL.md has no description");
     }
-    const files = found.length === 0 ? listSkillFiles(directory, directory, found) : [];
+    const files = found.length === 0 ? listSkillFiles(directory, directory, found, keep, candidate.path) : [];
     if (found.length > 0) {
       problems.push(...found.map((problem) => `${candidate.name}: ${problem}`));
       continue;
