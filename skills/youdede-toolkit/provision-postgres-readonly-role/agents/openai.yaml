@@ -1,0 +1,4 @@
+interface:
+  display_name: "Provision Postgres Readonly Role"
+  short_description: "Prepare SQL for a bounded read-only PostgreSQL analyst role"
+  default_prompt: "Use $provision-postgres-readonly-role for this task and follow its validation and refusal boundaries."

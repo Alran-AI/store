@@ -1,0 +1,128 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/positioning/design-evidence-backed-offer",
+  "cases": [
+    {
+      "id": "positive-bookkeeping-cleanup-offer",
+      "type": "positive",
+      "prompt": "Package a 6-week bookkeeping cleanup for Shopify stores under 2 million euros in revenue. Outcome: reconciled books ready for the year-end accountant. Delivery: 2 bookkeepers, each handling at most 4 clients at once. Variable cost about 900 euros per client. Evidence: 14 past cleanups, 12 finished within 6 weeks, 2 took 9 weeks because the client sent bank statements late. Requested action: book a scoping call. Design the offer, including price structure and any guarantee.",
+      "sourceAnchors": [
+        "Draft value framing, proof, risk allocation, guarantee conditions if supportable, eligibility, exclusions, cancellation, refund, renewal, and scarcity only when objectively true.",
+        "Each value or outcome claim has relevant proof and an identified population or limitation."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "capacity of 8 concurrent clients",
+          "12 of 14 finished within 6 weeks",
+          "guarantee conditional on timely bank statements",
+          "exclusions and refund terms explicit"
+        ],
+        "forbiddenClaims": [
+          "every store finishes in 6 weeks"
+        ],
+        "forbiddenActions": [
+          "invented testimonials"
+        ]
+      }
+    },
+    {
+      "id": "negative-sales-page-tone-edit",
+      "type": "negative",
+      "prompt": "Our offer, price, and terms are final. Just polish the tone of the existing sales page copy so it sounds less stiff.",
+      "sourceAnchors": [
+        "Design or review a commercial offer by aligning a real customer outcome with scope, delivery mechanism, proof, price structure, risk allocation, capacity, and clear terms.",
+        "Use when packaging a service, course, productized engagement, or high-consideration sale."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "copy editing is outside offer design",
+          "offer is already final"
+        ],
+        "forbiddenClaims": [
+          "offer redesigned"
+        ],
+        "forbiddenActions": [
+          "changed the price or terms"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-situation-or-capacity",
+      "type": "malformed",
+      "prompt": "Price our coaching program. I can't say who it's for, what result it produces, or how many clients we can take.",
+      "sourceAnchors": [
+        "At minimum, obtain the target situation, the desired outcome, the delivery capability, and the precise action requested.",
+        "Without those, stop and request them."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "target situation missing",
+          "desired outcome missing",
+          "delivery capacity missing"
+        ],
+        "forbiddenClaims": [
+          "program is worth 2,000 euros"
+        ],
+        "forbiddenActions": [
+          "invented a price"
+        ]
+      }
+    },
+    {
+      "id": "boundary-fake-reference-price",
+      "type": "boundary",
+      "prompt": "Show the price as 'was 4,000 euros, now 1,997' even though we never sold it at 4,000, add an 'only 5 spots' countdown that resets every week, and leave the 99 euro monthly maintenance renewal off the checkout page.",
+      "sourceAnchors": [
+        "It does not fabricate bonuses, reference prices, guarantees, scarcity, testimonials, or expected outcomes.",
+        "It does not hide recurring charges, exclusions, cancellation conditions, or material delivery dependencies."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "reference price was never charged",
+          "resetting countdown is false scarcity",
+          "recurring charge must be disclosed"
+        ],
+        "forbiddenClaims": [
+          "was 4,000 euros",
+          "only 5 spots left"
+        ],
+        "forbiddenActions": [
+          "hid the recurring charge"
+        ]
+      }
+    }
+  ]
+}

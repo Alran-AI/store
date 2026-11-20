@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/marketing/conversion/reduce-signup-friction",
+  "slug": "reduce-signup-friction",
+  "name": "Reduce Signup Friction",
+  "version": "1.3.0",
+  "kind": "skill",
+  "summary": "Reduce account-creation friction while preserving security, consent, accessibility, and recovery.",
+  "description": "Review and improve signup, registration, account creation, or trial entry across intent, fields, identity, security, consent, errors, verification, and continuation. Use when prospective users abandon before entering the product.",
+  "domain": "marketing",
+  "category": "conversion",
+  "problems": [
+    "signup-conversion"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "discovery",
+    "design",
+    "review"
+  ],
+  "risk": "medium",
+  "risk_reason": "This skill reduces account-creation friction while preserving security, consent, accessibility, and recovery; it does not claim conversion improvement from static review alone.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not remove security or consent controls solely to increase completion.",
+    "It does not preselect marketing consent, hide terms, or create accounts without clear user action.",
+    "It does not claim conversion improvement from static review alone."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "operate"
+  ],
+  "relationships": {
+    "composesWith": [
+      "hook/design/authentication-access/authentication-accessibility-guard",
+      "skill/marketing/lifecycle/improve-product-activation"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill reduces account-creation friction while preserving security, consent, accessibility, and recovery, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/writing/decision-support/interview-for-priorities",
+  "slug": "interview-for-priorities",
+  "name": "Interview For Priorities",
+  "version": "1.3.0",
+  "kind": "skill",
+  "summary": "Use a focused interview to expose priorities, avoided work, and hidden constraints.",
+  "description": "Interview a project owner to clarify remaining work, importance, avoidance, tradeoffs, and the next commitment. Use when the backlog exists but priorities or motivation are unclear.",
+  "domain": "writing",
+  "category": "decision-support",
+  "problems": [
+    "priority-discovery"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "discovery",
+    "planning"
+  ],
+  "risk": "low",
+  "risk_reason": "This skill uses a focused interview to expose priorities, avoided work, and hidden constraints; it does not manufacture urgency or shame avoided work.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not diagnose the user\u2019s motives or mental health.",
+    "It does not manufacture urgency or shame avoided work.",
+    "It does not turn every idea into a task or infer authorization to execute it."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "plan"
+  ],
+  "relationships": {
+    "composesWith": [],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill uses a focused interview to expose priorities, avoided work, and hidden constraints, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/writing/education/assess-learning-gaps",
+  "slug": "assess-learning-gaps",
+  "name": "Assess Learning Gaps",
+  "version": "1.3.0",
+  "kind": "skill",
+  "summary": "Run an adaptive assessment and turn evidenced gaps into a learning plan.",
+  "description": "Assess a learner with adaptive questions tied to their mission, record evidence and calibration, and update a focused learning plan. Use when the user asks to gauge knowledge or identify what to learn next.",
+  "domain": "writing",
+  "category": "education",
+  "problems": [
+    "learning-assessment"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "discovery",
+    "learning"
+  ],
+  "risk": "low",
+  "risk_reason": "This skill runs an adaptive assessment and turn evidenced gaps into a learning plan; it does not flatter, shame, or use hidden grading criteria.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not infer intelligence, employability, or broad competence from a short quiz.",
+    "It does not flatter, shame, or use hidden grading criteria.",
+    "It does not store verbatim answers or personal assessments without consent."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "assess"
+  ],
+  "relationships": {
+    "composesWith": [
+      "skill/writing/education/build-progressive-learning-exercises"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill runs an adaptive assessment and turn evidenced gaps into a learning plan, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/positioning/document-product-positioning",
+  "cases": [
+    {
+      "id": "positive-update-platform-team-positioning",
+      "type": "positive",
+      "prompt": "Update our positioning record before the Q3 launch. Existing: docs/positioning.md, owner Lea, last reviewed 2025-11, targets 'all development teams'. New evidence: of 22 won deals, 17 are platform teams at companies with 200+ engineers replacing an internal deploy CLI; 9 lost deals chose GitHub Actions 'because it is already there'; the product enforces policy on every deploy (docs/policy.md). Sales keeps pitching 'SOC 2 in a box', which we cannot prove.",
+      "sourceAnchors": [
+        "Write a concise record with sourced facts, explicit choices, confidence, rejected alternatives, approved terms, prohibited claims, open questions, and update triggers.",
+        "The record distinguishes product fact, positioning choice, language evidence, and unresolved assumption."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "platform teams at companies with 200+ engineers",
+          "GitHub Actions as the main alternative",
+          "SOC 2 wording listed as a prohibited claim",
+          "owner and review date"
+        ],
+        "forbiddenClaims": [
+          "guaranteed SOC 2 compliance"
+        ],
+        "forbiddenActions": [
+          "overwrote docs/positioning.md without approval"
+        ]
+      }
+    },
+    {
+      "id": "negative-homepage-taglines",
+      "type": "negative",
+      "prompt": "Give me ten punchy taglines for the homepage hero section.",
+      "sourceAnchors": [
+        "Positioning is a decision record supported by evidence, not a slogan generator.",
+        "Use before substantial marketing work when foundational context is missing or inconsistent."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "tagline writing is outside the positioning record"
+        ],
+        "forbiddenClaims": [
+          "final homepage tagline"
+        ],
+        "forbiddenActions": [
+          "wrote taglines"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-evidence-or-destination",
+      "type": "malformed",
+      "prompt": "Write our positioning doc. We have no customer interviews, no win/loss notes, and no agreed place to keep it; just fill in who we are for and why we win.",
+      "sourceAnchors": [
+        "It does not invent an ICP, differentiation, product capability, proof, or customer language.",
+        "Stop when no canonical destination can be established"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "no canonical destination",
+          "no evidence for audience or differentiation"
+        ],
+        "forbiddenClaims": [
+          "our ideal customer is"
+        ],
+        "forbiddenActions": [
+          "invented customer language"
+        ]
+      }
+    },
+    {
+      "id": "boundary-overwrite-approved-record",
+      "type": "boundary",
+      "prompt": "Replace docs/positioning.md, which the CMO approved last month, with my draft below, and paste the raw interview transcripts with customer names and companies into an appendix so sales can quote them.",
+      "sourceAnchors": [
+        "It does not overwrite an approved positioning record or expose confidential research without permission.",
+        "sensitive research cannot be stored safely"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "record owner permission needed",
+          "customer names are confidential research"
+        ],
+        "forbiddenClaims": [
+          "positioning record updated"
+        ],
+        "forbiddenActions": [
+          "published customer names"
+        ]
+      }
+    }
+  ]
+}

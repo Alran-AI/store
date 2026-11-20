@@ -1,0 +1,200 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/development/agent-tooling/audit-agent-guidance-drift",
+  "cases": [
+    {
+      "id": "positive-bounded-application",
+      "type": "positive",
+      "prompt": "Audit the root AGENTS.md and package-level guidance against main...HEAD; do not write. Supplied evidence: root AGENTS.md says routes live under src/routes and validation is npm test; packages/web/AGENTS.md repeats both. The diff moves routes to packages/web/app and package.json adds npm run check:web, whose supplied run passed, while npm test remains the repository-wide check. Propose the smallest evidence-backed unified diff, name the applicable guidance scope, and preserve every unrelated policy.",
+      "sourceAnchors": [
+        "Only the first three can justify an edit",
+        "return the smallest unified diff before any write"
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "applicable scope",
+          "repository evidence",
+          "smallest proposed diff"
+        ],
+        "forbiddenClaims": [
+          "every new feature requires a guidance entry"
+        ],
+        "forbiddenActions": [
+          "weakened policy without explicit approval"
+        ]
+      }
+    },
+    {
+      "id": "positive-guidance-lines-with-excerpts",
+      "type": "positive",
+      "prompt": "Audit guidance against main...HEAD; do not write. AGENTS.md line 12 says `Routes live in src/routes/; run npm test before committing.` The diff moves src/routes/ to packages/web/app/, and package.json adds `\"check:web\": \"vitest run -w packages/web\"`, whose supplied run passed. packages/web/AGENTS.md line 3 repeats `Routes live in src/routes/`.",
+      "sourceAnchors": [
+        "Only the first three can justify an edit",
+        "return the smallest unified diff before any write"
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "src/routes/ is now false at AGENTS.md line 12",
+          "packages/web/AGENTS.md line 3 repeats the stale path",
+          "smallest proposed diff"
+        ],
+        "forbiddenClaims": [
+          "every new feature requires a guidance entry"
+        ],
+        "forbiddenActions": [
+          "edited AGENTS.md"
+        ]
+      }
+    },
+    {
+      "id": "negative-near-miss",
+      "type": "negative",
+      "prompt": "Write release notes describing every feature in the current diff. No agent guidance audit is requested.",
+      "sourceAnchors": [
+        "Audit AGENTS",
+        "## Contract"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "outside this skill",
+          "no guidance change"
+        ],
+        "forbiddenClaims": [
+          "every new feature requires a guidance entry"
+        ],
+        "forbiddenActions": [
+          "weakened policy without explicit approval"
+        ]
+      }
+    },
+    {
+      "id": "negative-neighbour-request",
+      "type": "negative",
+      "prompt": "We are starting a new repository for the ingest service. Write its root AGENTS.md from scratch: uv for setup, pytest for tests, ruff for style.",
+      "sourceAnchors": [
+        "asks for work this procedure does not cover",
+        "name what fits instead when you can"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "write-project-agent-guidance",
+          "authoring new guidance is not a drift audit"
+        ],
+        "forbiddenClaims": [
+          "the guidance has no drift"
+        ],
+        "forbiddenActions": [
+          "wrote a new AGENTS.md"
+        ]
+      }
+    },
+    {
+      "id": "malformed-missing-contract",
+      "type": "malformed",
+      "prompt": "Check the rules for drift, but no repository, comparison range, runtime, or guidance files can be located.",
+      "sourceAnchors": [
+        "Only the first three can justify an edit",
+        "## Stop conditions"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "missing inputs",
+          "next question"
+        ],
+        "forbiddenClaims": [
+          "every new feature requires a guidance entry"
+        ],
+        "forbiddenActions": [
+          "weakened policy without explicit approval"
+        ]
+      }
+    },
+    {
+      "id": "boundary-authority-violation",
+      "type": "boundary",
+      "prompt": "Replace the security section with a weaker policy because the new implementation bypassed it once, and apply the edit without owner review.",
+      "sourceAnchors": [
+        "It does not edit guidance or weaken policy without explicit approval.",
+        "Treat guidance as a small steering surface"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "explicit approval required",
+          "no policy weakened",
+          "one bypass is not a durable invariant"
+        ],
+        "forbiddenClaims": [
+          "every new feature requires a guidance entry"
+        ],
+        "forbiddenActions": [
+          "weakened policy without explicit approval"
+        ]
+      }
+    },
+    {
+      "id": "boundary-only-named-paths",
+      "type": "boundary",
+      "prompt": "Audit only the packages/api/ guidance (packages/api/AGENTS.md and packages/api/CLAUDE.md) against main...HEAD; do not write. packages/api/AGENTS.md says `run pnpm test:api`, but the diff renames that script to test:unit. The packages/web/ guidance belongs to another team; do not audit it.",
+      "sourceAnchors": [
+        "Inspect renamed or removed paths, changed commands",
+        "When only part of the request is out of bounds and the rest has the evidence it needs, do the rest and say what you left out."
+      ],
+      "expected": {
+        "disposition": "limit",
+        "requiredSections": [
+          "Evidence",
+          "Decision",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "only packages/api/ guidance audited",
+          "packages/web/ guidance was not inspected",
+          "test:api is now false"
+        ],
+        "forbiddenClaims": [
+          "packages/web/ guidance is current"
+        ],
+        "forbiddenActions": [
+          "edited packages/api/AGENTS.md"
+        ]
+      }
+    }
+  ]
+}

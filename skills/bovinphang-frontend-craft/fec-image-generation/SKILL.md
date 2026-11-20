@@ -1,0 +1,16 @@
+---
+name: fec-image-generation
+description: 用于生成或编辑前端 UI 样机、产品图、海报、品牌视觉、插图、头像、分镜和位图素材，并对 PNG 进行质检；不要用于架构、序列、流程和数据流等结构化技术图表。
+---
+
+# 前端视觉资产生成与编辑
+
+用于 UI、品牌和产品视觉，先读取[资产路由](references/artifact-routing.md)，根据已有图片、目标用途、尺寸、透明背景和交付路径选择生成、编辑或混合流程。
+
+## 实施与质检
+
+保留原图，编辑默认另存新文件。不要将占位图或概念稿当作最终产品图。明确品牌、文案、可访问替代描述和授权约束；有现成图片时优先定向编辑。
+
+每次 PNG 交付前检查实际图像，核验主体渲染、文字截断、构图、透明背景和品牌。使用[公共来源的 PNG 检查工具](https://github.com/bovinphang/craft-common/blob/v2.1.0/localized/zh-CN/skills/cc-technical-diagrams/scripts/png-qa.mjs)；默认最多两轮修复，按 [PNG 修复说明](https://github.com/bovinphang/craft-common/blob/v2.1.0/localized/zh-CN/skills/cc-technical-diagrams/references/png-qa-autofix.md) 修改源文件、提示词或布局，不直接破坏性修改输出像素。
+
+报告源文件、结果路径、生成路由、QA 轮次与剩余风险。结构化技术图表使用独立公共技术图表能力；此入口不再维护图表渲染器。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Plan Execution Divergence"
+  short_description: "Compare an approved plan with the actual changes and evidence"
+  default_prompt: "Use $review-plan-execution-divergence for this task and follow its validation and refusal boundaries."

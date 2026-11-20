@@ -1,0 +1,176 @@
+# Stratégie de Tests React 19 + Compiler 1.0 — Référence Complète
+
+**Versions :** React 19.2+ | React Compiler 1.0 | Vitest 5 | Playwright
+
+## Compatibilité React Compiler 1.0
+
+**React Compiler 1.0** (auto-memoization) est compatible avec tous les outils de tests React :
+- **Vitest** + **React Testing Library / vitest-browser-react (Browser Mode)** : aucun changement requis
+- **Playwright** : aucun changement requis
+- **MSW** : aucun changement requis
+
+Les tests restent **comportementaux** (pas d'implémentation testée), donc l'optimisation automatique du compilateur est transparente.
+
+**Note :** Ne pas tester les optimisations du compilateur (memoization). Tester uniquement le comportement visible (UI, interactions, états).
+
+Source : [react.dev/blog/2025/10/07/react-compiler-1](https://react.dev/blog/2025/10/07/react-compiler-1)
+
+## Configuration Vitest 5 Browser Mode
+
+```typescript
+// vitest.config.ts
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
+import { playwright } from '@vitest/browser-playwright';
+
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    browser: {
+      enabled: true,
+      provider: playwright(),
+      instances: [{ browser: 'chromium' }], // ou 'firefox', 'webkit'
+    },
+    globals: true,
+  },
+});
+```
+
+## Tests composants avec Vitest Browser Mode
+
+```typescript
+// Button.test.tsx
+import { render } from 'vitest-browser-react';
+import { Button } from './Button';
+
+test('handles click events', async () => {
+  const handleClick = vi.fn();
+  const screen = render(<Button onClick={handleClick}>Click me</Button>);
+
+  await screen.getByText('Click me').click();
+
+  expect(handleClick).toHaveBeenCalledOnce();
+});
+```
+
+**Source :** [Vitest Browser Mode Guide](https://vitest.dev/guide/browser.html)
+
+## Playwright Component Testing
+
+Alternative à React Testing Library — browser réel, debugging visuel (RTL 16 reste maintenu et valide pour les suites JSDOM).
+
+```typescript
+// Button.test.tsx
+import { test, expect } from '@playwright/experimental-ct-react';
+import { Button } from './Button';
+
+test('handles click events', async ({ mount }) => {
+  let clicked = false;
+  
+  const component = await mount(
+    <Button onClick={() => { clicked = true; }}>
+      Click me
+    </Button>
+  );
+  
+  await component.click();
+  expect(clicked).toBe(true);
+});
+```
+
+**Source :** [vitest-browser-react](https://github.com/vitest-community/vitest-browser-react), [Playwright Component Testing](https://playwright.dev/docs/test-components)
+
+## Mutation Testing avec Stryker
+
+```bash
+# Installation
+npm install -D @stryker-mutator/core @stryker-mutator/vitest-runner
+
+# stryker.config.json
+{
+  "testRunner": "vitest",
+  "coverageAnalysis": "perTest",
+  "mutate": ["src/**/*.ts", "src/**/*.tsx"],
+  "thresholds": { "high": 80, "low": 60, "break": 50 }
+}
+
+# Exécution
+npx stryker run
+```
+
+**Philosophie :** "Coverage = quantité de code testé. Mutation score = qualité des tests."
+
+**Source :** [Stryker Mutator](https://stryker-mutator.io/)
+
+## React Server Components — Tests
+
+```typescript
+// ProductList.test.tsx (RSC)
+import { test, expect } from 'vitest';
+import { ProductList } from './ProductList';
+
+test('renders product list server component', async () => {
+  const html = await ProductList({ category: 'books' });
+  
+  expect(html).toContain('Books');
+  // RSC retourne du HTML, pas de DOM
+});
+```
+
+## Vitest Projects — Monorepo
+
+`workspace` a été renommé `projects` (Vitest 3.2) : un fichier `vitest.workspace.ts` séparé n'est plus supporté en 4.x, déclarer `projects` dans `vitest.config.ts`.
+
+```typescript
+// vitest.config.ts
+import { defineConfig } from 'vitest/config';
+import { playwright } from '@vitest/browser-playwright';
+
+export default defineConfig({
+  test: {
+    projects: [
+      {
+        test: {
+          name: 'unit',
+          include: ['src/**/*.test.{ts,tsx}'],
+        },
+      },
+      {
+        test: {
+          name: 'browser',
+          include: ['src/**/*.browser.test.{ts,tsx}'],
+          browser: {
+            enabled: true,
+            provider: playwright(),
+            instances: [{ browser: 'chromium' }],
+          },
+        },
+      },
+    ],
+  },
+});
+```
+
+**Source :** [Vitest Projects](https://vitest.dev/guide/projects), [Browser Mode](https://vitest.dev/guide/browser/)
+
+## Property-based Testing
+
+```typescript
+// fast-check pour générer des cas de test
+import fc from 'fast-check';
+
+test('calculateTotal is always positive', () => {
+  fc.assert(
+    fc.property(fc.array(fc.nat()), (prices) => {
+      const total = calculateTotal(prices);
+      return total >= 0;
+    })
+  );
+});
+```
+
+**Source :** [fast-check](https://fast-check.dev/)
+
+---
+
+Voir `@.claude/rules/07-testing.md` pour principes transverses.

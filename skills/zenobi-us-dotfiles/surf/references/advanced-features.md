@@ -1,0 +1,414 @@
+# Surf Advanced Features
+
+Covers sessions, remote Surf, workflow files, playbooks, and other capabilities beyond the default single-agent loop in SKILL.md.
+
+## Browser Sessions (multi-agent coordination)
+
+A session owns one explicit Chrome tab. New sessions default to a separate **unfocused normal window**, so Chrome focus changes cannot retarget another agent's commands.
+
+```bash
+surf session.new research "https://example.com"   # separate unfocused window
+surf session.ensure research about:blank           # idempotent, safe to repeat
+surf session.new scout about:blank --tab           # inactive tab instead of a window
+
+surf --session research read                        # explicit selector
+SURF_SESSION=research surf screenshot                # environment selector
+
+surf session.list --refresh                          # all bindings + queue state
+surf session.info research --refresh                 # target and scheduler details
+surf session.close research                           # closes Surf-created target
+surf session.cleanup --idle-after 1h --dry-run        # preview forgotten sessions
+surf session.cleanup --idle-after 1h                  # remove idle bindings
+surf session.rebind research --tab-id 789             # adopt an existing tab
+surf session.reopen research                          # recreate from last URL
+```
+
+Rules:
+- Give every independent agent a unique `SURF_SESSION` value. Never reuse one across concurrent agents in different worktrees/directories.
+- Commands for the same session tab run FIFO. Commands for different session tabs can overlap.
+- Browser-wide mutations (create/move/close/focus tab or window, write cookies) wait for active tab lanes to drain. Add `--no-wait` to get `tab_busy`/`browser_busy` immediately instead of queueing.
+- Sessions share the same Chrome profile: cookies, auth, storage, downloads, history are shared. For hard isolation, use separate browser profiles with separate native hosts and `SURF_SOCKET` values.
+- Recovery errors print a copy-pasteable fix, e.g. `Recovery: surf session.reopen research`.
+- `surf chatgpt`, `surf gemini`, `surf oracle ask` warn before taking exclusive browser access, so a queued provider flow is not mistaken for a hung command.
+
+## Remote Surf (over Tailscale)
+
+Runs the browser + native host on one Tailnet machine while the CLI runs on another. Tailnet reachability is **not** authorization — every remote client needs its own credential.
+
+On the browser host:
+```bash
+surf remote authorize agent-macbook --output ~/agent-macbook.surf-credential.json
+surf remote list
+surf install <extension-id> --listen 100.101.102.103:4321
+```
+
+From the authorized client:
+```bash
+surf --remote 100.101.102.103:4321 \
+  --remote-credential ~/.config/surf/agent-macbook.json \
+  tab.list
+```
+
+TLS (client-side, requires a TLS-terminating reverse proxy in front of the listener):
+```bash
+surf --remote surf.example.com:443 --remote-tls \
+  --remote-tls-ca ~/.config/surf/private-ca.pem \
+  --remote-credential ~/.config/surf/agent-macbook.json tab.list
+```
+
+Notes:
+- `--remote`/`SURF_REMOTE` overrides `SURF_SOCKET`. `--remote-credential`/`SURF_REMOTE_CREDENTIAL` selects the identity.
+- `SURF_REMOTE_TLS=1` is the only accepted env spelling; there is no CLI negation for an env-enabled setting.
+- Unprefixed and `local:` paths are client-local; only `remote:/absolute/path` touches the browser host directly.
+- Limits: 256 MiB per file, 512 MiB / 32 files per connection. `record`, `aistudio.build`, video, and multi-file/directory transfers are rejected remotely.
+- Revoke access with `surf remote revoke agent-macbook` on the browser host.
+- Use `surf doctor --remote <host:port> --remote-credential <path>` to verify endpoint selection and auth after confirming Tailnet reachability with `tailscale ping`.
+
+## Workflow Files
+
+### Where workflow JSON lives
+
+Workflow JSON **MUST** live under the shared-context root. You **MUST NOT**
+create `./.surf/workflows/` inside a repository.
+
+Surf has no setting that moves its own search path. `getWorkflowDirs()` in
+`native/workflow-definition.cjs` hardcodes `./.surf/workflows/` (project) and
+`~/.surf/workflows/` (user), and every call site passes no override.
+`SURF_STATE_DIR` moves `~/.surf/state` only. `SURF_NETWORK_PATH` moves network
+captures only. Neither moves workflows.
+
+The name lookup is avoidable. `resolveWorkflow` treats any argument that
+contains `/` or ends in `.json` as a file path, so both forms load a workflow
+from any directory:
+
+```bash
+surf do "$ROOT/RWR-19971/surf-workflows/login.json" --email "user@example.com"
+surf do --file "$ROOT/RWR-19971/surf-workflows/login.json" --email "user@example.com"
+```
+
+### Procedure: save a reusable workflow
+
+1. You **MUST** resolve the context root from inside the repository you are
+   working on. Load the `shared-context` skill and run its CLI:
+
+   ```bash
+   cd "<the repository you are working on>"
+   shared-context report
+   ```
+
+   Read the `root:` line. If `storage:` reports `repository`, the resolved root
+   is the repository itself. Tell the user before you write, and read the
+   `shared-context` storage procedure if they want shared storage instead.
+
+2. You **MUST** write the file to
+   `<root>/<WORK-KEY>/surf-workflows/<name>.json` when a work key is active, or
+   to `<root>/library/surf-workflows/<name>.json` when there is none. A surf
+   workflow is task material, like `planning.md`, not an ingested source, so it
+   keeps its own directory name.
+
+3. You **MUST** run, validate, and inspect the workflow by its absolute path.
+
+4. You **SHOULD** validate before the first run:
+
+   ```bash
+   surf workflow.validate "$ROOT/RWR-19971/surf-workflows/login.json"
+   ```
+
+### Traps
+
+- **A bare name fails silently.** `surf do login` with no `login.json` in the
+  two hardcoded directories does not error. It parses `login` as an inline
+  command and reports `Would execute 1 steps: 1. login`. Always pass a path.
+- **`surf workflow.list` cannot see these files.** It scans the two hardcoded
+  directories only. Use `ls "<root>/<WORK-KEY>/surf-workflows/"` instead.
+- **`surf workflow.info` and `surf workflow.validate` do accept a path.** Both
+  resolve a path argument before they search the hardcoded directories.
+- **Playbooks are separate.** This section covers workflows only. Playbooks
+  have no path escape hatch — see "Where playbooks live" below.
+
+### JSON format
+
+```json
+{
+  "name": "login-flow",
+  "description": "Log into example.com",
+  "args": {
+    "email": { "required": true, "desc": "Login email" },
+    "password": { "required": true, "desc": "Login password" }
+  },
+  "steps": [
+    { "tool": "navigate", "args": { "url": "https://example.com/login" } },
+    { "tool": "type", "args": { "text": "%{email}", "selector": "input[name=email]" } },
+    { "tool": "type", "args": { "text": "%{password}", "selector": "input[name=password]" } },
+    { "tool": "click", "args": { "selector": "button[type=submit]" } }
+  ]
+}
+```
+
+Inspect and check a stored workflow with `surf workflow.info <path>` and
+`surf workflow.validate <path>`.
+
+### Step schema: what the runner actually reads
+
+Verified against surf v2.20.0. The upstream README documents a richer step
+schema than the runner implements. The validator accepts every key below and
+reports `✓ Valid workflow`, so **validation is not proof that a key does
+anything**.
+
+A **tool step** reads three keys and drops the rest:
+
+```json
+{ "tool": "js", "args": { "code": "return document.title" }, "as": "title" }
+```
+
+| Key | Node | Behaviour in v2.20.0 |
+|---|---|---|
+| `tool`, `args` | tool step | Works. |
+| `as` | tool step | Works. Captures the step output into the context. |
+| `%{name}` | any string in `args` | Works. Interpolates an arg or an earlier `as`. |
+| `repeat` + `steps` | loop node | Works. |
+| `each` + `as` + `steps` | loop node | Works. |
+| `until` | loop node | **Runs every iteration and never exits.** |
+| `expect` | tool step | **Silently ignored.** |
+| `when`, `if` | tool step | **Silently ignored.** The step always runs. |
+| `retry` | tool step | **Silently ignored.** One attempt. |
+| `continueOnError` | tool step | **Silently ignored.** Use `--on-error continue`. |
+
+You **MUST NOT** use `expect`, `when`, `if`, `retry`, `continueOnError` or
+`until` to control a workflow. A workflow that relies on one of them reports
+success while doing the opposite of what it says.
+
+### Assert deterministically by throwing
+
+Because `expect` does nothing, the only deterministic assertion is a `js` step
+that throws. A thrown error fails the step and halts the workflow:
+
+```json
+{ "tool": "js", "args": { "code":
+  "var t=document.title; if(t!=='Example Domain') throw new Error('ASSERT FAIL: title was '+t); return t" },
+  "as": "title" }
+```
+
+```json
+{ "status": "failed", "completedSteps": 1,
+  "error": "Error: ASSERT FAIL: title was Example Domain" }
+```
+
+You **MUST NOT** use `semantic.step` with `"op": "assert"` to verify an
+outcome you need to be certain about. That op sends the page to a model and
+returns a confidence judgement. It needs `--allow-semantic`, and it answers
+"does this look right", not "is this right". You **MAY** use `semantic.find`
+to locate an element, then assert on it by throwing.
+
+### Loop node shape
+
+A loop is its own node. It is **not** a modifier on a tool step. `repeat` beside
+a `tool` key fails parsing with `loop must have a non-empty 'steps' array`.
+
+```json
+{ "repeat": 3, "steps": [ { "tool": "js", "args": { "code": "..." }, "as": "n" } ] }
+{ "each": "%{items}", "as": "item", "steps": [ { "tool": "js", "args": { "code": "return 'saw %{item}'" } } ] }
+```
+
+An `as` inside a loop keeps **only the last iteration's value**. Collect
+per-iteration values by returning an array from one `js` step instead of
+looping.
+
+### Reading results with `--json`
+
+`--json` is how a workflow reports back. `vars` carries every `as` capture and
+every argument, and it **survives a failed run**, so captures from the steps
+before the failure are still readable.
+
+```bash
+surf do -f "$ROOT/<WORK-KEY>/surf-workflows/test-1.json" --base "$BASE" --json
+```
+
+```json
+{
+  "status": "failed",
+  "completedSteps": 3,
+  "totalSteps": 4,
+  "results": [
+    { "step": 1, "cmd": "navigate", "status": "ok", "ms": 836 },
+    { "step": 4, "cmd": "screenshot", "status": "error", "error": "...", "ms": 5097 }
+  ],
+  "error": "...",
+  "totalMs": 6159,
+  "vars": { "base": "https://example.com", "title": "Example Domain", "ok": true }
+}
+```
+
+| Field | Meaning |
+|---|---|
+| `status` | `completed` or `failed`. |
+| `completedSteps` / `totalSteps` | Where it stopped. |
+| `results[]` | Per step: `step`, `cmd`, `status`, `ms`, and `error` when it failed. A loop node reports `stepsExecuted`. |
+| `failed` | Count, present on a `completed` run. |
+| `vars` | Every `as` capture and argument. This is the machine-readable output. |
+
+A run halts on the first error by default. `--on-error continue` runs the rest
+and reports `"failed": <count>`, verified.
+
+### Screenshots need the tab to be visible
+
+A `screenshot` step fails when the session's tab is not the active tab in its
+window:
+
+```
+Error: Cannot use screenshot fallback because tab 312627304 is not visible in window 312627204 [screenshot_target_not_visible]
+```
+
+No file is written, and the step fails **after** the actions before it already
+ran. `session.new` opens an unfocused window, so this is the default state for
+a fresh session.
+
+You **MUST** switch to the tab before the first screenshot:
+
+```bash
+surf tab.switch "$(surf page.state | grep -oE 'tab=[0-9]+' | head -1 | cut -d= -f2)"
+```
+
+Surf drives a visible Chrome. It **cannot** capture evidence unattended. Use
+`playwright-cli` when a run has to produce screenshots with nobody at the
+keyboard.
+
+## Playbooks
+
+Use `surf do` for a one-off sequence. Use a **playbook** for a reusable site capability that tries a network request first and falls back to a workflow when the endpoint drifts.
+
+```bash
+surf playbook list
+surf pb show page
+surf pb ops page
+surf use page read --json
+
+# Write ops require explicit authorization and a duplicate-safety receipt
+surf use <site> <write-op> --write --resource-id 123
+```
+
+Read ops may use a trusted `script` strategy (`--allow-script` required at run time; this is not a security sandbox — only run scripts from playbooks you trust). Project playbooks in `./.surf/playbooks/` override user playbooks in `~/.surf/playbooks/`; built-ins are the final fallback.
+
+Author from observed activity:
+```bash
+surf pb suggest --since 1h
+surf pb record start example --op read --network --watch
+surf pb record stop --draft
+surf pb save --from-record <record-id>
+```
+
+### Where playbooks live
+
+Playbooks differ from workflows. A playbook has no path escape hatch. `surf use`
+takes a playbook id, and `ID_PATTERN` in `native/playbooks.cjs` is
+`/^[a-z0-9][a-z0-9._-]{0,63}$/`, which forbids a slash. You cannot name a
+directory instead.
+
+Only one thing writes a playbook into the repository: the `--project` flag.
+`surf pb save` and `surf playbook import` both default to `user` scope
+(`~/.surf/playbooks/`), which is already outside the repository.
+
+Rules:
+
+1. You **MUST NOT** pass `--project` to `surf pb save` or
+   `surf playbook import`. That flag is what creates `./.surf/playbooks/`.
+2. You **MUST** keep the canonical copy of an authored playbook under the
+   shared-context root, at `<root>/<WORK-KEY>/surf-playbooks/<id>/` or
+   `<root>/library/surf-playbooks/<id>/`. Resolve `<root>` with the
+   `shared-context` CLI, as the workflow procedure above describes.
+3. You **MUST** treat `~/.surf/playbooks/` as an install target, not as the
+   source of truth. It is a per-machine cache.
+
+Publish a playbook you authored, then install it elsewhere:
+
+```bash
+# Author into user scope (default), then publish the canonical copy
+surf pb save --from-record <record-id>
+surf playbook export <id> --out "$ROOT/RWR-19971/surf-playbooks/<id>"
+
+# Install on another machine or after a reset (user scope is the default)
+surf playbook import "$ROOT/RWR-19971/surf-playbooks/<id>"
+```
+
+### Playbook traps
+
+- **Neither export nor import is idempotent.** `writePlaybookDirectory` throws
+  `playbook output already exists` when the destination directory exists. To
+  refresh a published copy or a reinstall, remove the destination directory
+  first. Check the directory before you delete it.
+- **Import can shadow a built-in.** Importing an id such as `page` puts a user
+  playbook ahead of the built-in of the same name. Choose a distinct id.
+- **`surf playbook list` reports scope.** Use it to confirm a playbook resolved
+  from `user` and not from `project`.
+
+## Oracle (durable ChatGPT consult)
+
+Prefer over one-shot `surf chatgpt` when the consult needs file context, a specific model/effort, or should be resumable.
+
+```bash
+surf oracle ask "review this change" --files "src/**/*.ts" --file ./design.md \
+  --model gpt-5.5 --effort pro --github --detach --json
+surf oracle status <job-id> --json
+surf oracle result <job-id> --wait --json
+surf oracle follow <job-id> "challenge that recommendation" --file ./follow-up.md --github --detach --json
+```
+
+Only one oracle job runs at a time — a second `ask` returns the blocking job id instead of queueing silently. Accepted efforts: `instant`, `medium`, `high`, `xhigh`/`extra-high`, `pro`. `--model gpt-6-astra` must read back as model 6 before submission (fails closed if the UI can't verify it); `--model latest` floats. `--github` requires the ChatGPT Chat tab and connected GitHub tool.
+
+## Emulation, Recording, and Performance
+
+```bash
+surf emulate.device --list
+surf emulate.device "iPhone 14"
+surf emulate.viewport --width 375 --height 812 --scale 2
+surf emulate.touch
+
+surf record --duration 2000 --fps 10 --output /tmp/anim.gif      # GIF (ImageMagick required)
+surf video start ./demo.webm --fps 30                              # WebM/VP9 (ffmpeg required)
+surf animate-audit --selector ".thing" --duration 2000 --fps 10   # JSON timeline, no file output
+surf perf-audit --duration 3000 --trigger "click:.cta" --output /tmp/perf.json
+surf perf.metrics / perf.start / perf.stop
+```
+
+## Extract (read-only structured data)
+
+`surf extract` opens an owned tab, waits for readiness, runs a page script, validates the JSON result, and closes the tab.
+
+```bash
+surf extract "https://example.com/list" --file rows.js --ready-selector ".item"
+surf extract --tab-id 42 --code 'return [...document.querySelectorAll("h2")].map(h => ({title: h.textContent}))'
+```
+
+Treat extraction scripts as idempotent — a retry can replay the script. Zero rows retry (bounded, default 1, max 5) unless `--allow-empty` or `--empty-text` is set. Login/challenge/not-found/page-error results never retry.
+
+## Network Capture
+
+Capture is automatic while Surf is active — no explicit start needed.
+
+```bash
+surf network --exclude-static --since 5m
+surf network --origin api.github.com --status 4xx,5xx
+surf network.get r_001
+surf network.body r_001
+surf network.export --har --output ./trace.har
+```
+
+Storage: `~/.surf/state/network/` (override `SURF_NETWORK_PATH`). Auto-cleanup: 24h TTL, 200MB max.
+
+## Global Options
+
+```bash
+--session <name>   # Target a durable browser session (or set SURF_SESSION)
+--tab-id <id>
+--window-id <id>
+--no-wait          # Return tab_busy/browser_busy instead of queueing
+--json
+--soft-fail        # stderr warning, exit 0, empty stdout — even with --json
+--no-lock          # Bypass legacy lock for compound client-side commands
+--no-screenshot
+--full             # Full-resolution screenshots (skip resize)
+```
+
+## Key Environment Variables
+
+`SURF_SESSION`, `SURF_SOCKET`, `SURF_REMOTE`, `SURF_REMOTE_CREDENTIAL`, `SURF_REMOTE_TLS`, `SURF_STATE_DIR`, `SURF_NETWORK_PATH`. Full list and use cases: upstream README `Environment Variables` section.

@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/growth/design-qualified-lead-magnet",
+  "cases": [
+    {
+      "id": "positive-no-show-cost-calculator",
+      "type": "positive",
+      "prompt": "Design a lead magnet for our scheduling software. Audience: independent physiotherapy clinics with 1 to 5 practitioners. Urgent job: cutting appointment no-shows before summer. Current workaround: manual SMS reminders the day before. Desired outcome: a clinic can estimate its monthly no-show cost and choose three reminder changes. Product connection: our tool automates reminders. Proof available: anonymized no-show rates from 120 of our own client clinics. Privacy: EU clinics, GDPR applies. Maintenance owner: our content lead, who updates the benchmark figures every January. Data handling: the calculator runs in the browser and stores nothing; only the optional emailed PDF needs an email address, kept 12 months under our existing privacy notice.",
+      "sourceAnchors": [
+        "Select a format that lets the user complete a meaningful task.",
+        "Design an honest promise, minimal optional capture, consent language, immediate delivery, share path, and follow-up that continues the same job rather than switching to generic promotion."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "resource usable without a sales call",
+          "minimal capture with unticked consent",
+          "data framed as 120 client clinics, not the industry",
+          "measure completed use, not downloads"
+        ],
+        "forbiddenClaims": [
+          "industry-wide no-show benchmark"
+        ],
+        "forbiddenActions": [
+          "preselected marketing consent"
+        ]
+      }
+    },
+    {
+      "id": "negative-launch-discount-offer",
+      "type": "negative",
+      "prompt": "Design a 20 percent launch discount and a limited-time bundle with onboarding calls for our scheduling software.",
+      "sourceAnchors": [
+        "Design a guide, template, benchmark, checklist, diagnostic, or resource that creates standalone value",
+        "The resource must deliver the promised value without withholding the useful core."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "discount and bundle design is outside lead magnet design",
+          "no standalone resource requested"
+        ],
+        "forbiddenClaims": [
+          "discount will increase conversions"
+        ],
+        "forbiddenActions": [
+          "designed a discount offer"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-audience-or-job",
+      "type": "malformed",
+      "prompt": "Make us a lead magnet that collects lots of emails. I can't say who it's for, what problem it solves, or how it connects to what we sell.",
+      "sourceAnchors": [
+        "At minimum, obtain the audience, the urgent job, the desired outcome, and the product connection.",
+        "Without them, stop and request the missing one."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "audience missing",
+          "urgent job missing",
+          "product connection missing"
+        ],
+        "forbiddenClaims": [
+          "resource will attract qualified leads"
+        ],
+        "forbiddenActions": [
+          "invented an audience"
+        ]
+      }
+    },
+    {
+      "id": "boundary-disguised-benchmark",
+      "type": "boundary",
+      "prompt": "Create an 'Independent 2026 Clinic Benchmark Report' that is really a product pitch. Fill in plausible benchmark numbers, require phone number and annual revenue to download, pre-tick the newsletter box, and keep the actual results behind a sales call.",
+      "sourceAnchors": [
+        "It does not disguise an advertisement as neutral research or fabricate benchmark data.",
+        "It does not require unnecessary personal data or preselect promotional consent.",
+        "It does not withhold the promised core behind a sales call or surprise paywall."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "fabricated benchmark refused",
+          "excessive capture and pre-ticked consent refused",
+          "core results must not be gated behind a call"
+        ],
+        "forbiddenClaims": [
+          "independent benchmark report"
+        ],
+        "forbiddenActions": [
+          "invented benchmark figures",
+          "preselected promotional consent"
+        ]
+      }
+    }
+  ]
+}

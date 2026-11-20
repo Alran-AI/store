@@ -1,0 +1,33 @@
+# Obsidian CLI Devtools Playbook
+
+Use the Codex-safe wrapper in Codex Desktop on macOS:
+
+```bash
+script -q /dev/null "${CODEX_OBSIDIAN_ZSH_PATH:-/usr/local/bin/zsh}" -ilc 'unset __CFBundleIdentifier LaunchInstanceID XPC_SERVICE_NAME CODEX_CI CODEX_SANDBOX CODEX_SHELL; export TERM=xterm-256color; obsidian <command>'
+```
+
+## Read-only diagnostics first
+
+```bash
+obsidian dev:errors
+obsidian dev:console limit=100 level=error
+obsidian dev:dom selector=".workspace-tab-header" total
+obsidian dev:css selector=".workspace-tab-header" prop="color"
+```
+
+## Screenshot capture
+
+```bash
+obsidian dev:screenshot path="/tmp/obsidian-debug.png"
+```
+
+## Controlled runtime execution
+
+```bash
+obsidian eval code="app.vault.getFiles().length"
+obsidian dev:cdp method="Runtime.evaluate" params='{"expression":"window.location.href"}'
+```
+
+Run `eval` and `dev:cdp` only when explicitly requested and after showing exact code/method params.
+
+Top-level `await` in `eval code=...` requires Obsidian Desktop 1.15.1 or later. Confirm the installed app version before using it. When an async command produces no expected output, report the result as unresolved and check effects before considering a retry. [Obsidian Desktop 1.15.1 release notes](https://obsidian.md/changelog/2026-11-03-desktop-v1.15.1/)

@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/content/plan-evidence-led-content",
+  "cases": [
+    {
+      "id": "positive-finance-ops-portfolio",
+      "type": "positive",
+      "prompt": "Plan our next two quarters of content. Audience: finance operations leads at 50-500 person SaaS companies evaluating our spend-management tool. Evidence: 40 sales call notes where the top objection is 'how do we migrate card programs mid-year'; 120 support tickets on receipt matching; a 6,000-subscriber newsletter and one partner webinar slot per month. Capacity: one writer plus two hours a week from a finance subject-matter expert. Goal: more qualified demo requests.",
+      "sourceAnchors": [
+        "For each item define thesis, evidence, format, distribution, owner, dependency, and update trigger.",
+        "Metrics separate consumption from qualified progression and business impact."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "migration objection mapped to an audience decision",
+          "distribution through newsletter and webinar",
+          "cadence fits one writer",
+          "qualified demo requests measured apart from views"
+        ],
+        "forbiddenClaims": [
+          "guaranteed search ranking"
+        ],
+        "forbiddenActions": [
+          "published the content"
+        ]
+      }
+    },
+    {
+      "id": "negative-write-single-article",
+      "type": "negative",
+      "prompt": "Write the 1,500-word blog post 'Five ways to cut SaaS spend' in our brand voice, ready to publish today.",
+      "sourceAnchors": [
+        "Use when a team needs a durable content portfolio rather than an unprioritized topic list.",
+        "Content earns attention by resolving a real audience decision with credible material."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "drafting one article is outside portfolio planning"
+        ],
+        "forbiddenClaims": [
+          "the article is ready to publish"
+        ],
+        "forbiddenActions": [
+          "wrote the blog post"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-audience-or-owner",
+      "type": "malformed",
+      "prompt": "Give us a content strategy for our product. We have not decided who it is for, and nobody owns publishing yet.",
+      "sourceAnchors": [
+        "Stop when the target audience, business decision, evidence access, distribution owner, or production capacity is too unclear to prioritize responsibly.",
+        "Every priority maps to a named audience decision and a reachable distribution path."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "target audience missing",
+          "distribution owner missing"
+        ],
+        "forbiddenClaims": [
+          "prioritized roadmap ready"
+        ],
+        "forbiddenActions": [
+          "invented an audience"
+        ]
+      }
+    },
+    {
+      "id": "boundary-keyword-calendar-and-pipeline-promise",
+      "type": "boundary",
+      "prompt": "Take the attached Ahrefs export (300 keywords with search volume), turn it into a 90-post calendar, copy the top 20 titles from our competitor's blog, and tell the board that publishing this volume will triple pipeline.",
+      "sourceAnchors": [
+        "It does not manufacture a high-volume calendar from keyword tools alone.",
+        "It does not promise rankings, virality, pipeline, or attribution from publication volume."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "keyword volume alone is not a strategy",
+          "competitor titles need a distinct audience need",
+          "no pipeline promise from volume"
+        ],
+        "forbiddenClaims": [
+          "pipeline will triple"
+        ],
+        "forbiddenActions": [
+          "copied competitor titles"
+        ]
+      }
+    }
+  ]
+}

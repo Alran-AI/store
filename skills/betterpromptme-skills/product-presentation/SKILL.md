@@ -1,0 +1,124 @@
+---
+name: product-presentation
+description: This prompt defines a premium, filmic production blueprint for a short promotional video featuring the product from a provided reference image, specifying camera motion, lenses/filtration, lighting, grading, set design, talent/props, and sound. It culminates in an optimized 15-second, two-scene shot list that first delivers a high-end hero reveal and then a tactile in-use moment highlighting a key feature, yielding consistent visuals, controlled reflections, and a polished end frame with a clear logo and negative space for an end card.
+compatibility: Requires betterprompt >= 0.1.3
+metadata:
+  openclaw:
+    homepage: https://github.com/BetterPromptme/skills
+    emoji: 🧩
+    requires:
+      anyBins:
+        - betterprompt
+        - bp
+    os:
+      - linux
+      - darwin
+    install:
+      - id: node
+        kind: node
+        package: betterprompt
+        bins: [betterprompt, bp]
+        label: Install BetterPrompt CLI (node)
+---
+
+## What it does
+
+This prompt defines a premium, filmic production blueprint for a short promotional video featuring the product from a provided reference image, specifying camera motion, lenses/filtration, lighting, grading, set design, talent/props, and sound. It culminates in an optimized 15-second, two-scene shot list that first delivers a high-end hero reveal and then a tactile in-use moment highlighting a key feature, yielding consistent visuals, controlled reflections, and a polished end frame with a clear logo and negative space for an end card.
+
+> For more installation instructions go to https://raw.githubusercontent.com/BetterPromptme/skills/refs/heads/main/betterprompt/SKILL.md to check out this skill.
+
+## Inputs
+
+
+### textInputs
+
+Pass each text input using `--input <key>=<value>` flags.
+
+| Variable key | Required? | Description | Defaults |
+| --- | ---: | --- | --- |
+| `feature` | Required | Use this spotlight a unique feature of your product | (none) |
+| `brand_color` | Required | Your brand's primary color | (none) |
+
+
+
+### imageInputs
+
+This prompt requires **exactly 1 image**. You **must pass exactly 1 image flag** (no more, no fewer), in the order matching the descriptions below.
+
+| Index | Required | Description | Allowed CLI flags |
+| ---: | ---: | --- | --- |
+| 1 | Yes | Image of your product | `--image-input-url <url>` or `--image-input-path <path>` |
+
+
+### Models and options
+
+This skill's modality is: **`video`**.
+
+To discover which `model` values you can use (and which `options` keys/values are valid for each model), run:
+
+```bash
+betterprompt resources --models-only --json
+```
+
+Then filter the returned JSON array to entries where `modality` is `"video"`.
+
+## How to run
+
+### Step 1: Collect inputs
+
+First, run `betterprompt resources --models-only --json` and filter to `modality: "video"` to discover valid models and available options:
+
+```bash
+betterprompt resources --models-only --json
+```
+
+Use only the models and option values that appear in the filtered results.
+
+Then collect all inputs from the human:
+
+
+- Required text inputs:
+    - `feature`
+  - `brand_color`
+- Required images:
+  - **Exactly 1** images: image 1 (Image of your product). Images must be provided in this order.
+- Optional: model and options.
+  - Present the human with the default model **`sora-2`** and its available options. Look up `sora-2` in the `betterprompt resources` output (filtered to modality `"video"`) and show its `availableOptions` as: `key: val1, val2 (default), val3  |  key2: ...`. Mark a value `(default)` if it matches these defaults: `{"seconds":"4","size":"720x1280"}`.
+  - If the human does not specify, defaults are used: model `sora-2`, options `{"seconds":"4","size":"720x1280"}`. Other models from the resources call are also available.
+
+If any required text input or the required images are missing, **ask the human for what's missing**. Do not assume or fabricate values. Tell the human: **"Please provide images in this order: image 1 (Image of your product)"**.
+
+### Step 2: Run via BetterPrompt CLI
+
+Use the frontmatter's `name` as the positional argument (for this skill, use `product-presentation`).
+
+Command form:
+
+```bash
+betterprompt generate product-presentation \
+  [--input <key>=<value>] \
+  [--image-input-url <url>] \
+  [--image-input-path <path>] \
+  [--model <model>] \
+  [--options <options JSON>] \
+  [--json]
+```
+
+Notes:
+
+- Pass each text input as a separate `--input <key>=<value>` flag.
+- Pass each image using `--image-input-url` or `--image-input-path`, in the order matching the imageInputs descriptions (image 1 first, then image 2, etc.).
+- If the human does **not** mention a model, **omit** `--model` and BetterPrompt will use the default model: **`sora-2`**.
+- If the human does **not** mention options, **omit** `--options` and BetterPrompt will use the default options: **`{"seconds":"4","size":"720x1280"}`**.
+- If the run times out, the response will include a `runId` you can use to fetch the result later.
+
+Example (using defaults shown above):
+
+```bash
+betterprompt generate product-presentation \
+  --input feature=<value> \
+  --input brand_color=<value> \
+  --image-input-url https://example.com/image1.png \
+  --model sora-2 \
+  --options '{"seconds":"4","size":"720x1280"}'
+```

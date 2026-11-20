@@ -1,0 +1,47 @@
+---
+name: create-memory
+description: Bootstrap the first project-memory baseline from the current repository when no usable memory index exists. Not external imports, routine updates, audits, or replacing a healthy baseline.
+---
+
+# Create Memory
+
+Create the smallest useful project-memory baseline without crossing authorization boundaries.
+
+## Load the Contract and Resolve Roots
+
+1. Read [references/memory-contract.md](references/memory-contract.md) completely before proposing files.
+2. Resolve the project root and memory root from the user's arguments. Otherwise, consider only plausible roots inside the current project.
+3. Ask for explicit consent before reading or writing a global store, sibling project, unrelated repository, or any root outside the selected project. Relevance alone is not authorization.
+4. If several roots are plausible, show the candidates and ask the user to choose. Never merge stores silently.
+5. Read any existing `MEMORY.md` and local memory files. If a useful baseline already exists, route durable session updates to `update-memory` and source imports to `ingest-memory`.
+
+## Build a Durable Candidate Set
+
+Inspect only relevant repository instructions, README and architecture material, manifests, important entry points, schemas, integration boundaries, and available read-only branch or history evidence. Exclude dependencies, generated output, large data, credentials, secrets, private personal data, and unrelated memories.
+
+Capture only stable, non-obvious knowledge that will change future work:
+
+- `project`: architecture, workflows, boundaries, conventions, integrations, and adopted decisions
+- `feedback`: recurring user preferences, corrections, and explicit working agreements
+- `reference`: stable technical facts future work needs
+
+Skip temporary status, unfinished experiments, raw logs or conversations, speculative ideas, facts already enforced by code or instructions, and details that are cheap to rediscover.
+
+## Preview and Write
+
+1. Present a compact plan with the selected roots, proposed files, types, evidence, relationships, and skipped candidates.
+2. Continue within the user's authorized project and scope, including an unambiguous existing local root. Ask only when the destination is ambiguous, cross-root access lacks authorization, or replacing an index or existing content would exceed the request. File count alone does not require another approval.
+3. Re-read the target files immediately before editing.
+4. Follow the contract exactly. Use its versioned frontmatter, structured provenance, local symmetric `related` filenames, ISO dates, and exact Markdown index-entry grammar.
+5. Create focused files with one durable topic each. Preserve manual index entries and unrelated content. Do not delete stale material without an explicit cleanup request.
+6. Compare every proposed filename, name, description, source identity, and distinctive claim with existing memory. Merge or report duplicates and preserve unresolved conflicts.
+
+## Validate and Report
+
+Run the bundled read-only validator after writing. Resolve `<skill-dir>` to the directory containing this `SKILL.md`, then run:
+
+```text
+python "<skill-dir>/scripts/validate_memory.py" <memory-root>
+```
+
+Fix only errors introduced within the approved plan, then rerun validation. Report selected roots, files created or changed, evidence used, skipped candidates, duplicate or conflict decisions, validation results, and unresolved limitations. Recommend `audit-memory` after multi-file creation.

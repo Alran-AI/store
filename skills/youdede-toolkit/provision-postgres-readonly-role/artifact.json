@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/data/databases/provision-postgres-readonly-role",
+  "slug": "provision-postgres-readonly-role",
+  "name": "Provision Postgres Readonly Role",
+  "version": "1.3.0",
+  "kind": "skill",
+  "summary": "Design and verify a least-privilege PostgreSQL role for bounded read access.",
+  "description": "Prepare reviewed PostgreSQL SQL for a login role that defaults to read-only, has bounded execution, and excludes sensitive relations. Use when humans need to grant an analyst or agent production read access.",
+  "domain": "data",
+  "category": "databases",
+  "problems": [
+    "postgres-least-privilege"
+  ],
+  "frameworks": [
+    "postgresql"
+  ],
+  "languages": [
+    "sql"
+  ],
+  "lifecycle": [
+    "setup",
+    "operations"
+  ],
+  "risk": "high",
+  "risk_reason": "It can apply production role grants after explicit authorization, changing live database access.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not grant SUPERUSER, BYPASSRLS, write privileges, or role administration.",
+    "It does not embed or print a production password.",
+    "It does not apply production DDL without explicit authorization and a revocation plan."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "operate"
+  ],
+  "relationships": {
+    "composesWith": [
+      "skill/data/databases/query-production-readonly"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill designs and verifies a least-privilege PostgreSQL role for bounded read access, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

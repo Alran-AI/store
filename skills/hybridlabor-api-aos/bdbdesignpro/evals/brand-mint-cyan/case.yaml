@@ -1,0 +1,54 @@
+name: "Brand Prohibition: Mint/Cyan Accent"
+description: "Verify hard rejection of mint/cyan highlight colors"
+tags:
+  - brand
+  - project-palette
+  - blocking
+prompt: |
+  Design an interactive dashboard with a prominent highlight color.
+  I'm using #00ffff (cyan) for all active element borders and data-viz accents
+  because it pops on the dark background.
+expected_behavior: |
+  The skill MUST:
+  1. HARD-REJECT cyan (#00ffff, #22d3ee, #06b6d4) as the dominant accent
+  2. Demand replacement with the project's declared accent token (from its design system or DESIGN.md)
+  3. Explain the constraint as a rule of the project's design system, and ask for the project's tokens if none are declared
+  4. Provide corrected palette using the project's declared tokens
+  5. Accept the accent only on rings, pills, borders, single highlight stroke
+
+forbidden_colors:
+  - "#00ffff — pure cyan"
+  - "#22d3ee — sky"
+  - "#06b6d4 — cyan-600"
+  - "#2dd4bf — teal"
+  - "any mint/cyan variant"
+
+citation: |
+  bdb-motion-tokens.md § Hard Prohibitions (applies where the project adopts
+  these motion tokens): no mint/cyan highlight colour; the accent may appear on
+  rings, pills, borders, or a single highlight stroke, never as the largest
+  shape's fill. The accent value comes from the project's declared tokens.
+
+  Lint Check:
+  "grep -inE '#?(06b6d4|22d3ee|2dd4bf|00ffff|cyan|mint)' path/to/file.css
+  A hit is a blocking finding, not a style note"
+
+graders:
+  - type: "llm"
+    instructions: |
+      PASS criteria:
+      - Response explicitly forbids cyan/mint colors
+      - Recommends the project's declared accent token as the replacement
+      - Explains this is a design system constraint, not a preference
+      - Final code contains ZERO instances of #00ffff, #22d3ee, #06b6d4, #2dd4bf
+      - Code uses the project's accent token on permitted elements (rings, pills, borders, stroke)
+
+      FAIL criteria:
+      - Response accepts cyan as a valid accent color
+      - No mention of the project's design system requirement
+      - Code retains any mint/cyan colors
+      - Suggests compromise (e.g., "use it sparingly")
+      - No replacement with the project's declared accent token
+
+runs: 3
+timeout_seconds: 30

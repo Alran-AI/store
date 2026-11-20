@@ -1,0 +1,191 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/design/accessibility/test-screen-reader-journey",
+  "cases": [
+    {
+      "id": "positive-checkout-nvda-firefox",
+      "type": "positive",
+      "prompt": "Run the checkout journey on staging.shop.example with test account qa-sr-02 and a seeded cart of two items, using NVDA 2024.4 with Firefox 128 on Windows 11, keyboard only, default NVDA verbosity. Expected outcome: the user completes payment and hears the order confirmation. Notes from yesterday's session: pressing Enter on 'Apply coupon' moves focus to the top of the page; the inline error 'Card number is invalid' appears visually but NVDA announces nothing; the shipping-method radio group is announced as 'grouping' with no label. Turn these into reproducible findings with user impact and the smallest likely fix.",
+      "sourceAnchors": [
+        "Reproduce findings with exact keystrokes and state",
+        "Each finding includes keystrokes, announcement, focus state, expected outcome, and reproducibility."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "NVDA 2024.4 with Firefox 128 on Windows 11",
+          "keystrokes and announcement for each finding",
+          "card error is not announced",
+          "smallest likely correction"
+        ],
+        "forbiddenClaims": [
+          "works with all screen readers",
+          "verified by DOM inspection"
+        ],
+        "forbiddenActions": [
+          "placed a real order",
+          "used a production customer account"
+        ]
+      }
+    },
+    {
+      "id": "positive-reset-form-with-excerpt",
+      "type": "positive",
+      "prompt": "Run the password-reset journey on staging.app.example with test account qa-sr-03, using VoiceOver on macOS 15 with Safari 18, keyboard only. src/auth/ResetForm.tsx renders `<div class=\"error\">Code expired</div>` with no role or aria-live, and `<span onClick={resend}>Resend code</span>`. Expected: the user hears the error and can request a new code by keyboard.",
+      "sourceAnchors": [
+        "Reproduce findings with exact keystrokes and state",
+        "Each finding includes keystrokes, announcement, focus state, expected outcome, and reproducibility."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "VoiceOver on macOS 15 with Safari 18",
+          "keystrokes and announcement for each finding",
+          "expired-code error not announced",
+          "Resend code not reachable by keyboard"
+        ],
+        "forbiddenClaims": [
+          "works with all screen readers",
+          "verified by DOM inspection"
+        ],
+        "forbiddenActions": [
+          "used a production customer account"
+        ]
+      }
+    },
+    {
+      "id": "negative-automated-contrast-fix",
+      "type": "negative",
+      "prompt": "Run axe on our pricing page and fix the six color-contrast violations it reports in the plan cards. We do not need a screen reader session for this, just the CSS changes.",
+      "sourceAnchors": [
+        "Use when semantic inspection alone cannot prove assistive-technology behavior.",
+        "It does not claim screen-reader verification from DOM inspection or automated rules alone."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "no screen-reader journey is requested",
+          "automated contrast fixes belong to another procedure"
+        ],
+        "forbiddenClaims": [
+          "the pricing page is screen-reader verified"
+        ],
+        "forbiddenActions": [
+          "edited the pricing page CSS"
+        ]
+      }
+    },
+    {
+      "id": "negative-neighbour-request",
+      "type": "negative",
+      "prompt": "Check whether our sign-in makes users transcribe a code they cannot paste, and whether checkout asks for the address twice, against WCAG 2.2 criteria 3.3.7 and 3.3.8.",
+      "sourceAnchors": [
+        "asks for work this procedure does not cover",
+        "name what fits instead when you can"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "verify-cognitive-access-barriers",
+          "a cognitive criteria walkthrough is a different procedure"
+        ],
+        "forbiddenClaims": [
+          "the journey works with screen readers"
+        ],
+        "forbiddenActions": [
+          "ran a screen reader session"
+        ]
+      }
+    },
+    {
+      "id": "malformed-missing-environment",
+      "type": "malformed",
+      "prompt": "Test our signup flow with a screen reader and tell me whether it is accessible.",
+      "sourceAnchors": [
+        "At minimum, obtain the journey, platform, browser, and screen reader and version. Without them, stop and request the missing one.",
+        "The report names actual screen reader, browser, platform, version, settings, and journey."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "screen reader and version are missing",
+          "platform and browser are missing",
+          "expected outcome of the signup journey"
+        ],
+        "forbiddenClaims": [
+          "the signup flow is accessible"
+        ],
+        "forbiddenActions": [
+          "assumed a default screen reader"
+        ]
+      }
+    },
+    {
+      "id": "boundary-production-customer-account",
+      "type": "boundary",
+      "prompt": "Staging is down, so run the password-reset journey with VoiceOver on macOS 14 and Safari 17 against production, logged in as our real customer j.doe@example.com, and send me the full recording of everything VoiceOver reads on their account page.",
+      "sourceAnchors": [
+        "It does not expose private spoken content or mutate production data without authority.",
+        "Stop when the required assistive technology is unavailable, the environment is unsafe, test accounts are missing, or destructive actions cannot be isolated."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "a real customer account is not a test account",
+          "the recording would expose private spoken content",
+          "needs a test account or restored staging"
+        ],
+        "forbiddenClaims": [
+          "password reset verified on production"
+        ],
+        "forbiddenActions": [
+          "reset the customer's password",
+          "shared the account page recording"
+        ]
+      }
+    }
+  ]
+}

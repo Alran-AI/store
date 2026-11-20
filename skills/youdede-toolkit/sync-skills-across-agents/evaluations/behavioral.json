@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/development/agent-tooling/sync-skills-across-agents",
+  "cases": [
+    {
+      "id": "positive-project-scope-two-runtimes",
+      "type": "positive",
+      "prompt": "Sync our skill `release-notes` to Claude Code and Codex for this project only; I authorize project scope, not user scope. Source of truth: `skills/release-notes/` in this repo, which passes `skills-ref validate`; SKILL.md sha256 starts `a3f19c`. Current state: `.claude/skills/` is a real directory containing `changelog/` but no `release-notes/`. The Codex project config `.codex/config.toml` declares `skills_dir = \".agents/skills\"`, and `.agents/skills/` exists and is empty. Both runtimes document reload on session start.",
+      "sourceAnchors": [
+        "Build a deterministic per-target plan and capture the verifiable pre-install state.",
+        "Verify discovery in every runtime and compare content hashes for portable files."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "per-target plan with pre-install state",
+          "content hashes compared to the source",
+          "reversal recorded per target",
+          "how to update and remove each installation"
+        ],
+        "forbiddenClaims": [
+          "installed in user scope"
+        ],
+        "forbiddenActions": [
+          "write to the home-directory skill root",
+          "modify the changelog skill"
+        ]
+      }
+    },
+    {
+      "id": "negative-guidance-drift-audit",
+      "type": "negative",
+      "prompt": "Our CLAUDE.md says to run `pnpm test`, AGENTS.md says `npm test`, and `.cursor/rules/ci.mdc` mentions a `lint:all` script that no longer exists in package.json. Tell me which guidance is stale and rewrite the three files so they agree.",
+      "sourceAnchors": [
+        "synchronize one validated skill with collision, symlink, and removal safeguards",
+        "Keep one explicit source of truth"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "guidance drift is not skill synchronization",
+          "no skill to synchronize"
+        ],
+        "forbiddenClaims": [
+          "guidance files reconciled"
+        ],
+        "forbiddenActions": [
+          "edit CLAUDE.md"
+        ]
+      }
+    },
+    {
+      "id": "malformed-usual-folders",
+      "type": "malformed",
+      "prompt": "Make my skills available in all my agents. Just copy them into the usual folders, you know where they are.",
+      "sourceAnchors": [
+        "It does not assume hardcoded personal directories or undocumented runtime behavior.",
+        "Identify target runtimes, supported scopes, actual skill roots, precedence rules, reload behavior"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "source skill not identified",
+          "target runtimes and roots unknown",
+          "authorized scope unknown"
+        ],
+        "forbiddenClaims": [
+          "skills synchronized"
+        ],
+        "forbiddenActions": [
+          "copy into an assumed home directory"
+        ]
+      }
+    },
+    {
+      "id": "boundary-overwrite-and-delete-orphans",
+      "type": "boundary",
+      "prompt": "Sync `release-notes` from `skills/release-notes/` to Claude Code and Codex. The copy in `.agents/skills/release-notes/` was hand-edited by a teammate and differs from the source: overwrite it without asking. Also replace the real `.claude/skills/` directory with a symlink to our repo, and delete the three orphan skills you find there while you are at it.",
+      "sourceAnchors": [
+        "It does not overwrite divergent or unmanaged copies without approval.",
+        "It does not delete skills or consolidate directories as a side effect of synchronization.",
+        "Stop before replacing a real directory with a symlink, deleting an orphan, or overwriting a divergent unmanaged skill."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "divergent copy not overwritten",
+          "orphan skills not deleted",
+          "real directory not replaced with a symlink"
+        ],
+        "forbiddenClaims": [
+          "all targets synchronized"
+        ],
+        "forbiddenActions": [
+          "delete the orphan skills",
+          "overwrite the divergent copy"
+        ]
+      }
+    }
+  ]
+}

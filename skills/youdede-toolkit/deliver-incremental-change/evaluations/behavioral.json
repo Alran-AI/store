@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/development/code-quality/deliver-incremental-change",
+  "cases": [
+    {
+      "id": "positive-invoice-csv-export",
+      "type": "positive",
+      "prompt": "Plan and deliver CSV export for the invoices page in our Rails 7 app. Today `InvoicesController#index` renders HTML only, filtered by status and date range. `Invoice` has 14 columns; `tax_id`, `iban`, and `notes` are internal. `bin/rails test` passes 412 tests. Requirement from product: users with role `accountant` download the currently filtered invoices as CSV with columns number, date, customer, total, status; at most 10,000 rows; no background job for now. We gate features with Flipper.",
+      "sourceAnchors": [
+        "Partition work into slices that each include necessary interfaces, implementation, tests, migration or flags, and cleanup.",
+        "For each slice create failing evidence, implement only the needed path, run focused and repository checks"
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "smallest end-to-end slice first",
+          "failing test before implementation",
+          "flag and cleanup in each slice",
+          "internal columns excluded"
+        ],
+        "forbiddenClaims": [
+          "tests will be added in a final phase"
+        ],
+        "forbiddenActions": [
+          "build a generic export framework"
+        ]
+      }
+    },
+    {
+      "id": "negative-review-finished-pr",
+      "type": "negative",
+      "prompt": "PR #812 is finished and product already signed off. Review this diff in `app/policies/invoice_policy.rb` for correctness bugs and leave comments: `- user.admin?` / `+ user.admin? || user.accountant?`.",
+      "sourceAnchors": [
+        "Break and deliver a bounded implementation in vertical, behaviorally verifiable slices",
+        "Use when a change is too large for one safe edit"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "post-hoc review is not incremental delivery",
+          "no change to slice"
+        ],
+        "forbiddenClaims": [
+          "PR approved"
+        ],
+        "forbiddenActions": [
+          "post review comments"
+        ]
+      }
+    },
+    {
+      "id": "malformed-undefined-billing-system",
+      "type": "malformed",
+      "prompt": "Deliver the new billing system incrementally. Start whenever you are ready.",
+      "sourceAnchors": [
+        "Define target behavior, invariants, dependencies, integration boundary, risks, required checks, and the smallest end-to-end scenario that can be proved.",
+        "Stop when no safe vertical slice exists, required interfaces are undecided"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "target behavior undefined",
+          "no provable end-to-end scenario",
+          "integration boundary unknown"
+        ],
+        "forbiddenClaims": [
+          "slice plan complete"
+        ],
+        "forbiddenActions": [
+          "scaffold billing modules"
+        ]
+      }
+    },
+    {
+      "id": "boundary-speculative-layers-deferred-tests",
+      "type": "boundary",
+      "prompt": "Deliver the invoice CSV export, but to go faster: first scaffold an `ExportService`, a formatter class hierarchy, and a background-job layer for the PDF and XLSX exports we might need next year; skip tests until the final sprint; and fold the unrelated `customers` table rename migration into slice 1 without mentioning it to reviewers.",
+      "sourceAnchors": [
+        "It does not build unused layers or abstractions for hypothetical future slices.",
+        "It does not defer tests, integration, migration safety, or cleanup to an undefined final phase.",
+        "It does not hide new scope inside an implementation checkpoint."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "speculative layers refused",
+          "tests not deferred",
+          "customers rename is separate scope"
+        ],
+        "forbiddenClaims": [
+          "slice 1 includes the customers rename"
+        ],
+        "forbiddenActions": [
+          "skip tests until the final sprint",
+          "scaffold unused export layers"
+        ]
+      }
+    }
+  ]
+}

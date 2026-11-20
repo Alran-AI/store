@@ -1,0 +1,69 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/development/api/build-openapi-contract",
+  "slug": "build-openapi-contract",
+  "name": "Build OpenAPI Contract",
+  "version": "1.4.0",
+  "kind": "skill",
+  "summary": "Build an OpenAPI contract from verified behavior, reusable schemas, failures, and executable checks.",
+  "description": "Build or repair an OpenAPI document by reconciling implementation, tests, product requirements, authentication, schemas, examples, and error behavior. Use when an HTTP API needs an accurate machine-readable contract or drift review.",
+  "domain": "development",
+  "category": "api",
+  "problems": [
+    "openapi-contract"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "design",
+    "implementation",
+    "review"
+  ],
+  "risk": "medium",
+  "risk_reason": "This skill builds an OpenAPI contract from verified behavior, reusable schemas, failures, and executable checks; it does not invent endpoints, fields, examples, status codes, or security scopes.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not invent endpoints, fields, examples, status codes, or security scopes.",
+    "It does not expose internal or sensitive schemas merely because implementation fields exist.",
+    "It does not publish, deploy, or guarantee backward compatibility without evidence."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "author"
+  ],
+  "relationships": {
+    "composesWith": [
+      "context/development/api/api-contract-baseline"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill builds an OpenAPI contract from verified behavior, reusable schemas, failures, and executable checks, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

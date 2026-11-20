@@ -2,7 +2,7 @@
 // Writes the Plugin icons (128x128 RGBA PNG: a rounded square with a gradient and one glyph) to
 // store/icons/. Icons are content, not build output: they are committed, and the store builder only
 // copies them. Re-run to change a colour.
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { deflateSync } from "node:zlib";
@@ -135,4 +135,11 @@ for (const [name, [glyphName, from, to]] of Object.entries(ICONS)) {
     }
   }
 }
+// An icon of a Plugin that is gone is left behind otherwise, and the store publishes every file
+// under store/icons/: the folder holds exactly one icon per Plugin.
+for (const file of readdirSync(OUT)) {
+  if (!file.endsWith(".png")) continue;
+  if (!ICONS[file.slice(0, -4)]) rmSync(join(OUT, file));
+}
+
 console.log(`wrote ${Object.keys(ICONS).length} icons to ${OUT}`);

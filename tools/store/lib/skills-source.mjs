@@ -156,9 +156,13 @@ export function readSkills(sourceRoot, options = {}) {
       problems.push(`${candidate.name}: version "${version}" is not SemVer`);
       continue;
     }
+    // The title a source gives a Skill it names after its display name, beside the name the config
+    // or the catalogue holds.
+    const named = titles[candidate.name] ?? candidate.title ?? front.get("title");
+    const title = named && named !== titleCase(candidate.name) ? named : titleCase(candidate.name);
     skills.push({
       name: candidate.name,
-      title: titles[candidate.name] ?? (candidate.title && candidate.title !== titleCase(candidate.name) ? candidate.title : titleCase(candidate.name)),
+      title,
       description: front.get("description").replace(/\s+/gu, " ").trim(),
       version,
       group: groups[candidate.package] ?? titleCase(candidate.package),

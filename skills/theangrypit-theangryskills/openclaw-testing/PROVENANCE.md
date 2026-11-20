@@ -1,0 +1,19 @@
+# Provenance
+
+Origin: OpenClaw Foundation, MIT. Source: https://github.com/openclaw/openclaw/tree/aea75db8e4cf3397749cc51011dea696777de02d/.agents/skills/openclaw-testing. Captured 2026-10-19. The complete original directory is preserved byte-for-byte in the public `sources/openclaw-core` provenance archive. Installable references retain the resources under `references/upstream/`, with the entrypoint named `SKILL.source.md` to avoid duplicate discovery. Python and debugging reference entrypoints replace the implicit install and inline raw-database examples; original source hashes and pinned URLs retain those exact examples for audit. Relative Markdown links into files outside the installed package are rewritten to pinned upstream targets; the link map covers each nested Markdown resource and records its original path and spelling. Original archive resources retain their source bytes. `LICENSE` retains the repository notice.
+
+This is a reviewed TheAngrySkills Codex adaptation of upstream OpenClaw material. The adaptation authorship is separate from upstream authorship. Root instructions and `agents/openai.yaml` adapt invocation, native tool routing, target/process ownership, source trust, privacy and proof boundaries. Update and connection-repair roots are explicit-only in Codex. Repository-owned commands resolve through the selected checkout, never a guessed install. No CLI, provider, host, account or live service is installed/configured by this package.
+
+Original relative links resolve through `references/upstream-link-map.json`; on-demand repository dependencies are not silently claimed bundled. Refactor docs additionally includes the complete technical-documentation dependency, including its dotskills attribution, as inert references rather than a thirteenth discoverable skill. Existing shared OpenClaw mirrors are unchanged.
+
+The operator's native boundaries govern publication, landing, dependency installation, authentication homes and execution permissions. No paid route, shared-process mutation or credential access is authorized by installation. Automatic source refresh is not enabled for these authored adaptations; reconcile the pinned source and recorded adjustments before updating.
+
+Verification receipts are maintained at the pack source and task delivery; package checks/discovery do not prove Gateway runtime repair or a fresh model's invocation behavior.
+
+## Source refresh — 2026-10-31
+
+Reviewed `SKILL.md` at `447e14d02460342af4fe2c98dbd5475b15b938d2`; updated the original source archive and packaged reference, preserving the Codex root, invocation policy, companions and existing link pins. New links bind this revision. Resource hashes were regenerated. Original integration remains in Git history.
+
+## Source refresh — 2026-11-06
+
+Compared original upstream files at the prior recorded commit with 39d85007e9ba04ca502bf06da2ed51d35cbad491. Incorporated only genuine upstream deltas; preserved the Codex root, permissions, companions and safety adaptations. Rebuilt resource hashes and pinned links. Link-rewritten reference bytes were not treated as upstream source changes.

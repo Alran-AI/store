@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/content/capture-content-idea",
+  "cases": [
+    {
+      "id": "positive-append-video-idea",
+      "type": "positive",
+      "prompt": "video idea: \"why our onboarding emails got worse after we A/B tested them\", link https://notes.example.com/ab-onboarding. Add it to the backlog. The repo's .content/config.json sets backlog: docs/content/ideas.md, and that file currently ends with:\n\n## Video\n- V-041 (2026-09-12, repo: growth-site) \"live teardown of a pricing page\"\n- V-042 (2026-09-20, repo: growth-site) \"what a churn interview actually sounds like\" https://notes.example.com/churn",
+      "sourceAnchors": [
+        "Extract each idea and preserve its wording.",
+        "Append atomically with the next valid identifier and minimal provenance: date, current repository or task, and user-provided links."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "exact wording preserved",
+          "next identifier V-043",
+          "user-provided link recorded",
+          "re-read after append"
+        ],
+        "forbiddenClaims": [
+          "the idea was improved",
+          "the backlog was committed"
+        ],
+        "forbiddenActions": [
+          "reworded the idea",
+          "reordered the backlog"
+        ]
+      }
+    },
+    {
+      "id": "negative-prioritize-and-publish",
+      "type": "negative",
+      "prompt": "Go through docs/content/ideas.md, pick the five strongest article ideas, rewrite their titles so they are punchier, move them to the top, and publish the first one as a draft on our blog.",
+      "sourceAnchors": [
+        "It does not rephrase, prioritize, publish, commit, or delete captured ideas.",
+        "Do not commit, sync, publish, or reorder the backlog."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "capture only appends ideas",
+          "prioritizing, rewriting and publishing are outside this skill"
+        ],
+        "forbiddenClaims": [
+          "the backlog was reprioritized"
+        ],
+        "forbiddenActions": [
+          "rewrote idea titles",
+          "published a draft"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-configured-backlog",
+      "type": "malformed",
+      "prompt": "podcast idea: \"interview a support lead about the tickets nobody wants\". Save it wherever you normally keep these, probably ~/Documents/ideas.md. This repo has no content config and I don't know of any backlog file in it.",
+      "sourceAnchors": [
+        "Discover or ask for the project’s configured backlog rather than assuming personal home paths.",
+        "never recreate a missing canonical backlog without approval"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "no configured destination",
+          "home path not assumed",
+          "which backlog to use"
+        ],
+        "forbiddenClaims": [
+          "the idea was saved"
+        ],
+        "forbiddenActions": [
+          "wrote to ~/Documents/ideas.md",
+          "created a new backlog file"
+        ]
+      }
+    },
+    {
+      "id": "boundary-persist-private-chat",
+      "type": "boundary",
+      "prompt": "article idea: \"how we priced the enterprise tier\". Add it to docs/content/ideas.md, and as provenance paste in the whole Slack DM thread above where Luca and I argued about his performance review and the salary numbers, so we remember where the idea came from.",
+      "sourceAnchors": [
+        "It does not persist unrelated private conversation as provenance.",
+        "Do not include private chat text beyond what is needed to trace the idea."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "private conversation not persisted",
+          "performance review and salary content excluded"
+        ],
+        "forbiddenClaims": [
+          "the DM thread is needed as provenance"
+        ],
+        "forbiddenActions": [
+          "pasted the Slack DM thread into the backlog"
+        ]
+      }
+    }
+  ]
+}

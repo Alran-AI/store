@@ -1,0 +1,143 @@
+---
+namespace: aiwg
+platforms: [all]
+name: research-lint
+description: Run the research corpus lint ruleset to detect structural and referential integrity issues — orphan notes, missing frontmatter, broken references, missing GRADE assessments.
+commandHint:
+  argumentHint: "[target] [--fix] [--format full|summary|json] [--ci] [--fail-on error|warn|info]"
+  allowedTools: Read, Write, Bash, Glob, Grep
+  model: sonnet
+  category: research-validation
+  modelRole: coding
+  modelTier: standard
+---
+
+# Research Lint
+
+Run the research corpus lint ruleset against the configured corpus to detect structural and referential integrity issues.
+
+## Triggers
+
+- "lint the research corpus"
+- "check research integrity"
+- "validate research notes"
+- "sweep the corpus for issues"
+- "research lint"
+- `/research-lint`
+
+## Parameters
+
+### `[target]` (optional)
+Path to lint. When omitted, resolve the target in this order:
+
+1. `<AIWG_CORPUS_ROOT>/documentation/references/` when `AIWG_CORPUS_ROOT` is set.
+2. `<research.corpusRoot>/documentation/references/` when `.aiwg/aiwg.config` configures a corpus root.
+3. `documentation/references/` when the canonical warehouse layout exists in the project.
+4. `.aiwg/research/` for legacy project-local corpora.
+
+### `--fix` (optional)
+Attempt auto-fixes for fixable issues (add missing frontmatter defaults, correct formatting).
+
+### `--format` (optional)
+Output format: `full` (default), `summary`, or `json`.
+
+### `--ci` (optional)
+CI mode — exit code reflects pass/fail.
+
+### `--fail-on` (optional)
+Severity threshold for failure: `error` (default), `warn`, or `info`.
+
+## Execution Flow
+
+### Phase 1: Run Lint
+
+Resolve the default target as described above, then execute the lint runner against the research corpus:
+
+```bash
+aiwg lint <resolved-target> --ruleset research --format full
+```
+
+This checks all 11 rules in the research ruleset:
+
+| Rule | Severity | What it checks |
+|------|----------|---------------|
+| `ref-frontmatter` | error | Required frontmatter fields present |
+| `ref-id-unique` | error | No duplicate REF-XXX identifiers |
+| `ref-id-format` | warn | REF identifiers follow `REF-NNN` naming |
+| `citation-resolves` | error | Whole REF IDs point to exact or slugged notes anywhere in the lint target, unless the reference sits beside an explicit absence marker (unallocated, not in corpus, skipped, retired, withdrawn, deliberately absent, never allocated, deduplication) |
+| `grade-present` | warn | GRADE quality assessment in frontmatter |
+| `provenance-present` | warn | Provenance metadata present |
+| `cross-ref-bidirectional` | info | Related refs linked both ways |
+| `orphan-detection` | info | Notes with no inbound references |
+| `frontmatter-date-format` | warn | Dates follow ISO 8601 |
+| `source-file-exists` | error | Referenced source files exist |
+| `uncertainty-registered` | warn | A stated unperformed check against a verification target names an obstacle or records a dated outcome. A struck span followed by a dated outcome on the same line — `~~<limitation>~~ **Done YYYY-MM-DD (<what closed it>).** <evidence>` — is a completed retraction at any struck-text length |
+
+### Phase 2: Report Results
+
+Display the results grouped by file with severity indicators:
+- Errors: must be fixed for corpus integrity
+- Warnings: should be addressed for corpus quality
+- Info: suggestions for improvement
+
+### Phase 3: Auto-Fix (if --fix)
+
+When `--fix` is specified, attempt automatic corrections:
+
+1. **Missing frontmatter fields** — Add fields with sensible defaults:
+   - `status: pending`
+   - `documented_date: <today>`
+   - `tags: []`
+2. **Date format** — Convert dates to ISO 8601
+3. **Missing GRADE** — Add `grade_rating: null` placeholder
+
+Write corrections in place and re-run lint to verify fixes.
+
+## Integration Points
+
+| Component | Relationship |
+|-----------|-------------|
+| `aiwg lint` | Underlying CLI command this skill wraps |
+| `corpus-health` | Lint results feed into health scoring |
+| `induct-research` | Post-induction hook can trigger lint on new notes |
+| `ralph` loops | Lint pass as completion gate |
+| CI/CD | `aiwg lint --ci --ruleset research --fail-on error` |
+
+## Examples
+
+```bash
+# Full corpus lint
+/research-lint
+
+# Quick summary
+/research-lint --format summary
+
+# CI mode (exit code)
+/research-lint --ci --fail-on warn
+
+# Lint specific directory
+/research-lint .aiwg/research/findings/
+
+# Auto-fix what's fixable
+/research-lint --fix
+
+# JSON output for programmatic use
+/research-lint --format json
+```
+
+## Sidecar-level integrity (use `sidecar-lint`)
+
+This skill runs the note/corpus-wide ruleset. It does **not** inspect citation
+**sidecar** internals (Outgoing/Incoming sections, edge tables, doubled-append
+duplicate headers, `(see REF doc)` authors, `affiliation-primary`
+canonicalization, zero-edge sidecar orphans). For those, use the companion
+`sidecar-lint` skill (`aiwg corpus sidecar-lint` / `sidecar-repair`). The two
+compose — `research-lint` for note-level referential integrity, `sidecar-lint`
+for citation-sidecar structure — neither duplicates the other.
+
+## References
+
+- @$AIWG_ROOT/agentic/code/frameworks/research-complete/lint/ruleset.yaml
+- @$AIWG_ROOT/src/lint/cli.ts
+- @$AIWG_ROOT/src/lint/runner.ts
+- @$AIWG_ROOT/agentic/code/frameworks/research-complete/skills/sidecar-lint/SKILL.md — sidecar-structural lint + repair

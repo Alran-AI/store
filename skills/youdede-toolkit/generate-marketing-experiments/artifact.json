@@ -1,0 +1,69 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/marketing/strategy/generate-marketing-experiments",
+  "slug": "generate-marketing-experiments",
+  "name": "Generate Marketing Experiments",
+  "version": "1.4.0",
+  "kind": "skill",
+  "summary": "Generate a bounded portfolio of marketing experiments from constraints, evidence, and bottlenecks.",
+  "description": "Generate and prioritize marketing experiment concepts from a specific audience, product mechanism, funnel constraint, evidence base, and operating limits. Use when a team needs actionable growth options instead of a generic tactics list.",
+  "domain": "marketing",
+  "category": "strategy",
+  "problems": [
+    "marketing-ideation"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "discovery",
+    "planning"
+  ],
+  "risk": "low",
+  "risk_reason": "This skill generates a bounded portfolio of marketing experiments from constraints, evidence, and bottlenecks; it does not assign precise impact or confidence without evidence.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not generate spam, fake engagement, deceptive scarcity, covert endorsements, or policy evasion.",
+    "It does not assign precise impact or confidence without evidence.",
+    "It does not launch tactics, spend budget, contact people, or publish content."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "author"
+  ],
+  "relationships": {
+    "composesWith": [
+      "skill/marketing/analytics/design-controlled-experiment",
+      "skill/marketing/strategy/build-marketing-operating-plan"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill generates a bounded portfolio of marketing experiments from constraints, evidence, and bottlenecks, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

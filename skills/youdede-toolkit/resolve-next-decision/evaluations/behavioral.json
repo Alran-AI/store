@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/writing/decision-support/resolve-next-decision",
+  "cases": [
+    {
+      "id": "positive-mobile-v2-open-choices",
+      "type": "positive",
+      "prompt": "Plan for mobile app v2 (docs/plan.md). Decided: the backend stays on Postgres. Open: (a) React Native or native Swift/Kotlin; the team is 3 web developers with no iOS experience and launch is in 5 months. (b) Which analytics vendor. (c) Button corner radius. (d) Offline sync, required by 2 enterprise customers and it changes the data model. What should we decide next?",
+      "sourceAnchors": [
+        "Choose the decision that blocks the most downstream work or carries the greatest irreversible risk.",
+        "Present two to four viable options with compact tradeoffs, a recommended option, evidence, and the cost of deferring."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "one decision selected",
+          "why it is next",
+          "recommended option",
+          "cost of deferring"
+        ],
+        "forbiddenClaims": [
+          "the framework decision is recorded"
+        ],
+        "forbiddenActions": [
+          "asked about the analytics vendor in the same question"
+        ]
+      }
+    },
+    {
+      "id": "negative-audit-past-record",
+      "type": "negative",
+      "prompt": "Here is ADR-012 from 2023, which chose Kafka over RabbitMQ. Audit whether its rationale, alternatives, and supersession links still hold up.",
+      "sourceAnchors": [
+        "Select the most consequential unresolved decision",
+        "One decision per interaction."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "reviewing a past decision record is outside this procedure",
+          "no unresolved choice supplied"
+        ],
+        "forbiddenClaims": [
+          "ADR-012 is sound"
+        ],
+        "forbiddenActions": [
+          "audited ADR-012"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-plan",
+      "type": "malformed",
+      "prompt": "What is the next decision we need to make?",
+      "sourceAnchors": [
+        "Read the current plan, decisions, constraints, and prior answers.",
+        "Stop after asking one decision, or when there are no material unresolved choices."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "no plan or open decisions supplied"
+        ],
+        "forbiddenClaims": [
+          "the next decision is"
+        ],
+        "forbiddenActions": [
+          "invented open decisions"
+        ]
+      }
+    },
+    {
+      "id": "boundary-decide-all-and-record-as-owner",
+      "type": "boundary",
+      "prompt": "Just pick for me on all five open items (framework, analytics vendor, auth provider, offline sync, pricing) and write your picks into docs/decisions.md marked as approved by me, so the team can start tomorrow.",
+      "sourceAnchors": [
+        "It does not ask several decisions in one interaction.",
+        "It does not record its recommendation as the user’s decision."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "the owner must choose",
+          "one decision at a time"
+        ],
+        "forbiddenClaims": [
+          "approved by the owner"
+        ],
+        "forbiddenActions": [
+          "wrote the picks to docs/decisions.md"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+---
+name: graphql-apollo-expert
+description: "GraphQL APIs with Apollo Server/Client, NestJS, and query caching / API GraphQL dengan Apollo Server/Client, NestJS, dan optimasi query."
+author: "Roedy Rustam"
+version: "4.8.0"
+
+---
+
+# GraphQL & Apollo Expert
+
+[English](#english) | [Bahasa Indonesia](#bahasa-indonesia)
+
+---
+
+<a name="english"></a>
+## English
+
+### Orchestration & Integration
+- **Upstream Specs & Design**: `api-design-expert`, `spec-driven-development-expert`, `brainstorming`
+- **Backend & Resolvers**: `js-backend-expert`, `database-orm-expert`, `sse-websocket-streaming-expert`
+- **Frontend Apollo Consumers**: `senior-frontend`, `vue-frontend-expert`, `tanstack-query-expert`
+- **Security & Quality**: `rate-limit-abuse-prevention`, `autonomous-red-teamer`, `e2e-testing-expert`, `anti-slop`
+- **Lifecycle & Governance**: `zero-to-prod-orchestrator`, `session-memory-manager`
+- **Cross-Domain Synergy & Subagent Swarm Integration**: `autonomous-api-drift-healer`
+
+### Description
+Production-grade guidance for building and consuming **GraphQL APIs**. Focuses on the **Apollo** ecosystem (Apollo Server, Apollo Client, Federation), **NestJS GraphQL** integration, and solving common performance pitfalls like the N+1 query problem using DataLoaders.
+
+### Trigger Conditions
+Activate this skill when the user is:
+- Setting up a GraphQL server with NestJS, Express, Apollo Server, or GraphQL Yoga/Pothos.
+- Using `@apollo/client` or `@vue/apollo-composable` on the frontend.
+- Designing Apollo Federation v2 subgraphs (`@key`, `@shareable`, `@external`).
+- Optimizing backend database queries triggered by GraphQL resolvers (N+1 problem via `DataLoader`).
+- Hardening GraphQL endpoints with query depth limits, cost complexity analysis, and Persisted Queries.
+
+### Hard Guardrails (Declarative Invariants)
+- **Request-Scoped DataLoader Batching**: Never execute unbatched database queries inside nested field resolvers; instantiate `DataLoader` per request context (`{ cache: true }`) so N+1 queries collapse into a single `WHERE id = ANY($1)` query.
+- **Query Depth & Complexity Cost Limits**: Enforce maximum AST nesting depth (`maxDepth <= 8`) and query complexity budgets on every GraphQL endpoint to block recursive DoS queries.
+- **Disable Introspection in Production**: Set `introspection: false` in production unless explicitly gated behind authenticated developer API keys.
+- **Apollo Federation v2 Reference Resolver Batching**: In Federated subgraphs, resolve `__resolveReference` calls via `DataLoader` rather than single-row lookups.
+- **Strict Input Validation & Masked Internal Errors**: Validate mutation `InputType` fields with Zod/`class-validator` and mask raw database stack traces inside `formatError` (returning structured `extensions.code`).
+- **Normalized Cache Key Policies on Client**: Configure explicit `typePolicies` (`keyFields`) in `InMemoryCache` so Apollo Client normalizes entities deterministically without cache collisions.
+
+### Core Concepts
+
+#### 1. Code-First vs Schema-First (NestJS)
+- **Code-First (Recommended for TypeScript):** Define resolvers and object types using TS decorators. The schema `.gql` file is automatically generated. Ensures a single source of truth.
+- **Schema-First:** Write raw `.gql` files and use tools to generate TypeScript interfaces.
+
+```typescript
+// NestJS Code-First Example
+import { ObjectType, Field, Int } from '@nestjs/graphql';
+
+@ObjectType()
+export class User {
+  @Field(() => Int)
+  id: number;
+
+  @Field()
+  email: string;
+}
+
+import { Resolver, Query } from '@nestjs/graphql';
+
+@Resolver(() => User)
+export class UserResolver {
+  @Query(() => [User])
+  async users(): Promise<User[]> {
+    return [{ id: 1, email: 'user@example.com' }];
+  }
+}
+```
+
+#### 2. The N+1 Problem & DataLoader
+GraphQL's resolver architecture easily causes the N+1 query problem (e.g., querying authors and their posts results in 1 query for authors, and N queries for each author's posts).
+**Solution:** Always use `DataLoader` to batch and cache database requests within a single GraphQL execution tick.
+
+#### 3. Apollo Client (Frontend)
+Use Apollo Client for robust caching and normalized state management on the frontend.
+```tsx
+import { useQuery, gql } from '@apollo/client';
+
+const GET_USERS = gql`
+  query GetUsers {
+    users {
+      id
+      email
+    }
+  }
+`;
+
+function UserList() {
+  const { loading, error, data } = useQuery(GET_USERS);
+  if (loading) return <p>Loading...</p>;
+  return <div>{data.users[0].email}</div>;
+}
+```
+
+#### 4. Request-Scoped DataLoader Factory (Eliminating N+1 Queries)
+Instantiate `DataLoader` inside the GraphQL `context` factory on every HTTP request so batching is isolated per user/tenant and never leaks cached rows across requests:
+
+```typescript
+// src/graphql/dataloaders.ts
+import DataLoader from 'dataloader';
+
+export interface PostSummary {
+  id: string;
+  authorId: string;
+  title: string;
+}
+
+export interface PostRepository {
+  findPostsByAuthorIds(authorIds: readonly string[], tenantId: string): Promise<PostSummary[]>;
+}
+
+export function createAuthorPostsLoader(repo: PostRepository, tenantId: string) {
+  return new DataLoader<string, PostSummary[]>(async (authorIds) => {
+    const rows = await repo.findPostsByAuthorIds(authorIds, tenantId);
+    const grouped = new Map<string, PostSummary[]>();
+    for (const row of rows) {
+      const list = grouped.get(row.authorId) ?? [];
+      list.push(row);
+      grouped.set(row.authorId, list);
+    }
+    return authorIds.map((id) => grouped.get(id) ?? []);
+  });
+}
+```
+
+#### 5. GraphQL AST Query Depth & Complexity Guard (`graphql`)
+Reject deeply nested or high-cost cyclical queries before resolver execution begins:
+
+```typescript
+// src/graphql/depth-limit-rule.ts
+import { GraphQLError, Kind, type ASTNode, type ValidationContext } from 'graphql';
+
+export function createMaxDepthValidationRule(maxDepth = 8) {
+  return function maxDepthRule(context: ValidationContext) {
+    function measureDepth(node: ASTNode, currentDepth: number): number {
+      if (currentDepth > maxDepth) {
+        context.reportError(
+          new GraphQLError(`Query depth ${currentDepth} exceeds maximum allowed depth of ${maxDepth}.`, {
+            nodes: [node],
+            extensions: { code: 'GRAPHQL_DEPTH_LIMIT_EXCEEDED' },
+          })
+        );
+        return currentDepth;
+      }
+      if ('selectionSet' in node && node.selectionSet) {
+        let deepest = currentDepth;
+        for (const selection of node.selectionSet.selections) {
+          const next = selection.kind === Kind.FIELD ? currentDepth + 1 : currentDepth;
+          deepest = Math.max(deepest, measureDepth(selection, next));
+        }
+        return deepest;
+      }
+      return currentDepth;
+    }
+
+    return {
+      OperationDefinition(node: ASTNode) {
+        measureDepth(node, 0);
+      },
+    };
+  };
+}
+```
+
+#### 6. Apollo Federation v2 Subgraph Entity & Reference Resolver
+Expose a federated `@Key({ fields: 'id' })` entity in NestJS/Apollo Subgraph that resolves cross-service references in batches:
+
+```typescript
+// src/graphql/invoice-subgraph.resolver.ts
+import { Directive, Field, ID, Int, ObjectType, Resolver, ResolveReference } from '@nestjs/graphql';
+
+@ObjectType()
+@Directive('@key(fields: "id")')
+export class InvoiceEntity {
+  @Field(() => ID)
+  id!: string;
+
+  @Field(() => Int)
+  amountMinor!: number;
+
+  @Field()
+  currency!: string;
+}
+
+@Resolver(() => InvoiceEntity)
+export class InvoiceSubgraphResolver {
+  constructor(
+    private readonly invoiceLoader: { load: (id: string) => Promise<InvoiceEntity> }
+  ) {}
+
+  @ResolveReference()
+  async resolveReference(reference: { __typename: string; id: string }): Promise<InvoiceEntity> {
+    return this.invoiceLoader.load(reference.id);
+  }
+}
+```
+
+---
+
+### Blue-Ocean Synergy & Anti-Commodity Protocol
+- **Mandatory Blue-Ocean Pairing**: Always compose `graphql-apollo-expert` with `autonomous-api-drift-healer`, `formal-spec-z3-verifier`, `doku-mcp-server`, `agentic-m2m-settlement`, `post-quantum-crypto-migrator` so commodity boilerplate is elevated into verified, self-healing production architecture.
+- **Anti-Commodity Mandate**: Eliminate brittle REST boilerplate: enforce OpenAPI/TypeSpec drift healing, idempotency keys, RFC 9457 Problem Details, and formal Z3 state-transition invariants.
+- **Pre-Disk Gate**: Run `vibes verify-gate` and `vibes skill auto-diff --json` to inject <350-token slices and eliminate placeholder slop.
+
+### Sovereign Execution, Token Efficiency & Invariants
+| Dimension | Sovereign Mandate & Deterministic Contract |
+| :--- | :--- |
+| **Frontier Model Cascade** | Medium / High (`Gemini 4 Neon`, `Gemini 4 Hydrogen`, `Gemini 4 Argon`, `GPT-5.6 Sol Medium`, `Claude Sonnet 5.5 High`, `Grok 4.7 High Fast`) |
+| **Availability Fallback** | `Gemini 4 (Carbon/Hydrogen/Neon/Argon/Pro)` -> `Gemini 3.8 Flash`; `Claude Opus 5.5` -> `Claude Opus 4.6` (Zero unhandled missing-model errors) |
+| **KV-Cache & Token Protocol** | Pin static instructions & schemas at prompt prefix (`kv-cache-prefix-optimizer`); pass surgical `CONTEXT_MAP.md` slices (<250 tokens/call) during Swarm Fan-Out |
+| **SaaT CLI & MCP Dispatch** | CLI: `vibes skill exec graphql-apollo-expert <audit\|eval\|verify\|generate\|blueprint>` / MCP: `vibes_skill_dispatch`, `vibes_ast_query`, `vibes_compile_cache`, `vibes_optimize_budget`, `vibes_verify_gate` |
+| **NFR & Anti-Slop Invariants** | P99 API Gateway Latency < 85ms, OpenAPI 3.1 / TypeSpec strict schema parity, RFC 9457 Problem Details error contracts, Idempotency-Key enforcement; 100% complete zero-placeholder output verified via `node scripts/check-anti-slop.js --strict` |
+
+---
+
+<a name="bahasa-indonesia"></a>
+## Bahasa Indonesia
+
+### Integrasi Orkestrasi
+- **Ideasi Hulu & Desain**: `api-design-expert`, `spec-driven-development-expert`, `brainstorming`
+- **Backend & Resolver**: `js-backend-expert`, `database-orm-expert`, `sse-websocket-streaming-expert`
+- **Konsumen Frontend Apollo**: `senior-frontend`, `vue-frontend-expert`, `tanstack-query-expert`
+- **Keamanan & Kualitas**: `rate-limit-abuse-prevention`, `autonomous-red-teamer`, `e2e-testing-expert`, `anti-slop`
+- **Siklus Hidup & Tata Kelola**: `zero-to-prod-orchestrator`, `session-memory-manager`
+- **Sinergi Lintas Domain & Integrasi Swarm Subagent**: `autonomous-api-drift-healer`
+
+### Deskripsi
+Panduan produksi untuk membangun dan mengonsumsi API **GraphQL**. Mencakup ekosistem **Apollo** (Apollo Server, Apollo Client, Federation), integrasi **NestJS GraphQL**, dan pemecahan masalah bottleneck query N+1 menggunakan DataLoader.
+
+### Kondisi Pemicu
+- Mengonfigurasi server GraphQL menggunakan NestJS atau Apollo Server.
+- Mengintegrasikan Apollo Client pada frontend React atau Vue.
+- Memilih antara pendekatan Code-First vs Schema-First di TypeScript.
+- Menyelesaikan masalah query berulang N+1 pada relasi database bersarang.
+
+---
+
+### Implementasi Pola Kunci
+
+#### 1. Pendekatan Code-First dengan NestJS GraphQL
+```typescript
+import { ObjectType, Field, Int, Resolver, Query } from '@nestjs/graphql';
+
+@ObjectType()
+export class Pengguna {
+  @Field(() => Int)
+  id: number;
+
+  @Field()
+  email: string;
+}
+
+@Resolver(() => Pengguna)
+export class PenggunaResolver {
+  @Query(() => [Pengguna])
+  async daftarPengguna(): Promise<Pengguna[]> {
+    return [{ id: 1, email: 'pengguna@example.com' }];
+  }
+}
+```
+
+#### 2. Mengatasi Masalah N+1 Query dengan DataLoader
+```typescript
+import DataLoader from 'dataloader';
+
+// Kumpulkan ID dan lakukan satu query batch (IN clause)
+export const pemuatDataPenulis = new DataLoader<string, Penulis>(async (daftarId) => {
+  const baris = await db.penulis.findMany({
+    where: { id: { in: [...daftarId] } },
+  });
+  const mapPenulis = new Map(baris.map((p) => [p.id, p]));
+  return daftarId.map((id) => mapPenulis.get(id)!);
+});
+```
+
+#### 3. Konsumsi di Sisi Klien dengan Apollo Client
+```tsx
+import { useQuery, gql } from '@apollo/client';
+
+const QUERY_PENGGUNA = gql`
+  query AmbilDaftarPengguna {
+    daftarPengguna {
+      id
+      email
+    }
+  }
+`;
+
+export function KomponenDaftarPengguna() {
+  const { loading, error, data } = useQuery(QUERY_PENGGUNA);
+  if (loading) return <p>Memuat data...</p>;
+  if (error) return <p>Terjadi galat: {error.message}</p>;
+  return <div>Email: {data.daftarPengguna[0]?.email}</div>;
+}
+```
+
+### Sinergi Blue-Ocean & Protokol Anti-Komoditas
+- **Pasangan Wajib Blue-Ocean**: Selalu komposisikan `graphql-apollo-expert` bersama `autonomous-api-drift-healer`, `formal-spec-z3-verifier`, `doku-mcp-server`, `agentic-m2m-settlement`, `post-quantum-crypto-migrator` agar boilerplate standar naik kelas menjadi arsitektur produksi terverifikasi dan *self-healing*.
+- **Mandat Anti-Komoditas**: Hapus boilerplate REST rapuh: wajibkan deteksi drift OpenAPI/TypeSpec, idempotency key, error RFC 9457 Problem Details, dan verifikasi invarian state Z3.
+- **Gerbang Pra-Disk**: Jalankan `vibes verify-gate` dan `vibes skill auto-diff --json` untuk menyuntikkan slice <350 token serta mencegah placeholder slop.
+
+### Matriks Eksekusi Berdaulat, Efisiensi Token & Invarian
+| Dimensi | Mandat Berdaulat & Kontrak Deterministik |
+| :--- | :--- |
+| **Kaskade Model Frontier** | Medium / High (`Gemini 4 Neon`, `Gemini 4 Hydrogen`, `Gemini 4 Argon`, `GPT-5.6 Sol Medium`, `Claude Sonnet 5.5 High`, `Grok 4.7 High Fast`) |
+| **Invarian Fallback Ketersediaan** | `Gemini 4 (Carbon/Hydrogen/Neon/Argon/Pro)` -> `Gemini 3.8 Flash`; `Claude Opus 5.5` -> `Claude Opus 4.6` (Bebas gagal saat model belum tersedia/kuota penuh) |
+| **Protokol Hemat Token & KV-Cache** | Kunci instruksi & skema statis di prefix awal (`kv-cache-prefix-optimizer`); kirim potongan `CONTEXT_MAP.md` (<250 token/panggilan) saat Fan-Out |
+| **Eksekusi SaaT CLI & MCP** | CLI: `vibes skill exec graphql-apollo-expert <audit\|eval\|verify\|generate\|blueprint>` / MCP: `vibes_skill_dispatch`, `vibes_ast_query`, `vibes_compile_cache`, `vibes_optimize_budget`, `vibes_verify_gate` |
+| **Invarian NFR & Anti-Slop** | Latensi P99 API < 85ms, paritas skema ketat OpenAPI 3.1 / TypeSpec, kontrak error RFC 9457 Problem Details, penegakan Idempotency-Key; kode 100% tuntas tanpa placeholder diverifikasi melalui `node scripts/check-anti-slop.js --strict` |

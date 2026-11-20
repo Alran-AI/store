@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Knowledge State Freshness"
+  short_description: "Audit notes or agent memory for claims newer evidence refutes"
+  default_prompt: "Use $audit-knowledge-state-freshness for this task and follow its validation and refusal boundaries."

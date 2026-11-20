@@ -1,0 +1,113 @@
+---
+name: skill-finder
+version: 0.11.0
+type: skill
+author: Lukas Geiger + Claude + Gemini
+created: 2026-06-17
+updated: 2026-11-10
+description: "Use at the start of non-trivial tasks to discover, evaluate, and route to fitting existing local skills (e.g. 'which skill fits', 'find skill for this task', 'is there a skill for...', /skill-finder). Inspects local skill repositories to recommend and trigger the best matching skill for a user prompt. Do NOT use to author new skills (use ellmos-skill-creator) or audit landscapes (use skill-explorer)."
+standalone: true
+anthropic_compatible: true
+bach_compatible: false
+bach_origin: false
+
+category: infrastructure
+tags: [skills, finder, routing, discovery, meta]
+language: en
+status: active
+
+dependencies:
+  tools: []
+  services: []
+  protocols: [code-skill-index]
+  python: []
+
+provenance:
+  origin: "custom"
+  origin_path: "~/.claude/skills/skill-finder/"
+  origin_version: "0.1.0"
+---
+
+
+<img src="banner.png" width="100%" alt="skill-finder banner">
+# Skill Finder
+
+## The Rule
+
+Before starting any non-trivial task, first check if a local skill handles it better. Even with minor suspicion, load the appropriate skill and **follow its live instructions** (read file, do not work from memory). If no skill applies, proceed as normal.
+
+## Family Routing
+
+<!-- Generated/updated from SKILL-MAP.md + inventory_skills.py. Topic -> Family -> Skill.
+     Maintenance: Sub-skill skill-family-care or new skill-explorer audit run. As of: 2026-06-17 -->
+
+| Topic / Intent | Family | Skill(s) |
+|-----------------|---------|----------|
+| Think through / analyze a problem | Thinking Tools | `/structured-thinking` (guides `/think` → `/brainstorm` → `/decide`) |
+| New ideas / creativity | Thinking Tools | `/brainstorm` (vs `/think` analysis, `/decide` selection) |
+| Decision stack | Thinking Tools | `/decision-briefing` |
+| Which decision depends on which / do recommendations contradict each other? | Thinking Tools | `decision-path` (`/decision-path`; ASCII dependency graph, decides nothing) |
+| Accept the recommended overall variant as ONE concept/implementation text | Thinking Tools | `decision-draw` (`/decision-draw`; accept as a whole, corrections -> individual decisions) |
+| Build or use an authorized user preference model | Multi-Agent | `build-your-users-mind` (build) · `decision-avatar` (runtime) |
+| Bug / test failure | Coding & Debugging | `/bugfix-protocol` (1 bug), `/bugsweep` (many, before release) |
+| New/existing project or pipeline | Project/Pipeline | `/projekt-pipeline-umbrella` (→ bootstrapper/onboarding/optimizer) |
+| Roblox game | Game Dev | `/rbx-dev` (→ `/rojo`, `/rbx-studio`, `/game-design`) |
+| Therapy / counseling / crisis | Therapy | `/therapie-umbrella` (→ stabilization/guideline/counseling) |
+| Presentation / slides | Office | `/academic-pptx` (content) + `/pptx` (file) |
+| Bound orchestration together before complex multi-agent work | Multi-Agent | `choose-your-orchestrator` (`/choose-your-orchestrator`) |
+| Execute confirmed multi-agent coordination | Multi-Agent | `orchestrator`, `/swarm-operations`, `/model-strategy` |
+| Application / self-management | Personal | `/bewerbungsexperte`, `/selbstmanagement` |
+| Compare/clean up/find skills | System/Meta | `skill-explorer` (audit/explore), `code-skill-index` (list) |
+| Set up system / sync MCP / connect agents | System/Meta | `/system-onboarding`, `/mcp-config-sync`, `/agents-bridge` |
+| File utilities | Utilities | `/document-chunker`, `/migrate-rename`, `/plugin-system` |
+| Chat history → preserve as skill | System/Meta | `skill-extractor` (`/skill-extract`) |
+| Chat history/external automation → automation | System/Meta | `workflow-extract` (`/automations-extract`) |
+| Recurring check across many projects | Coding & Debugging | `rotation-check` (registry/log structure) |
+| Stuck problem, mine ideas | Thinking Tools | `idea-mining` (vs `/brainstorm` = free/broad) |
+| Keep DE/EN document versions in sync | Utilities | `bilingual-doc-sync` |
+| AI traces/chat remnants in text, AI disclosure | Utilities | `llm-text-hygiene` |
+| Condition/timing/order in request ("only when", "from 6 am", "as soon as X done") | Process | `condition` (`/if` · `/when` · `/if-only` · `/after` · `/and` · `/or`) |
+| Collect/sort files from a folder by recurring rule ("always collect Y from X into Z", "sort folder automatically") | Utilities | `file-collect-sort-action` |
+| Semantically organize a folder/document collection into topic clusters, calibrate cluster count, deduplicate via SHA-256, reconcile legacy taxonomies, and update control files & active writers | Utilities | `folder-organization` (vs. `tidy-up` = session closeout in existing structure, `file-collect-sort-action` = recurring rule, `folder-flattening` = pure flattening) |
+| Test a series of apps/GUIs live with the user (evaluate feedback + delegate fixes in parallel) | Coding & Debugging | `human-loop-audit` |
+| Tidy up active project at session end (resolve register items, update docs to measured state, archive strays) | Coding & Debugging | `tidy-up` (`/tidy-up`; level-1 source for `work-autonomous`) |
+| Shrink rule/memory files without changing technical substance ("CLAUDE.md is too long") | Utilities | `paveman` (deterministic CLI; vs. `knappform` = LLM prose style) |
+| Mermaid diagram fails to render on GitHub ("Unable to render rich display") or org-wide Mermaid lint | Coding & Debugging | `mermaid-lint` |
+| Manage model budgets, quotas, and expensive reviewer/advisor calls | Multi-Agent | `budgetierung` (quota ledger; model choice itself: `/model-strategy`) |
+| Polish academic/scientific style of a LaTeX paper without altering content | Research | `scientific-style-check` (`/scientific-style-check`; vs. `llm-text-hygiene` = AI traces, `bilingual-doc-sync` = DE/EN parity) |
+
+Full list: Skill `code-skill-index`.
+
+## Red Flags (Rationalizations that mean STOP)
+
+| Thought | Reality |
+|---------|----------|
+| "This is just a quick question." | Questions are tasks — check skills first. |
+| "I know the concept." | Knowing concept ≠ using skill. Read live file. |
+| "The skill is overkill." | Simple things get complex — use it. |
+| "I'll explore on my own first." | Skills tell HOW to explore. Check first. |
+
+## Maintenance
+
+Update routing table when families change (sub-skill `skill-family-care` or new `inventory_skills.py` run from `skill-explorer`).
+
+## Changelog
+
+### 0.11.0 (2026-11-10)
+- Added routing line for `folder-organization` (v1.2.0, Utilities family): semantic topic-list
+  clustering, cluster count calibration, two-stage SHA-256 duplicate resolution, Cut-and-Clue, and
+  updating control files and upstream writers; distinguished from `tidy-up`,
+  `file-collect-sort-action`, and `folder-flattening`.
+- Synced routing lines from 0.3.0–0.10.0 (`file-collect-sort-action`, `human-loop-audit`, `tidy-up`,
+  `paveman`, `mermaid-lint`, `budgetierung`, `scientific-style-check`).
+
+### 0.7.0 (2026-08-20)
+- Added `choose-your-orchestrator` as the recommendation and contract dialogue before
+  complex multi-agent work; separated it from execution routing to `orchestrator`,
+  `swarm-operations`, and `model-strategy`.
+
+### 0.2.0 (2026-07-03)
+- Added routing lines for new skills: skill-extractor, workflow-extract, rotation-check, idea-mining, bilingual-doc-sync (Codex automations extraction).
+
+### 0.1.0 (2026-06-17)
+- Initial version. Created by audit mode ([F]) as an analogue to using-superpowers. Routing table from audit dated 2026-06-17 (10 user families).

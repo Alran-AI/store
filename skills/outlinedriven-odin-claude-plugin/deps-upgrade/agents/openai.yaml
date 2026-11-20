@@ -1,0 +1,3 @@
+interface:
+  display_name: "Deps Upgrade"
+  short_description: "Use when dependency upgrades need batching for CVEs, a major release, forced compatibility, a scheduled or vulnerability-triggered sweep."

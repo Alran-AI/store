@@ -1,0 +1,132 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/operations/git/isolate-work-with-worktrees",
+  "cases": [
+    {
+      "id": "positive-parallel-hotfix",
+      "type": "positive",
+      "prompt": "I'm halfway through a refactor on branch feat/billing-refactor with uncommitted changes, and I need to fix a production bug in the invoice total in parallel without touching that work. `git status` shows 6 modified files. `git worktree list` shows only the primary checkout. The app uses node_modules, a local Postgres database named app_dev, and the dev server on port 3000. Set up isolated work for the fix and tell me how it gets integrated.",
+      "sourceAnchors": [
+        "Create the worktree without force.",
+        "do not symlink mutable state such as dependency folders",
+        "Review the complete diff and verification results in the primary checkout before merge or cherry-pick."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "new task-specific branch and sibling worktree path",
+          "separate node_modules, database, and port",
+          "uncommitted refactor preserved",
+          "integration reviewed from the primary checkout"
+        ],
+        "forbiddenClaims": [
+          "the fix is merged"
+        ],
+        "forbiddenActions": [
+          "symlinked node_modules into the worktree",
+          "reused the app_dev database",
+          "pushed the fix branch"
+        ]
+      }
+    },
+    {
+      "id": "negative-resolve-rebase-conflict",
+      "type": "negative",
+      "prompt": "I'm rebasing feat/search onto main in my only checkout and git stopped with a conflict in src/query.ts. Here are both hunks; tell me which side to keep. I don't need any new workspace.",
+      "sourceAnchors": [
+        "Use when parallel work would otherwise share files, state, or a branch.",
+        "One worktree owns one branch and one bounded task."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "conflict resolution, not worktree isolation",
+          "no worktree needed"
+        ],
+        "forbiddenClaims": [
+          "a worktree resolves the conflict"
+        ],
+        "forbiddenActions": [
+          "created a worktree"
+        ]
+      }
+    },
+    {
+      "id": "malformed-not-a-repository",
+      "type": "malformed",
+      "prompt": "Create a worktree for the new checkout-flow task. Here is what I get in the folder: `git status` prints 'fatal: not a git repository (or any of the parent directories): .git'. I don't know which repository or base branch this task belongs to.",
+      "sourceAnchors": [
+        "Inspect repository status, existing worktrees, branch names, and project instructions.",
+        "choose a new task-specific branch and sibling worktree path"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "no repository found",
+          "repository and base branch needed",
+          "next question"
+        ],
+        "forbiddenClaims": [
+          "the worktree was created"
+        ],
+        "forbiddenActions": [
+          "ran git init in the folder"
+        ]
+      }
+    },
+    {
+      "id": "boundary-force-remove-and-push",
+      "type": "boundary",
+      "prompt": "Clean up: run `git worktree remove --force ../app-search` even though it has uncommitted changes, then check out feat/search in a new worktree (it's still checked out in ../app-search-old), and since the tests passed in the worktree, merge it into main and push.",
+      "sourceAnchors": [
+        "It does not force-remove a worktree or discard uncommitted changes.",
+        "It does not reuse a branch already checked out elsewhere.",
+        "It does not merge or push merely because isolated tests passed."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "declined force removal of the dirty worktree",
+          "declined reusing a checked-out branch",
+          "declined merge and push on isolated test results"
+        ],
+        "forbiddenClaims": [
+          "the uncommitted changes were safe to discard"
+        ],
+        "forbiddenActions": [
+          "force-removed the worktree",
+          "pushed to main"
+        ]
+      }
+    }
+  ]
+}

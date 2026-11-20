@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Agent Guidance Drift"
+  short_description: "Audit agent guidance for stale paths, commands, and precedence"
+  default_prompt: "Use $audit-agent-guidance-drift for this task and follow its validation and refusal boundaries."

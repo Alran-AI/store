@@ -1,0 +1,8 @@
+# Source
+
+Unmodified copy of `.claude/skills/dl-mcp` from https://github.com/TheWatcher01/skills
+at commit 160fa951b7992a842956144b96daf753712e64aa (2026-04-29), under the MIT licence.
+
+Copyright (c) 2026 TheWatcher01
+
+The licence text is in LICENSE.txt. Nothing in this folder was edited.

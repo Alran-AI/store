@@ -27,14 +27,36 @@ const TEXT_EXT = new Set([".md", ".txt", ".json", ".yaml", ".yml", ".csv", ""]);
 // An image cannot be read as text, but it cannot run either: a Skill may carry its own icon.
 // Raster formats only — an SVG is a document and may carry a script.
 const IMAGE_EXT = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp"]);
-// A Skill may be vendored without these folders when its own text does not point at them.
-const DROPPABLE = new Set(["scripts", "evals"]);
-// A Skill that mentions its scripts or its evals is not complete without them.
-const MENTIONS_CODE = /\bscripts?\b|\bevals?\b/iu;
+// A Skill may be vendored without these folders when its own text does not point at them. The
+// folders are by convention code the store cannot carry: scripts a Skill runs, tests it ships,
+// examples it shows, hooks it registers.
+const DROPPABLE = new Set([
+  "scripts",
+  "evals",
+  "hooks",
+  "examples",
+  "example",
+  "tests",
+  "test",
+  "__tests__",
+  "samples",
+  "sample",
+  "demo",
+  "demos",
+  "fixtures",
+  "benchmark",
+  "benchmarks",
+  "tools",
+  "tool",
+  "bin",
+  "e2e",
+  "integration",
+]);
 const SEGMENT = /^[A-Za-z0-9._-]+$/u;
 const RESERVED = /^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\..*)?$/iu;
 const JUNK = new Set([".DS_Store", "Thumbs.db"]);
 const MAX_FILE = 2 * 1024 * 1024;
+const MAX_SEGMENT_BYTES = 128;
 const SKILL_NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 // Text that has no business in a Skill, whatever the source. Some patterns are refused anywhere; the others
 // are refused unless the line itself marks them as a bad example ("# Attack: ...", "// DANGEROUS", "e.g.").
@@ -60,15 +82,31 @@ function git(clone, ...args) {
   return execFileSync("git", ["-C", clone, ...args], { encoding: "utf8" }).trim();
 }
 
+/**
+ * Whether the clone still holds the upstream files. A repository that stores CRLF and asks for LF on
+ * checkout is reported as changed by git even when the file on disk is the upstream file, so a
+ * difference in line endings alone does not count as a change.
+ */
+function cloneIsClean(clone) {
+  const quiet = { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] };
+  const changed = execFileSync("git", ["-C", clone, "diff", "--name-only", "--ignore-cr-at-eol", "HEAD", "--"], quiet)
+    .toString()
+    .trim();
+  const untracked = execFileSync("git", ["-C", clone, "ls-files", "--others", "--exclude-standard"], quiet)
+    .toString()
+    .trim();
+  return !changed && !untracked;
+}
+
 function frontmatterName(text) {
-  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/u.exec(text);
   const line = match && /^name\s*:\s*(.+)$/mu.exec(match[1]);
   return line ? line[1].trim().replace(/^["']|["']$/gu, "") : undefined;
 }
 
 /** The text of one frontmatter field, including the lines of a folded or literal block. */
 function frontmatterField(text, field) {
-  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/u.exec(text);
   if (!match) return undefined;
   const lines = match[1].split(/\r?\n/u);
   const start = lines.findIndex((line) => new RegExp(`^${field}\\s*:`, "u").test(line));
@@ -84,7 +122,7 @@ function frontmatterField(text, field) {
  * validator does not accept it.
  */
 function frontmatterScalar(text, field) {
-  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/u.exec(text);
   if (!match) return undefined;
   const line = match[1].split(/\r?\n/u).find((entry) => new RegExp(`^${field}\\s*:`, "u").test(entry));
   if (!line) return undefined;
@@ -93,7 +131,7 @@ function frontmatterScalar(text, field) {
 
 /** The frontmatter keys that appear twice; the validator rejects a Skill with those. */
 function frontmatterDuplicateKeys(text) {
-  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/u.exec(text);
   if (!match) return [];
   const seen = new Set();
   const twice = new Set();
@@ -124,6 +162,10 @@ function listFiles(directory, reasons) {
         if (path.split(sep).some((segment) => !SEGMENT.test(segment) || segment.endsWith(".") || RESERVED.test(segment))) {
           reasons.push(`${path} is not a portable file name`);
         }
+        // the Plugin format V1 holds a path segment to 128 bytes
+        if (path.split(sep).some((segment) => Buffer.byteLength(segment, "utf8") > MAX_SEGMENT_BYTES)) {
+          reasons.push(`${path} has a path segment longer than ${MAX_SEGMENT_BYTES} bytes`);
+        }
         const ext = extname(path).toLowerCase();
         if (!TEXT_EXT.has(ext) && !IMAGE_EXT.has(ext)) reasons.push(`${path} is not a plain text or image file (${ext || "no extension"})`);
         if (info.size > MAX_FILE) reasons.push(`${path} is larger than 2 MiB`);
@@ -135,17 +177,40 @@ function listFiles(directory, reasons) {
 }
 
 /** Reasons a Skill folder may not enter the store; empty when it is admitted (links are checked later). */
-function admit(directory, name) {
+function admit(directory, name, options = {}) {
   const reasons = [];
   if (!SKILL_NAME.test(name)) reasons.push(`"${name}" is not a Skill name`);
+  // the Plugin format V1 holds a path segment to 128 bytes, and the Skill's folder is one
+  if (Buffer.byteLength(name, "utf8") > MAX_SEGMENT_BYTES) reasons.push(`"${name}" is longer than ${MAX_SEGMENT_BYTES} bytes`);
   if (!existsSync(join(directory, "SKILL.md"))) return { reasons: [...reasons, "has no SKILL.md"], dropped: [] };
-  return admitReasons(directory, name, reasons);
+  return admitReasons(directory, name, reasons, options);
 }
 
 /** The rest of the checks, on a Skill that has a SKILL.md. */
-function admitReasons(directory, name, reasons) {
+function admitReasons(directory, name, reasons, options = {}) {
   const skillText = readFileSync(join(directory, "SKILL.md"), "utf8");
-  if (frontmatterName(skillText) !== name) reasons.push("SKILL.md names another skill than its folder");
+  const declared = frontmatterName(skillText);
+  let title;
+  let asName = name;
+  if (declared !== name) {
+    if (declared && SKILL_NAME.test(declared)) {
+      // The source names its Skill after something else than its folder. The store names a Skill
+      // after the name it declares, and the folder in the store follows that name.
+      asName = declared;
+    } else if (options.normalizeName && declared) {
+      // Some sources name their Skills after the title they show the reader instead of after their
+      // folder. The store names a Skill after its folder, so for a source that asks for it the name
+      // is rewritten and the title is kept beside it.
+      title = declared;
+    } else {
+      reasons.push("SKILL.md names another skill than its folder");
+    }
+  }
+  // A SKILL.md that points at a Skill stored somewhere else is not a Skill: the archive keeps the
+  // pointer so old links keep working, and the copy it stands for lives in another repository.
+  if (/not an installable skill|this page used to hold an archived copy/iu.test(skillText)) {
+    reasons.push("the SKILL.md is a pointer to a Skill kept elsewhere, not a Skill");
+  }
   // the store's Plugin validator reads a flat mapping of scalars: the description has to be a value
   // on the line of its key, and no key may appear twice
   if (!frontmatterScalar(skillText, "description")) reasons.push("SKILL.md has no description");
@@ -171,7 +236,7 @@ function admitReasons(directory, name, reasons) {
       for (const [pattern, why] of REFUSED_PER_LINE) if (pattern.test(line)) reasons.push(`${file} ${why}`);
     }
   }
-  return { reasons: [...new Set(reasons)], dropped: [] };
+  return { reasons: [...new Set(reasons)], dropped: [], title, asName };
 }
 
 /**
@@ -182,9 +247,9 @@ function admitReasons(directory, name, reasons) {
  *
  * Returns the reasons the Skill still has, and the folders that may be left out.
  */
-function admitWithoutCode(directory, name) {
-  const first = admit(directory, name);
-  if (first.reasons.length === 0) return { reasons: [], dropped: [] };
+function admitWithoutCode(directory, name, options = {}) {
+  const first = admit(directory, name, options);
+  if (first.reasons.length === 0) return { reasons: [], dropped: [], title: first.title, asName: first.asName };
   const code = first.reasons.filter((reason) => {
     const match = /^(.+) is not a plain text or image file/u.exec(reason);
     return match && DROPPABLE.has(match[1].split("/")[0]);
@@ -193,14 +258,68 @@ function admitWithoutCode(directory, name) {
   const other = first.reasons.filter((reason) => !code.includes(reason));
   if (other.length > 0) return first;
   const folders = [...new Set(code.map((reason) => /^(.+) is not a plain text or image file/u.exec(reason)[1].split("/")[0]))];
-  // The text that stays has to be complete on its own: no mention of the folder that is left out.
+  // The text that stays has to be complete on its own: it must not point at the folder that is
+  // left out, nor at a file in it. The word "script" on its own is prose, not a pointer.
   for (const file of listFiles(directory, [])) {
     if (folders.some((folder) => file.split("/")[0] === folder)) continue;
     const ext = extname(file).toLowerCase();
     if (!TEXT_EXT.has(ext) || ext === "") continue;
-    if (MENTIONS_CODE.test(readFileSync(join(directory, file), "utf8"))) return first;
+    if (pointsAtDropped(readFileSync(join(directory, file), "utf8"), folders, code)) return first;
   }
-  return { reasons: [], dropped: folders };
+  return { reasons: [], dropped: folders, title: first.title, asName: first.asName };
+}
+
+/** The escape of a string for a regular expression. */
+function escapeRegExp(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+}
+
+/**
+ * Whether the text of a Skill points at a folder the store leaves out, or at a file in it. A path
+ * is a pointer; the word "script" in a sentence is not.
+ */
+function pointsAtDropped(text, folders, reasons) {
+  for (const folder of folders) {
+    if (new RegExp(`\\b${escapeRegExp(folder)}/`, "u").test(text)) return true;
+  }
+  for (const reason of reasons) {
+    const match = /^(.+) is not a plain text or image file/u.exec(reason);
+    if (!match) continue;
+    const file = match[1].split("/").pop();
+    if (text.includes(file)) return true;
+  }
+  return false;
+}
+
+/**
+ * Sets the `name` of a Skill to the name of its folder and keeps the title the source gave it in a
+ * `title` field beside it. This is the one line the store changes in such a Skill, and the Skill's
+ * own SOURCE.md says so.
+ */
+function rewriteName(file, name, title) {
+  const text = readFileSync(file, "utf8");
+  // the closing marker alone: the line break that follows it belongs to the text, not to the
+  // frontmatter, and has to survive the rewrite
+  const match = /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text);
+  if (!match) return;
+  const eol = match[0].includes("\r\n") ? "\r\n" : "\n";
+  const lines = match[1].split(/\r?\n/u);
+  const hasTitle = lines.some((line) => /^title\s*:/u.test(line));
+  const out = [];
+  for (const line of lines) {
+    if (/^name\s*:/u.test(line)) {
+      out.push(`name: ${name}`);
+      // The title goes right here, at the top level of the frontmatter: further down the fields of
+      // the source may open a nested block of their own, and a key under one is not a key of the
+      // Skill.
+      if (!hasTitle) out.push(`title: ${JSON.stringify(title.replace(/\s+/gu, " ").trim())}`);
+      continue;
+    }
+    out.push(line);
+  }
+  const head = text.slice(0, match.index);
+  const tail = text.slice(match.index + match[0].length);
+  writeFileSync(file, `${head}---${eol}${out.join(eol)}${eol}---${tail}`);
 }
 
 /** Relative Markdown links of a Skill folder that leave it: [{ file, link, target }] (target is absolute). */
@@ -218,7 +337,14 @@ function outwardLinks(directory, dropped) {
           if (/^(https?:|mailto:|#|<)/u.test(link)) continue;
           link = link.split("#")[0].split("?")[0];
           if (!link) continue;
-          const target = resolve(dirname(full), decodeURIComponent(link));
+          // a link may hold a percent sign that is not an escape, as in "](100%off)"
+          let decoded = link;
+          try {
+            decoded = decodeURIComponent(link);
+          } catch {
+            continue;
+          }
+          const target = resolve(dirname(full), decoded);
           if (target !== directory && !target.startsWith(directory + sep)) links.push({ file: relative(directory, full), link, target });
         }
       }
@@ -247,15 +373,22 @@ function licenseNotice(path) {
   return { text, copyright };
 }
 
-function sourceNote({ source, relPath, sha, date, copyright, dropped }) {
+function sourceNote({ source, relPath, sha, date, copyright, dropped, name, title }) {
   return [
     "# Source",
     "",
-    `Unmodified copy of \`${relPath}\` from ${source.repo}`,
+    `${title ? "Copy" : "Unmodified copy"} of \`${relPath}\` from ${source.repo}`,
     `at commit ${sha} (${date}), under the ${source.spdx} licence.`,
     ...(copyright ? ["", copyright] : []),
     "",
-    "The licence text is in LICENSE.txt. Nothing in this folder was edited.",
+    ...(title
+      ? [
+          "The licence text is in LICENSE.txt. One field was changed: the `name` in the frontmatter",
+          `was set to the name of the folder, \`${name}\`. The source named this Skill "${title}";`,
+          "that title is kept in the `title` field beside it. Every other file is the upstream copy,",
+          "word for word.",
+        ]
+      : ["The licence text is in LICENSE.txt. Nothing in this folder was edited."]),
     ...(dropped?.length
       ? [
           "",
@@ -301,7 +434,7 @@ for (const source of manifest.sources) {
   if (!existsSync(join(clone, ".git"))) die(`${source.id}: no clone at ${clone}`);
   const sha = git(clone, "rev-parse", "HEAD");
   if (sha !== source.commit) die(`${source.id}: the clone is at ${sha}, sources.json pins ${source.commit}`);
-  if (git(clone, "status", "--porcelain")) die(`${source.id}: the clone has local changes`);
+  if (!cloneIsClean(clone)) die(`${source.id}: the clone has local changes`);
   const date = git(clone, "log", "-1", "--format=%cs");
   const licensePath = licenseFile(clone, source.licenseFile);
   if (!licensePath) die(`${source.id}: ${clone} has no LICENSE, LICENSE.txt or LICENSE.md`);
@@ -334,9 +467,13 @@ for (const source of manifest.sources) {
       continue;
     }
     const evaluated = found.map((candidate) => {
-      const { reasons, dropped } = admitWithoutCode(candidate.directory, name);
-      if (reserved.has(name)) reasons.push("the name belongs to a Skill built in to Alran Code");
-      return { candidate: { ...candidate, dropped }, reasons };
+      const { reasons, dropped, title, asName } = admitWithoutCode(candidate.directory, name, {
+        normalizeName: source.normalizeName === true,
+      });
+      if (reserved.has(name) || reserved.has(asName ?? name)) {
+        reasons.push("the name belongs to a Skill built in to Alran Code");
+      }
+      return { candidate: { ...candidate, dropped, title, asName: asName ?? name }, reasons };
     });
     const passing = evaluated.filter((entry) => entry.reasons.length === 0);
     let chosen;
@@ -359,12 +496,17 @@ for (const source of manifest.sources) {
         excluded.push({ source, name, reasons: [`another copy of this Skill in this source (${entry.candidate.relPath}) was left out; the store holds one copy`] });
       }
     }
-    if (taken.has(name)) {
-      if (named) fatal.push(`${name} is in both ${taken.get(name)} and ${source.id}`);
-      else excluded.push({ source, name, reasons: [`the name is already taken by ${taken.get(name)}`] });
+    const storeName = chosen.asName ?? name;
+    if (taken.has(storeName)) {
+      if (named) fatal.push(`${storeName} is in both ${taken.get(storeName)} and ${source.id}`);
+      else excluded.push({ source, name, reasons: [`the name is already taken by ${taken.get(storeName)}`] });
       continue;
     }
-    members.set(name, chosen);
+    if (members.has(storeName)) {
+      excluded.push({ source, name, reasons: [`another Skill of this source already goes by the name ${storeName}`] });
+      continue;
+    }
+    members.set(storeName, chosen);
   }
 
   // Links that leave a Skill must land on another Skill of this source (or a shared folder) that is in.
@@ -386,7 +528,7 @@ for (const source of manifest.sources) {
   }
   for (const [name, candidate] of members) {
     taken.set(name, source.id);
-    staged.push({ kind: "skill", source, name, directory: candidate.directory, to: join(ROOT, "skills", source.id, name), relPath: candidate.relPath, sha, date, copyright, licenseText, dropped: candidate.dropped ?? [] });
+    staged.push({ kind: "skill", source, name, directory: candidate.directory, to: join(ROOT, "skills", source.id, name), relPath: candidate.relPath, sha, date, copyright, licenseText, dropped: candidate.dropped ?? [], title: candidate.title });
     if (candidate.dropped?.length) {
       trimmed.push({ source, name, folders: candidate.dropped });
     }
@@ -424,6 +566,7 @@ for (const item of staged) {
     },
   });
   writeFileSync(join(item.to, "LICENSE.txt"), item.licenseText);
+  if (item.title) rewriteName(join(item.to, "SKILL.md"), item.name, item.title);
   writeFileSync(join(item.to, "SOURCE.md"), sourceNote(item));
 }
 

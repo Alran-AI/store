@@ -1,0 +1,243 @@
+---
+name: desktop-electron-expert
+description: "Electron 33+ desktop apps, IPC security, multi-window, and packaging / Aplikasi desktop Electron 33+, keamanan IPC, dan multi-window."
+author: "Roedy Rustam"
+version: "4.8.0"
+
+---
+
+# Desktop Electron Application Expert (Electron 33+ Security Standard)
+
+[English](#english) | [Bahasa Indonesia](#bahasa-indonesia)
+
+---
+
+<a name="english"></a>
+## English
+
+### Description
+Production guide for engineering secure, high-performance cross-platform desktop applications using Electron 33+. Covers strictly isolated IPC communication via `contextBridge`, mandatory Context Isolation and Sandbox execution modes, native OS shell integrations (system tray, desktop notifications, global shortcuts), automated delta updates with `electron-updater`, multi-platform packaging via Electron Forge or electron-builder, and zero-trust renderer security policies (CSP, `nodeIntegration: false`).
+
+### Trigger Conditions
+- Developing desktop software for macOS, Windows, and Linux using React, Vue, or Next.js static exports.
+- Hardening Electron application security to prevent Remote Code Execution (RCE) via IPC or XSS vulnerabilities.
+- Configuring automatic background software updates and code-signing pipelines (Apple Notarization & Windows EV Authenticode).
+- Implementing multi-window managers and native operating system menus.
+
+### Core Security & Process Isolation Architecture
+
+```
+┌────────────────────────────────────────────────────────┐
+│ 1. MAIN PROCESS (Node.js Environment)                  │
+│    Direct OS access, window lifecycle, file system     │
+└───────────────────────────┬────────────────────────────┘
+                            │  ipcMain.handle()
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ 2. PRELOAD SCRIPT (Secure Bridge)                      │
+│    `contextBridge.exposeInMainWorld('electronAPI', ...)`│
+└───────────────────────────┬────────────────────────────┘
+                            │  window.electronAPI
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ 3. RENDERER PROCESS (Chromium Sandbox)                 │
+│    Pure UI: React 19 / Vite. Zero direct Node.js access │
+└────────────────────────────────────────────────────────┘
+```
+
+### Production Security Configuration (`main.ts`)
+
+```typescript
+// src/main/index.ts
+import { app, BrowserWindow, ipcMain } from 'electron';
+import path from 'node:path';
+
+let mainWindow: BrowserWindow | null = null;
+
+function createSecureWindow() {
+  mainWindow = new BrowserWindow({
+    width: 1280,
+    height: 800,
+    webPreferences: {
+      preload: path.join(__dirname, '../preload/index.js'),
+      contextIsolation: true,       // MANDATORY: Isolates preload from page JS
+      nodeIntegration: false,        // MANDATORY: Prohibits Node.js in renderer
+      sandbox: true,                 // MANDATORY: Enables OS-level sandbox
+      webSecurity: true,             // MANDATORY: Enforces Same-Origin Policy
+      allowRunningInsecureContent: false,
+    },
+  });
+
+  // Strict Content Security Policy (CSP) header enforcement
+  mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
+    callback({
+      responseHeaders: {
+        ...details.responseHeaders,
+        'Content-Security-Policy': ["default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"],
+      },
+    });
+  });
+
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.loadURL('http://localhost:5173');
+  } else {
+    mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
+  }
+}
+
+app.whenReady().then(() => {
+  createSecureWindow();
+
+  // Type-Safe IPC Handlers
+  ipcMain.handle('app:get-version', () => app.getVersion());
+  ipcMain.handle('system:notify', (_event, title: string, body: string) => {
+    // Validate inputs strictly before triggering OS dialogs
+    return { status: 'delivered', title };
+  });
+});
+```
+
+### Type-Safe Preload Script (`preload.ts`)
+
+```typescript
+// src/preload/index.ts
+import { contextBridge, ipcRenderer } from 'electron';
+
+export interface DesktopBridge {
+  getAppVersion: () => Promise<string>;
+  sendNotification: (title: string, body: string) => Promise<{ status: string }>;
+}
+
+const desktopAPI: DesktopBridge = {
+  getAppVersion: () => ipcRenderer.invoke('app:get-version'),
+  sendNotification: (title, body) => ipcRenderer.invoke('system:notify', title, body),
+};
+
+contextBridge.exposeInMainWorld('desktopAPI', desktopAPI);
+```
+
+## Orchestration & Integration
+- **`design-system-architect`**: Desktop window chrome, custom titlebars, and native OS theming.
+- **`ui-ux-pro-max`**: Desktop ergonomics, keyboard accelerators, and system tray popover layouts.
+- **`visual-ui-auditor`**: Multimodal vision auditing of desktop application windows.
+- **`anti-slop`**: Anti-slop desktop UI craft, zero generic web-looking fake desktop windows.
+- **`tauri-expert`**: Provides architectural comparison (Electron's ecosystem matureness vs. Tauri's low memory footprint).
+- **`senior-frontend`**: Structures the React 19 UI running inside the sandboxed renderer window.
+- **`ci-cd-devops-architect`**: Configures GitHub Actions for macOS notarization and Windows code signing.
+- **`error-resilience-expert`**: Catches unhandled exceptions in the Main process and handles renderer crashes gracefully.
+- **Cross-Domain Synergy & Subagent Swarm Integration**: `mobile-expo-expert`, `browser-extension-mv3-pro`, `reverse-engineer-anything`, `zero-trust-secret-vault`, `computer-use-os-agent-expert`
+
+### Hard Guardrails (Declarative Invariants)
+1. **Mandatory Context Isolation & Sandbox Enforcement**:
+   - `webPreferences` MUST explicitly set `contextIsolation: true`, `nodeIntegration: false`, and `sandbox: true`. Disabling context isolation or enabling `nodeIntegration` in renderer processes is strictly prohibited to prevent RCE vulnerabilities.
+2. **Strict IPC Input Validation & Sender Verification**:
+   - All `ipcMain.handle` routines MUST validate event senders (`event.senderFrame` URL validation) and schema-validate incoming arguments using Zod. Unconstrained execution of raw input from renderers is strictly prohibited.
+3. **Safe External Navigation & Window Open Control**:
+   - Handlers for `will-navigate` and `setWindowOpenHandler` MUST be registered to intercept unauthorized navigation. External URLs MUST open exclusively via `shell.openExternal` after protocol allowlist validation (`https:`, `mailto:`), never inside the Electron window.
+4. **Code Signing & Hardened Runtime Attestation**:
+   - Production desktop application packages MUST enable hardened runtime (`hardenedRuntime: true`) and be cryptographically signed/notarized for macOS and Windows platforms.
+
+### Blue-Ocean Synergy & Anti-Commodity Protocol
+- **Mandatory Blue-Ocean Pairing**: Always compose `desktop-electron-expert` with `local-slm-edge-ai-expert`, `reactive-sync-engine-expert`, `passkeys-webauthn-identity-expert`, `anti-slop` so commodity boilerplate is elevated into verified, self-healing production architecture.
+- **Anti-Commodity Mandate**: Upgrade standard app scaffolds with offline-first OPFS/SQLite sync, WebAuthn Passkeys, on-device SLM inference readiness, and strict 60/120fps Zero-GC budgets.
+- **Pre-Disk Gate**: Run `vibes verify-gate` and `vibes skill auto-diff --json` to inject <350-token slices and eliminate placeholder slop.
+
+### Sovereign Execution, Token Efficiency & Invariants
+| Dimension | Sovereign Mandate & Deterministic Contract |
+| :--- | :--- |
+| **Frontier Model Cascade** | Medium / High (`Gemini 4 Neon`, `Gemini 4 Hydrogen`, `Claude Sonnet 5.5 High`, `Muse Wonder High`, `Gemini 4 Pro`, `Composer 2.5 Fast`) |
+| **Availability Fallback** | `Gemini 4 (Carbon/Hydrogen/Neon/Argon/Pro)` -> `Gemini 3.8 Flash`; `Claude Opus 5.5` -> `Claude Opus 4.6` (Zero unhandled missing-model errors) |
+| **KV-Cache & Token Protocol** | Pin static instructions & schemas at prompt prefix (`kv-cache-prefix-optimizer`); pass surgical `CONTEXT_MAP.md` slices (<250 tokens/call) during Swarm Fan-Out |
+| **SaaT CLI & MCP Dispatch** | CLI: `vibes skill exec desktop-electron-expert <audit\|eval\|verify\|generate\|blueprint>` / MCP: `vibes_skill_dispatch`, `vibes_ast_query`, `vibes_compile_cache`, `vibes_optimize_budget`, `vibes_verify_gate` |
+| **NFR & Anti-Slop Invariants** | Cold launch time < 1.2s, renderer memory footprint < 120MB baseline, 100% IPC validation coverage, zero RCE vulnerabilities; 100% complete zero-placeholder output verified via `node scripts/check-anti-slop.js --strict` |
+
+---
+
+
+---
+
+<a name="bahasa-indonesia"></a>
+## Bahasa Indonesia
+
+### Integrasi Orkestrasi
+Terhubung dan mengorkestrasi bersama `design-system-architect`, `ui-ux-pro-max`, `visual-ui-auditor`, `anti-slop`, `tauri-expert`, `senior-frontend`, `ci-cd-devops-architect`, dan `error-resilience-expert`.
+- **Sinergi Lintas Domain & Integrasi Swarm Subagent**: `mobile-expo-expert`, `browser-extension-mv3-pro`, `reverse-engineer-anything`, `zero-trust-secret-vault`, `computer-use-os-agent-expert`
+
+### Deskripsi
+Panduan produksi untuk membangun aplikasi desktop cross-platform yang aman dan efisien menggunakan Electron 33+. Mengutamakan keamanan IPC dengan Context Isolation, isolasi proses renderer berbasis sandbox, integrasi sistem operasi natif (system tray, menu bar, notifikasi desktop), pembaruan otomatis (*auto-updates*), dan packaging multi-OS (Windows .exe, macOS .dmg/.app, Linux .AppImage).
+
+### Kondisi Pemicu
+- Membangun aplikasi desktop menggunakan teknologi web (React, Vue, Vite, Tailwind CSS).
+- Memperketat keamanan Electron untuk mencegah kerentanan eksekusi kode jarak jauh (*Remote Code Execution* / RCE).
+- Menerapkan komunikasi antarmuka (Renderer) ke sistem file (Main) secara type-safe via `contextBridge`.
+- Menyiapkan alur pembaruan otomatis (*auto-updater*) tanpa mengganggu pengalaman pengguna.
+
+### Pola Konsumsi API di Komponen React Renderer
+
+```tsx
+// src/renderer/components/SystemInfoCard.tsx
+import { useEffect, useState } from 'react';
+
+declare global {
+  interface Window {
+    desktopAPI: {
+      getAppVersion: () => Promise<string>;
+      sendNotification: (title: string, body: string) => Promise<{ status: string }>;
+    };
+  }
+}
+
+export function SystemInfoCard() {
+  const [version, setVersion] = useState<string>('Memuat...');
+
+  useEffect(() => {
+    window.desktopAPI.getAppVersion().then(setVersion);
+  }, []);
+
+  const handleNotify = () => {
+    window.desktopAPI.sendNotification('Vibes Desktop', 'Pembaruan aplikasi siap dipasang.');
+  };
+
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 className="font-bold text-slate-800">Informasi Aplikasi Desktop</h3>
+      <p className="mt-1 text-sm text-slate-600">Versi Terpasang: <span className="font-semibold">{version}</span></p>
+      <button
+        onClick={handleNotify}
+        className="mt-4 rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+      >
+        Kirim Notifikasi Sistem
+      </button>
+    </div>
+  );
+}
+```
+
+### 3 Hukum Keamanan Mutlak Electron
+1. **Wajib Context Isolation**: `contextIsolation: true` wajib aktif agar skrip halaman web tidak dapat mengakses atau memodifikasi objek internal Node.js di preload script.
+2. **Matikan nodeIntegration di Renderer**: `nodeIntegration: false` mutlak ditegakkan. Renderer dilarang mengimpor modul `fs`, `child_process`, atau `crypto` secara langsung.
+3. **Sandbox Chromium Aktif**: Selalu nyalakan `sandbox: true` untuk membatasi akses proses renderer ke tingkat kernel sistem operasi.
+
+## Integrasi Orkestrasi
+- **`design-system-architect`**: Frame jendela desktop kustom, titlebar native, dan theming OS.
+- **`ui-ux-pro-max`**: Ergonomi desktop, pintasan keyboard, dan tata letak popover system tray.
+- **`visual-ui-auditor`**: Audit visual multimodal untuk jendela aplikasi desktop yang dirender.
+- **`anti-slop`**: Desain UI desktop anti-slop, mengeliminasi mockup browser palsu di window desktop.
+- **`tauri-expert`**: Menjadi acuan pembanding jika pengguna mempertimbangkan framework alternatif berbasis Rust.
+- **`senior-frontend`**: Menyediakan arsitektur komponen UI yang responsif di dalam window aplikasi.
+- **`ci-cd-devops-architect`**: Menangani penandatanganan sertifikat digital (*code signing*) pada pipeline rilis.
+- **`error-resilience-expert`**: Mencegah aplikasi tertutup tiba-tiba (*crash*) saat terjadi unhandled error di Main process.
+
+### Sinergi Blue-Ocean & Protokol Anti-Komoditas
+- **Pasangan Wajib Blue-Ocean**: Selalu komposisikan `desktop-electron-expert` bersama `local-slm-edge-ai-expert`, `reactive-sync-engine-expert`, `passkeys-webauthn-identity-expert`, `anti-slop` agar boilerplate standar naik kelas menjadi arsitektur produksi terverifikasi dan *self-healing*.
+- **Mandat Anti-Komoditas**: Tingkatkan scaffold aplikasi standar dengan sinkronisasi offline-first OPFS/SQLite, Passkeys WebAuthn, kesiapan inferensi SLM lokal, dan budget 60/120fps Zero-GC.
+- **Gerbang Pra-Disk**: Jalankan `vibes verify-gate` dan `vibes skill auto-diff --json` untuk menyuntikkan slice <350 token serta mencegah placeholder slop.
+
+### Matriks Eksekusi Berdaulat, Efisiensi Token & Invarian
+| Dimensi | Mandat Berdaulat & Kontrak Deterministik |
+| :--- | :--- |
+| **Kaskade Model Frontier** | Medium / High (`Gemini 4 Neon`, `Gemini 4 Hydrogen`, `Claude Sonnet 5.5 High`, `Muse Wonder High`, `Gemini 4 Pro`, `Composer 2.5 Fast`) |
+| **Invarian Fallback Ketersediaan** | `Gemini 4 (Carbon/Hydrogen/Neon/Argon/Pro)` -> `Gemini 3.8 Flash`; `Claude Opus 5.5` -> `Claude Opus 4.6` (Bebas gagal saat model belum tersedia/kuota penuh) |
+| **Protokol Hemat Token & KV-Cache** | Kunci instruksi & skema statis di prefix awal (`kv-cache-prefix-optimizer`); kirim potongan `CONTEXT_MAP.md` (<250 token/panggilan) saat Fan-Out |
+| **Eksekusi SaaT CLI & MCP** | CLI: `vibes skill exec desktop-electron-expert <audit\|eval\|verify\|generate\|blueprint>` / MCP: `vibes_skill_dispatch`, `vibes_ast_query`, `vibes_compile_cache`, `vibes_optimize_budget`, `vibes_verify_gate` |
+| **Invarian NFR & Anti-Slop** | Waktu peluncuran awal (cold launch) < 1.2 detik, jejak memori renderer < 120MB baseline, 100% cakupan validasi IPC, zero celah RCE; kode 100% tuntas tanpa placeholder diverifikasi melalui `node scripts/check-anti-slop.js --strict` |

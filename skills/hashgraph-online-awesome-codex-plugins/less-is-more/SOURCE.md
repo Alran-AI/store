@@ -1,0 +1,10 @@
+# Source
+
+Unmodified copy of `plugins/sno-ai/sno-station-skills/skills/less-is-more` from https://github.com/hashgraph-online/awesome-codex-plugins
+at commit e4c7b903fa76c0ce4b693a0e0cbfd5927e4af262 (2026-11-19), under the Apache-2.0 licence.
+
+Copyright 2026 internet-dot
+
+The licence text is in LICENSE.txt. Nothing in this folder was edited.
+
+The `scripts/` folder was left out: it holds code the store does not carry, and this Skill's own text does not point at it. Everything else is the upstream copy, word for word.

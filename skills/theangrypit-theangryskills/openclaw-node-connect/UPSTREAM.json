@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/openclaw/openclaw",
+  "commit": "aea75db8e4cf3397749cc51011dea696777de02d",
+  "path": "skills/node-connect",
+  "original_name": "node-connect",
+  "installed_name": "openclaw-node-connect",
+  "kind": "codex-adaptation",
+  "visibility": "public-promotion-approved",
+  "resources": {
+    "LICENSE": "9efd316ecf1c4c60f6fd5d26433142fff2b6794d7d328e9bc6179b29bf9c82a4",
+    "SKILL.md": "8f8e6843fa7dd45e13c6806b1c39847d26fc82a19b725933a25bdad26e33951c",
+    "references/upstream-link-map.json": "c4ac30f24f2b4723b1f948cfa1d96829dbe4b0360168cc38571de3671ff3aef6",
+    "agents/openai.yaml": "c65e6d03bd2f31725762a331b1328fe6190717aecb59c5c0ece6cb1019206205",
+    "references/upstream/SKILL.source.md": "40f47cc3c6922049acb5b9a6871572a1f0d4c5b01eb7abfa9f36d0b933fe91ba"
+  },
+  "automatic_refresh": "not enabled; reconcile upstream changes against the adaptations before update",
+  "source_backup": "sources/openclaw-core",
+  "adapted_resource_entrypoint": false,
+  "distribution_repository": "https://github.com/TheAngryPit/TheAngrySkills",
+  "reference_link_adaptation": "all nested Markdown relative links outside package point to pinned upstream source"
+}

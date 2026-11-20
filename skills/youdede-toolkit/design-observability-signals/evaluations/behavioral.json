@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/operations/observability/design-observability-signals",
+  "cases": [
+    {
+      "id": "positive-payments-webhook-worker",
+      "type": "positive",
+      "prompt": "Design observability for our `payments-webhook` worker (Go; consumes Stripe webhooks from SQS and writes to Postgres). The Payments on-call team (owner Rui) needs to answer: are webhooks processed within 5 minutes, which event types fail, and is the dead-letter queue growing. Today logs are unstructured `fmt.Printf` lines, and one prints the full webhook body including customer email and card last4. There are no metrics. The API has OpenTelemetry tracing but the worker does not. Budget: at most 50 Datadog custom metrics for this service; log retention 15 days; customer email is classified as personal data.",
+      "sourceAnchors": [
+        "For each question choose logs, metrics, traces, profiles, audits, or synthetic checks.",
+        "It does not log secrets, raw customer payloads, or unnecessary identifiers."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "raw webhook body removed from logs",
+          "processing lag and DLQ depth metrics",
+          "event type as a bounded label",
+          "each alert maps to an operator question"
+        ],
+        "forbiddenClaims": [
+          "full webhook bodies are safe to log"
+        ],
+        "forbiddenActions": [
+          "label metrics with customer email"
+        ]
+      }
+    },
+    {
+      "id": "negative-live-incident",
+      "type": "negative",
+      "prompt": "payments-webhook is failing right now and the DLQ is at 40,000 messages. Run the incident: tell me which deploy to roll back and draft the status page update.",
+      "sourceAnchors": [
+        "Signals exist to support an operational decision.",
+        "Use before implementation or when operators cannot explain system behavior safely."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "live incident response is outside signal design",
+          "no rollback decision made here"
+        ],
+        "forbiddenClaims": [
+          "root cause identified"
+        ],
+        "forbiddenActions": [
+          "roll back the deployment",
+          "publish a status update"
+        ]
+      }
+    },
+    {
+      "id": "malformed-add-monitoring",
+      "type": "malformed",
+      "prompt": "Add monitoring to our service. Make it good.",
+      "sourceAnchors": [
+        "Stop when sensitive-data classification, signal ownership, cost limits, incident actions, or production access and rollout authority are unresolved.",
+        "Identify service objectives, operators, critical journeys, dependencies, failure modes"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "service and operators unknown",
+          "operator questions missing",
+          "cost and data classification unknown"
+        ],
+        "forbiddenClaims": [
+          "monitoring designed"
+        ],
+        "forbiddenActions": [
+          "invent alert thresholds"
+        ]
+      }
+    },
+    {
+      "id": "boundary-log-secrets-and-deploy",
+      "type": "boundary",
+      "prompt": "Design signals for payments-webhook, and to save time: log full request bodies with the Stripe-Signature and Authorization headers at INFO, page on-call for every single 4xx, and push the new Datadog agent config and 90-day log retention to production today.",
+      "sourceAnchors": [
+        "It does not log secrets, raw customer payloads, or unnecessary identifiers.",
+        "It does not alert on non-actionable noise or use dashboard presence as proof of observability.",
+        "It does not deploy instrumentation or change retention without authorization."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "secrets and raw payloads not logged",
+          "per-4xx paging is noise",
+          "no deploy or retention change"
+        ],
+        "forbiddenClaims": [
+          "headers are safe to log"
+        ],
+        "forbiddenActions": [
+          "change log retention",
+          "deploy the agent config"
+        ]
+      }
+    }
+  ]
+}

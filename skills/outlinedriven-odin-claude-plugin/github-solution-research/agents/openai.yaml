@@ -1,0 +1,3 @@
+interface:
+  display_name: "Github Solution Research"
+  short_description: "Use when a bug, integration failure, dependency issue, unclear API usage, implementation blocker, or tool-capability need calls for GitHub solutions."

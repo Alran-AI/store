@@ -1,0 +1,367 @@
+---
+name: docker-container-expert
+description: "Production Docker containerization, BuildKit, distroless, and Compose / Kontainerisasi Docker produksi, BuildKit, distroless, dan Compose."
+author: "Roedy Rustam"
+version: "4.8.0"
+---
+
+# Docker Container Expert (Production Standard 2026)
+
+[English](#english) | [Bahasa Indonesia](#bahasa-indonesia)
+
+---
+
+<a name="english"></a>
+## English
+
+### Orchestration & Integration
+- **Upstream & Lifecycle**: `zero-to-prod-orchestrator` (Phase 7 containerization), `brainstorming`, `session-memory-manager`.
+- **CI/CD & Cloud Runtime**: `ci-cd-devops-architect` (K8s & deployment pipelines), `github-actions-expert` (BuildKit actions & registry push), `cloud-hosting-expert` (container runtime hosts).
+- **Backend & Database Runtimes**: `js-backend-expert` (Node/Bun/Deno), `python-programming-expert`, `go-programming-expert`, `rust-programming-expert`, `database-orm-expert` (Postgres/Redis services).
+- **Security & Hardening**: `production-ready-hardener` (distroless & nonroot audit), `zero-trust-secret-vault` (build secret mounts).
+- **Cross-Domain Synergy & Subagent Swarm Integration**: `kubernetes-gitops-platform-expert`, `sbom-supply-chain-security-expert`
+
+### Description
+Enterprise guide for building ultra-lean, hardened, and reproducible container images and orchestrating local and production workloads with **Docker Engine 27+** and **Docker Compose v2**. Covers BuildKit cache mounts (`--mount=type=cache`), secret mounts (`--mount=type=secret`), multi-stage builds targeting Google Distroless or Alpine Linux, non-root execution (UID 65532), dropping Linux kernel capabilities (`cap_drop: ALL`), health checks (`HEALTHCHECK`), internal isolated bridge networks, compose dependency sequencing (`condition: service_healthy`), and multi-architecture builds via `docker buildx`.
+
+### Trigger Conditions
+- Writing, refactoring, or optimizing `Dockerfile` manifests for Node.js, Python, Go, Rust, or Bun.
+- Structuring multi-container local and staging topologies with `compose.yaml`.
+- Accelerating build speeds using Docker BuildKit cache mounts and layer ordering.
+- Minimizing image attack surface: eliminating shell binaries, package managers, and root permissions.
+- Hardening container security: dropping Linux capabilities, setting read-only filesystems, and enforcing memory/CPU limits.
+- Configuring robust health checks and zero-downtime container lifecycle management.
+
+### What's New in 2026 (Modern Containerization Standards)
+
+#### 1. BuildKit as the De Facto Engine
+- Always specify `# syntax=docker/dockerfile:1.7` at the top of the Dockerfile.
+- Use `--mount=type=cache` for package manager caches (`/root/.local/share/pnpm/store`, `/root/.cache/pip`, `/var/cache/apt`).
+- Use `--mount=type=secret,id=npmrc` to inject credentials without leaving traces in image layers.
+
+#### 2. Rootless & Distroless Execution
+- Never run containers as `root` (UID 0). Use Google Distroless `nonroot` (UID 65532) or explicitly created system users with no shell (`/sbin/nologin`).
+- Discard build tools (`gcc`, `npm`, `cargo`) completely in intermediate build stages.
+
+#### 3. Compose Specification Standard
+- Standard filename is `compose.yaml` (preferred over deprecated `docker-compose.yml`).
+- Explicit health checks with dependency conditions (`depends_on: service: condition: service_healthy`).
+- Strict resource reservations and limits (CPU and memory envelopes).
+
+---
+
+### Core Architecture Patterns
+
+#### Pattern 1: Production Multi-Stage Distroless Node.js Dockerfile (`Dockerfile`)
+
+```dockerfile
+# syntax=docker/dockerfile:1.7
+# Stage 1: Dependency resolution and compilation
+FROM node:22-alpine AS builder
+WORKDIR /app
+
+# Enable pnpm deterministically via corepack
+RUN corepack enable && corepack prepare pnpm@9.15.4 --activate
+
+# Layer caching: copy package manifests first
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies using persistent BuildKit cache mount
+RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+    pnpm install --frozen-lockfile
+
+# Copy application source code
+COPY . .
+
+# Build production bundle and prune development dependencies
+RUN pnpm run build && pnpm prune --prod
+
+# Stage 2: Minimal hardened production runner (Zero Shell, Zero Package Manager)
+FROM gcr.io/distroless/nodejs22-debian12:nonroot AS runner
+WORKDIR /app
+
+# Run strictly as unprivileged user (UID 65532)
+USER nonroot
+
+# Copy build artifacts and production dependencies with nonroot ownership
+COPY --from=builder --chown=nonroot:nonroot /app/node_modules ./node_modules
+COPY --from=builder --chown=nonroot:nonroot /app/dist ./dist
+COPY --from=builder --chown=nonroot:nonroot /app/package.json ./package.json
+
+ENV NODE_ENV=production
+ENV PORT=3000
+
+EXPOSE 3000
+
+# Execute Node.js directly (no shell wrapper)
+CMD ["dist/index.js"]
+```
+
+---
+
+#### Pattern 2: Ultra-Minimal Static Go/Rust Binary Container (`Dockerfile.go`)
+
+```dockerfile
+# syntax=docker/dockerfile:1.7
+# Stage 1: Compile static binary
+FROM golang:1.24-alpine AS builder
+WORKDIR /src
+
+RUN apk add --no-cache ca-certificates tzdata
+
+COPY go.mod go.sum ./
+RUN --mount=type=cache,target=/go/pkg/mod \
+    go mod download
+
+COPY . .
+
+# Compile static binary without CGO dependency
+RUN --mount=type=cache,target=/go/pkg/mod \
+    --mount=type=cache,target=/root/.cache/go-build \
+    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -ldflags="-w -s" -o /bin/server ./cmd/server
+
+# Stage 2: Scratch container (Zero attack surface, < 15MB total size)
+FROM scratch
+WORKDIR /app
+
+# Import SSL root certificates and timezone data from builder
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
+COPY --from=builder /bin/server /app/server
+
+# Run as non-root user ID
+USER 65532:65532
+
+EXPOSE 8080
+
+ENTRYPOINT ["/app/server"]
+```
+
+---
+
+#### Pattern 3: Production-Grade Multi-Service `compose.yaml`
+
+```yaml
+services:
+  database:
+    image: postgres:17-alpine
+    container_name: production_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: app_production
+      POSTGRES_USER: app_admin
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - internal_backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app_admin -d app_production"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2048M
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  cache:
+    image: redis:7-alpine
+    container_name: production_cache
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "cache_secure_token"]
+    volumes:
+      - redisdata:/data
+    networks:
+      - internal_backend
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "cache_secure_token", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: production_api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://app_admin:secret@database:5432/app_production
+      REDIS_URL: redis://:cache_secure_token@cache:6379
+    ports:
+      - "3000:3000"
+    networks:
+      - internal_backend
+      - public_ingress
+    depends_on:
+      database:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 1024M
+
+networks:
+  internal_backend:
+    internal: true
+  public_ingress:
+    driver: bridge
+
+volumes:
+  pgdata:
+  redisdata:
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt
+```
+
+---
+
+#### Pattern 4: BuildKit Secret Mount Private Registry Install & Strict `.dockerignore`
+Never pass `NPM_TOKEN` or `GITHUB_TOKEN` via Docker `ARG` or `ENV` (which bakes credentials into `docker history` layers). Mount secrets ephemerally via `--mount=type=secret`:
+
+```dockerfile
+# syntax=docker/dockerfile:1.7
+FROM node:22-alpine AS secure-builder
+WORKDIR /app
+
+COPY package.json pnpm-lock.yaml ./
+
+# Ephemeral secret mount: never persisted in image layer history
+RUN --mount=type=secret,id=npmrc,target=/root/.npmrc \
+    --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+    corepack enable && pnpm install --frozen-lockfile
+```
+
+---
+
+#### Pattern 5: PID 1 `SIGTERM` Graceful Drain Handler for Containerized Node.js/Bun Services (TypeScript)
+When Docker or Kubernetes stops a container, it sends `SIGTERM` followed by `SIGKILL` after the grace period (`stop_grace_period: 30s`). Always trap `SIGTERM` to stop accepting new connections, drain in-flight HTTP requests, and close DB pools cleanly:
+
+```typescript
+// src/runtime/container-graceful-shutdown.ts
+import type { Server } from 'node:http';
+
+export interface GracefulShutdownDeps {
+  readonly server: Server;
+  readonly closeDatabasePool: () => Promise<void>;
+  readonly drainTimeoutMs?: number;
+}
+
+export function registerContainerSignalHandlers(deps: GracefulShutdownDeps): void {
+  const timeoutMs = deps.drainTimeoutMs ?? 25_000;
+  let isShuttingDown = false;
+
+  const handleSignal = async (signal: NodeJS.Signals) => {
+    if (isShuttingDown) return;
+    isShuttingDown = true;
+
+    const forceExitTimer = setTimeout(() => {
+      process.exit(1);
+    }, timeoutMs);
+    forceExitTimer.unref();
+
+    try {
+      await new Promise<void>((resolve, reject) => {
+        deps.server.close((err) => (err ? reject(err) : resolve()));
+      });
+      await deps.closeDatabasePool();
+      process.exit(0);
+    } catch {
+      process.exit(1);
+    }
+  };
+
+  process.once('SIGTERM', () => void handleSignal('SIGTERM'));
+  process.once('SIGINT', () => void handleSignal('SIGINT'));
+}
+```
+
+### Hard Guardrails (Declarative Invariants)
+- **Zero Root Containers**: Every production `Dockerfile` must declare a non-root `USER` (`nonroot`, `node`, or `65532:65532`) before `CMD`/`ENTRYPOINT`.
+- **No Secrets in `ARG` or `ENV`**: Never pass private registry tokens or API keys via `ARG` or `ENV` in a `Dockerfile`; always use BuildKit `--mount=type=secret`.
+- **Mandatory Multi-Stage Separation**: Compilers, TypeScript sources, and devDependencies must remain in builder stages; final runtime stages must use `distroless`, `scratch`, or minimal `alpine` images.
+- **Exec-Form `CMD` / `ENTRYPOINT` Only**: Always use JSON array exec form (`CMD ["dist/index.js"]`), never shell form (`CMD node dist/index.js`), so the process receives `SIGTERM` directly from PID 1.
+- **Health-Gated Compose Dependencies**: Multi-container `compose.yaml` files must gate application startup on `condition: service_healthy` and isolate databases inside `internal: true` networks.
+
+### Blue-Ocean Synergy & Anti-Commodity Protocol
+- **Mandatory Blue-Ocean Pairing**: Always compose `docker-container-expert` with `sbom-supply-chain-security-expert`, `self-healing-cloud-orchestrator`, `zero-trust-secret-vault`, `adaptive-model-cascade` so commodity boilerplate is elevated into verified, self-healing production architecture.
+- **Anti-Commodity Mandate**: Go beyond basic Docker/CI YAML: mandate rootless distroless builds, CycloneDX SBOM attestation, zero-trust secret rotation, and self-healing telemetry loops.
+- **Pre-Disk Gate**: Run `vibes verify-gate` and `vibes skill auto-diff --json` to inject <350-token slices and eliminate placeholder slop.
+
+### Sovereign Execution, Token Efficiency & Invariants
+| Dimension | Sovereign Mandate & Deterministic Contract |
+| :--- | :--- |
+| **Frontier Model Cascade** | High Fast / Medium / High (`Gemini 4 Carbon`, `Gemini 4 Neon`, `Gemini 4 Hydrogen`, `Gemini 4 Argon`, `Claude Sonnet 5.5 High`, `Grok 4.7 High Fast`) |
+| **Availability Fallback** | `Gemini 4 (Carbon/Hydrogen/Neon/Argon/Pro)` -> `Gemini 3.8 Flash`; `Claude Opus 5.5` -> `Claude Opus 4.6` (Zero unhandled missing-model errors) |
+| **KV-Cache & Token Protocol** | Pin static instructions & schemas at prompt prefix (`kv-cache-prefix-optimizer`); pass surgical `CONTEXT_MAP.md` slices (<250 tokens/call) during Swarm Fan-Out |
+| **SaaT CLI & MCP Dispatch** | CLI: `vibes skill exec docker-container-expert <audit\|eval\|verify\|generate\|blueprint>` / MCP: `vibes_skill_dispatch`, `vibes_ast_query`, `vibes_compile_cache`, `vibes_optimize_budget`, `vibes_verify_gate` |
+| **NFR & Anti-Slop Invariants** | P99 API Gateway Latency < 85ms, OpenAPI 3.1 / TypeSpec strict schema parity, RFC 9457 Problem Details error contracts, Idempotency-Key enforcement; 100% complete zero-placeholder output verified via `node scripts/check-anti-slop.js --strict` |
+
+---
+
+
+---
+
+<a name="bahasa-indonesia"></a>
+## Bahasa Indonesia
+
+### Integrasi Orkestrasi
+- **Hulu & Siklus Hidup**: `zero-to-prod-orchestrator` (Kontainerisasi Fase 7), `brainstorming`, `session-memory-manager`.
+- **CI/CD & Runtime Cloud**: `ci-cd-devops-architect` (pipeline K8s & deployment), `github-actions-expert` (aksi BuildKit & push registry), `cloud-hosting-expert` (host runtime kontainer).
+- **Runtime Backend & Database**: `js-backend-expert` (Node/Bun/Deno), `python-programming-expert`, `go-programming-expert`, `rust-programming-expert`, `database-orm-expert` (layanan Postgres/Redis).
+- **Keamanan & Pengerasan**: `production-ready-hardener` (audit distroless & nonroot), `zero-trust-secret-vault` (secret mount saat build).
+- **Sinergi Lintas Domain & Integrasi Swarm Subagent**: `kubernetes-gitops-platform-expert`, `sbom-supply-chain-security-expert`
+
+### Deskripsi
+Panduan standar industri enterprise untuk membangun image kontainer yang ramping, aman, dan dapat direproduksi serta mengorkestrasi lingkungan lokal dan produksi menggunakan **Docker Engine 27+** dan **Docker Compose v2**. Meliputi cache mount BuildKit (`--mount=type=cache`), secret mount (`--mount=type=secret`), multi-stage build berbasis Google Distroless atau Alpine Linux, eksekusi non-root (UID 65532), pelepasan kapabilitas Linux kernel (`cap_drop: ALL`), health check (`HEALTHCHECK`), isolasi jaringan internal (isolated bridge network), sequencing dependensi compose (`condition: service_healthy`), dan build multi-arsitektur menggunakan `docker buildx`.
+
+### Kondisi Pemicu (Trigger Conditions)
+- Menulis, merefaktor, atau mengoptimalkan `Dockerfile` untuk Node.js, Python, Go, Rust, atau Bun.
+- Menyusun topologi multi-kontainer untuk lingkungan lokal atau staging menggunakan `compose.yaml`.
+- Mempercepat build image dengan memanfaatkan BuildKit cache mount dan pengurutan layer yang optimal.
+- Memperkecil permukaan serangan (attack surface) image: menghapus shell bash/sh, package manager, dan akses root.
+- Memperketat keamanan kontainer: mencabut kemampuan Linux berlebih, filesystem read-only, dan limitasi resource CPU/RAM.
+- Menyiapkan health check yang andal untuk manajemen siklus hidup kontainer tanpa downtime.
+
+### Aturan Emas Kontainerisasi Modern 2026
+
+1. **Dilarang Menjalankan Kontainer Sebagai Root**: Selalu gunakan user tanpa hak istimewa seperti `nonroot` (UID 65532 pada Google Distroless) untuk mencegah potensi container breakout ke host system.
+2. **Multi-Stage Build Bersih**: Pisahkan lingkungan kompilasi/build (yang memerlukan compiler dan devDependencies) dari lingkungan runtime produksi. Image akhir hanya berisi artefak biner murni atau bundle yang siap dieksekusi.
+3. **Pemanfaatan Cache Mount BuildKit**: Gunakan sintaks `# syntax=docker/dockerfile:1.7` dan opsi `--mount=type=cache` agar unduhan dependensi paket tidak diulang setiap kali ada perubahan kode sumber.
+4. **Healthcheck & Urutan Dependensi**: Selalu definisikan mekanisme pemeriksaan kesehatan kontainer dan gunakan `depends_on: [service]: condition: service_healthy` pada `compose.yaml` untuk mencegah race condition saat database belum siap menerima koneksi.
+5. **Isolasi Jaringan Internal**: Letakkan database dan cache pada jaringan internal dengan flag `internal: true` sehingga tidak dapat diakses secara langsung dari luar jaringan kontainer.
+
+### Sinergi Blue-Ocean & Protokol Anti-Komoditas
+- **Pasangan Wajib Blue-Ocean**: Selalu komposisikan `docker-container-expert` bersama `sbom-supply-chain-security-expert`, `self-healing-cloud-orchestrator`, `zero-trust-secret-vault`, `adaptive-model-cascade` agar boilerplate standar naik kelas menjadi arsitektur produksi terverifikasi dan *self-healing*.
+- **Mandat Anti-Komoditas**: Lampaui YAML Docker/CI standar: wajibkan build distroless non-root, atestasi CycloneDX SBOM, rotasi secret zero-trust, dan loop telemetri self-healing.
+- **Gerbang Pra-Disk**: Jalankan `vibes verify-gate` dan `vibes skill auto-diff --json` untuk menyuntikkan slice <350 token serta mencegah placeholder slop.
+
+### Matriks Eksekusi Berdaulat, Efisiensi Token & Invarian
+| Dimensi | Mandat Berdaulat & Kontrak Deterministik |
+| :--- | :--- |
+| **Kaskade Model Frontier** | High Fast / Medium / High (`Gemini 4 Carbon`, `Gemini 4 Neon`, `Gemini 4 Hydrogen`, `Gemini 4 Argon`, `Claude Sonnet 5.5 High`, `Grok 4.7 High Fast`) |
+| **Invarian Fallback Ketersediaan** | `Gemini 4 (Carbon/Hydrogen/Neon/Argon/Pro)` -> `Gemini 3.8 Flash`; `Claude Opus 5.5` -> `Claude Opus 4.6` (Bebas gagal saat model belum tersedia/kuota penuh) |
+| **Protokol Hemat Token & KV-Cache** | Kunci instruksi & skema statis di prefix awal (`kv-cache-prefix-optimizer`); kirim potongan `CONTEXT_MAP.md` (<250 token/panggilan) saat Fan-Out |
+| **Eksekusi SaaT CLI & MCP** | CLI: `vibes skill exec docker-container-expert <audit\|eval\|verify\|generate\|blueprint>` / MCP: `vibes_skill_dispatch`, `vibes_ast_query`, `vibes_compile_cache`, `vibes_optimize_budget`, `vibes_verify_gate` |
+| **Invarian NFR & Anti-Slop** | Latensi P99 API < 85ms, paritas skema ketat OpenAPI 3.1 / TypeSpec, kontrak error RFC 9457 Problem Details, penegakan Idempotency-Key; kode 100% tuntas tanpa placeholder diverifikasi melalui `node scripts/check-anti-slop.js --strict` |

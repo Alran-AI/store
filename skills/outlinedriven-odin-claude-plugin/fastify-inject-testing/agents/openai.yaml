@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fastify Inject Testing"
+  short_description: "Use when asked to test Fastify applications without network sockets."

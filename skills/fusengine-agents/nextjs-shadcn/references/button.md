@@ -1,0 +1,487 @@
+---
+name: button
+description: Complete Button component with all variants, sizes, and patterns
+when-to-use: Actions, form submission, navigation, interactive triggers
+keywords: variant, size, asChild, Link, loading-state, icon-button
+priority: high
+requires: installation.md, configuration.md
+related: input.md, card.md
+---
+
+# Button Component
+
+> **Base:** examples use **Base UI** (shadcn default since 2026-07); only link composition differs — Radix delta in "Radix variant" below; React Aria: `onPress`/`isDisabled`, links via the exported `LinkButton`. Sources: https://ui.shadcn.com/r/styles/base-nova/button.json, https://ui.shadcn.com/r/styles/radix-nova/button.json
+
+Sizes: `default`, `xs`, `sm`, `lg`, `icon`, `icon-xs`, `icon-sm`, `icon-lg`; put
+`data-icon="inline-start" | "inline-end"` on icons/spinners. Pointer cursor is opt-in
+(`init --pointer`).
+
+## Installation
+
+```bash
+bunx shadcn@latest add button
+```
+
+Creates: `@/modules/cores/shadcn/components/ui/button.tsx`
+
+## Basic Usage
+
+```typescript
+import { Button } from '@/modules/cores/shadcn/components/ui/button'
+
+/** Default button. */
+export function BasicButton() {
+  return <Button>Click me</Button>
+}
+```
+
+## Variants
+
+### Default (Primary)
+
+```typescript
+<Button>Default button</Button>
+```
+
+Styling: Solid background, white text, rounded corners
+
+### Secondary
+
+```typescript
+<Button variant="secondary">Secondary button</Button>
+```
+
+Styling: Light gray background, dark text
+
+### Destructive
+
+```typescript
+<Button variant="destructive">Delete item</Button>
+```
+
+Styling: Red background, white text (danger action)
+
+### Outline
+
+```typescript
+<Button variant="outline">Outline button</Button>
+```
+
+Styling: Border only, transparent background
+
+### Ghost
+
+```typescript
+<Button variant="ghost">Ghost button</Button>
+```
+
+Styling: No border or background, hover effect only
+
+### Link
+
+```typescript
+<Button variant="link">Link button</Button>
+```
+
+Styling: Underlined text, no background (use for inline links)
+
+## Sizes
+
+### Small
+
+```typescript
+<Button size="sm">Small button</Button>
+```
+
+### Default
+
+```typescript
+<Button size="default">Default button</Button>
+```
+
+(Omit `size` prop for default)
+
+### Large
+
+```typescript
+<Button size="lg">Large button</Button>
+```
+
+### Icon
+
+```typescript
+import { Plus } from '@/modules/cores/shadcn/components/icons'
+
+<Button size="icon">
+  <Plus className="w-4 h-4" />
+</Button>
+```
+
+Square button for icons only
+
+## Common Combinations
+
+```typescript
+// Primary action
+<Button>Save changes</Button>
+
+// Secondary action
+<Button variant="secondary">Cancel</Button>
+
+// Danger action
+<Button variant="destructive">Delete</Button>
+
+// Tertiary action
+<Button variant="ghost">More options</Button>
+
+// Link-like button
+<Button variant="link">Learn more</Button>
+
+// Icon button
+<Button size="icon" variant="ghost">
+  <Settings className="w-4 h-4" />
+</Button>
+
+// Small outline
+<Button size="sm" variant="outline">Copy</Button>
+```
+
+## Advanced Patterns
+
+### Link Styled as a Button (`buttonVariants`)
+
+Base UI `Button` has no `asChild`. For navigation, style `next/link` itself with `buttonVariants`
+(works in Server Components — no client boundary needed):
+
+```typescript
+import Link from 'next/link'
+import { buttonVariants } from '@/modules/cores/shadcn/components/ui/button'
+
+/** `next/link` styled with `buttonVariants`. */
+export function NavButton() {
+  return (
+    <Link href="/dashboard" className={buttonVariants()}>
+      Go to dashboard
+    </Link>
+  )
+}
+```
+
+**What it does**: renders a real `<a>` (link semantics) with button styling
+
+**Do not** use `<Button render={<a />} nativeButton={false} />` for links — Base UI `Button`
+always applies `role="button"`, which overrides the link role.
+
+```typescript
+// External link with icon
+<a
+  href="https://example.com"
+  className={buttonVariants({ variant: 'outline' })}
+>
+  Open external site
+  <ExternalLink data-icon="inline-end" />
+</a>
+```
+
+### Loading State Pattern
+
+```typescript
+'use client'
+
+import { useState } from 'react'
+import { Button } from '@/modules/cores/shadcn/components/ui/button'
+import { Loader } from '@/modules/cores/shadcn/components/icons'
+
+/** Disables itself and shows a spinner while submitting. */
+export function LoadingButton() {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleClick = async () => {
+    setIsLoading(true)
+    try {
+      // Your async action
+      await fetch('/api/submit', { method: 'POST' })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <Button onClick={handleClick} disabled={isLoading}>
+      {isLoading && (
+        <Loader className="w-4 h-4 mr-2 animate-spin" />
+      )}
+      {isLoading ? 'Submitting...' : 'Submit'}
+    </Button>
+  )
+}
+```
+
+**Pattern breakdown**:
+1. Track loading state with `useState`
+2. Disable button while loading
+3. Show spinner icon (animated)
+4. Change text to show status
+
+### Button Group Pattern
+
+```typescript
+/** Secondary + primary action pair. */
+export function ButtonGroup() {
+  return (
+    <div className="flex gap-2">
+      <Button variant="outline">Cancel</Button>
+      <Button>Save</Button>
+    </div>
+  )
+}
+```
+
+**CSS**:
+- `flex gap-2` for spacing
+- Use variant contrast (outline + solid)
+
+### Button with Icon and Text
+
+```typescript
+import { Plus } from '@/modules/cores/shadcn/components/icons'
+
+/** Button with a leading icon. */
+export function CreateButton() {
+  return (
+    <Button>
+      <Plus className="w-4 h-4 mr-2" />
+      Create new item
+    </Button>
+  )
+}
+```
+
+### Conditional Rendering
+
+```typescript
+/** Button whose variant follows the editing state. */
+export function ContextualButton({ isEditing }: { isEditing: boolean }) {
+  return (
+    <Button
+      variant={isEditing ? 'destructive' : 'default'}
+      onClick={() => {
+        // handle toggle
+      }}
+    >
+      {isEditing ? 'Cancel edit' : 'Edit'}
+    </Button>
+  )
+}
+```
+
+### Full Width Button
+
+```typescript
+<Button className="w-full">Full width button</Button>
+```
+
+Add `w-full` class for 100% width
+
+### Button in Form Context
+
+```typescript
+import { Button } from '@/modules/cores/shadcn/components/ui/button'
+
+/** Form with a full-width submit button. */
+export function SignUpForm() {
+  return (
+    <form>
+      {/* form fields */}
+      <Button type="submit" className="w-full">
+        Sign up
+      </Button>
+      <Button type="reset" variant="outline" className="w-full">
+        Clear
+      </Button>
+    </form>
+  )
+}
+```
+
+**Important**: Use `type="submit"` for form submission
+
+## Accessibility
+
+### ARIA Labels
+
+For icon-only buttons, always add `aria-label`:
+
+```typescript
+<Button size="icon" aria-label="Delete item">
+  <Trash2 className="w-4 h-4" />
+</Button>
+```
+
+### Disabled State
+
+```typescript
+<Button disabled>Disabled button</Button>
+```
+
+Automatically:
+- Shows gray styling
+- Prevents click handlers
+- Adds `aria-disabled="true"`
+
+### Focus Management
+
+Buttons automatically handle focus for keyboard navigation.
+
+Test with Tab key: Button should show focus outline.
+
+## Styling & Customization
+
+### Tailwind Classes
+
+Combine Button variants with Tailwind:
+
+```typescript
+// Larger button with padding
+<Button className="px-6 py-3 text-lg">Large custom</Button>
+
+// Full width with margin
+<Button className="w-full mb-4">Spaced button</Button>
+
+// Custom color (override variant)
+<Button className="bg-purple-600 hover:bg-purple-700">
+  Custom color
+</Button>
+```
+
+### Component Props
+
+```typescript
+// Base UI: ButtonPrimitive.Props (@base-ui/react/button) + variants
+type ButtonProps = ButtonPrimitive.Props & {
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'
+  size?: 'default' | 'xs' | 'sm' | 'lg' | 'icon' | 'icon-xs' | 'icon-sm' | 'icon-lg'
+}
+```
+
+All standard HTML button attributes work:
+- `onClick`
+- `disabled`
+- `type="submit" | "button" | "reset"`
+- `className`
+- `aria-*`
+
+## Examples by Use Case
+
+### Primary Action (Save)
+
+```typescript
+<Button>Save changes</Button>
+```
+
+### Secondary Action (Cancel)
+
+```typescript
+<Button variant="secondary">Cancel</Button>
+```
+
+### Dangerous Action (Delete)
+
+```typescript
+<Button variant="destructive" onClick={handleDelete}>
+  Delete account
+</Button>
+```
+
+### Navigation Link
+
+```typescript
+<Link href="/profile" className={buttonVariants()}>
+  View profile
+</Link>
+```
+
+### Form Submission with Loading
+
+```typescript
+<Button
+  type="submit"
+  disabled={isLoading}
+  onClick={handleSubmit}
+>
+  {isLoading ? 'Saving...' : 'Save'}
+</Button>
+```
+
+### Toggle Button
+
+```typescript
+<Button
+  variant={isActive ? 'default' : 'outline'}
+  onClick={() => setIsActive(!isActive)}
+>
+  {isActive ? 'Active' : 'Inactive'}
+</Button>
+```
+
+### Icon + Text Action
+
+```typescript
+<Button>
+  <Download className="w-4 h-4 mr-2" />
+  Download report
+</Button>
+```
+
+## Type Safety
+
+Full TypeScript support:
+
+```typescript
+import type { ButtonHTMLAttributes } from 'react'
+import { Button } from '@/modules/cores/shadcn/components/ui/button'
+
+interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  loading?: boolean
+  icon?: React.ReactNode
+}
+
+/** Button wrapper adding `loading` and `icon` props. */
+export function CustomButton({
+  loading,
+  icon,
+  children,
+  ...props
+}: CustomButtonProps) {
+  return (
+    <Button {...props} disabled={loading}>
+      {loading && <Loader className="w-4 h-4 mr-2 animate-spin" />}
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
+    </Button>
+  )
+}
+```
+
+## Radix variant
+
+`style` `radix-*`: `Button` is a native `<button>` with `asChild` (Radix `Slot`), so links can
+compose directly (`buttonVariants` works too):
+
+```typescript
+<Button asChild>
+  <Link href="/dashboard">Go to dashboard</Link>
+</Button>
+```
+
+## Related Components
+
+- [Input](input.md) - Text input fields
+- [Card](card.md) - Container layout
+- [Form](https://ui.shadcn.com/docs/components/form) - Form management
+
+## Related Patterns
+
+- [Dialog](https://ui.shadcn.com/docs/components/dialog) - Modal with actions
+- [Dropdown Menu](https://ui.shadcn.com/docs/components/dropdown-menu) - Button-triggered menu
+- [Toast](https://ui.shadcn.com/docs/components/base/toast) (Base UI) / [Sonner](https://ui.shadcn.com/docs/components/radix/sonner) (Radix, React Aria) - Feedback after button click

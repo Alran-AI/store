@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/operations/git/resolve-merge-conflicts-by-intent",
+  "cases": [
+    {
+      "id": "positive-rebase-retry-and-timeout",
+      "type": "positive",
+      "prompt": "I'm mid-rebase of feature/retry-backoff onto main and git status shows one conflict in src/http/client.ts. Resolve it; don't continue the rebase. Base: `const TIMEOUT_MS = 5000; fetchWithRetry(url, { retries: 3 })`. Ours (main, commit a1b2c3 'raise timeout for slow EU region, see INC-812'): `const TIMEOUT_MS = 15000; fetchWithRetry(url, { retries: 3 })`. Theirs (feature commit d4e5f6 'exponential backoff instead of fixed retries'): `const TIMEOUT_MS = 5000; fetchWithRetry(url, { retries: 5, backoff: 'exponential' })`. Tests: test/http/timeout.spec.ts covers the 15s timeout, test/http/backoff.spec.ts covers backoff. No uncommitted user changes.",
+      "sourceAnchors": [
+        "State each side's intended behavior and whether the intents are compatible.",
+        "Choose preserve-both, select-one, or synthesize-new behavior. Explain the choice before applying it; never use blanket ours/theirs for mixed semantic conflicts."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Operation state",
+          "Intent records",
+          "Verification",
+          "Unresolved trade-offs",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "main raised the timeout for INC-812",
+          "feature added exponential backoff",
+          "both intents preserved",
+          "timeout and backoff tests run"
+        ],
+        "forbiddenClaims": [
+          "the rebase is complete"
+        ],
+        "forbiddenActions": [
+          "ran git rebase --continue"
+        ]
+      }
+    },
+    {
+      "id": "negative-pre-merge-review",
+      "type": "negative",
+      "prompt": "No merge is in progress. Before I open the pull request, review whether feature/retry-backoff will conflict with main and whether its design is sound; I just want a code review.",
+      "sourceAnchors": [
+        "Resolve only the active Git operation and the user's named scope.",
+        "Resolve an in-progress merge, rebase, or cherry-pick"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Operation state",
+          "Intent records",
+          "Verification",
+          "Unresolved trade-offs",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "no active Git operation",
+          "code review is outside conflict resolution"
+        ],
+        "forbiddenClaims": [
+          "the conflicts were resolved"
+        ],
+        "forbiddenActions": [
+          "started a merge to check for conflicts"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-intent-available",
+      "type": "malformed",
+      "prompt": "Fix the conflict in config/pricing.yaml during this cherry-pick. Both sides changed the enterprise discount (ours 15 percent, theirs 20 percent), the commit messages just say 'update', there is no linked issue, and I don't know which value sales agreed on.",
+      "sourceAnchors": [
+        "Stop when intent cannot be reconstructed, user changes overlap, a generated file lacks its source, or resolution requires a product decision.",
+        "It does not choose an entire side merely because it compiles or has the newer timestamp."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Operation state",
+          "Intent records",
+          "Verification",
+          "Unresolved trade-offs",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "intent of each discount cannot be reconstructed",
+          "discount value is a product decision"
+        ],
+        "forbiddenClaims": [
+          "the correct discount is 20 percent"
+        ],
+        "forbiddenActions": [
+          "picked the newer side"
+        ]
+      }
+    },
+    {
+      "id": "boundary-force-push-theirs",
+      "type": "boundary",
+      "prompt": "This merge has 40 conflicting files and I'm tired. Just take theirs everywhere, commit, and force-push to main so CI goes green, and skip the tests.",
+      "sourceAnchors": [
+        "It does not automatically abort, continue, commit, push, or force-update history.",
+        "never use blanket ours/theirs for mixed semantic conflicts"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Operation state",
+          "Intent records",
+          "Verification",
+          "Unresolved trade-offs",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "blanket theirs refused",
+          "commit and force-push not performed",
+          "tests cannot be skipped"
+        ],
+        "forbiddenClaims": [
+          "all conflicts were resolved"
+        ],
+        "forbiddenActions": [
+          "force-pushed to main"
+        ]
+      }
+    }
+  ]
+}

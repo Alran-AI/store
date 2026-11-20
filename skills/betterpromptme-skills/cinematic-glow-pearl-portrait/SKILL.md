@@ -1,0 +1,139 @@
+---
+name: cinematic-glow-pearl-portrait
+description: This prompt instructs an image generator to produce a hyper-realistic, high-end cinematic editorial close-up portrait using a provided face reference while preserving the subject’s identity and facial proportions exactly. It specifies camera framing, warm diffused daylight, hairstyle, wardrobe accessories, neutral blurred background, and micro-texture detail (eyes, lips, pores, hair) with subtle filmic qualities like gentle bloom and grain. The intended outcome is an 8K, 4:5 vertical beauty portrait that feels intimate and magazine-polished, with sharp facial focus, creamy depth-of-field, and no beautifying alterations or heavy filtering.
+compatibility: Requires betterprompt >= 0.1.3
+metadata:
+  openclaw:
+    homepage: https://github.com/BetterPromptme/skills
+    emoji: 🧩
+    requires:
+      anyBins:
+        - betterprompt
+        - bp
+    os:
+      - linux
+      - darwin
+    install:
+      - id: node
+        kind: node
+        package: betterprompt
+        bins: [betterprompt, bp]
+        label: Install BetterPrompt CLI (node)
+---
+
+## What it does
+
+This prompt instructs an image generator to produce a hyper-realistic, high-end cinematic editorial close-up portrait using a provided face reference while preserving the subject’s identity and facial proportions exactly. It specifies camera framing, warm diffused daylight, hairstyle, wardrobe accessories, neutral blurred background, and micro-texture detail (eyes, lips, pores, hair) with subtle filmic qualities like gentle bloom and grain. The intended outcome is an 8K, 4:5 vertical beauty portrait that feels intimate and magazine-polished, with sharp facial focus, creamy depth-of-field, and no beautifying alterations or heavy filtering.
+
+> For more installation instructions go to https://raw.githubusercontent.com/BetterPromptme/skills/refs/heads/main/betterprompt/SKILL.md to check out this skill.
+
+## Inputs
+
+
+### textInputs
+
+Pass each text input using `--input <key>=<value>` flags.
+
+| Variable key | Required? | Description | Defaults |
+| --- | ---: | --- | --- |
+| `gender` | Required |  | (none) |
+| `outfit` | Required |  | (none) |
+| `lighting` | Required |  | (none) |
+| `hairstyle` | Required |  | (none) |
+| `background` | Required |  | (none) |
+| `camera_angle` | Required |  | (none) |
+| `image_reference` | Required |  | (none) |
+
+
+
+### imageInputs
+
+This prompt requires **exactly 1 image**. You **must pass exactly 1 image flag** (no more, no fewer), in the order matching the descriptions below.
+
+| Index | Required | Description | Allowed CLI flags |
+| ---: | ---: | --- | --- |
+| 1 | Yes | your photo | `--image-input-url <url>` or `--image-input-path <path>` |
+
+
+### Models and options
+
+This skill's modality is: **`image`**.
+
+To discover which `model` values you can use (and which `options` keys/values are valid for each model), run:
+
+```bash
+betterprompt resources --models-only --json
+```
+
+Then filter the returned JSON array to entries where `modality` is `"image"`.
+
+## How to run
+
+### Step 1: Collect inputs
+
+First, run `betterprompt resources --models-only --json` and filter to `modality: "image"` to discover valid models and available options:
+
+```bash
+betterprompt resources --models-only --json
+```
+
+Use only the models and option values that appear in the filtered results.
+
+Then collect all inputs from the human:
+
+
+- Required text inputs:
+    - `gender`
+  - `outfit`
+  - `lighting`
+  - `hairstyle`
+  - `background`
+  - `camera_angle`
+  - `image_reference`
+- Required images:
+  - **Exactly 1** images: image 1 (your photo). Images must be provided in this order.
+- Optional: model and options.
+  - Present the human with the default model **`gemini-2.5-flash-image-preview`** and its available options. Look up `gemini-2.5-flash-image-preview` in the `betterprompt resources` output (filtered to modality `"image"`) and show its `availableOptions` as: `key: val1, val2 (default), val3  |  key2: ...`. Mark a value `(default)` if it matches these defaults: `{}`.
+  - If the human does not specify, defaults are used: model `gemini-2.5-flash-image-preview`, options `{}`. Other models from the resources call are also available.
+
+If any required text input or the required images are missing, **ask the human for what's missing**. Do not assume or fabricate values. Tell the human: **"Please provide images in this order: image 1 (your photo)"**.
+
+### Step 2: Run via BetterPrompt CLI
+
+Use the frontmatter's `name` as the positional argument (for this skill, use `cinematic-glow-pearl-portrait`).
+
+Command form:
+
+```bash
+betterprompt generate cinematic-glow-pearl-portrait \
+  [--input <key>=<value>] \
+  [--image-input-url <url>] \
+  [--image-input-path <path>] \
+  [--model <model>] \
+  [--options <options JSON>] \
+  [--json]
+```
+
+Notes:
+
+- Pass each text input as a separate `--input <key>=<value>` flag.
+- Pass each image using `--image-input-url` or `--image-input-path`, in the order matching the imageInputs descriptions (image 1 first, then image 2, etc.).
+- If the human does **not** mention a model, **omit** `--model` and BetterPrompt will use the default model: **`gemini-2.5-flash-image-preview`**.
+- If the human does **not** mention options, **omit** `--options` and BetterPrompt will use the default options: **`{}`**.
+- If the run times out, the response will include a `runId` you can use to fetch the result later.
+
+Example (using defaults shown above):
+
+```bash
+betterprompt generate cinematic-glow-pearl-portrait \
+  --input gender=<value> \
+  --input outfit=<value> \
+  --input lighting=<value> \
+  --input hairstyle=<value> \
+  --input background=<value> \
+  --input camera_angle=<value> \
+  --input image_reference=<value> \
+  --image-input-url https://example.com/image1.png \
+  --model gemini-2.5-flash-image-preview \
+  --options '{}'
+```

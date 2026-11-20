@@ -1,0 +1,69 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/marketing/performance/plan-paid-acquisition",
+  "slug": "plan-paid-acquisition",
+  "name": "Plan Paid Acquisition",
+  "version": "1.4.0",
+  "kind": "skill",
+  "summary": "Design a bounded paid-acquisition plan with economics, controls, and evidence-led optimization.",
+  "description": "Plan or audit paid acquisition across search, social, display, or account-based channels using unit economics, targeting logic, measurement, and spend controls. Use before launching or materially changing campaigns when budget decisions require explicit assumptions and guardrails.",
+  "domain": "marketing",
+  "category": "performance",
+  "problems": [
+    "paid-acquisition"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "planning",
+    "implementation",
+    "operations"
+  ],
+  "risk": "medium",
+  "risk_reason": "This skill designs a bounded paid-acquisition plan with economics, controls, and evidence-led optimization; it does not present platform attribution or industry benchmarks as guaranteed business economics.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not activate campaigns, raise budgets, or accept platform recommendations without explicit authority.",
+    "It does not use protected traits, covert profiling, dark patterns, or knowingly misleading creative.",
+    "It does not present platform attribution or industry benchmarks as guaranteed business economics."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "plan"
+  ],
+  "relationships": {
+    "composesWith": [
+      "skill/marketing/performance/produce-testable-ad-creative"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill designs a bounded paid-acquisition plan with economics, controls, and evidence-led optimization, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/marketing/analytics/design-controlled-experiment",
+  "slug": "design-controlled-experiment",
+  "name": "Design Controlled Experiment",
+  "version": "1.3.0",
+  "kind": "skill",
+  "summary": "Turn a decision into a measurable experiment with guardrails and an explicit stopping rule.",
+  "description": "Design a controlled product or marketing experiment with a falsifiable hypothesis, primary metric, guardrails, exposure plan, and decision rule. Use when a team is comparing variants or needs a defensible experiment rather than an informal before-and-after check.",
+  "domain": "marketing",
+  "category": "analytics",
+  "problems": [
+    "experiment-design"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "planning",
+    "implementation",
+    "review"
+  ],
+  "risk": "medium",
+  "risk_reason": "This skill turns a decision into a measurable experiment with guardrails and an explicit stopping rule; it does not peek repeatedly and declare a winner without an approved sequential method.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not promise significance, lift, or a required sample from invented baseline data.",
+    "It does not peek repeatedly and declare a winner without an approved sequential method.",
+    "It does not hide negative segments, guardrail damage, instrumentation changes, or protocol deviations."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "plan"
+  ],
+  "relationships": {
+    "composesWith": [
+      "skill/marketing/conversion/audit-app-store-listing",
+      "skill/marketing/conversion/review-conversion-friction",
+      "skill/marketing/strategy/generate-marketing-experiments",
+      "subagent/data/experimentation/experiment-validity-reviewer"
+    ],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill turns a decision into a measurable experiment with guardrails and an explicit stopping rule, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

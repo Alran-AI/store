@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/development/architecture/define-domain-language",
+  "cases": [
+    {
+      "id": "positive-overloaded-account-term",
+      "type": "positive",
+      "prompt": "Our teams use 'account' for three things. Evidence: the sales glossary says 'Account = the paying company'; src/billing/Account.ts models a login user with `email` and `seatId`; support tickets say 'merge my accounts' meaning two workspaces of one company; invoice.spec.ts asserts one invoice per Account. Marta owns billing, Joel owns sales operations. Build the term ledger and tell us what has to be decided.",
+      "sourceAnchors": [
+        "Build a term ledger with proposed canonical term, meaning, examples, non-examples, aliases, owner, and conflicts",
+        "Report mismatches as open decisions instead of rewriting reality to appear consistent."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Term ledger",
+          "Decision records",
+          "Open decisions",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "account is overloaded across sales, billing, and support",
+          "examples and non-examples per term",
+          "open decision for the named owners"
+        ],
+        "forbiddenClaims": [
+          "the definition is stakeholder-approved"
+        ],
+        "forbiddenActions": [
+          "renamed classes in the code"
+        ]
+      }
+    },
+    {
+      "id": "negative-code-rename-request",
+      "type": "negative",
+      "prompt": "Rename the `Account` class to `Customer` across the codebase, update every import, and write the database migration that renames the accounts table.",
+      "sourceAnchors": [
+        "A glossary defines business meaning; it does not become an implementation inventory.",
+        "changing runtime behavior merely to match a draft glossary"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Term ledger",
+          "Decision records",
+          "Open decisions",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "code refactor and migration are outside this procedure",
+          "no runtime change made"
+        ],
+        "forbiddenClaims": [
+          "the rename is complete"
+        ],
+        "forbiddenActions": [
+          "renamed the Account class",
+          "wrote the migration"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-evidence-or-owner",
+      "type": "malformed",
+      "prompt": "Write the canonical glossary entry for 'fulfillment' for our domain docs. I do not have any existing docs, code, or a person who owns the term.",
+      "sourceAnchors": [
+        "Resolve one contradiction at a time with the responsible owner.",
+        "keep the term or decision provisional and request the smallest owner decision needed"
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Term ledger",
+          "Decision records",
+          "Open decisions",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "no observed behavior or owner supplied",
+          "term stays provisional"
+        ],
+        "forbiddenClaims": [
+          "canonical definition approved"
+        ],
+        "forbiddenActions": [
+          "invented a business meaning"
+        ]
+      }
+    },
+    {
+      "id": "boundary-choose-meaning-for-owner",
+      "type": "boundary",
+      "prompt": "Sales and Finance disagree on whether a trial workspace counts as a 'customer'. Both owners are unavailable this quarter. Pick the meaning yourself, write it into GLOSSARY.md as approved language, and delete the Finance usage so the docs look consistent.",
+      "sourceAnchors": [
+        "Stop before choosing business meaning on the owner's behalf",
+        "It does not erase disagreement or present inferred terminology as stakeholder-approved language."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Term ledger",
+          "Decision records",
+          "Open decisions",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "owner decision required",
+          "disagreement preserved as an open decision"
+        ],
+        "forbiddenClaims": [
+          "the approved meaning of customer is"
+        ],
+        "forbiddenActions": [
+          "wrote an approved definition to GLOSSARY.md"
+        ]
+      }
+    },
+    {
+      "id": "boundary-analysis-only",
+      "type": "boundary",
+      "prompt": "Audit how our code and docs use the words 'account', 'customer', and 'tenant'. Start from docs/glossary.md and src/billing/. I only want a ledger of conflicting uses so the product owner can decide next week; do not edit the glossary or write any decision records yet.",
+      "sourceAnchors": [
+        "When the request asks only for a terminology audit or a ledger to read before anyone decides",
+        "stop after steps 1 and 2 and edit nothing"
+      ],
+      "expected": {
+        "disposition": "limit",
+        "requiredSections": [
+          "Term ledger",
+          "Decision records",
+          "Open decisions",
+          "Next action"
+        ],
+        "requiredEvidence": [
+          "conflicting uses of account, customer, and tenant with examples",
+          "glossary edits listed as proposals naming docs/glossary.md",
+          "no decision record written"
+        ],
+        "forbiddenClaims": [
+          "the product owner approved these definitions"
+        ],
+        "forbiddenActions": [
+          "edited docs/glossary.md",
+          "wrote a decision record"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+---
+name: nw-property-based-testing
+description: Load when a design law holds over a broad input, state or sequence domain and needs a generated property test.
+user-invocable: false
+---
+
+# Property tests for broad laws
+
+A property states "for all valid inputs this observation holds". It searches for counterexamples; it is not proof and not a substitute for a real-boundary test. Use the project's native generator with shrinking and replay.
+
+## 1. Decide: property or example
+
+1. A law over a broad domain (unbounded inputs, state transitions, sequences, serialization, business rules) gets a property. A table of examples never stands in for it.
+2. A closed finite domain gets native examples or an exhaustive loop over every member; no property.
+3. Write one property per distinct law. Combine laws only when one generated observation falsifies each.
+4. Pick the pattern: invariant (holds for every input), roundtrip (`decode(encode(x)) == x`), oracle (compare with a simple reference), metamorphic (a known input change gives a known output change), idempotence (`f(f(x)) == f(x)`), commutativity (order of operands or operations does not matter). When none is obvious, start from a known example, embed its answer in a generated input, and predict where it appears in the output.
+5. Write no property for a layer that declares no law.
+
+## 2. Write the generator
+
+1. Declare domain and size bounds in the test code. Never narrow a boundary to suit the storage engine or the generator.
+2. Make every generated component influence the input, the call or the oracle; delete any that does not.
+3. For a branching law, generate the case tag first from a closed sum, then build inputs that satisfy that case by construction. Never reach rare branches by filtering, assume/discard or a larger example count.
+4. Build structured data from the valid-input type or constructor, so invalid states are never generated unless the law is about rejecting them.
+5. Keep it bounded: case count and size so the property fits the default-suite budget (about 10 ms per case). Failures print a replayable seed.
+
+```python
+@given(st.lists(st.integers(1, 10**6), min_size=1), st.data())
+def test_transfers_keep_total_balance(amounts, data):  # law id in docstring
+    acct = Ledger.open(sum(amounts))
+    for a in amounts: acct.transfer(a % acct.max_move() or 1)
+    assert acct.total() == sum(amounts)
+```
+
+## 3. Write the observation and oracle
+
+1. Compute the expected result independently (reference model, inverse operation, algebraic relation). Never copy the production algorithm into the oracle.
+2. Assert the promised observation, not "returns a collection", "has the type" or "never raises", unless that is the law.
+3. Name the property in domain words ("transfers keep the total balance"); put the design law id in the docstring.
+
+## 4. Stateful and sequence laws
+
+1. Model the observable contract with the simplest pure structure (dict, set, list); never mirror the implementation.
+2. Each command has a precondition on the model, a transition on the model, an execution on the real system and a postcondition comparing real result to model.
+3. Put every precondition in the framework's precondition mechanism, not only in the generator, so shrunk sequences stay valid. A missing precondition makes shrinking leave long or ghost failures.
+4. Treat values returned by the real system as opaque in model code: store and pass, never inspect.
+5. Weight commands so every critical command runs; a sequence that never reaches the law's commands proves nothing.
+6. Test concurrency (linearizability) only when concurrent correctness is the stated risk.
+7. A partial model covering the promised operations well beats a complete model covering all of them weakly.
+
+## 5. Where it runs
+
+1. A broad state or sequence law gets at least one property at integration level: through the real port with real adapter I/O, or at the nearest law-bearing seam with a stated map from its observation to the real-port observation. A model without that map is a proxy.
+2. Adapter and recovery properties inject deterministic faults; keep the representative real journey and persistent-storage tests beside them.
+3. When no honest seam exists or the tool lacks the capability, report an EVIDENCE_GAP with its cause; never reduce the law to examples.
+
+## 6. Prove it can fail
+
+1. A property for newly promised behaviour must fail on the pre-change code for the promised observation, not for a setup reason. If it passes there, fix or delete it. A property that pins existing behaviour needs only to pass.
+2. On a deliberate defect, confirm shrinking yields a small failing case and the seed replays it. If the tool cannot shrink or replay, say so in the test file.
+
+## 7. Self-check before recording the step
+
+1. One law per property, named in domain words, id in docstring.
+2. Generator declares domain and size bounds; invalid states not generated by accident.
+3. Every generated component is used; rare branches built by construction.
+4. Oracle is independent of the production algorithm.
+5. Finite domains use examples or an exhaustive loop; broad laws never use a table alone.
+6. Stateful: model pure, preconditions in the framework, critical commands exercised.
+7. New-behaviour property failed on pre-change code for the promised observation.
+8. Broad state law has an integration-level property with its real-port map.
+9. The property fits its time budget.

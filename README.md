@@ -10,11 +10,9 @@ Some sources are catalogues that also carry Skills written by other projects; th
 catalogue's own licence, and `THIRD_PARTY_NOTICES.md` names the catalogue they came from. A catalogue whose
 Skills declare licences of their own — a proprietary one, say — is not taken.
 
-It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **202 Plugins**
-(201 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **10375
-individually installable Skills**; 10410 Skills in all. The 21 engineering-workflow Skills and the 14 Superpowers
-Skills are only offered inside their Plugin, because they link to shared checklists the Plugin carries or
-call each other by the Plugin's name.
+It builds into a store that Alran Code reads (`docs/store.md` in the Alran Code repository): **416 Plugins**
+(415 built from one source's Skills each, and Superpowers as a package with scripts and a hook) and **95053
+individually installable Skills**; 95075 Skills in all. The 22 Skills that are only offered inside a Plugin — 21 in Engineering Workflow, 1 in Superpowers — cannot be installed on their own: the engineering-workflow Skills link to shared checklists the Plugin carries, or call each other by the Plugin's name. The store holds one copy of each Skill name.
 
 | Area | Sources |
 | --- | --- |
@@ -28,11 +26,26 @@ call each other by the Plugin's name.
 | Review and quality | Sentry engineering, CodeRabbit, LambdaTest, GitHub Copilot, Anthropic Plugins, Alibaba code review, NVIDIA Skill Inspector, Grafana, CTF Skills, Thinking Skills, Cybersecurity Skills |
 | Infrastructure and security | DevOps and security, Tencent AI Infra Guard, Cloudflare security audit, Cybersecurity Skills (MITRE, NIST), Hol Guard, Signet, ClawScan |
 | Design, media and 3D | OpenMotion, Open Design, Baoyu, Social Auto Upload, Blender Skills, Scenario Labs, Awesome Design Skills, Effective HTML, LottieFiles, ChatCut, HyperFrames, Three.js, UI Skills, Superdesign, KiCad |
-| Skill catalogues | Agentic Awesome Skills, Claude Skills Catalogue, Agent Plugin Marketplace, Product Management Skills, High-Value Skills |
+| Skill catalogues | Agentic Awesome Skills, Agent Skill Exchange, Agent Master Skills, Claude Skills Catalogue, Agent Plugin Marketplace, Product Management Skills, High-Value Skills, Awesome Skills (Chinese), All Skills, Skill Galaxy, Skills Hub, Legal Skills (German), Legal Skills (English) |
 | Business | Marketing (Corey Haines), Product management (Paweł Huryn), E-commerce Skills, EveryInfra, Citlyze, Yan Skills |
 | Science and making | Google DeepMind, Scientific agent skills (K-Dense AI), TypeSafe, Game development, Reverse engineering, Jane Street, Open Science, AI Research Skills (Orchestra Research), ARIS |
 | Productivity | Home Assistant, Skill Seekers, Avoid AI Writing, Creative Writing, Luong Skills |
 
+The repositories the tooling added are not curated by area: each one is its own Plugin, filed
+under the category the store gives it. There are 214 of them.
+
+| Category | Repositories |
+| --- | --- |
+| Office | DDC Skills For AI Agents In Construction |
+| Science & Healthcare | CaseMark Skills 2, Gtm Agents |
+| Education | Ellmos Ai Skills |
+| Design & Sites | Agent Master Skills, AI Business Designer, All Skills 3, Awesome Skills Cn, Awesome Skills Cn 2, Bovinphang Frontend Craft, Cc Polymath, Claude Code Minoan, Claude Code Skills, Claude Mods, ClaudeSkillz, COG Second Brain, Dotnet With Claudecode, Fusengine Agents, Jezweb Claude Skills, Knowledge Work Plugins For Codex, OneWave AI Claude Skills, Rampstackco Claude Skills, Secondsky Claude Skills, Skill MCP Claude, Spellbook, The Agency, Try Skills 10, Try Skills 7, Try Skills 8, Try Skills 9, Wondelai Skills |
+| Studio | Ai Dev Standards, Ai Hive Agent Skills, Ai Workflow, Ai Workflow 2, All Skills, Animation Principles, Claude, Claude Skills Journalism, Dotfiles, Jeo Skills, Lenny Skills, Trompetilla Skills, Try Skills |
+| Sales | Second Brain Starter Kit, Thinkwithblack Skill |
+| Business | Acm Ai, Advanced Memory Mcp, AgentLogistics, AiToEarn, Alirezarezvani Claude Skills 2, All Skills 6, BetterPromptme Skills, Continuous Claude V3, Deutsches Recht Slim 5, Legal Skills Open, Legal Skills Open 10, Legal Skills Open 11, Legal Skills Open 2, Legal Skills Open 3, Legal Skills Open 4, Legal Skills Open 5, Legal Skills Open 6, Legal Skills Open 7, Legal Skills Open 8, Legal Skills Open 9, Marketing Skills, Useful Ai Prompts, Vexjoy Agent, Vp Real Estate, Ystack |
+| Productivity | Ai Rulez, Aiwg, Claude Code Workflow, Dex, Goodvibes Plugin, Skill Forge 2, TheAngrySkills, Try Skills 2, ValentinNikolaev Agent Skills |
+| Code | .Claude, Agent Alchemy, Agent Skills Standard, Agentic Coding Lab, Agentic Commerce Claude Plugins, Agentic Qe, Agentii Investment Intelligence, Agentops, Agents Inc Skills, Agentskillexchange Skills, AGI Super Skills, Ai Agents, Aibox, All Skills 2, All Skills 4, All Skills 5, All Skills 7, All Skills 8, Antigravity Awesome Skills, Aos, Axiom, Basitalisandhu Claude Skills, Beagle, BioSkills, Bounty Reaper, Buildwithclaude, Claude Code Apple Skills, Claude Code Plugins, Claude Code Workflows, Claude Codex Settings, Claude Craft, Claude Elixir Phoenix, Claude Night Market, Claude Plugin Marketplace, CloudBase AI Toolkit, Codex Game Studios, Codex Starter Kit, Context Cascade, CS2 VibeSignatures, Davila7 Claude Code Templates 2, Davila7 Claude Code Templates 3, Developer Kit, Forge Core, Glebis Claude Skills, Harness Skills, Human Skills, Jarvis, Jeffallan Claude Skills, Kbarbel640 Del Skills, Konoha, Libr Agent, Magnus919 Agent Skills, NWave, Oaustegard Claude Skills, Odin Claude Plugin, Oh My Agent, Ok Skills, Power Platform Skills, Product Forge, ProjectOdyssey, Qaskills, Ralph Orchestra, Ruby Agent Skills, Runx, Sf Skills, Sickn33 Agentic Awesome Skills 2, Sickn33 Agentic Awesome Skills 3, Sickn33 Agentic Awesome Skills 4, Skill Forge, Skill Hub, Skillhub Main, Skills Collection 1, Skills.Md, Skillset, Skillshub, Skillshub 2, SploitAgent, SriramGandhiS Skills, SuperClaude, Superpowers Sage, Superpowers Symfony, Tasktrooper, TerminalSkills Skills, The Utopia Studio Skills, TheWatcher01 Skills, Toolkit, Trompetilla Skills 2, Turbo, Vibes Plug, Webhook Skills |
+| Other | Ai Native Storage Certus, Asi, Awesome Codex Plugins, Awesome Codex Plugins 2, BitBot, CaseMark Skills, Claude Configs, Claude Cookbooks, Claude Cortex, Cursor Rules Java, Deutsches Recht Slim, Deutsches Recht Slim 10, Deutsches Recht Slim 11, Deutsches Recht Slim 12, Deutsches Recht Slim 13, Deutsches Recht Slim 14, Deutsches Recht Slim 15, Deutsches Recht Slim 16, Deutsches Recht Slim 17, Deutsches Recht Slim 18, Deutsches Recht Slim 19, Deutsches Recht Slim 2, Deutsches Recht Slim 20, Deutsches Recht Slim 3, Deutsches Recht Slim 4, Deutsches Recht Slim 6, Deutsches Recht Slim 7, Deutsches Recht Slim 8, Deutsches Recht Slim 9, HPClaw, Lib Electronic Components, Longbridge Skills, Molcajete.Ai, NgAutoPilot, Pcl, Reactive Resume, SkillNet, Skillsbank, Tonone, Try Skills 3, Try Skills 4, Try Skills 5, Try Skills 6, WeReply |
 ```sh
 alran plugin marketplace add /path/to/alran-store/store     # or the URL it is hosted at
 alran plugin search terraform
@@ -153,7 +166,12 @@ A source lists its Skills by name, or takes `"include": "clean"`: every Skill th
 - it has no script or executable and nothing but plain text files (`.md`, `.txt`, `.json`, `.yaml`, `.csv`)
   or images (`.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`), no symlinks, and only file names a portable archive can
   hold. A vector image (`.svg`) is a document that may carry a script, so it is left out;
-- its `SKILL.md` names its own folder, and its name is not one of the Skills built in to Alran Code;
+- its `SKILL.md` names it, and its name is not one of the Skills built in to Alran Code. The Plugin format V1
+  names a Skill after its folder, so a Skill that declares another name is taken under that name, and the folder
+  in the store follows it. A source that asks for it (`"normalizeName": true`) may also name its Skills after
+  the title it shows the reader: the store then sets `name` to the name of the folder and keeps the title in a
+  `title` field beside it. That one field is the only thing the store changes, and the Skill's own `SOURCE.md`
+  says so;
 - its frontmatter is a flat mapping of scalars, the way the store's Plugin validator reads it: the
   `description` has to be a value on the line of its key (a value that only continues on the lines below
   is not one), and no key may appear twice;
@@ -163,6 +181,8 @@ A source lists its Skills by name, or takes `"include": "clean"`: every Skill th
 - it does not need an MCP server: Alran Code sets up no MCP connectors, so a Skill that asks for one asks for a
   tool that does not exist. A Skill that names an MCP server and a way around it (a CLI, an SDK, curl, an API)
   is kept;
+- it is a Skill and not a pointer to one: an archive that keeps a `SKILL.md` only so that old links keep
+  working says so, and that file is left out;
 - every link that leaves its folder lands on another Skill of the same source (or a shared folder) that is in.
 
 A Skill that fails is left out and listed in `EXCLUDED.md` with the reason; for a named Skill the run stops
@@ -170,11 +190,16 @@ instead. The Skills run no code of their own; what an agent does with their text
 permissions. A few links in the text itself are broken in the originals too (placeholders, or paths that only
 make sense in the upstream repository); they are copied as they are.
 
-A Skill whose only fault is a `scripts/` or an `evals/` folder still comes in without that folder: the folder
-holds code the store cannot carry, and the Skill is kept as long as its own text never points at it. A Skill
+A Skill whose only fault is a folder of code still comes in without that folder: the folders are `scripts/`,
+`evals/`, `hooks/`, `examples/`, `tests/`, `samples/`, `demos/`, `fixtures/`, `benchmarks/`, `tools/` and
+`bin/`, and the Skill is kept as long as its own text never points at that folder or at a file in it. A Skill
 that says "run `scripts/analyze.py`" and then loses the folder points at a file that is not there, which is
-worse than a Skill that is not in the store at all, so those are left out. Every Skill that comes in this way
-says so in its own `SOURCE.md`, and `EXCLUDED.md` lists them all.
+worse than a Skill that is not in the store at all, so those are left out. The word "script" in a sentence is
+prose, not a pointer: only a path counts. Every Skill that comes in this way says so in its own `SOURCE.md`,
+and `EXCLUDED.md` lists them all.
+
+A Skill whose folder name, or a file inside it, is longer than 128 bytes is left out: the Plugin format V1
+holds a path segment to 128 bytes, and the store does not hold what the format cannot carry.
 
 A source that ships the same Skill twice (a plugin bundle next to the copy it was built from) contributes it
 once: the first copy that is admitted is taken, the others are listed in `EXCLUDED.md`. A source's licence file
@@ -319,11 +344,15 @@ Facts about the source, not quality judgements:
 - [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) (Apache-2.0): the one Skill that carries
   no script is a joke that lives in the repository's test data, not in its Skills.
 - [LeoYeAI/agent-master-skills](https://github.com/LeoYeAI/agent-master-skills) (MIT): a catalogue of 3,444 Skills that
-  are written by other projects — one of them declares `license: proprietary`. The repository's own licence does
-  not cover what it carries, so the store takes its word for nothing here.
+  are written by other projects. Fourteen of them declare a licence of their own that the catalogue's licence does
+  not cover — the Anthropic document Skills, which are not open-source, and seven that declare themselves
+  proprietary. Those fourteen are left out by name; the rest are in the store.
 - [agentskillexchange/skills](https://github.com/agentskillexchange/skills) (MIT): 3,263 Skills, and every one of
   them names itself after its display name (`name: "Activepieces Open Source Workflow Automation"`) instead of its
-  folder, which is the first rule a Skill has to pass.
+  folder. The source asks for the title rule, so the store sets the `name` to the name of the folder and keeps
+  the title beside it.
+- [majiayu000/claude-skill-registry](https://github.com/majiayu000/claude-skill-registry) (MIT): 33,565 Skills, and
+  every one of them is a pointer that says the Skill was moved to another repository. A pointer is not a Skill.
 - [23blocks-OS/ai-maestro](https://github.com/23blocks-OS/ai-maestro) (MIT) and
   [linked-api/linkedin-skills](https://github.com/linked-api/linkedin-skills) (MIT): their one Skill each has a name
   the store already has.

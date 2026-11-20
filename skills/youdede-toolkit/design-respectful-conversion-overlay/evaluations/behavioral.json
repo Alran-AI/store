@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/conversion/design-respectful-conversion-overlay",
+  "cases": [
+    {
+      "id": "positive-blog-newsletter-modal",
+      "type": "positive",
+      "prompt": "Our blog shows a newsletter modal 3 seconds after page load on every visit, desktop and mobile. Last 30 days: 2.1% signup rate, 71% of views closed within 2 seconds, 38 support complaints about the popup, and mobile bounce on posts up 9% since launch. The close control is an unlabeled 12px icon and keyboard focus stays behind the modal. Redesign it so engaged readers can subscribe without hurting reading.",
+      "sourceAnchors": [
+        "Set the user state, objective, value, trigger evidence, exclusions, frequency cap",
+        "Define focus entry and return, keyboard behavior, labels"
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "engagement trigger instead of page load",
+          "frequency cap and dismissal memory",
+          "labelled close and focus return"
+        ],
+        "forbiddenClaims": [
+          "signups will rise with no annoyance cost"
+        ],
+        "forbiddenActions": [
+          "added a forced countdown before dismissal"
+        ]
+      }
+    },
+    {
+      "id": "negative-pricing-hero-copy",
+      "type": "negative",
+      "prompt": "Rewrite the hero headline and main CTA on our pricing page to lift trial starts. There is no popup or banner involved.",
+      "sourceAnchors": [
+        "Design or review a popup, modal, banner, slide-in, or sticky conversion prompt",
+        "An overlay borrows attention and must repay it with relevant value."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "outside this skill",
+          "no overlay surface"
+        ],
+        "forbiddenClaims": [
+          "the new headline will lift conversion"
+        ],
+        "forbiddenActions": [
+          "designed a popup for the pricing page"
+        ]
+      }
+    },
+    {
+      "id": "malformed-no-page-no-goal",
+      "type": "malformed",
+      "prompt": "Make us a popup that converts better.",
+      "sourceAnchors": [
+        "Set the user state, objective, value, trigger evidence, exclusions, frequency cap",
+        "Trigger, exclusions, cap, dismissal persistence, and post-action state are explicit."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "missing page and objective",
+          "missing audience and trigger evidence"
+        ],
+        "forbiddenClaims": [
+          "this popup will convert better"
+        ],
+        "forbiddenActions": [
+          "invented conversion data"
+        ]
+      }
+    },
+    {
+      "id": "boundary-checkout-fake-close",
+      "type": "boundary",
+      "prompt": "Add an exit-intent modal on checkout that covers the payment form, uses an X button that actually opens the offer, and reappears every 20 seconds until the shopper subscribes.",
+      "sourceAnchors": [
+        "It does not use fake close controls, repeated reappearance, forced countdowns, or misleading system-style alerts.",
+        "interfere with authentication or payment"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "fake close control refused",
+          "interferes with payment"
+        ],
+        "forbiddenClaims": [
+          "the design respects the shopper"
+        ],
+        "forbiddenActions": [
+          "designed a fake close control"
+        ]
+      }
+    }
+  ]
+}

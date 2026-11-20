@@ -1,0 +1,181 @@
+{
+  "$schema": "./agent-hierarchy.schema.json",
+  "schemaVersion": 1,
+  "coordinator": "ceo",
+  "requiredMaxDepth": 2,
+  "recommendedMaxThreads": 4,
+  "executionPolicy": "wave",
+  "managers": {
+    "cto": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cto-specialists.json",
+      "roleRefs": [
+        "pe"
+      ],
+      "subagents": [
+        "frontend-developer",
+        "backend-architect",
+        "ai-engineer",
+        "devops-automator",
+        "security-engineer",
+        "rapid-prototyper",
+        "senior-developer",
+        "mobile-app-builder",
+        "data-engineer",
+        "technical-writer",
+        "autonomous-optimization-architect",
+        "embedded-firmware-engineer",
+        "pc-host-engineer",
+        "mechanical-design-engineer",
+        "embedded-linux-driver-engineer",
+        "fpga-digital-design-engineer",
+        "iot-solution-architect",
+        "network-engineer-china",
+        "incident-response-commander",
+        "threat-detection-engineer",
+        "solidity-smart-contract-engineer",
+        "wechat-mini-program-developer"
+      ]
+    },
+    "cpo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cpo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "ui-designer",
+        "ux-researcher",
+        "ux-architect"
+      ]
+    },
+    "cco": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cco-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "xiaohongshu-operator",
+        "douyin-strategist",
+        "wechat-operator",
+        "bilibili-strategist",
+        "short-video-editing-coach",
+        "weixin-channels-strategist",
+        "knowledge-commerce-strategist",
+        "xiaohongshu-specialist",
+        "wechat-official-account-manager",
+        "zhihu-strategist",
+        "twitter-engager",
+        "instagram-curator",
+        "reddit-community-operator",
+        "video-optimization-specialist",
+        "growth-hacker",
+        "seo-specialist",
+        "ai-citation-strategist",
+        "prompt-engineer",
+        "content-illustration-planner"
+      ]
+    },
+    "cfo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cfo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "bookkeeper-controller",
+        "fpa-analyst",
+        "financial-forecaster",
+        "financial-analyst",
+        "invoice-manager",
+        "tax-strategist",
+        "fraud-detector",
+        "pricing-analyst"
+      ]
+    },
+    "cdo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cdo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "ai-data-remediation-engineer",
+        "email-intelligence-engineer",
+        "data-consolidator",
+        "sales-data-extractor",
+        "identity-graph-operator"
+      ]
+    },
+    "cqo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cqo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "investment-researcher",
+        "model-qa-specialist",
+        "experiment-tracker",
+        "spatial-data-scientist"
+      ]
+    },
+    "cmo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cmo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "brand-guardian",
+        "china-market-localization-strategist",
+        "pr-communications-manager",
+        "email-strategist",
+        "paid-social-strategist",
+        "ppc-strategist",
+        "tracking-attribution-specialist"
+      ]
+    },
+    "cro": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cro-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "trend-researcher",
+        "feedback-analyst",
+        "x-twitter-intelligence-analyst",
+        "news-intelligence-officer",
+        "search-query-analyst",
+        "evidence-collector"
+      ]
+    },
+    "cso": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/cso-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "discovery-coach",
+        "outbound-strategist",
+        "sales-engineer",
+        "deal-strategist",
+        "proposal-strategist",
+        "pipeline-analyst",
+        "customer-success-manager",
+        "account-strategist"
+      ]
+    },
+    "coo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/coo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "operations-manager",
+        "project-shepherd",
+        "change-management-consultant",
+        "meeting-notes-specialist"
+      ]
+    },
+    "clo": {
+      "maxConcurrentChildren": 2,
+      "routingFile": "config/clo-specialists.json",
+      "roleRefs": [],
+      "subagents": [
+        "contract-reviewer",
+        "legal-policy-writer",
+        "data-privacy-officer",
+        "legal-document-reviewer",
+        "ai-governance-policy-specialist",
+        "healthcare-marketing-compliance"
+      ]
+    }
+  }
+}

@@ -1,0 +1,218 @@
+# Configuration Reference
+
+## config.toml Schema
+
+```toml
+version = "5.0"              # Required, must be "5.0"
+name = "my-project"           # Required, project name
+
+description = ""              # Optional project description
+
+presets = [                   # Built-in names and/or custom preset tables
+  "claude",
+  "cursor",
+  { name = "custom", type = "markdown", path = "docs/AI_GUIDE.md" },
+]
+
+default = ""                  # Default profile name
+default_layers = ["plugins"]   # Select config.plugins.toml before any table
+
+gitignore = true              # Opt in to the managed .gitignore block (default: false)
+# agents_md = false           # Default true: one AGENTS.md, CLAUDE.md imports @AGENTS.md
+
+builtins = true               # Enable all built-in domains
+# builtins = false            # Disable all built-in domains
+# builtins = ["go", "security", "!ai-governance"]  # Enable specific builtins
+
+[profiles]                    # Profile → domain mappings
+backend = ["backend", "shared", "builtin:docker"]  # builtin:<name> scopes a pack to this profile
+frontend = ["frontend", "shared"]
+
+[[scopes]]                    # Optional scoped outputs in subfolders
+path = "packages/web"
+profile = "frontend"
+presets = ["codex", "claude"] # Defaults to codex + claude when omitted
+
+[[installed_skills]]          # External skills to pull at generate time
+name = "kreuzberg"
+source = "https://github.com/kreuzberg-dev/kreuzberg"
+path = "skills/kreuzberg"     # Optional (defaults to skills/<name>)
+ref = "main"                  # Optional git ref
+local_override = "../local"   # Optional local dev path
+
+[[includes]]                  # External content sources
+name = "shared-rules"
+source = "https://github.com/org/shared-rules"
+path = ""                     # Subdirectory within repo
+ref = "main"                  # Git ref
+include = ["rules", "context", "skills"]  # Content types to import
+merge_strategy = "local-override"  # local-override | include-override | error
+install_to = ""               # Install as domain (e.g., "domains/backend")
+local_override = ""           # Local dev path override
+
+[defaults]
+effort = "medium"             # low | medium | high | xhigh | max | inherit
+# omit_agent_fields = ["model", "tools"]  # model | effort | tools | description
+
+[defaults.effort_by_preset]   # Per-preset overrides (beat defaults.effort)
+codex = "high"
+claude = "xhigh"
+amp = "max"
+
+[header]
+style = "detailed"            # detailed | compact | minimal
+# hashes = "content"          # content (default: per-file Content-Hash) | full (adds project-wide Source-Hash) | none
+
+[[mcp_servers]]
+name = "ai-rulez"
+command = "ai-rulez"
+args = ["mcp"]
+
+[[mcp_servers]]
+name = "grafana"
+command = "uvx"
+args = ["mcp-grafana"]
+env = { GRAFANA_URL = "http://localhost:3000", GRAFANA_SERVICE_ACCOUNT_TOKEN = "${GRAFANA_SERVICE_ACCOUNT_TOKEN}" }
+
+[[roles]]                     # name, domains, skills/rules/agents/commands include+exclude, skill_mode, extends, match (https://goldziher.github.io/ai-rulez/roles/)
+[role_manifest]               # enabled = true writes .ai-rulez/roles.json
+[lock]                        # enforce, include_outputs, scope (https://goldziher.github.io/ai-rulez/lockfile/)
+```
+
+## Built-in Presets
+
+| Preset       | Output Path                     |
+| ------------ | ------------------------------- |
+| claude       | CLAUDE.md                       |
+| cursor       | .cursor/rules/, .cursor/commands/, .cursor/agents/, .agents/skills/ |
+| gemini       | GEMINI.md, .gemini/, .agents/   |
+| copilot      | .github/copilot-instructions.md, .github/{skills,agents,commands}/ |
+| devin        | AGENTS.md, .devin/              |
+| cline        | .clinerules/, .cline/           |
+| codex        | AGENTS.md, .agents/skills/ and .codex/ |
+| amp          | AGENTS.md and .agents/ (.amp/settings.json) |
+| junie        | AGENTS.md and .junie/           |
+| opencode     | AGENTS.md, .opencode/, opencode.json |
+| hermes       | .hermes.md                      |
+| antigravity  | .agents/, GEMINI.md             |
+| xum          | AGENTS.md and .xum/             |
+| pi           | AGENTS.md, .agents/skills, .pi/agents, .pi/mcp.json |
+| baz          | AGENTS.md (root and nested), .agents/skills, .claude/agents |
+| okf          | docs/okf/ (Open Knowledge Format bundle; `[okf] dir`) |
+
+These are 15 of the 52 built-in presets. The rest: `aiassistant`, `augment`, `bob`, `codebuddy`, `codebuff`,
+`codewhale`, `commandcode`, `copilot-cli`, `cortex`, `crush`, `deepagents`, `dsh`, `factory`, `gitlab-duo`, `goose`,
+`grok`, `kilo`, `kimi`, `kiro`, `letta`, `mimocode`, `muse`, `omp`, `openclaw`, `poolside`, `qoder`, `qwen`,
+`reasonix`, `replit`, `rovodev`, `takt`, `trae`, `vibe`, `warp`, `zcode`, `zed`, `zoocode`. See
+`https://goldziher.github.io/ai-rulez/harnesses/` for the feature matrix. `windsurf` was renamed `devin`; `continue-dev` was removed.
+
+## Hooks and Permissions
+
+```toml
+[[hooks]]
+event = "PreToolUse"
+matcher = "Bash"
+[[hooks.hooks]]
+script = "scripts/guard.sh"          # or: command = "..."
+
+[permissions]
+allow = ["Bash(npm run test:*)"]
+ask   = ["Bash(git push:*)"]
+deny  = ["Read(./.env)"]
+```
+
+Both use Claude Code names and syntax and are translated per harness (`https://goldziher.github.io/ai-rulez/settings/`, `https://goldziher.github.io/ai-rulez/permissions/`).
+`generate --user` renders a user config into home directories (`https://goldziher.github.io/ai-rulez/user-scope/`).
+
+## Available Builtins
+
+Language domains: `rust`, `python`, `typescript`, `go`, `java`, `ruby`, `php`, `elixir`, `csharp`, `r`
+
+Cross-language binding domains: `pyo3`, `napi-rs`, `magnus`, `ext-php-rs`, `rustler`, `wasm`, `jni-rs`, `extendr`, `cgo`, `vite-plus`
+
+Practice domains: `ai-governance` (auto), `agent-delegation` (auto), `code-quality` (auto), `testing` (auto), `git-workflow` (auto), `security` (auto), `token-efficiency` (auto), `documentation`, `polyglot-bindings`, `default-commands`, `cicd`, `observability`, `docker`
+
+## Content Frontmatter Fields
+
+```yaml
+---
+type: Principle
+title: TypeScript conventions
+x-ai-rulez:
+  kind: rule
+  id: typescript-conventions
+  metadata:
+    priority: medium
+    targets:
+      - CLAUDE.md
+      - .cursor/rules/*
+    globs:
+      - "**/*.tsx"
+---
+```
+
+For authored `.ai-rulez/` content, use OKF frontmatter and tool metadata under
+`x-ai-rulez.metadata`. Public `skills/<name>/SKILL.md` exports use native Agent
+Skills `name`/`description` frontmatter. `migrate okf --check` detects older
+authored formats; legacy fields remain readable for migration.
+
+## Plugin layer
+
+Keep marketplace registries (`[[marketplaces]]`) and producer `[plugin]` and
+`[marketplace]` in `config.plugins.toml`. Deprecated `[[plugins]]` consumer
+entries have no effect; configure plugin enablement in the harness settings. The root's `default_layers` selects
+that file. Plugin metadata does not belong to the root governance config.
+Use a separate author root for public product capabilities when contributor
+rules and maintainer agents should stay private to the repository.
+
+## Merge Strategies
+
+- **local-override** (default): Local content wins on name conflicts
+- **include-override**: Included content wins on conflicts
+- **error**: Fail immediately on any name conflict
+
+## MCP Environment Placeholders
+
+MCP server env values may use `${VAR}` placeholders. Placeholder names must match
+`[A-Za-z_][A-Za-z0-9_]*` and are resolved during `ai-rulez generate` from repeated
+`--env KEY=VALUE` flags, process environment variables, then dotenv files. By default,
+`.env` is loaded from the generation base directory. If `--env-file` is supplied, the
+default `.env` is skipped; multiple env files are merged in flag order, with later files
+winning.
+
+Generated MCP configs contain resolved values. If an env value came from a placeholder, or
+if an env key contains `TOKEN`, `SECRET`, `PASSWORD`, `KEY`, or `CREDENTIAL`, generation
+fails before writing unless the generated MCP config path is gitignored or covered by
+planned `--gitignore` patterns. Secret values are redacted before source-hash calculation.
+
+## Profile Resolution
+
+1. If `profiles.default` is explicitly defined → use it
+2. If no profiles are defined → include root + all domains
+3. If profiles exist but `default` is not among them → include root + builtin + FromInclude domains
+
+## Config Directory and Generated Manifest
+
+- `.ai-rulez/` remains the default config root.
+- Config discovery also accepts the project-level `.config/` convention: `.config/ai-rulez/config.toml`. `.ai-rulez/` wins when both exist at the same level. Only version 5.0 TOML configurations are read. For a 4.x project, run `npx -y ai-rulez@latest migrate v5`; for older formats, follow the staged migration in [the v5 migration guide](https://goldziher.github.io/ai-rulez/migration-v5/).
+- `ai-rulez init --config-dir .config/ai-rulez` scaffolds the `.config/` layout; generated outputs and the managed `.gitignore` block then reference `.config/ai-rulez/`.
+- `ai-rulez generate --config-dir <name>` and `validate --config-dir <name>` use another config directory (nested values such as `.config/ai-rulez` are supported).
+- `ai-rulez --config <path/to/config.toml> generate` loads that exact file.
+- Generation writes `.generated-manifest.json` under the active config directory and removes only stale files listed in that manifest.
+- Assistant directories such as `.claude/`, `.codex/`, `.cursor/`, `.gemini/`, `.devin/`, and `.agents/` are not considered fully owned; user settings, hooks, personal skills, and other local files are preserved.
+
+## Scoped Outputs
+
+Use `[[scopes]]` to generate subfolder-specific `AGENTS.md` and `CLAUDE.md` files with separate profile content:
+
+```toml
+[profiles]
+frontend = ["frontend"]
+
+[[scopes]]
+path = "packages/web"
+profile = "frontend"
+presets = ["codex", "claude"]
+```
+
+Root output and scoped output are generated independently. `--dry-run` shows the target paths for both.

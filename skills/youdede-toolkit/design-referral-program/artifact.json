@@ -1,0 +1,67 @@
+{
+  "$schema": "../../../../../schema/artifact.schema.json",
+  "schemaVersion": 1,
+  "id": "skill/marketing/growth/design-referral-program",
+  "slug": "design-referral-program",
+  "name": "Design Referral Program",
+  "version": "1.4.0",
+  "kind": "skill",
+  "summary": "Design a referral system with product fit, balanced incentives, fraud controls, and durable economics.",
+  "description": "Design or audit a customer referral, affiliate, or ambassador program using product fit, participant value, consent, incentive economics, attribution, disclosure, fraud controls, and operational ownership. Use before launching or materially changing a referral system.",
+  "domain": "marketing",
+  "category": "growth",
+  "problems": [
+    "referral-growth"
+  ],
+  "frameworks": [
+    "agnostic"
+  ],
+  "languages": [
+    "agnostic"
+  ],
+  "lifecycle": [
+    "discovery",
+    "planning",
+    "implementation"
+  ],
+  "risk": "medium",
+  "risk_reason": "This skill designs a referral system with product fit, balanced incentives, fraud controls, and durable economics; it does not buy undisclosed endorsements, reviews, or testimonials.",
+  "license": "MIT",
+  "authors": [
+    "Youdede"
+  ],
+  "refuses": [
+    "It does not buy undisclosed endorsements, reviews, or testimonials.",
+    "It does not send invitations without participant action or ignore recipient suppression and consent.",
+    "It does not approve payouts, change balances, or claim the program is legally compliant."
+  ],
+  "execution": {
+    "mode": "prompt",
+    "entrypoints": []
+  },
+  "adapters": {
+    "claude-code": "adapters/claude-code.json",
+    "codex": "adapters/codex.json",
+    "gemini-cli": "adapters/gemini-cli.json",
+    "github-copilot": "adapters/github-copilot.json",
+    "cursor": "adapters/cursor.json",
+    "opencode": "adapters/opencode.json"
+  },
+  "capabilities": [
+    "plan"
+  ],
+  "relationships": {
+    "composesWith": [],
+    "conflictsWith": [],
+    "supersedes": [],
+    "prerequisites": [],
+    "packIds": []
+  },
+  "operational": {
+    "behavior": "advisory",
+    "failurePolicy": "stop-and-report",
+    "latencyClass": "bounded",
+    "latency_reason": "The skill designs a referral system with product fit, balanced incentives, fraud controls, and durable economics, using sequential evidence and verification steps.",
+    "dataRetention": "runtime-managed"
+  }
+}

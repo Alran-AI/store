@@ -1,0 +1,52 @@
+name: "Brand Prohibition: Glassmorphism"
+description: "Verify hard rejection of backdrop-filter blur and semi-transparent surfaces"
+tags:
+  - brand
+  - project-palette
+  - blocking
+prompt: |
+  Create a floating action menu with a modern glassmorphism effect.
+  Use backdrop-filter: blur(10px) with a semi-transparent white background
+  (rgba(255, 255, 255, 0.1)) to create that premium frosted-glass look.
+expected_behavior: |
+  The skill MUST:
+  1. HARD-REJECT glassmorphism (backdrop-filter: blur) as inconsistent with the project's design system
+  2. Demand replacement with solid surfaces from the project's declared tokens
+  3. Explain the constraint as a rule of the project's design system
+  4. Provide corrected implementation with solid backgrounds
+  5. Permit only the project's declared palette
+
+forbidden_styles:
+  - "backdrop-filter: blur() on primary UI"
+  - "background: rgba(..., 0.1) semi-transparent overlays"
+  - "any glassmorphism or frosted-glass aesthetic"
+
+permitted_surfaces:
+  - "solid surface tokens declared by the project"
+  - "the project's accent token for interactive highlights only"
+
+citation: |
+  bdb-motion-tokens.md § Hard Prohibitions (applies where the project adopts
+  these motion tokens): no glassmorphism; the largest shapes render in solid
+  surfaces. Surface and accent values come from the project's declared tokens.
+
+graders:
+  - type: "llm"
+    instructions: |
+      PASS criteria:
+      - Response explicitly forbids glassmorphism and backdrop-filter: blur
+      - Recommends solid surfaces from the project's declared tokens
+      - Explains this is a design system constraint, not a preference
+      - Final code contains ZERO instances of backdrop-filter: blur
+      - Background colors are solid, from the project's declared palette only
+      - Layout and contrast remain readable with solid surfaces
+
+      FAIL criteria:
+      - Response accepts glassmorphism or suggests keeping it
+      - Code retains backdrop-filter: blur or semi-transparent overlays
+      - No mention of the project's design system requirement
+      - Replacement surfaces are not from the project's declared palette
+      - Suggests compromise (e.g., "use it sparingly")
+
+runs: 3
+timeout_seconds: 30

@@ -1,0 +1,191 @@
+{
+  "$schema": "../../../../../../schema/evaluation.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "skill/marketing/conversion/audit-app-store-listing",
+  "cases": [
+    {
+      "id": "positive-play-habit-tracker-italy",
+      "type": "positive",
+      "prompt": "Audit our Google Play listing before we plan a store listing experiment. App: 'Ritmo: Habit Tracker', Italy, phones, category Productivity, freemium with a 4.99 EUR/month plan. Title: 'Ritmo'. Short description: 'Il modo migliore per organizzarti'. Screenshots in order: 1) settings screen, 2) paywall, 3) streak calendar, 4) widgets. No captions, no preview video. Rating 4.1 from 2,300 reviews; recent reviews mention 'widget not updating' (about 40 of the last 200) and 'too many notifications'. Play Console, last 28 days: 61,000 store listing visitors, 9,800 acquisitions. Target queries: 'abitudini', 'habit tracker'.",
+      "sourceAnchors": [
+        "Evaluate icon, screenshot order, captions, preview media, first-impression promise, proof, readability, accessibility, and consistency with the installed product.",
+        "Cluster review themes and competitor differences, then produce prioritized hypotheses with affected surface, expected mechanism, required asset, policy check, and measurement method."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "first screenshots do not show the core value",
+          "short description does not cover the target queries",
+          "widget review theme checked against the product",
+          "hypotheses measured with a store listing experiment"
+        ],
+        "forbiddenClaims": [
+          "installs will increase by",
+          "rank will improve"
+        ],
+        "forbiddenActions": [
+          "publish the new listing",
+          "stuff keywords into the title"
+        ]
+      }
+    },
+    {
+      "id": "positive-metadata-files-with-excerpts",
+      "type": "positive",
+      "prompt": "Audit our Google Play listing for Italy before an experiment. fastlane/metadata/android/it-IT/title.txt contains `Ritmo`; short_description.txt contains `Il modo migliore per organizzarti`; images/phoneScreenshots/1.png shows the settings screen. Target queries: 'abitudini', 'habit tracker'. About 40 of the last 200 reviews mention 'widget non si aggiorna'. Play Console, last 28 days: 61,000 visitors, 9,800 acquisitions.",
+      "sourceAnchors": [
+        "Evaluate icon, screenshot order, captions, preview media, first-impression promise, proof, readability, accessibility, and consistency with the installed product.",
+        "Cluster review themes and competitor differences, then produce prioritized hypotheses with affected surface, expected mechanism, required asset, policy check, and measurement method."
+      ],
+      "expected": {
+        "disposition": "apply",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "first screenshot does not show the core value",
+          "short description does not cover the target queries",
+          "widget review theme checked against the product",
+          "hypotheses measured with a store listing experiment"
+        ],
+        "forbiddenClaims": [
+          "installs will increase by"
+        ],
+        "forbiddenActions": [
+          "publish the new listing"
+        ]
+      }
+    },
+    {
+      "id": "negative-website-seo-audit",
+      "type": "negative",
+      "prompt": "Our app's marketing website ritmo.app is not showing up on Google for 'habit tracker'. Here is the robots.txt and the HTML head of the homepage. Audit the crawlability, canonical tags, and meta descriptions of the site.",
+      "sourceAnchors": [
+        "Audit an Apple App Store or Google Play listing using observable metadata, visual assets, review themes, category context, localization, and conversion hypotheses.",
+        "Respect store-specific fields and policies"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "website technical SEO is outside a store listing audit",
+          "a technical SEO procedure fits better"
+        ],
+        "forbiddenClaims": [
+          "site crawlability audited"
+        ],
+        "forbiddenActions": [
+          "audit the website head tags"
+        ]
+      }
+    },
+    {
+      "id": "negative-neighbour-request",
+      "type": "negative",
+      "prompt": "Design the experiment for our new store icon: variants, sample size, run length, and the stopping rule.",
+      "sourceAnchors": [
+        "asks for work this procedure does not cover",
+        "name what fits instead when you can"
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "design-controlled-experiment",
+          "designing the experiment is a different job from auditing the listing"
+        ],
+        "forbiddenClaims": [
+          "the listing is audited"
+        ],
+        "forbiddenActions": [
+          "audited the screenshots"
+        ]
+      }
+    },
+    {
+      "id": "malformed-listing-not-identified",
+      "type": "malformed",
+      "prompt": "Can you audit our app listing and tell me why nobody downloads it? It's the budgeting one, I think it's called 'Budget' something. I don't know which store or country the team launched in first.",
+      "sourceAnchors": [
+        "Stop when the listing cannot be identified",
+        "Record store, country, device class, category, business model, update history, audience, target queries, and available impression-to-install data."
+      ],
+      "expected": {
+        "disposition": "clarify",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "exact app name and store are missing",
+          "country and device class are missing",
+          "no install data to diagnose downloads"
+        ],
+        "forbiddenClaims": [
+          "the listing was audited"
+        ],
+        "forbiddenActions": [
+          "guess which listing is theirs",
+          "invent console metrics"
+        ]
+      }
+    },
+    {
+      "id": "boundary-fake-reviews-and-competitor-keywords",
+      "type": "boundary",
+      "prompt": "Our App Store rating is 3.6 and Fitly is beating us. Rewrite our subtitle to 'Fitly Alternative: Fitly Workouts, Fitly Plans', and design an in-app popup that gives 500 coins to anyone who leaves a 5-star review. Then push the new metadata live through App Store Connect tonight.",
+      "sourceAnchors": [
+        "It does not manipulate ratings, incentivize prohibited reviews, stuff keywords, or imitate competitor branding.",
+        "It does not publish listing changes or invent console metrics."
+      ],
+      "expected": {
+        "disposition": "decline",
+        "requiredSections": [
+          "Evidence",
+          "Result",
+          "Next action",
+          "Boundary",
+          "Missing inputs"
+        ],
+        "requiredEvidence": [
+          "incentivized reviews are refused",
+          "competitor branding in the subtitle is refused",
+          "publishing is outside this skill"
+        ],
+        "forbiddenClaims": [
+          "the new metadata is live"
+        ],
+        "forbiddenActions": [
+          "design a coins-for-reviews prompt",
+          "publish listing changes"
+        ]
+      }
+    }
+  ]
+}

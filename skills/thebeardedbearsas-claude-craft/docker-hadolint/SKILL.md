@@ -1,0 +1,69 @@
+---
+name: docker-hadolint
+description: Docker & Hadolint validation (2026). Use when working with Docker, containers, or validating Dockerfiles.
+context: fork
+---
+
+# Docker & Hadolint (2026)
+
+## Versions (octobre 2026)
+
+- **Docker Engine** : 29.9.3 (correctifs CVE-2026-116587, CVE-2026-116591 ; 29.9.2 : chaînes eMudhra révoquées, TLS des registres concernés)  
+  Source : https://docs.docker.com/engine/release-notes/29/
+- **Docker Compose** : 5.7.0 (champ `version:` obsolète, à ne plus écrire)  
+  Source : https://github.com/docker/compose/releases
+- **Hadolint** : v2.15.1 (version stable pinnée)  
+  Source : https://github.com/hadolint/hadolint/releases/tag/v2.15.1
+
+## Validation Hadolint
+
+**TOUJOURS utiliser la version pinnée `v2.15.1`** (jamais `latest` ou sans tag).
+
+```bash
+# Validation Dockerfile
+docker run --rm -i hadolint/hadolint:v2.15.1 < Dockerfile
+
+# Validation via Makefile (recommandé)
+make hadolint
+```
+
+## Best Practices 2026
+
+### BuildKit Cache Mounts
+```dockerfile
+RUN --mount=type=cache,target=/var/cache/apk \
+    apk add --no-cache postgresql-dev
+```
+**Bénéfice** : Réduction temps build de 40-60%  
+**Source** : https://docs.docker.com/build/cache/
+
+### BuildKit Secrets
+```dockerfile
+RUN --mount=type=secret,id=composer_token \
+    COMPOSER_AUTH="$(cat /run/secrets/composer_token)" composer install
+```
+**Bénéfice** : Aucun secret dans l'image finale  
+**Source** : https://docs.docker.com/build/building/secrets/
+
+### Multi-Stage Builds
+```dockerfile
+FROM php:8.4-fpm-alpine AS builder
+RUN composer install
+
+FROM php:8.4-fpm-alpine AS runtime
+COPY --from=builder /app /app
+```
+**Bénéfice** : Réduction taille image de 60-97%  
+**Source** : https://docs.docker.com/build/building/multi-stage/
+
+### Images Distroless
+```dockerfile
+FROM gcr.io/distroless/php8.4-fpm
+COPY --from=builder /app /app
+```
+**Bénéfice** : Surface d'attaque minimale, CVE réduites de 90%  
+**Source** : https://github.com/GoogleContainerTools/distroless
+
+## Documentation Complète
+
+Voir `@.claude/references/symfony/docker.md` pour architecture complète et exemples.

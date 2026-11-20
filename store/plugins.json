@@ -388,19 +388,6 @@
       ]
     },
     {
-      "source": "aws",
-      "name": "aws-skills",
-      "displayName": "AWS",
-      "author": "Amazon Web Services",
-      "category": "Code",
-      "description": "{N} skills for AWS: getting started with the SDK, Lambda with Durable Functions and microVMs, Elastic Beanstalk, Amplify workflows, deployment, document services and planning a use case.",
-      "exampleQueries": [
-        "Set up the AWS SDK in this project",
-        "Model this workflow with Lambda Durable Functions",
-        "Plan this feature for AWS"
-      ]
-    },
-    {
       "source": "dotnet",
       "name": "dotnet-skills",
       "displayName": ".NET",
@@ -466,6 +453,45 @@
       ]
     },
     {
+      "source": "aws",
+      "name": "aws-skills",
+      "displayName": "AWS",
+      "author": "Amazon Web Services",
+      "category": "Code",
+      "description": "{N} skills for AWS: getting started with the SDK, Lambda with Durable Functions and microVMs, Elastic Beanstalk, Amplify workflows, deployment, document services and planning a use case.",
+      "exampleQueries": [
+        "Set up the AWS SDK in this project",
+        "Model this workflow with Lambda Durable Functions",
+        "Plan this feature for AWS"
+      ]
+    },
+    {
+      "source": "builderio",
+      "name": "builderio-skills",
+      "displayName": "Builder.io",
+      "author": "Builder.io",
+      "category": "Code",
+      "description": "{N} skills for working with Builder.io and with agent harnesses: visual editing and visual plans, reading the docs before coding, remix and rewind, keeping a plan within its limits, and connecting a web app to the MCP server.",
+      "exampleQueries": [
+        "Make a visual plan for this page",
+        "Rewind this change and try another way",
+        "Read the docs for this component before I use it"
+      ]
+    },
+    {
+      "source": "antfu",
+      "name": "vue-vite-skills",
+      "displayName": "Vue and Vite",
+      "author": "Anthony Fu",
+      "category": "Code",
+      "description": "{N} skills from Anthony Fu for the Vue and Vite ecosystem: Nuxt, Nitro, Pinia, Unocss, Vitest and pnpm, together with ways of working with the code itself.",
+      "exampleQueries": [
+        "Set up Nuxt for this project",
+        "Organise this Pinia store",
+        "Speed up this Vite build"
+      ]
+    },
+    {
       "source": "deepmind",
       "name": "deepmind-skills",
       "displayName": "Google DeepMind",
@@ -501,32 +527,6 @@
         "Write a Vitest test for this component",
         "Turn this OpenAPI spec into a Postman collection",
         "Set up a mobile test pipeline for this app"
-      ]
-    },
-    {
-      "source": "builderio",
-      "name": "builderio-skills",
-      "displayName": "Builder.io",
-      "author": "Builder.io",
-      "category": "Code",
-      "description": "{N} skills for working with Builder.io and with agent harnesses: visual editing and visual plans, reading the docs before coding, remix and rewind, keeping a plan within its limits, and connecting a web app to the MCP server.",
-      "exampleQueries": [
-        "Make a visual plan for this page",
-        "Rewind this change and try another way",
-        "Read the docs for this component before I use it"
-      ]
-    },
-    {
-      "source": "antfu",
-      "name": "vue-vite-skills",
-      "displayName": "Vue and Vite",
-      "author": "Anthony Fu",
-      "category": "Code",
-      "description": "{N} skills from Anthony Fu for the Vue and Vite ecosystem: Nuxt, Nitro, Pinia, Unocss, Vitest and pnpm, together with ways of working with the code itself.",
-      "exampleQueries": [
-        "Set up Nuxt for this project",
-        "Organise this Pinia store",
-        "Speed up this Vite build"
       ]
     },
     {
@@ -569,56 +569,6 @@
       ]
     },
     {
-      "source": "docker",
-      "name": "docker-skills",
-      "displayName": "Docker",
-      "author": "Docker",
-      "category": "Code",
-      "description": "{N} skills for Docker: running and deploying containers, agent configuration, sandboxes with their network and credentials, guardrails against destructive commands, and the documentation.",
-      "exampleQueries": [
-        "Run this container with my change",
-        "Set up a sandbox for this agent",
-        "Is this Docker command destructive?"
-      ]
-    },
-    {
-      "source": "twilio",
-      "name": "twilio-skills",
-      "displayName": "Twilio",
-      "author": "Twilio",
-      "category": "Code",
-      "description": "{N} skill for Twilio: moving a messaging integration over to Verify.",
-      "exampleQueries": [
-        "Migrate this messaging code to Twilio Verify"
-      ]
-    },
-    {
-      "source": "gworkspace",
-      "name": "google-workspace-skills",
-      "displayName": "Google Workspace",
-      "author": "Google",
-      "category": "Productivity",
-      "description": "{N} skills for Google Workspace: Drive, Docs, Sheets and uploads, Gmail, Calendar and agenda, Classroom, Chat, Admin reports and the events API.",
-      "exampleQueries": [
-        "Read the latest Gmail about this project",
-        "Put this on the team calendar",
-        "Pull this sheet into the report"
-      ]
-    },
-    {
-      "source": "gagents",
-      "name": "google-agents-skills",
-      "displayName": "Google Agents CLI",
-      "author": "Google",
-      "category": "Code",
-      "description": "{N} skills for the Google Agents CLI: scaffolding an ADK project, writing agent code and workflows, evaluating and observing them, deploying and publishing, and the Claude and LangChain templates.",
-      "exampleQueries": [
-        "Scaffold an ADK agent project",
-        "Evaluate this agent before I deploy it",
-        "Deploy this agent to Google Cloud"
-      ]
-    },
-    {
       "source": "prisma",
       "name": "prisma-skills",
       "displayName": "Prisma",
@@ -629,57 +579,6 @@
         "Set up Prisma against this database",
         "Upgrade this project to Prisma v7",
         "Write the query for this model"
-      ]
-    },
-    {
-      "source": "playwright",
-      "name": "playwright-skills",
-      "displayName": "Playwright",
-      "author": "Microsoft",
-      "category": "Code",
-      "description": "{N} skills for Playwright: driving the browser from the command line, reading a trace, making sense of test results, picking a change back into the right branch, and the release notes.",
-      "exampleQueries": [
-        "Run this test and show me the trace",
-        "Pick this fix into the right branch",
-        "What changed in this Playwright release?"
-      ]
-    },
-    {
-      "source": "clapoff",
-      "name": "anthropic-plugins-skills",
-      "displayName": "Anthropic Plugins",
-      "author": "Anthropic",
-      "category": "Code",
-      "description": "{N} skills from Anthropic’s own plugin collection: working with Discord, iMessage and Telegram, building MCP servers and apps, security review, plugin and Skill development, and the frontend and maths plugins.",
-      "exampleQueries": [
-        "Build an MCP server for this API",
-        "Review this plugin for security",
-        "Set up the Telegram integration"
-      ]
-    },
-    {
-      "source": "ghcopilot",
-      "name": "github-copilot-skills",
-      "displayName": "GitHub Copilot",
-      "author": "GitHub",
-      "category": "Code",
-      "description": "{N} skills from GitHub’s Copilot collection: API breaking-change detection, agent governance and evaluation, OWASP and supply-chain review, accessibility, and a wide set of framework and platform ones.",
-      "exampleQueries": [
-        "Did this change break the API?",
-        "Review this repo against the OWASP agentic guidance",
-        "Generate the instructions for this repo"
-      ]
-    },
-    {
-      "source": "alibaba",
-      "name": "alibaba-code-review-skills",
-      "displayName": "Alibaba Code Review",
-      "author": "Alibaba",
-      "category": "Code",
-      "description": "{N} skills for Alibaba’s open code review: running a review and handing one to another agent.",
-      "exampleQueries": [
-        "Run a code review on this branch",
-        "Delegate this review to another agent"
       ]
     },
     {
@@ -709,16 +608,16 @@
       ]
     },
     {
-      "source": "coupler",
-      "name": "coupler-skills",
-      "displayName": "Coupler",
-      "author": "Coupler",
+      "source": "n8n",
+      "name": "n8n-skills",
+      "displayName": "n8n Workflows",
+      "author": "czlonkowski",
       "category": "Code",
-      "description": "{N} skills for Coupler: connecting apps and data without hand-written glue, ecommerce and inventory reporting, ad spend and traffic analysis, and building data flows.",
+      "description": "{N} skills for n8n: writing nodes and code steps in JavaScript and Python, expressions, tools, binary and data handling, error handling, MCP tools, agents and multi-instance setups.",
       "exampleQueries": [
-        "Sync the orders into this sheet",
-        "Set up a flow between these two apps",
-        "Build the weekly ad spend report"
+        "Write the JavaScript for this n8n node",
+        "Fix this n8n expression",
+        "Set up an MCP tool in this workflow"
       ]
     },
     {
@@ -731,6 +630,19 @@
       "exampleQueries": [
         "Open this site and pull the data I need",
         "Write a new Skill for this browser flow"
+      ]
+    },
+    {
+      "source": "coupler",
+      "name": "coupler-skills",
+      "displayName": "Coupler",
+      "author": "Coupler",
+      "category": "Code",
+      "description": "{N} skills for Coupler: connecting apps and data without hand-written glue, ecommerce and inventory reporting, ad spend and traffic analysis, and building data flows.",
+      "exampleQueries": [
+        "Sync the orders into this sheet",
+        "Set up a flow between these two apps",
+        "Build the weekly ad spend report"
       ]
     },
     {
@@ -747,16 +659,103 @@
       ]
     },
     {
-      "source": "n8n",
-      "name": "n8n-skills",
-      "displayName": "n8n Workflows",
-      "author": "czlonkowski",
+      "source": "metalbear",
+      "name": "metalbear-skills",
+      "displayName": "MetalBear",
+      "author": "MetalBear",
       "category": "Code",
-      "description": "{N} skills for n8n: writing nodes and code steps in JavaScript and Python, expressions, tools, binary and data handling, error handling, MCP tools, agents and multi-instance setups.",
+      "description": "{N} skills for mirrord: running against production, local Kafka and Temporal, database branching, header propagation, chaos testing, the operator and the quickstart.",
       "exampleQueries": [
-        "Write the JavaScript for this n8n node",
-        "Fix this n8n expression",
-        "Set up an MCP tool in this workflow"
+        "Run this against the real service locally",
+        "Branch the database for this test",
+        "Test what happens when this service fails"
+      ]
+    },
+    {
+      "source": "janestreet",
+      "name": "jane-street-skills",
+      "displayName": "Jane Street",
+      "author": "Jane Street",
+      "category": "Code",
+      "description": "{N} skill from Jane Street: a Socratic tutor that asks you the questions instead of handing you the answer.",
+      "exampleQueries": [
+        "Quiz me on this topic",
+        "Ask me questions until I understand it"
+      ]
+    },
+    {
+      "source": "ghcopilot",
+      "name": "github-copilot-skills",
+      "displayName": "GitHub Copilot",
+      "author": "GitHub",
+      "category": "Code",
+      "description": "{N} skills from GitHub’s Copilot collection: API breaking-change detection, agent governance and evaluation, OWASP and supply-chain review, accessibility, and a wide set of framework and platform ones.",
+      "exampleQueries": [
+        "Did this change break the API?",
+        "Review this repo against the OWASP agentic guidance",
+        "Generate the instructions for this repo"
+      ]
+    },
+    {
+      "source": "gagents",
+      "name": "google-agents-skills",
+      "displayName": "Google Agents CLI",
+      "author": "Google",
+      "category": "Code",
+      "description": "{N} skills for the Google Agents CLI: scaffolding an ADK project, writing agent code and workflows, evaluating and observing them, deploying and publishing, and the Claude and LangChain templates.",
+      "exampleQueries": [
+        "Scaffold an ADK agent project",
+        "Evaluate this agent before I deploy it",
+        "Deploy this agent to Google Cloud"
+      ]
+    },
+    {
+      "source": "gworkspace",
+      "name": "google-workspace-skills",
+      "displayName": "Google Workspace",
+      "author": "Google",
+      "category": "Productivity",
+      "description": "{N} skills for Google Workspace: Drive, Docs, Sheets and uploads, Gmail, Calendar and agenda, Classroom, Chat, Admin reports and the events API.",
+      "exampleQueries": [
+        "Read the latest Gmail about this project",
+        "Put this on the team calendar",
+        "Pull this sheet into the report"
+      ]
+    },
+    {
+      "source": "alibaba",
+      "name": "alibaba-code-review-skills",
+      "displayName": "Alibaba Code Review",
+      "author": "Alibaba",
+      "category": "Code",
+      "description": "{N} skills for Alibaba’s open code review: running a review and handing one to another agent.",
+      "exampleQueries": [
+        "Run a code review on this branch",
+        "Delegate this review to another agent"
+      ]
+    },
+    {
+      "source": "rea",
+      "name": "reverse-engineering-skills",
+      "displayName": "Reverse Engineering",
+      "author": "Morluto",
+      "category": "Code",
+      "description": "{N} skill for reverse engineering: working out how an application behaves from the outside, from binaries, network traffic and data.",
+      "exampleQueries": [
+        "Work out how this app works",
+        "What is this binary doing?"
+      ]
+    },
+    {
+      "source": "contexteng",
+      "name": "context-engineering-skills",
+      "displayName": "Context Engineering",
+      "author": "Muratcan Koylan",
+      "category": "Code",
+      "description": "{N} skills for context engineering: managing a long context, compressing it, spotting degradation, latent briefing, long-horizon prompting and self-improvement loops.",
+      "exampleQueries": [
+        "Compress this context without losing the decisions",
+        "This session is getting long — what should I drop?"
       ]
     },
     {
@@ -772,28 +771,15 @@
       ]
     },
     {
-      "source": "devsec",
-      "name": "devops-security-skills",
-      "displayName": "DevOps and Security",
-      "author": "BagelHole",
+      "source": "skillspector",
+      "name": "skill-inspector-skills",
+      "displayName": "NVIDIA Skill Inspector",
+      "author": "NVIDIA",
       "category": "Code",
-      "description": "{N} skills for DevOps, security and compliance: CI/CD, containers, orchestration, observability, platforms and release, infrastructure as code, cloud setups for AWS, Azure, GCP and Cloudflare, databases, networking, secrets, scanning, hardening and audit logging.",
+      "description": "{N} skill from NVIDIA: inspecting agent Skills for vulnerabilities and unsafe instructions before you run them.",
       "exampleQueries": [
-        "Set up CI/CD for this service",
-        "Harden this server",
-        "Write the audit log for this action"
-      ]
-    },
-    {
-      "source": "contexteng",
-      "name": "context-engineering-skills",
-      "displayName": "Context Engineering",
-      "author": "Muratcan Koylan",
-      "category": "Code",
-      "description": "{N} skills for context engineering: managing a long context, compressing it, spotting degradation, latent briefing, long-horizon prompting and self-improvement loops.",
-      "exampleQueries": [
-        "Compress this context without losing the decisions",
-        "This session is getting long — what should I drop?"
+        "Check this Skill before I install it",
+        "Does this Skill do anything unsafe?"
       ]
     },
     {
@@ -810,52 +796,66 @@
       ]
     },
     {
-      "source": "skillspector",
-      "name": "skill-inspector-skills",
-      "displayName": "NVIDIA Skill Inspector",
-      "author": "NVIDIA",
+      "source": "devsec",
+      "name": "devops-security-skills",
+      "displayName": "DevOps and Security",
+      "author": "BagelHole",
       "category": "Code",
-      "description": "{N} skill from NVIDIA: inspecting agent Skills for vulnerabilities and unsafe instructions before you run them.",
+      "description": "{N} skills for DevOps, security and compliance: CI/CD, containers, orchestration, observability, platforms and release, infrastructure as code, cloud setups for AWS, Azure, GCP and Cloudflare, databases, networking, secrets, scanning, hardening and audit logging.",
       "exampleQueries": [
-        "Check this Skill before I install it",
-        "Does this Skill do anything unsafe?"
+        "Set up CI/CD for this service",
+        "Harden this server",
+        "Write the audit log for this action"
       ]
     },
     {
-      "source": "rea",
-      "name": "reverse-engineering-skills",
-      "displayName": "Reverse Engineering",
-      "author": "Morluto",
+      "source": "twilio",
+      "name": "twilio-skills",
+      "displayName": "Twilio",
+      "author": "Twilio",
       "category": "Code",
-      "description": "{N} skill for reverse engineering: working out how an application behaves from the outside, from binaries, network traffic and data.",
+      "description": "{N} skill for Twilio: moving a messaging integration over to Verify.",
       "exampleQueries": [
-        "Work out how this app works",
-        "What is this binary doing?"
+        "Migrate this messaging code to Twilio Verify"
       ]
     },
     {
-      "source": "janestreet",
-      "name": "jane-street-skills",
-      "displayName": "Jane Street",
-      "author": "Jane Street",
+      "source": "docker",
+      "name": "docker-skills",
+      "displayName": "Docker",
+      "author": "Docker",
       "category": "Code",
-      "description": "{N} skill from Jane Street: a Socratic tutor that asks you the questions instead of handing you the answer.",
+      "description": "{N} skills for Docker: running and deploying containers, agent configuration, sandboxes with their network and credentials, guardrails against destructive commands, and the documentation.",
       "exampleQueries": [
-        "Quiz me on this topic",
-        "Ask me questions until I understand it"
+        "Run this container with my change",
+        "Set up a sandbox for this agent",
+        "Is this Docker command destructive?"
       ]
     },
     {
-      "source": "metalbear",
-      "name": "metalbear-skills",
-      "displayName": "MetalBear",
-      "author": "MetalBear",
+      "source": "playwright",
+      "name": "playwright-skills",
+      "displayName": "Playwright",
+      "author": "Microsoft",
       "category": "Code",
-      "description": "{N} skills for mirrord: running against production, local Kafka and Temporal, database branching, header propagation, chaos testing, the operator and the quickstart.",
+      "description": "{N} skills for Playwright: driving the browser from the command line, reading a trace, making sense of test results, picking a change back into the right branch, and the release notes.",
       "exampleQueries": [
-        "Run this against the real service locally",
-        "Branch the database for this test",
-        "Test what happens when this service fails"
+        "Run this test and show me the trace",
+        "Pick this fix into the right branch",
+        "What changed in this Playwright release?"
+      ]
+    },
+    {
+      "source": "clapoff",
+      "name": "anthropic-plugins-skills",
+      "displayName": "Anthropic Plugins",
+      "author": "Anthropic",
+      "category": "Code",
+      "description": "{N} skills from Anthropic’s own plugin collection: working with Discord, iMessage and Telegram, building MCP servers and apps, security review, plugin and Skill development, and the frontend and maths plugins.",
+      "exampleQueries": [
+        "Build an MCP server for this API",
+        "Review this plugin for security",
+        "Set up the Telegram integration"
       ]
     },
     {
@@ -1053,6 +1053,42 @@
       ]
     },
     {
+      "source": "playwrightpy",
+      "name": "playwright-python-skills",
+      "displayName": "Playwright for Python",
+      "author": "Microsoft",
+      "category": "Code",
+      "description": "{N} skills for Playwright in Python: driving the browser, reading traces and making sense of test results.",
+      "exampleQueries": [
+        "Run this test and show the trace",
+        "Read this Playwright failure"
+      ]
+    },
+    {
+      "source": "gitlab",
+      "name": "gitlab-skills",
+      "displayName": "GitLab",
+      "author": "GitLab",
+      "category": "Code",
+      "description": "{N} skills for working with GitLab: its API, its CI and the conventions of its own codebase.",
+      "exampleQueries": [
+        "Use the GitLab API for this",
+        "How does this GitLab repo do it?"
+      ]
+    },
+    {
+      "source": "cfagents",
+      "name": "cloudflare-agents-skills",
+      "displayName": "Cloudflare Agents",
+      "author": "Cloudflare",
+      "category": "Code",
+      "description": "{N} skills for the Cloudflare Agents SDK: building agents that run on Workers, with state and realtime.",
+      "exampleQueries": [
+        "Build an agent on Cloudflare Agents",
+        "Add state to this agent"
+      ]
+    },
+    {
       "source": "azspec",
       "name": "azure-rest-api-skills",
       "displayName": "Azure REST APIs",
@@ -1122,42 +1158,6 @@
       "exampleQueries": [
         "Trace this LLM call",
         "Set up Langfuse for this service"
-      ]
-    },
-    {
-      "source": "playwrightpy",
-      "name": "playwright-python-skills",
-      "displayName": "Playwright for Python",
-      "author": "Microsoft",
-      "category": "Code",
-      "description": "{N} skills for Playwright in Python: driving the browser, reading traces and making sense of test results.",
-      "exampleQueries": [
-        "Run this test and show the trace",
-        "Read this Playwright failure"
-      ]
-    },
-    {
-      "source": "gitlab",
-      "name": "gitlab-skills",
-      "displayName": "GitLab",
-      "author": "GitLab",
-      "category": "Code",
-      "description": "{N} skills for working with GitLab: its API, its CI and the conventions of its own codebase.",
-      "exampleQueries": [
-        "Use the GitLab API for this",
-        "How does this GitLab repo do it?"
-      ]
-    },
-    {
-      "source": "cfagents",
-      "name": "cloudflare-agents-skills",
-      "displayName": "Cloudflare Agents",
-      "author": "Cloudflare",
-      "category": "Code",
-      "description": "{N} skills for the Cloudflare Agents SDK: building agents that run on Workers, with state and realtime.",
-      "exampleQueries": [
-        "Build an agent on Cloudflare Agents",
-        "Add state to this agent"
       ]
     },
     {
@@ -1754,6 +1754,18 @@
       ]
     },
     {
+      "source": "swiftconc",
+      "name": "swift-concurrency",
+      "displayName": "Swift Concurrency",
+      "author": "AvdLee",
+      "category": "Code",
+      "description": "{N} skill for Swift concurrency: diagnosing data races and Sendable warnings, moving callback code to async/await, and guiding a Swift 6 migration.",
+      "exampleQueries": [
+        "This actor is not Sendable, what is wrong?",
+        "Move this callback API to async/await"
+      ]
+    },
+    {
       "source": "kicad",
       "name": "kicad-skills",
       "displayName": "KiCad",
@@ -1981,18 +1993,6 @@
       ]
     },
     {
-      "source": "heygen",
-      "name": "hyperframes",
-      "displayName": "HyperFrames",
-      "author": "HeyGen",
-      "category": "Studio",
-      "description": "{N} skills for HyperFrames: describing a video, editing it frame by frame and building an editable project.",
-      "exampleQueries": [
-        "Turn this description into a video project",
-        "Edit this scene"
-      ]
-    },
-    {
       "source": "mblode",
       "name": "agent-skills",
       "displayName": "Agent Skills",
@@ -2122,18 +2122,6 @@
       "exampleQueries": [
         "Orchestrate this multi-step build",
         "Break this project into deterministic tasks"
-      ]
-    },
-    {
-      "source": "swiftconc",
-      "name": "swift-concurrency",
-      "displayName": "Swift Concurrency",
-      "author": "AvdLee",
-      "category": "Code",
-      "description": "{N} skill for Swift concurrency: diagnosing data races and Sendable warnings, moving callback code to async/await, and guiding a Swift 6 migration.",
-      "exampleQueries": [
-        "This actor is not Sendable, what is wrong?",
-        "Move this callback API to async/await"
       ]
     },
     {
@@ -2447,6 +2435,1730 @@
         "Review this deployment plan",
         "Set up the project structure for this repo"
       ]
+    },
+    {
+      "source": "skillexchange",
+      "name": "agentskillexchange-skills",
+      "displayName": "Agentskillexchange Skills",
+      "author": "agentskillexchange",
+      "category": "Code",
+      "description": "{N} skills. Curated, trusted open catalog of AI agent skills for OpenClaw, Claude Code, Codex, GitHub Copilot, Gemini, Cursor, MCP, LangChain, and more. Browse, install. Covers ab test agent skills mcp changes with caliper, academic paper citation network mapper and acf custom fields rest exposer."
+    },
+    {
+      "source": "agentmaster",
+      "name": "leoyeai-agent-master-skills",
+      "displayName": "Agent Master Skills",
+      "author": "LeoYeAI",
+      "category": "Design & Sites",
+      "description": "{N} skills. 🧠 Curated collection of 2700+ best agent skills — AI, coding, marketing, design, finance and more. Harness-agnostic: works with Claude Code, Codex, Cursor. Covers 0codekit, 0xarchive and 12 factor apps."
+    },
+    {
+      "source": "reactive-resume-reactive-resume",
+      "name": "reactive-resume-reactive-resume",
+      "displayName": "Reactive Resume",
+      "author": "reactive-resume",
+      "category": "Other",
+      "description": "{N} skills. A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today. Covers accomplishment inventory, application answers and career change resume."
+    },
+    {
+      "source": "yikart-aitoearn",
+      "name": "yikart-aitoearn",
+      "displayName": "AiToEarn",
+      "author": "yikart",
+      "category": "Business",
+      "description": "{N} skills. Let's use AI to Earn. Covers aitoearn, analyzing videos and browser operations."
+    },
+    {
+      "source": "marysatasselshaped667-skills-collection-1",
+      "name": "marysatasselshaped667-skills-collection-1",
+      "displayName": "Skills Collection 1",
+      "author": "marysatasselshaped667",
+      "category": "Code",
+      "description": "{N} skills. Organize AI agent skills, scripts, and references in scalable folders for fast reuse across engineering, research, writing, and automation tasks. Covers algo, alpha and assets."
+    },
+    {
+      "source": "plurigrid-asi",
+      "name": "plurigrid-asi",
+      "displayName": "Asi",
+      "author": "plurigrid",
+      "category": "Other",
+      "description": "{N} skills. Everything is topological chemputer. Covers abductive repl, acsets algebraic databases and acsets relational thinking."
+    },
+    {
+      "source": "melodic-software-claude-code-plugins",
+      "name": "melodic-software-claude-code-plugins",
+      "displayName": "Claude Code Plugins",
+      "author": "melodic-software",
+      "category": "Code",
+      "description": "{N} skills. Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers. Covers control shop and dometrain grounding."
+    },
+    {
+      "source": "gtmagents-gtm-agents",
+      "name": "gtmagents-gtm-agents",
+      "displayName": "Gtm Agents",
+      "author": "gtmagents",
+      "category": "Science & Healthcare",
+      "description": "{N} skills. Production-ready collection of GTM agents and specialized skills for claude code. Covers sales, marketing, customer success, and revenue operations workflows. Covers account based blueprint, account health framework and account tiering."
+    },
+    {
+      "source": "boshu2-agentops",
+      "name": "boshu2-agentops",
+      "displayName": "Agentops",
+      "author": "boshu2",
+      "category": "Code",
+      "description": "{N} skills. DevOps discipline for AI coding agents: shape the work, track it as a graph, and get each change judged by a context that didn't write it. Covers using gc."
+    },
+    {
+      "source": "peacezha-hpclaw",
+      "name": "peacezha-hpclaw",
+      "displayName": "HPClaw",
+      "author": "peacezha",
+      "category": "Other",
+      "description": "{N} skills. TRACE — AI-native HPC workbench for supervised research workflows, schedulers, resilient transfers and reproducible execution. Covers analysis report, bio admet prediction and bio alignment amplicon clipping."
+    },
+    {
+      "source": "levnikolaevich-claude-code-skills",
+      "name": "levnikolaevich-claude-code-skills",
+      "displayName": "Claude Code Skills",
+      "author": "levnikolaevich",
+      "category": "Design & Sites",
+      "description": "{N} skills. Standalone skills for Claude Code and Codex: product discovery, architecture, implementation, technical foundations, reviews and delivery, with explicit scope. Covers ln 11 opportunity evaluator, ln 12 product requirements builder and ln 13 interaction design builder."
+    },
+    {
+      "source": "aj-geddes-useful-ai-prompts",
+      "name": "aj-geddes-useful-ai-prompts",
+      "displayName": "Useful Ai Prompts",
+      "author": "aj-geddes",
+      "category": "Business",
+      "description": "{N} skills. A curated collection of useful AI prompts for various tasks and use cases. Covers access control rbac, agile sprint planning and alert management."
+    },
+    {
+      "source": "davepoon-buildwithclaude",
+      "name": "davepoon-buildwithclaude",
+      "displayName": "Buildwithclaude",
+      "author": "davepoon",
+      "category": "Code",
+      "description": "{N} skills. A single hub to find Claude Skills, Agents, Commands, Hooks, Plugins, and Marketplace collections to extend Claude Code, Claude Desktop, Agent SDK and OpenClaw. Covers about atlantic home mortgage, activecampaign automation and ad angle research."
+    },
+    {
+      "source": "outlinedriven-odin-claude-plugin",
+      "name": "outlinedriven-odin-claude-plugin",
+      "displayName": "Odin Claude Plugin",
+      "author": "OutlineDriven",
+      "category": "Code",
+      "description": "{N} skills. Outline-Driven Development for Claude Code - 46 agents, 25+ skills, diagram-first methodology, AST-based editing, atomic commits. Covers abi and calling conventions, abstract well and adc dac baremetal."
+    },
+    {
+      "source": "dylantarre-animation-principles",
+      "name": "dylantarre-animation-principles",
+      "displayName": "Animation Principles",
+      "author": "dylantarre",
+      "category": "Studio",
+      "description": "{N} skills. Disney's 12 Animation Principles - Claude Code Skill Marketplace. Covers 3d spatial, accessibility advocate and accessibility issues."
+    },
+    {
+      "source": "secondsky-claude-skills",
+      "name": "secondsky-claude-skills",
+      "displayName": "Secondsky Claude Skills",
+      "author": "secondsky",
+      "category": "Design & Sites",
+      "description": "{N} skills. Production-ready skills for Claude Code CLI - Cloudflare, React, Tailwind v4, and AI integrations. Covers aceternity ui, api design principles and api filtering sorting."
+    },
+    {
+      "source": "athola-claude-night-market",
+      "name": "athola-claude-night-market",
+      "displayName": "Claude Night Market",
+      "author": "athola",
+      "category": "Code",
+      "description": "{N} skills. 23 Claude Code plugins: TDD enforcement hooks, git/PR workflows, spec-driven development, code review, project lifecycle, fix-from-error, maintenance. Covers action first output, additive bias defense and agent expenditure."
+    },
+    {
+      "source": "gptomics-bioskills",
+      "name": "gptomics-bioskills",
+      "displayName": "BioSkills",
+      "author": "GPTomics",
+      "category": "Code",
+      "description": "{N} skills. A set of SKILLS.md for doing bioinformatics with agents like claude code. Covers bio metagenomics contamination controls, bio methylation array preprocessing and bio methylation array qc filtering."
+    },
+    {
+      "source": "nwave-ai-nwave",
+      "name": "nwave-ai-nwave",
+      "displayName": "NWave",
+      "author": "nWave-ai",
+      "category": "Code",
+      "description": "{N} skills. AI agents that guide you from idea to working code, with you in control at every step. Covers nw ab agent template, nw ab anti patterns and nw ab create agent."
+    },
+    {
+      "source": "tekkiiiii-the-agency",
+      "name": "tekkiiiii-the-agency",
+      "displayName": "The Agency",
+      "author": "Tekkiiiii",
+      "category": "Design & Sites",
+      "description": "{N} skills. Claude Code, fixed for everyone. Memory that survives sessions, agents that finish what they start, QA gates before 'done', the right model for each job. 235+. Covers agent dispatch, auto researcher and awesome design md."
+    },
+    {
+      "source": "onewave-ai-claude-skills",
+      "name": "onewave-ai-claude-skills",
+      "displayName": "OneWave AI Claude Skills",
+      "author": "OneWave-AI",
+      "category": "Design & Sites",
+      "description": "{N} skills. 200+ production-ready Claude Code skills for sales, marketing, design, engineering, and AI agent architecture. Built and maintained by OneWave AI. Covers accessibility auditor, agent army and agent swarm deployer."
+    },
+    {
+      "source": "tony363-superclaude",
+      "name": "tony363-superclaude",
+      "displayName": "SuperClaude",
+      "author": "Tony363",
+      "category": "Code",
+      "description": "{N} skills. A configuration framework that enhances Claude Code with specialized commands, cognitive personas, and development methodologies. Covers gitnexus cli, gitnexus debugging and gitnexus exploring."
+    },
+    {
+      "source": "jezweb-claude-skills",
+      "name": "jezweb-claude-skills",
+      "displayName": "Jezweb Claude Skills",
+      "author": "jezweb",
+      "category": "Design & Sites",
+      "description": "{N} skills. Skills for Claude Code CLI such as full stack dev Cloudflare, React, Tailwind v4, and AI integrations. Covers ai image generator, app docs and aussie business english."
+    },
+    {
+      "source": "oliver-kriska-claude-elixir-phoenix",
+      "name": "oliver-kriska-claude-elixir-phoenix",
+      "displayName": "Claude Elixir Phoenix",
+      "author": "oliver-kriska",
+      "category": "Code",
+      "description": "{N} skills. Claude Code plugin for Elixir/Phoenix/LiveView — 26 specialist agents, Iron Laws enforcement, and Tidewave MCP integration. Plan features with parallel. Covers ash framework, assigns and assigns audit."
+    },
+    {
+      "source": "existential-birds-beagle",
+      "name": "existential-birds-beagle",
+      "displayName": "Beagle",
+      "author": "existential-birds",
+      "category": "Code",
+      "description": "{N} skills. Agent Skills marketplace: framework-aware skills for code review, documentation, test-plan generation, AI-writing detection, architectural analysis, and git. Covers adr decision extraction, agent architecture analysis and ai elements."
+    },
+    {
+      "source": "ethanyoq-skill-hub",
+      "name": "ethanyoq-skill-hub",
+      "displayName": "Skill Hub",
+      "author": "EthanYoQ",
+      "category": "Code",
+      "description": "{N} skills. Reusable AI agent skills for Codex, Claude Code etc. — AI coding workflows, SKILL.md templates, and automation practices. 面向 Codex、Claude Code等agents 的可复用 AI. Covers aact bulk trials, adaptive quality gate and add changeset."
+    },
+    {
+      "source": "josiahsiegel-claude-plugin-marketplace",
+      "name": "josiahsiegel-claude-plugin-marketplace",
+      "displayName": "Claude Plugin Marketplace",
+      "author": "JosiahSiegel",
+      "category": "Code",
+      "description": "{N} skills from the JosiahSiegel/claude-plugin-marketplace repository. Covers adf master, adf ml analytics and adf validation rules."
+    },
+    {
+      "source": "djankies-claude-configs",
+      "name": "djankies-claude-configs",
+      "displayName": "Claude Configs",
+      "author": "djankies",
+      "category": "Other",
+      "description": "{N} skills from the djankies/claude-configs repository. Covers auditing dependencies, avoiding angle bracket assertions and avoiding any types."
+    },
+    {
+      "source": "tobihagemann-turbo",
+      "name": "tobihagemann-turbo",
+      "displayName": "Turbo",
+      "author": "tobihagemann",
+      "category": "Code",
+      "description": "{N} skills. Ship changes of any size with confidence. An agentic software factory for Claude Code and Codex. Covers apply findings, apply turbo handoffs and assess technical debt."
+    },
+    {
+      "source": "giuseppe-trisciuoglio-developer-kit",
+      "name": "giuseppe-trisciuoglio-developer-kit",
+      "displayName": "Developer Kit",
+      "author": "giuseppe-trisciuoglio",
+      "category": "Code",
+      "description": "{N} skills. Modular plugin marketplace for Claude Code and agentic CLIs, with validated, spec-driven skills, agents, commands, and workflows for Java, TypeScript, Python. Covers aws cdk, aws cloudformation auto scaling and aws cloudformation bedrock."
+    },
+    {
+      "source": "tonydzi-second-brain-starter-kit",
+      "name": "tonydzi-second-brain-starter-kit",
+      "displayName": "Second Brain Starter Kit",
+      "author": "tonydzi",
+      "category": "Sales",
+      "description": "{N} skills. A second brain for Claude Code and Codex that keeps receipts, following Karpathy's LLM Wiki pattern: the agent keeps your markdown vault. Skills as a plugin. Covers agenda."
+    },
+    {
+      "source": "sandraschi-advanced-memory-mcp",
+      "name": "sandraschi-advanced-memory-mcp",
+      "displayName": "Advanced Memory Mcp",
+      "author": "sandraschi",
+      "category": "Business",
+      "description": "{N} skills. Knowledge management MCP server, webapp and winapp; knowledge graphs, im/export, rag, semantic search, skills builder. Covers abstract algebra specialist, advanced keigo usage expert and agentic zettelkasten."
+    },
+    {
+      "source": "fusengine-agents",
+      "name": "fusengine-agents",
+      "displayName": "Fusengine Agents",
+      "author": "fusengine",
+      "category": "Design & Sites",
+      "description": "{N} skills. Redefining development through cognitive automation and collaborative agent systems. Covers agent creator, agent design and agentic security."
+    },
+    {
+      "source": "jackspace-claudeskillz",
+      "name": "jackspace-claudeskillz",
+      "displayName": "ClaudeSkillz",
+      "author": "jackspace",
+      "category": "Design & Sites",
+      "description": "{N} skills. ClaudeSkillz: For when you need skills, but lazier. Covers ai elements chatbot, ai sdk core and ai sdk ui."
+    },
+    {
+      "source": "charleswiltgen-axiom",
+      "name": "charleswiltgen-axiom",
+      "displayName": "Axiom",
+      "author": "CharlesWiltgen",
+      "category": "Code",
+      "description": "{N} skills. Battle-tested Claude Code skills for modern xOS (iOS, iPadOS, watchOS, tvOS) development. Covers axiom accessibility, axiom ai and axiom analyze crash."
+    },
+    {
+      "source": "lingxling-awesome-skills-cn",
+      "name": "lingxling-awesome-skills-cn",
+      "displayName": "Awesome Skills Cn",
+      "author": "lingxling",
+      "category": "Design & Sites",
+      "description": "{N} skills. 热门Skills中文cn学习版+教程，提供7000+Skills，集成claude skills (18w+Star) | ui-ux-pro-max-skill (13w+Star)等10余个热门Skill项目. Covers 3d ui, ai native ui and alex."
+    },
+    {
+      "source": "sequenzia-agent-alchemy",
+      "name": "sequenzia-agent-alchemy",
+      "displayName": "Agent Alchemy",
+      "author": "sequenzia",
+      "category": "Code",
+      "description": "{N} skills. Agent Alchemy is a curated collection of plugins, apps, and extensions designed to elevate your agentic engineering workflows. Built for Claude Code and other. Covers analyze coverage, bug investigator and bug killer."
+    },
+    {
+      "source": "myl7-knowledge-work-plugins-for-codex",
+      "name": "myl7-knowledge-work-plugins-for-codex",
+      "displayName": "Knowledge Work Plugins For Codex",
+      "author": "myl7",
+      "category": "Design & Sites",
+      "description": "{N} skills. Codex-compatible fork of Anthropic knowledge-work-plugins with Codex plugin marketplace manifests, skills, commands, and MCP connectors. Covers account research, audit support and brand voice enforcement."
+    },
+    {
+      "source": "parcadei-continuous-claude-v3",
+      "name": "parcadei-continuous-claude-v3",
+      "displayName": "Continuous Claude V3",
+      "author": "parcadei",
+      "category": "Business",
+      "description": "{N} skills. Context management for Claude Code. Hooks maintain state via ledgers and handoffs. MCP execution without context pollution. Agent orchestration with isolated. Covers analytic functions, async repl protocol and banach spaces."
+    },
+    {
+      "source": "cantara-lib-electronic-components",
+      "name": "cantara-lib-electronic-components",
+      "displayName": "Lib Electronic Components",
+      "author": "Cantara",
+      "category": "Other",
+      "description": "{N} skills from the Cantara/lib-electronic-components repository. Covers ablic, abracon and airoha."
+    },
+    {
+      "source": "nicepkg-ai-workflow",
+      "name": "nicepkg-ai-workflow",
+      "displayName": "Ai Workflow",
+      "author": "nicepkg",
+      "category": "Studio",
+      "description": "{N} skills. 🚀 170+ pre-built skills for Claude Code, Cursor, Codex & 14+ AI tools. Stop re-teaching your AI the same things. One command → instant domain expertise. Covers ad copy generator, ai slop detector and analytics interpretation."
+    },
+    {
+      "source": "zjunlp-skillnet",
+      "name": "zjunlp-skillnet",
+      "displayName": "SkillNet",
+      "author": "zjunlp",
+      "category": "Other",
+      "description": "{N} skills. Create, Evaluate, and Connect AI Skills. Covers alfworld appliance navigator, alfworld appliance preparer and alfworld clean object."
+    },
+    {
+      "source": "noorqureshi-sploitagent",
+      "name": "noorqureshi-sploitagent",
+      "displayName": "SploitAgent",
+      "author": "NoorQureshi",
+      "category": "Code",
+      "description": "{N} skills. An open library of 206 security skills for AI agents — pentest, bug bounty, CTF, reversing & defense across 23 domains, with CI-verified routing and Sigma. Covers ad adcs, ad dacl abuse and ad delegation abuse."
+    },
+    {
+      "source": "iamanacarolinarezende-antigravity-awesome-skills",
+      "name": "iamanacarolinarezende-antigravity-awesome-skills",
+      "displayName": "Antigravity Awesome Skills",
+      "author": "iamanacarolinarezende",
+      "category": "Code",
+      "description": "{N} skills. The Ultimate Collection of 1000+ Agentic Skills for Claude Code/Antigravity/Cursor. Battle-tested, high-performance skills for AI agents including official. Covers expo cicd workflows and kaizen."
+    },
+    {
+      "source": "betterpromptme-skills",
+      "name": "betterpromptme-skills",
+      "displayName": "BetterPromptme Skills",
+      "author": "BetterPromptme",
+      "category": "Business",
+      "description": "{N} skills from the BetterPromptme/skills repository. Covers 05 indoor selfie with any outfit, 10 interior decoration ideals according to your wishes and 10 slogan ideas for your business."
+    },
+    {
+      "source": "patricio0312rev-skillset",
+      "name": "patricio0312rev-skillset",
+      "displayName": "Skillset",
+      "author": "patricio0312rev",
+      "category": "Code",
+      "description": "{N} skills. CLI tool to import production-ready development skills for Claude Code, Cursor, GitHub Copilot, and other AI coding assistants. Covers adr writer, agent orchestration planner and ai agent orchestrator."
+    },
+    {
+      "source": "jeremylongworth-source-agentlogistics",
+      "name": "jeremylongworth-source-agentlogistics",
+      "displayName": "AgentLogistics",
+      "author": "jeremylongworth-source",
+      "category": "Business",
+      "description": "{N} skills. A modular AI skill repository for warehousing, inventory control, storage, freight, transportation, logistics systems, and commercial operations. Covers analyze carrier performance, analyze demurrage and analyze detention."
+    },
+    {
+      "source": "agents-inc-skills",
+      "name": "agents-inc-skills",
+      "displayName": "Agents Inc Skills",
+      "author": "agents-inc",
+      "category": "Code",
+      "description": "{N} skills. The official skills marketplace for Agents Inc, an agent composition framework that builds stacks and compiles specialized subagents for Claude Code. Covers ai infrastructure huggingface inference, ai infrastructure litellm and ai infrastructure ollama."
+    },
+    {
+      "source": "thebeardedbearsas-claude-craft",
+      "name": "thebeardedbearsas-claude-craft",
+      "displayName": "Claude Craft",
+      "author": "TheBeardedBearSAS",
+      "category": "Code",
+      "description": "{N} skills. Supercharge Claude Code with Expert Knowledge A comprehensive framework for AI-assisted development. Install standardized rules, agents, and commands for your. Covers adapter development, aggregates and api gateway."
+    },
+    {
+      "source": "aaaaqwq-agi-super-skills",
+      "name": "aaaaqwq-agi-super-skills",
+      "displayName": "AGI Super Skills",
+      "author": "aAAaqwq",
+      "category": "Code",
+      "description": "{N} skills. An installable, cross-framework AI organization: C-suite agents, expert subagents, curated skills, independent review, and one-command setup across 18 AI. Covers agi super team orchestrator, backend development nodejs and backend development python."
+    },
+    {
+      "source": "dnyoussef-context-cascade",
+      "name": "dnyoussef-context-cascade",
+      "displayName": "Context Cascade",
+      "author": "DNYoussef",
+      "category": "Code",
+      "description": "{N} skills. Context Cascade - Nested Plugin Architecture for Claude Code Official Claude Code Plugin | Version 3.1.0 | Last updated: 2026-01-09 (see. Covers cognitive mode, llm council and ralph multimodel."
+    },
+    {
+      "source": "the-utopia-studio-skills",
+      "name": "the-utopia-studio-skills",
+      "displayName": "The Utopia Studio Skills",
+      "author": "The-Utopia-Studio",
+      "category": "Code",
+      "description": "{N} skills. Operator-grade AI skill marketplace for The Utopia Studio — 357 curated skills across GTM (7 sub-modules), Product (incl. Icarus), Investments, and Founder. Covers ab test analysis, account tier scoring and ada."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills",
+      "name": "mr-nobody-anonymous-all-skills",
+      "displayName": "All Skills",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Studio",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers 3d blender python procedural modeling, 3d gaussian splatting web optimization and a11y audit."
+    },
+    {
+      "source": "casemark-skills",
+      "name": "casemark-skills",
+      "displayName": "CaseMark Skills",
+      "author": "CaseMark",
+      "category": "Other",
+      "description": "{N} skills from the CaseMark/skills repository. Covers 30b6 corporate rep, 30b6 deposition and 510k premarket notification."
+    },
+    {
+      "source": "pramoddutta-qaskills",
+      "name": "pramoddutta-qaskills",
+      "displayName": "Qaskills",
+      "author": "PramodDutta",
+      "category": "Code",
+      "description": "{N} skills. QA Skills Directory QA Skills is a curated directory of testing-specific skills for AI coding agents (Claude Code, Cursor, Copilot, etc.). Covers add seed skills, api testing rest and claude code qa."
+    },
+    {
+      "source": "datadrivenconstruction-ddc-skills-for-ai-agents-",
+      "name": "datadrivenconstruction-ddc-skills-for-ai-agents-in-construct",
+      "displayName": "DDC Skills For AI Agents In Construction",
+      "author": "datadrivenconstruction",
+      "category": "Office",
+      "description": "{N} skills. 221 AI skills for construction: BIM analysis, cost estimation, scheduling, document control, and automation with Claude Code. Covers 4d simulation, 5000 projects analysis and ai act compliance."
+    },
+    {
+      "source": "templates-2",
+      "name": "davila7-claude-code-templates-2",
+      "displayName": "Davila7 Claude Code Templates 2",
+      "author": "davila7",
+      "category": "Code",
+      "description": "{N} skills. Open-source registry and CLI for Claude Code components: agents, commands, skills, hooks, MCPs, settings and mods. Covers abc xyz segmentation, academic cv builder and agent evaluation."
+    },
+    {
+      "source": "templates-3",
+      "name": "davila7-claude-code-templates-3",
+      "displayName": "Davila7 Claude Code Templates 3",
+      "author": "davila7",
+      "category": "Code",
+      "description": "{N} skills. Open-source registry and CLI for Claude Code components: agents, commands, skills, hooks, MCPs, settings and mods. Covers astro, blockrun and bright data best practices."
+    },
+    {
+      "source": "alirez-2",
+      "name": "alirezarezvani-claude-skills-2",
+      "displayName": "Alirezarezvani Claude Skills 2",
+      "author": "alirezarezvani",
+      "category": "Business",
+      "description": "{N} skills. 410 Claude Code skills & agent skills & plugins (120+ Agents, custom commands, 410+ skills, customizable references, scripts)for Claude Code, Codex, Gemini. Covers meta research."
+    },
+    {
+      "source": "aas-2",
+      "name": "sickn33-agentic-awesome-skills-2",
+      "displayName": "Sickn33 Agentic Awesome Skills 2",
+      "author": "sickn33",
+      "category": "Code",
+      "description": "{N} skills. 3,000+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. AAS Core adds local catalog discovery, agent-owned selection and plan preview. Covers 00 andruia consultant, 10 andruia skill smith and 20 andruia niche intelligence."
+    },
+    {
+      "source": "aas-4",
+      "name": "sickn33-agentic-awesome-skills-3",
+      "displayName": "Sickn33 Agentic Awesome Skills 3",
+      "author": "sickn33",
+      "category": "Code",
+      "description": "{N} skills. 3,000+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. AAS Core adds local catalog discovery, agent-owned selection and plan preview. Covers project skill audit."
+    },
+    {
+      "source": "aas-6",
+      "name": "sickn33-agentic-awesome-skills-4",
+      "displayName": "Sickn33 Agentic Awesome Skills 4",
+      "author": "sickn33",
+      "category": "Code",
+      "description": "{N} skills. 3,000+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. AAS Core adds local catalog discovery, agent-owned selection and plan preview. Covers agy auto, agy powerline and analyze project."
+    },
+    {
+      "source": "heygen-3",
+      "name": "hyperframes",
+      "displayName": "HyperFrames",
+      "author": "HeyGen",
+      "category": "Studio",
+      "description": "{N} skills for HyperFrames: describing a video, editing it frame by frame and building an editable project.",
+      "exampleQueries": [
+        "Turn this description into a video project",
+        "Edit this scene"
+      ]
+    },
+    {
+      "source": "lingxling-awesome-skills-cn-2",
+      "name": "lingxling-awesome-skills-cn-2",
+      "displayName": "Awesome Skills Cn 2",
+      "author": "lingxling",
+      "category": "Design & Sites",
+      "description": "{N} skills. 热门Skills中文cn学习版+教程，提供7000+Skills，集成claude skills (18w+Star) | ui-ux-pro-max-skill (13w+Star)等10余个热门Skill项目. Covers ably automation, abstract automation and abuselpdb automation."
+    },
+    {
+      "source": "nicepkg-ai-workflow-2",
+      "name": "nicepkg-ai-workflow-2",
+      "displayName": "Ai Workflow 2",
+      "author": "nicepkg",
+      "category": "Studio",
+      "description": "{N} skills. 🚀 170+ pre-built skills for Claude Code, Cursor, Codex & 14+ AI tools. Stop re-teaching your AI the same things. One command → instant domain expertise. Covers capture triage, media processing and posthog analytics."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-2",
+      "name": "mr-nobody-anonymous-all-skills-2",
+      "displayName": "All Skills 2",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Code",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers 0 template, ab test analyzer and ab test designer."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-3",
+      "name": "mr-nobody-anonymous-all-skills-3",
+      "displayName": "All Skills 3",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Design & Sites",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers abilities api implement, amazon brand store and amazon fba strategy."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-4",
+      "name": "mr-nobody-anonymous-all-skills-4",
+      "displayName": "All Skills 4",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Code",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers 409a valuation guide, 8a certification guide and academic advising model."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-5",
+      "name": "mr-nobody-anonymous-all-skills-5",
+      "displayName": "All Skills 5",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Code",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers 1031 exchange guide, 3pl evaluation and 5g deployment plan."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-6",
+      "name": "mr-nobody-anonymous-all-skills-6",
+      "displayName": "All Skills 6",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Business",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers academic research, accounting and adhd."
+    },
+    {
+      "source": "jantoniofc-skillsbank",
+      "name": "jantoniofc-skillsbank",
+      "displayName": "Skillsbank",
+      "author": "JantonioFC",
+      "category": "Other",
+      "description": "{N} skills. Archivo de skills. Covers run and vercel deploy claimable."
+    },
+    {
+      "source": "refoundai-lenny-skills",
+      "name": "refoundai-lenny-skills",
+      "displayName": "Lenny Skills",
+      "author": "RefoundAI",
+      "category": "Studio",
+      "description": "{N} skills. 86 product management skills from Lenny's Podcast for Claude Code and AI agents. Hiring, user research, strategy, shipping, and more. Covers acquisition channels, ai assisted prototyping and ai evals."
+    },
+    {
+      "source": "travisjneuman-claude",
+      "name": "travisjneuman-claude",
+      "displayName": ".Claude",
+      "author": "travisjneuman",
+      "category": "Code",
+      "description": "{N} skills. The Ultimate Claude Code Toolkit: 183 skills, 10 agents, 29 commands, 7 hooks, and 86 marketplace repos (11,300+ community skills). Drop-in ~/.claude config. Covers accessibility a11y, agent accessibility expert and agent android developer."
+    },
+    {
+      "source": "bitwikiorg-skills-md",
+      "name": "bitwikiorg-skills-md",
+      "displayName": "Skills.Md",
+      "author": "bitwikiorg",
+      "category": "Code",
+      "description": "{N} skills from the bitwikiorg/skills.md repository. Covers agent, analyze and app."
+    },
+    {
+      "source": "coralshades-acm-ai",
+      "name": "coralshades-acm-ai",
+      "displayName": "Acm Ai",
+      "author": "CoralShades",
+      "category": "Business",
+      "description": "{N} skills. Intelligent Asbestos Compliance Management powered by AI - Built on Open Notebook. Covers a2a protocol, acm observability and analyze insights."
+    },
+    {
+      "source": "notque-vexjoy-agent",
+      "name": "notque-vexjoy-agent",
+      "displayName": "Vexjoy Agent",
+      "author": "notque",
+      "category": "Business",
+      "description": "{N} skills. VexJoy AI Agent with Jev Intelligent Routing - /do routes plain-English requests to the right specialist agent and gates the work with reviews, tests, and a. Covers accounts, auto dream and business ops."
+    },
+    {
+      "source": "terminalskills-skills",
+      "name": "terminalskills-skills",
+      "displayName": "TerminalSkills Skills",
+      "author": "TerminalSkills",
+      "category": "Code",
+      "description": "{N} skills. Open-source library of AI agent skills — SKILL.md files for Claude Code, Codex, Gemini CLI, Cursor. Covers 3dsmax rendering, 3dsmax scripting and 3proxy."
+    },
+    {
+      "source": "nickcrew-claude-cortex",
+      "name": "nickcrew-claude-cortex",
+      "displayName": "Claude Cortex",
+      "author": "NickCrew",
+      "category": "Other",
+      "description": "{N} skills. Claude Cortex. Covers claude consult and mashup."
+    },
+    {
+      "source": "mvillmow-projectodyssey",
+      "name": "mvillmow-projectodyssey",
+      "displayName": "ProjectOdyssey",
+      "author": "mvillmow",
+      "category": "Code",
+      "description": "{N} skills. Training framework written in Mojo. Covers batch pr rebase, fix conflicting prs and ci and mojo run local."
+    },
+    {
+      "source": "goldziher-ai-rulez",
+      "name": "goldziher-ai-rulez",
+      "displayName": "Ai Rulez",
+      "author": "Goldziher",
+      "category": "Productivity",
+      "description": "{N} skills. Author, generate, validate and govern AI agent rules, skills, plugins and MCP configuration across 52 coding assistants. Review with verified model evidence. Covers acme skill standards, adr workflow and ai rulez."
+    },
+    {
+      "source": "lobbi-docs-claude",
+      "name": "lobbi-docs-claude",
+      "displayName": "Claude",
+      "author": "Lobbi-Docs",
+      "category": "Studio",
+      "description": "{N} skills from the Lobbi-Docs/claude repository. Covers 3d animations, a2ui protocol and accent animations."
+    },
+    {
+      "source": "zenobi-us-dotfiles",
+      "name": "zenobi-us-dotfiles",
+      "displayName": "Dotfiles",
+      "author": "zenobi-us",
+      "category": "Studio",
+      "description": "{N} skills. My workstation setup for linux, windows and mac. Covers 2d essentials, 3d essentials and a11y debugging."
+    },
+    {
+      "source": "personamanagmentlayer-pcl",
+      "name": "personamanagmentlayer-pcl",
+      "displayName": "Pcl",
+      "author": "personamanagmentlayer",
+      "category": "Other",
+      "description": "{N} skills. Persona Control Language (PCL). Covers 5g expert, accessibility expert and accountant expert."
+    },
+    {
+      "source": "teradata-labs-claude-cookbooks",
+      "name": "teradata-labs-claude-cookbooks",
+      "displayName": "Claude Cookbooks",
+      "author": "teradata-labs",
+      "category": "Other",
+      "description": "{N} skills. A collection of notebooks/recipes showcasing effective ways of using AI with Teradata. Covers control sessions, manage queues and manage workloads."
+    },
+    {
+      "source": "mgd34msu-goodvibes-plugin",
+      "name": "mgd34msu-goodvibes-plugin",
+      "displayName": "Goodvibes Plugin",
+      "author": "mgd34msu",
+      "category": "Productivity",
+      "description": "{N} skills. One Claude Code plugin, three MCP servers, 25 tools: structure-aware code intelligence, session cost analytics, and an API workbench. Covers goodvibes memory, intel mastery and project onboarding."
+    },
+    {
+      "source": "rjmurillo-ai-agents",
+      "name": "rjmurillo-ai-agents",
+      "displayName": "Ai Agents",
+      "author": "rjmurillo",
+      "category": "Code",
+      "description": "{N} skills. Open source multi agent toolkit for Claude Code and GitHub Copilot CLI: 30 agents, plan to ship workflows, review and security gates, plugin marketplace. Covers agent harness reference, avoiding manufactured work and checkpoint."
+    },
+    {
+      "source": "ivantorresedge-molcajete-ai",
+      "name": "ivantorresedge-molcajete-ai",
+      "displayName": "Molcajete.Ai",
+      "author": "IvanTorresEdge",
+      "category": "Other",
+      "description": "{N} skills from the IvanTorresEdge/molcajete.ai repository. Covers asking questions, blocker protocol and change description."
+    },
+    {
+      "source": "runxhq-runx",
+      "name": "runxhq-runx",
+      "displayName": "Runx",
+      "author": "runxhq",
+      "category": "Code",
+      "description": "{N} skills. The governed runtime for agent skill workflows, off the leash but on the record. Covers research analyze."
+    },
+    {
+      "source": "trompetilla-skills",
+      "name": "trompetilla-skills",
+      "displayName": "Trompetilla Skills",
+      "author": "Trompetilla",
+      "category": "Studio",
+      "description": "{N} skills from the Trompetilla/Skills repository. Covers 0x swap, 10 of my most popular text to image series prompts 78b0897e and 1inch."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim",
+      "name": "vincentagwu-deutsches-recht-slim",
+      "displayName": "Deutsches Recht Slim",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers 001 fruehformen zwoelftafelrecht, 001 fruehformen zwoelftafelrecht sakrale spruchform and 001 normnavigator jede norm karte."
+    },
+    {
+      "source": "jabrena-cursor-rules-java",
+      "name": "jabrena-cursor-rules-java",
+      "displayName": "Cursor Rules Java",
+      "author": "jabrena",
+      "category": "Other",
+      "description": "{N} skills. Plinth is an AI-native engineering toolkit for modern Java enterprise SDLC, built around reusable Commands, Agents, Skills, and MCP Servers. Covers 001 commands inventory, 002 agents inventory and 003 skills inventory."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open",
+      "name": "thomasmoreai-legal-skills-open",
+      "displayName": "Legal Skills Open",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers 02 mietakte rekonstruieren klotzkette, 03 timeline evidence ledger kevinke93 and 05 chronologie fallakte klotzkette."
+    },
+    {
+      "source": "hashgraph-online-awesome-codex-plugins",
+      "name": "hashgraph-online-awesome-codex-plugins",
+      "displayName": "Awesome Codex Plugins",
+      "author": "hashgraph-online",
+      "category": "Other",
+      "description": "{N} skills. A curated list of awesome OpenAI Codex / ChatGPT plugins, skills, and resources. The #1 Codex Marketplace. See live plugins at. Covers 5why root cause, 80 20 feature prioritization and 80 20 redesign targeting."
+    },
+    {
+      "source": "proffesor-for-testing-agentic-qe",
+      "name": "proffesor-for-testing-agentic-qe",
+      "displayName": "Agentic Qe",
+      "author": "proffesor-for-testing",
+      "category": "Code",
+      "description": "{N} skills. Agentic QE Fleet is an open-source AI-powered QA/QE platform designed for use with Coding Agents (works best with Claude Code) featuring specialized agents and. Covers a11y ally, agentic quality engineering and aqe plan quality."
+    },
+    {
+      "source": "backtrue-thinkwithblack-skill",
+      "name": "backtrue-thinkwithblack-skill",
+      "displayName": "Thinkwithblack Skill",
+      "author": "backtrue",
+      "category": "Sales",
+      "description": "{N} skills. 365 free AI marketing skills (zh-TW/en) for ChatGPT, Claude, Gemini, Claude Code & Cursor — copywriting, ads budget, margin, CRM, email. 365 個免費 AI 行銷 Skills. Covers understand problem to action."
+    },
+    {
+      "source": "makifbaysal-tasktrooper",
+      "name": "makifbaysal-tasktrooper",
+      "displayName": "Tasktrooper",
+      "author": "makifbaysal",
+      "category": "Code",
+      "description": "{N} skills. Local-first agent platform: board + role agents + agent CLI runs (Claude Code, Cursor, Antigravity, OpenCode) or local and API models (Ollama, LM Studio), all. Covers acceptance criteria gwt, access control and idor and accessibility basics."
+    },
+    {
+      "source": "feliperyba-ralph-orchestra",
+      "name": "feliperyba-ralph-orchestra",
+      "displayName": "Ralph Orchestra",
+      "author": "feliperyba",
+      "category": "Code",
+      "description": "{N} skills. Ralph Multi-Agent Autonomous Development Framework -- A powerful, extensible framework for orchestrating multiple AI agents to work together on software. Covers dev multiplayer anti cheat validation, dev multiplayer colyseus client and dev multiplayer colyseus server."
+    },
+    {
+      "source": "kbarbel640-del-skills",
+      "name": "kbarbel640-del-skills",
+      "displayName": "Kbarbel640 Del Skills",
+      "author": "kbarbel640-del",
+      "category": "Code",
+      "description": "{N} skills from the kbarbel640-del/skills repository. Covers aegis security, can and casual cron."
+    },
+    {
+      "source": "ellmos-ai-skills",
+      "name": "ellmos-ai-skills",
+      "displayName": "Ellmos Ai Skills",
+      "author": "ellmos-ai",
+      "category": "Education",
+      "description": "{N} skills. Portable SKILL.md library for Claude Code, Codex-compatible agents, BACH, and local-first LLM workflows. Covers academic study control, academic study learn and academic study test."
+    },
+    {
+      "source": "hongyuanc-codex-game-studios",
+      "name": "hongyuanc-codex-game-studios",
+      "displayName": "Codex Game Studios",
+      "author": "hongyuanc",
+      "category": "Code",
+      "description": "{N} skills. An independent Codex-native adaptation of Claude Code Game Studios, tiered GPT-6.1, 6 and 5.6 routing, transactional engine packs, lifecycle hooks, and. Covers architecture decision, art bible and asset audit."
+    },
+    {
+      "source": "oaustegard-claude-skills",
+      "name": "oaustegard-claude-skills",
+      "displayName": "Oaustegard Claude Skills",
+      "author": "oaustegard",
+      "category": "Code",
+      "description": "{N} skills. My collection of Claude skills. Covers accessing github repos, agent routing and animating with code."
+    },
+    {
+      "source": "tannhatcms-jarvis",
+      "name": "tannhatcms-jarvis",
+      "displayName": "Jarvis",
+      "author": "TanNhatCMS",
+      "category": "Code",
+      "description": "{N} skills. JARVIS — đội agent dev tái dùng được: dev-team (analyze → code → review → test → ship) và spec-team (spec-driven planning). Covers mushare."
+    },
+    {
+      "source": "hekivo-superpowers-sage",
+      "name": "hekivo-superpowers-sage",
+      "displayName": "Superpowers Sage",
+      "author": "hekivo",
+      "category": "Code",
+      "description": "{N} skills. Claude Code plugin: Sage/Acorn/Lando skills, agents and hooks for modern WordPress. Covers acorn background, acorn data and acorn livewire."
+    },
+    {
+      "source": "bovinphang-frontend-craft",
+      "name": "bovinphang-frontend-craft",
+      "displayName": "Bovinphang Frontend Craft",
+      "author": "bovinphang",
+      "category": "Design & Sites",
+      "description": "{N} skills. Frontend-craft is a universal frontend plugin that brings the same opinionated engineering standards to all 15 AI coding assistants. Covers fec accessibility check, fec alchemy and fec api integration."
+    },
+    {
+      "source": "makfly-superpowers-symfony",
+      "name": "makfly-superpowers-symfony",
+      "displayName": "Superpowers Symfony",
+      "author": "MakFly",
+      "category": "Code",
+      "description": "{N} skills. Claude Code plugin for Symfony 7.4 LTS & 8.x — 44 skills, 7 AI subagents & 13 commands for API Platform v4, Doctrine ORM 3, TDD (Pest/PHPUnit), Messenger. Covers api platform dto resources, api platform filters and api platform resources."
+    },
+    {
+      "source": "fcakyon-claude-codex-settings",
+      "name": "fcakyon-claude-codex-settings",
+      "displayName": "Claude Codex Settings",
+      "author": "fcakyon",
+      "category": "Code",
+      "description": "{N} skills. Battle-tested Claude Code, OpenAI Codex, Cursor configs, plugins, hooks and agents with Kimi, MiniMax and GLM API support. Covers aeo, azure usage and basin."
+    },
+    {
+      "source": "jpoutrin-product-forge",
+      "name": "jpoutrin-product-forge",
+      "displayName": "Product Forge",
+      "author": "jpoutrin",
+      "category": "Code",
+      "description": "{N} skills. Claude Code Marketplace Plugin to dev like a pro in a multi-agent fashion. Covers add mcp resource, add mcp tool and agent tools."
+    },
+    {
+      "source": "basitalisandhu-claude-skills",
+      "name": "basitalisandhu-claude-skills",
+      "displayName": "Basitalisandhu Claude Skills",
+      "author": "basitalisandhu",
+      "category": "Code",
+      "description": "{N} skills. Claude Code skills, every skill I maintain in one repository: 87 skills in 13 plugins for AWS and Microsoft 365 security, agent security, compliance evidence. Covers auth flow review, bug repro minimiser and cors review."
+    },
+    {
+      "source": "microsoft-power-platform-skills",
+      "name": "microsoft-power-platform-skills",
+      "displayName": "Power Platform Skills",
+      "author": "microsoft",
+      "category": "Code",
+      "description": "{N} skills. A plugin marketplace for GitHub Copilot and other AI agents that provides Power Platform development plugins, including reusable skills, agents, and commands. Covers add sample data, browse flows and build flow."
+    },
+    {
+      "source": "0xdarkmatter-claude-mods",
+      "name": "s0xdarkmatter-claude-mods",
+      "displayName": "Claude Mods",
+      "author": "0xDarkMatter",
+      "category": "Design & Sites",
+      "description": "{N} skills. Expert skills, agents, commands, rules, hooks & output styles for Claude Code — session continuity + modern CLI tooling for real-world dev workflows. Covers api design ops, astro ops and atomise."
+    },
+    {
+      "source": "andycungkrinx91-konoha",
+      "name": "andycungkrinx91-konoha",
+      "displayName": "Konoha",
+      "author": "andycungkrinx91",
+      "category": "Code",
+      "description": "{N} skills from the andycungkrinx91/konoha repository. Covers antislop, antislop code and antislop copywriting."
+    },
+    {
+      "source": "projectious-work-aibox",
+      "name": "projectious-work-aibox",
+      "displayName": "Aibox",
+      "author": "projectious-work",
+      "category": "Code",
+      "description": "{N} skills. Aibox — Reproducible AI-ready devcontainers from one aibox.toml, with addons, provider-neutral agent context, and processkit integration. Covers standard agent building, standard agent interfaces and standard agent use."
+    },
+    {
+      "source": "flight505-skill-forge",
+      "name": "flight505-skill-forge",
+      "displayName": "Skill Forge",
+      "author": "flight505",
+      "category": "Code",
+      "description": "{N} skills. 425 plugins, 2,810 skills, 200 agents for Claude Code. Open-source marketplace at tonsofskills.com with the ccpi CLI package manager. Covers 000 jeremy content consistency validator, a b test config creator and abridge ci integration."
+    },
+    {
+      "source": "harness-harness-skills",
+      "name": "harness-harness-skills",
+      "displayName": "Harness Skills",
+      "author": "harness",
+      "category": "Code",
+      "description": "{N} skills. A collection of structured AI agent skills that enable Claude Code, Cursor, GitHub Copilot, and other AI coding assistants to create, operate, debug, and. Covers configure agent pr attestation."
+    },
+    {
+      "source": "jeffallan-claude-skills",
+      "name": "jeffallan-claude-skills",
+      "displayName": "Jeffallan Claude Skills",
+      "author": "Jeffallan",
+      "category": "Code",
+      "description": "{N} skills. 67 Specialized Skills for Full-Stack Developers. Transform Claude Code into your expert pair programmer. Covers atlassian mcp, chaos engineer and csharp developer."
+    },
+    {
+      "source": "first-fluke-oh-my-agent",
+      "name": "first-fluke-oh-my-agent",
+      "displayName": "Oh My Agent",
+      "author": "first-fluke",
+      "category": "Code",
+      "description": "{N} skills. Agent skills and specialist teams for Claude Code, Codex, Cursor and other coding agents. Load one skill or install domain presets, project hooks and parallel. Covers folded desc skill, oma academic writing and oma architecture."
+    },
+    {
+      "source": "roedyrustam-vibes-plug",
+      "name": "roedyrustam-vibes-plug",
+      "displayName": "Vibes Plug",
+      "author": "roedyrustam",
+      "category": "Code",
+      "description": "{N} skills. Universal AI Agent Swarm & MCP Plugin with 178 specialized skills and 8 autonomous subagents for Antigravity, Claude Code, Cursor, Windsurf, and OpenAI Codex. Covers a2a agent protocol expert, accessibility testing expert and adaptive model cascade."
+    },
+    {
+      "source": "sriramgandhis-skills",
+      "name": "sriramgandhis-skills",
+      "displayName": "SriramGandhiS Skills",
+      "author": "SriramGandhiS",
+      "category": "Code",
+      "description": "{N} skills. Customized skills for Antigravity orchestration for agent. Covers everything claude code, how it works and knowledge agent."
+    },
+    {
+      "source": "wubin1836-ai-hive-agent-skills",
+      "name": "wubin1836-ai-hive-agent-skills",
+      "displayName": "Ai Hive Agent Skills",
+      "author": "wubin1836",
+      "category": "Studio",
+      "description": "{N} skills. 680个AI-HIVE Agent Skills：新增340个AI大模型专家中文技能，覆盖Seedance、Nano Banana、GPT Image 2、Seedream、MiniMax、电商图片视频、广告营销与AIGC工作流。. Covers actiongo film agent ai hive migration, activecampaign ai content layer and acumatica ai layer."
+    },
+    {
+      "source": "majiayu000-spellbook",
+      "name": "majiayu000-spellbook",
+      "displayName": "Spellbook",
+      "author": "majiayu000",
+      "category": "Design & Sites",
+      "description": "{N} skills. Cross-runtime skills for Claude Code, Codex, and multi-agent workflows. Covers agent qa testing, agentsmd optimize and app ui design."
+    },
+    {
+      "source": "hookdeck-webhook-skills",
+      "name": "hookdeck-webhook-skills",
+      "displayName": "Webhook Skills",
+      "author": "hookdeck",
+      "category": "Code",
+      "description": "{N} skills. Webhook integration skills for AI coding agents (Claude Code, Cursor, Copilot). Step-by-step guidance for setting up webhook receivers, signature verification. Covers bfcm webhook playbook, hookdeck event gateway and outpost."
+    },
+    {
+      "source": "valentinnikolaev-agent-skills",
+      "name": "valentinnikolaev-agent-skills",
+      "displayName": "ValentinNikolaev Agent Skills",
+      "author": "ValentinNikolaev",
+      "category": "Productivity",
+      "description": "{N} skills. Cross-platform agent skills and plugin distributions for OpenAI Codex and Claude Code. Covers audit memory, clean code comments and create memory."
+    },
+    {
+      "source": "janpereira-dev-ngautopilot",
+      "name": "janpereira-dev-ngautopilot",
+      "displayName": "NgAutoPilot",
+      "author": "janpereira-dev",
+      "category": "Other",
+      "description": "{N} skills from the janpereira-dev/ngAutoPilot repository. Covers angular 21 to 22 post upgrade validation, angular architecture angular enterprise onboarding plan and angular architecture angular enterprise primitives."
+    },
+    {
+      "source": "orcaqubits-agentic-commerce-claude-plugins",
+      "name": "orcaqubits-agentic-commerce-claude-plugins",
+      "displayName": "Agentic Commerce Claude Plugins",
+      "author": "OrcaQubits",
+      "category": "Code",
+      "description": "{N} skills. Skills & plugins for agentic commerce : UCP, ACP, AP2, A2A, WebMCP, Magento 2, BigCommerce, WooCommerce. Covers a2a agent card, a2a authentication and a2a client."
+    },
+    {
+      "source": "christian289-dotnet-with-claudecode",
+      "name": "christian289-dotnet-with-claudecode",
+      "displayName": "Dotnet With Claudecode",
+      "author": "christian289",
+      "category": "Design & Sites",
+      "description": "{N} skills. ClaudeCode와 함께하는 .NET 개발 튜토리얼. Covers binding mewui data, building mewui apps and converting html css to wpf xaml."
+    },
+    {
+      "source": "bbeierle12-skill-mcp-claude",
+      "name": "bbeierle12-skill-mcp-claude",
+      "displayName": "Skill MCP Claude",
+      "author": "Bbeierle12",
+      "category": "Design & Sites",
+      "description": "{N} skills. Visual web interface for managing Claude MCP skills with Flask API and Claude Code CLI integration — Python. Covers audio analysis, audio playback and audio reactive."
+    },
+    {
+      "source": "marcoemrich-agentic-coding-lab",
+      "name": "marcoemrich-agentic-coding-lab",
+      "displayName": "Agentic Coding Lab",
+      "author": "marcoemrich",
+      "category": "Code",
+      "description": "{N} skills. A research lab for agentic coding - use it to verify of falsify, running various agentic setup against each other. Covers build overview, end refactor and exact coding."
+    },
+    {
+      "source": "shinpr-claude-code-workflows",
+      "name": "shinpr-claude-code-workflows",
+      "displayName": "Claude Code Workflows",
+      "author": "shinpr",
+      "category": "Code",
+      "description": "{N} skills. Development workflows for Claude Code that keep broad exploration focused on the outcome you approved. Covers ai development guide, coding principles and documentation criteria."
+    },
+    {
+      "source": "akillness-jeo-skills",
+      "name": "akillness-jeo-skills",
+      "displayName": "Jeo Skills",
+      "author": "akillness",
+      "category": "Studio",
+      "description": "{N} skills. Skills.md for codex, code, antigravity (model by gemini). Covers open generative ai video and shopping shorts orchestrator."
+    },
+    {
+      "source": "comeonoliver-skillshub",
+      "name": "comeonoliver-skillshub",
+      "displayName": "Skillshub",
+      "author": "ComeOnOliver",
+      "category": "Code",
+      "description": "{N} skills. 🧠 The right skill, one API call. AI agent skills registry with token-efficient skill resolution. 5,000+ skills from 500+ top repos. Covers 001 jeremy taskwarrior integration, 2026 coach and 2agent."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills",
+      "name": "manoj-11-dahal-try-skills",
+      "displayName": "Try Skills",
+      "author": "Manoj-11-Dahal",
+      "category": "Studio",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers 3d renderer development, aas agent coordination artifact integration approval evidence packet and aas agent coordination artifact integration change impact trace."
+    },
+    {
+      "source": "hybridlabor-api-aos",
+      "name": "hybridlabor-api-aos",
+      "displayName": "Aos",
+      "author": "hybridlabor-api",
+      "category": "Code",
+      "description": "{N} skills. A Curated AI AGENT OS – Optimized agent skills and add-ons like memB, OpenWiki, Heimdall Token Saver, and Godmode architectures. Covers advisor, agentic harness patterns and ai party mixer runbook."
+    },
+    {
+      "source": "forgeyclap-forge-core",
+      "name": "forgeyclap-forge-core",
+      "displayName": "Forge Core",
+      "author": "ForgeyClap",
+      "category": "Code",
+      "description": "{N} skills. Forge-Core: a multi-agent build, test and review setup for Claude Code. Covers forge a11y, forge agent report and forge android app."
+    },
+    {
+      "source": "wondelai-skills",
+      "name": "wondelai-skills",
+      "displayName": "Wondelai Skills",
+      "author": "wondelai",
+      "category": "Design & Sites",
+      "description": "{N} skills. Wondel.ai Agent Skills — Business, Marketing, UX & Coding Frameworks from Bestselling Books. 50 skills + 12 guided journeys for Claude Code, Codex, Cursor &. Covers 37signals way, architecture optimization and cold start problem."
+    },
+    {
+      "source": "mxyhi-ok-skills",
+      "name": "mxyhi-ok-skills",
+      "displayName": "Ok Skills",
+      "author": "mxyhi",
+      "category": "Code",
+      "description": "{N} skills. Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools. Covers better icons and bopomofo rescue."
+    },
+    {
+      "source": "rand-cc-polymath",
+      "name": "rand-cc-polymath",
+      "displayName": "Cc Polymath",
+      "author": "rand",
+      "category": "Design & Sites",
+      "description": "{N} skills. Claude Code skills and workflows, optimized for context-efficiency and skill quality. Skills ranging from cloud infrastructure to design to advanced maths. Covers discover agentic, discover api and discover cicd."
+    },
+    {
+      "source": "vkirill-codex-starter-kit",
+      "name": "vkirill-codex-starter-kit",
+      "displayName": "Codex Starter Kit",
+      "author": "VKirill",
+      "category": "Code",
+      "description": "{N} skills. OpenAI Codex Starter Kit with custom Codex agents, skills, AGENTS.md, hooks, MCP docs servers, Superpowers/GitHub plugin config, and one-command baseline. Covers available stacks, claude code review and claude companion."
+    },
+    {
+      "source": "catlog22-claude-code-workflow",
+      "name": "catlog22-claude-code-workflow",
+      "displayName": "Claude Code Workflow",
+      "author": "catlog22",
+      "category": "Productivity",
+      "description": "{N} skills. JSON-driven multi-agent cadence-team development framework with intelligent CLI orchestration (Gemini/Qwen/Codex), context-first architecture, and automated. Covers analyze with file, brainstorm with file and ccw."
+    },
+    {
+      "source": "node011-bounty-reaper",
+      "name": "node011-bounty-reaper",
+      "displayName": "Bounty Reaper",
+      "author": "node011",
+      "category": "Code",
+      "description": "{N} skills. Automated pentesting from your terminal — your LLM subscription + BountyReaper's security intelligence = autonomous red team. Covers attack graphql authz, attack graphql dos and attack graphql injection."
+    },
+    {
+      "source": "tonone-ai-tonone",
+      "name": "tonone-ai-tonone",
+      "displayName": "Tonone",
+      "author": "tonone-ai",
+      "category": "Other",
+      "description": "{N} skills. One session. Two commands. Full team. Zero meetings. Covers apex decisions, apex diagnose and apex gate."
+    },
+    {
+      "source": "glebis-claude-skills",
+      "name": "glebis-claude-skills",
+      "displayName": "Glebis Claude Skills",
+      "author": "glebis",
+      "category": "Code",
+      "description": "{N} skills. Collection of Agent skills for enhanced AI workflows. Covers agency socials, agent cli and app release."
+    },
+    {
+      "source": "rshankras-claude-code-apple-skills",
+      "name": "rshankras-claude-code-apple-skills",
+      "displayName": "Claude Code Apple Skills",
+      "author": "rshankras",
+      "category": "Code",
+      "description": "{N} skills. Claude Code skills for Apple platform development (iOS, macOS, iPadOS) — product validation, code generation, App Store optimization, and more. Covers ad attribution, alarmkit and app namer."
+    },
+    {
+      "source": "theangrypit-theangryskills",
+      "name": "theangrypit-theangryskills",
+      "displayName": "TheAngrySkills",
+      "author": "TheAngryPit",
+      "category": "Productivity",
+      "description": "{N} skills. TheAngryPit public skill stack for Agentic Workflow and npx skills. Covers add dictation, add read aloud and add voice."
+    },
+    {
+      "source": "tdimino-claude-code-minoan",
+      "name": "tdimino-claude-code-minoan",
+      "displayName": "Claude Code Minoan",
+      "author": "tdimino",
+      "category": "Design & Sites",
+      "description": "{N} skills. A curated ~/.claude/ configuration for professional development workflows — 90+ skills, 46 hooks, and CLI tools. Covers architecture md builder, atmosphere shader and design audit."
+    },
+    {
+      "source": "pilot2service-ai-business-designer",
+      "name": "pilot2service-ai-business-designer",
+      "displayName": "AI Business Designer",
+      "author": "Pilot2Service",
+      "category": "Design & Sites",
+      "description": "{N} skills. AI business design skills for Claude Code & Cowork — opportunity recognition, business case building, AI strategy & governance, human-AI oversight design, and. Covers academic entrepreneur role choice, ai accuracy guardrails and grounding design and ai behavioral specification design."
+    },
+    {
+      "source": "reggiechan74-vp-real-estate",
+      "name": "reggiechan74-vp-real-estate",
+      "displayName": "Vp Real Estate",
+      "author": "reggiechan74",
+      "category": "Business",
+      "description": "{N} skills. Lease management using Claude Code. Covers adam analyst, agricultural easement negotiation frameworks and commercial lease assignment consent framework."
+    },
+    {
+      "source": "tencentcloudbase-cloudbase-ai-toolkit",
+      "name": "tencentcloudbase-cloudbase-ai-toolkit",
+      "displayName": "CloudBase AI Toolkit",
+      "author": "TencentCloudBase",
+      "category": "Code",
+      "description": "{N} skills. Backend for AI Agents — Database, Auth, Functions,Storage,Hosting via Plugin, Skills & MCP. Covers ai model nodejs, ai model web and ai model wechat."
+    },
+    {
+      "source": "thewatcher01-skills",
+      "name": "thewatcher01-skills",
+      "displayName": "TheWatcher01 Skills",
+      "author": "TheWatcher01",
+      "category": "Code",
+      "description": "{N} skills. Agent Skills collection — Reusable capabilities for AI coding agents. Install: npx skills add TheWatcher01/skills. Covers address sanitizer, aflpp and algorand vulnerability scanner."
+    },
+    {
+      "source": "davekilleen-dex",
+      "name": "davekilleen-dex",
+      "displayName": "Dex",
+      "author": "davekilleen",
+      "category": "Productivity",
+      "description": "{N} skills. Your AI Chief of Staff — a personal operating system starter kit that adapts to your role. No coding required. Covers agent native architecture, andrew kane gem writer and audience intel."
+    },
+    {
+      "source": "jamditis-claude-skills-journalism",
+      "name": "jamditis-claude-skills-journalism",
+      "displayName": "Claude Skills Journalism",
+      "author": "jamditis",
+      "category": "Studio",
+      "description": "{N} skills. Claude Code skills for journalism, media, and academia - verification, FOIA, data journalism, academic writing, and more. Covers academic writing, ai writing detox and api hardening."
+    },
+    {
+      "source": "cacr92-wereply",
+      "name": "cacr92-wereply",
+      "displayName": "WeReply",
+      "author": "cacr92",
+      "category": "Other",
+      "description": "{N} skills. 微信聊天自动回复助手. Covers codeagent, deepseek integration and error handling debugging."
+    },
+    {
+      "source": "longbridge-skills",
+      "name": "longbridge-skills",
+      "displayName": "Longbridge Skills",
+      "author": "longbridge",
+      "category": "Other",
+      "description": "{N} skills from the longbridge/skills repository. Covers longbridge intel, longbridge portfolio and longbridge technical."
+    },
+    {
+      "source": "magnus919-agent-skills",
+      "name": "magnus919-agent-skills",
+      "displayName": "Magnus919 Agent Skills",
+      "author": "magnus919",
+      "category": "Code",
+      "description": "{N} skills. Curated collection of AI agent skills for Hermes and other agent frameworks. Covers amazon memo, analog occultism and bundle builder."
+    },
+    {
+      "source": "daffy0208-ai-dev-standards",
+      "name": "daffy0208-ai-dev-standards",
+      "displayName": "Ai Dev Standards",
+      "author": "daffy0208",
+      "category": "Studio",
+      "description": "{N} skills. As Described in the name. Covers 3d visualizer, animation designer and audio producer."
+    },
+    {
+      "source": "agentii-ai-agentii-investment-intelligence",
+      "name": "agentii-ai-agentii-investment-intelligence",
+      "displayName": "Agentii Investment Intelligence",
+      "author": "agentii-ai",
+      "category": "Code",
+      "description": "{N} skills. Claude-type skills for institutional equity research — 25 AI agent skills with SEC filings, XBRL financials, earnings calendars, DCF/comps/LBO models, and PPT. Covers 3 statement, chart patterns and comps."
+    },
+    {
+      "source": "ai-native-systems-research-ai-native-storage-cer",
+      "name": "ai-native-systems-research-ai-native-storage-certus",
+      "displayName": "Ai Native Storage Certus",
+      "author": "AI-native-Systems-Research",
+      "category": "Other",
+      "description": "{N} skills. Domain-specific storage system for inferencing workloads based on AI native systems methodology. Covers build property inventory, component check leakage and component check spec translation."
+    },
+    {
+      "source": "rampstackco-claude-skills",
+      "name": "rampstackco-claude-skills",
+      "displayName": "Rampstackco Claude Skills",
+      "author": "rampstackco",
+      "category": "Design & Sites",
+      "description": "{N} skills. Stack-agnostic Claude Skills covering the full website lifecycle: brand, design, content, SEO, dev, ops, growth, and research. Build, ship, audit, optimize. Covers ads creative development, ads performance analytics and after action report."
+    },
+    {
+      "source": "youdede-toolkit",
+      "name": "youdede-toolkit",
+      "displayName": "Toolkit",
+      "author": "youdede",
+      "category": "Code",
+      "description": "{N} skills. Skills, hooks and subagents for coding agents that state what they refuse to do, with the evidence behind it. Claude Code, Codex, Gemini CLI, Copilot, Cursor. Covers assess learning gaps, assess mutation test value and audit agent guidance drift."
+    },
+    {
+      "source": "huytieu-cog-second-brain",
+      "name": "huytieu-cog-second-brain",
+      "displayName": "COG Second Brain",
+      "author": "huytieu",
+      "category": "Design & Sites",
+      "description": "{N} skills. Self-evolving second brain with 35 AI skills, 10 agents, and people CRM. Closed-loop harness: a V-model verification lifecycle where the worker never grades. Covers blog publish, braindump and closed loop."
+    },
+    {
+      "source": "kostja94-marketing-skills",
+      "name": "kostja94-marketing-skills",
+      "displayName": "Marketing Skills",
+      "author": "kostja94",
+      "category": "Business",
+      "description": "{N} skills. Agent Skills for Marketing — SEO, Social, Influencer & More. 160+ open-source skills for SEO, content, 40+ page types, paid ads, channels, and strategies. Add. Covers 404 page generator, about page generator and affiliate page generator."
+    },
+    {
+      "source": "fritzprix-libr-agent",
+      "name": "fritzprix-libr-agent",
+      "displayName": "Libr Agent",
+      "author": "fritzprix",
+      "category": "Code",
+      "description": "{N} skills. A local agent operating environment: pick your model, install tools like apps, choose a coordination pattern. Work finishes as files on your machine — no. Covers agent init, agent trace debugger and bench."
+    },
+    {
+      "source": "mrc4tt-cs2-vibesignatures",
+      "name": "mrc4tt-cs2-vibesignatures",
+      "displayName": "CS2 VibeSignatures",
+      "author": "mrc4tt",
+      "category": "Code",
+      "description": "{N} skills. Forked of CS2_VibeSignatures. Covers cleanup workspace, convert finder skill to preprocessor scripts and create agent skill fallback."
+    },
+    {
+      "source": "manuelkugelmann-bitbot",
+      "name": "manuelkugelmann-bitbot",
+      "displayName": "BitBot",
+      "author": "ManuelKugelmann",
+      "category": "Other",
+      "description": "{N} skills from the ManuelKugelmann/BitBot repository. Covers claude template skill and devcontainer help."
+    },
+    {
+      "source": "solizardking-skillhub-main",
+      "name": "solizardking-skillhub-main",
+      "displayName": "Skillhub Main",
+      "author": "Solizardking",
+      "category": "Code",
+      "description": "{N} skills. 674 installable agent skills — including a 69-skill Google integration and a 229-skill NVIDIA stack (CUDA, Jetson, NeMo, DeepStream, cuOpt, TAO, Holoscan. Covers accelerated computing cudf, agent orchestration handoff and agentic wallet."
+    },
+    {
+      "source": "jmagly-aiwg",
+      "name": "jmagly-aiwg",
+      "displayName": "Aiwg",
+      "author": "jmagly",
+      "category": "Productivity",
+      "description": "{N} skills. Reusable project context and specialist workflows for the AI tools you already use. Agents, skills, rules and MCP tools for Claude Code, Codex, Copilot, Cursor. Covers acquire, activity log and add agent."
+    },
+    {
+      "source": "mdnaimul22-human-skills",
+      "name": "mdnaimul22-human-skills",
+      "displayName": "Human Skills",
+      "author": "mdnaimul22",
+      "category": "Code",
+      "description": "{N} skills. From Popular repo get all human-verified Agentic skills in one place. Covers a0 create agent, a0 development and a0 manage plugin."
+    },
+    {
+      "source": "forcedotcom-sf-skills",
+      "name": "forcedotcom-sf-skills",
+      "displayName": "Sf Skills",
+      "author": "forcedotcom",
+      "category": "Code",
+      "description": "{N} skills. Salesforce's curated collection of agent skills for building applications. Optimized for Agentforce Vibes, compatible with all AI tools. Covers agentforce bot upgrade, automation flow generate and automation sandbox post copy config generate."
+    },
+    {
+      "source": "yandy-r-ystack",
+      "name": "yandy-r-ystack",
+      "displayName": "Ystack",
+      "author": "yandy-r",
+      "category": "Business",
+      "description": "{N} skills. A collection of Claude Code plugins for workflow orchestration, parallel planning, documentation, research, and project management. Covers go patterns, parallel plan and prp commit."
+    },
+    {
+      "source": "hoangnguyen0403-agent-skills-standard",
+      "name": "hoangnguyen0403-agent-skills-standard",
+      "displayName": "Agent Skills Standard",
+      "author": "HoangNguyen0403",
+      "category": "Code",
+      "description": "{N} skills. A collection of Agent Skills Standard and Best Practice for Programming Languages, Frameworks that help our AI Agent follow best practies on frameworks and. Covers android agp upgrade, android compose migration and android edge to edge."
+    },
+    {
+      "source": "shubhamtaywade82-ruby-agent-skills",
+      "name": "shubhamtaywade82-ruby-agent-skills",
+      "displayName": "Ruby Agent Skills",
+      "author": "shubhamtaywade82",
+      "category": "Code",
+      "description": "{N} skills from the shubhamtaywade82/ruby-agent-skills repository. Covers planning interview, planning spec and planning tickets."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-2",
+      "name": "vincentagwu-deutsches-recht-slim-2",
+      "displayName": "Deutsches Recht Slim 2",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers abaenderung versorgungsausgleich 51 versausglg, abfall anlagen bimschg and abfall circular economy."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-3",
+      "name": "vincentagwu-deutsches-recht-slim-3",
+      "displayName": "Deutsches Recht Slim 3",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers abnahmefahrplan, abo falle kuendigung and abo kuendigung fitness streaming."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-4",
+      "name": "vincentagwu-deutsches-recht-slim-4",
+      "displayName": "Deutsches Recht Slim 4",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers abstimmung, abstimmung anlagen interessen cram and abstimmung lektorat produktion satz."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-5",
+      "name": "vincentagwu-deutsches-recht-slim-5",
+      "displayName": "Deutsches Recht Slim 5",
+      "author": "vincentagwu",
+      "category": "Business",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers ag vorstandsvertrag vorbereiten, agb bankrecht organhaftung business and agb klauseln restwertgarantie."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-6",
+      "name": "vincentagwu-deutsches-recht-slim-6",
+      "displayName": "Deutsches Recht Slim 6",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers akteneinsicht 25 sgb x, akteneinsicht 49 owig 147 stpo and akteneinsicht anfordern."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-7",
+      "name": "vincentagwu-deutsches-recht-slim-7",
+      "displayName": "Deutsches Recht Slim 7",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers ambulantes operieren arbeitszeit, aml kryptotransaktionen mica spezial and aml kyc start chronologie fristen."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-8",
+      "name": "vincentagwu-deutsches-recht-slim-8",
+      "displayName": "Deutsches Recht Slim 8",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers athletenvertrag fristennotiz und naechster schritt, athletenwerbung paragraf 3 uwg and auslassungen vermeiden."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-2",
+      "name": "thomasmoreai-legal-skills-open-2",
+      "displayName": "Legal Skills Open 2",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers acompanhar prazos e assinaturas gethouston, authority finder descrybe legal research descrybe com and authority finder descrybe legal research openai descrybe com."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-3",
+      "name": "thomasmoreai-legal-skills-open-3",
+      "displayName": "Legal Skills Open 3",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers 765a fehlerkatalog, 802l verhandlung vergleich und eskalation and aa ausfuhrkontrolle."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-4",
+      "name": "thomasmoreai-legal-skills-open-4",
+      "displayName": "Legal Skills Open 4",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers 72 stunden sprint, abmahnung strafanzeige reaktion and absolute grenze existenzminimum."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-2",
+      "name": "manoj-11-dahal-try-skills-2",
+      "displayName": "Try Skills 2",
+      "author": "Manoj-11-Dahal",
+      "category": "Productivity",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers admet screening workflow, adobe analytics executive briefing and adobe analytics kpi analysis."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-3",
+      "name": "manoj-11-dahal-try-skills-3",
+      "displayName": "Try Skills 3",
+      "author": "Manoj-11-Dahal",
+      "category": "Other",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers hospitality ops events approval evidence packet, hospitality ops events change impact trace and hospitality ops events closeout handoff ledger."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-4",
+      "name": "manoj-11-dahal-try-skills-4",
+      "displayName": "Try Skills 4",
+      "author": "Manoj-11-Dahal",
+      "category": "Other",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers supply ops demand approval evidence packet, supply ops demand change impact trace and supply ops demand closeout handoff ledger."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-2-x",
+      "name": "thomasmoreai-legal-skills-open-5",
+      "displayName": "Legal Skills Open 5",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers abmahnung 97a response, abmahnung buchpreisbindung and abmahnung compliance dokumentation und akte."
+    },
+    {
+      "source": "casemark-skills-2",
+      "name": "casemark-skills-2",
+      "displayName": "CaseMark Skills 2",
+      "author": "CaseMark",
+      "category": "Science & Healthcare",
+      "description": "{N} skills from the CaseMark/skills repository. Covers abstracting clinical documentation, analyzing clinical data warehouses and analyzing clinical trial data."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-4-2",
+      "name": "mr-nobody-anonymous-all-skills-7",
+      "displayName": "All Skills 7",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Code",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers accelerator physicist, acoustical engineer and acoustics physicist."
+    },
+    {
+      "source": "mr-nobody-anonymous-all-skills-4-3",
+      "name": "mr-nobody-anonymous-all-skills-8",
+      "displayName": "All Skills 8",
+      "author": "Mr-Nobody-Anonymous",
+      "category": "Code",
+      "description": "{N} skills. Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity. Covers achievement system, agent eval framework and agol publish checklist."
+    },
+    {
+      "source": "trompetilla-skills-2",
+      "name": "trompetilla-skills-2",
+      "displayName": "Trompetilla Skills 2",
+      "author": "Trompetilla",
+      "category": "Code",
+      "description": "{N} skills from the Trompetilla/Skills repository. Covers topic to article kit, torch liquidation agent and torch liquidation bot."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-2-x",
+      "name": "vincentagwu-deutsches-recht-slim-9",
+      "displayName": "Deutsches Recht Slim 9",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers 074 offshore schiff arrest vorbereiten, 081 buergergeld krankenversicherung dashbo and 1 gwb kartellverbot nationale pruefung."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-3-x",
+      "name": "vincentagwu-deutsches-recht-slim-10",
+      "displayName": "Deutsches Recht Slim 10",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers 90a bgb richtig einordnen, aarhus argumentationslinie and aktenauswertung behoerdenordner."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-2-x-x",
+      "name": "thomasmoreai-legal-skills-open-6",
+      "displayName": "Legal Skills Open 6",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers 15 contract review kevinke93, 2 1 diagnosticar emidio trancoso and 3 1 redigir peca emidio trancoso."
+    },
+    {
+      "source": "hashgraph-online-awesome-codex-plugins-2",
+      "name": "hashgraph-online-awesome-codex-plugins-2",
+      "displayName": "Awesome Codex Plugins 2",
+      "author": "hashgraph-online",
+      "category": "Other",
+      "description": "{N} skills. A curated list of awesome OpenAI Codex / ChatGPT plugins, skills, and resources. The #1 Codex Marketplace. See live plugins at. Covers cometchat, cometchat a11y and cometchat analytics."
+    },
+    {
+      "source": "flight505-skill-forge-2",
+      "name": "flight505-skill-forge-2",
+      "displayName": "Skill Forge 2",
+      "author": "flight505",
+      "category": "Productivity",
+      "description": "{N} skills. 425 plugins, 2,810 skills, 200 agents for Claude Code. Open-source marketplace at tonsofskills.com with the ccpi CLI package manager. Covers obsidian ci integration, obsidian common errors and obsidian core workflow a."
+    },
+    {
+      "source": "comeonoliver-skillshub-2",
+      "name": "comeonoliver-skillshub-2",
+      "displayName": "Skillshub 2",
+      "author": "ComeOnOliver",
+      "category": "Code",
+      "description": "{N} skills. 🧠 The right skill, one API call. AI agent skills registry with token-efficient skill resolution. 5,000+ skills from 500+ top repos. Covers claude code templates, claude code usage and claude md enhancer."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-2-x",
+      "name": "manoj-11-dahal-try-skills-5",
+      "displayName": "Try Skills 5",
+      "author": "Manoj-11-Dahal",
+      "category": "Other",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers aas devtools quickstart parity approval evidence packet, aas devtools quickstart parity change impact trace and aas devtools quickstart parity closeout handoff ledger."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-3-x",
+      "name": "manoj-11-dahal-try-skills-6",
+      "displayName": "Try Skills 6",
+      "author": "Manoj-11-Dahal",
+      "category": "Other",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers aas secure delivery csp report approval evidence packet, aas secure delivery csp report change impact trace and aas secure delivery csp report closeout handoff ledger."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-2-2",
+      "name": "vincentagwu-deutsches-recht-slim-11",
+      "displayName": "Deutsches Recht Slim 11",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers abmahnung erhalten, abmahnung loeschung personalakte bag 2 azr 782 11 and abmahnung reagieren."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-3-2",
+      "name": "vincentagwu-deutsches-recht-slim-12",
+      "displayName": "Deutsches Recht Slim 12",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers abschlussmemo handelsrecht, abschlussmitteilung anonyme meldung and abschlussprodukt uebergabe."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-3-3",
+      "name": "vincentagwu-deutsches-recht-slim-13",
+      "displayName": "Deutsches Recht Slim 13",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers aktenanalyse historische fallakte, arbeitsgerichtsbarkeit and arbeitsrecht von gewerbeordnung bis betrvg."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-4-2",
+      "name": "vincentagwu-deutsches-recht-slim-14",
+      "displayName": "Deutsches Recht Slim 14",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers acht zahlen schwellen und berechnung, ad insiderliste and adaptive dokumentenmatrix lueckenliste."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-4-3",
+      "name": "vincentagwu-deutsches-recht-slim-15",
+      "displayName": "Deutsches Recht Slim 15",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers aktenaufbereiter beweislast und darlegungslast, akteneinsicht internationaler bezug und schnittstellen and alkohol compliance dokumentation und akte."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-5-2",
+      "name": "vincentagwu-deutsches-recht-slim-16",
+      "displayName": "Deutsches Recht Slim 16",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers akkreditierung programm qualitaet alumni, akkreditierung und qualitaet and aktenanlage batchregister."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-6-2",
+      "name": "vincentagwu-deutsches-recht-slim-17",
+      "displayName": "Deutsches Recht Slim 17",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers aktienrecht gleichbehandlung 53a, aktionaerstreuepflicht anfechtung and allgemeine sonderfall edge case."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-6-3",
+      "name": "vincentagwu-deutsches-recht-slim-18",
+      "displayName": "Deutsches Recht Slim 18",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers arabische pastoralantworten, archive register auslegung canones and auslegung von canones und aequitas canonica."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-7-2",
+      "name": "vincentagwu-deutsches-recht-slim-19",
+      "displayName": "Deutsches Recht Slim 19",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers angebotsoeffnung formfehler preisblatt, angebotsschreiben offer letter and angelsyndikat lead investor."
+    },
+    {
+      "source": "vincentagwu-deutsches-recht-slim-7-3",
+      "name": "vincentagwu-deutsches-recht-slim-20",
+      "displayName": "Deutsches Recht Slim 20",
+      "author": "vincentagwu",
+      "category": "Other",
+      "description": "{N} skills from the vincentagwu/deutsches-recht-slim repository. Covers art 9 besondere kategorien, aufnahme statusinformation and auskunft behoerden gericht und registerweg."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-2-2",
+      "name": "thomasmoreai-legal-skills-open-7",
+      "displayName": "Legal Skills Open 7",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers acuerdo social, acuerdo social betobetico and acuerdos piloto ariel gonzaguer."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-3-2",
+      "name": "thomasmoreai-legal-skills-open-8",
+      "displayName": "Legal Skills Open 8",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers amparo emilianomierujed, analisador erro medico georgemarmelstein and analise documental e rol fechado sbroggioadv."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-3-3",
+      "name": "thomasmoreai-legal-skills-open-9",
+      "displayName": "Legal Skills Open 9",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers avaliacao de impacto e ripd sbroggioadv, az commercial disputes codearranger and az consumer debt codearranger."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-4-2",
+      "name": "thomasmoreai-legal-skills-open-10",
+      "displayName": "Legal Skills Open 10",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers cps rca jeannesulzer, cra anwendungsbereich borghei and cra meldepflichten borghei."
+    },
+    {
+      "source": "thomasmoreai-legal-skills-open-4-3",
+      "name": "thomasmoreai-legal-skills-open-11",
+      "displayName": "Legal Skills Open 11",
+      "author": "ThomasMoreAI",
+      "category": "Business",
+      "description": "{N} skills. Open library of legal AI skills (SKILL.md) for MCP-compatible agents — 18,000+ skills, 54 jurisdictions, 410+ plugins, Apache-2.0. Covers termination review yachela, thai pdpa boom vitt and thailand dbd nolpak14."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-2-2",
+      "name": "manoj-11-dahal-try-skills-7",
+      "displayName": "Try Skills 7",
+      "author": "Manoj-11-Dahal",
+      "category": "Design & Sites",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers blenderlab animation and motion architectural massing build configuration runbook, blenderlab animation and motion architectural massing design blueprint and blenderlab animation and motion architectural massing failure triage and recovery."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-2-3",
+      "name": "manoj-11-dahal-try-skills-8",
+      "displayName": "Try Skills 8",
+      "author": "Manoj-11-Dahal",
+      "category": "Design & Sites",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers codelab c sharp and dotnet services api evolution build configuration runbook, codelab c sharp and dotnet services api evolution design blueprint and codelab c sharp and dotnet services api evolution failure triage and recovery."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-3-2",
+      "name": "manoj-11-dahal-try-skills-9",
+      "displayName": "Try Skills 9",
+      "author": "Manoj-11-Dahal",
+      "category": "Design & Sites",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers musiclab adaptive game scoring ambient beds build configuration runbook, musiclab adaptive game scoring ambient beds design blueprint and musiclab adaptive game scoring ambient beds failure triage and recovery."
+    },
+    {
+      "source": "manoj-11-dahal-try-skills-3-3",
+      "name": "manoj-11-dahal-try-skills-10",
+      "displayName": "Try Skills 10",
+      "author": "Manoj-11-Dahal",
+      "category": "Design & Sites",
+      "description": "{N} skills from the Manoj-11-Dahal/try-Skills repository. Covers residentiallab accessible renovation aging in place build configuration runbook, residentiallab accessible renovation aging in place design blueprint and residentiallab accessible renovation aging in place failure triage and recovery."
     }
   ]
 }
