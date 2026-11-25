@@ -2482,7 +2482,7 @@
       "commit": "78a6ec60c61751bce1aaaf73991b4a33eb4e36e6",
       "spdx": "MIT",
       "skillsDirs": [
-        "skills"
+        "plugins/teable/skills"
       ],
       "include": "clean"
     },
