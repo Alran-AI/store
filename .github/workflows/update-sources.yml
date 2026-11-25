@@ -114,15 +114,27 @@ jobs:
           } > pr-body.md
           git config user.name "alran-store"
           git config user.email "alran-store@users.noreply.github.com"
-          git checkout -b chore/update-sources
-          # Everything the vendor writes, but not the built store: .gitignore keeps store/index.json,
-          # store/archives/, store/icons/ and store/store.config.json out of the commit. The built store
-          # is published as a release instead (.github/workflows/release-store.yml).
-          git add -A
-          git commit -m "Update sources"
-          git push --force origin chore/update-sources
-          gh pr create \
+          existing_pr="$(gh pr list \
+            --state open \
             --base "${{ github.event.repository.default_branch }}" \
-            --head chore/update-sources \
-            --title "Update sources" \
-            --body-file pr-body.md
+            --json number,headRefName,title \
+            --jq '[.[] | select(.title == "Update sources")][0] // empty')"
+          if [ -n "$existing_pr" ]; then
+            pr_number="$(jq -r '.number' <<< "$existing_pr")"
+            branch="$(jq -r '.headRefName' <<< "$existing_pr")"
+          else
+            pr_number=""
+            branch="chore/update-sources-${GITHUB_RUN_ID}"
+          fi
+          git checkout -b "$branch"
+          # The generated branch is updated in place only while its matching PR is open.
+          git push --force origin "$branch"
+          if [ -n "$pr_number" ]; then
+            gh pr edit "$pr_number" --title "Update sources" --body-file pr-body.md
+          else
+            gh pr create \
+              --base "${{ github.event.repository.default_branch }}" \
+              --head "$branch" \
+              --title "Update sources" \
+              --body-file pr-body.md
+          fi
