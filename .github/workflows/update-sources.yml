@@ -97,7 +97,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           {
-            echo "The upstream head of $(jq '.moved | length' source(s) moved. The pins in"
+            echo "The upstream head of $(jq '.moved | length' updates.json) source(s) moved. The pins in"
             echo "\`sources.json\` were moved and the Skills were vendored again."
             echo ""
             echo "| Source | Was | Now |"
