@@ -5,6 +5,12 @@ name: Update sources
 # by hand. See the "Keeping it up to date" section of README.md.
 
 on:
+  # A workflow change on main starts a fresh run; reruns must not stay pinned to an old event SHA.
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/update-sources.yml
   schedule:
     # 04:23 UTC, every morning. Not on the hour: many workflows run at 00:00 and the runners are busy.
     - cron: "23 4 * * *"
@@ -25,6 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
