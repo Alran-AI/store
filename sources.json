@@ -3648,7 +3648,6 @@
         "plugins/pixel-art/skills",
         "plugins/planning/skills",
         "plugins/playbooks/skills",
-        "plugins/playgrounds/evals/use-cloud-session-feature-detects-delivery/playground-stub/skills",
         "plugins/playgrounds/evals/use-installed-routes-to-upstream-skill/playground-stub/skills",
         "plugins/playgrounds/evals/use-shadowed-name-is-not-invoked/playground-stub/skills",
         "plugins/playgrounds/skills",

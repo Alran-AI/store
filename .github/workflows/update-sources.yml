@@ -38,6 +38,9 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Test source directory handling
+        run: node --test tests/vendor-missing-skill-dir.test.mjs
+
       - name: Look up the upstream head of every source
         run: node scripts/update-sources.mjs --work "$RUNNER_TEMP/clones" --report updates.json
 
