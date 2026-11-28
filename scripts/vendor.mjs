@@ -444,11 +444,25 @@ for (const source of manifest.sources) {
   // directory of the source. A source may ship the same Skill twice (a plugin bundle next to the
   // copy it was built from): the first copy that is admitted is taken, the others are left out and
   // listed in EXCLUDED.md.
-  const dirs = source.skillsDirs ?? [source.skillsDir];
+  const named = source.skills !== undefined;
+  if (named === (source.include === "clean")) die(`${source.id}: give either "skills" or "include": "clean"`);
+
+  // A source can move or remove one Skills directory while keeping another. For an allow-list
+  // ("include": "clean"), skip stale optional paths and keep importing from the directories that
+  // still exist. Explicitly named Skills remain strict: silently skipping a path could omit a
+  // requested Skill. A source with no remaining Skills directory is always a hard failure.
+  const configuredDirs = source.skillsDirs ?? [source.skillsDir];
+  const dirs = [];
   const candidates = new Map();
-  for (const dir of dirs) {
+  for (const dir of configuredDirs) {
     const base = join(clone, dir);
-    if (!existsSync(base)) die(`${source.id}: ${dir} does not exist`);
+    if (!existsSync(base)) {
+      if (named) die(`${source.id}: configured Skills directory ${dir} does not exist`);
+      console.warn(`vendor: ${source.id}: configured Skills directory ${dir} is missing; skipping it`);
+      continue;
+    }
+    if (!statSync(base).isDirectory()) die(`${source.id}: configured Skills path ${dir} is not a directory`);
+    dirs.push(dir);
     for (const entry of readdirSync(base, { withFileTypes: true })) {
       if (!entry.isDirectory() || !existsSync(join(base, entry.name, "SKILL.md"))) continue;
       const found = candidates.get(entry.name) ?? [];
@@ -456,8 +470,7 @@ for (const source of manifest.sources) {
       candidates.set(entry.name, found);
     }
   }
-  const named = source.skills !== undefined;
-  if (named === (source.include === "clean")) die(`${source.id}: give either "skills" or "include": "clean"`);
+  if (dirs.length === 0) die(`${source.id}: none of its configured Skills directories exist (${configuredDirs.join(", ")})`);
   const wanted = named ? source.skills : [...candidates.keys()].filter((name) => !(source.exclude ?? []).includes(name));
   const members = new Map();
   for (const name of [...new Set(wanted)].sort()) {

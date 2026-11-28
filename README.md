@@ -96,6 +96,14 @@ commands run there as `node <alran-code>/tools/store/build-store.mjs --source .`
 The built `store/` folder is **not committed**: it is what a release publishes (see below). `store/plugins.json`
 is the one file under `store/` that lives in git — the hand-written name and description of every Plugin.
 
+
+For a source using `"include": "clean"`, a configured `skillsDirs` path that has disappeared
+upstream is skipped with a warning when at least one other configured directory still exists. A
+source with no remaining Skills directory still fails. Sources with an explicit `skills` allow-list
+remain strict so a missing path cannot silently omit a requested Skill.
+
+The path policy is covered by `node --test tests/vendor-missing-skill-dir.test.mjs`.
+
 Versions are `<commit date>+<short commit>` (SemVer: no zero padding); an update is recognised by the content
 digest changing.
 
