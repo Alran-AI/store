@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "shared/**"
+      - "packages/**"
+      - "packages.json"
+      - "sources.json"
+      - "versions.json"
+      - "store/plugins.json"
+      - "tools/**"
+      - "scripts/**"
+      - ".github/workflows/ci.yml"
+      - ".github/workflows/release-store.yml"
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "shared/**"
+      - "packages/**"
+      - "packages.json"
+      - "sources.json"
+      - "versions.json"
+      - "store/plugins.json"
+      - "tools/**"
+      - "scripts/**"
+      - ".github/workflows/ci.yml"
+      - ".github/workflows/release-store.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: store-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-check:
+    name: Build and validate the store
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Generate the store configuration
+        run: |
+          node scripts/gen-icons.mjs
+          node scripts/gen-config.mjs
+
+      - name: Build the store
+        run: node tools/store/build-store.mjs --source .
+
+      - name: Verify the build is reproducible
+        run: node tools/store/build-store.mjs --source . --check
+
+      - name: Validate the published index and archives
+        run: node scripts/check-store.mjs --store store --max-drop 5
